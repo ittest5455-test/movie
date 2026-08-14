@@ -5187,7 +5187,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "16 ตอน",
+    "duration": "16 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -5251,7 +5251,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "24 ตอน",
+    "duration": "24 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -5331,7 +5331,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "24 ตอน",
+    "duration": "12 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -5349,19 +5349,7 @@ const movies = [
       "ตอนที่ 9",
       "ตอนที่ 10",
       "ตอนที่ 11",
-      "ตอนที่ 12",
-      "ตอนที่ 13",
-      "ตอนที่ 14",
-      "ตอนที่ 15",
-      "ตอนที่ 16",
-      "ตอนที่ 17",
-      "ตอนที่ 18",
-      "ตอนที่ 19",
-      "ตอนที่ 20",
-      "ตอนที่ 21",
-      "ตอนที่ 22",
-      "ตอนที่ 23",
-      "ตอนที่ 24"
+      "ตอนที่ 12"
     ],
     "languages": [
       "Thai (พากย์ไทย)",
@@ -5382,19 +5370,7 @@ const movies = [
       "9": "https://torbo007.com/embed/11a4f291492e37df65d5df806434e5c7",
       "10": "https://torbo007.com/embed/d12a59ce8ed14a4a155e5d19bb7e62d1",
       "11": "https://torbo007.com/embed/fcb00abf056bb3a58579f29bd4ea3da3",
-      "12": "https://torbo007.com/embed/c4b28170ab2f72373150e7dec5ad65eb",
-      "13": "https://torbo007.com/embed/92104ab409de29ba1b0970cdbb27489b",
-      "14": "https://torbo007.com/embed/83c5a7fdd9b89d81ead2db27d07a9b4c",
-      "15": "https://torbo007.com/embed/5b3da05952023eaf28161c902fb7a546",
-      "16": "https://torbo007.com/embed/8538415f7cfc55705dc7905eaeebd677",
-      "17": "https://torbo007.com/embed/8c0b81ae2518746fd0f9446ea781492d",
-      "18": "https://torbo007.com/embed/5c21490f8fd7392d5b1b5cd5523665c1",
-      "19": "https://torbo007.com/embed/4bb7028dd36b6a9ece25330af272403a",
-      "20": "https://torbo007.com/embed/7e525011161b9ffb8655713478938ee5",
-      "21": "https://torbo007.com/embed/c998bb2ea0ff6559ea81f0e5f26d59a8",
-      "22": "https://torbo007.com/embed/08f7a810e7cc2e7724da17f222b448e8",
-      "23": "https://torbo007.com/embed/63cf9321ac361a4d218e18c03155fad3",
-      "24": "https://torbo007.com/embed/961261c165f7beff79ec44d3e3a20bb9"
+      "12": "https://torbo007.com/embed/c4b28170ab2f72373150e7dec5ad65eb"
     }
   },
   {
@@ -5411,7 +5387,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "12 ตอน",
+    "duration": "12 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -5467,7 +5443,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "8 ตอน",
+    "duration": "8 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -5515,7 +5491,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "46 ตอน",
+    "duration": "22 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -5543,31 +5519,7 @@ const movies = [
       "ตอนที่ 19",
       "ตอนที่ 20",
       "ตอนที่ 21",
-      "ตอนที่ 22",
-      "ตอนที่ 23",
-      "ตอนที่ 24",
-      "ตอนที่ 25",
-      "ตอนที่ 26",
-      "ตอนที่ 27",
-      "ตอนที่ 28",
-      "ตอนที่ 29",
-      "ตอนที่ 30",
-      "ตอนที่ 31",
-      "ตอนที่ 32",
-      "ตอนที่ 33",
-      "ตอนที่ 34",
-      "ตอนที่ 35",
-      "ตอนที่ 36",
-      "ตอนที่ 37",
-      "ตอนที่ 38",
-      "ตอนที่ 39",
-      "ตอนที่ 40",
-      "ตอนที่ 41",
-      "ตอนที่ 42",
-      "ตอนที่ 43",
-      "ตอนที่ 44",
-      "ตอนที่ 45",
-      "ตอนที่ 46"
+      "ตอนที่ 22"
     ],
     "languages": [
       "Thai (พากย์ไทย)",
@@ -5577,52 +5529,28 @@ const movies = [
     "sourcePageUrl": "https://goseries4k.com/blossom-of-power/",
     "postId": "127741",
     "episodeUrls": {
-      "1": "https://torbo007.com/embed/f82faf9929cb98959bc1042f36bc7a28",
-      "2": "https://torbo007.com/embed/1120e37463282d92e54a0a53c599eef8",
-      "3": "https://torbo007.com/embed/5df7a06ecb9705c88ae7edd5bc3ee270",
-      "4": "https://torbo007.com/embed/062bb82997f78fdc4d931ebbea639474",
-      "5": "https://torbo007.com/embed/b7ac7bebe875ebcd3d1d508f228dce84",
-      "6": "https://torbo007.com/embed/884c8bcac40d88d8201bbee391b7bc09",
-      "7": "https://torbo007.com/embed/4dc6c329d440542432bdb249ed3ecd44",
-      "8": "https://torbo007.com/embed/41d41ad3f3b7be7aec9fd837bf97748a",
-      "9": "https://torbo007.com/embed/2e9d65c08f3428056789a0777b1448a1",
-      "10": "https://torbo007.com/embed/98387b9a680819c0f4bf59d9eb5d11d6",
-      "11": "https://torbo007.com/embed/b010a9b604fd9280a80bb58fe7aca35c",
-      "12": "https://torbo007.com/embed/cd95287e9b3eb4195c05a2d9ba3bd158",
-      "13": "https://torbo007.com/embed/53e6e932fdd3a3898ca1d2a435f32494",
-      "14": "https://torbo007.com/embed/f9bf5e8403489e1d4bec1cf6dac7a751",
-      "15": "https://torbo007.com/embed/bd56f2ce4d3d376643b7d62d12445688",
-      "16": "https://torbo007.com/embed/ab4bcc40d95b380e5d8dd44d4e4a7edc",
-      "17": "https://torbo007.com/embed/8075c0d5a4d8c1e09309e5ff819f9845",
-      "18": "https://torbo007.com/embed/84bebbeebf35d6b4c1d4470445d43171",
-      "19": "https://torbo007.com/embed/d4278cd5fb2fec24fb3e648ff8b2beb4",
-      "20": "https://torbo007.com/embed/569a22d54507b4e11e31a63ee7e4193e",
-      "21": "https://torbo007.com/embed/476039b9f23cedcce225f4760e50c340",
-      "22": "https://torbo007.com/embed/ebd8423d239d5d1cf8a208d306c415b9",
-      "23": "https://torbo007.com/embed/01c89398a7435191968a146733061a71",
-      "24": "https://torbo007.com/embed/27dbcc3920fc84bec426010dff5e9afb",
-      "25": "https://torbo007.com/embed/076a1d971162c8482e033223429fc2b3",
-      "26": "https://torbo007.com/embed/09e50ddb94c1199a330322cc3864aad7",
-      "27": "https://torbo007.com/embed/697a3253ff705c895be930b519e2e814",
-      "28": "https://torbo007.com/embed/2b827fe33e0abdbb231a5257d76f9340",
-      "29": "https://torbo007.com/embed/ac41f667c99857a912250e3cd718ac00",
-      "30": "https://torbo007.com/embed/3b94d46693115ef97ed92ab96d2e514e",
-      "31": "https://torbo007.com/embed/f2aea5d2a594ee80f807bb5af38308b2",
-      "32": "https://torbo007.com/embed/8a2954f9918e5e3092e758f6f30c8f77",
-      "33": "https://torbo007.com/embed/cac2ccb9f100ffbe6d101ffcecaa1c79",
-      "34": "https://torbo007.com/embed/4a4a281e5684e674af61f99eb85dc174",
-      "35": "https://torbo007.com/embed/e8a9c652ce0f070729c34a17bd31f2da",
-      "36": "https://torbo007.com/embed/180943e8f90e7ad89dccd785529132dd",
-      "37": "https://torbo007.com/embed/3262a63db7e8b6f928c3415275edf8ff",
-      "38": "https://torbo007.com/embed/6d835932f22c9f6535b4f04fd19ec43a",
-      "39": "https://torbo007.com/embed/70530fc821dd1695d12c5f96c37c4404",
-      "40": "https://torbo007.com/embed/d10b23aa6851f5ae7ec2af681ee290bc",
-      "41": "https://torbo007.com/embed/c1917a6a4065d38db7496ac7fa190e65",
-      "42": "https://torbo007.com/embed/1840fc0cdec38ce4c23b19f8b40cc597",
-      "43": "https://torbo007.com/embed/f9b2590c4ced887f86863372acf81956",
-      "44": "https://torbo007.com/embed/4f3501533c17244b0d4ef3530f590ed7",
-      "45": "https://torbo007.com/embed/f125f4c53fd8eb745bb8fa270072f986",
-      "46": "https://torbo007.com/embed/ce9e25aacf1f87c0f3ed8271dfcdd709"
+      "1": "https://torbo007.com/embed/3262a63db7e8b6f928c3415275edf8ff",
+      "2": "https://torbo007.com/embed/6d835932f22c9f6535b4f04fd19ec43a",
+      "3": "https://torbo007.com/embed/70530fc821dd1695d12c5f96c37c4404",
+      "4": "https://torbo007.com/embed/d10b23aa6851f5ae7ec2af681ee290bc",
+      "5": "https://torbo007.com/embed/c1917a6a4065d38db7496ac7fa190e65",
+      "6": "https://torbo007.com/embed/1840fc0cdec38ce4c23b19f8b40cc597",
+      "7": "https://torbo007.com/embed/f9b2590c4ced887f86863372acf81956",
+      "8": "https://torbo007.com/embed/4f3501533c17244b0d4ef3530f590ed7",
+      "9": "https://torbo007.com/embed/f125f4c53fd8eb745bb8fa270072f986",
+      "10": "https://torbo007.com/embed/15afe12503639fd9831c73da69ba9376",
+      "11": "https://torbo007.com/embed/1e28b058f3c579516f158e746beb844e",
+      "12": "https://torbo007.com/embed/d7de79619214c85a2f240b37aefad7af",
+      "13": "https://torbo007.com/embed/50684afa18e2179616c82844fe2ab67e",
+      "14": "https://torbo007.com/embed/5640b9d528fa61aeac68dbee9b90b231",
+      "15": "https://torbo007.com/embed/a6077c2e969301958e88d935dd6d8f8c",
+      "16": "https://torbo007.com/embed/958f71b0811fc5f7ea1dddc5ddcb594f",
+      "17": "https://torbo007.com/embed/b7a09cbc4f37b0e23c2e42b745374068",
+      "18": "https://torbo007.com/embed/128633a2de8ef41d82ac71920d64eca5",
+      "19": "https://torbo007.com/embed/82e3ef11419b65ad657796974fa00747",
+      "20": "https://torbo007.com/embed/9357563ea9a9f2474e9525319c26226e",
+      "21": "https://torbo007.com/embed/88b2603ad9b2ecd3f3c7d467d9c77f3f",
+      "22": "https://torbo007.com/embed/5bb28cc6e4e936bda4b97a5061200a77"
     }
   },
   {
@@ -5639,7 +5567,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "4 ตอน",
+    "duration": "4 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -5679,7 +5607,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "8 ตอน",
+    "duration": "8 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -5727,7 +5655,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "14 ตอน",
+    "duration": "6 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -5739,15 +5667,7 @@ const movies = [
       "ตอนที่ 3",
       "ตอนที่ 4",
       "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9",
-      "ตอนที่ 10",
-      "ตอนที่ 11",
-      "ตอนที่ 12",
-      "ตอนที่ 13",
-      "ตอนที่ 14"
+      "ตอนที่ 6"
     ],
     "languages": [
       "Thai (พากย์ไทย)",
@@ -5757,20 +5677,12 @@ const movies = [
     "sourcePageUrl": "https://goseries4k.com/the-husband/",
     "postId": "127008",
     "episodeUrls": {
-      "1": "https://mycdn-hd.xyz/player/index.php?data=670fb2f689bec017e618ab7ec99c2308",
-      "2": "https://mycdn-hd.xyz/player/index.php?data=bfecf8f10580b916be79cd1f98a95840",
-      "3": "https://torbo007.com/embed/9a67d01e1f82ac600e7d1b27ee6742c5",
-      "4": "https://torbo007.com/embed/353fffbcaed50ba5c504ce055ce61809",
-      "5": "https://torbo007.com/embed/c4145211f971ee808bba24e2a5a627bf",
-      "6": "https://torbo007.com/embed/a19d58812fa84d6d144502ab6ecccde0",
-      "7": "https://torbo007.com/embed/862b2d8e757cb89b6d71e70ec59f1cdc",
-      "8": "https://torbo007.com/embed/bf007b020945f78a3f103bc7a226fafe",
-      "9": "https://torbo007.com/embed/6d0f048fadbcb7fb7a0e188a39c82c4b",
-      "10": "https://torbo007.com/embed/899d24ce958c9a264eef0d21e100663f",
-      "11": "https://torbo007.com/embed/9ba064da76515108752a29b2a08cc7d9",
-      "12": "https://torbo007.com/embed/99f0cd50ed1558df83620e811bed66e7",
-      "13": "https://torbo007.com/embed/0f589854cfc32f429e6642bca8393d4b",
-      "14": "https://torbo007.com/embed/f8a139ac8e45afde26b4e0ff33a9048e"
+      "1": "https://torbo007.com/embed/9ba064da76515108752a29b2a08cc7d9",
+      "2": "https://torbo007.com/embed/99f0cd50ed1558df83620e811bed66e7",
+      "3": "https://torbo007.com/embed/0f589854cfc32f429e6642bca8393d4b",
+      "4": "https://torbo007.com/embed/f8a139ac8e45afde26b4e0ff33a9048e",
+      "5": "https://torbo007.com/embed/82db0a18ac0ccd14822dfcba3a824dc1",
+      "6": "https://torbo007.com/embed/2f4a07487a97d56e62b1cfdf194b04fa"
     }
   },
   {
@@ -5787,7 +5699,7 @@ const movies = [
       "ซีรีส์จีน",
       "พากย์ไทย"
     ],
-    "duration": "60 ตอน",
+    "duration": "30 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -5823,37 +5735,7 @@ const movies = [
       "ตอนที่ 27",
       "ตอนที่ 28",
       "ตอนที่ 29",
-      "ตอนที่ 30",
-      "ตอนที่ 31",
-      "ตอนที่ 32",
-      "ตอนที่ 33",
-      "ตอนที่ 34",
-      "ตอนที่ 35",
-      "ตอนที่ 36",
-      "ตอนที่ 37",
-      "ตอนที่ 38",
-      "ตอนที่ 39",
-      "ตอนที่ 40",
-      "ตอนที่ 41",
-      "ตอนที่ 42",
-      "ตอนที่ 43",
-      "ตอนที่ 44",
-      "ตอนที่ 45",
-      "ตอนที่ 46",
-      "ตอนที่ 47",
-      "ตอนที่ 48",
-      "ตอนที่ 49",
-      "ตอนที่ 50",
-      "ตอนที่ 51",
-      "ตอนที่ 52",
-      "ตอนที่ 53",
-      "ตอนที่ 54",
-      "ตอนที่ 55",
-      "ตอนที่ 56",
-      "ตอนที่ 57",
-      "ตอนที่ 58",
-      "ตอนที่ 59",
-      "ตอนที่ 60"
+      "ตอนที่ 30"
     ],
     "languages": [
       "Thai (พากย์ไทย)",
@@ -5892,37 +5774,7 @@ const movies = [
       "27": "https://torbo007.com/embed/d2c169cdec2df92c0dc24d3442405689",
       "28": "https://torbo007.com/embed/4566431069e326377c80525dc7cf7e9f",
       "29": "https://torbo007.com/embed/8bb39029b55c2edb3f4ced27a8462543",
-      "30": "https://torbo007.com/embed/f1f96e2e63b393f0b8bb193376e034be",
-      "31": "https://torbo007.com/embed/53f3eeaec83a2219c0fc076ec299dbbe",
-      "32": "https://torbo007.com/embed/4e287033d685445be97c8131be0c2853",
-      "33": "https://torbo007.com/embed/5242e10ce781840f7fbab02f966a6edf",
-      "34": "https://torbo007.com/embed/3e94aeced2fe3eb57bfda2c311d60337",
-      "35": "https://torbo007.com/embed/cdc53a932dda80b30c68a50b29ff3e55",
-      "36": "https://torbo007.com/embed/28d54e921a6baddf283eab82a32be575",
-      "37": "https://torbo007.com/embed/9afca596cdb3ce96502527b38bf33110",
-      "38": "https://torbo007.com/embed/c8a83c731bbc25bdacb8a578dd4c73ef",
-      "39": "https://torbo007.com/embed/c4f83d744906b0635b35f15513c55330",
-      "40": "https://torbo007.com/embed/ad325eecca3cb633e3831e201a5003f9",
-      "41": "https://torbo007.com/embed/f1bf1ac4be7ea74f3227bd9f843436af",
-      "42": "https://torbo007.com/embed/ed06ea7d9bfab2098995822093329c44",
-      "43": "https://torbo007.com/embed/ace1fbc527961f80ca41de627f74de94",
-      "44": "https://torbo007.com/embed/dd122a024e7374c2cc6cdb0baf1ae74b",
-      "45": "https://torbo007.com/embed/4aad54e229a1b889714ded444935a1a8",
-      "46": "https://torbo007.com/embed/fcd212bb46a2efaa75ed59447733a1b5",
-      "47": "https://torbo007.com/embed/681ca7e714968bce643c2181a1fb6b61",
-      "48": "https://torbo007.com/embed/23844fc89496f54bbe276b7d2f334156",
-      "49": "https://torbo007.com/embed/bdf7c9cf5e345a4ce1675c6f4d260b60",
-      "50": "https://torbo007.com/embed/c3fe4a8323065d973992c5cee7b5cfd7",
-      "51": "https://torbo007.com/embed/8322e5a3b44ff21467c76b5f79d2bf98",
-      "52": "https://torbo007.com/embed/47f158f8093b5dd6bf1a413ab5713e54",
-      "53": "https://torbo007.com/embed/e0b8f53ae992257670b47af04a2a9aff",
-      "54": "https://torbo007.com/embed/32bfaa0204bd1105c673c86eab65dff1",
-      "55": "https://torbo007.com/embed/0c309c28c412f7095f1657ee690c4468",
-      "56": "https://torbo007.com/embed/60e0df7d43716a0d0c97ae69e88ec088",
-      "57": "https://torbo007.com/embed/d2c169cdec2df92c0dc24d3442405689",
-      "58": "https://torbo007.com/embed/4566431069e326377c80525dc7cf7e9f",
-      "59": "https://torbo007.com/embed/8bb39029b55c2edb3f4ced27a8462543",
-      "60": "https://torbo007.com/embed/f1f96e2e63b393f0b8bb193376e034be"
+      "30": "https://torbo007.com/embed/f1f96e2e63b393f0b8bb193376e034be"
     }
   },
   {
@@ -5939,7 +5791,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "6 ตอน",
+    "duration": "6 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -5983,7 +5835,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "22 ตอน",
+    "duration": "22 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -6059,7 +5911,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "28 ตอน",
+    "duration": "28 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -6147,7 +5999,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "12 ตอน",
+    "duration": "12 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -6203,7 +6055,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "6 ตอน",
+    "duration": "6 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -6247,7 +6099,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "12 ตอน",
+    "duration": "12 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -6303,7 +6155,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "6 ตอน",
+    "duration": "6 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -6347,7 +6199,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "4 ตอน",
+    "duration": "4 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -6387,7 +6239,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "7 ตอน",
+    "duration": "8 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -6400,7 +6252,8 @@ const movies = [
       "ตอนที่ 4",
       "ตอนที่ 5",
       "ตอนที่ 6",
-      "ตอนที่ 7"
+      "ตอนที่ 7",
+      "ตอนที่ 8"
     ],
     "languages": [
       "Thai (พากย์ไทย)",
@@ -6416,7 +6269,8 @@ const movies = [
       "4": "https://torbo007.com/embed/c44b7ed12d7ee47afe0e706d64d5a27e",
       "5": "https://torbo007.com/embed/acb5df1f4bd72b0c93aad84cbc91a88a",
       "6": "https://torbo007.com/embed/86a89825e5d1f0b33cec0502cb0507e5",
-      "7": "https://torbo007.com/embed/e436ddb3d198702234be2a8456850e52"
+      "7": "https://torbo007.com/embed/e436ddb3d198702234be2a8456850e52",
+      "8": "https://torbo007.com/embed/003ec0ddf94bbb66671e05da13c44325"
     }
   },
   {
@@ -6433,7 +6287,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "10 ตอน",
+    "duration": "10 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -6485,7 +6339,7 @@ const movies = [
       "ซีรีส์จีน",
       "พากย์ไทย"
     ],
-    "duration": "62 ตอน",
+    "duration": "31 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -6522,38 +6376,7 @@ const movies = [
       "ตอนที่ 28",
       "ตอนที่ 29",
       "ตอนที่ 30",
-      "ตอนที่ 31",
-      "ตอนที่ 32",
-      "ตอนที่ 33",
-      "ตอนที่ 34",
-      "ตอนที่ 35",
-      "ตอนที่ 36",
-      "ตอนที่ 37",
-      "ตอนที่ 38",
-      "ตอนที่ 39",
-      "ตอนที่ 40",
-      "ตอนที่ 41",
-      "ตอนที่ 42",
-      "ตอนที่ 43",
-      "ตอนที่ 44",
-      "ตอนที่ 45",
-      "ตอนที่ 46",
-      "ตอนที่ 47",
-      "ตอนที่ 48",
-      "ตอนที่ 49",
-      "ตอนที่ 50",
-      "ตอนที่ 51",
-      "ตอนที่ 52",
-      "ตอนที่ 53",
-      "ตอนที่ 54",
-      "ตอนที่ 55",
-      "ตอนที่ 56",
-      "ตอนที่ 57",
-      "ตอนที่ 58",
-      "ตอนที่ 59",
-      "ตอนที่ 60",
-      "ตอนที่ 61",
-      "ตอนที่ 62"
+      "ตอนที่ 31"
     ],
     "languages": [
       "Thai (พากย์ไทย)",
@@ -6563,68 +6386,37 @@ const movies = [
     "sourcePageUrl": "https://goseries4k.com/love-in-the-edge-of-divorce/",
     "postId": "129827",
     "episodeUrls": {
-      "1": "https://torbo007.com/embed/32c52a89726ce316942c025d3f6b64ab",
-      "2": "https://torbo007.com/embed/2db251770df0fa62fef8e2daaff4c3eb",
-      "3": "https://torbo007.com/embed/d34d654df0b4e010ebaff30c7d98b97a",
-      "4": "https://torbo007.com/embed/bdd7ecd1a7f44003d484991fde8ccf3e",
-      "5": "https://torbo007.com/embed/15f0235949b13cc57475f4d783c6f2df",
-      "6": "https://torbo007.com/embed/39303dd709e6e2d7f0b7c71d38cbd276",
-      "7": "https://torbo007.com/embed/d9c111c323969c989d4ead5f1b3feceb",
-      "8": "https://torbo007.com/embed/781d380cdc6f459098eaafa11c6c9fbb",
-      "9": "https://torbo007.com/embed/682d54bad7fd79354b169fd322c78ae9",
-      "10": "https://torbo007.com/embed/88b53cb451aa5d581a1ea62b5ea58f42",
-      "11": "https://torbo007.com/embed/667e8d92f5a1b2a8841ede9979fa8c78",
-      "12": "https://torbo007.com/embed/b720268caedf2276eff819cd2b746975",
-      "13": "https://torbo007.com/embed/f80483610b66435fe1cf5ba59bc43e35",
-      "14": "https://torbo007.com/embed/27ab963c2d02d1a6dc99c113646d12da",
-      "15": "https://torbo007.com/embed/b15cb6fdeb9403978e57d060df562488",
-      "16": "https://torbo007.com/embed/f4e256746cc7fc8a976b0d3fe1aaf995",
-      "17": "https://torbo007.com/embed/a8c0714f2df2a3ad3aacaabd08b7fe50",
-      "18": "https://torbo007.com/embed/75a37caa51723efb7c3e8e98b00ff298",
-      "19": "https://torbo007.com/embed/2d0a71559461df26e53df16373bd7803",
-      "20": "https://torbo007.com/embed/a9408c6002c38b775ef5bdf67a8f7c21",
-      "21": "https://torbo007.com/embed/1fffd5678fc685eedbab990f8aa27ea6",
-      "22": "https://torbo007.com/embed/2a5d2d60d580bbb8f07e0832856c16f4",
-      "23": "https://torbo007.com/embed/eb68f0a96587abdb3dcd1693e9495821",
-      "24": "https://torbo007.com/embed/226e547c56a5ec56b47c1e8c3fb13e5f",
-      "25": "https://torbo007.com/embed/4c852b61b23040dcff51c416303b8935",
-      "26": "https://torbo007.com/embed/e6e6b03e782828852e94c62fa931c13a",
-      "27": "https://torbo007.com/embed/1e76e128740b1f5f65dd3758f1be1f39",
-      "28": "https://torbo007.com/embed/e527e0f4c82fcec2a947d57370484e1a",
-      "29": "https://torbo007.com/embed/366a7a61fd1384038e9f7226f3fdcc42",
-      "30": "https://torbo007.com/embed/37f004bc1152a100be8385276bb89ffd",
-      "31": "https://torbo007.com/embed/2b882726d5ce76094ad045b44f90f753",
-      "32": "https://torbo007.com/embed/4ccd74429baddf35736345070728da49",
-      "33": "https://torbo007.com/embed/4ec56720699261e9d929d3bcd8a5b920",
-      "34": "https://torbo007.com/embed/24d3188c4c403f243abc5f8c1653b172",
-      "35": "https://torbo007.com/embed/f7a46265c742b915fe0f9decafd11a96",
-      "36": "https://torbo007.com/embed/89db5b59ac6b587ecb8783591d6b3326",
-      "37": "https://torbo007.com/embed/ec9ee0dd2bbbe65213f73fc2c20ca41d",
-      "38": "https://torbo007.com/embed/3c952d26c0ae2da3ed9fd0d045a22aec",
-      "39": "https://torbo007.com/embed/ef81b505d5c045bc08b795c3793074b6",
-      "40": "https://torbo007.com/embed/18bf8ec128b82fbc906414d00f9f0e3b",
-      "41": "https://torbo007.com/embed/a89e9aba1a63cc01b8c13b34ea1e9d68",
-      "42": "https://torbo007.com/embed/5895d103cc6fbfc121fbfd70d01592e2",
-      "43": "https://torbo007.com/embed/6b5275aaabced4109e7212a0df27a146",
-      "44": "https://torbo007.com/embed/fe2f7618c87b8daddc1bb42c7d1f2b21",
-      "45": "https://torbo007.com/embed/b74cda9b38106abc9b069bf64addf061",
-      "46": "https://torbo007.com/embed/7daef83c5cb35ff4693daf42f313248d",
-      "47": "https://torbo007.com/embed/1d9b185de4bc3e4d90d89bf945359970",
-      "48": "https://torbo007.com/embed/2f57049cd4a297f1d02ef27fa03d09c4",
-      "49": "https://torbo007.com/embed/fd2ff0d3aa4db3fdd8bd4f00f82db675",
-      "50": "https://torbo007.com/embed/f23f68521f48f4ab9a698d70d43845b3",
-      "51": "https://torbo007.com/embed/92c6ae2aaa5db95d6671a7662a4eec81",
-      "52": "https://torbo007.com/embed/042ccd0d4ca9039896c34db377ce5ff2",
-      "53": "https://torbo007.com/embed/033cc2aa39ae747175d5e7cd0c2ca922",
-      "54": "https://torbo007.com/embed/4ccbbe0414afe71e1bb9f94fe6ceefef",
-      "55": "https://torbo007.com/embed/0324b0627be19ba416981e2fe0f2fdaf",
-      "56": "https://torbo007.com/embed/8ecaf0744f574cf99e321cc23a66cbb4",
-      "57": "https://torbo007.com/embed/1dc8ebed7b70fd5b40406f98521713c7",
-      "58": "https://torbo007.com/embed/23aa7ee3c2593106a4e1d85972ab6a84",
-      "59": "https://torbo007.com/embed/25a40a45e8d5d797d459999797c249c7",
-      "60": "https://torbo007.com/embed/9422c0080f73ddf9b3a42e5105ce7a2c",
-      "61": "https://torbo007.com/embed/b56c400d8be82a43860b1978c5389faf",
-      "62": "https://torbo007.com/embed/9e04f6f0724ebf441df8910272c0725b"
+      "1": "https://torbo007.com/embed/4ccd74429baddf35736345070728da49",
+      "2": "https://torbo007.com/embed/4ec56720699261e9d929d3bcd8a5b920",
+      "3": "https://torbo007.com/embed/24d3188c4c403f243abc5f8c1653b172",
+      "4": "https://torbo007.com/embed/f7a46265c742b915fe0f9decafd11a96",
+      "5": "https://torbo007.com/embed/89db5b59ac6b587ecb8783591d6b3326",
+      "6": "https://torbo007.com/embed/ec9ee0dd2bbbe65213f73fc2c20ca41d",
+      "7": "https://torbo007.com/embed/3c952d26c0ae2da3ed9fd0d045a22aec",
+      "8": "https://torbo007.com/embed/ef81b505d5c045bc08b795c3793074b6",
+      "9": "https://torbo007.com/embed/18bf8ec128b82fbc906414d00f9f0e3b",
+      "10": "https://torbo007.com/embed/a89e9aba1a63cc01b8c13b34ea1e9d68",
+      "11": "https://torbo007.com/embed/5895d103cc6fbfc121fbfd70d01592e2",
+      "12": "https://torbo007.com/embed/6b5275aaabced4109e7212a0df27a146",
+      "13": "https://torbo007.com/embed/fe2f7618c87b8daddc1bb42c7d1f2b21",
+      "14": "https://torbo007.com/embed/b74cda9b38106abc9b069bf64addf061",
+      "15": "https://torbo007.com/embed/7daef83c5cb35ff4693daf42f313248d",
+      "16": "https://torbo007.com/embed/1d9b185de4bc3e4d90d89bf945359970",
+      "17": "https://torbo007.com/embed/2f57049cd4a297f1d02ef27fa03d09c4",
+      "18": "https://torbo007.com/embed/fd2ff0d3aa4db3fdd8bd4f00f82db675",
+      "19": "https://torbo007.com/embed/f23f68521f48f4ab9a698d70d43845b3",
+      "20": "https://torbo007.com/embed/92c6ae2aaa5db95d6671a7662a4eec81",
+      "21": "https://torbo007.com/embed/042ccd0d4ca9039896c34db377ce5ff2",
+      "22": "https://torbo007.com/embed/033cc2aa39ae747175d5e7cd0c2ca922",
+      "23": "https://torbo007.com/embed/4ccbbe0414afe71e1bb9f94fe6ceefef",
+      "24": "https://torbo007.com/embed/0324b0627be19ba416981e2fe0f2fdaf",
+      "25": "https://torbo007.com/embed/8ecaf0744f574cf99e321cc23a66cbb4",
+      "26": "https://torbo007.com/embed/1dc8ebed7b70fd5b40406f98521713c7",
+      "27": "https://torbo007.com/embed/23aa7ee3c2593106a4e1d85972ab6a84",
+      "28": "https://torbo007.com/embed/25a40a45e8d5d797d459999797c249c7",
+      "29": "https://torbo007.com/embed/9422c0080f73ddf9b3a42e5105ce7a2c",
+      "30": "https://torbo007.com/embed/b56c400d8be82a43860b1978c5389faf",
+      "31": "https://torbo007.com/embed/9e04f6f0724ebf441df8910272c0725b"
     }
   },
   {
@@ -6641,7 +6433,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "8 ตอน",
+    "duration": "8 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -6689,7 +6481,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "2 ตอน",
+    "duration": "3 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -6697,7 +6489,8 @@ const movies = [
     "source": "GOSERIES4K",
     "episodes": [
       "ตอนที่ 1",
-      "ตอนที่ 2"
+      "ตอนที่ 2",
+      "ตอนที่ 3"
     ],
     "languages": [
       "Thai (พากย์ไทย)",
@@ -6708,7 +6501,8 @@ const movies = [
     "postId": "129073",
     "episodeUrls": {
       "1": "https://torbo007.com/embed/58cd723c5b2e210f66b62ec4e66e6fd2",
-      "2": "https://torbo007.com/embed/ab8a6770274700613debba16ff05977c"
+      "2": "https://torbo007.com/embed/ab8a6770274700613debba16ff05977c",
+      "3": "https://torbo007.com/embed/fb688dbdff301648e66a911bd5b31471"
     }
   },
   {
@@ -6725,7 +6519,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "30 ตอน",
+    "duration": "30 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -6817,7 +6611,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "10 ตอน",
+    "duration": "10 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -6869,7 +6663,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "66 ตอน",
+    "duration": "33 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -6908,40 +6702,7 @@ const movies = [
       "ตอนที่ 30",
       "ตอนที่ 31",
       "ตอนที่ 32",
-      "ตอนที่ 33",
-      "ตอนที่ 34",
-      "ตอนที่ 35",
-      "ตอนที่ 36",
-      "ตอนที่ 37",
-      "ตอนที่ 38",
-      "ตอนที่ 39",
-      "ตอนที่ 40",
-      "ตอนที่ 41",
-      "ตอนที่ 42",
-      "ตอนที่ 43",
-      "ตอนที่ 44",
-      "ตอนที่ 45",
-      "ตอนที่ 46",
-      "ตอนที่ 47",
-      "ตอนที่ 48",
-      "ตอนที่ 49",
-      "ตอนที่ 50",
-      "ตอนที่ 51",
-      "ตอนที่ 52",
-      "ตอนที่ 53",
-      "ตอนที่ 54",
-      "ตอนที่ 55",
-      "ตอนที่ 56",
-      "ตอนที่ 57",
-      "ตอนที่ 58",
-      "ตอนที่ 59",
-      "ตอนที่ 60",
-      "ตอนที่ 61",
-      "ตอนที่ 62",
-      "ตอนที่ 63",
-      "ตอนที่ 64",
-      "ตอนที่ 65",
-      "ตอนที่ 66"
+      "ตอนที่ 33"
     ],
     "languages": [
       "Thai (พากย์ไทย)",
@@ -6983,40 +6744,7 @@ const movies = [
       "30": "https://torbo007.com/embed/3067e09566fa3375e2b2c750d65563c7",
       "31": "https://torbo007.com/embed/1930d244c129c75ee96f64417f4b9a26",
       "32": "https://torbo007.com/embed/c981810068a33bf309964f8f81c4d751",
-      "33": "https://torbo007.com/embed/63462470575c98c47e26a03fa06a7e2c",
-      "34": "https://torbo007.com/embed/55c5fcbc410d2f51b71c7945a758265c",
-      "35": "https://torbo007.com/embed/aa7ae14e8973e474538aaf6ab6d7e03d",
-      "36": "https://torbo007.com/embed/9e9c96e15e30d57782d906818cc5d740",
-      "37": "https://torbo007.com/embed/f89e422f081206a2086284092ae63e9a",
-      "38": "https://torbo007.com/embed/20958b25eac3a5e31de8b6d9f8ddd39e",
-      "39": "https://torbo007.com/embed/f3eb27e677685602d418472b0896588b",
-      "40": "https://torbo007.com/embed/98bf1f98817acb32c87064f6ee60f7f7",
-      "41": "https://torbo007.com/embed/b0c549ea77e79d927a1b857e944ce354",
-      "42": "https://torbo007.com/embed/a8840d83738c3ea060f903219958d6f5",
-      "43": "https://torbo007.com/embed/a32dbf26b025f7159a99c51b17690327",
-      "44": "https://torbo007.com/embed/736da2a737c6c5eb3c6a7a9a00eb45d7",
-      "45": "https://torbo007.com/embed/398ff40facd419b70658633da519d41c",
-      "46": "https://torbo007.com/embed/396fc3fd13b225605725b9c833e175ce",
-      "47": "https://torbo007.com/embed/b28d0decfe0bc71b6a04baa61be4d264",
-      "48": "https://torbo007.com/embed/865ff84244fa884bd67ca53e572ffb07",
-      "49": "https://torbo007.com/embed/a6da1b99f8733722d614189d463ca800",
-      "50": "https://torbo007.com/embed/80f54fb744d9ffd7bf1d4f840b14ddb7",
-      "51": "https://torbo007.com/embed/c7222dcc6e40efb11bd61e67c18a87aa",
-      "52": "https://torbo007.com/embed/df93604d8cdac2c2cef554b044cc3d3e",
-      "53": "https://torbo007.com/embed/ef91ad35efa56f39c014dea86b9bc21a",
-      "54": "https://torbo007.com/embed/f4cef67b3789f4f30821f9e95078118c",
-      "55": "https://torbo007.com/embed/ef19bcde0f57aab3cd577ea204513eec",
-      "56": "https://torbo007.com/embed/9dcbdd94977c6b0b4dbc0845b029cda4",
-      "57": "https://torbo007.com/embed/07c1b8b9c89170fa705fff1af151362b",
-      "58": "https://torbo007.com/embed/ee95ba1e4a78aa2dc3d43de17b25074e",
-      "59": "https://torbo007.com/embed/2ba785c1854f258c0b7f679f3d74beac",
-      "60": "https://torbo007.com/embed/5edd638a1cacac66f6d1aaedc0ad76b1",
-      "61": "https://torbo007.com/embed/e483b5d62b5aa5065fc76635e2d623d4",
-      "62": "https://torbo007.com/embed/2d8c84bafe22af6970bcc69c741704ff",
-      "63": "https://torbo007.com/embed/99bff54cf8586a2cfe704d05a3a5711c",
-      "64": "https://torbo007.com/embed/1ea06f9343422721c0e462a8d2e2bb66",
-      "65": "https://torbo007.com/embed/a1fb4db66aecd38bdffbbe11d36e2889",
-      "66": "https://torbo007.com/embed/16567a3d91f5bb0a75ebb98bf710bb02"
+      "33": "https://torbo007.com/embed/63462470575c98c47e26a03fa06a7e2c"
     }
   },
   {
@@ -7033,7 +6761,7 @@ const movies = [
       "ซีรีส์จีน",
       "พากย์ไทย"
     ],
-    "duration": "31 ตอน",
+    "duration": "31 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -7127,7 +6855,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "6 ตอน",
+    "duration": "6 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -7171,7 +6899,7 @@ const movies = [
       "ซีรีส์จีน",
       "พากย์ไทย"
     ],
-    "duration": "24 ตอน",
+    "duration": "15 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -7192,16 +6920,7 @@ const movies = [
       "ตอนที่ 12",
       "ตอนที่ 13",
       "ตอนที่ 14",
-      "ตอนที่ 15",
-      "ตอนที่ 16",
-      "ตอนที่ 17",
-      "ตอนที่ 18",
-      "ตอนที่ 19",
-      "ตอนที่ 20",
-      "ตอนที่ 21",
-      "ตอนที่ 22",
-      "ตอนที่ 23",
-      "ตอนที่ 24"
+      "ตอนที่ 15"
     ],
     "languages": [
       "Thai (พากย์ไทย)",
@@ -7211,30 +6930,21 @@ const movies = [
     "sourcePageUrl": "https://goseries4k.com/mystic-nine-2/",
     "postId": "129665",
     "episodeUrls": {
-      "1": "https://torbo007.com/embed/ae2c319eb66867bc1a3e575ed468500e",
-      "2": "https://torbo007.com/embed/5fffb112ea38d65c293689463d53eb55",
-      "3": "https://torbo007.com/embed/d9e8bf9fb4fa8ec3f35323de3d5571a2",
-      "4": "https://torbo007.com/embed/cefdadde830fee099cfda57c3407eeb1",
-      "5": "https://torbo007.com/embed/21e1826c3246a40fee813c104945c213",
-      "6": "https://torbo007.com/embed/c4595910b2d5d2310880c641071f8423",
-      "7": "https://torbo007.com/embed/ca936aa47af132d2cede2d80dbc2a681",
-      "8": "https://torbo007.com/embed/0153a9499c87f280790ec9fcc0e0cf15",
-      "9": "https://torbo007.com/embed/1c5fee3fc1472823faa52ece08b160ce",
-      "10": "https://torbo007.com/embed/dbb86defc3c36298c3bb502aad535e81",
-      "11": "https://torbo007.com/embed/8944bfecd12aa4844a7ab3776c3b177e",
-      "12": "https://torbo007.com/embed/e7a0304161657511ca32b1d682f72854",
-      "13": "https://torbo007.com/embed/127ebcf2871faf70e954cd00fb28ab30",
-      "14": "https://torbo007.com/embed/70502ca4181b2be78da273974e125670",
-      "15": "https://torbo007.com/embed/e07c9fe61414892f356cd95399803d38",
-      "16": "https://torbo007.com/embed/c21093cdca0aebf5b191570ba027ece8",
-      "17": "https://torbo007.com/embed/46c669bc24f11907d0167cfa8bae90a5",
-      "18": "https://torbo007.com/embed/fad0d900847e10ca27f3036615d49247",
-      "19": "https://torbo007.com/embed/e42750278f4efc56ca9c28eef9704e7f",
-      "20": "https://torbo007.com/embed/998ca4b8e199f8f226905b69820fddac",
-      "21": "https://torbo007.com/embed/be1abd1d45b27d78d6069e1790db0977",
-      "22": "https://torbo007.com/embed/69395216483d2e5ba9805b6b42c521b2",
-      "23": "https://torbo007.com/embed/3e304fc9c67a295df6b90c306e78af62",
-      "24": "https://torbo007.com/embed/44391d38ea5e7febce35d52fcfc4a4ac"
+      "1": "https://torbo007.com/embed/46c669bc24f11907d0167cfa8bae90a5",
+      "2": "https://torbo007.com/embed/fad0d900847e10ca27f3036615d49247",
+      "3": "https://torbo007.com/embed/e42750278f4efc56ca9c28eef9704e7f",
+      "4": "https://torbo007.com/embed/998ca4b8e199f8f226905b69820fddac",
+      "5": "https://torbo007.com/embed/be1abd1d45b27d78d6069e1790db0977",
+      "6": "https://torbo007.com/embed/69395216483d2e5ba9805b6b42c521b2",
+      "7": "https://torbo007.com/embed/3e304fc9c67a295df6b90c306e78af62",
+      "8": "https://torbo007.com/embed/44391d38ea5e7febce35d52fcfc4a4ac",
+      "9": "https://torbo007.com/embed/b431c911d1a9ec0631734a36818adddb",
+      "10": "https://torbo007.com/embed/4e60bc69a827b12671b2aa5983dbb308",
+      "11": "https://torbo007.com/embed/ef43a087693648a73a6cfc1a102a4223",
+      "12": "https://torbo007.com/embed/e46934b7a22918f7c55839a8f4499c0c",
+      "13": "https://torbo007.com/embed/997722e86b56468c15a7e9408b295611",
+      "14": "https://torbo007.com/embed/28924a92b4e4bb4ba2325dd8c710682a",
+      "15": "https://torbo007.com/embed/ab433512835a29a4c1745ddfd4a3fbee"
     }
   },
   {
@@ -7251,7 +6961,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "16 ตอน",
+    "duration": "16 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -7315,7 +7025,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "8 ตอน",
+    "duration": "8 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -7363,7 +7073,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "6 ตอน",
+    "duration": "6 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -7406,7 +7116,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "20 ตอน",
+    "duration": "20 ตอน (ซับไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -7478,7 +7188,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "38 ตอน",
+    "duration": "38 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -7586,7 +7296,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "42 ตอน",
+    "duration": "42 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -7702,7 +7412,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "7 ตอน",
+    "duration": "7 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -7748,7 +7458,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "5 ตอน",
+    "duration": "5 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -7790,7 +7500,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "10 ตอน",
+    "duration": "10 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -7842,7 +7552,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "72 ตอน",
+    "duration": "36 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -7884,43 +7594,7 @@ const movies = [
       "ตอนที่ 33",
       "ตอนที่ 34",
       "ตอนที่ 35",
-      "ตอนที่ 36",
-      "ตอนที่ 37",
-      "ตอนที่ 38",
-      "ตอนที่ 39",
-      "ตอนที่ 40",
-      "ตอนที่ 41",
-      "ตอนที่ 42",
-      "ตอนที่ 43",
-      "ตอนที่ 44",
-      "ตอนที่ 45",
-      "ตอนที่ 46",
-      "ตอนที่ 47",
-      "ตอนที่ 48",
-      "ตอนที่ 49",
-      "ตอนที่ 50",
-      "ตอนที่ 51",
-      "ตอนที่ 52",
-      "ตอนที่ 53",
-      "ตอนที่ 54",
-      "ตอนที่ 55",
-      "ตอนที่ 56",
-      "ตอนที่ 57",
-      "ตอนที่ 58",
-      "ตอนที่ 59",
-      "ตอนที่ 60",
-      "ตอนที่ 61",
-      "ตอนที่ 62",
-      "ตอนที่ 63",
-      "ตอนที่ 64",
-      "ตอนที่ 65",
-      "ตอนที่ 66",
-      "ตอนที่ 67",
-      "ตอนที่ 68",
-      "ตอนที่ 69",
-      "ตอนที่ 70",
-      "ตอนที่ 71",
-      "ตอนที่ 72"
+      "ตอนที่ 36"
     ],
     "languages": [
       "Thai (พากย์ไทย)",
@@ -7930,78 +7604,42 @@ const movies = [
     "sourcePageUrl": "https://goseries4k.com/%e0%b8%94%e0%b8%b9%e0%b8%8b%e0%b8%b5%e0%b8%a3%e0%b8%b5%e0%b9%88%e0%b8%a2%e0%b9%8c-the-princesss-gambit/",
     "postId": "105206",
     "episodeUrls": {
-      "1": "https://torbo007.com/embed/97c15e5eba62e6b4abfa80cd7e2368cf?v=go4k",
-      "2": "https://torbo007.com/embed/a14ddd4aec7e9e45ffa3f6c738fcef20?v=go4k",
-      "3": "https://torbo007.com/embed/7699c283c24f7b11905128e82bad1a02?v=go4k",
-      "4": "https://torbo007.com/embed/35bfd7d318c2ebd7908aa7060c007390?v=go4k",
-      "5": "https://torbo007.com/embed/1ab5723376e639ae5eed66606cc7fd9f?v=go4k",
-      "6": "https://torbo007.com/embed/7f1dc3e7717739ef9d665e50a70e4bda?v=go4k",
-      "7": "https://torbo007.com/embed/1f6ca30a83537c1d49db0decd09a6938?v=go4k",
-      "8": "https://torbo007.com/embed/2dd1f8218fb8b077ef282709c1085f14?v=go4k",
-      "9": "https://torbo007.com/embed/fdbd1dce05b0b3be56d23677faeed07f?v=go4k",
-      "10": "https://torbo007.com/embed/385908502166ec75c522d344f3fffddc?v=go4k",
-      "11": "https://torbo007.com/embed/b9fcdbd8b6897bc9e98770f098a0eb91?v=go4k",
-      "12": "https://torbo007.com/embed/f57c7dd6ed32a8850bef5135c61bf622?v=go4k",
-      "13": "https://torbo007.com/embed/ed35141d1e2afa669bdb55e3d9dd4e65?v=go4k",
-      "14": "https://torbo007.com/embed/f2408db4eb2dab42fa0a06f956ec9a22?v=go4k",
-      "15": "https://torbo007.com/embed/c0dd47f1817de359d4ea7f84e0fd8423?v=go4k",
-      "16": "https://torbo007.com/embed/53abce80a1feafb400528c4219dd204b?v=go4k",
-      "17": "https://torbo007.com/embed/7f0a321022fdd249db939ff5f34047db?v=go4k",
-      "18": "https://torbo007.com/embed/476ec5890b431f95a60ccce949be23da?v=go4k",
-      "19": "https://torbo007.com/embed/6a8fa859c46de1014219dbf5f3cca76e?v=go4k",
-      "20": "https://torbo007.com/embed/86531ae420d2a73c482c4de046908ea4?v=go4k",
-      "21": "https://torbo007.com/embed/57130ecdd1201759897127c417fefd14?v=go4k",
-      "22": "https://torbo007.com/embed/bb1ea9e2f24b6cc67393057c60f56097?v=go4k",
-      "23": "https://torbo007.com/embed/a3de075c79d81c15fb218256ad951ebc?v=go4k",
-      "24": "https://torbo007.com/embed/470ad876582c4c12e6069e13057dc0e3?v=go4k",
-      "25": "https://torbo007.com/embed/b006a29585691c9ada5e460f940bf2a5?v=go4k",
-      "26": "https://torbo007.com/embed/a266c24fb8d9d0fb6cbe5669cee5eb9a?v=go4k",
-      "27": "https://torbo007.com/embed/954614437f33a8878c8b1fdc8afee852?v=go4k",
-      "28": "https://torbo007.com/embed/3d6232588589221818cca7184b5d7334?v=go4k",
-      "29": "https://torbo007.com/embed/d6e5cb2371e804f8af852a3da758a3c8?v=go4k",
-      "30": "https://torbo007.com/embed/c3558b3ce1a0875f7f0be84000d85557?v=go4k",
-      "31": "https://torbo007.com/embed/d07fd8b8b5b12fcce41acbe3c38c0b61?v=go4k",
-      "32": "https://torbo007.com/embed/047cea7ceefd4cf262e26ae3fc05d4c3?v=go4k",
-      "33": "https://torbo007.com/embed/4d9e6fbf77c28264b6c27d46f0049f30?v=go4k",
-      "34": "https://torbo007.com/embed/055256c3b646d89065f2ba731a899c7b?v=go4k",
-      "35": "https://torbo007.com/embed/3cf78e4cf97d3f6bd01251369dc4db24?v=go4k",
-      "36": "https://torbo007.com/embed/f8be095969e8bb011ab7d8c63427c74a?v=go4k",
-      "37": "https://torbo007.com/embed/9e5160cabacb94b50ac03435bb456f71",
-      "38": "https://torbo007.com/embed/3f72a639a7803c45c3c6203f6c960859",
-      "39": "https://torbo007.com/embed/45c12fcd268bea1e23fd30ea6c61a771",
-      "40": "https://torbo007.com/embed/a87923bd4df187bca89bc76a321acf5c",
-      "41": "https://torbo007.com/embed/aabba75b0a18742243892fd77e305151",
-      "42": "https://torbo007.com/embed/10eaa0d082df6c147548ed7f7bd7f64a",
-      "43": "https://torbo007.com/embed/42b38b8fb794f6459a5096ae513cefeb",
-      "44": "https://torbo007.com/embed/6fb5ccb7fcb2b3c2b667f0b074e9d96c",
-      "45": "https://torbo007.com/embed/51ac98ad9ab9e0d58204964a4dd0357c",
-      "46": "https://torbo007.com/embed/8cd60bffad56dac4b5878db5bd46e054",
-      "47": "https://torbo007.com/embed/c6c367465bbaade9592f0c299023f75a",
-      "48": "https://torbo007.com/embed/f7c03136f404ce0ef850743659d9e02d",
-      "49": "https://torbo007.com/embed/cb823d7d8d0cf68e8391ac31af3e2136",
-      "50": "https://torbo007.com/embed/ccafdc4b5db739e3ba785cacbb824de2",
-      "51": "https://torbo007.com/embed/fbf96989ef24982e96c824ac435de9e4",
-      "52": "https://torbo007.com/embed/d82e1066db3ac0cba31e361547e206dd",
-      "53": "https://torbo007.com/embed/b2ad5d2ff7fd1382d9b72110aa97ecf7",
-      "54": "https://torbo007.com/embed/6e13837cd3ec517a5144b74b772895bf",
-      "55": "https://torbo007.com/embed/b96caa4734bedcff7842f198435b98dc",
-      "56": "https://torbo007.com/embed/bf4db4296adc0ebcfb2ce16eda6ca0ee",
-      "57": "https://torbo007.com/embed/a2bae019bb79866cd341758d91db6aae",
-      "58": "https://torbo007.com/embed/91f9c746c1330d4e5f315e54757c9488",
-      "59": "https://torbo007.com/embed/b1dd04d9e09385e9d4d9d15396f8b930",
-      "60": "https://torbo007.com/embed/fdb6d434e989a42d1ee8561d9374ca36",
-      "61": "https://torbo007.com/embed/b567fe5e7026823873dc53ab2f9393c6",
-      "62": "https://torbo007.com/embed/a14a975782640496c0c70f3b61823106",
-      "63": "https://torbo007.com/embed/a2753c6bb43ad99ff8524a71be42c190",
-      "64": "https://torbo007.com/embed/a697be2204c0e8a0635e71427f2c4a6b",
-      "65": "https://torbo007.com/embed/f6ef4e67b7c7661704e451296d41b2df",
-      "66": "https://torbo007.com/embed/9e93c677d5c2b797b704ec8dcb171226",
-      "67": "https://torbo007.com/embed/0dc4054a1fdf580fb4269eff6d05e211",
-      "68": "https://torbo007.com/embed/4b4214a865300a92da8a6d612a5a2536",
-      "69": "https://torbo007.com/embed/ed8e394f8bbd348d91a74a3710d5041a",
-      "70": "https://torbo007.com/embed/c1f3d7854921118c14a560fa1b0efdef",
-      "71": "https://torbo007.com/embed/003ab4e29d8412ad0a064c8c5150c4e1",
-      "72": "https://torbo007.com/embed/95ac3ef7bcf395fb1297a34cde38d6ac"
+      "1": "https://torbo007.com/embed/9e5160cabacb94b50ac03435bb456f71",
+      "2": "https://torbo007.com/embed/3f72a639a7803c45c3c6203f6c960859",
+      "3": "https://torbo007.com/embed/45c12fcd268bea1e23fd30ea6c61a771",
+      "4": "https://torbo007.com/embed/a87923bd4df187bca89bc76a321acf5c",
+      "5": "https://torbo007.com/embed/aabba75b0a18742243892fd77e305151",
+      "6": "https://torbo007.com/embed/10eaa0d082df6c147548ed7f7bd7f64a",
+      "7": "https://torbo007.com/embed/42b38b8fb794f6459a5096ae513cefeb",
+      "8": "https://torbo007.com/embed/6fb5ccb7fcb2b3c2b667f0b074e9d96c",
+      "9": "https://torbo007.com/embed/51ac98ad9ab9e0d58204964a4dd0357c",
+      "10": "https://torbo007.com/embed/8cd60bffad56dac4b5878db5bd46e054",
+      "11": "https://torbo007.com/embed/c6c367465bbaade9592f0c299023f75a",
+      "12": "https://torbo007.com/embed/f7c03136f404ce0ef850743659d9e02d",
+      "13": "https://torbo007.com/embed/cb823d7d8d0cf68e8391ac31af3e2136",
+      "14": "https://torbo007.com/embed/ccafdc4b5db739e3ba785cacbb824de2",
+      "15": "https://torbo007.com/embed/fbf96989ef24982e96c824ac435de9e4",
+      "16": "https://torbo007.com/embed/d82e1066db3ac0cba31e361547e206dd",
+      "17": "https://torbo007.com/embed/b2ad5d2ff7fd1382d9b72110aa97ecf7",
+      "18": "https://torbo007.com/embed/6e13837cd3ec517a5144b74b772895bf",
+      "19": "https://torbo007.com/embed/b96caa4734bedcff7842f198435b98dc",
+      "20": "https://torbo007.com/embed/bf4db4296adc0ebcfb2ce16eda6ca0ee",
+      "21": "https://torbo007.com/embed/a2bae019bb79866cd341758d91db6aae",
+      "22": "https://torbo007.com/embed/91f9c746c1330d4e5f315e54757c9488",
+      "23": "https://torbo007.com/embed/b1dd04d9e09385e9d4d9d15396f8b930",
+      "24": "https://torbo007.com/embed/fdb6d434e989a42d1ee8561d9374ca36",
+      "25": "https://torbo007.com/embed/b567fe5e7026823873dc53ab2f9393c6",
+      "26": "https://torbo007.com/embed/a14a975782640496c0c70f3b61823106",
+      "27": "https://torbo007.com/embed/a2753c6bb43ad99ff8524a71be42c190",
+      "28": "https://torbo007.com/embed/a697be2204c0e8a0635e71427f2c4a6b",
+      "29": "https://torbo007.com/embed/f6ef4e67b7c7661704e451296d41b2df",
+      "30": "https://torbo007.com/embed/9e93c677d5c2b797b704ec8dcb171226",
+      "31": "https://torbo007.com/embed/0dc4054a1fdf580fb4269eff6d05e211",
+      "32": "https://torbo007.com/embed/4b4214a865300a92da8a6d612a5a2536",
+      "33": "https://torbo007.com/embed/ed8e394f8bbd348d91a74a3710d5041a",
+      "34": "https://torbo007.com/embed/c1f3d7854921118c14a560fa1b0efdef",
+      "35": "https://torbo007.com/embed/003ab4e29d8412ad0a064c8c5150c4e1",
+      "36": "https://torbo007.com/embed/95ac3ef7bcf395fb1297a34cde38d6ac"
     }
   },
   {
@@ -8018,7 +7656,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "6 ตอน",
+    "duration": "6 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -8062,7 +7700,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "40 ตอน",
+    "duration": "40 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -8174,7 +7812,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "12 ตอน",
+    "duration": "8 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -8188,11 +7826,7 @@ const movies = [
       "ตอนที่ 5",
       "ตอนที่ 6",
       "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9",
-      "ตอนที่ 10",
-      "ตอนที่ 11",
-      "ตอนที่ 12"
+      "ตอนที่ 8"
     ],
     "languages": [
       "Thai (พากย์ไทย)",
@@ -8202,18 +7836,14 @@ const movies = [
     "sourcePageUrl": "https://goseries4k.com/a-shop-for-killers-2/",
     "postId": "128929",
     "episodeUrls": {
-      "1": "https://torbo007.com/embed/ffcd8b69cfbbf7dc029ee5b3892516d2",
-      "2": "https://torbo007.com/embed/7043e108234248fef3af7c904b67c7b3",
-      "3": "https://torbo007.com/embed/c8eea3ab3093bf3607366ab673f62e7a",
-      "4": "https://torbo007.com/embed/154130a0f0d8dbd9755fa335602811c8",
-      "5": "https://torbo007.com/embed/d000d20fd7b7365c133dd03e9f2cfdc2",
-      "6": "https://torbo007.com/embed/64641d34875adc2857dcb799de676b18",
-      "7": "https://torbo007.com/embed/dc9df6854ac7b82f693527105f2a2282",
-      "8": "https://torbo007.com/embed/975969ee9cdcc6afd290aadcda9793bd",
-      "9": "https://torbo007.com/embed/21b9641509cf467adf67f510d2d1e5c5",
-      "10": "https://torbo007.com/embed/20dbce89407b97c81b1f9a2cc3c9b3c3",
-      "11": "https://torbo007.com/embed/8a56344614f2086b547bfe2617ed3f96",
-      "12": "https://torbo007.com/embed/cb766b5e561e8ec7ac850409aee99184"
+      "1": "https://torbo007.com/embed/dc9df6854ac7b82f693527105f2a2282",
+      "2": "https://torbo007.com/embed/975969ee9cdcc6afd290aadcda9793bd",
+      "3": "https://torbo007.com/embed/21b9641509cf467adf67f510d2d1e5c5",
+      "4": "https://torbo007.com/embed/20dbce89407b97c81b1f9a2cc3c9b3c3",
+      "5": "https://torbo007.com/embed/8a56344614f2086b547bfe2617ed3f96",
+      "6": "https://torbo007.com/embed/cb766b5e561e8ec7ac850409aee99184",
+      "7": "https://torbo007.com/embed/020cc10a70404bb228a914665e31d958",
+      "8": "https://torbo007.com/embed/5adf320fa6f9ada3187d88389860cc90"
     }
   },
   {
@@ -8230,7 +7860,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "16 ตอน",
+    "duration": "10 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -8246,13 +7876,7 @@ const movies = [
       "ตอนที่ 7",
       "ตอนที่ 8",
       "ตอนที่ 9",
-      "ตอนที่ 10",
-      "ตอนที่ 11",
-      "ตอนที่ 12",
-      "ตอนที่ 13",
-      "ตอนที่ 14",
-      "ตอนที่ 15",
-      "ตอนที่ 16"
+      "ตอนที่ 10"
     ],
     "languages": [
       "Thai (พากย์ไทย)",
@@ -8270,14 +7894,8 @@ const movies = [
       "6": "https://torbo007.com/embed/0eb952c1762e7d7ba0f03d24f6a46b26",
       "7": "https://torbo007.com/embed/78c6a4328ba89200ec291ca4859275c2",
       "8": "https://torbo007.com/embed/f142fc85c82df3d3c13a9e25950bc142",
-      "9": "https://torbo007.com/embed/c24657c0b17d1aac372f5c226952e2cd",
-      "10": "https://torbo007.com/embed/02d92bd0e10a030ac4fe2df56f71b9e5",
-      "11": "https://torbo007.com/embed/e6575c7a906aadff601c07006b229b6d",
-      "12": "https://torbo007.com/embed/ddf1966c6951fff6c989160c6e636f4f",
-      "13": "https://torbo007.com/embed/b4ecc15249fe0035838d7e5cfa51fc02",
-      "14": "https://torbo007.com/embed/1b028353e401491d54611a4d38712e31",
-      "15": "https://torbo007.com/embed/e90e3bab5d4955317c2c5e9a2211fb98",
-      "16": "https://torbo007.com/embed/35062869cc07effecd0f2d3a4455a688"
+      "9": "https://torbo007.com/embed/31ef238abcec1e00932774f1fba7056b",
+      "10": "https://torbo007.com/embed/62d8502936796bd9a6e0b6c3db40ec66"
     }
   },
   {
@@ -8294,7 +7912,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "7 ตอน",
+    "duration": "7 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -8340,7 +7958,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "6 ตอน",
+    "duration": "6 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -8384,7 +8002,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "16 ตอน",
+    "duration": "16 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -8448,7 +8066,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "16 ตอน",
+    "duration": "16 ตอน (พากย์ไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -8512,7 +8130,7 @@ const movies = [
       "ซีรีส์พากย์ไทย",
       "พากย์ไทย"
     ],
-    "duration": "18 ตอน",
+    "duration": "28 ตอน (ซับไทย)",
     "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
     "cast": [
       "นักแสดงนำคุณภาพ"
@@ -8536,7 +8154,17 @@ const movies = [
       "ตอนที่ 15",
       "ตอนที่ 16",
       "ตอนที่ 17",
-      "ตอนที่ 18"
+      "ตอนที่ 18",
+      "ตอนที่ 19",
+      "ตอนที่ 20",
+      "ตอนที่ 21",
+      "ตอนที่ 22",
+      "ตอนที่ 23",
+      "ตอนที่ 24",
+      "ตอนที่ 25",
+      "ตอนที่ 26",
+      "ตอนที่ 27",
+      "ตอนที่ 28"
     ],
     "languages": [
       "Thai (พากย์ไทย)",
@@ -8563,7 +8191,17 @@ const movies = [
       "15": "https://torbo007.com/embed/1c502e3d688374b368f1ba14df259321",
       "16": "https://torbo007.com/embed/ea2bda5da237ae08767807e41995302f",
       "17": "https://torbo007.com/embed/acbd16430403efea5c2ecf67af5aa888",
-      "18": "https://torbo007.com/embed/4904721941ced24f1ee4be64ec279a86"
+      "18": "https://torbo007.com/embed/4904721941ced24f1ee4be64ec279a86",
+      "19": "https://torbo007.com/embed/0b061a280032a52e97caf206ed1f09c5",
+      "20": "https://torbo007.com/embed/cbe15f0ae85394838c684a3f065a3ed9",
+      "21": "https://torbo007.com/embed/a9f03966ba064745e765fed704218b83",
+      "22": "https://torbo007.com/embed/35a730d4f24d09e4e4849d7a1da8130a",
+      "23": "https://torbo007.com/embed/13c1f1e5619af7ec7a025cec056be5cf",
+      "24": "https://torbo007.com/embed/ba9b4a1d23734624e5a782b2a165aa1c",
+      "25": "https://torbo007.com/embed/1ebb85fa9b7dd2cbbda0d6062665e873",
+      "26": "https://torbo007.com/embed/7adc949bb71fb39701f2b8aef45969bb",
+      "27": "https://torbo007.com/embed/f2d98c7423df0227a3a1e947505f8eb8",
+      "28": "https://torbo007.com/embed/949a729b9d467aa5d60d21845266902d"
     }
   }
 ];
