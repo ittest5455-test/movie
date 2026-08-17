@@ -424,6 +424,32 @@ input:focus {
   box-shadow: 0 0 15px var(--color-primary-glow);
 }
 
+.genre-tag.tag-highlight {
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.08);
+}
+.genre-tag.tag-highlight:hover,
+.genre-tag.tag-highlight.active {
+  background: #ef4444;
+  color: #fff;
+  border-color: #ef4444;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
+}
+
+.genre-tag.tag-highlight-week {
+  border-color: rgba(245, 158, 11, 0.4);
+  color: #fcd34d;
+  background: rgba(245, 158, 11, 0.08);
+}
+.genre-tag.tag-highlight-week:hover,
+.genre-tag.tag-highlight-week.active {
+  background: #f59e0b;
+  color: #000;
+  border-color: #f59e0b;
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
+}
+
 /* Movie Slider Shelf */
 .movies-shelf-section {
   padding: 1.5rem 0 1.5rem 4%;
