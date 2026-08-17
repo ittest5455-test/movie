@@ -450,6 +450,19 @@ input:focus {
   box-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
 }
 
+.genre-tag.tag-year {
+  border-color: rgba(59, 130, 246, 0.4);
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.08);
+}
+.genre-tag.tag-year:hover,
+.genre-tag.tag-year.active {
+  background: #3b82f6;
+  color: #fff;
+  border-color: #3b82f6;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
 /* Movie Slider Shelf */
 .movies-shelf-section {
   padding: 1.5rem 0 1.5rem 4%;
