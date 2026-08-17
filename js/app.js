@@ -441,14 +441,15 @@ document.addEventListener("DOMContentLoaded", () => {
       customPlayerControls.style.display = "none";
       
       iframeVideoPlayer.style.display = "block";
-      iframeVideoPlayer.removeAttribute("sandbox");
+      // บล็อกโฆษณา Popup กวนใจ (allow-scripts allow-same-origin allow-fullscreen แต่ไม่อนุญาต allow-popups)
+      iframeVideoPlayer.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms allow-presentation allow-fullscreen");
       iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
       iframeVideoPlayer.setAttribute("allow", "autoplay; fullscreen; picture-in-picture");
       iframeVideoPlayer.src = movie.videoUrl;
       
       playerBlockerOverlay.style.display = "none";
       
-      showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}`, "success");
+      showToast(`กำลังเปิดเครื่องเล่นวิดีโอ (บล็อกโฆษณา): ${movie.titleTh}`, "success");
     }
   }
 
