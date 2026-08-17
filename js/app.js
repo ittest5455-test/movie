@@ -779,6 +779,15 @@ document.addEventListener("DOMContentLoaded", () => {
       } else if (genre === "this-week") {
         const thisWeekMovies = movies.slice(0, 36);
         showGridView("⭐ ภาพยนตร์ & ซีรีส์อัปเดตสัปดาห์นี้ (จาก 037HDD, 24-HDX, GOSERIES4K)", thisWeekMovies);
+      } else if (genre === "year-2026") {
+        const y2026Movies = movies.filter(m => String(m.year) === "2026" || m.titleTh.includes("2026"));
+        showGridView(`📅 รวมภาพยนตร์ & ซีรีส์ใหม่ปี 2026 (${y2026Movies.length} เรื่อง)`, y2026Movies);
+      } else if (genre === "year-2025") {
+        const y2025Movies = movies.filter(m => String(m.year) === "2025" || m.titleTh.includes("2025"));
+        showGridView(`📅 รวมภาพยนตร์ & ซีรีส์ปี 2025 (${y2025Movies.length} เรื่อง)`, y2025Movies);
+      } else if (genre === "year-2024") {
+        const y2024Movies = movies.filter(m => String(m.year) === "2024" || m.titleTh.includes("2024"));
+        showGridView(`📅 รวมภาพยนตร์ & ซีรีส์ปี 2024 (${y2024Movies.length} เรื่อง)`, y2024Movies);
       } else if (genre === "037HDD" || genre === "24HDX" || genre === "GOSERIES4K") {
         const sourceMovies = movies.filter(m => m.source === genre);
         showGridView(`📌 รวมภาพยนตร์ & ซีรีส์จาก ${genre} (${sourceMovies.length} เรื่อง)`, sourceMovies);
