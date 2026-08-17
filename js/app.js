@@ -183,10 +183,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Create single movie card structure
   function createMovieCardMarkup(movie) {
     const isSaved = watchlist.includes(movie.id);
+    const placeholderSvg = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22300%22%20height%3D%22450%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20300%20450%22%3E%3Crect%20fill%3D%22%231e293b%22%20width%3D%22300%22%20height%3D%22450%22%2F%3E%3Ctext%20fill%3D%22%2394a3b8%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20dy%3D%2210.5%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EMovieStream%20HD%3C%2Ftext%3E%3C%2Fsvg%3E";
     return `
       <div class="movie-card" data-id="${movie.id}" tabindex="0" role="button" aria-label="${movie.titleTh}">
         <div class="movie-poster-wrapper">
-          <img src="${movie.poster}" alt="โปสเตอร์เรื่อง ${movie.titleTh}" loading="lazy">
+          <img src="${movie.poster}" alt="โปสเตอร์เรื่อง ${movie.titleTh}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${placeholderSvg}'">
           <span class="movie-rating-badge">
             <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
             ${movie.rating}
