@@ -105,11 +105,19 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderMovieShelves() {
     movieShelvesContainer.innerHTML = "";
     
-    // 1. Trending Now Shelf
+    // 1. Shelf หนังใหม่อัปเดตวันนี้ (คัดเลือกหนังใหม่ล่าสุดจาก 3 เว็บ 037HDD + 24-HDX + GOSERIES4K)
+    const todayMovies = movies.slice(0, 16);
+    createShelf("🔥 หนังใหม่อัปเดตวันนี้ (Today's Updates)", todayMovies);
+
+    // 2. Shelf หนังใหม่อัปเดตสัปดาห์นี้ (สัปดาห์นี้)
+    const thisWeekMovies = movies.slice(0, 32);
+    createShelf("⭐ หนังใหม่อัปเดตสัปดาห์นี้ (This Week)", thisWeekMovies);
+
+    // 3. Trending Now Shelf
     const trendingMovies = [...movies].sort((a, b) => b.rating - a.rating);
-    createShelf("ภาพยนตร์ยอดนิยม (Trending Now)", trendingMovies);
+    createShelf("🏆 ภาพยนตร์ยอดนิยม (Trending Now)", trendingMovies);
     
-    // 2. Shelf for each category/genre
+    // 4. Shelf for each category/genre
     const genres = ["ตลกคอมเมดี้", "สยองขวัญ", "แฟนตาซี Sci-Fi", "แอคชั่น", "การ์ตูน"];
     genres.forEach(genre => {
       const filtered = movies.filter(m => m.genres.includes(genre));
@@ -763,6 +771,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const genre = btn.getAttribute("data-genre");
       if (genre === "all") {
         showHomeView();
+      } else if (genre === "today") {
+        const todayMovies = movies.slice(0, 16);
+        showGridView("🔥 ภาพยนตร์ & ซีรีส์อัปเดตวันนี้ (จาก 037HDD, 24-HDX, GOSERIES4K)", todayMovies);
+      } else if (genre === "this-week") {
+        const thisWeekMovies = movies.slice(0, 36);
+        showGridView("⭐ ภาพยนตร์ & ซีรีส์อัปเดตสัปดาห์นี้ (จาก 037HDD, 24-HDX, GOSERIES4K)", thisWeekMovies);
+      } else if (genre === "037HDD" || genre === "24HDX" || genre === "GOSERIES4K") {
+        const sourceMovies = movies.filter(m => m.source === genre);
+        showGridView(`📌 รวมภาพยนตร์ & ซีรีส์จาก ${genre} (${sourceMovies.length} เรื่อง)`, sourceMovies);
       } else {
         const filtered = movies.filter(m => m.genres.includes(genre));
         showGridView(`หมวดหมู่ภาพยนตร์: ${genre}`, filtered);
