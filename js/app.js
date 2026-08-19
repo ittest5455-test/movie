@@ -441,15 +441,15 @@ document.addEventListener("DOMContentLoaded", () => {
       customPlayerControls.style.display = "none";
       
       iframeVideoPlayer.style.display = "block";
-      // บล็อกโฆษณา Popup กวนใจ (allow-scripts allow-same-origin allow-fullscreen แต่ไม่อนุญาต allow-popups)
-      iframeVideoPlayer.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms allow-presentation allow-fullscreen");
+      // ปลดล็อกการบล็อกสตรีมเพื่อไม่ให้วิดีโอตัดหลุดระหว่างเล่น และอนุญาต full media stream & encrypted-media
+      iframeVideoPlayer.removeAttribute("sandbox");
       iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
-      iframeVideoPlayer.setAttribute("allow", "autoplay; fullscreen; picture-in-picture");
+      iframeVideoPlayer.setAttribute("allow", "autoplay; fullscreen; picture-in-picture; encrypted-media; media-src *; webkit-playsinline; playsinline");
       iframeVideoPlayer.src = movie.videoUrl;
       
       playerBlockerOverlay.style.display = "none";
       
-      showToast(`กำลังเปิดเครื่องเล่นวิดีโอ (บล็อกโฆษณา): ${movie.titleTh}`, "success");
+      showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}`, "success");
     }
   }
 
@@ -459,6 +459,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (currentActiveMovie && currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[episode]) {
       const epVideoUrl = currentActiveMovie.episodeUrls[episode];
+      iframeVideoPlayer.removeAttribute("sandbox");
+      iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
+      iframeVideoPlayer.setAttribute("allow", "autoplay; fullscreen; picture-in-picture; encrypted-media; media-src *; webkit-playsinline; playsinline");
       iframeVideoPlayer.src = epVideoUrl;
       showToast(`เปิดเล่น ตอนที่ ${episode} เรียบร้อย`, "success");
       return;
