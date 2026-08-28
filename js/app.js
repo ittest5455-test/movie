@@ -46,30 +46,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const html5VideoPlayer = document.getElementById("html5VideoPlayer");
   const iframeVideoPlayer = document.getElementById("iframeVideoPlayer");
   const customPlayerControls = document.getElementById("customPlayerControls");
-  const playerBlockerOverlay = document.getElementById("playerBlockerOverlay");
   
-  // Player Top & Bottom Bar Selectors
-  const serverMainOldBtn = document.getElementById("serverMainOldBtn");
-  const serverMainNewBtn = document.getElementById("serverMainNewBtn");
-  const serverBackupBtn = document.getElementById("serverBackupBtn");
+  // Player Bottom Bar Selectors
   const audioSelectBtn = document.getElementById("audioSelectBtn");
   const episodeSelectBtn = document.getElementById("episodeSelectBtn");
 
   // Custom Controls Selectors
   const playPauseBtn = document.getElementById("playPauseBtn");
   const playIcon = document.getElementById("playIcon");
-  const skipBackBtn = document.getElementById("skipBackBtn");
-  const skipForwardBtn = document.getElementById("skipForwardBtn");
   const currentTimeLabel = document.getElementById("currentTime");
   const totalDurationLabel = document.getElementById("totalDuration");
-  const progressBar = document.getElementById("progressBar");
-  const progressFilled = document.getElementById("progressFilled");
+  const progressBarContainer = document.getElementById("progressBarContainer");
+  const progressBarFilled = document.getElementById("progressBarFilled");
   const muteBtn = document.getElementById("muteBtn");
-  const volumeIcon = document.getElementById("volumeIcon");
   const volumeSlider = document.getElementById("volumeSlider");
   const volumeFilled = document.getElementById("volumeFilled");
   const fullscreenBtn = document.getElementById("fullscreenBtn");
-  const videoWrapper = document.getElementById("videoWrapper");
+  const videoScreenWrapper = document.getElementById("videoScreenWrapper");
 
   const toastContainer = document.getElementById("toastContainer");
 
@@ -440,8 +433,6 @@ document.addEventListener("DOMContentLoaded", () => {
       iframeVideoPlayer.setAttribute("webkit-playsinline", "");
       iframeVideoPlayer.src = movie.videoUrl;
       
-      playerBlockerOverlay.style.display = "none";
-      
       showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}`, "success");
     }
   }
@@ -546,22 +537,23 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Update progress bar as video plays
-  html5VideoPlayer.addEventListener("timeupdate", () => {
-    const curTime = html5VideoPlayer.currentTime;
-    const durTime = html5VideoPlayer.duration;
-    
-    if (durTime > 0) {
-      const percentage = (curTime / durTime) * 100;
-      progressFilled.style.width = `${percentage}%`;
-    }
-    
-    currentTimeLabel.textContent = formatTime(curTime);
-  });
+  if (html5VideoPlayer) {
+    html5VideoPlayer.addEventListener("timeupdate", () => {
+      const curTime = html5VideoPlayer.currentTime;
+      const durTime = html5VideoPlayer.duration;
+      
+      if (durTime > 0 && progressBarFilled) {
+        const percentage = (curTime / durTime) * 100;
+        progressBarFilled.style.width = `${percentage}%`;
+      }
+      
+      if (currentTimeLabel) currentTimeLabel.textContent = formatTime(curTime);
+    });
 
-  // Set total duration once metadata is loaded
-  html5VideoPlayer.addEventListener("loadedmetadata", () => {
-    totalDurationLabel.textContent = formatTime(html5VideoPlayer.duration);
-  });
+    html5VideoPlayer.addEventListener("loadedmetadata", () => {
+      if (totalDurationLabel) totalDurationLabel.textContent = formatTime(html5VideoPlayer.duration);
+    });
+  }
 
   // Seeking on Progress Bar Click
   const progressBarContainer = document.getElementById("progressBarContainer");
