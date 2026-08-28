@@ -583,68 +583,67 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Seeking on Progress Bar Click
-  progressBar.addEventListener("click", (e) => {
-    const rect = progressBar.getBoundingClientRect();
-    const pos = (e.clientX - rect.left) / rect.width;
-    html5VideoPlayer.currentTime = pos * html5VideoPlayer.duration;
-  });
+  const progressBarContainer = document.getElementById("progressBarContainer");
+  if (progressBarContainer) {
+    progressBarContainer.addEventListener("click", (e) => {
+      const rect = progressBarContainer.getBoundingClientRect();
+      const pos = (e.clientX - rect.left) / rect.width;
+      html5VideoPlayer.currentTime = pos * html5VideoPlayer.duration;
+    });
+  }
 
   // Volume Slider Logic
   function updateVolumeBarUI() {
+    if (!html5VideoPlayer) return;
     const vol = html5VideoPlayer.volume;
-    volumeFilled.style.width = `${vol * 100}%`;
-    
-    if (html5VideoPlayer.muted || vol === 0) {
-      volumeIcon.innerHTML = `<path d="M11 5L6 9H2v6h4l5 4V5z"></path>`; // Mute/No sound icon
-    } else if (vol < 0.5) {
-      volumeIcon.innerHTML = `<path d="M11 5L6 9H2v6h4l5 4V5z"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>`; // Low volume wave
-    } else {
-      volumeIcon.innerHTML = `<path d="M11 5L6 9H2v6h4l5 4V5z"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>`; // High volume wave
-    }
+    const volumeFilled = document.getElementById("volumeFilled");
+    if (volumeFilled) volumeFilled.style.width = `${vol * 100}%`;
   }
 
-  muteBtn.addEventListener("click", () => {
-    html5VideoPlayer.muted = !html5VideoPlayer.muted;
-    updateVolumeBarUI();
-  });
+  const muteBtn = document.getElementById("muteBtn");
+  if (muteBtn) {
+    muteBtn.addEventListener("click", () => {
+      html5VideoPlayer.muted = !html5VideoPlayer.muted;
+      updateVolumeBarUI();
+    });
+  }
 
-  volumeSlider.addEventListener("click", (e) => {
-    const rect = volumeSlider.getBoundingClientRect();
-    let vol = (e.clientX - rect.left) / rect.width;
-    vol = Math.max(0, Math.min(1, vol)); // clamp 0 to 1
-    
-    html5VideoPlayer.volume = vol;
-    html5VideoPlayer.muted = false;
-    updateVolumeBarUI();
-  });
+  const volumeSlider = document.getElementById("volumeSlider");
+  if (volumeSlider) {
+    volumeSlider.addEventListener("click", (e) => {
+      const rect = volumeSlider.getBoundingClientRect();
+      let vol = (e.clientX - rect.left) / rect.width;
+      vol = Math.max(0, Math.min(1, vol));
+      html5VideoPlayer.volume = vol;
+      html5VideoPlayer.muted = false;
+      updateVolumeBarUI();
+    });
+  }
 
   // Fullscreen Action
-  fullscreenBtn.addEventListener("click", () => {
-    if (!document.fullscreenElement) {
-      if (videoWrapper.requestFullscreen) {
-        videoWrapper.requestFullscreen();
-      } else if (videoWrapper.webkitRequestFullscreen) { /* Safari */
-        videoWrapper.webkitRequestFullscreen();
-      } else if (videoWrapper.msRequestFullscreen) { /* IE11 */
-        videoWrapper.msRequestFullscreen();
+  const fullscreenBtn = document.getElementById("fullscreenBtn");
+  const videoScreenWrapper = document.getElementById("videoScreenWrapper");
+  if (fullscreenBtn) {
+    fullscreenBtn.addEventListener("click", () => {
+      const targetWrap = videoScreenWrapper || html5VideoPlayer;
+      if (!document.fullscreenElement) {
+        if (targetWrap.requestFullscreen) targetWrap.requestFullscreen();
+        else if (targetWrap.webkitRequestFullscreen) targetWrap.webkitRequestFullscreen();
+      } else {
+        if (document.exitFullscreen) document.exitFullscreen();
       }
-    } else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      }
-    }
-  });
+    });
+  }
 
   // Listeners for HTML5 Video playback triggers
-  playPauseBtn.addEventListener("click", togglePlayPause);
-  html5VideoPlayer.addEventListener("click", togglePlayPause);
-  skipBackBtn.addEventListener("click", () => skipTime(-10));
-  skipForwardBtn.addEventListener("click", () => skipTime(10));
-  
-  // Show Pause UI on video end
-  html5VideoPlayer.addEventListener("ended", () => {
-    updatePlayPauseUI(false);
-  });
+  const playPauseBtn = document.getElementById("playPauseBtn");
+  if (playPauseBtn) playPauseBtn.addEventListener("click", togglePlayPause);
+  if (html5VideoPlayer) {
+    html5VideoPlayer.addEventListener("click", togglePlayPause);
+    html5VideoPlayer.addEventListener("ended", () => {
+      updatePlayPauseUI(false);
+    });
+  }
 
   // --- Toast System ---
   function showToast(message, type = "success") {
