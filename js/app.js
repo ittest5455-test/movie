@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // Video Player Modal
   const playerModal = document.getElementById("playerModal");
-  const closePlayerBtn = document.getElementById("closePlayerBtn");
+  const playerCloseBtn = document.getElementById("playerCloseBtn");
   const html5VideoPlayer = document.getElementById("html5VideoPlayer");
   const iframeVideoPlayer = document.getElementById("iframeVideoPlayer");
   const customPlayerControls = document.getElementById("customPlayerControls");
@@ -292,18 +292,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updateModalWatchlistBtnState(movieId) {
     const isSaved = watchlist.includes(movieId);
-    if (isSaved) {
-      watchlistText.textContent = "ลบจากรายการโปรด";
-      watchlistIcon.setAttribute("fill", "currentColor");
-      modalWatchlistBtn.classList.add("btn-primary");
-      modalWatchlistBtn.classList.remove("btn-secondary");
-      watchlistIcon.style.color = "#06060c";
-    } else {
-      watchlistText.textContent = "เพิ่มรายการโปรด";
-      watchlistIcon.setAttribute("fill", "none");
-      modalWatchlistBtn.classList.add("btn-secondary");
-      modalWatchlistBtn.classList.remove("btn-primary");
-      watchlistIcon.style.color = "inherit";
+    if (modalBookmarkBtn) {
+      if (isSaved) {
+        modalBookmarkBtn.classList.add("btn-primary");
+        modalBookmarkBtn.classList.remove("btn-secondary");
+        modalBookmarkBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>`;
+      } else {
+        modalBookmarkBtn.classList.add("btn-secondary");
+        modalBookmarkBtn.classList.remove("btn-primary");
+        modalBookmarkBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>`;
+      }
     }
   }
 
@@ -744,10 +742,12 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    closePlayerBtn.addEventListener("click", closePlayer);
-    playerModal.addEventListener("click", (e) => {
-      if (e.target === playerModal) closePlayer();
-    });
+    if (playerCloseBtn) playerCloseBtn.addEventListener("click", closePlayer);
+    if (playerModal) {
+      playerModal.addEventListener("click", (e) => {
+        if (e.target === playerModal) closePlayer();
+      });
+    }
 
     // --- Fail-safe Visitor Count Tracker ---
     function initVisitorCounter() {
