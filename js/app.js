@@ -193,12 +193,12 @@ function initMovieStreamApp() {
     
     gridMoviesList.innerHTML = filteredMovies.map(movie => createMovieCardMarkup(movie)).join("");
     
-    // Add Click Listeners for grid movies to play directly
+    // Add Click Listeners for grid movies to open details modal
     gridMoviesList.querySelectorAll(".movie-card").forEach(card => {
       card.addEventListener("click", () => {
         const movieId = card.getAttribute("data-id");
         const found = movieList.find(m => m.id === movieId);
-        if (found) playMovie(found);
+        if (found) openDetailsModal(found);
       });
     });
   }
@@ -289,6 +289,8 @@ function initMovieStreamApp() {
     if (modalGenres && movie.genres) {
       modalGenres.innerHTML = movie.genres.map(g => `<span class="meta-tag">${g}</span>`).join("");
     }
+    
+    updateModalWatchlistBtnState(movie.id);
     
     // Set Play Button Click
     if (modalWatchNowBtn) {
@@ -386,7 +388,7 @@ function initMovieStreamApp() {
       
       iframeVideoPlayer.style.display = "block";
       iframeVideoPlayer.removeAttribute("sandbox");
-      iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
+      iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
       iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline");
       iframeVideoPlayer.setAttribute("playsinline", "");
       iframeVideoPlayer.setAttribute("webkit-playsinline", "");
@@ -403,7 +405,7 @@ function initMovieStreamApp() {
     if (currentActiveMovie && currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[episode]) {
       const epVideoUrl = currentActiveMovie.episodeUrls[episode];
       iframeVideoPlayer.removeAttribute("sandbox");
-      iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
+      iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
       iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline");
       iframeVideoPlayer.setAttribute("playsinline", "");
       iframeVideoPlayer.setAttribute("webkit-playsinline", "");
