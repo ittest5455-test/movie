@@ -1540,11 +1540,3 @@ footer {
   padding-top: 85px;
 }
 
-
-
-/* Mobile 1-column layout as requested */
-@media (max-width: 480px) {
-  .movies-grid {
-    grid-template-columns: 1fr;
-  }
-}
