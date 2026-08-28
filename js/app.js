@@ -25,27 +25,20 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // Details Modal
   const detailsModal = document.getElementById("detailsModal");
-  const closeDetailsBtn = document.getElementById("closeDetailsBtn");
-  const modalHeroBg = document.getElementById("modalHeroBg");
+  const modalCloseBtn = document.getElementById("modalCloseBtn");
+  const modalHeroBanner = document.getElementById("modalHeroBanner");
   const modalPoster = document.getElementById("modalPoster");
   const modalTitleTh = document.getElementById("modalTitleTh");
   const modalTitleEn = document.getElementById("modalTitleEn");
-  const modalRating = document.getElementById("modalRating").querySelector("span");
+  const modalRatingVal = document.getElementById("modalRatingVal");
   const modalYear = document.getElementById("modalYear");
   const modalDuration = document.getElementById("modalDuration");
+  const modalGenres = document.getElementById("modalGenres");
   const modalDescription = document.getElementById("modalDescription");
-  const modalCastList = document.getElementById("modalCastList");
-  const modalPlayBtn = document.getElementById("modalPlayBtn");
-  const modalWatchlistBtn = document.getElementById("modalWatchlistBtn");
-  const watchlistText = document.getElementById("watchlistText");
-  const watchlistIcon = document.getElementById("watchlistIcon");
-  
-  // Modal Tabs
-  const tabInfoBtn = document.getElementById("tabInfoBtn");
-  const tabTrailerBtn = document.getElementById("tabTrailerBtn");
-  const tabInfoContent = document.getElementById("tabInfoContent");
-  const tabTrailerContent = document.getElementById("tabTrailerContent");
-  const trailerIframe = document.getElementById("trailerIframe");
+  const modalCast = document.getElementById("modalCast");
+  const modalWatchNowBtn = document.getElementById("modalWatchNowBtn");
+  const modalTrailerBtn = document.getElementById("modalTrailerBtn");
+  const modalBookmarkBtn = document.getElementById("modalBookmarkBtn");
   
   // Video Player Modal
   const playerModal = document.getElementById("playerModal");
@@ -326,43 +319,61 @@ document.addEventListener("DOMContentLoaded", () => {
   function openDetailsModal(movie) {
     currentActiveMovie = movie;
     
-    modalHeroBg.style.backgroundImage = `url('${movie.backdrop}')`;
-    modalPoster.src = movie.poster;
-    modalPoster.alt = `ปกหนัง ${movie.titleTh}`;
-    modalTitleTh.textContent = movie.titleTh;
-    modalTitleEn.textContent = `${movie.titleEn} (${movie.year})`;
-    modalRating.textContent = movie.rating;
-    modalYear.textContent = movie.year;
-    modalDuration.textContent = movie.duration;
-    modalDescription.textContent = movie.description;
-    modalCastList.textContent = movie.cast.join(", ");
+    if (modalHeroBanner) modalHeroBanner.style.backgroundImage = `url('${movie.backdrop || movie.poster}')`;
+    if (modalPoster) {
+      modalPoster.src = movie.poster;
+      modalPoster.alt = `ปกหนัง ${movie.titleTh}`;
+    }
+    if (modalTitleTh) modalTitleTh.textContent = movie.titleTh;
+    if (modalTitleEn) modalTitleEn.textContent = `${movie.titleEn} (${movie.year})`;
+    if (modalRatingVal) modalRatingVal.textContent = movie.rating;
+    if (modalYear) modalYear.textContent = movie.year;
+    if (modalDuration) modalDuration.textContent = movie.duration;
+    if (modalDescription) modalDescription.textContent = movie.description;
+    if (modalCast) modalCast.textContent = movie.cast ? movie.cast.join(", ") : "-";
     
-    updateModalWatchlistBtnState(movie.id);
-    
-    // Reset Tabs
-    switchDetailsTab("info");
+    if (modalGenres && movie.genres) {
+      modalGenres.innerHTML = movie.genres.map(g => `<span class="meta-tag">${g}</span>`).join("");
+    }
     
     // Set Play Button Click
-    modalPlayBtn.onclick = () => {
-      closeDetailsModal();
-      playMovie(movie);
-    };
+    if (modalWatchNowBtn) {
+      modalWatchNowBtn.onclick = () => {
+        closeDetailsModal();
+        playMovie(movie);
+      };
+    }
     
     // Set Watchlist Button Click
-    modalWatchlistBtn.onclick = () => {
-      toggleWatchlist(movie.id);
-    };
+    if (modalBookmarkBtn) {
+      modalBookmarkBtn.onclick = () => {
+        toggleWatchlist(movie.id);
+      };
+    }
     
-    detailsModal.classList.add("active");
-    document.body.style.overflow = "hidden"; // Prevent scrolling behind modal
+    if (modalTrailerBtn) {
+      modalTrailerBtn.onclick = () => {
+        if (movie.trailerUrl) {
+          window.open(movie.trailerUrl, "_blank");
+        } else {
+          showToast("ไม่พบตัวอย่างภาพยนตร์เรื่องนี้", "info");
+        }
+      };
+    }
+    
+    if (detailsModal) {
+      detailsModal.classList.add("active");
+      detailsModal.setAttribute("aria-hidden", "false");
+    }
+    document.body.style.overflow = "hidden";
   }
 
   function closeDetailsModal() {
-    detailsModal.classList.remove("active");
+    if (detailsModal) {
+      detailsModal.classList.remove("active");
+      detailsModal.setAttribute("aria-hidden", "true");
+    }
     document.body.style.overflow = "";
-    
-    // Stop YouTube Trailer playing in background
-    trailerIframe.src = "";
     currentActiveMovie = null;
   }
 
@@ -676,15 +687,13 @@ document.addEventListener("DOMContentLoaded", () => {
       displayWatchlistView();
     });
 
-    // Details Modal Tabs
-    tabInfoBtn.addEventListener("click", () => switchDetailsTab("info"));
-    tabTrailerBtn.addEventListener("click", () => switchDetailsTab("trailer"));
-
     // Close Modals
-    closeDetailsBtn.addEventListener("click", closeDetailsModal);
-    detailsModal.addEventListener("click", (e) => {
-      if (e.target === detailsModal) closeDetailsModal();
-    });
+    if (modalCloseBtn) modalCloseBtn.addEventListener("click", closeDetailsModal);
+    if (detailsModal) {
+      detailsModal.addEventListener("click", (e) => {
+        if (e.target === detailsModal) closeDetailsModal();
+      });
+    }
 
     // Player Server Buttons & Selectors (UI as requested)
     if (serverMainOldBtn) {
