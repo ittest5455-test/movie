@@ -1406,7 +1406,30 @@ footer {
   }
   
   .nav-links {
-    display: none; /* In a full app, a hamburger menu would be added here */
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 0;
+    z-index: 1000;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.5);
+  }
+  .nav-links a {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+  .nav-links a.active::after {
+    bottom: -12px;
+  }
+  body {
+    padding-bottom: 60px; /* Space for bottom nav */
   }
   
   .search-container {
