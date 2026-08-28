@@ -441,10 +441,11 @@ document.addEventListener("DOMContentLoaded", () => {
       customPlayerControls.style.display = "none";
       
       iframeVideoPlayer.style.display = "block";
-      // ปลดล็อก Sandbox เพื่อให้ Android Webview / HLS Player โหลดชิ้นส่วนวิดีโอต่อเนื่องได้ราบรื่น 100% ไม่จอดำ
       iframeVideoPlayer.removeAttribute("sandbox");
-      iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
-      iframeVideoPlayer.setAttribute("allow", "autoplay; fullscreen; picture-in-picture; encrypted-media; media-src *; webkit-playsinline; playsinline");
+      iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
+      iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline");
+      iframeVideoPlayer.setAttribute("playsinline", "");
+      iframeVideoPlayer.setAttribute("webkit-playsinline", "");
       iframeVideoPlayer.src = movie.videoUrl;
       
       playerBlockerOverlay.style.display = "none";
@@ -460,8 +461,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentActiveMovie && currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[episode]) {
       const epVideoUrl = currentActiveMovie.episodeUrls[episode];
       iframeVideoPlayer.removeAttribute("sandbox");
-      iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
-      iframeVideoPlayer.setAttribute("allow", "autoplay; fullscreen; picture-in-picture; encrypted-media; media-src *; webkit-playsinline; playsinline");
+      iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
+      iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline");
+      iframeVideoPlayer.setAttribute("playsinline", "");
+      iframeVideoPlayer.setAttribute("webkit-playsinline", "");
       iframeVideoPlayer.src = epVideoUrl;
       showToast(`เปิดเล่น ตอนที่ ${episode} เรียบร้อย`, "success");
       return;
