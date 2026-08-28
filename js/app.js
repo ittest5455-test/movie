@@ -68,7 +68,15 @@ function initMovieStreamApp() {
 
   // --- State Variables ---
   const movieList = window.movies || (typeof movies !== "undefined" ? movies : []);
-  let watchlist = JSON.parse(localStorage.getItem("moviestream_watchlist")) || [];
+  let watchlist = [];
+  try {
+    const stored = localStorage.getItem("moviestream_watchlist");
+    if (stored) watchlist = JSON.parse(stored);
+    if (!Array.isArray(watchlist)) watchlist = [];
+  } catch (e) {
+    console.warn("Watchlist parse error:", e);
+    watchlist = [];
+  }
   let currentActiveMovie = null;
 
   try {
@@ -574,7 +582,6 @@ function initMovieStreamApp() {
   }
 
   // Seeking on Progress Bar Click
-  const progressBarContainer = document.getElementById("progressBarContainer");
   if (progressBarContainer) {
     progressBarContainer.addEventListener("click", (e) => {
       const rect = progressBarContainer.getBoundingClientRect();
@@ -587,11 +594,9 @@ function initMovieStreamApp() {
   function updateVolumeBarUI() {
     if (!html5VideoPlayer) return;
     const vol = html5VideoPlayer.volume;
-    const volumeFilled = document.getElementById("volumeFilled");
     if (volumeFilled) volumeFilled.style.width = `${vol * 100}%`;
   }
 
-  const muteBtn = document.getElementById("muteBtn");
   if (muteBtn) {
     muteBtn.addEventListener("click", () => {
       html5VideoPlayer.muted = !html5VideoPlayer.muted;
@@ -599,7 +604,6 @@ function initMovieStreamApp() {
     });
   }
 
-  const volumeSlider = document.getElementById("volumeSlider");
   if (volumeSlider) {
     volumeSlider.addEventListener("click", (e) => {
       const rect = volumeSlider.getBoundingClientRect();
@@ -612,8 +616,6 @@ function initMovieStreamApp() {
   }
 
   // Fullscreen Action
-  const fullscreenBtn = document.getElementById("fullscreenBtn");
-  const videoScreenWrapper = document.getElementById("videoScreenWrapper");
   if (fullscreenBtn) {
     fullscreenBtn.addEventListener("click", () => {
       const targetWrap = videoScreenWrapper || html5VideoPlayer;
@@ -627,7 +629,6 @@ function initMovieStreamApp() {
   }
 
   // Listeners for HTML5 Video playback triggers
-  const playPauseBtn = document.getElementById("playPauseBtn");
   if (playPauseBtn) playPauseBtn.addEventListener("click", togglePlayPause);
   if (html5VideoPlayer) {
     html5VideoPlayer.addEventListener("click", togglePlayPause);
