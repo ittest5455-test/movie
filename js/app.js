@@ -77,9 +77,13 @@ document.addEventListener("DOMContentLoaded", () => {
   let watchlist = JSON.parse(localStorage.getItem("moviestream_watchlist")) || [];
   let currentActiveMovie = null;
 
-  updateWatchlistUI();
-  renderMovieShelves();
-  setupEventListeners();
+  try {
+    setupEventListeners();
+    updateWatchlistUI();
+    renderMovieShelves();
+  } catch (err) {
+    console.error("Initialization error:", err);
+  }
 
   // --- Functions ---
 
@@ -373,27 +377,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     document.body.style.overflow = "";
     currentActiveMovie = null;
-  }
-
-  function switchDetailsTab(tab) {
-    if (tab === "info") {
-      tabInfoBtn.classList.add("active");
-      tabTrailerBtn.classList.remove("active");
-      tabInfoContent.classList.add("active");
-      tabTrailerContent.classList.remove("active");
-      trailerIframe.src = ""; // Clear source
-    } else if (tab === "trailer") {
-      tabTrailerBtn.classList.add("active");
-      tabInfoBtn.classList.remove("active");
-      tabTrailerContent.classList.add("active");
-      tabInfoContent.classList.remove("active");
-      
-      // Load YouTube Trailer URL safely
-      if (currentActiveMovie && currentActiveMovie.trailerUrl) {
-        // Append autoplay option to trailer
-        trailerIframe.src = `${currentActiveMovie.trailerUrl}?autoplay=1`;
-      }
-    }
   }
 
   // --- Video Player Modal Actions ---
