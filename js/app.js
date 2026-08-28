@@ -11,8 +11,6 @@ function initMovieStreamApp() {
   const watchlistCount = document.getElementById("watchlistCount");
   const searchInput = document.getElementById("searchInput");
   
-  // Views
-  const homeView = document.getElementById("homeView");
   const gridView = document.getElementById("gridView");
   const gridTitle = document.getElementById("gridTitle");
   const gridMoviesList = document.getElementById("gridMoviesList");
@@ -81,7 +79,7 @@ function initMovieStreamApp() {
 
   try {
     initVisitorCounter();
-    renderMovieShelves();
+    showHomeView();
     updateWatchlistUI();
     setupEventListeners();
   } catch (err) {
@@ -116,85 +114,7 @@ function initMovieStreamApp() {
 
 
 
-  // Render Horizontal Movie Slides by Categories
-  function renderMovieShelves() {
-    if (!movieShelvesContainer) return;
-    movieShelvesContainer.innerHTML = "";
-    
-    // 1. Shelf หนังใหม่อัปเดตวันนี้ (คัดเลือกหนังใหม่ล่าสุดจาก 3 เว็บ 037HDD + 24-HDX + GOSERIES4K)
-    const todayMovies = movieList.slice(0, 16);
-    createShelf("🔥 หนังใหม่อัปเดตวันนี้ (Today's Updates)", todayMovies);
-
-    // 2. Shelf หนังใหม่อัปเดตสัปดาห์นี้ (สัปดาห์นี้)
-    const thisWeekMovies = movieList.slice(0, 32);
-    createShelf("⭐ หนังใหม่อัปเดตสัปดาห์นี้ (This Week)", thisWeekMovies);
-
-    // 3. Trending Now Shelf
-    const trendingMovies = [...movieList].sort((a, b) => b.rating - a.rating);
-    createShelf("🏆 ภาพยนตร์ยอดนิยม (Trending Now)", trendingMovies);
-    
-    // 4. Shelf for each category/genre
-    const genres = ["ตลกคอมเมดี้", "สยองขวัญ", "แฟนตาซี Sci-Fi", "แอคชั่น", "การ์ตูน"];
-    genres.forEach(genre => {
-      const filtered = movieList.filter(m => m.genres && m.genres.includes(genre));
-      if (filtered.length > 0) {
-        createShelf(`หมวดหมู่: ${genre}`, filtered);
-      }
-    });
-  }
-
-  // Create individual horizontal shelf markup
-  function createShelf(title, moviesList) {
-    const section = document.createElement("section");
-    section.className = "movies-shelf-section";
-    
-    section.innerHTML = `
-      <div class="section-header">
-        <h2 class="section-title">${title}</h2>
-        <div class="slider-nav-btns">
-          <button class="slider-arrow slider-prev" aria-label="เลื่อนซ้าย"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
-          <button class="slider-arrow slider-next" aria-label="เลื่อนขวา"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
-        </div>
-      </div>
-      <div class="movies-slider-container">
-        <div class="movies-slider">
-          ${moviesList.map(movie => createMovieCardMarkup(movie)).join("")}
-        </div>
-      </div>
-    `;
-    
-    const slider = section.querySelector(".movies-slider");
-    const prevBtn = section.querySelector(".slider-prev");
-    const nextBtn = section.querySelector(".slider-next");
-
-    if (prevBtn && nextBtn && slider) {
-      prevBtn.addEventListener("click", () => {
-        slider.scrollBy({ left: -400, behavior: "smooth" });
-      });
-      nextBtn.addEventListener("click", () => {
-        slider.scrollBy({ left: 400, behavior: "smooth" });
-      });
-    }
-
-    // Add Click & Keydown listener to all cards within this shelf
-    section.querySelectorAll(".movie-card").forEach(card => {
-      card.addEventListener("click", () => {
-        const movieId = card.getAttribute("data-id");
-        const found = movieList.find(m => m.id === movieId);
-        if (found) playMovie(found);
-      });
-      card.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          const movieId = card.getAttribute("data-id");
-          const found = movieList.find(m => m.id === movieId);
-          if (found) playMovie(found);
-        }
-      });
-    });
-
-    movieShelvesContainer.appendChild(section);
-  }
+  
 
   // Create single movie card structure
   function createMovieCardMarkup(movie) {
@@ -233,8 +153,6 @@ function initMovieStreamApp() {
   // --- View Swappers ---
 
   function showHomeView() {
-    homeView.style.display = "block";
-    gridView.style.display = "none";
     navHome.classList.add("active");
     navWatchlist.classList.remove("active");
     searchInput.value = "";
@@ -247,10 +165,16 @@ function initMovieStreamApp() {
         tag.classList.remove("active");
       }
     });
+
+    const sortedAll = [...movieList].sort((a, b) => {
+      const yearA = parseInt(a.year) || 0;
+      const yearB = parseInt(b.year) || 0;
+      return yearB - yearA;
+    });
+    showGridView("🎬 ภาพยนตร์ทั้งหมด (เรียงตามปีล่าสุด)", sortedAll);
   }
 
   function showGridView(title, filteredMovies) {
-    homeView.style.display = "none";
     gridView.style.display = "block";
     gridTitle.textContent = title;
     
@@ -300,11 +224,20 @@ function initMovieStreamApp() {
     }
     
     updateWatchlistUI();
-    renderMovieShelves(); // Update saved heart icon indicators on sliders
-    
+
+    // Update SVG in Grid View if present
+    const cardSvg = document.querySelector(`.movie-card[data-id="${movieId}"] .movie-card-details svg`);
+    if (cardSvg) {
+      const isNowSaved = watchlist.includes(movieId);
+      cardSvg.setAttribute("fill", isNowSaved ? "currentColor" : "none");
+      cardSvg.parentElement.style.color = isNowSaved ? "#22c55e" : "#94a3b8";
+    }
+
     // If currently on watchlist page, refresh grid view
     if (navWatchlist.classList.contains("active")) {
       displayWatchlistView();
+    } else {
+      
     }
     
     // Update Modal Button State if modal is open
