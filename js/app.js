@@ -140,8 +140,8 @@ function initMovieStreamApp() {
             </div>
             <div class="movie-card-details">
               <span>${movie.duration}</span>
-              <span style="color: ${isSaved ? '#22c55e' : '#94a3b8'}">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="${isSaved ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              <span class="movie-fav-btn" style="cursor: pointer; color: ${isSaved ? '#22c55e' : '#94a3b8'}">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="${isSaved ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
               </span>
             </div>
           </div>
@@ -193,12 +193,20 @@ function initMovieStreamApp() {
     
     gridMoviesList.innerHTML = filteredMovies.map(movie => createMovieCardMarkup(movie)).join("");
     
-    // Add Click Listeners for grid movies to open details modal
+    // Add Click Listeners for grid movies to play directly
     gridMoviesList.querySelectorAll(".movie-card").forEach(card => {
-      card.addEventListener("click", () => {
+      card.addEventListener("click", (e) => {
+        // If they clicked the fav button, handle it separately
+        if (e.target.closest(".movie-fav-btn")) {
+          e.stopPropagation();
+          const movieId = card.getAttribute("data-id");
+          toggleWatchlist(movieId);
+          return;
+        }
+        
         const movieId = card.getAttribute("data-id");
         const found = movieList.find(m => m.id === movieId);
-        if (found) openDetailsModal(found);
+        if (found) playMovie(found);
       });
     });
   }
