@@ -67,6 +67,7 @@ function initMovieStreamApp() {
   const toastContainer = document.getElementById("toastContainer");
 
   // --- State Variables ---
+  const movieList = window.movies || (typeof movies !== "undefined" ? movies : []);
   let watchlist = JSON.parse(localStorage.getItem("moviestream_watchlist")) || [];
   let currentActiveMovie = null;
 
@@ -93,24 +94,25 @@ function initMovieStreamApp() {
 
   // Render Horizontal Movie Slides by Categories
   function renderMovieShelves() {
+    if (!movieShelvesContainer) return;
     movieShelvesContainer.innerHTML = "";
     
     // 1. Shelf หนังใหม่อัปเดตวันนี้ (คัดเลือกหนังใหม่ล่าสุดจาก 3 เว็บ 037HDD + 24-HDX + GOSERIES4K)
-    const todayMovies = movies.slice(0, 16);
+    const todayMovies = movieList.slice(0, 16);
     createShelf("🔥 หนังใหม่อัปเดตวันนี้ (Today's Updates)", todayMovies);
 
     // 2. Shelf หนังใหม่อัปเดตสัปดาห์นี้ (สัปดาห์นี้)
-    const thisWeekMovies = movies.slice(0, 32);
+    const thisWeekMovies = movieList.slice(0, 32);
     createShelf("⭐ หนังใหม่อัปเดตสัปดาห์นี้ (This Week)", thisWeekMovies);
 
     // 3. Trending Now Shelf
-    const trendingMovies = [...movies].sort((a, b) => b.rating - a.rating);
+    const trendingMovies = [...movieList].sort((a, b) => b.rating - a.rating);
     createShelf("🏆 ภาพยนตร์ยอดนิยม (Trending Now)", trendingMovies);
     
     // 4. Shelf for each category/genre
     const genres = ["ตลกคอมเมดี้", "สยองขวัญ", "แฟนตาซี Sci-Fi", "แอคชั่น", "การ์ตูน"];
     genres.forEach(genre => {
-      const filtered = movies.filter(m => m.genres.includes(genre));
+      const filtered = movieList.filter(m => m.genres && m.genres.includes(genre));
       if (filtered.length > 0) {
         createShelf(`หมวดหมู่: ${genre}`, filtered);
       }
@@ -154,14 +156,14 @@ function initMovieStreamApp() {
     section.querySelectorAll(".movie-card").forEach(card => {
       card.addEventListener("click", () => {
         const movieId = card.getAttribute("data-id");
-        const found = movies.find(m => m.id === movieId);
+        const found = movieList.find(m => m.id === movieId);
         if (found) playMovie(found);
       });
       card.addEventListener("keydown", (e) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
           const movieId = card.getAttribute("data-id");
-          const found = movies.find(m => m.id === movieId);
+          const found = movieList.find(m => m.id === movieId);
           if (found) playMovie(found);
         }
       });
@@ -247,7 +249,7 @@ function initMovieStreamApp() {
     gridMoviesList.querySelectorAll(".movie-card").forEach(card => {
       card.addEventListener("click", () => {
         const movieId = card.getAttribute("data-id");
-        const found = movies.find(m => m.id === movieId);
+        const found = movieList.find(m => m.id === movieId);
         if (found) playMovie(found);
       });
     });
@@ -261,7 +263,7 @@ function initMovieStreamApp() {
   }
 
   function toggleWatchlist(movieId) {
-    const movie = movies.find(m => m.id === movieId);
+    const movie = movieList.find(m => m.id === movieId);
     if (!movie) return;
 
     const index = watchlist.indexOf(movieId);
@@ -305,7 +307,7 @@ function initMovieStreamApp() {
   function displayWatchlistView() {
     navWatchlist.classList.add("active");
     navHome.classList.remove("active");
-    const favs = movies.filter(m => watchlist.includes(m.id));
+    const favs = movieList.filter(m => watchlist.includes(m.id));
     showGridView("รายการโปรดของฉัน", favs);
   }
 
@@ -737,25 +739,25 @@ function initMovieStreamApp() {
       if (genre === "all") {
         showHomeView();
       } else if (genre === "today") {
-        const todayMovies = movies.slice(0, 16);
+        const todayMovies = movieList.slice(0, 16);
         showGridView("🔥 ภาพยนตร์ & ซีรีส์อัปเดตวันนี้ (จาก 24-HDX, GOSERIES4K)", todayMovies);
       } else if (genre === "this-week") {
-        const thisWeekMovies = movies.slice(0, 36);
+        const thisWeekMovies = movieList.slice(0, 36);
         showGridView("⭐ ภาพยนตร์ & ซีรีส์อัปเดตสัปดาห์นี้ (จาก 24-HDX, GOSERIES4K)", thisWeekMovies);
       } else if (genre === "year-2026") {
-        const y2026Movies = movies.filter(m => String(m.year) === "2026" || m.titleTh.includes("2026"));
+        const y2026Movies = movieList.filter(m => String(m.year) === "2026" || m.titleTh.includes("2026"));
         showGridView(`📅 รวมภาพยนตร์ & ซีรีส์ใหม่ปี 2026 (${y2026Movies.length} เรื่อง)`, y2026Movies);
       } else if (genre === "year-2025") {
-        const y2025Movies = movies.filter(m => String(m.year) === "2025" || m.titleTh.includes("2025"));
+        const y2025Movies = movieList.filter(m => String(m.year) === "2025" || m.titleTh.includes("2025"));
         showGridView(`📅 รวมภาพยนตร์ & ซีรีส์ปี 2025 (${y2025Movies.length} เรื่อง)`, y2025Movies);
       } else if (genre === "year-2024") {
-        const y2024Movies = movies.filter(m => String(m.year) === "2024" || m.titleTh.includes("2024"));
+        const y2024Movies = movieList.filter(m => String(m.year) === "2024" || m.titleTh.includes("2024"));
         showGridView(`📅 รวมภาพยนตร์ & ซีรีส์ปี 2024 (${y2024Movies.length} เรื่อง)`, y2024Movies);
       } else if (genre === "24HDX" || genre === "GOSERIES4K") {
-        const sourceMovies = movies.filter(m => m.source === genre);
+        const sourceMovies = movieList.filter(m => m.source === genre);
         showGridView(`📌 รวมภาพยนตร์ & ซีรีส์จาก ${genre} (${sourceMovies.length} เรื่อง)`, sourceMovies);
       } else {
-        const filtered = movies.filter(m => m.genres && m.genres.includes(genre));
+        const filtered = movieList.filter(m => m.genres && m.genres.includes(genre));
         showGridView(`หมวดหมู่ภาพยนตร์: ${genre}`, filtered);
       }
     }
@@ -770,7 +772,7 @@ function initMovieStreamApp() {
       if (query === "") {
         showHomeView();
       } else {
-        const results = movies.filter(
+        const results = movieList.filter(
           m => m.titleTh.toLowerCase().includes(query) || 
                m.titleEn.toLowerCase().includes(query) ||
                m.genres.some(g => g.toLowerCase().includes(query))
@@ -795,7 +797,7 @@ function initMovieStreamApp() {
           }
         });
 
-        const filtered = movies.filter(m => m.genres && m.genres.includes(genre));
+        const filtered = movieList.filter(m => m.genres && m.genres.includes(genre));
         showGridView(`หมวดหมู่ภาพยนตร์: ${genre}`, filtered);
       });
     });
