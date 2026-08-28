@@ -2,7 +2,7 @@
 // MovieStream JavaScript Application Logic
 // ----------------------------------------------------
 
-document.addEventListener("DOMContentLoaded", () => {
+function initMovieStreamApp() {
   // --- DOM Selectors ---
   const headerNav = document.getElementById("headerNav");
   const logoLink = document.getElementById("logoLink");
@@ -849,4 +849,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
-});
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initMovieStreamApp);
+} else {
+  initMovieStreamApp();
+}
