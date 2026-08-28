@@ -1,6 +1,2839 @@
 // ฐานข้อมูลภาพยนตร์รวมจาก 2 เว็บไซต์ เฉพาะตัวเล่นวิดีโอสะอาด 100% (พร้อม postId สำหรับ EP switching)
 const movies = [
   {
+    "titleTh": "Fast Five 5 (2011) เร็วแรงทะลุนรก 5",
+    "titleEn": "Fast Five 5 (2011) เร็วแรงทะลุนรก 5",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2022/08/Fast-Five-5-2011-เร็วแรงทะลุนรก-5.jpg",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2022/08/Fast-Five-5-2011-เร็วแรงทะลุนรก-5.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=cbb100f696bb1685a386a148&b=4861",
+    "sourceType": "embed",
+    "description": "ดูหนัง Fast Five 5 (2011) เร็วแรงทะลุนรก 5  ฟรี 24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-15009"
+  },
+  {
+    "titleTh": "ดูซีรีย์ House of the Dragon Season 3",
+    "titleEn": "ดูซีรีย์ House of the Dragon Season 3",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/House-of-the-Dragon-Season-3-2026-ตระกูลแห่งมังกร-ซีซั่น-3.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/House-of-the-Dragon-Season-3-2026-ตระกูลแห่งมังกร-ซีซั่น-3.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=a96cb2709f6f26649de95776&b=4971",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ House of the Dragon Season 3  ตระกูลแห่งมังกร ซีซั่น 3  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39743"
+  },
+  {
+    "titleTh": "Art Of The Devil (2004) คนเล่นของ",
+    "titleEn": "Art Of The Devil (2004) คนเล่นของ",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2022/11/Art-Of-The-Devil-2004-คนเล่นของ.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2022/11/Art-Of-The-Devil-2004-คนเล่นของ.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=38f79789164051a25d820605&b=5668",
+    "sourceType": "embed",
+    "description": "ดูหนัง Art Of The Devil (2004) คนเล่นของ  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-17002"
+  },
+  {
+    "titleTh": "หลานม่า How to Make Millions Before Grandma Dies (2024)",
+    "titleEn": "หลานม่า How to Make Millions Before Grandma Dies (2024)",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2024/09/หลานม่า-How-to-Make-Millions-Before-Grandma-Dies-2024.jpg",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2024/09/หลานม่า-How-to-Make-Millions-Before-Grandma-Dies-2024.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=222da444705fd1cf1175d3f0&b=2164",
+    "sourceType": "embed",
+    "description": "ดูหนัง หลานม่า How to Make Millions Before Grandma Dies (2024)  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-32759"
+  },
+  {
+    "titleTh": "Captain America Brave New World",
+    "titleEn": "Captain America Brave New World",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2025/02/Captain-America-Brave-New-World-2025-กัปตัน-อเมริกา-ศึกฮีโร่จักรวาลใหม่.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2025/02/Captain-America-Brave-New-World-2025-กัปตัน-อเมริกา-ศึกฮีโร่จักรวาลใหม่.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=ac2378177fe55c8b21f824d6&b=3203",
+    "sourceType": "embed",
+    "description": "ดูหนัง Captain America Brave New World  กัปตัน อเมริกา ศึกฮีโร่จักรวาลใหม่  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-34325"
+  },
+  {
+    "titleTh": "Cold War 1994",
+    "titleEn": "Cold War 1994",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Cold-War-1994-2026.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Cold-War-1994-2026.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=6aed6c9fbbc3d250cd6aeb05&b=6807",
+    "sourceType": "embed",
+    "description": "ดูหนัง Cold War 1994   24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40207"
+  },
+  {
+    "titleTh": "Kung Fu Soccer",
+    "titleEn": "Kung Fu Soccer",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Kung-Fu-Soccer-2026-กังฟูซอคเกอร์.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Kung-Fu-Soccer-2026-กังฟูซอคเกอร์.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=ca4c5d3ba08d64d59b21982c&b=7369",
+    "sourceType": "embed",
+    "description": "ดูหนัง Kung Fu Soccer  กังฟูซอคเกอร์  24-X.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40477"
+  },
+  {
+    "titleTh": "CTRL (2024)",
+    "titleEn": "CTRL (2024)",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2024/10/CTRL-2024.jpg",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2024/10/CTRL-2024.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=1c4949eff7d793a944099d1e&b=3459",
+    "sourceType": "embed",
+    "description": "ดูหนัง CTRL (2024)  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-33082"
+  },
+  {
+    "titleTh": "Pinocchio Unstrung",
+    "titleEn": "Pinocchio Unstrung",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Pinocchio-Unstrung-2026-พินอคคิโอ-หุ่นไม้สายเชือด.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Pinocchio-Unstrung-2026-พินอคคิโอ-หุ่นไม้สายเชือด.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=999e31d1ec192dad1de751c1&b=3262",
+    "sourceType": "embed",
+    "description": "ดูหนัง Pinocchio Unstrung  พินอคคิโอ หุ่นไม้สายเชือด  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40210"
+  },
+  {
+    "titleTh": "LEGO Disney Princess Magical Mayhem",
+    "titleEn": "LEGO Disney Princess Magical Mayhem",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/LEGO-Disney-Princess-Magical-Mayhem-2026.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/LEGO-Disney-Princess-Magical-Mayhem-2026.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=59b198d3b61fd83248f095bb&b=9562",
+    "sourceType": "embed",
+    "description": "ดูหนัง LEGO Disney Princess Magical Mayhem   24-X.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40484"
+  },
+  {
+    "titleTh": "The Fabulous (2022) หรู เริ่ด เชิด โสด",
+    "titleEn": "The Fabulous (2022) หรู เริ่ด เชิด โสด",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2022/12/The-Fabulous-2022-หรู-เริ่ด-เชิด-โสด.jpg",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2022/12/The-Fabulous-2022-หรู-เริ่ด-เชิด-โสด.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=6959874d98d944c8bcd7c90e&b=6408",
+    "sourceType": "embed",
+    "description": "ดูหนัง The Fabulous (2022) หรู เริ่ด เชิด โสด  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-19036"
+  },
+  {
+    "titleTh": "The Color Purple (2023) เดอะ คัลเลอร์ เพอร์เร์พิล",
+    "titleEn": "The Color Purple (2023) เดอะ คัลเลอร์ เพอร์เร์พิล",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Color-Purple-2023-เดอะ-คัลเลอร์-เพอร์เร์พิล.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Color-Purple-2023-เดอะ-คัลเลอร์-เพอร์เร์พิล.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=eb73adcd19285110f0a43b8d&b=3224",
+    "sourceType": "embed",
+    "description": "ดูหนัง The Color Purple (2023) เดอะ คัลเลอร์ เพอร์เร์พิล  24-X.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40514"
+  },
+  {
+    "titleTh": "Haunted Universities 4",
+    "titleEn": "Haunted Universities 4",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Haunted-Universities-4-2026-เทอม-4.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Haunted-Universities-4-2026-เทอม-4.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=0795a41ba3c27b1ab6916f7d&b=1968",
+    "sourceType": "embed",
+    "description": "ดูหนัง Haunted Universities 4  เทอม 4  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40152"
+  },
+  {
+    "titleTh": "Consecration (2023) สถิตย์ปิศาจ",
+    "titleEn": "Consecration (2023) สถิตย์ปิศาจ",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2023/03/Consecration-2023.jpg",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2023/03/Consecration-2023.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=6aee9b559bb832a15610b579&b=5809",
+    "sourceType": "embed",
+    "description": "ดูหนัง Consecration (2023) สถิตย์ปิศาจ  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-21635"
+  },
+  {
+    "titleTh": "Confessions of a Shaman",
+    "titleEn": "Confessions of a Shaman",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Confessions-of-a-Shaman-2026-คำสารภาพของหมอผี.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Confessions-of-a-Shaman-2026-คำสารภาพของหมอผี.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=f1c8cfbeae60cc925ffe51ad&b=6074",
+    "sourceType": "embed",
+    "description": "ดูหนัง Confessions of a Shaman  คำสารภาพของหมอผี  24-X.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40445"
+  },
+  {
+    "titleTh": "The Odyssey",
+    "titleEn": "The Odyssey",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/The-Odyssey-2026-มหากาพย์โอดิสซี.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/The-Odyssey-2026-มหากาพย์โอดิสซี.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=b1ea65a61f5c9514f97fa9da&b=3094",
+    "sourceType": "embed",
+    "description": "ดูหนัง The Odyssey  มหากาพย์โอดิสซี  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40112"
+  },
+  {
+    "titleTh": "The Conference (2023) สัมมานาเลือด",
+    "titleEn": "The Conference (2023) สัมมานาเลือด",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2023/10/The-Conference-2023-สัมมานาเลือด.jpg",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2023/10/The-Conference-2023-สัมมานาเลือด.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=abcd2f2f6ae4f184c77e133e&b=4103",
+    "sourceType": "embed",
+    "description": "ดูหนัง The Conference (2023) สัมมานาเลือด  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-27017"
+  },
+  {
+    "titleTh": "Alien Covenant (2017) เอเลี่ยน โคเวแนนท์",
+    "titleEn": "Alien Covenant (2017) เอเลี่ยน โคเวแนนท์",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2025/06/Alien-Covenant-2017-เอเลี่ยน-โคเวแนนท์.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2025/06/Alien-Covenant-2017-เอเลี่ยน-โคเวแนนท์.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=d7336afbeec3b92dbd5e12b3&b=5324",
+    "sourceType": "embed",
+    "description": "ดูหนัง Alien Covenant (2017) เอเลี่ยน โคเวแนนท์  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-35753"
+  },
+  {
+    "titleTh": "Monster Hunter (2020) มอนสเตอร์ ฮันเตอร์",
+    "titleEn": "Monster Hunter (2020) มอนสเตอร์ ฮันเตอร์",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2022/09/Monster-Hunter-2020.jpg",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2022/09/Monster-Hunter-2020.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=e2e26ab399c6b5166dc46d1f&b=9302",
+    "sourceType": "embed",
+    "description": "ดูหนัง Monster Hunter (2020) มอนสเตอร์ ฮันเตอร์  24- ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-15658"
+  },
+  {
+    "titleTh": "Spider-Man Brand New Day",
+    "titleEn": "Spider-Man Brand New Day",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Spider-Man-Brand-New-Day-2026-สไปเดอร์แมน-แบรนด์-นิว-เดย์.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Spider-Man-Brand-New-Day-2026-สไปเดอร์แมน-แบรนด์-นิว-เดย์.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=157478efe59a1830ede36cf9&b=3362",
+    "sourceType": "embed",
+    "description": "ดูหนัง Spider-Man Brand New Day  สไปเดอร์แมน แบรนด์ นิว เดย์  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40265"
+  },
+  {
+    "titleTh": "Mor Lam Rhythm",
+    "titleEn": "Mor Lam Rhythm",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Mor-Lam-Rhythm-2026-อ้ายต้าวว-เอวหวาน-ระเบียบวาทะศิลป์.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Mor-Lam-Rhythm-2026-อ้ายต้าวว-เอวหวาน-ระเบียบวาทะศิลป์.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=a6b9bfdd16193b5d10273948&b=2940",
+    "sourceType": "embed",
+    "description": "ดูหนัง Mor Lam Rhythm  อ้ายต้าวว เอวหวาน ระเบียบวาทะศิลป์  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40293"
+  },
+  {
+    "titleTh": "Insidious Out of the Further",
+    "titleEn": "Insidious Out of the Further",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Insidious-Out-of-the-Further-2026-วิญญาณตามติด-หลุดจากนรก.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Insidious-Out-of-the-Further-2026-วิญญาณตามติด-หลุดจากนรก.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=e16404fae8fe5aff04326dc4&b=5850",
+    "sourceType": "embed",
+    "description": "ดูหนัง Insidious Out of the Further  วิญญาณตามติด หลุดจากนรก  24-X.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40487"
+  },
+  {
+    "titleTh": "Venom (2018) เวน่อม",
+    "titleEn": "Venom (2018) เวน่อม",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2022/09/Venom-2018.jpg",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2022/09/Venom-2018.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=6de29846e0483638dcfb2d2f&b=2486",
+    "sourceType": "embed",
+    "description": "ดูหนัง Venom (2018) เวน่อม  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-15705"
+  },
+  {
+    "titleTh": "Toy Story 5",
+    "titleEn": "Toy Story 5",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Toy-Story-5-2026-ทอย-สตอรี่-5.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Toy-Story-5-2026-ทอย-สตอรี่-5.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=9c494cc6ef772221f13ca81c&b=8854",
+    "sourceType": "embed",
+    "description": "ดูหนัง Toy Story 5  ทอย สตอรี่ 5  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39342"
+  },
+  {
+    "titleTh": "The Death of Robin Hood",
+    "titleEn": "The Death of Robin Hood",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/The-Death-of-Robin-Hood-2026-บันทึกสุดท้ายของจอมโจร.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/The-Death-of-Robin-Hood-2026-บันทึกสุดท้ายของจอมโจร.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=bca243c4022d2db88d10e9fc&b=1790",
+    "sourceType": "embed",
+    "description": "ดูหนัง The Death of Robin Hood  บันทึกสุดท้ายของจอมโจร  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39933"
+  },
+  {
+    "titleTh": "Gohan",
+    "titleEn": "Gohan",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Gohan-2026-โกฮัง.หัวใจโกโฮม.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Gohan-2026-โกฮัง.หัวใจโกโฮม.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=095cb8755971f5e2bdc300d4&b=7056",
+    "sourceType": "embed",
+    "description": "ดูหนัง Gohan  โกฮัง..หัวใจโกโฮม  24-X.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40523"
+  },
+  {
+    "titleTh": "War for the Planet of the Apes (2017) มหาสงครามพิภพวานร",
+    "titleEn": "War for the Planet of the Apes (2017) มหาสงครามพิภพวานร",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2023/11/War-for-the-Planet-of-the-Apes-2017-มหาสงครามพิภพวานร.jpg",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2023/11/War-for-the-Planet-of-the-Apes-2017-มหาสงครามพิภพวานร.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=8e4e2a09cae2e3d04014cd10&b=6889",
+    "sourceType": "embed",
+    "description": "ดูหนัง War for the Planet of the Apes (2017) มหาสงครามพิภพวานร  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-27578"
+  },
+  {
+    "titleTh": "The Last Sunrise",
+    "titleEn": "The Last Sunrise",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Last-Sunrise-2026.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Last-Sunrise-2026.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=fa16c062d0fdbc4516083c19&b=6308",
+    "sourceType": "embed",
+    "description": "ดูหนัง The Last Sunrise  24-X.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40508"
+  },
+  {
+    "titleTh": "Facing El Chapo",
+    "titleEn": "Facing El Chapo",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Facing-El-Chapo-2026-เผชิญหน้าเอล-ชาโป.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Facing-El-Chapo-2026-เผชิญหน้าเอล-ชาโป.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=3e8f086eaa9aafdf8e6da8cd&b=3105",
+    "sourceType": "embed",
+    "description": "ดูหนัง Facing El Chapo  เผชิญหน้าเอล ชาโป  24-X.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40468"
+  },
+  {
+    "titleTh": "Is God Is",
+    "titleEn": "Is God Is",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Is-God-Is-2026.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Is-God-Is-2026.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=f1f2c18a1a23cae84ea8654a&b=2068",
+    "sourceType": "embed",
+    "description": "ดูหนัง Is God Is   24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40072"
+  },
+  {
+    "titleTh": "Beast Race",
+    "titleEn": "Beast Race",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Beast-Race-2026-เกมนรก-สัตว์เดือด.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Beast-Race-2026-เกมนรก-สัตว์เดือด.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=d96b9036a3a5a97f0430a0c9&b=5886",
+    "sourceType": "embed",
+    "description": "ดูหนัง Beast Race  เกมนรก สัตว์เดือด  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40318"
+  },
+  {
+    "titleTh": "Blades of The Guardians",
+    "titleEn": "Blades of The Guardians",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/03/Blades-of-The-Guardians-2026-ยอดยุทธ์ดาบพิทักษ์.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/03/Blades-of-The-Guardians-2026-ยอดยุทธ์ดาบพิทักษ์.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=e5e412971be0786b6979ea29&b=6240",
+    "sourceType": "embed",
+    "description": "ดูหนัง Blades of The Guardians  ยอดยุทธ์ดาบพิทักษ์  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-38541"
+  },
+  {
+    "titleTh": "Freefall A Reckoning for Boeing",
+    "titleEn": "Freefall A Reckoning for Boeing",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Freefall-A-Reckoning-for-Boeing-2026-ดิ่ง-สางปมโบอิ้ง.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Freefall-A-Reckoning-for-Boeing-2026-ดิ่ง-สางปมโบอิ้ง.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=c003c026b6c6e594efec4e2b&b=2006",
+    "sourceType": "embed",
+    "description": "ดูหนัง Freefall A Reckoning for Boeing  ดิ่ง สางปมโบอิ้ง  24-X.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40439"
+  },
+  {
+    "titleTh": "Mobile Suit Gundam Hathaway The Sorcery of Nymph Circe",
+    "titleEn": "Mobile Suit Gundam Hathaway The Sorcery of Nymph Circe",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Mobile-Suit-Gundam-Hathaway-The-Sorcery-of-Nymph-Circe-2026-โมบิลสูท-กันดั้ม-ฮาธาเวย์-เดอะ-ซอร์เซอรี-ออฟ-นิมฟ์-เซอร์ซี.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Mobile-Suit-Gundam-Hathaway-The-Sorcery-of-Nymph-Circe-2026-โมบิลสูท-กันดั้ม-ฮาธาเวย์-เดอะ-ซอร์เซอรี-ออฟ-นิมฟ์-เซอร์ซี.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=4677edf11cb7c4381d9b968c&b=2102",
+    "sourceType": "embed",
+    "description": "ดูหนัง Mobile Suit Gundam Hathaway The Sorcery of Nymph Circe  โมบิลสูท กันดั้ม ฮาธาเวย์ เดอะ ซอร์เซอรี ออฟ นิมฟ์ เซอร์ซี  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39215"
+  },
+  {
+    "titleTh": "Minions &amp; Monsters",
+    "titleEn": "Minions &amp; Monsters",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Minions-Monsters-2026-มินเนี่ยน-มอนสเตอร์.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Minions-Monsters-2026-มินเนี่ยน-มอนสเตอร์.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=4beeb269b90d07a0ef9cd86a&b=9370",
+    "sourceType": "embed",
+    "description": "ดูหนัง Minions &amp; Monsters  มินเนี่ยน &amp; มอนสเตอร์  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39936"
+  },
+  {
+    "titleTh": "Almost Human",
+    "titleEn": "Almost Human",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Almost-Human-2026-แฟนสาวมนุษย์กล.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Almost-Human-2026-แฟนสาวมนุษย์กล.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=92dbb9a1fd2c9937c9079db7&b=3904",
+    "sourceType": "embed",
+    "description": "ดูหนัง Almost Human  แฟนสาวมนุษย์กล  24-X.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40459"
+  },
+  {
+    "titleTh": "The Stain",
+    "titleEn": "The Stain",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Stain-2026-ราคี.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Stain-2026-ราคี.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=1e9d5ea73643dab5daf613eb&b=7796",
+    "sourceType": "embed",
+    "description": "ดูหนัง The Stain  ราคี  24-X.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40451"
+  },
+  {
+    "titleTh": "PAW Patrol The Dino Movie",
+    "titleEn": "PAW Patrol The Dino Movie",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/PAW-Patrol-The-Dino-Movie-2026-ขบวนการเจ้าตูบสี่ขา-เดอะ-ไดโน-มูฟวี่.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/PAW-Patrol-The-Dino-Movie-2026-ขบวนการเจ้าตูบสี่ขา-เดอะ-ไดโน-มูฟวี่.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=2029ad0eb81e00f069d05da0&b=3058",
+    "sourceType": "embed",
+    "description": "ดูหนัง PAW Patrol The Dino Movie  ขบวนการเจ้าตูบสี่ขา เดอะ ไดโน มูฟวี่  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40425"
+  },
+  {
+    "titleTh": "Chompoo Lost &amp; Forgotten",
+    "titleEn": "Chompoo Lost &amp; Forgotten",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Chompoo-Lost-Forgotten-2026-คดีชมพู่-เด็กหายที่ถูกลืม.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Chompoo-Lost-Forgotten-2026-คดีชมพู่-เด็กหายที่ถูกลืม.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=ff4649a85ac30728ff98fc3b&b=9415",
+    "sourceType": "embed",
+    "description": "ดูหนัง Chompoo Lost &amp; Forgotten  คดีชมพู่ เด็กหายที่ถูกลืม  24-X.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40463"
+  },
+  {
+    "titleTh": "The End of Oak Street",
+    "titleEn": "The End of Oak Street",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-End-of-Oak-Street-2026-มหาภัยสุดถนนโอ๊ค.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-End-of-Oak-Street-2026-มหาภัยสุดถนนโอ๊ค.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=6b89a76500e99552777f9e67&b=8082",
+    "sourceType": "embed",
+    "description": "ดูหนัง The End of Oak Street  มหาภัยสุดถนนโอ๊ค  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40398"
+  },
+  {
+    "titleTh": "The Mandalorian and Grogu",
+    "titleEn": "The Mandalorian and Grogu",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/The-Mandalorian-and-Grogu-2026-แมนดาลอเรี่ยนและโกรกู.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/The-Mandalorian-and-Grogu-2026-แมนดาลอเรี่ยนและโกรกู.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=1053ebeb5c3b8c0d015a29aa&b=4507",
+    "sourceType": "embed",
+    "description": "ดูหนัง The Mandalorian and Grogu  แมนดาลอเรี่ยนและโกรกู  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39293"
+  },
+  {
+    "titleTh": "Leviticus",
+    "titleEn": "Leviticus",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Leviticus-2026-รักร้ายกลายร่าง.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Leviticus-2026-รักร้ายกลายร่าง.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=56042c6f98feaa4fda3e361d&b=5893",
+    "sourceType": "embed",
+    "description": "ดูหนัง Leviticus  รักร้ายกลายร่าง  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40237"
+  },
+  {
+    "titleTh": "Village of the Dead",
+    "titleEn": "Village of the Dead",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Village-of-the-Dead-2025-ผีบังตาย.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Village-of-the-Dead-2025-ผีบังตาย.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=e0139517ea676f6beb7f417e&b=8919",
+    "sourceType": "embed",
+    "description": "ดูหนัง Village of the Dead  ผีบังตาย 4  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39182"
+  },
+  {
+    "titleTh": "In the Grey",
+    "titleEn": "In the Grey",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/In-the-Grey-2026-เหลี่ยมจารชน-คนเหนือเทา.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/In-the-Grey-2026-เหลี่ยมจารชน-คนเหนือเทา.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=0dfe85e71ad45df2c34786eb&b=3575",
+    "sourceType": "embed",
+    "description": "ดูหนัง In the Grey  เหลี่ยมจารชน คนเหนือเทา  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39188"
+  },
+  {
+    "titleTh": "The Furious",
+    "titleEn": "The Furious",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/The-Furious-2026-คนเดือดระห่ำ.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/The-Furious-2026-คนเดือดระห่ำ.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=cbbb1ea59af1bb711e0689d6&b=5489",
+    "sourceType": "embed",
+    "description": "ดูหนัง The Furious  คนเดือดระห่ำ  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39720"
+  },
+  {
+    "titleTh": "Hokum",
+    "titleEn": "Hokum",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Hokum-2026-ห้องกุมวิญญาณ.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Hokum-2026-ห้องกุมวิญญาณ.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=b0769fd2ad600c33e1a410e6&b=8852",
+    "sourceType": "embed",
+    "description": "ดูหนัง Hokum  ห้องกุมวิญญาณ  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39467"
+  },
+  {
+    "titleTh": "The Toxic Avenger Unrated",
+    "titleEn": "The Toxic Avenger Unrated",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2025/09/The-Toxic-Avenger-Unrated-2025-ฮีโร่พันธุ์ท็อกซิก.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2025/09/The-Toxic-Avenger-Unrated-2025-ฮีโร่พันธุ์ท็อกซิก.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=34fd91428f7d1b7154100aea&b=1820",
+    "sourceType": "embed",
+    "description": "ดูหนัง The Toxic Avenger Unrated  ฮีโร่พันธุ์ท็อกซิก  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-36555"
+  },
+  {
+    "titleTh": "The Legend Hunters",
+    "titleEn": "The Legend Hunters",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/The-Legend-Hunters-2026-โมจิน-โคตรคนล่าสุสาน.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/The-Legend-Hunters-2026-โมจิน-โคตรคนล่าสุสาน.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=fbef11cf2eb876fb7ab1d9ec&b=9300",
+    "sourceType": "embed",
+    "description": "ดูหนัง The Legend Hunters  โมจิน โคตรคนล่าสุสาน  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39442"
+  },
+  {
+    "titleTh": "Ice Cream Man",
+    "titleEn": "Ice Cream Man",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Ice-Cream-Man-2026.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Ice-Cream-Man-2026.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=bf6b3398a64d3c5ac49be31b&b=5984",
+    "sourceType": "embed",
+    "description": "ดูหนัง Ice Cream Man   24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40324"
+  },
+  {
+    "titleTh": "Mother Mary",
+    "titleEn": "Mother Mary",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Mother-Mary-2026-มาเธอร์-แมรี่.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Mother-Mary-2026-มาเธอร์-แมรี่.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=b6d67a068cbbdf131c47da64&b=9452",
+    "sourceType": "embed",
+    "description": "ดูหนัง Mother Mary  มาเธอร์ แมรี่  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39253"
+  },
+  {
+    "titleTh": "Ghost in the Cell",
+    "titleEn": "Ghost in the Cell",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Ghost-in-the-Cell-2026-วัยหนุ่มคุกผี.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Ghost-in-the-Cell-2026-วัยหนุ่มคุกผี.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=646571ff2e9c893f52f510d8&b=9323",
+    "sourceType": "embed",
+    "description": "ดูหนัง Ghost in the Cell  วัยหนุ่มคุกผี  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40078"
+  },
+  {
+    "titleTh": "Noise (2024) เสียงซ่อนผี",
+    "titleEn": "Noise (2024) เสียงซ่อนผี",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2025/09/Noise-2024-เสียงซ่อนผี.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2025/09/Noise-2024-เสียงซ่อนผี.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=bd3ec1e6a1354efc62576db6&b=4358",
+    "sourceType": "embed",
+    "description": "ดูหนัง Noise (2024) เสียงซ่อนผี  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-36673"
+  },
+  {
+    "titleTh": "Afterburn",
+    "titleEn": "Afterburn",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2025/09/Afterburn-2025.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2025/09/Afterburn-2025.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=c76f017f76cee4719238473b&b=4484",
+    "sourceType": "embed",
+    "description": "ดูหนัง Afterburn  ล่าขุมทรัพย์แดนแดดเดือด  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-36642"
+  },
+  {
+    "titleTh": "Ga la (2024) ไลฟ์ติดผี",
+    "titleEn": "Ga la (2024) ไลฟ์ติดผี",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/01/Ga-la-2024-ไลฟ์ติดผี.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/01/Ga-la-2024-ไลฟ์ติดผี.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=40db443aab3645bd9c9d8e12&b=2412",
+    "sourceType": "embed",
+    "description": "ดูหนัง Ga la (2024) ไลฟ์ติดผี  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-37867"
+  },
+  {
+    "titleTh": "Hungry",
+    "titleEn": "Hungry",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Hungry-2026-มันเด้งขึ้นมาแดก.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Hungry-2026-มันเด้งขึ้นมาแดก.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=622448539828e15ada31ceb8&b=6305",
+    "sourceType": "embed",
+    "description": "ดูหนัง Hungry  มันเด้งขึ้นมาแดก  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39789"
+  },
+  {
+    "titleTh": "The Convenience Store",
+    "titleEn": "The Convenience Store",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/The-Convenience-Store-2026-มันแอบอยู่ในร้าน.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/The-Convenience-Store-2026-มันแอบอยู่ในร้าน.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=6f56caebe0ce7109d9be93e7&b=5720",
+    "sourceType": "embed",
+    "description": "ดูหนัง The Convenience Store  มันแอบอยู่ในร้าน  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39421"
+  },
+  {
+    "titleTh": "Jujutsu Kaisen Hidden Inventory Premature Death The Movie",
+    "titleEn": "Jujutsu Kaisen Hidden Inventory Premature Death The Movie",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2025/12/Jujutsu-Kaisen-Hidden-Inventory-Premature-Death-The-Movie-2025-มหาเวทย์ผนึกมาร-เดอะมูฟวี-พรสวรรค์เร้น-อกาลมรณะ.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2025/12/Jujutsu-Kaisen-Hidden-Inventory-Premature-Death-The-Movie-2025-มหาเวทย์ผนึกมาร-เดอะมูฟวี-พรสวรรค์เร้น-อกาลมรณะ.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=cd8be8c4ffcc476fa894113d&b=2171",
+    "sourceType": "embed",
+    "description": "ดูหนัง Jujutsu Kaisen Hidden Inventory Premature Death The Movie  มหาเวทย์ผนึกมาร เดอะมูฟวี พรสวรรค์เร้น อกาลมรณะ  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-37439"
+  },
+  {
+    "titleTh": "Disclosure Day",
+    "titleEn": "Disclosure Day",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Disclosure-Day-2026-วันเปิดโปง-ไขปริศนาลวงโลก.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Disclosure-Day-2026-วันเปิดโปง-ไขปริศนาลวงโลก.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=e86e47a97d2ef4214a946f23&b=9559",
+    "sourceType": "embed",
+    "description": "ดูหนัง Disclosure Day  วันเปิดโปง ไขปริศนาลวงโลก  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39640"
+  },
+  {
+    "titleTh": "Assassination Classroom the Movie Our Time",
+    "titleEn": "Assassination Classroom the Movie Our Time",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Assassination-Classroom-the-Movie-Our-Time-2026-ห้องเรียนลอบสังหาร-เดอะ-มูฟวี่-ห้วงเวลาของพวกเรา.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Assassination-Classroom-the-Movie-Our-Time-2026-ห้องเรียนลอบสังหาร-เดอะ-มูฟวี่-ห้วงเวลาของพวกเรา.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=543da3ad7d771c97795b64a3&b=4476",
+    "sourceType": "embed",
+    "description": "ดูหนัง Assassination Classroom the Movie Our Time  ห้องเรียนลอบสังหาร เดอะ มูฟวี่ ห้วงเวลาของพวกเรา  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40250"
+  },
+  {
+    "titleTh": "Dollhouse",
+    "titleEn": "Dollhouse",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Dollhouse-2025-ดอลล์เฮ้าส์-หลอนซ่อนหุ่น.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Dollhouse-2025-ดอลล์เฮ้าส์-หลอนซ่อนหุ่น.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=4dce09e7d888b8b307e46594&b=5602",
+    "sourceType": "embed",
+    "description": "ดูหนัง Dollhouse  ดอลล์เฮ้าส์ หลอนซ่อนหุ่น  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39733"
+  },
+  {
+    "titleTh": "Scare Out",
+    "titleEn": "Scare Out",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Scare-Out-2026-เกมล่าทรชน-คนล่าคน.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Scare-Out-2026-เกมล่าทรชน-คนล่าคน.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=647a85950e62917970a068c2&b=5788",
+    "sourceType": "embed",
+    "description": "ดูหนัง Scare Out   24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39385"
+  },
+  {
+    "titleTh": "Evil Dead Burn",
+    "titleEn": "Evil Dead Burn",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Evil-Dead-Burn-2026.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Evil-Dead-Burn-2026.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=50485dc415ac6f1203fac38b&b=6530",
+    "sourceType": "embed",
+    "description": "ดูหนัง Evil Dead Burn   24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40053"
+  },
+  {
+    "titleTh": "ดูซีรีย์ Pursuit of Jade",
+    "titleEn": "ดูซีรีย์ Pursuit of Jade",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/03/Pursuit-of-Jade-2026-ล่าหยก.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/03/Pursuit-of-Jade-2026-ล่าหยก.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=1963c981bf03472c6cebb383&b=3019",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ Pursuit of Jade  ล่าหยก  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-38426"
+  },
+  {
+    "titleTh": "ดูซีรีย์ Perfect Crown",
+    "titleEn": "ดูซีรีย์ Perfect Crown",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Perfect-Crown-2026.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Perfect-Crown-2026.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=eba3f19d018ebf41cdd45305&b=2733",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ Perfect Crown   24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39271"
+  },
+  {
+    "titleTh": "ดูซีรีย์ Boyfriend on Demand",
+    "titleEn": "ดูซีรีย์ Boyfriend on Demand",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/03/Boyfriend-on-Demand-2026-แฟนสมมติสะดุดรัก.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/03/Boyfriend-on-Demand-2026-แฟนสมมติสะดุดรัก.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=dc193663d1c96c921bd520ee&b=5040",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ Boyfriend on Demand  แฟนสมมติสะดุดรัก  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-38403"
+  },
+  {
+    "titleTh": "ดูซีรีย์ Ironheart",
+    "titleEn": "ดูซีรีย์ Ironheart",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2025/06/Ironheart-2025-ไอรอน-ฮาท.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2025/06/Ironheart-2025-ไอรอน-ฮาท.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=8de850be4856aa6eb0c15fe2&b=5307",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ Ironheart  ไอรอน ฮาท  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-35887"
+  },
+  {
+    "titleTh": "ดูซีรีย์ Bloodhounds 2",
+    "titleEn": "ดูซีรีย์ Bloodhounds 2",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/04/Bloodhounds-2-2026.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/04/Bloodhounds-2-2026.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=503d5f04030c6bf50d10ec93&b=8266",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ Bloodhounds 2   24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-38620"
+  },
+  {
+    "titleTh": "ดูซีรีย์ Viral Hit",
+    "titleEn": "ดูซีรีย์ Viral Hit",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Viral-Hit-2026-นักสู้ทูปเบอร์.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Viral-Hit-2026-นักสู้ทูปเบอร์.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=e0fe66bcf57e597917eb7db2&b=3042",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ Viral Hit  นักสู้ทูปเบอร์  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39572"
+  },
+  {
+    "titleTh": "ดูซีรีย์ IT Welcome to Derry",
+    "titleEn": "ดูซีรีย์ IT Welcome to Derry",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2025/12/IT-Welcome-to-Derry-2025-อิท-ยินดีต้อนรับสู่เดอร์รี่.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2025/12/IT-Welcome-to-Derry-2025-อิท-ยินดีต้อนรับสู่เดอร์รี่.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=b969b278e56854716db95fdb&b=3182",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ IT Welcome to Derry  อิท ยินดีต้อนรับสู่เดอร์รี่  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-37405"
+  },
+  {
+    "titleTh": "ดูซีรีย์ Teach You a Lesson",
+    "titleEn": "ดูซีรีย์ Teach You a Lesson",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Teach-You-a-Lesson-2026-อย่างนี้ต้องโดนสั่งสอน.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Teach-You-a-Lesson-2026-อย่างนี้ต้องโดนสั่งสอน.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=ba6684fcbbf4033e00afc09e&b=8307",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ Teach You a Lesson  อย่างนี้ต้องโดนสั่งสอน  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39512"
+  },
+  {
+    "titleTh": "ดูซีรีย์ Alien Earth",
+    "titleEn": "ดูซีรีย์ Alien Earth",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2025/08/Alien-Earth-2025.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2025/08/Alien-Earth-2025.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=8b260274429af6e30a3c3cdf&b=2333",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ Alien Earth   24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-36294"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ The East Palace",
+    "titleEn": "ดูซีรี่ย์ The East Palace",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/The-East-Palace-2026-บูรพาอาถรรพ์.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/The-East-Palace-2026-บูรพาอาถรรพ์.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=759fae523ddebf02c35dbc6a&b=8006",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรี่ย์ The East Palace  บูรพาอาถรรพ์  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40100"
+  },
+  {
+    "titleTh": "ดูซีรีย์ A Shop for Killers Season 2",
+    "titleEn": "ดูซีรีย์ A Shop for Killers Season 2",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/A-Shop-for-Killers-Season-2-2026-มรดกร้านนักฆ่า-ซีซั่น-2.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/A-Shop-for-Killers-Season-2-2026-มรดกร้านนักฆ่า-ซีซั่น-2.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=f7cc0c60ab7b0b528fb8251f&b=6854",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ A Shop for Killers Season 2  มรดกร้านนักฆ่า ซีซั่น 2  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40139"
+  },
+  {
+    "titleTh": "Detective Hole",
+    "titleEn": "Detective Hole",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/04/Detective-Hole-2026-ยอดนักสืบแฮร์รี-โฮล.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/04/Detective-Hole-2026-ยอดนักสืบแฮร์รี-โฮล.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=4e91b69674162b122dd9448d&b=8575",
+    "sourceType": "embed",
+    "description": "ดูหนัง Detective Hole  ยอดนักสืบแฮร์รี โฮล  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-38600"
+  },
+  {
+    "titleTh": "Alice in Borderland Season 3",
+    "titleEn": "Alice in Borderland Season 3",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2025/09/Alice-in-Borderland-Season-3-2025-อลิสในแดนมรณะ-ซีซั่น-3.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2025/09/Alice-in-Borderland-Season-3-2025-อลิสในแดนมรณะ-ซีซั่น-3.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=dd0677b0a71f98cdb3021813&b=4960",
+    "sourceType": "embed",
+    "description": "ดูหนัง Alice in Borderland Season 3  อลิสในแดนมรณะ ซีซั่น 3  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-36692"
+  },
+  {
+    "titleTh": "ดูซีรีย์ Spider-Noir",
+    "titleEn": "ดูซีรีย์ Spider-Noir",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Spider-Noir-2026-สไปเดอร์-นัวร์-ไอ้แมงมุมพันธุ์นรก.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Spider-Noir-2026-สไปเดอร์-นัวร์-ไอ้แมงมุมพันธุ์นรก.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=d0a969a322717d91af9ba870&b=6240",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ Spider-Noir  สไปเดอร์ นัวร์ ไอ้แมงมุมพันธุ์นรก  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39404"
+  },
+  {
+    "titleTh": "ดูซีรีย์ The Evil Lawyer",
+    "titleEn": "ดูซีรีย์ The Evil Lawyer",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/The-Evil-Lawyer-2026-ทนายปีศาจ.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/The-Evil-Lawyer-2026-ทนายปีศาจ.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=c9a94f78c568f0c9c137d5b1&b=4124",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ The Evil Lawyer  ทนายปีศาจ  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39576"
+  },
+  {
+    "titleTh": "ดูซีรีย์ Squid Game The Challenge Season 2",
+    "titleEn": "ดูซีรีย์ Squid Game The Challenge Season 2",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2025/11/Squid-Game-The-Challenge-Season-2-2025-สควิดเกม-เดอะ-ชาเลนจ์-ซีซั่น-2.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2025/11/Squid-Game-The-Challenge-Season-2-2025-สควิดเกม-เดอะ-ชาเลนจ์-ซีซั่น-2.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=27b4eee9034069169f0e9645&b=5966",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ Squid Game The Challenge Season 2  สควิดเกม เดอะ ชาเลนจ์ ซีซั่น 2  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-37035"
+  },
+  {
+    "titleTh": "ดูซีรีย์ The WONDERfools",
+    "titleEn": "ดูซีรีย์ The WONDERfools",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/The-WONDERfools-2026-คนมหัศจรรย์พลังรั่ว.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/The-WONDERfools-2026-คนมหัศจรรย์พลังรั่ว.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=963a991126109eb752207d9e&b=1685",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ The WONDERfools  คนมหัศจรรย์พลังรั่ว  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39175"
+  },
+  {
+    "titleTh": "ดูซีรีย์ Avatar The Last Airbender (2024) เณรน้อยเจ้าอภินิหาร Ep 1-8",
+    "titleEn": "ดูซีรีย์ Avatar The Last Airbender (2024) เณรน้อยเจ้าอภินิหาร Ep 1-8",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2024/02/Avatar-The-Last-Airbender-2024-เณรน้อยเจ้าอภินิหาร.jpg",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2024/02/Avatar-The-Last-Airbender-2024-เณรน้อยเจ้าอภินิหาร.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=74e01ef1cf7c5834caba8b28&b=6974",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ Avatar The Last Airbender (2024) เณรน้อยเจ้าอภินิหาร Ep 1-8  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-29859"
+  },
+  {
+    "titleTh": "ดูซีรีย์ The Boys Season 5",
+    "titleEn": "ดูซีรีย์ The Boys Season 5",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/04/The-Boys-Season-4-2024-ก๊วนหนุ่มซ่าล่าซูเปอร์ฮีโร่.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/04/The-Boys-Season-4-2024-ก๊วนหนุ่มซ่าล่าซูเปอร์ฮีโร่.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=663723f2f8f5726d4a2eddfd&b=6643",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ The Boys Season 5  ก๊วนหนุ่มซ่าล่าซูเปอร์ฮีโร่ ซีซั่น 5  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-38724"
+  },
+  {
+    "titleTh": "ดูซีรีย์ Avatar The Last Airbender Season 2",
+    "titleEn": "ดูซีรีย์ Avatar The Last Airbender Season 2",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/new-poster-for-avatar-the-last-airbender-season-2-v0-nexeqr1fpdsg1.webp",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/new-poster-for-avatar-the-last-airbender-season-2-v0-nexeqr1fpdsg1.webp",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=e6283aa67cf9802ed9c1a2b6&b=4590",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ Avatar The Last Airbender Season 2  เณรน้อยเจ้าอภินิหาร ซีซั่น 2 Ep 1-7  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39873"
+  },
+  {
+    "titleTh": "ดูซีรีย์ House of the Dragon Season 2 (2024) ตระกูลแห่งมังกร ซีซั่น 2",
+    "titleEn": "ดูซีรีย์ House of the Dragon Season 2 (2024) ตระกูลแห่งมังกร ซีซั่น 2",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/House-of-the-Dragon-Season-2-2024.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/House-of-the-Dragon-Season-2-2024.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=c2e0601ec12c4d9841c867ba&b=6613",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ House of the Dragon Season 2 (2024) ตระกูลแห่งมังกร ซีซั่น 2  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39739"
+  },
+  {
+    "titleTh": "One Piece Season 2",
+    "titleEn": "One Piece Season 2",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/03/One-Piece-Season-2-2026-วันพีช-ซีซั่น-2.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/03/One-Piece-Season-2-2026-วันพีช-ซีซั่น-2.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=fd17b6714907f3ec223380da&b=9456",
+    "sourceType": "embed",
+    "description": "ดูหนัง One Piece Season 2  วันพีช ซีซั่น 2  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-38351"
+  },
+  {
+    "titleTh": "ดูซีรีย์ Bloodhounds (2023) EP 1-8",
+    "titleEn": "ดูซีรีย์ Bloodhounds (2023) EP 1-8",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2023/06/Bloodhounds-2023.jpg",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2023/06/Bloodhounds-2023.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=e933211482484221cc340354&b=4346",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ Bloodhounds (2023) EP 1-8  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-23950"
+  },
+  {
+    "titleTh": "ดูซีรีย์ A Shop for Killers (2024) มรดกร้านนักฆ่า",
+    "titleEn": "ดูซีรีย์ A Shop for Killers (2024) มรดกร้านนักฆ่า",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/A-Shop-for-Killers-2024-มรดกร้านนักฆ่า.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/A-Shop-for-Killers-2024-มรดกร้านนักฆ่า.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=881f99f17263f1c06be00d49&b=5635",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ A Shop for Killers (2024) มรดกร้านนักฆ่า  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-40142"
+  },
+  {
+    "titleTh": "Agent from Above",
+    "titleEn": "Agent from Above",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/04/Agent-from-Above-2026-สายลับฟ้าส่ง.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/04/Agent-from-Above-2026-สายลับฟ้าส่ง.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=b41755f1a59baa785a3dac57&b=5937",
+    "sourceType": "embed",
+    "description": "ดูหนัง Agent from Above  สายลับฟ้าส่ง  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-38599"
+  },
+  {
+    "titleTh": "ดูซีรีย์ The Believers (2024) สาธุ EP 1-9",
+    "titleEn": "ดูซีรีย์ The Believers (2024) สาธุ EP 1-9",
+    "year": 2025,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2024/03/The-Believers-2024-สาธุ.jpg",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2024/03/The-Believers-2024-สาธุ.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=b9c3ae9b01e1b7038fd10158&b=9615",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ The Believers (2024) สาธุ EP 1-9  24-.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-30573"
+  },
+  {
+    "titleTh": "ดูซีรีย์ Human Vapor",
+    "titleEn": "ดูซีรีย์ Human Vapor",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Human-Vapor-2026-มนุษย์ก๊าซ.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Human-Vapor-2026-มนุษย์ก๊าซ.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=a85554457eb1f824d9e12bc3&b=4997",
+    "sourceType": "embed",
+    "description": "ดูหนัง ดูซีรีย์ Human Vapor  มนุษย์ก๊าซ  24-S.COM ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
+    "rating": 8.8,
+    "genres": [
+      "แอคชั่น",
+      "แฟนตาซี Sci-Fi"
+    ],
+    "duration": "1 ชม. 50 นาที",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "24HDX",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "24hdx-39971"
+  },
+  {
+    "titleTh": "จีน Zhan Zhao Adventures จั่นเจาตะลุยยุทธภพ (2026)",
+    "titleEn": "จีน Zhan Zhao Adventures จั่นเจาตะลุยยุทธภพ (2026)",
+    "year": 2026,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/05/9-4.jpg",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/05/9-4.jpg",
+    "videoUrl": "https://torbo007.com/embed/d211b92874122650cf2381651cc0fc0a",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ จีน Zhan Zhao Adventures จั่นเจาตะลุยยุทธภพ (2026) อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า"
+    ],
+    "duration": "37 ตอน (พากย์ไทย)",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/%e0%b8%88%e0%b8%b1%e0%b9%88%e0%b8%99%e0%b9%80%e0%b8%88%e0%b8%b2%e0%b8%95%e0%b8%b0%e0%b8%a5%e0%b8%b8%e0%b8%a2%e0%b8%a2%e0%b8%b8%e0%b8%97%e0%b8%98%e0%b8%a0%e0%b8%9e-thai/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16",
+      "ตอนที่ 17",
+      "ตอนที่ 18",
+      "ตอนที่ 19",
+      "ตอนที่ 20",
+      "ตอนที่ 21",
+      "ตอนที่ 22",
+      "ตอนที่ 23",
+      "ตอนที่ 24",
+      "ตอนที่ 25",
+      "ตอนที่ 26",
+      "ตอนที่ 27",
+      "ตอนที่ 28",
+      "ตอนที่ 29",
+      "ตอนที่ 30",
+      "ตอนที่ 31",
+      "ตอนที่ 32",
+      "ตอนที่ 33",
+      "ตอนที่ 34",
+      "ตอนที่ 35",
+      "ตอนที่ 36",
+      "ตอนที่ 37"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/d211b92874122650cf2381651cc0fc0a",
+      "2": "https://torbo007.com/embed/b76dfe41d5712cce0d50f5913220d777",
+      "3": "https://torbo007.com/embed/c06d04745420db3af6d9dc3ada4534c3",
+      "4": "https://torbo007.com/embed/0c70879768c4c3facb8b17c370a6c7b5",
+      "5": "https://torbo007.com/embed/acc9478e4a6e911cf9c659de1fdf43bc",
+      "6": "https://torbo007.com/embed/bf2078a1fdd5a30f5ea2082640b3ec36",
+      "7": "https://torbo007.com/embed/ee403203495a39c57fc231638ee0f878",
+      "8": "https://torbo007.com/embed/b59cc74960cb0ed6b055ad24f5af5249",
+      "9": "https://torbo007.com/embed/dc68583f887c2ac7f743648614fe3198",
+      "10": "https://torbo007.com/embed/9db69a346f5284aa7a6bf8cd2b5d0fca",
+      "11": "https://torbo007.com/embed/b8ab489db7845b61b2492a88e1f305f1",
+      "12": "https://torbo007.com/embed/4578be63b798c51e379049f3165cd4be",
+      "13": "https://torbo007.com/embed/0b79ec1dce9759de021541ca2d8e0434",
+      "14": "https://torbo007.com/embed/8aaaac743e338a4d9bd97f2f66321e5d",
+      "15": "https://torbo007.com/embed/9f3ea97ed6bd4ae179f1540c193bd2bc",
+      "16": "https://torbo007.com/embed/3d5cde4e1442ae89a0a961689bce6783",
+      "17": "https://torbo007.com/embed/e3230caa832dd77e53d922df61c76f55",
+      "18": "https://torbo007.com/embed/e6b15d0011aac70b2f1d4616ee855164",
+      "19": "https://torbo007.com/embed/72b54ae5eec84cc74be74f424b1a1266",
+      "20": "https://torbo007.com/embed/df373bedec61e0c85e7f483b3b999eb4",
+      "21": "https://torbo007.com/embed/a687fc1a8f583eedb35b4bd705eb4429",
+      "22": "https://torbo007.com/embed/9a39d730e9b191b260c78b978db12616",
+      "23": "https://torbo007.com/embed/8dd16c4c25d19fc31c014127db5399ff",
+      "24": "https://torbo007.com/embed/df2feb60ba66b2bb23b3c6412cc2dc66",
+      "25": "https://torbo007.com/embed/ca83a6063efb04ec322768dee252d7ee",
+      "26": "https://torbo007.com/embed/9057b0b816ce2dd6dde25529db56b510",
+      "27": "https://torbo007.com/embed/9173b2bd2e78c9bd5bcfe5ae39154afb",
+      "28": "https://torbo007.com/embed/ddc84a2af7479dbb1d9621ced5272d15",
+      "29": "https://torbo007.com/embed/721330be382fc6f97b01edb73d5c00f6",
+      "30": "https://torbo007.com/embed/9495c90145596e2bb0731040c03bd853",
+      "31": "https://torbo007.com/embed/56fc27dd64c291a35b696087e3f41a15",
+      "32": "https://torbo007.com/embed/1ef7a2ead7ef372300140079b98f45f5",
+      "33": "https://torbo007.com/embed/b24655afc336fe5687561922c261e937",
+      "34": "https://torbo007.com/embed/79ddecd2206b917911f865ca159be3bb",
+      "35": "https://torbo007.com/embed/43d841f627d39d704ec08f1074b9e059",
+      "36": "https://torbo007.com/embed/2c8c7abf5b9fff5242a416be71e970a0",
+      "37": "https://torbo007.com/embed/fecee77ebe0dd0932e2e4de796073399"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "g4-437"
+  },
+  {
+    "titleTh": "Remnants of Gold ขุมทองมรณะ (2026)",
+    "titleEn": "Remnants of Gold ขุมทองมรณะ (2026)",
+    "year": 2026,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/08/9-16.png",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/08/9-16.png",
+    "videoUrl": "https://torbo007.com/embed/76e5a778ba85e3c696e4b71fd856682b",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ Remnants of Gold ขุมทองมรณะ (2026) อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า"
+    ],
+    "duration": "5 ตอน (ซับไทย)",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/remnants-of-gold/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/76e5a778ba85e3c696e4b71fd856682b",
+      "2": "https://torbo007.com/embed/aaf1309facd58862fb145dd1358b0639",
+      "3": "https://torbo007.com/embed/61611d82b92ff095dee3da8b0fd7343b",
+      "4": "https://torbo007.com/embed/cd1be05caaeb65aeec9e105f61f3f1fb",
+      "5": "https://torbo007.com/embed/a0c059b8a6a0350781b1290dfa169f8d"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "g4-438"
+  },
+  {
+    "titleTh": "จีน Spring Over Phoenix Pond หงส์คืนบัลลังก์แค้น",
+    "titleEn": "จีน Spring Over Phoenix Pond หงส์คืนบัลลังก์แค้น",
+    "year": 2025,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/08/2-3-foxywebp.webp",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/08/2-3-foxywebp.webp",
+    "videoUrl": "https://torbo007.com/embed/fe46788d3434e61c05c18cb786de7b48",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ จีน Spring Over Phoenix Pond หงส์คืนบัลลังก์แค้น อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า"
+    ],
+    "duration": "14 ตอน (พากย์ไทย)",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/spring-over-phoenix-pond/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/fe46788d3434e61c05c18cb786de7b48",
+      "2": "https://torbo007.com/embed/93ccf2ec4b0f1dd5b998b57de2cfa64c",
+      "3": "https://torbo007.com/embed/c9e9c09b015fc9f549f0f21eff431bc8",
+      "4": "https://torbo007.com/embed/b1f99747794f5009a21ef31bb21af63d",
+      "5": "https://torbo007.com/embed/9c6b81c614e1990c9fd52c1b765199bd",
+      "6": "https://torbo007.com/embed/f3a199bc645d3b4cf88e052dd9335656",
+      "7": "https://torbo007.com/embed/ff9119fa12866231e9536ee5df65ae6b",
+      "8": "https://torbo007.com/embed/a23650064e86c231d2a291fb980dc57b",
+      "9": "https://torbo007.com/embed/6574f37024490f552b5cf07699501cf5",
+      "10": "https://torbo007.com/embed/0b322f46074445f7b5102f815db5b1ae",
+      "11": "https://torbo007.com/embed/dd3f6825000e74324de48612ae615473",
+      "12": "https://torbo007.com/embed/d4b410b5d7a22f88133bf344109ac3bf",
+      "13": "https://torbo007.com/embed/47b265890107de3c8cc149e3f327b4f8",
+      "14": "https://torbo007.com/embed/d4a840ea6365f9a57fea3f49558ad418"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "g4-439"
+  },
+  {
+    "titleTh": "จมโคลน IN THE MUD (2025)",
+    "titleEn": "จมโคลน IN THE MUD (2025)",
+    "year": 2025,
+    "poster": "https://goseries4k.com/wp-content/uploads/2025/08/9.gif",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2025/08/9.gif",
+    "videoUrl": "https://torbo007.com/embed/a06a0bc78f1ad5dbafaf4e3ebb949730",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ จมโคลน IN THE MUD (2025) อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า"
+    ],
+    "duration": "8 ตอน (ซับไทย)",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/in-the-mud/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/a06a0bc78f1ad5dbafaf4e3ebb949730",
+      "2": "https://torbo007.com/embed/40ee81550fdf590ef1b935771bd614e0",
+      "3": "https://torbo007.com/embed/75d0b807198b5d279cea24e93a329223",
+      "4": "https://torbo007.com/embed/4cbba06f8ec28d4f8cfa95ddc7f797ad",
+      "5": "https://torbo007.com/embed/5c8d84e8926ec1306f62a630bcea1804",
+      "6": "https://torbo007.com/embed/41f3e7642470019894fa1a461e6bb2d9",
+      "7": "https://torbo007.com/embed/1359e6fe2f620fa5092409efc104ec38",
+      "8": "https://torbo007.com/embed/2a2e117dfd2dc8afac649e5a90ef4cfc"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "g4-440"
+  },
+  {
     "titleTh": "LEGO Disney Princess Magical Mayhem",
     "titleEn": "LEGO Disney Princess Magical Mayhem",
     "year": 2026,
