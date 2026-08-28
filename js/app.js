@@ -667,33 +667,7 @@ function initMovieStreamApp() {
       });
     }
 
-    // Player Server Buttons & Selectors (UI as requested)
-    if (serverMainOldBtn) {
-      serverMainOldBtn.addEventListener("click", () => {
-        serverMainOldBtn.classList.add("active");
-        serverMainNewBtn.classList.remove("active");
-        serverBackupBtn.classList.remove("active");
-        showToast("สลับไปใช้ ตัวเล่นหลัก (เก่า) เรียบร้อยแล้ว", "success");
-      });
-    }
-
-    if (serverMainNewBtn) {
-      serverMainNewBtn.addEventListener("click", () => {
-        serverMainNewBtn.classList.add("active");
-        serverMainOldBtn.classList.remove("active");
-        serverBackupBtn.classList.remove("active");
-        showToast("สลับไปใช้ ตัวเล่นหลัก (ใหม่) เรียบร้อยแล้ว", "success");
-      });
-    }
-
-    if (serverBackupBtn) {
-      serverBackupBtn.addEventListener("click", () => {
-        serverBackupBtn.classList.add("active");
-        serverMainOldBtn.classList.remove("active");
-        serverMainNewBtn.classList.remove("active");
-        showToast("สลับไปใช้ ตัวเล่นสำรอง เรียบร้อยแล้ว", "success");
-      });
-    }
+    // Audio & Episode Selection Listeners
 
     if (audioSelectBtn) {
       audioSelectBtn.addEventListener("change", (e) => {
