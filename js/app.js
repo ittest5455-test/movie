@@ -776,13 +776,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Genre Filters Buttons
-    genreFilterContainer.addEventListener("click", (e) => {
+    // Genre Filters Buttons (Support Click and Touch)
+    function handleGenreClick(e) {
       const btn = e.target.closest(".genre-tag");
       if (!btn) return;
       
       // Update active tag class
-      genreFilterContainer.querySelectorAll(".genre-tag").forEach(tag => tag.classList.remove("active"));
+      document.querySelectorAll(".genre-tag").forEach(tag => tag.classList.remove("active"));
       btn.classList.add("active");
       
       const genre = btn.getAttribute("data-genre");
@@ -807,10 +807,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const sourceMovies = movies.filter(m => m.source === genre);
         showGridView(`📌 รวมภาพยนตร์ & ซีรีส์จาก ${genre} (${sourceMovies.length} เรื่อง)`, sourceMovies);
       } else {
-        const filtered = movies.filter(m => m.genres.includes(genre));
+        const filtered = movies.filter(m => m.genres && m.genres.includes(genre));
         showGridView(`หมวดหมู่ภาพยนตร์: ${genre}`, filtered);
       }
-    });
+    }
+
+    if (genreFilterContainer) {
+      genreFilterContainer.addEventListener("click", handleGenreClick);
+    }
 
     // Live Search input filter
     searchInput.addEventListener("input", () => {
