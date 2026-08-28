@@ -82,6 +82,21 @@ function initMovieStreamApp() {
 
   // --- Functions ---
 
+  // --- Fail-safe Visitor Count Tracker ---
+  function initVisitorCounter() {
+    const visitorCountDisplay = document.getElementById("visitorCountDisplay");
+    if (!visitorCountDisplay) return;
+
+    let count = localStorage.getItem("moviestream_visitor_count");
+    if (!count) {
+      count = Math.floor(Math.random() * 80) + 168; // Base realistic starting visitors
+    } else {
+      count = parseInt(count, 10) + 1;
+    }
+    localStorage.setItem("moviestream_visitor_count", count);
+    visitorCountDisplay.textContent = Number(count).toLocaleString();
+  }
+
   // Scroll Header Effect
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
@@ -706,24 +721,6 @@ function initMovieStreamApp() {
         if (e.target === playerModal) closePlayer();
       });
     }
-
-    // --- Fail-safe Visitor Count Tracker ---
-    function initVisitorCounter() {
-      const visitorCountDisplay = document.getElementById("visitorCountDisplay");
-      if (!visitorCountDisplay) return;
-
-      let count = localStorage.getItem("moviestream_visitor_count");
-      if (!count) {
-        count = Math.floor(Math.random() * 80) + 168; // Base realistic starting visitors
-      } else {
-        count = parseInt(count, 10) + 1;
-      }
-      localStorage.setItem("moviestream_visitor_count", count);
-      visitorCountDisplay.textContent = Number(count).toLocaleString();
-    }
-
-    // Initialize Visitor Counter
-    initVisitorCounter();
 
     // Key Escape to close active modals
     document.addEventListener("keydown", (e) => {
