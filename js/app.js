@@ -129,6 +129,11 @@ function initMovieStreamApp() {
             ${movie.rating}
           </span>
           <span class="movie-year-badge">${movie.year}</span>
+          
+          <button class="movie-fav-btn" style="position: absolute; top: 10px; right: 10px; z-index: 10; background: rgba(0,0,0,0.7); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: ${isSaved ? '#22c55e' : '#ffffff'}; transition: 0.3s;" aria-label="Toggle Favorite">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="${isSaved ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </button>
+
           <div class="movie-card-overlay">
             <button class="movie-play-btn" aria-label="เล่นหนัง ${movie.titleTh}">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
@@ -140,9 +145,6 @@ function initMovieStreamApp() {
             </div>
             <div class="movie-card-details">
               <span>${movie.duration}</span>
-              <span class="movie-fav-btn" style="cursor: pointer; color: ${isSaved ? '#22c55e' : '#94a3b8'}">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="${isSaved ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </span>
             </div>
           </div>
         </div>
@@ -234,11 +236,11 @@ function initMovieStreamApp() {
     updateWatchlistUI();
 
     // Update SVG in Grid View if present
-    const cardSvg = document.querySelector(`.movie-card[data-id="${movieId}"] .movie-card-details svg`);
+    const cardSvg = document.querySelector(`.movie-card[data-id="${movieId}"] .movie-fav-btn svg`);
     if (cardSvg) {
       const isNowSaved = watchlist.includes(movieId);
       cardSvg.setAttribute("fill", isNowSaved ? "currentColor" : "none");
-      cardSvg.parentElement.style.color = isNowSaved ? "#22c55e" : "#94a3b8";
+      cardSvg.parentElement.style.color = isNowSaved ? "#22c55e" : "#ffffff";
     }
 
     // If currently on watchlist page, refresh grid view
