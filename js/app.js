@@ -832,14 +832,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Footer Genre Links
-    document.querySelectorAll(".footer-genre-link").forEach(link => {
+    document.querySelectorAll(".footer-filter-link").forEach(link => {
       link.addEventListener("click", (e) => {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
         const genre = link.getAttribute("data-genre");
         
         // Update Filter tags state
-        genreFilterContainer.querySelectorAll(".genre-tag").forEach(tag => {
+        document.querySelectorAll(".genre-tag").forEach(tag => {
           if (tag.getAttribute("data-genre") === genre) {
             tag.classList.add("active");
           } else {
@@ -847,22 +847,32 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
 
-        const filtered = movies.filter(m => m.genres.includes(genre));
+        const filtered = movies.filter(m => m.genres && m.genres.includes(genre));
         showGridView(`หมวดหมู่ภาพยนตร์: ${genre}`, filtered);
       });
     });
 
-    // Footer Nav Actions
-    document.getElementById("footerNavHome").addEventListener("click", (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      showHomeView();
-    });
-
-    document.getElementById("footerNavWatchlist").addEventListener("click", (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      displayWatchlistView();
-    });
+    // Privacy & DMCA & Contact Modals/Alerts
+    const privacyBtn = document.getElementById("privacyPolicyBtn");
+    if (privacyBtn) {
+      privacyBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        showToast("นโยบายความเป็นส่วนตัว: เว็บไซต์ไม่มีการเก็บข้อมูลส่วนบุคคลของผู้ใช้", "info");
+      });
+    }
+    const dmcaBtn = document.getElementById("dmcaBtn");
+    if (dmcaBtn) {
+      dmcaBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        showToast("DMCA: เว็บไซต์นี้เป็นเพียงสื่อกลางในการรวบรวมลิงก์จากอินเทอร์เน็ต", "info");
+      });
+    }
+    const contactBtn = document.getElementById("contactBtn");
+    if (contactBtn) {
+      contactBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        showToast("ติดต่อผู้ดูแลระบบ: ผ่านช่องทางระบบ Cloudflare Stream", "info");
+      });
+    }
   }
 });
