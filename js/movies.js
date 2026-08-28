@@ -1,5 +1,5 @@
 // ฐานข้อมูลภาพยนตร์รวมจาก 2 เว็บไซต์ เฉพาะตัวเล่นวิดีโอสะอาด 100% (พร้อม postId สำหรับ EP switching)
-const movies = [
+window.movies = [
   {
     "titleTh": "Fast Five 5 (2011) เร็วแรงทะลุนรก 5",
     "titleEn": "Fast Five 5 (2011) เร็วแรงทะลุนรก 5",
