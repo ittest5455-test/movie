@@ -506,8 +506,6 @@ input:focus {
 .movies-shelf-section {
   padding: 1.5rem 0 1.5rem 4%;
   position: relative;
-  content-visibility: auto; /* Defer rendering of off-screen elements */
-  contain-intrinsic-size: 280px;
 }
 
 .section-header {
