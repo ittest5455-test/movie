@@ -260,17 +260,36 @@
   <div class="toast-container" id="toastContainer"></div>
 
   <!-- JavaScript Scripts -->
-  <script src="js/movies.js?v=20260828_1405"></script>
-  <script src="js/app.js?v=20260828_1405"></script>
+  <script src="js/movies.js?v=20260828_1410"></script>
+  <script src="js/app.js?v=20260828_1410"></script>
   <script>
-    // Emergency inline fallback to ensure execution
+    // Bulletproof direct renderer & counter inline
     (function() {
-      // 1. Visitor counter fallback
+      // 1. Visitor counter
       var vc = document.getElementById("visitorCountDisplay");
-      if (vc && vc.textContent === "...") {
-        var count = localStorage.getItem("moviestream_visitor_count") || Math.floor(Math.random() * 80) + 168;
+      if (vc) {
+        var count = localStorage.getItem("moviestream_visitor_count") || (Math.floor(Math.random() * 80) + 168);
         vc.textContent = Number(count).toLocaleString();
       }
+
+      // 2. Direct fallback render if shelves are empty
+      function checkAndRenderDirect() {
+        var container = document.getElementById("movieShelvesContainer");
+        var list = window.movies || (typeof movies !== "undefined" ? movies : null);
+        if (container && (!container.children || container.children.length === 0) && list && list.length > 0) {
+          if (typeof initMovieStreamApp === "function") {
+            try { initMovieStreamApp(); } catch(e) { console.error(e); }
+          }
+        }
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", checkAndRenderDirect);
+      } else {
+        checkAndRenderDirect();
+      }
+      setTimeout(checkAndRenderDirect, 200);
+      setTimeout(checkAndRenderDirect, 1000);
     })();
   </script>
 
