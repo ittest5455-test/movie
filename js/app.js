@@ -72,9 +72,10 @@ function initMovieStreamApp() {
   let currentActiveMovie = null;
 
   try {
-    setupEventListeners();
-    updateWatchlistUI();
+    initVisitorCounter();
     renderMovieShelves();
+    updateWatchlistUI();
+    setupEventListeners();
   } catch (err) {
     console.error("Initialization error:", err);
   }
@@ -645,21 +646,27 @@ function initMovieStreamApp() {
   // --- Event Listeners Setup ---
   function setupEventListeners() {
     // Nav Home Click
-    navHome.addEventListener("click", (e) => {
-      e.preventDefault();
-      showHomeView();
-    });
+    if (navHome) {
+      navHome.addEventListener("click", (e) => {
+        e.preventDefault();
+        showHomeView();
+      });
+    }
 
-    logoLink.addEventListener("click", (e) => {
-      e.preventDefault();
-      showHomeView();
-    });
+    if (logoLink) {
+      logoLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        showHomeView();
+      });
+    }
 
     // Nav Watchlist Click
-    navWatchlist.addEventListener("click", (e) => {
-      e.preventDefault();
-      displayWatchlistView();
-    });
+    if (navWatchlist) {
+      navWatchlist.addEventListener("click", (e) => {
+        e.preventDefault();
+        displayWatchlistView();
+      });
+    }
 
     // Close Modals
     if (modalCloseBtn) modalCloseBtn.addEventListener("click", closeDetailsModal);
@@ -767,19 +774,21 @@ function initMovieStreamApp() {
     }
 
     // Live Search input filter
-    searchInput.addEventListener("input", () => {
-      const query = searchInput.value.trim().toLowerCase();
-      if (query === "") {
-        showHomeView();
-      } else {
-        const results = movieList.filter(
-          m => m.titleTh.toLowerCase().includes(query) || 
-               m.titleEn.toLowerCase().includes(query) ||
-               m.genres.some(g => g.toLowerCase().includes(query))
-        );
-        showGridView(`ผลการค้นหาสำหรับ: "${query}"`, results);
-      }
-    });
+    if (searchInput) {
+      searchInput.addEventListener("input", () => {
+        const query = searchInput.value.trim().toLowerCase();
+        if (query === "") {
+          showHomeView();
+        } else {
+          const results = movieList.filter(
+            m => (m.titleTh && m.titleTh.toLowerCase().includes(query)) || 
+                 (m.titleEn && m.titleEn.toLowerCase().includes(query)) ||
+                 (m.genres && m.genres.some(g => g.toLowerCase().includes(query)))
+          );
+          showGridView(`ผลการค้นหาสำหรับ: "${query}"`, results);
+        }
+      });
+    }
 
     // Footer Genre Links
     document.querySelectorAll(".footer-filter-link").forEach(link => {
