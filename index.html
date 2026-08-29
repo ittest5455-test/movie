@@ -45,10 +45,14 @@
         <li><a href="#" class="active" id="navHome">หน้าแรก</a></li>
         <li><a href="#" id="navWatchlist">รายการโปรด (<span id="watchlistCount">0</span>)</a></li>
         <li><a href="#" id="navAnalyticsBtn" style="color: #22c55e; font-weight: bold;">📊 ผู้เข้าชม: <span id="visitorCountDisplay">...</span> คน</a></li>
+        <li><a href="#" id="navAuthBtn" style="color: #a855f7; font-weight: bold;">👤 เข้าสู่ระบบ / สมาชิก</a></li>
       </ul>
     </nav>
     
     <div class="nav-actions">
+      <button class="auth-btn-header" id="headerAuthBtn" style="display:none; background: linear-gradient(135deg, #a855f7, #6366f1); color: #fff; border:none; padding: 0.4rem 0.9rem; border-radius: 20px; font-weight: bold; font-size: 0.85rem; cursor: pointer;">
+        👤 สมาชิก
+      </button>
       <a href="https://file.kiwi/5eb2b795#axknUHvm7OMX9uhixEabkQ" target="_blank" rel="noopener" class="apk-download-btn" id="apkDownloadHeaderBtn" style="background:#f59e0b; color:#000; padding:0.4rem 0.9rem; border-radius:20px; font-weight:bold; font-size:0.85rem;">
         📲(APK)
       </a>
@@ -243,6 +247,54 @@
         <select class="player-select-btn" id="episodeSelectBtn">
           <option value="1">ตอนที่ 1 (จบในตอน)</option>
         </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Member Auth Modal (Login / Register) -->
+  <div class="modal-overlay" id="authModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content auth-modal-content" style="max-width: 420px; padding: 2rem; border-radius: 16px; background: #0f172a; border: 1px solid rgba(168,85,247,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.8); position: relative;">
+      <button class="modal-close-btn" id="authModalCloseBtn" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; color: #94a3b8; cursor: pointer;">&times;</button>
+      
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">👑</div>
+        <h2 style="font-size: 1.4rem; color: #fff; font-weight: bold; margin-bottom: 0.3rem;" id="authModalTitle">เข้าสู่ระบบสมาชิก</h2>
+        <p style="font-size: 0.85rem; color: #94a3b8;" id="authModalDesc">บันทึกรายการโปรดและประวัติการดูข้ามอุปกรณ์</p>
+      </div>
+
+      <!-- Auth Form -->
+      <form id="authForm" onsubmit="return false;">
+        <div style="margin-bottom: 1.2rem;">
+          <label style="display: block; font-size: 0.85rem; color: #cbd5e1; margin-bottom: 0.4rem;">📱 เบอร์โทรศัพท์มือถือ</label>
+          <input type="tel" id="authPhone" placeholder="08xxxxxxxx" required style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; background: #1e293b; border: 1px solid #334155; color: #fff; font-size: 1rem; outline: none;">
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <label style="display: block; font-size: 0.85rem; color: #cbd5e1; margin-bottom: 0.4rem;">🔑 รหัสผ่าน (PIN 4-6 หลัก)</label>
+          <input type="password" id="authPassword" placeholder="ตั้งรหัสผ่านเข้าสู่ระบบ" required style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; background: #1e293b; border: 1px solid #334155; color: #fff; font-size: 1rem; outline: none;">
+        </div>
+
+        <button type="submit" id="authSubmitBtn" style="width: 100%; padding: 0.85rem; border-radius: 8px; background: linear-gradient(135deg, #a855f7, #6366f1); color: #fff; border: none; font-weight: bold; font-size: 1rem; cursor: pointer; transition: 0.2s;">
+          เข้าสู่ระบบ
+        </button>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.2rem; font-size: 0.85rem;">
+          <span style="color: #94a3b8;" id="authToggleText">ยังไม่มีบัญชีสมาชิก?</span>
+          <a href="#" id="authToggleBtn" style="color: #38bdf8; text-decoration: underline; font-weight: bold;">สมัครสมาชิกฟรี</a>
+        </div>
+      </form>
+
+      <!-- User Profile State (When Logged in) -->
+      <div id="authProfileView" style="display: none; text-align: center;">
+        <div style="background: #1e293b; border-radius: 12px; padding: 1.2rem; margin-bottom: 1.5rem;">
+          <div style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 0.3rem;">สถานะผู้ใช้งาน</div>
+          <div style="font-size: 1.2rem; color: #22c55e; font-weight: bold;" id="profileStatus">VIP Member 👑</div>
+          <div style="font-size: 1rem; color: #fff; margin-top: 0.5rem;" id="profilePhone">081-xxx-xxxx</div>
+        </div>
+
+        <button id="authLogoutBtn" style="width: 100%; padding: 0.75rem; border-radius: 8px; background: #ef4444; color: #fff; border: none; font-weight: bold; font-size: 0.95rem; cursor: pointer;">
+          🚪 ออกจากระบบ
+        </button>
       </div>
     </div>
   </div>
