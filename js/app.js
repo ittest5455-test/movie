@@ -814,6 +814,22 @@ function initMovieStreamApp() {
 
             if (result.success) {
               localStorage.setItem("moviestream_user", JSON.stringify(result.user));
+              
+              // โหลดรายการโปรดของสมาชิกจาก Google Sheet มาใช้งานทันที
+              if (result.user && result.user.watchlist) {
+                try {
+                  const cloudFavs = typeof result.user.watchlist === "string" ? JSON.parse(result.user.watchlist) : result.user.watchlist;
+                  if (Array.isArray(cloudFavs)) {
+                    // รวมรายการโปรดเดิมในเครื่องกับบนคลาวด์เข้าด้วยกัน
+                    watchlist = Array.from(new Set([...watchlist, ...cloudFavs]));
+                    updateWatchlistUI();
+                    showHomeView();
+                  }
+                } catch(e) {
+                  console.warn("Error parsing user cloud watchlist:", e);
+                }
+              }
+
               showToast(result.message || "เข้าสู่ระบบสำเร็จ! 👑", "success");
               updateAuthUI();
               closeAuthModal();
