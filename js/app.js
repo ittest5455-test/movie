@@ -246,8 +246,23 @@ function initMovieStreamApp() {
     // If currently on watchlist page, refresh grid view
     if (navWatchlist.classList.contains("active")) {
       displayWatchlistView();
-    } else {
-      
+    }
+
+    // Auto-sync Watchlist to Google Sheet if logged in
+    const savedUser = localStorage.getItem("moviestream_user");
+    if (savedUser && GOOGLE_SCRIPT_URL) {
+      try {
+        const user = JSON.parse(savedUser);
+        fetch(GOOGLE_SCRIPT_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify({
+            action: "sync_watchlist",
+            phone: user.phone,
+            watchlist: JSON.stringify(watchlist)
+          })
+        }).catch(() => {});
+      } catch (e) {}
     }
     
     // Update Modal Button State if modal is open
@@ -346,6 +361,14 @@ function initMovieStreamApp() {
   // --- Video Player Modal Actions ---
 
   function playMovie(movie) {
+    // ตรวจสอบสิทธิ์สมาชิกก่อนเปิดเล่นหนัง
+    const savedUser = localStorage.getItem("moviestream_user");
+    if (!savedUser) {
+      showToast("🔒 กรุณาเข้าสู่ระบบสมาชิกก่อนรับชมภาพยนตร์", "info");
+      openAuthModal();
+      return;
+    }
+
     playerModal.classList.add("active");
     document.body.style.overflow = "hidden";
     currentActiveMovie = movie;
@@ -626,6 +649,210 @@ function initMovieStreamApp() {
       navWatchlist.addEventListener("click", (e) => {
         e.preventDefault();
         displayWatchlistView();
+      });
+    }
+
+    // --- Member Auth Modal Controller ---
+    const authModal = document.getElementById("authModal");
+    const navAuthBtn = document.getElementById("navAuthBtn");
+    const headerAuthBtn = document.getElementById("headerAuthBtn");
+    const authModalCloseBtn = document.getElementById("authModalCloseBtn");
+    const authForm = document.getElementById("authForm");
+    const authPhone = document.getElementById("authPhone");
+    const authPassword = document.getElementById("authPassword");
+    const authSubmitBtn = document.getElementById("authSubmitBtn");
+    const authModalTitle = document.getElementById("authModalTitle");
+    const authModalDesc = document.getElementById("authModalDesc");
+    const authToggleText = document.getElementById("authToggleText");
+    const authToggleBtn = document.getElementById("authToggleBtn");
+    const authProfileView = document.getElementById("authProfileView");
+    const profileStatus = document.getElementById("profileStatus");
+    const profilePhone = document.getElementById("profilePhone");
+    const authLogoutBtn = document.getElementById("authLogoutBtn");
+
+    let isRegisterMode = false;
+    // URL Google Apps Script Web App (เชื่อมต่อ Google Sheet เรียบร้อย)
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyKnLnnu7iJ3uPSV3tdpLO5HL6pZMGy5qzHSLu8Y4RoQq5MIYj1QVFXgZ3miynuNjPX/exec"; 
+
+    function updateAuthUI() {
+      const savedUser = localStorage.getItem("moviestream_user");
+      if (savedUser) {
+        try {
+          const user = JSON.parse(savedUser);
+          if (navAuthBtn) navAuthBtn.innerHTML = `👑 ${user.phone.substring(0, 3)}*** (${user.status || 'VIP'})`;
+          if (headerAuthBtn) headerAuthBtn.innerHTML = `👑 VIP`;
+        } catch (e) {}
+      } else {
+        if (navAuthBtn) navAuthBtn.innerHTML = `👤 เข้าสู่ระบบ / สมาชิก`;
+        if (headerAuthBtn) headerAuthBtn.innerHTML = `👤 สมาชิก`;
+      }
+    }
+    updateAuthUI();
+
+    function openAuthModal() {
+      const savedUser = localStorage.getItem("moviestream_user");
+      if (savedUser) {
+        const user = JSON.parse(savedUser);
+        if (authForm) authForm.style.display = "none";
+        if (authProfileView) authProfileView.style.display = "block";
+        if (profilePhone) profilePhone.textContent = `เบอร์: ${user.phone}`;
+        if (profileStatus) profileStatus.textContent = `${user.status || 'VIP Member'} 👑`;
+        if (authModalTitle) authModalTitle.textContent = "ข้อมูลสมาชิกของคุณ";
+        if (authModalDesc) authModalDesc.textContent = "บัญชีเชื่อมต่อเรียบร้อยแล้ว";
+      } else {
+        if (authForm) authForm.style.display = "block";
+        if (authProfileView) authProfileView.style.display = "none";
+        setAuthMode(false);
+      }
+      if (authModal) authModal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeAuthModal() {
+      if (authModal) authModal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+
+    function setAuthMode(register) {
+      isRegisterMode = register;
+      if (register) {
+        if (authModalTitle) authModalTitle.textContent = "สมัครสมาชิกใหม่ (ฟรี)";
+        if (authModalDesc) authModalDesc.textContent = "สมัครเพียงครั้งเดียว บันทึกรายการโปรดได้ตลอดไป";
+        if (authSubmitBtn) authSubmitBtn.textContent = "ยืนยันสมัครสมาชิก 🚀";
+        if (authToggleText) authToggleText.textContent = "มีบัญชีอยู่แล้ว?";
+        if (authToggleBtn) authToggleBtn.textContent = "เข้าสู่ระบบที่นี่";
+      } else {
+        if (authModalTitle) authModalTitle.textContent = "เข้าสู่ระบบสมาชิก";
+        if (authModalDesc) authModalDesc.textContent = "บันทึกรายการโปรดและประวัติการดูข้ามอุปกรณ์";
+        if (authSubmitBtn) authSubmitBtn.textContent = "เข้าสู่ระบบ 🎬";
+        if (authToggleText) authToggleText.textContent = "ยังไม่มีบัญชีสมาชิก?";
+        if (authToggleBtn) authToggleBtn.textContent = "สมัครสมาชิกฟรี";
+      }
+    }
+
+    if (navAuthBtn) navAuthBtn.addEventListener("click", (e) => { e.preventDefault(); openAuthModal(); });
+    if (headerAuthBtn) headerAuthBtn.addEventListener("click", (e) => { e.preventDefault(); openAuthModal(); });
+    if (authModalCloseBtn) authModalCloseBtn.addEventListener("click", closeAuthModal);
+    if (authModal) {
+      authModal.addEventListener("click", (e) => {
+        if (e.target === authModal) closeAuthModal();
+      });
+    }
+
+    if (authToggleBtn) {
+      authToggleBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        setAuthMode(!isRegisterMode);
+      });
+    }
+
+    if (authSubmitBtn) {
+      authSubmitBtn.addEventListener("click", async (e) => {
+        e.preventDefault();
+        const phone = authPhone ? authPhone.value.trim() : "";
+        const password = authPassword ? authPassword.value.trim() : "";
+
+        if (!phone || phone.length < 9) {
+          showToast("กรุณากรอกเบอร์โทรศัพท์ให้ถูกต้อง", "info");
+          return;
+        }
+        if (!password || password.length < 4) {
+          showToast("รหัสผ่านต้องมีอย่างน้อย 4 หลัก", "info");
+          return;
+        }
+
+        authSubmitBtn.disabled = true;
+        authSubmitBtn.textContent = "กำลังดำเนินการ...";
+
+        // ถ้ามี Google Script URL ให้ยิง API
+        if (GOOGLE_SCRIPT_URL) {
+          // ถ้าเป็นโหมด "สมัครสมาชิก" ให้ตอบสนองหน้าเว็บทันที 0.1 วิ (Instant Feedback) แล้วส่งข้อมูลเบื้องหลัง
+          if (isRegisterMode) {
+            showToast("สมัครสมาชิกสำเร็จ! กรุณารอแอดมินอนุมัติ ⏳", "info");
+            closeAuthModal();
+            authSubmitBtn.disabled = false;
+            authSubmitBtn.textContent = "ยืนยันสมัครสมาชิก 🚀";
+            
+            // ส่งข้อมูลขึ้น Google Sheet เบื้องหลังแบบ Asynchronous
+            fetch(GOOGLE_SCRIPT_URL, {
+              method: "POST",
+              headers: { "Content-Type": "text/plain;charset=utf-8" },
+              body: JSON.stringify({
+                action: "register",
+                phone: phone,
+                password: password,
+                watchlist: JSON.stringify(watchlist)
+              })
+            }).catch(e => console.warn("Background register sync:", e));
+            return;
+          }
+
+          // ถ้าเป็นโหมด "เข้าสู่ระบบ" ให้เช็คสิทธิ์แบบปกติ
+          try {
+            const res = await fetch(GOOGLE_SCRIPT_URL, {
+              method: "POST",
+              headers: { "Content-Type": "text/plain;charset=utf-8" },
+              body: JSON.stringify({
+                action: "login",
+                phone: phone,
+                password: password,
+                watchlist: JSON.stringify(watchlist)
+              })
+            });
+            const text = await res.text();
+            let result;
+            try {
+              result = JSON.parse(text);
+            } catch(e) {
+              console.error("Response not JSON:", text);
+              showToast("ส่งข้อมูลสำเร็จ รอระบบบันทึกสักครู่", "info");
+              closeAuthModal();
+              authSubmitBtn.disabled = false;
+              setAuthMode(isRegisterMode);
+              return;
+            }
+
+            if (result.success) {
+              localStorage.setItem("moviestream_user", JSON.stringify(result.user));
+              showToast(result.message || "เข้าสู่ระบบสำเร็จ! 👑", "success");
+              updateAuthUI();
+              closeAuthModal();
+            } else {
+              if (result.isPending) {
+                showToast("⏳ บัญชีของคุณอยู่ระหว่างรอแอดมินอนุมัติ", "info");
+              } else {
+                showToast(result.message || "เกิดข้อผิดพลาด", "info");
+              }
+            }
+          } catch (err) {
+            console.error("Auth fetch error:", err);
+            showToast("เชื่อมต่อฐานข้อมูลล้มเหลว ตรวจสอบอินเทอร์เน็ต", "info");
+          }
+        } else {
+          // โหมดจำลองในเครื่อง (Local Storage Offline Mode)
+          const mockUser = {
+            userId: "VIP-" + Math.floor(1000 + Math.random() * 9000),
+            phone: phone,
+            status: "VIP Member",
+            watchlist: JSON.stringify(watchlist)
+          };
+          localStorage.setItem("moviestream_user", JSON.stringify(mockUser));
+          showToast(isRegisterMode ? "สมัครสมาชิกและเข้าสู่ระบบสำเร็จ! (โหมดทดสอบ)" : "เข้าสู่ระบบสำเร็จ! 👑", "success");
+          updateAuthUI();
+          closeAuthModal();
+        }
+
+        authSubmitBtn.disabled = false;
+        setAuthMode(isRegisterMode);
+      });
+    }
+
+    if (authLogoutBtn) {
+      authLogoutBtn.addEventListener("click", () => {
+        localStorage.removeItem("moviestream_user");
+        showToast("ออกจากระบบเรียบร้อยแล้ว", "info");
+        updateAuthUI();
+        closeAuthModal();
       });
     }
 
