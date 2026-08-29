@@ -77,16 +77,7 @@
         <button class="genre-tag active" data-genre="all">🎬 ทั้งหมด</button>
         <button class="genre-tag tag-highlight" data-genre="today">🔥 อัปเดตวันนี้</button>
         <button class="genre-tag tag-highlight" data-genre="recommended-series">🔥 ซีรีส์แนะนำใหม่ 2026</button>
-        <button class="genre-tag tag-year" data-genre="year-2026">📅 หนังปี 2026</button>
-        <button class="genre-tag tag-year" data-genre="year-2025">📅 หนังปี 2025</button>
-        <button class="genre-tag tag-year" data-genre="year-2024">📅 หนังปี 2024</button>
-        <button class="genre-tag" data-genre="SERIEDAYS">📌 รวมซีรีส์พากย์ไทย</button>
-        <button class="genre-tag" data-genre="24HDX">📌 24-HDX</button>
-        <button class="genre-tag" data-genre="ตลกคอมเมดี้">ตลกคอมเมดี้</button>
-        <button class="genre-tag" data-genre="สยองขวัญ">สยองขวัญ</button>
-        <button class="genre-tag" data-genre="แฟนตาซี Sci-Fi">แฟนตาซี Sci-Fi</button>
-        <button class="genre-tag" data-genre="แอคชั่น">แอคชั่น</button>
-        <button class="genre-tag" data-genre="การ์ตูน">การ์ตูน / อนิเมะ</button>
+        <button class="genre-tag tag-highlight" data-genre="24HDX">📌 24-HDX</button>
       </div>
     </section>
     <!-- Search Results / Watchlist View (Shared Grid Layout) -->
@@ -303,8 +294,8 @@
   <div class="toast-container" id="toastContainer"></div>
 
   <!-- JavaScript Scripts -->
-  <script src="js/movies.js?v=20260828_1410"></script>
-  <script src="js/app.js?v=20260828_1410"></script>
+  <script src="js/movies.js"></script>
+  <script src="js/app.js"></script>
   <script>
     // Bulletproof direct renderer & counter inline
     (function() {
@@ -315,6 +306,16 @@
         vc.textContent = Number(count).toLocaleString();
       }
 
+      // 2. Direct Render Fallback if needed
+      window.addEventListener("DOMContentLoaded", function() {
+        var grid = document.getElementById("gridMoviesList");
+        var list = window.movies || (typeof movies !== "undefined" ? movies : []);
+        if (grid && (!grid.children || grid.children.length === 0) && list && list.length > 0) {
+          if (typeof initMovieStreamApp === "function") {
+            initMovieStreamApp();
+          }
+        }
+      });
     })();
   </script>
 
