@@ -399,7 +399,7 @@ function initMovieStreamApp() {
       iframeVideoPlayer.style.display = "block";
       iframeVideoPlayer.removeAttribute("sandbox");
       iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
-      iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline");
+      iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline; accelerometer; gyroscope");
       iframeVideoPlayer.setAttribute("playsinline", "");
       iframeVideoPlayer.setAttribute("webkit-playsinline", "");
       iframeVideoPlayer.src = movie.videoUrl;
