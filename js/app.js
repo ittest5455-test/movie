@@ -41,6 +41,7 @@ function initMovieStreamApp() {
   // Video Player Modal
   const playerModal = document.getElementById("playerModal");
   const playerCloseBtn = document.getElementById("playerCloseBtn");
+  const playingMovieTitle = document.getElementById("playingMovieTitle");
   const html5VideoPlayer = document.getElementById("html5VideoPlayer");
   const iframeVideoPlayer = document.getElementById("iframeVideoPlayer");
   const customPlayerControls = document.getElementById("customPlayerControls");
@@ -369,6 +370,10 @@ function initMovieStreamApp() {
       return;
     }
 
+    if (playingMovieTitle) {
+      playingMovieTitle.textContent = movie.titleTh;
+    }
+    
     playerModal.classList.add("active");
     document.body.style.overflow = "hidden";
     currentActiveMovie = movie;
