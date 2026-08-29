@@ -420,7 +420,7 @@ function initMovieStreamApp() {
       customPlayerControls.style.display = "none";
       
       iframeVideoPlayer.style.display = "block";
-      iframeVideoPlayer.removeAttribute("sandbox");
+      if((typeof movie !== "undefined" && movie.source === "GOSERIES4K") || (typeof currentActiveMovie !== "undefined" && currentActiveMovie && currentActiveMovie.source === "GOSERIES4K")) { iframeVideoPlayer.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms"); } else { iframeVideoPlayer.removeAttribute("sandbox"); }
       iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
       iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline; accelerometer; gyroscope");
       iframeVideoPlayer.setAttribute("playsinline", "");
@@ -437,7 +437,7 @@ function initMovieStreamApp() {
     
     if (currentActiveMovie && currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[episode]) {
       const epVideoUrl = currentActiveMovie.episodeUrls[episode];
-      iframeVideoPlayer.removeAttribute("sandbox");
+      if((typeof movie !== "undefined" && movie.source === "GOSERIES4K") || (typeof currentActiveMovie !== "undefined" && currentActiveMovie && currentActiveMovie.source === "GOSERIES4K")) { iframeVideoPlayer.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms"); } else { iframeVideoPlayer.removeAttribute("sandbox"); }
       iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
       iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline");
       iframeVideoPlayer.setAttribute("playsinline", "");
@@ -935,8 +935,8 @@ function initMovieStreamApp() {
         const todayMovies = movieList.slice(0, 16);
         showGridView("🔥 ภาพยนตร์ & ซีรีส์อัปเดตวันนี้", todayMovies);
       } else if (genre === "recommended-series") {
-        const recMovies = movieList.filter(m => (m.genres && (m.genres.includes("ซีรีส์แนะนำ") || m.genres.includes("ซีรีส์ใหม่ 2026"))) || m.source === "SERIEDAYS");
-        showGridView(`🔥 รวมซีรีส์แนะนำใหม่ 2026 (${recMovies.length} เรื่อง)`, recMovies);
+        const recMovies = movieList.filter(m => (m.genres && (m.genres.includes("ซีรีส์แนะนำใหม่ 2026") || m.genres.includes("ซีรีส์ใหม่ 2026") || m.genres.includes("ซีรีส์แนะนำ"))) || m.source === "GOSERIES4K" || m.source === "SERIEDAYS");
+        showGridView(`🔥 ซีรีส์แนะนำใหม่ 2026 (${recMovies.length} เรื่อง)`, recMovies);
       } else if (genre === "year-2026") {
         const y2026Movies = movieList.filter(m => String(m.year) === "2026" || m.titleTh.includes("2026"));
         showGridView(`📅 รวมภาพยนตร์ & ซีรีส์ใหม่ปี 2026 (${y2026Movies.length} เรื่อง)`, y2026Movies);
