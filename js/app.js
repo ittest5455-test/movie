@@ -419,12 +419,21 @@ function initMovieStreamApp() {
       html5VideoPlayer.src = "";
       customPlayerControls.style.display = "none";
       
-      iframeVideoPlayer.style.display = "block";
-      if((typeof movie !== "undefined" && movie.source === "GOSERIES4K") || (typeof currentActiveMovie !== "undefined" && currentActiveMovie && currentActiveMovie.source === "GOSERIES4K")) { iframeVideoPlayer.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms"); } else { iframeVideoPlayer.removeAttribute("sandbox"); }
+      // Safe player setup: Never apply sandbox on iPhone/iOS/Mobile to prevent 403 stream token block
+      const isMobileDevice = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      const isGOSeries = (typeof movie !== "undefined" && movie && movie.source === "GOSERIES4K") || (typeof currentActiveMovie !== "undefined" && currentActiveMovie && currentActiveMovie.source === "GOSERIES4K");
+      
+      if (!isMobileDevice && isGOSeries) {
+        iframeVideoPlayer.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms allow-presentation allow-downloads");
+      } else {
+        iframeVideoPlayer.removeAttribute("sandbox");
+      }
+      
       iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
       iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline; accelerometer; gyroscope");
-      iframeVideoPlayer.setAttribute("playsinline", "");
-      iframeVideoPlayer.setAttribute("webkit-playsinline", "");
+      iframeVideoPlayer.setAttribute("playsinline", "true");
+      iframeVideoPlayer.setAttribute("webkit-playsinline", "true");
+      iframeVideoPlayer.setAttribute("x5-playsinline", "true");
       iframeVideoPlayer.src = movie.videoUrl;
       
       showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}`, "success");
@@ -437,11 +446,20 @@ function initMovieStreamApp() {
     
     if (currentActiveMovie && currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[episode]) {
       const epVideoUrl = currentActiveMovie.episodeUrls[episode];
-      if((typeof movie !== "undefined" && movie.source === "GOSERIES4K") || (typeof currentActiveMovie !== "undefined" && currentActiveMovie && currentActiveMovie.source === "GOSERIES4K")) { iframeVideoPlayer.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms"); } else { iframeVideoPlayer.removeAttribute("sandbox"); }
+      const isMobileDevice = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      const isGOSeries = (typeof currentActiveMovie !== "undefined" && currentActiveMovie && currentActiveMovie.source === "GOSERIES4K");
+      
+      if (!isMobileDevice && isGOSeries) {
+        iframeVideoPlayer.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms allow-presentation allow-downloads");
+      } else {
+        iframeVideoPlayer.removeAttribute("sandbox");
+      }
+      
       iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
       iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline");
-      iframeVideoPlayer.setAttribute("playsinline", "");
-      iframeVideoPlayer.setAttribute("webkit-playsinline", "");
+      iframeVideoPlayer.setAttribute("playsinline", "true");
+      iframeVideoPlayer.setAttribute("webkit-playsinline", "true");
+      iframeVideoPlayer.setAttribute("x5-playsinline", "true");
       iframeVideoPlayer.src = epVideoUrl;
       showToast(`เปิดเล่น ตอนที่ ${episode} เรียบร้อย`, "success");
       return;
