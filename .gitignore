@@ -1,0 +1,14 @@
+# Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Large binary files
+*.apk
+
+# OS & dump files
+.DS_Store
+Thumbs.db
+html_dump.txt
+*.log
