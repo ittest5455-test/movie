@@ -933,10 +933,10 @@ function initMovieStreamApp() {
         showHomeView();
       } else if (genre === "today") {
         const todayMovies = movieList.slice(0, 16);
-        showGridView("🔥 ภาพยนตร์ & ซีรีส์อัปเดตวันนี้ (จาก 24-HDX, GOSERIES4K)", todayMovies);
-      } else if (genre === "this-week") {
-        const thisWeekMovies = movieList.slice(0, 36);
-        showGridView("⭐ ภาพยนตร์ & ซีรีส์อัปเดตสัปดาห์นี้ (จาก 24-HDX, GOSERIES4K)", thisWeekMovies);
+        showGridView("🔥 ภาพยนตร์ & ซีรีส์อัปเดตวันนี้", todayMovies);
+      } else if (genre === "recommended-series") {
+        const recMovies = movieList.filter(m => (m.genres && (m.genres.includes("ซีรีส์แนะนำ") || m.genres.includes("ซีรีส์ใหม่ 2026"))) || m.source === "SERIEDAYS");
+        showGridView(`🔥 รวมซีรีส์แนะนำใหม่ 2026 (${recMovies.length} เรื่อง)`, recMovies);
       } else if (genre === "year-2026") {
         const y2026Movies = movieList.filter(m => String(m.year) === "2026" || m.titleTh.includes("2026"));
         showGridView(`📅 รวมภาพยนตร์ & ซีรีส์ใหม่ปี 2026 (${y2026Movies.length} เรื่อง)`, y2026Movies);
@@ -947,8 +947,8 @@ function initMovieStreamApp() {
         const y2024Movies = movieList.filter(m => String(m.year) === "2024" || m.titleTh.includes("2024"));
         showGridView(`📅 รวมภาพยนตร์ & ซีรีส์ปี 2024 (${y2024Movies.length} เรื่อง)`, y2024Movies);
       } else if (genre === "SERIEDAYS") {
-        const sdMovies = movieList.filter(m => m.source === "SERIEDAYS" || (m.genres && m.genres.includes("ซีรีส์ใหม่ 2026")));
-        showGridView(`📌 ซีรีส์ใหม่ปี 2026 (พากย์ไทย) (${sdMovies.length} เรื่อง)`, sdMovies);
+        const sdMovies = movieList.filter(m => m.source === "SERIEDAYS" || (m.genres && (m.genres.includes("ซีรีส์ใหม่ 2026") || m.genres.includes("พากย์ไทย"))));
+        showGridView(`📌 รวมซีรีส์พากย์ไทยยอดนิยม (${sdMovies.length} เรื่อง)`, sdMovies);
       } else if (genre === "24HDX" || genre === "GOSERIES4K") {
         const sourceMovies = movieList.filter(m => m.source === genre);
         showGridView(`📌 รวมภาพยนตร์ & ซีรีส์จาก ${genre} (${sourceMovies.length} เรื่อง)`, sourceMovies);
