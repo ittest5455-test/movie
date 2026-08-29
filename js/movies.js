@@ -1,6 +1,56 @@
 // ฐานข้อมูลภาพยนตร์รวมจาก 2 เว็บไซต์ เฉพาะตัวเล่นวิดีโอสะอาด 100% (พร้อม postId สำหรับ EP switching)
 window.movies = [
   {
+    "titleTh": "Doctor Lawyer (2022-2026) ด็อกเตอร์ ลอยเยอร์",
+    "titleEn": "Doctor Lawyer (2022-2026) ด็อกเตอร์ ลอยเยอร์",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Doctor-Lawyer-2022.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Doctor-Lawyer-2022.png",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=c9a94f78c568f0c9c137d5b1&b=6699",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์เกาหลี Doctor Lawyer (2022-2026) ด็อกเตอร์ ลอยเยอร์ เต็มเรื่อง พากย์ไทย ซับไทย ภาพคมชัดระดับ Full HD อัปเดตครบทุกตอน ไม่มีโฆษณากวนใจ",
+    "rating": 9.2,
+    "genres": [
+      "ซีรีส์เกาหลี",
+      "พากย์ไทย",
+      "ดราม่า Drama",
+      "สืบสวน"
+    ],
+    "duration": "16 ตอนจบ",
+    "trailerUrl": "https://www.youtube.com/embed/M23g_Gf8b14",
+    "cast": [
+      "So Ji-sub",
+      "Shin Sung-rok",
+      "Im Soo-hyang"
+    ],
+    "source": "24HDX",
+    "id": "24hdx-doctor-lawyer-2026",
+    "postId": "39576",
+    "sourcePageUrl": "https://www.24-hdx.com/doctor-lawyer/"
+  },
+  {
     "titleTh": "ฟรี In Your Radiant Season (2026)",
     "titleEn": "ฟรี In Your Radiant Season (2026)",
     "year": 2026,
