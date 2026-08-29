@@ -429,7 +429,7 @@ function initMovieStreamApp() {
         iframeVideoPlayer.removeAttribute("sandbox");
       }
       
-      iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
+      iframeVideoPlayer.removeAttribute("referrerpolicy");
       iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline; accelerometer; gyroscope");
       iframeVideoPlayer.setAttribute("playsinline", "true");
       iframeVideoPlayer.setAttribute("webkit-playsinline", "true");
@@ -455,7 +455,7 @@ function initMovieStreamApp() {
         iframeVideoPlayer.removeAttribute("sandbox");
       }
       
-      iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
+      iframeVideoPlayer.removeAttribute("referrerpolicy");
       iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline");
       iframeVideoPlayer.setAttribute("playsinline", "true");
       iframeVideoPlayer.setAttribute("webkit-playsinline", "true");
