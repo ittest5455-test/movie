@@ -1,6 +1,3571 @@
 // ฐานข้อมูลภาพยนตร์รวมจาก 2 เว็บไซต์ เฉพาะตัวเล่นวิดีโอสะอาด 100% (พร้อม postId สำหรับ EP switching)
 window.movies = [
   {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Dream to You (2026) เติมฝันในใจเธอ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Dream to You (2026) เติมฝันในใจเธอ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=56e7ada1a7233a9c6c790e9e&b=5974",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Dream to You (2026) เติมฝันในใจเธอ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47863",
+    "postId": "47863"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี The Early Spring (2026) ฤดูใหม่นี้มีเพียงสองเรา",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี The Early Spring (2026) ฤดูใหม่นี้มีเพียงสองเรา",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=eb0ef7d86b3ced5142d406ee&b=8990",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี The Early Spring (2026) ฤดูใหม่นี้มีเพียงสองเรา พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48806",
+    "postId": "48806"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Hanyi Enters the Heart (2026) รักซ่อนในลมหนาว",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Hanyi Enters the Heart (2026) รักซ่อนในลมหนาว",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=71845f8b780e101d6867eeb2&b=8686",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Hanyi Enters the Heart (2026) รักซ่อนในลมหนาว พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48528",
+    "postId": "48528"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Born Again (2026) วนเวียนในคืนวิวาห์",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Born Again (2026) วนเวียนในคืนวิวาห์",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=4556e32678b14fcb16275c04&b=9973",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Born Again (2026) วนเวียนในคืนวิวาห์ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48667",
+    "postId": "48667"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Medical Examiner Dr. Qin: Bones of the Past (2026) เงื่อนตายในกาลเวลา",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Medical Examiner Dr. Qin: Bones of the Past (2026) เงื่อนตายในกาลเวลา",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=e02a0a087c7476c9ee0f4715&b=4022",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Medical Examiner Dr. Qin: Bones of the Past (2026) เงื่อนตายในกาลเวลา พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48745",
+    "postId": "48745"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Blossoms of Power (2026) บุหงาซ่อนคม",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Blossoms of Power (2026) บุหงาซ่อนคม",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=77a9b43cd5deae12626566f5&b=3396",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Blossoms of Power (2026) บุหงาซ่อนคม พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47743",
+    "postId": "47743"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Pull Strings (2026) ศิษย์พี่อย่าเคร่งนักเลย",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Pull Strings (2026) ศิษย์พี่อย่าเคร่งนักเลย",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=511921c6cd441f27dee80868&b=3915",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Pull Strings (2026) ศิษย์พี่อย่าเคร่งนักเลย พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48664",
+    "postId": "48664"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี The Road to Splendor (2026) พราวพร่างบุปผาตระการ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี The Road to Splendor (2026) พราวพร่างบุปผาตระการ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=afc3479bf3e8ffc67aedda05&b=6971",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี The Road to Splendor (2026) พราวพร่างบุปผาตระการ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48430",
+    "postId": "48430"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Reacher Season 4 (2026) แจ็ค รีชเชอร์ ยอดคนสืบระห่ำ ซีซั่น 4",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Reacher Season 4 (2026) แจ็ค รีชเชอร์ ยอดคนสืบระห่ำ ซีซั่น 4",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=5e92feb6fd77b6fd24fd93c6&b=7480",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Reacher Season 4 (2026) แจ็ค รีชเชอร์ ยอดคนสืบระห่ำ ซีซั่น 4 พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48504",
+    "postId": "48504"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี A Shop for Killers Season 2 (2026) ร้านลับนักฆ่า ซีซั่น 2",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี A Shop for Killers Season 2 (2026) ร้านลับนักฆ่า ซีซั่น 2",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=f7cc0c60ab7b0b528fb8251f&b=8154",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี A Shop for Killers Season 2 (2026) ร้านลับนักฆ่า ซีซั่น 2 พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48051",
+    "postId": "48051"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี House of the Dragon Season 3 (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี House of the Dragon Season 3 (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=a96cb2709f6f26649de95776&b=7037",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี House of the Dragon Season 3 (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47369",
+    "postId": "47369"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Teach You a Lesson (2026) อย่างนี้ต้องโดนสั่งสอน",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Teach You a Lesson (2026) อย่างนี้ต้องโดนสั่งสอน",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=ba6684fcbbf4033e00afc09e&b=4541",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Teach You a Lesson (2026) อย่างนี้ต้องโดนสั่งสอน พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47024",
+    "postId": "47024"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Mousetrap (2026) กับดักจับลวง",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Mousetrap (2026) กับดักจับลวง",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=c1266655aea2acfb5167da9b&b=8597",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Mousetrap (2026) กับดักจับลวง พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48843",
+    "postId": "48843"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี A Bona Fide Killer (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี A Bona Fide Killer (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=3abaca13b848feab00ab2eac&b=1068",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี A Bona Fide Killer (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48237",
+    "postId": "48237"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี The Affair Was Just The Beginning (2026) ชู้รักอำพรางเลือด",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี The Affair Was Just The Beginning (2026) ชู้รักอำพรางเลือด",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=08d8c32c3427cb48bf99a58f&b=8254",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี The Affair Was Just The Beginning (2026) ชู้รักอำพรางเลือด พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48231",
+    "postId": "48231"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Summertime (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Summertime (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=3f299cebfe90befc290a0f9d&b=1319",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Summertime (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48827",
+    "postId": "48827"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี OK Let&#8217;s Get Divorced (2026) โอเคเราหย่ากันเถอะ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี OK Let&#8217;s Get Divorced (2026) โอเคเราหย่ากันเถอะ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=66a5dee78c71927e82b5a4e6&b=5107",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี OK Let&#8217;s Get Divorced (2026) โอเคเราหย่ากันเถอะ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48658",
+    "postId": "48658"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี My Bias My Boss (2026) เมื่อเมนฉันเป็นประธานบริษัท",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี My Bias My Boss (2026) เมื่อเมนฉันเป็นประธานบริษัท",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=84d8aab77744a16b9587ae58&b=4091",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี My Bias My Boss (2026) เมื่อเมนฉันเป็นประธานบริษัท พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48301",
+    "postId": "48301"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Love on the Menu (2026) รักพร้อมเสิร์ฟ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Love on the Menu (2026) รักพร้อมเสิร์ฟ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=1471ddf024ef13fcf54b0d6a&b=8271",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Love on the Menu (2026) รักพร้อมเสิร์ฟ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48298",
+    "postId": "48298"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Spooky in Love (2026) สะดุดรักกุ๊กกุ๊กกู๋",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Spooky in Love (2026) สะดุดรักกุ๊กกุ๊กกู๋",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=ed079f04562bde8ac292e4be&b=2098",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Spooky in Love (2026) สะดุดรักกุ๊กกุ๊กกู๋ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47982",
+    "postId": "47982"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Play Me (2026) ซ้อมรัก เล่นใจ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Play Me (2026) ซ้อมรัก เล่นใจ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=b1a325a69938c9d08d16cd7f&b=5871",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Play Me (2026) ซ้อมรัก เล่นใจ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48223",
+    "postId": "48223"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี The Apartment Job (2026) ท่านประธานกำมะลอ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี The Apartment Job (2026) ท่านประธานกำมะลอ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=d3350ca28c98b8cde88f98dd&b=9695",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี The Apartment Job (2026) ท่านประธานกำมะลอ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47815",
+    "postId": "47815"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Cicada (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Cicada (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=fa1326932552a167506b8e39&b=2066",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Cicada (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48688",
+    "postId": "48688"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Connecting to You (2026) เส้นทางรักเชื่อมใจนายตำรวจ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Connecting to You (2026) เส้นทางรักเชื่อมใจนายตำรวจ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=ad9ac13f259cad17f739069e&b=1247",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Connecting to You (2026) เส้นทางรักเชื่อมใจนายตำรวจ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48559",
+    "postId": "48559"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Cang Feng (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Cang Feng (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=cadcda882a0ad90578793b4d&b=8165",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Cang Feng (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48609",
+    "postId": "48609"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Remnants of Gold (2026) ขุมทองมรณะ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Remnants of Gold (2026) ขุมทองมรณะ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=0e99e9fc7d1e5a19f8dfa2e7&b=2568",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Remnants of Gold (2026) ขุมทองมรณะ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48778",
+    "postId": "48778"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี My Years as the Dragon-Seeking Master (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี My Years as the Dragon-Seeking Master (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=7fb519578f42f277d7fabd30&b=1952",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี My Years as the Dragon-Seeking Master (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48651",
+    "postId": "48651"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Mystic Nine (2026) เก้าสกุล",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Mystic Nine (2026) เก้าสกุล",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=b7aabf6f96ce738bb0a2c05e&b=2902",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Mystic Nine (2026) เก้าสกุล พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48199",
+    "postId": "48199"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Moria (2026) โมเรีย เปรี้ยว แรง แหกทุกกฎ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Moria (2026) โมเรีย เปรี้ยว แรง แหกทุกกฎ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=a37de8ae7070a01824f0e643&b=5134",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Moria (2026) โมเรีย เปรี้ยว แรง แหกทุกกฎ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48831",
+    "postId": "48831"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Blood Sacrifice (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Blood Sacrifice (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=cf96a3ade45b8fb39b5e19c0&b=5754",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Blood Sacrifice (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48786",
+    "postId": "48786"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Lanterns (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Lanterns (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=2c06407eb9019ee3045471f5&b=1306",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Lanterns (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48608",
+    "postId": "48608"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี The Shards (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี The Shards (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=517a1ddfe8284630e0c788a0&b=3724",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี The Shards (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48407",
+    "postId": "48407"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Are the Sexy Buttocks Not Good? (2026) บั้นท้ายเซ็กซี่ไม่ดีเหรอครับ?",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Are the Sexy Buttocks Not Good? (2026) บั้นท้ายเซ็กซี่ไม่ดีเหรอครับ?",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=c26e9c4760135ce645955ba8&b=4685",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Are the Sexy Buttocks Not Good? (2026) บั้นท้ายเซ็กซี่ไม่ดีเหรอครับ? พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47759",
+    "postId": "47759"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี The Servant Prince (2026) สยบรักเจ้าชาย กลายเป็นทาส",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี The Servant Prince (2026) สยบรักเจ้าชาย กลายเป็นทาส",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=9ff4151597c49b4075fb363a&b=1214",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี The Servant Prince (2026) สยบรักเจ้าชาย กลายเป็นทาส พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47615",
+    "postId": "47615"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี S&#038;X (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี S&#038;X (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=e0a285ecc96bec700dba80ef&b=1481",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี S&#038;X (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48682",
+    "postId": "48682"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Human Vapor (2026) มนุษย์ก๊าซ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Human Vapor (2026) มนุษย์ก๊าซ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=a85554457eb1f824d9e12bc3&b=1489",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Human Vapor (2026) มนุษย์ก๊าซ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47579",
+    "postId": "47579"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Song of the Samurai (2026) บทเพลงแห่งซามูไร",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Song of the Samurai (2026) บทเพลงแห่งซามูไร",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=99fbffcd7ed939646eb39088&b=4137",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Song of the Samurai (2026) บทเพลงแห่งซามูไร พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-46505",
+    "postId": "46505"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Viral Hit (2026) นักสู้ทูปเบอร์",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Viral Hit (2026) นักสู้ทูปเบอร์",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=e0fe66bcf57e597917eb7db2&b=3094",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Viral Hit (2026) นักสู้ทูปเบอร์ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47155",
+    "postId": "47155"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Class Crush Crisis (2026) เพื่อนสนิทระวังคิดไม่ซื่อ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Class Crush Crisis (2026) เพื่อนสนิทระวังคิดไม่ซื่อ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=3e923d833078b7745f0c39a3&b=5504",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Class Crush Crisis (2026) เพื่อนสนิทระวังคิดไม่ซื่อ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48127",
+    "postId": "48127"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี In Love Forever (2026) วาดฝันวันวิวาห์",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี In Love Forever (2026) วาดฝันวันวิวาห์",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=af5053f2b8069086e7b1a29a&b=4521",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี In Love Forever (2026) วาดฝันวันวิวาห์ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47465",
+    "postId": "47465"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Make It Right (2026) รักออกเดิน Uncut Version",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Make It Right (2026) รักออกเดิน Uncut Version",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=e04699c9c3f43eaa2fcd25dd&b=9774",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Make It Right (2026) รักออกเดิน Uncut Version พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47970",
+    "postId": "47970"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Don&#8217;t Be Too Emotional (2026) อย่าขอพี่เจน",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Don&#8217;t Be Too Emotional (2026) อย่าขอพี่เจน",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=1a56b1180a1d0c27fcf8b24c&b=7752",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Don&#8217;t Be Too Emotional (2026) อย่าขอพี่เจน พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47443",
+    "postId": "47443"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Be My Player Two (2026) ซอโซ่ล่ามธีร์ (Uncut Ver.)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Be My Player Two (2026) ซอโซ่ล่ามธีร์ (Uncut Ver.)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=a5a7c62cba9bf94af2502bcd&b=3748",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Be My Player Two (2026) ซอโซ่ล่ามธีร์ (Uncut Ver.) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47921",
+    "postId": "47921"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Pentor (2026) เป็นต่อ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Pentor (2026) เป็นต่อ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=03306c4120d2194dc832fe99&b=5960",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Pentor (2026) เป็นต่อ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-44455",
+    "postId": "44455"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Flex X Cop 2 (2026) คุณชายสายสืบ ซีซั่น 2",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Flex X Cop 2 (2026) คุณชายสายสืบ ซีซั่น 2",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=32f609c4663a900f59d7a3b2&b=6823",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Flex X Cop 2 (2026) คุณชายสายสืบ ซีซั่น 2 พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48384",
+    "postId": "48384"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Unlucky Bae (2026) จุดจีบสายมู",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Unlucky Bae (2026) จุดจีบสายมู",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=c5f1035fbd74d85afa9898c3&b=4521",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Unlucky Bae (2026) จุดจีบสายมู พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48398",
+    "postId": "48398"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Love Algorithm (2026) สูตรรักคำนวณหัวใจ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Love Algorithm (2026) สูตรรักคำนวณหัวใจ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=732cf112508d89be665c0f70&b=3345",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Love Algorithm (2026) สูตรรักคำนวณหัวใจ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48060",
+    "postId": "48060"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี NOUR (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี NOUR (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=15cdd9bbe7d9f17d91ffa2aa&b=6020",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี NOUR (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48801",
+    "postId": "48801"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Love Destiny (2026) บุพเพสันนิวาส",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Love Destiny (2026) บุพเพสันนิวาส",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=c48dd331c9dc24172328732c&b=6855",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Love Destiny (2026) บุพเพสันนิวาส พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47875",
+    "postId": "47875"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี KNOT (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี KNOT (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=a623dbcc72a4df2162f652d2&b=6469",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี KNOT (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47544",
+    "postId": "47544"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Reborn Rookie (2026) มือใหม่หัดแค้น",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Reborn Rookie (2026) มือใหม่หัดแค้น",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=f79ba2e32f29fbe1d686d76d&b=9793",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Reborn Rookie (2026) มือใหม่หัดแค้น พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-46904",
+    "postId": "46904"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Match Point (2026) รักนี้ต้องเสิร์ฟ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Match Point (2026) รักนี้ต้องเสิร์ฟ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=c4880b8c024755fa8e7622c4&b=4560",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Match Point (2026) รักนี้ต้องเสิร์ฟ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48282",
+    "postId": "48282"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Being An Undercover Agent (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Being An Undercover Agent (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=daae440c6d262be9f89aa9af&b=2351",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Being An Undercover Agent (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48213",
+    "postId": "48213"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Your Third (2026) ที่สามของเธอ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Your Third (2026) ที่สามของเธอ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=b179540eb5851e8f9bad741e&b=7124",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Your Third (2026) ที่สามของเธอ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48153",
+    "postId": "48153"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี The Running of Love and Money (2026) เงิน งาน ความรัก",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี The Running of Love and Money (2026) เงิน งาน ความรัก",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=1cc07a451b9b657d8466fdff&b=9438",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี The Running of Love and Money (2026) เงิน งาน ความรัก พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47845",
+    "postId": "47845"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Wind-Born Warriors (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Wind-Born Warriors (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=e6ab1c353cd9f7b61720d959&b=8574",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Wind-Born Warriors (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48090",
+    "postId": "48090"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี The Husband (2026) คืนล่าก่อนหย่า",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี The Husband (2026) คืนล่าก่อนหย่า",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=fa50daddbc80916f7dfdbe94&b=4067",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี The Husband (2026) คืนล่าก่อนหย่า พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47648",
+    "postId": "47648"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี GELBOYS 2 (2026) ตกอยู่ในสถานะติ่งแฟน",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี GELBOYS 2 (2026) ตกอยู่ในสถานะติ่งแฟน",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=4f0a9b3318f45a18b3550b41&b=6756",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี GELBOYS 2 (2026) ตกอยู่ในสถานะติ่งแฟน พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48413",
+    "postId": "48413"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี The Edge of Horizon (2026) อรุณรุ่ง UNCUT",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี The Edge of Horizon (2026) อรุณรุ่ง UNCUT",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=81d0c12d7eea372ec819ba64&b=9175",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี The Edge of Horizon (2026) อรุณรุ่ง UNCUT พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47502",
+    "postId": "47502"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี The Fire 4 Elements (2026) โซ่รักอัคนี บ้านวาทินวณิช",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี The Fire 4 Elements (2026) โซ่รักอัคนี บ้านวาทินวณิช",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=c9c845227f3642e39d7afc10&b=4520",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี The Fire 4 Elements (2026) โซ่รักอัคนี บ้านวาทินวณิช พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47805",
+    "postId": "47805"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Our Sticky Love (2026) รักติดหนึบ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Our Sticky Love (2026) รักติดหนึบ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=8830a3bb800ddafff1820c3e&b=1148",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Our Sticky Love (2026) รักติดหนึบ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48372",
+    "postId": "48372"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Spring Over Phoenix Pond (2026) หงส์คืนบัลลังก์แค้น",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Spring Over Phoenix Pond (2026) หงส์คืนบัลลังก์แค้น",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=7f04369ff04e2dbba6b377df&b=7875",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Spring Over Phoenix Pond (2026) หงส์คืนบัลลังก์แค้น พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48098",
+    "postId": "48098"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Yiran&#8217;s Silver Linings (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Yiran&#8217;s Silver Linings (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=5d766a7894dbf79a6f21ccdf&b=9254",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Yiran&#8217;s Silver Linings (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48032",
+    "postId": "48032"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Overdo (2026) หากวินาทีนั้นไม่พบเธอ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Overdo (2026) หากวินาทีนั้นไม่พบเธอ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=0275b0665202dca67119823c&b=7055",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Overdo (2026) หากวินาทีนั้นไม่พบเธอ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47998",
+    "postId": "47998"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Love Has Fireworks (2026) เมื่อรักส่องประกาย",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Love Has Fireworks (2026) เมื่อรักส่องประกาย",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=fe63041599bbcbbaa889a896&b=1679",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Love Has Fireworks (2026) เมื่อรักส่องประกาย พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47252",
+    "postId": "47252"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี PAYBACK UNCUT (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี PAYBACK UNCUT (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=ff4f349bd30b63c6922d1839&b=4962",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี PAYBACK UNCUT (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-46923",
+    "postId": "46923"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Peach and Me (2026) มีสติแล้วลูกพีช",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Peach and Me (2026) มีสติแล้วลูกพีช",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=4aabd2a2191b25651c52a164&b=8259",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Peach and Me (2026) มีสติแล้วลูกพีช พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47796",
+    "postId": "47796"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี A Dog and a Plane (2026) หมาเห่าเครื่องบิน",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี A Dog and a Plane (2026) หมาเห่าเครื่องบิน",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=618d5908c16f8a6f014f6e65&b=9054",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี A Dog and a Plane (2026) หมาเห่าเครื่องบิน พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47006",
+    "postId": "47006"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Deep In The Act (2026) ถลำลึก",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Deep In The Act (2026) ถลำลึก",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=8ccfb7182f47019c4c89ed02&b=2764",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Deep In The Act (2026) ถลำลึก พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47462",
+    "postId": "47462"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี No Way My Bro Is the Emperor (2026) คู่หูทะลุมิติ ป่วนวังหลวง",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี No Way My Bro Is the Emperor (2026) คู่หูทะลุมิติ ป่วนวังหลวง",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=200c72406e4ad4e11a5e8c97&b=2660",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี No Way My Bro Is the Emperor (2026) คู่หูทะลุมิติ ป่วนวังหลวง พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47962",
+    "postId": "47962"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี When Oranges Fall (2026) ต้นส้มอยู่บ้านเขา แต่ผลส้มหล่นมาบ้านเราตลอดเลย",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี When Oranges Fall (2026) ต้นส้มอยู่บ้านเขา แต่ผลส้มหล่นมาบ้านเราตลอดเลย",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=f54efa91c8d36453340a1f7d&b=3275",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี When Oranges Fall (2026) ต้นส้มอยู่บ้านเขา แต่ผลส้มหล่นมาบ้านเราตลอดเลย พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-46707",
+    "postId": "46707"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Smile After Tears (2026) หันกลับมา เช็ดน้ำตาให้นาย",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Smile After Tears (2026) หันกลับมา เช็ดน้ำตาให้นาย",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=abecbe22ec46c29eff495096&b=6720",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Smile After Tears (2026) หันกลับมา เช็ดน้ำตาให้นาย พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-46698",
+    "postId": "46698"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี See You at Work Tomorrow (2026) เจอกันที่ออฟฟิศพรุ่งนี้นะ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี See You at Work Tomorrow (2026) เจอกันที่ออฟฟิศพรุ่งนี้นะ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=002cdec3acfcc65aa88a0d03&b=7059",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี See You at Work Tomorrow (2026) เจอกันที่ออฟฟิศพรุ่งนี้นะ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47372",
+    "postId": "47372"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Cases Between Us (2026) ยอดคู่หูล่าทรชน",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Cases Between Us (2026) ยอดคู่หูล่าทรชน",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=f3fab2e507f8fccc0d24b52b&b=9619",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Cases Between Us (2026) ยอดคู่หูล่าทรชน พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47671",
+    "postId": "47671"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Love in Sync (2026) ใจเชื่อมรัก",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Love in Sync (2026) ใจเชื่อมรัก",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=a5844e6ff9689f837bd7cb3f&b=8839",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Love in Sync (2026) ใจเชื่อมรัก พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47645",
+    "postId": "47645"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี I Am Fei Fan (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี I Am Fei Fan (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=f78b5fd664e99d737d09014c&b=7664",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี I Am Fei Fan (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47892",
+    "postId": "47892"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Agent Kim Reactivated (2026) สายลับคิมกลับมาแล้ว",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Agent Kim Reactivated (2026) สายลับคิมกลับมาแล้ว",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=ed608660b9a2f38e26e97539&b=7894",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Agent Kim Reactivated (2026) สายลับคิมกลับมาแล้ว พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47454",
+    "postId": "47454"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Young Swordsman (2026) คู่มือจอมยุทธ์ฉบับพลิกยุทธภพ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Young Swordsman (2026) คู่มือจอมยุทธ์ฉบับพลิกยุทธภพ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=fe668ae3b86a7031bba46aa0&b=9958",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Young Swordsman (2026) คู่มือจอมยุทธ์ฉบับพลิกยุทธภพ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47824",
+    "postId": "47824"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี A Proposal in the Prosecutor&#8217;s Office (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี A Proposal in the Prosecutor&#8217;s Office (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=d10b2846f7174bc7e568b48e&b=5864",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี A Proposal in the Prosecutor&#8217;s Office (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47436",
+    "postId": "47436"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Elite Force (2026) หน่วยจู่โจมมือพระกาฬ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Elite Force (2026) หน่วยจู่โจมมือพระกาฬ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=e48dfbf4d02af007cf799d65&b=1962",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Elite Force (2026) หน่วยจู่โจมมือพระกาฬ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48074",
+    "postId": "48074"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Key to the Phoenix Heart (2026) ชะตารักกระดูกปักษา",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Key to the Phoenix Heart (2026) ชะตารักกระดูกปักษา",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=44aaa542578ce81a34179a6d&b=4579",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Key to the Phoenix Heart (2026) ชะตารักกระดูกปักษา พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47799",
+    "postId": "47799"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Sin and Love (2026) บาปและความรัก",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Sin and Love (2026) บาปและความรัก",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=b429723a35d78133984d5226&b=1922",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Sin and Love (2026) บาปและความรัก พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47731",
+    "postId": "47731"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี The First Jasmine (2026) ชายาเคียงหทัย",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี The First Jasmine (2026) ชายาเคียงหทัย",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=2524199c93ae8cb2199eb9de&b=4370",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี The First Jasmine (2026) ชายาเคียงหทัย พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47103",
+    "postId": "47103"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Road to Success (2026) ดาวประกายพร่างพรายฝัน",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Road to Success (2026) ดาวประกายพร่างพรายฝัน",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=164a7998e5f71c32aa84ccf2&b=9141",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Road to Success (2026) ดาวประกายพร่างพรายฝัน พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47659",
+    "postId": "47659"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Blooms for Her (2026) วสันต์รักผลิบาน",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Blooms for Her (2026) วสันต์รักผลิบาน",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=4e604a8187f0efe6a76a2b67&b=8436",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Blooms for Her (2026) วสันต์รักผลิบาน พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47720",
+    "postId": "47720"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Auspicious Nobles (2026) หงส์เงินเหนือบัลลังก์ทอง",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Auspicious Nobles (2026) หงส์เงินเหนือบัลลังก์ทอง",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=dbc28f12b98381c33ac58621&b=6170",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Auspicious Nobles (2026) หงส์เงินเหนือบัลลังก์ทอง พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47599",
+    "postId": "47599"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Lost to Light (2026) อยากจะดัง หรือ ยังนะ UNCUT",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Lost to Light (2026) อยากจะดัง หรือ ยังนะ UNCUT",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=87700e4c8143479aa18100a3&b=4473",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Lost to Light (2026) อยากจะดัง หรือ ยังนะ UNCUT พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47333",
+    "postId": "47333"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Azure Spring (2026) คลื่นสีคราม",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Azure Spring (2026) คลื่นสีคราม",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=7f0b999aff9d29c7c3e00887&b=1486",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Azure Spring (2026) คลื่นสีคราม พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-46516",
+    "postId": "46516"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี The Eternal Fragrance (2026) หอมกลิ่นพันลี้",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี The Eternal Fragrance (2026) หอมกลิ่นพันลี้",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=0bbd4fe3dc2d411b9ddf2f23&b=7227",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี The Eternal Fragrance (2026) หอมกลิ่นพันลี้ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47517",
+    "postId": "47517"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Chasing Love (2026) พี่เองก็ลำบาก",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Chasing Love (2026) พี่เองก็ลำบาก",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=e92f42be20be723a723ca8fe&b=7550",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Chasing Love (2026) พี่เองก็ลำบาก พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47468",
+    "postId": "47468"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี The East Palace (2026) บูรพาอาถรรพ์",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี The East Palace (2026) บูรพาอาถรรพ์",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=759fae523ddebf02c35dbc6a&b=5913",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี The East Palace (2026) บูรพาอาถรรพ์ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47937",
+    "postId": "47937"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Stranger Things VHS Special Edition (2026) สเตรนเจอร์ ธิงส์ ฉบับวิดีโอเทป",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Stranger Things VHS Special Edition (2026) สเตรนเจอร์ ธิงส์ ฉบับวิดีโอเทป",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=b227076e73ce7af9106e67d0&b=6803",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Stranger Things VHS Special Edition (2026) สเตรนเจอร์ ธิงส์ ฉบับวิดีโอเทป พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47942",
+    "postId": "47942"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Unfold (2026) รักร้ายไร้มลทิน",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Unfold (2026) รักร้ายไร้มลทิน",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=f4e4eb0dbd0f8defb81560a2&b=3930",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Unfold (2026) รักร้ายไร้มลทิน พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47458",
+    "postId": "47458"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Better Late than Single Season 2 (2026) ไม่สายที่จะหายโสด ซีซั่น 2",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Better Late than Single Season 2 (2026) ไม่สายที่จะหายโสด ซีซั่น 2",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=a18ea6e89ba603f5f20e8c88&b=8719",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Better Late than Single Season 2 (2026) ไม่สายที่จะหายโสด ซีซั่น 2 พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47711",
+    "postId": "47711"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี ChermChey (2026) เฉิ่มเชย",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี ChermChey (2026) เฉิ่มเชย",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=d7cd0dd30755c09d86d57b4b&b=2473",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี ChermChey (2026) เฉิ่มเชย พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-46849",
+    "postId": "46849"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี The Silk Master from the Future (2026) บันทึกรักผ้าทอฝัน",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี The Silk Master from the Future (2026) บันทึกรักผ้าทอฝัน",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=55c41c74a43cdd34288e9937&b=7144",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี The Silk Master from the Future (2026) บันทึกรักผ้าทอฝัน พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47570",
+    "postId": "47570"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Crazy Love Moo-Moo Uncut Version (2026) พี่ฟากชอบเธอมู่",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Crazy Love Moo-Moo Uncut Version (2026) พี่ฟากชอบเธอมู่",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=3ddb5f29f991ad7ac19ac129&b=6683",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Crazy Love Moo-Moo Uncut Version (2026) พี่ฟากชอบเธอมู่ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-46480",
+    "postId": "46480"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี The Scarecrow (2026) หุ่นลวงเชือด",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี The Scarecrow (2026) หุ่นลวงเชือด",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=af1606184115388461e99480&b=3145",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี The Scarecrow (2026) หุ่นลวงเชือด พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-46101",
+    "postId": "46101"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี The Murder Puzzle (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี The Murder Puzzle (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=576fac7c004cca5e89c045a6&b=4881",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี The Murder Puzzle (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47567",
+    "postId": "47567"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Blazing Him (2026) โอบรักผ่านบทเพลง",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Blazing Him (2026) โอบรักผ่านบทเพลง",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=f128d723b92f1e4c15a662f3&b=9264",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Blazing Him (2026) โอบรักผ่านบทเพลง พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47408",
+    "postId": "47408"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี The Legend of Rosy Clouds (2026) บุปผาคู่บัลลังก์",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี The Legend of Rosy Clouds (2026) บุปผาคู่บัลลังก์",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=048b8b1b72b5ecc9bd7ac1dd&b=5599",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี The Legend of Rosy Clouds (2026) บุปผาคู่บัลลังก์ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47338",
+    "postId": "47338"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี The Found Family (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี The Found Family (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=4269512fb12b348b02db0343&b=7511",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี The Found Family (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47479",
+    "postId": "47479"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Doctor on the Edge (2026) หมอติดเกาะ รักติดเธอ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Doctor on the Edge (2026) หมอติดเกาะ รักติดเธอ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=ff261be42a82c5668a408e02&b=1329",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Doctor on the Edge (2026) หมอติดเกาะ รักติดเธอ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-46958",
+    "postId": "46958"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Riding the Wind (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Riding the Wind (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=9f895968abca9b9ee67ea08a&b=2011",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Riding the Wind (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47506",
+    "postId": "47506"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Love of Silom (2026) รักแห่งสีลม Uncut Ver",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Love of Silom (2026) รักแห่งสีลม Uncut Ver",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=bb8bf63e6ff49f9a8ac66535&b=6503",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Love of Silom (2026) รักแห่งสีลม Uncut Ver พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-46183",
+    "postId": "46183"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Endless Love (2026) หากเพียงได้พบกัน",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Endless Love (2026) หากเพียงได้พบกัน",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=10f91678794d89b8cff03ce1&b=8869",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Endless Love (2026) หากเพียงได้พบกัน พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47344",
+    "postId": "47344"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Wonder Wall (2026) พลิกกำแพงซ่อนเงินมรณะ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Wonder Wall (2026) พลิกกำแพงซ่อนเงินมรณะ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=20ed457b85ff0425d5c13e87&b=6803",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Wonder Wall (2026) พลิกกำแพงซ่อนเงินมรณะ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47079",
+    "postId": "47079"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Serendipity (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Serendipity (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=5adfcc7f3e2447d4b0416c1f&b=2704",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Serendipity (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48360",
+    "postId": "48360"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี The Witness (2026) พยานปากเอก",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี The Witness (2026) พยานปากเอก",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=0f3fbe078b95e965a7a2db87&b=5830",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี The Witness (2026) พยานปากเอก พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-47141",
+    "postId": "47141"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี XO Kitty Season 3 (2026) ด้วยรัก จากคิตตี้ ซีซั่น 3",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี XO Kitty Season 3 (2026) ด้วยรัก จากคิตตี้ ซีซั่น 3",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=8bd6120eddae4ebd2a93a7ab&b=2641",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี XO Kitty Season 3 (2026) ด้วยรัก จากคิตตี้ ซีซั่น 3 พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-45894",
+    "postId": "45894"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Cross Season 2 (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Cross Season 2 (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=3890bb39d916fa258b158ef6&b=2298",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Cross Season 2 (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-45887",
+    "postId": "45887"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี A Knight of the Seven Kingdoms (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี A Knight of the Seven Kingdoms (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=911d8ca1a519a3c40f6152a1&b=2598",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี A Knight of the Seven Kingdoms (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-44373",
+    "postId": "44373"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี The Night Agent Season 3 (2026)",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี The Night Agent Season 3 (2026)",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=3e1ced1e0cb049e2562732a6&b=9145",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี The Night Agent Season 3 (2026) พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-44963",
+    "postId": "44963"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี Brothers (2026) สองหัวใจ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี Brothers (2026) สองหัวใจ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=f55afca1009f2cc4cd75d2f0&b=3365",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี Brothers (2026) สองหัวใจ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48617",
+    "postId": "48617"
+  },
+  {
+    "titleTh": "ดูซีรี่ย์ออนไลน์ฟรี LOVEx3 (2026) หลักสูตรรักภาคบังคับ",
+    "titleEn": "ดูซีรี่ย์ออนไลน์ฟรี LOVEx3 (2026) หลักสูตรรักภาคบังคับ",
+    "year": 2026,
+    "poster": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "backdrop": "https://www.seriedays.comdata:image/svg+xml,%3Csvg%20xmlns=",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=6ec781e4109d4c43a266ffad&b=5104",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ ดูซีรี่ย์ออนไลน์ฟรี LOVEx3 (2026) หลักสูตรรักภาคบังคับ พากย์ไทย ซับไทย เต็มเรื่อง ภาพคมชัดระดับ Full HD อัปเดตใหม่ล่าสุด 2026 ไม่มีโฆษณากวนใจ",
+    "rating": 9.0,
+    "genres": [
+      "ซีรีส์แนะนำ",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 1 ตอน",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "SERIEDAYS",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "id": "sd-48583",
+    "postId": "48583"
+  },
+  {
     "titleTh": "Reacher Season 3 (2025-2026) ยอดคนสืบระห่ำ รีชเชอร์ ซีซั่น 3 (พากย์ไทย)",
     "titleEn": "Reacher Season 3 (2025-2026)",
     "year": 2026,
@@ -86,8 +3651,8 @@ window.movies = [
     "sourcePageUrl": "https://www.24-hdx.com/doctor-lawyer/"
   },
   {
-    "titleTh": "ฟรี In Your Radiant Season (2026)",
-    "titleEn": "ฟรี In Your Radiant Season (2026)",
+    "titleTh": "In Your Radiant Season (2026)",
+    "titleEn": "In Your Radiant Season (2026)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/02/In-Your-Radiant-Season-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/02/In-Your-Radiant-Season-2026-187x269.jpg",
@@ -116,8 +3681,8 @@ window.movies = [
     "postId": "44958"
   },
   {
-    "titleTh": "ฟรี Dark and Dawn (2026) ชั่วขณะก่อนรัตติกาล",
-    "titleEn": "ฟรี Dark and Dawn (2026) ชั่วขณะก่อนรัตติกาล",
+    "titleTh": "Dark and Dawn (2026) ชั่วขณะก่อนรัตติกาล",
+    "titleEn": "Dark and Dawn (2026) ชั่วขณะก่อนรัตติกาล",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/03/Dark-and-Dawn-2026-ชั่วขณะก่อนรัตติกาล-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/03/Dark-and-Dawn-2026-ชั่วขณะก่อนรัตติกาล-187x269.jpg",
@@ -146,8 +3711,8 @@ window.movies = [
     "postId": "45441"
   },
   {
-    "titleTh": "ฟรี Hunting For Crime Red Deep Grudge (2026)",
-    "titleEn": "ฟรี Hunting For Crime Red Deep Grudge (2026)",
+    "titleTh": "Hunting For Crime Red Deep Grudge (2026)",
+    "titleEn": "Hunting For Crime Red Deep Grudge (2026)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/03/Hunting-For-Crime-Red-Deep-Grudge-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/03/Hunting-For-Crime-Red-Deep-Grudge-2026-187x269.jpg",
@@ -176,8 +3741,8 @@ window.movies = [
     "postId": "45510"
   },
   {
-    "titleTh": "ฟรี Her Blaze (2026)",
-    "titleEn": "ฟรี Her Blaze (2026)",
+    "titleTh": "Her Blaze (2026)",
+    "titleEn": "Her Blaze (2026)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/03/Her-Blaze-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/03/Her-Blaze-2026-187x269.jpg",
@@ -206,8 +3771,8 @@ window.movies = [
     "postId": "45325"
   },
   {
-    "titleTh": "ฟรี Still Shinning (2026) เธอคือแสงส่องใจ",
-    "titleEn": "ฟรี Still Shinning (2026) เธอคือแสงส่องใจ",
+    "titleTh": "Still Shinning (2026) เธอคือแสงส่องใจ",
+    "titleEn": "Still Shinning (2026) เธอคือแสงส่องใจ",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/03/Still-Shinning-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/03/Still-Shinning-2026-187x269.jpg",
@@ -236,8 +3801,8 @@ window.movies = [
     "postId": "45205"
   },
   {
-    "titleTh": "ฟรี The Practical Guide to Love (2026) เดตที่ชอบกับคนที่ใช่",
-    "titleEn": "ฟรี The Practical Guide to Love (2026) เดตที่ชอบกับคนที่ใช่",
+    "titleTh": "The Practical Guide to Love (2026) เดตที่ชอบกับคนที่ใช่",
+    "titleEn": "The Practical Guide to Love (2026) เดตที่ชอบกับคนที่ใช่",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/03/The-Practical-Guide-to-Love-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/03/The-Practical-Guide-to-Love-2026-187x269.jpg",
@@ -266,8 +3831,8 @@ window.movies = [
     "postId": "45118"
   },
   {
-    "titleTh": "ฟรี Generation to Generation (2026) ทิวากาลแห่งพิรุณโปรย",
-    "titleEn": "ฟรี Generation to Generation (2026) ทิวากาลแห่งพิรุณโปรย",
+    "titleTh": "Generation to Generation (2026) ทิวากาลแห่งพิรุณโปรย",
+    "titleEn": "Generation to Generation (2026) ทิวากาลแห่งพิรุณโปรย",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/02/Generation-to-Generation-2026-ทิวากาลแห่งพิรุณโปรย-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/02/Generation-to-Generation-2026-ทิวากาลแห่งพิรุณโปรย-187x269.jpg",
@@ -296,8 +3861,8 @@ window.movies = [
     "postId": "44995"
   },
   {
-    "titleTh": "ฟรี Vanished Name (2026) บันทึกซ่อนนาม",
-    "titleEn": "ฟรี Vanished Name (2026) บันทึกซ่อนนาม",
+    "titleTh": "Vanished Name (2026) บันทึกซ่อนนาม",
+    "titleEn": "Vanished Name (2026) บันทึกซ่อนนาม",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/03/Vanished-Name-2026-บันทึกซ่อนนาม-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/03/Vanished-Name-2026-บันทึกซ่อนนาม-187x269.jpg",
@@ -326,8 +3891,8 @@ window.movies = [
     "postId": "45438"
   },
   {
-    "titleTh": "ฟรี In Love With Loving You (2026) เงามืดกับดวงใจ",
-    "titleEn": "ฟรี In Love With Loving You (2026) เงามืดกับดวงใจ",
+    "titleTh": "In Love With Loving You (2026) เงามืดกับดวงใจ",
+    "titleEn": "In Love With Loving You (2026) เงามืดกับดวงใจ",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/03/In-Love-With-Loving-You-2026-เงามืดกับดวงใจ-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/03/In-Love-With-Loving-You-2026-เงามืดกับดวงใจ-187x269.jpg",
@@ -356,8 +3921,8 @@ window.movies = [
     "postId": "45580"
   },
   {
-    "titleTh": "ฟรี Cross Season 2 (2026)",
-    "titleEn": "ฟรี Cross Season 2 (2026)",
+    "titleTh": "Cross Season 2 (2026)",
+    "titleEn": "Cross Season 2 (2026)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/04/Cross-Season-2-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/04/Cross-Season-2-2026-187x269.jpg",
@@ -386,8 +3951,8 @@ window.movies = [
     "postId": "45887"
   },
   {
-    "titleTh": "ฟรี XO Kitty Season 3 (2026) ด้วยรัก จากคิตตี้ ซีซั่น 3",
-    "titleEn": "ฟรี XO Kitty Season 3 (2026) ด้วยรัก จากคิตตี้ ซีซั่น 3",
+    "titleTh": "XO Kitty Season 3 (2026) ด้วยรัก จากคิตตี้ ซีซั่น 3",
+    "titleEn": "XO Kitty Season 3 (2026) ด้วยรัก จากคิตตี้ ซีซั่น 3",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/04/XO-Kitty-Season-3-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/04/XO-Kitty-Season-3-2026-187x269.jpg",
@@ -416,8 +3981,8 @@ window.movies = [
     "postId": "45894"
   },
   {
-    "titleTh": "ฟรี The Secret of the Lost Pearl S2 (2026)",
-    "titleEn": "ฟรี The Secret of the Lost Pearl S2 (2026)",
+    "titleTh": "The Secret of the Lost Pearl S2 (2026)",
+    "titleEn": "The Secret of the Lost Pearl S2 (2026)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/03/The-Secret-of-the-Lost-Pearl-S2-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/03/The-Secret-of-the-Lost-Pearl-S2-2026-187x269.jpg",
@@ -446,8 +4011,8 @@ window.movies = [
     "postId": "45631"
   },
   {
-    "titleTh": "ฟรี Yesterday (2026) รอยรัก วันวาน Uncut Ver.",
-    "titleEn": "ฟรี Yesterday (2026) รอยรัก วันวาน Uncut Ver.",
+    "titleTh": "Yesterday (2026) รอยรัก วันวาน Uncut Ver.",
+    "titleEn": "Yesterday (2026) รอยรัก วันวาน Uncut Ver.",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/02/Yesterday-2026-รอยรัก-วันวาน-Uncut-Ver-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/02/Yesterday-2026-รอยรัก-วันวาน-Uncut-Ver-187x269.jpg",
@@ -476,8 +4041,8 @@ window.movies = [
     "postId": "44765"
   },
   {
-    "titleTh": "ฟรี Frozen Valentine (2026) ปิ๊งรักคุณพี่เย็นชา Uncut Ver.",
-    "titleEn": "ฟรี Frozen Valentine (2026) ปิ๊งรักคุณพี่เย็นชา Uncut Ver.",
+    "titleTh": "Frozen Valentine (2026) ปิ๊งรักคุณพี่เย็นชา Uncut Ver.",
+    "titleEn": "Frozen Valentine (2026) ปิ๊งรักคุณพี่เย็นชา Uncut Ver.",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/02/Frozen-Valentine-2026-ปิ๊งรักคุณพี่เย็นชา-Uncut-Ver-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/02/Frozen-Valentine-2026-ปิ๊งรักคุณพี่เย็นชา-Uncut-Ver-187x269.jpg",
@@ -506,8 +4071,8 @@ window.movies = [
     "postId": "44832"
   },
   {
-    "titleTh": "ฟรี The Silent Rift (2026)",
-    "titleEn": "ฟรี The Silent Rift (2026)",
+    "titleTh": "The Silent Rift (2026)",
+    "titleEn": "The Silent Rift (2026)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/04/The-Silent-Rift-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/04/The-Silent-Rift-2026-187x269.jpg",
@@ -536,8 +4101,8 @@ window.movies = [
     "postId": "45727"
   },
   {
-    "titleTh": "ฟรี Honour (2026) ทนายสามสาวฉาว",
-    "titleEn": "ฟรี Honour (2026) ทนายสามสาวฉาว",
+    "titleTh": "Honour (2026) ทนายสามสาวฉาว",
+    "titleEn": "Honour (2026) ทนายสามสาวฉาว",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/02/Honour-20226-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/02/Honour-20226-187x269.jpg",
@@ -566,8 +4131,8 @@ window.movies = [
     "postId": "44629"
   },
   {
-    "titleTh": "ฟรี Girl from Nowhere The Reset (2026) เด็กใหม่ The Reset",
-    "titleEn": "ฟรี Girl from Nowhere The Reset (2026) เด็กใหม่ The Reset",
+    "titleTh": "Girl from Nowhere The Reset (2026) เด็กใหม่ The Reset",
+    "titleEn": "Girl from Nowhere The Reset (2026) เด็กใหม่ The Reset",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/03/Girl-from-Nowhere-the-Reset-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/03/Girl-from-Nowhere-the-Reset-2026-187x269.jpg",
@@ -596,8 +4161,8 @@ window.movies = [
     "postId": "45231"
   },
   {
-    "titleTh": "ฟรี Sunsets Secrets Regrets (2026) ความลับใต้ตะวันลับ",
-    "titleEn": "ฟรี Sunsets Secrets Regrets (2026) ความลับใต้ตะวันลับ",
+    "titleTh": "Sunsets Secrets Regrets (2026) ความลับใต้ตะวันลับ",
+    "titleEn": "Sunsets Secrets Regrets (2026) ความลับใต้ตะวันลับ",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/04/Sunsets-Secrets-Regrets-2026-ความลับใต้ตะวันลับ-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/04/Sunsets-Secrets-Regrets-2026-ความลับใต้ตะวันลับ-187x269.jpg",
@@ -626,8 +4191,8 @@ window.movies = [
     "postId": "45761"
   },
   {
-    "titleTh": "ฟรี My Only Sunshine (2026) ตะวันระฟ้า",
-    "titleEn": "ฟรี My Only Sunshine (2026) ตะวันระฟ้า",
+    "titleTh": "My Only Sunshine (2026) ตะวันระฟ้า",
+    "titleEn": "My Only Sunshine (2026) ตะวันระฟ้า",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/02/My-Only-Sunshine-2026-ตะวันระฟ้า-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/02/My-Only-Sunshine-2026-ตะวันระฟ้า-187x269.jpg",
@@ -656,8 +4221,8 @@ window.movies = [
     "postId": "45042"
   },
   {
-    "titleTh": "ฟรี Daughter of Fortune (2026) พลิกชะตาวิวาห์กิ่งทอง",
-    "titleEn": "ฟรี Daughter of Fortune (2026) พลิกชะตาวิวาห์กิ่งทอง",
+    "titleTh": "Daughter of Fortune (2026) พลิกชะตาวิวาห์กิ่งทอง",
+    "titleEn": "Daughter of Fortune (2026) พลิกชะตาวิวาห์กิ่งทอง",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/Daughter-of-Fortune-2026-พลิกชะตาวิวาห์กิ่งทอง-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/Daughter-of-Fortune-2026-พลิกชะตาวิวาห์กิ่งทอง-187x269.jpg",
@@ -686,8 +4251,8 @@ window.movies = [
     "postId": "46634"
   },
   {
-    "titleTh": "ฟรี EUPHORIA Season 3 (2026)",
-    "titleEn": "ฟรี EUPHORIA Season 3 (2026)",
+    "titleTh": "EUPHORIA Season 3 (2026)",
+    "titleEn": "EUPHORIA Season 3 (2026)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/04/EUPHORIA-Season-3-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/04/EUPHORIA-Season-3-2026-187x269.jpg",
@@ -716,8 +4281,8 @@ window.movies = [
     "postId": "46001"
   },
   {
-    "titleTh": "ฟรี Girl Rules (2026) กฎหลัก ห้ามรักเธอ",
-    "titleEn": "ฟรี Girl Rules (2026) กฎหลัก ห้ามรักเธอ",
+    "titleTh": "Girl Rules (2026) กฎหลัก ห้ามรักเธอ",
+    "titleEn": "Girl Rules (2026) กฎหลัก ห้ามรักเธอ",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/03/Girl-Rules-2026-กฎหลัก-ห้ามรักเธอ-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/03/Girl-Rules-2026-กฎหลัก-ห้ามรักเธอ-187x269.jpg",
@@ -746,8 +4311,8 @@ window.movies = [
     "postId": "45257"
   },
   {
-    "titleTh": "ฟรี Phantom Lawyer (2026) ทนายสื่อวิญญาณ",
-    "titleEn": "ฟรี Phantom Lawyer (2026) ทนายสื่อวิญญาณ",
+    "titleTh": "Phantom Lawyer (2026) ทนายสื่อวิญญาณ",
+    "titleEn": "Phantom Lawyer (2026) ทนายสื่อวิญญาณ",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/03/Phantom-Lawyer-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/03/Phantom-Lawyer-2026-187x269.jpg",
@@ -776,8 +4341,8 @@ window.movies = [
     "postId": "45330"
   },
   {
-    "titleTh": "ฟรี Jae-seoks B&#038;B Rules (2026) วาไรตี้ปุบปับที่บ้านพักแจซอก",
-    "titleEn": "ฟรี Jae-seoks B&#038;B Rules (2026) วาไรตี้ปุบปับที่บ้านพักแจซอก",
+    "titleTh": "Jae-seoks B&#038;B Rules (2026) วาไรตี้ปุบปับที่บ้านพักแจซอก",
+    "titleEn": "Jae-seoks B&#038;B Rules (2026) วาไรตี้ปุบปับที่บ้านพักแจซอก",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/Jae-seoks-BB-Rules-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/Jae-seoks-BB-Rules-2026-187x269.jpg",
@@ -806,8 +4371,8 @@ window.movies = [
     "postId": "46815"
   },
   {
-    "titleTh": "ฟรี The Heir (2026) กงสีสีหมึก",
-    "titleEn": "ฟรี The Heir (2026) กงสีสีหมึก",
+    "titleTh": "The Heir (2026) กงสีสีหมึก",
+    "titleEn": "The Heir (2026) กงสีสีหมึก",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/The-Heir-2026-กงสีสีหมึก-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/The-Heir-2026-กงสีสีหมึก-187x269.jpg",
@@ -836,8 +4401,8 @@ window.movies = [
     "postId": "46642"
   },
   {
-    "titleTh": "ฟรี Twin Fire Dawn (2026) กลรักเพลิงทิวา",
-    "titleEn": "ฟรี Twin Fire Dawn (2026) กลรักเพลิงทิวา",
+    "titleTh": "Twin Fire Dawn (2026) กลรักเพลิงทิวา",
+    "titleEn": "Twin Fire Dawn (2026) กลรักเพลิงทิวา",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/Twin-Fire-Dawn-2026-กลรักเพลิงทิวา-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/Twin-Fire-Dawn-2026-กลรักเพลิงทิวา-187x269.jpg",
@@ -866,8 +4431,8 @@ window.movies = [
     "postId": "46741"
   },
   {
-    "titleTh": "ฟรี The Secret of the Lost Pearl S3 (2026)",
-    "titleEn": "ฟรี The Secret of the Lost Pearl S3 (2026)",
+    "titleTh": "The Secret of the Lost Pearl S3 (2026)",
+    "titleEn": "The Secret of the Lost Pearl S3 (2026)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/The-Secret-of-the-Lost-Pearl-S3-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/The-Secret-of-the-Lost-Pearl-S3-2026-187x269.jpg",
@@ -896,8 +4461,8 @@ window.movies = [
     "postId": "46702"
   },
   {
-    "titleTh": "ฟรี Absolute Value of Romance (2026) วุ่นนัก รักสัมบูรณ์",
-    "titleEn": "ฟรี Absolute Value of Romance (2026) วุ่นนัก รักสัมบูรณ์",
+    "titleTh": "Absolute Value of Romance (2026) วุ่นนัก รักสัมบูรณ์",
+    "titleEn": "Absolute Value of Romance (2026) วุ่นนัก รักสัมบูรณ์",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/04/Absolute-Value-of-Romance-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/04/Absolute-Value-of-Romance-2026-187x269.jpg",
@@ -926,8 +4491,8 @@ window.movies = [
     "postId": "46036"
   },
   {
-    "titleTh": "ฟรี Wishing Upon the Shooting Stars (2026) คำอธิษฐานใต้ดวงดาว",
-    "titleEn": "ฟรี Wishing Upon the Shooting Stars (2026) คำอธิษฐานใต้ดวงดาว",
+    "titleTh": "Wishing Upon the Shooting Stars (2026) คำอธิษฐานใต้ดวงดาว",
+    "titleEn": "Wishing Upon the Shooting Stars (2026) คำอธิษฐานใต้ดวงดาว",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/03/Wishing-Upon-the-Shooting-Stars-2026-คำอธิษฐานใต้ดวงดาว-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/03/Wishing-Upon-the-Shooting-Stars-2026-คำอธิษฐานใต้ดวงดาว-187x269.jpg",
@@ -956,8 +4521,8 @@ window.movies = [
     "postId": "45592"
   },
   {
-    "titleTh": "ฟรี Teach You a Lesson (2026) อย่างนี้ต้องโดนสั่งสอน",
-    "titleEn": "ฟรี Teach You a Lesson (2026) อย่างนี้ต้องโดนสั่งสอน",
+    "titleTh": "Teach You a Lesson (2026) อย่างนี้ต้องโดนสั่งสอน",
+    "titleEn": "Teach You a Lesson (2026) อย่างนี้ต้องโดนสั่งสอน",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Teach-You-a-Lesson-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Teach-You-a-Lesson-2026-187x269.jpg",
@@ -986,8 +4551,8 @@ window.movies = [
     "postId": "47024"
   },
   {
-    "titleTh": "ฟรี A Thousand Miles to Your Heart (2026) คู่หูไขคดีแห่งราชสำนัก",
-    "titleEn": "ฟรี A Thousand Miles to Your Heart (2026) คู่หูไขคดีแห่งราชสำนัก",
+    "titleTh": "A Thousand Miles to Your Heart (2026) คู่หูไขคดีแห่งราชสำนัก",
+    "titleEn": "A Thousand Miles to Your Heart (2026) คู่หูไขคดีแห่งราชสำนัก",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/A-Thousand-Miles-to-Your-Heart-2026-คู่หูไขคดีแห่งราชสำนัก-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/A-Thousand-Miles-to-Your-Heart-2026-คู่หูไขคดีแห่งราชสำนัก-187x269.jpg",
@@ -1016,8 +4581,8 @@ window.movies = [
     "postId": "46890"
   },
   {
-    "titleTh": "ฟรี Reverse (2026) จิตไม่ลืมแค้น",
-    "titleEn": "ฟรี Reverse (2026) จิตไม่ลืมแค้น",
+    "titleTh": "Reverse (2026) จิตไม่ลืมแค้น",
+    "titleEn": "Reverse (2026) จิตไม่ลืมแค้น",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/04/Reverse-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/04/Reverse-2026-187x269.jpg",
@@ -1046,8 +4611,8 @@ window.movies = [
     "postId": "46031"
   },
   {
-    "titleTh": "ฟรี The Lead (2026) บทเพลงแห่งนางงิ้ว",
-    "titleEn": "ฟรี The Lead (2026) บทเพลงแห่งนางงิ้ว",
+    "titleTh": "The Lead (2026) บทเพลงแห่งนางงิ้ว",
+    "titleEn": "The Lead (2026) บทเพลงแห่งนางงิ้ว",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/The-Lead-2026-บทเพลงแห่งนางงิ้ว-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/The-Lead-2026-บทเพลงแห่งนางงิ้ว-187x269.jpg",
@@ -1076,8 +4641,8 @@ window.movies = [
     "postId": "46496"
   },
   {
-    "titleTh": "ฟรี Late to Love (2026) แผนวิวาห์ซ่อนรัก",
-    "titleEn": "ฟรี Late to Love (2026) แผนวิวาห์ซ่อนรัก",
+    "titleTh": "Late to Love (2026) แผนวิวาห์ซ่อนรัก",
+    "titleEn": "Late to Love (2026) แผนวิวาห์ซ่อนรัก",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/Late-to-Love-2026-แผนวิวาห์ซ่อนรัก-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/Late-to-Love-2026-แผนวิวาห์ซ่อนรัก-187x269.jpg",
@@ -1106,8 +4671,8 @@ window.movies = [
     "postId": "46826"
   },
   {
-    "titleTh": "ฟรี The Tang Mist S1 (2026) หมอกปริศนาแห่งราชวงศ์ถัง ภาค 1",
-    "titleEn": "ฟรี The Tang Mist S1 (2026) หมอกปริศนาแห่งราชวงศ์ถัง ภาค 1",
+    "titleTh": "The Tang Mist S1 (2026) หมอกปริศนาแห่งราชวงศ์ถัง ภาค 1",
+    "titleEn": "The Tang Mist S1 (2026) หมอกปริศนาแห่งราชวงศ์ถัง ภาค 1",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/The-Tang-Mist-S1-2026-หมอกปริศนาแห่งราชวงศ์ถัง-ภาค-1-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/The-Tang-Mist-S1-2026-หมอกปริศนาแห่งราชวงศ์ถัง-ภาค-1-187x269.jpg",
@@ -1136,8 +4701,8 @@ window.movies = [
     "postId": "46738"
   },
   {
-    "titleTh": "ฟรี The Witness (2026) พยานปากเอก",
-    "titleEn": "ฟรี The Witness (2026) พยานปากเอก",
+    "titleTh": "The Witness (2026) พยานปากเอก",
+    "titleEn": "The Witness (2026) พยานปากเอก",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/The-Witness-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/The-Witness-2026-187x269.jpg",
@@ -1166,8 +4731,8 @@ window.movies = [
     "postId": "47141"
   },
   {
-    "titleTh": "ฟรี Viral Hit (2026) นักสู้ทูปเบอร์",
-    "titleEn": "ฟรี Viral Hit (2026) นักสู้ทูปเบอร์",
+    "titleTh": "Viral Hit (2026) นักสู้ทูปเบอร์",
+    "titleEn": "Viral Hit (2026) นักสู้ทูปเบอร์",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Viral-Hit-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Viral-Hit-2026-187x269.jpg",
@@ -1196,8 +4761,8 @@ window.movies = [
     "postId": "47155"
   },
   {
-    "titleTh": "ฟรี Love Upon A Time (2026) ภพเธอ",
-    "titleEn": "ฟรี Love Upon A Time (2026) ภพเธอ",
+    "titleTh": "Love Upon A Time (2026) ภพเธอ",
+    "titleEn": "Love Upon A Time (2026) ภพเธอ",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/03/Love-Upon-A-Time-2026-ภพเธอ-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/03/Love-Upon-A-Time-2026-ภพเธอ-187x269.jpg",
@@ -1226,8 +4791,8 @@ window.movies = [
     "postId": "45634"
   },
   {
-    "titleTh": "ฟรี Fulfill (2026) รักเติมเต็ม",
-    "titleEn": "ฟรี Fulfill (2026) รักเติมเต็ม",
+    "titleTh": "Fulfill (2026) รักเติมเต็ม",
+    "titleEn": "Fulfill (2026) รักเติมเต็ม",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/Fulfill-2026-รักเติมเต็ม-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/Fulfill-2026-รักเติมเต็ม-187x269.jpg",
@@ -1256,8 +4821,8 @@ window.movies = [
     "postId": "46752"
   },
   {
-    "titleTh": "ฟรี Double Helix (2026) ปลายทางแห่งรัก",
-    "titleEn": "ฟรี Double Helix (2026) ปลายทางแห่งรัก",
+    "titleTh": "Double Helix (2026) ปลายทางแห่งรัก",
+    "titleEn": "Double Helix (2026) ปลายทางแห่งรัก",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/Double-Helix-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/Double-Helix-2026-187x269.jpg",
@@ -1286,8 +4851,8 @@ window.movies = [
     "postId": "46467"
   },
   {
-    "titleTh": "ฟรี Crime Scene (2026)",
-    "titleEn": "ฟรี Crime Scene (2026)",
+    "titleTh": "Crime Scene (2026)",
+    "titleEn": "Crime Scene (2026)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Crime-Scene-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Crime-Scene-2026-187x269.jpg",
@@ -1316,8 +4881,8 @@ window.movies = [
     "postId": "47003"
   },
   {
-    "titleTh": "ฟรี Dazzling (2026) เปล่งรักประกายฝัน",
-    "titleEn": "ฟรี Dazzling (2026) เปล่งรักประกายฝัน",
+    "titleTh": "Dazzling (2026) เปล่งรักประกายฝัน",
+    "titleEn": "Dazzling (2026) เปล่งรักประกายฝัน",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/Dazzling-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/Dazzling-2026-187x269.jpg",
@@ -1346,8 +4911,8 @@ window.movies = [
     "postId": "46852"
   },
   {
-    "titleTh": "ฟรี Always Meet Again (2026) มูฟใจไปหาเธอ",
-    "titleEn": "ฟรี Always Meet Again (2026) มูฟใจไปหาเธอ",
+    "titleTh": "Always Meet Again (2026) มูฟใจไปหาเธอ",
+    "titleEn": "Always Meet Again (2026) มูฟใจไปหาเธอ",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/04/Always-Meet-Again-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/04/Always-Meet-Again-2026-187x269.jpg",
@@ -1376,8 +4941,8 @@ window.movies = [
     "postId": "45721"
   },
   {
-    "titleTh": "ฟรี Divine Doctor (2026)",
-    "titleEn": "ฟรี Divine Doctor (2026)",
+    "titleTh": "Divine Doctor (2026)",
+    "titleEn": "Divine Doctor (2026)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/Divine-Doctor-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/Divine-Doctor-2026-187x269.jpg",
@@ -1406,8 +4971,8 @@ window.movies = [
     "postId": "46787"
   },
   {
-    "titleTh": "ฟรี The Legend Of Kitchen Soldier (2026) บันทึกครัวค่ายทหาร",
-    "titleEn": "ฟรี The Legend Of Kitchen Soldier (2026) บันทึกครัวค่ายทหาร",
+    "titleTh": "The Legend Of Kitchen Soldier (2026) บันทึกครัวค่ายทหาร",
+    "titleEn": "The Legend Of Kitchen Soldier (2026) บันทึกครัวค่ายทหาร",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/The-Legend-Of-Kitchen-Soldier-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/The-Legend-Of-Kitchen-Soldier-2026-187x269.jpg",
@@ -1436,8 +5001,8 @@ window.movies = [
     "postId": "46512"
   },
   {
-    "titleTh": "ฟรี Love Beyond Dreams (2026) เพื่อเธออีกครั้ง",
-    "titleEn": "ฟรี Love Beyond Dreams (2026) เพื่อเธออีกครั้ง",
+    "titleTh": "Love Beyond Dreams (2026) เพื่อเธออีกครั้ง",
+    "titleEn": "Love Beyond Dreams (2026) เพื่อเธออีกครั้ง",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/Love-Beyond-Dreams-2026-เพื่อเธออีกครั้ง-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/Love-Beyond-Dreams-2026-เพื่อเธออีกครั้ง-187x269.jpg",
@@ -1466,8 +5031,8 @@ window.movies = [
     "postId": "46416"
   },
   {
-    "titleTh": "ฟรี Ashes to Crown (2026) พลิกชะตาเหนือฟ้า",
-    "titleEn": "ฟรี Ashes to Crown (2026) พลิกชะตาเหนือฟ้า",
+    "titleTh": "Ashes to Crown (2026) พลิกชะตาเหนือฟ้า",
+    "titleEn": "Ashes to Crown (2026) พลิกชะตาเหนือฟ้า",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Ashes-to-Crown-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Ashes-to-Crown-2026-187x269.jpg",
@@ -1496,8 +5061,8 @@ window.movies = [
     "postId": "46994"
   },
   {
-    "titleTh": "ฟรี Call For Dr. Jiang (2026)",
-    "titleEn": "ฟรี Call For Dr. Jiang (2026)",
+    "titleTh": "Call For Dr. Jiang (2026)",
+    "titleEn": "Call For Dr. Jiang (2026)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Call-For-Dr.-Jiang-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Call-For-Dr.-Jiang-2026-187x269.jpg",
@@ -1526,8 +5091,8 @@ window.movies = [
     "postId": "47208"
   },
   {
-    "titleTh": "ฟรี Visage and Soul (2026) ลิขิตรักสลับโฉม",
-    "titleEn": "ฟรี Visage and Soul (2026) ลิขิตรักสลับโฉม",
+    "titleTh": "Visage and Soul (2026) ลิขิตรักสลับโฉม",
+    "titleEn": "Visage and Soul (2026) ลิขิตรักสลับโฉม",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Visage-and-Soul-2026-ลิขิตรักสลับโฉม-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Visage-and-Soul-2026-ลิขิตรักสลับโฉม-187x269.jpg",
@@ -1556,8 +5121,8 @@ window.movies = [
     "postId": "47028"
   },
   {
-    "titleTh": "ฟรี Wonder Wall (2026) พลิกกำแพงซ่อนเงินมรณะ",
-    "titleEn": "ฟรี Wonder Wall (2026) พลิกกำแพงซ่อนเงินมรณะ",
+    "titleTh": "Wonder Wall (2026) พลิกกำแพงซ่อนเงินมรณะ",
+    "titleEn": "Wonder Wall (2026) พลิกกำแพงซ่อนเงินมรณะ",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Wonder-Wall-2026-พลิกกำแพงซ่อนเงินมรณะ-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Wonder-Wall-2026-พลิกกำแพงซ่อนเงินมรณะ-187x269.jpg",
@@ -1586,8 +5151,8 @@ window.movies = [
     "postId": "47079"
   },
   {
-    "titleTh": "ฟรี The Reborn Young Lord (2026)",
-    "titleEn": "ฟรี The Reborn Young Lord (2026)",
+    "titleTh": "The Reborn Young Lord (2026)",
+    "titleEn": "The Reborn Young Lord (2026)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/The-Reborn-Young-Lord-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/The-Reborn-Young-Lord-2026-187x269.jpg",
@@ -1616,8 +5181,8 @@ window.movies = [
     "postId": "46887"
   },
   {
-    "titleTh": "ฟรี My Grandpa Is a BL Writer (2026) คุณปู่วุ่น Y หลานชาย Y วุ่น",
-    "titleEn": "ฟรี My Grandpa Is a BL Writer (2026) คุณปู่วุ่น Y หลานชาย Y วุ่น",
+    "titleTh": "My Grandpa Is a BL Writer (2026) คุณปู่วุ่น Y หลานชาย Y วุ่น",
+    "titleEn": "My Grandpa Is a BL Writer (2026) คุณปู่วุ่น Y หลานชาย Y วุ่น",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/My-Grandpa-Is-a-BL-Writer-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/My-Grandpa-Is-a-BL-Writer-2026-187x269.jpg",
@@ -1646,8 +5211,8 @@ window.movies = [
     "postId": "46766"
   },
   {
-    "titleTh": "ฟรี Rise Again (2026) รักเหนือชะตาฟ้า",
-    "titleEn": "ฟรี Rise Again (2026) รักเหนือชะตาฟ้า",
+    "titleTh": "Rise Again (2026) รักเหนือชะตาฟ้า",
+    "titleEn": "Rise Again (2026) รักเหนือชะตาฟ้า",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Rise-Again-2026-รักเหนือชะตาฟ้า-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Rise-Again-2026-รักเหนือชะตาฟ้า-187x269.jpg",
@@ -1676,8 +5241,8 @@ window.movies = [
     "postId": "47106"
   },
   {
-    "titleTh": "ฟรี Something Is Not Right (2026) แพ้เสียงในหัว(ใจ)",
-    "titleEn": "ฟรี Something Is Not Right (2026) แพ้เสียงในหัว(ใจ)",
+    "titleTh": "Something Is Not Right (2026) แพ้เสียงในหัว(ใจ)",
+    "titleEn": "Something Is Not Right (2026) แพ้เสียงในหัว(ใจ)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/04/Something-Is-Not-Right-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/04/Something-Is-Not-Right-2026-187x269.jpg",
@@ -1706,8 +5271,8 @@ window.movies = [
     "postId": "46140"
   },
   {
-    "titleTh": "ฟรี Archives The Nanyang Mystery (2026) บันทึกคดีแดนใต้",
-    "titleEn": "ฟรี Archives The Nanyang Mystery (2026) บันทึกคดีแดนใต้",
+    "titleTh": "Archives The Nanyang Mystery (2026) บันทึกคดีแดนใต้",
+    "titleEn": "Archives The Nanyang Mystery (2026) บันทึกคดีแดนใต้",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Archives-The-Nanyang-Mystery-2026-บันทึกคดีแดนใต้-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Archives-The-Nanyang-Mystery-2026-บันทึกคดีแดนใต้-187x269.jpg",
@@ -1736,8 +5301,8 @@ window.movies = [
     "postId": "47158"
   },
   {
-    "titleTh": "ฟรี Magic Move (2026) ทำนายทายรัก",
-    "titleEn": "ฟรี Magic Move (2026) ทำนายทายรัก",
+    "titleTh": "Magic Move (2026) ทำนายทายรัก",
+    "titleEn": "Magic Move (2026) ทำนายทายรัก",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/04/Magic-Move-2026-ทำนายทายรัก-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/04/Magic-Move-2026-ทำนายทายรัก-187x269.jpg",
@@ -1766,8 +5331,8 @@ window.movies = [
     "postId": "46112"
   },
   {
-    "titleTh": "ฟรี Endless Love (2026) หากเพียงได้พบกัน",
-    "titleEn": "ฟรี Endless Love (2026) หากเพียงได้พบกัน",
+    "titleTh": "Endless Love (2026) หากเพียงได้พบกัน",
+    "titleEn": "Endless Love (2026) หากเพียงได้พบกัน",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Endless-Love-2026-หากเพียงได้พบกัน-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Endless-Love-2026-หากเพียงได้พบกัน-187x269.jpg",
@@ -1796,8 +5361,8 @@ window.movies = [
     "postId": "47344"
   },
   {
-    "titleTh": "ฟรี The Embroidered Truth (2026) ลิขิตปักพยับเมฆ",
-    "titleEn": "ฟรี The Embroidered Truth (2026) ลิขิตปักพยับเมฆ",
+    "titleTh": "The Embroidered Truth (2026) ลิขิตปักพยับเมฆ",
+    "titleEn": "The Embroidered Truth (2026) ลิขิตปักพยับเมฆ",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/The-Embroidered-Truth-2026-ลิขิตปักพยับเมฆ-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/The-Embroidered-Truth-2026-ลิขิตปักพยับเมฆ-187x269.jpg",
@@ -1826,8 +5391,8 @@ window.movies = [
     "postId": "47152"
   },
   {
-    "titleTh": "ฟรี Blazing Him (2026) โอบรักผ่านบทเพลง",
-    "titleEn": "ฟรี Blazing Him (2026) โอบรักผ่านบทเพลง",
+    "titleTh": "Blazing Him (2026) โอบรักผ่านบทเพลง",
+    "titleEn": "Blazing Him (2026) โอบรักผ่านบทเพลง",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Blazing-Him-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Blazing-Him-2026-187x269.jpg",
@@ -1856,8 +5421,8 @@ window.movies = [
     "postId": "47408"
   },
   {
-    "titleTh": "ฟรี Avatar The Last Airbender Season 2 (2026) เณรน้อยเจ้าอภินิหาร ซีซั่น 2",
-    "titleEn": "ฟรี Avatar The Last Airbender Season 2 (2026) เณรน้อยเจ้าอภินิหาร ซีซั่น 2",
+    "titleTh": "Avatar The Last Airbender Season 2 (2026) เณรน้อยเจ้าอภินิหาร ซีซั่น 2",
+    "titleEn": "Avatar The Last Airbender Season 2 (2026) เณรน้อยเจ้าอภินิหาร ซีซั่น 2",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Avatar-The-Last-Airbender-Season-2-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Avatar-The-Last-Airbender-Season-2-2026-187x269.jpg",
@@ -1886,8 +5451,8 @@ window.movies = [
     "postId": "47423"
   },
   {
-    "titleTh": "ฟรี Pentor (2026) เป็นต่อ",
-    "titleEn": "ฟรี Pentor (2026) เป็นต่อ",
+    "titleTh": "Pentor (2026) เป็นต่อ",
+    "titleEn": "Pentor (2026) เป็นต่อ",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/01/Pentor-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/01/Pentor-2026-187x269.jpg",
@@ -1916,8 +5481,8 @@ window.movies = [
     "postId": "44455"
   },
   {
-    "titleTh": "ฟรี Crash Course in Romance (2026) คอร์ส(ลัด)สูตรโรแมนซ์",
-    "titleEn": "ฟรี Crash Course in Romance (2026) คอร์ส(ลัด)สูตรโรแมนซ์",
+    "titleTh": "Crash Course in Romance (2026) คอร์ส(ลัด)สูตรโรแมนซ์",
+    "titleEn": "Crash Course in Romance (2026) คอร์ส(ลัด)สูตรโรแมนซ์",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/Crash-Course-in-Romance-2026-คอร์สลัดสูตรโรแมนซ์-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/Crash-Course-in-Romance-2026-คอร์สลัดสูตรโรแมนซ์-187x269.jpg",
@@ -1946,8 +5511,8 @@ window.movies = [
     "postId": "46722"
   },
   {
-    "titleTh": "ฟรี A Proposal in the Prosecutor&#8217;s Office (2026)",
-    "titleEn": "ฟรี A Proposal in the Prosecutor&#8217;s Office (2026)",
+    "titleTh": "A Proposal in the Prosecutor&#8217;s Office (2026)",
+    "titleEn": "A Proposal in the Prosecutor&#8217;s Office (2026)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/A-Proposal-in-the-Prosecutors-Office-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/A-Proposal-in-the-Prosecutors-Office-2026-187x269.jpg",
@@ -1976,8 +5541,8 @@ window.movies = [
     "postId": "47436"
   },
   {
-    "titleTh": "ฟรี Notes from the Last Row (2026) บันทึกจากหลังห้อง",
-    "titleEn": "ฟรี Notes from the Last Row (2026) บันทึกจากหลังห้อง",
+    "titleTh": "Notes from the Last Row (2026) บันทึกจากหลังห้อง",
+    "titleEn": "Notes from the Last Row (2026) บันทึกจากหลังห้อง",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Notes-from-the-Last-Row-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Notes-from-the-Last-Row-2026-187x269.jpg",
@@ -2006,8 +5571,8 @@ window.movies = [
     "postId": "47439"
   },
   {
-    "titleTh": "ฟรี Love of Silom (2026) รักแห่งสีลม Uncut Ver",
-    "titleEn": "ฟรี Love of Silom (2026) รักแห่งสีลม Uncut Ver",
+    "titleTh": "Love of Silom (2026) รักแห่งสีลม Uncut Ver",
+    "titleEn": "Love of Silom (2026) รักแห่งสีลม Uncut Ver",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/04/Love-of-Silom-2026-รักแห่งสีลม-Uncut-Ver-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/04/Love-of-Silom-2026-รักแห่งสีลม-Uncut-Ver-187x269.jpg",
@@ -2036,8 +5601,8 @@ window.movies = [
     "postId": "46183"
   },
   {
-    "titleTh": "ฟรี Don&#8217;t Be Too Emotional (2026) อย่าขอพี่เจน",
-    "titleEn": "ฟรี Don&#8217;t Be Too Emotional (2026) อย่าขอพี่เจน",
+    "titleTh": "Don&#8217;t Be Too Emotional (2026) อย่าขอพี่เจน",
+    "titleEn": "Don&#8217;t Be Too Emotional (2026) อย่าขอพี่เจน",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Dont-Be-Too-Emotional-2026-อย่าขอพี่เจน-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Dont-Be-Too-Emotional-2026-อย่าขอพี่เจน-187x269.jpg",
@@ -2066,8 +5631,8 @@ window.movies = [
     "postId": "47443"
   },
   {
-    "titleTh": "ฟรี Unfold (2026) รักร้ายไร้มลทิน",
-    "titleEn": "ฟรี Unfold (2026) รักร้ายไร้มลทิน",
+    "titleTh": "Unfold (2026) รักร้ายไร้มลทิน",
+    "titleEn": "Unfold (2026) รักร้ายไร้มลทิน",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Unfold-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Unfold-2026-187x269.jpg",
@@ -2096,8 +5661,8 @@ window.movies = [
     "postId": "47458"
   },
   {
-    "titleTh": "ฟรี When Light Fades (2026) แสงดาว แสงศรัทธา",
-    "titleEn": "ฟรี When Light Fades (2026) แสงดาว แสงศรัทธา",
+    "titleTh": "When Light Fades (2026) แสงดาว แสงศรัทธา",
+    "titleEn": "When Light Fades (2026) แสงดาว แสงศรัทธา",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/When-Light-Fades-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/When-Light-Fades-2026-187x269.jpg",
@@ -2126,8 +5691,8 @@ window.movies = [
     "postId": "47449"
   },
   {
-    "titleTh": "ฟรี In Love Forever (2026) วาดฝันวันวิวาห์",
-    "titleEn": "ฟรี In Love Forever (2026) วาดฝันวันวิวาห์",
+    "titleTh": "In Love Forever (2026) วาดฝันวันวิวาห์",
+    "titleEn": "In Love Forever (2026) วาดฝันวันวิวาห์",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/In-Love-Forever-2026-วาดฝันวันวิวาห์-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/In-Love-Forever-2026-วาดฝันวันวิวาห์-187x269.jpg",
@@ -2156,8 +5721,8 @@ window.movies = [
     "postId": "47465"
   },
   {
-    "titleTh": "ฟรี A Dog and a Plane (2026) หมาเห่าเครื่องบิน",
-    "titleEn": "ฟรี A Dog and a Plane (2026) หมาเห่าเครื่องบิน",
+    "titleTh": "A Dog and a Plane (2026) หมาเห่าเครื่องบิน",
+    "titleEn": "A Dog and a Plane (2026) หมาเห่าเครื่องบิน",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/A-Dog-and-a-Plane-2026-หมาเห่าเครื่องบิน-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/A-Dog-and-a-Plane-2026-หมาเห่าเครื่องบิน-187x269.jpg",
@@ -2186,8 +5751,8 @@ window.movies = [
     "postId": "47006"
   },
   {
-    "titleTh": "ฟรี Chasing Love (2026) พี่เองก็ลำบาก",
-    "titleEn": "ฟรี Chasing Love (2026) พี่เองก็ลำบาก",
+    "titleTh": "Chasing Love (2026) พี่เองก็ลำบาก",
+    "titleEn": "Chasing Love (2026) พี่เองก็ลำบาก",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Chasing-Love-2026-พี่เองก็ลำบาก-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Chasing-Love-2026-พี่เองก็ลำบาก-187x269.jpg",
@@ -2216,8 +5781,8 @@ window.movies = [
     "postId": "47468"
   },
   {
-    "titleTh": "ฟรี Song of the Samurai (2026) บทเพลงแห่งซามูไร",
-    "titleEn": "ฟรี Song of the Samurai (2026) บทเพลงแห่งซามูไร",
+    "titleTh": "Song of the Samurai (2026) บทเพลงแห่งซามูไร",
+    "titleEn": "Song of the Samurai (2026) บทเพลงแห่งซามูไร",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/Song-of-the-Samurai-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/Song-of-the-Samurai-2026-187x269.jpg",
@@ -2246,8 +5811,8 @@ window.movies = [
     "postId": "46505"
   },
   {
-    "titleTh": "ฟรี The Scarecrow (2026) หุ่นลวงเชือด",
-    "titleEn": "ฟรี The Scarecrow (2026) หุ่นลวงเชือด",
+    "titleTh": "The Scarecrow (2026) หุ่นลวงเชือด",
+    "titleEn": "The Scarecrow (2026) หุ่นลวงเชือด",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/04/The-Scarecrow-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/04/The-Scarecrow-2026-187x269.jpg",
@@ -2276,8 +5841,8 @@ window.movies = [
     "postId": "46101"
   },
   {
-    "titleTh": "ฟรี Fifties Professionals (2025)",
-    "titleEn": "ฟรี Fifties Professionals (2025)",
+    "titleTh": "Fifties Professionals (2025)",
+    "titleEn": "Fifties Professionals (2025)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/Fifties-Professionals-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/Fifties-Professionals-2026-187x269.jpg",
@@ -2306,8 +5871,8 @@ window.movies = [
     "postId": "46732"
   },
   {
-    "titleTh": "ฟรี Agent Kim Reactivated (2026) สายลับคิมกลับมาแล้ว",
-    "titleEn": "ฟรี Agent Kim Reactivated (2026) สายลับคิมกลับมาแล้ว",
+    "titleTh": "Agent Kim Reactivated (2026) สายลับคิมกลับมาแล้ว",
+    "titleEn": "Agent Kim Reactivated (2026) สายลับคิมกลับมาแล้ว",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Agent-Kim-Reactivated-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Agent-Kim-Reactivated-2026-187x269.jpg",
@@ -2336,8 +5901,8 @@ window.movies = [
     "postId": "47454"
   },
   {
-    "titleTh": "ฟรี Ticket to Heaven (2026) เด็กชายไม่ไปสวรรค์",
-    "titleEn": "ฟรี Ticket to Heaven (2026) เด็กชายไม่ไปสวรรค์",
+    "titleTh": "Ticket to Heaven (2026) เด็กชายไม่ไปสวรรค์",
+    "titleEn": "Ticket to Heaven (2026) เด็กชายไม่ไปสวรรค์",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/Ticket-to-Heaven-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/Ticket-to-Heaven-2026-187x269.jpg",
@@ -2366,8 +5931,8 @@ window.movies = [
     "postId": "46917"
   },
   {
-    "titleTh": "ฟรี Lost to Light (2026) อยากจะดัง หรือ ยังนะ UNCUT",
-    "titleEn": "ฟรี Lost to Light (2026) อยากจะดัง หรือ ยังนะ UNCUT",
+    "titleTh": "Lost to Light (2026) อยากจะดัง หรือ ยังนะ UNCUT",
+    "titleEn": "Lost to Light (2026) อยากจะดัง หรือ ยังนะ UNCUT",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Lost-to-Light-2026-อยากจะดัง-หรือ-ยังนะ-UNCUT-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Lost-to-Light-2026-อยากจะดัง-หรือ-ยังนะ-UNCUT-187x269.jpg",
@@ -2396,8 +5961,8 @@ window.movies = [
     "postId": "47333"
   },
   {
-    "titleTh": "ฟรี The Air 4 Elements (2026) เสน่หาวาโย บ้านวาทินวณิช",
-    "titleEn": "ฟรี The Air 4 Elements (2026) เสน่หาวาโย บ้านวาทินวณิช",
+    "titleTh": "The Air 4 Elements (2026) เสน่หาวาโย บ้านวาทินวณิช",
+    "titleEn": "The Air 4 Elements (2026) เสน่หาวาโย บ้านวาทินวณิช",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/The-Air-4-Elements-2026-เสน่หาวาโย-บ้านวาทินวณิช-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/The-Air-4-Elements-2026-เสน่หาวาโย-บ้านวาทินวณิช-187x269.jpg",
@@ -2426,8 +5991,8 @@ window.movies = [
     "postId": "46653"
   },
   {
-    "titleTh": "ฟรี Your Dear Daddy (2026) เรียกแด๊ดสิธาร",
-    "titleEn": "ฟรี Your Dear Daddy (2026) เรียกแด๊ดสิธาร",
+    "titleTh": "Your Dear Daddy (2026) เรียกแด๊ดสิธาร",
+    "titleEn": "Your Dear Daddy (2026) เรียกแด๊ดสิธาร",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/Your-Dear-Daddy-2026-เรียกแด๊ดสิธาร-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/Your-Dear-Daddy-2026-เรียกแด๊ดสิธาร-187x269.jpg",
@@ -2456,8 +6021,8 @@ window.movies = [
     "postId": "46470"
   },
   {
-    "titleTh": "ฟรี PAYBACK UNCUT (2026)",
-    "titleEn": "ฟรี PAYBACK UNCUT (2026)",
+    "titleTh": "PAYBACK UNCUT (2026)",
+    "titleEn": "PAYBACK UNCUT (2026)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/PAYBACK-UNCUT-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/PAYBACK-UNCUT-2026-187x269.jpg",
@@ -2486,8 +6051,8 @@ window.movies = [
     "postId": "46923"
   },
   {
-    "titleTh": "ฟรี Crazy Love Moo-Moo Uncut Version (2026) พี่ฟากชอบเธอมู่",
-    "titleEn": "ฟรี Crazy Love Moo-Moo Uncut Version (2026) พี่ฟากชอบเธอมู่",
+    "titleTh": "Crazy Love Moo-Moo Uncut Version (2026) พี่ฟากชอบเธอมู่",
+    "titleEn": "Crazy Love Moo-Moo Uncut Version (2026) พี่ฟากชอบเธอมู่",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/Crazy-Love-Moo-Moo-Uncut-Version-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/Crazy-Love-Moo-Moo-Uncut-Version-2026-187x269.jpg",
@@ -2516,8 +6081,8 @@ window.movies = [
     "postId": "46480"
   },
   {
-    "titleTh": "ฟรี The Age of Fire (2026)",
-    "titleEn": "ฟรี The Age of Fire (2026)",
+    "titleTh": "The Age of Fire (2026)",
+    "titleEn": "The Age of Fire (2026)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/The-Age-of-Fire-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/The-Age-of-Fire-2026-187x269.jpg",
@@ -2546,8 +6111,8 @@ window.movies = [
     "postId": "47225"
   },
   {
-    "titleTh": "ฟรี The Edge of Horizon (2026) อรุณรุ่ง UNCUT",
-    "titleEn": "ฟรี The Edge of Horizon (2026) อรุณรุ่ง UNCUT",
+    "titleTh": "The Edge of Horizon (2026) อรุณรุ่ง UNCUT",
+    "titleEn": "The Edge of Horizon (2026) อรุณรุ่ง UNCUT",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/The-Edge-of-Horizon-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/The-Edge-of-Horizon-2026-187x269.jpg",
@@ -2576,8 +6141,8 @@ window.movies = [
     "postId": "47502"
   },
   {
-    "titleTh": "ฟรี Deep In The Act (2026) ถลำลึก",
-    "titleEn": "ฟรี Deep In The Act (2026) ถลำลึก",
+    "titleTh": "Deep In The Act (2026) ถลำลึก",
+    "titleEn": "Deep In The Act (2026) ถลำลึก",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Deep-In-The-Act-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Deep-In-The-Act-2026-187x269.jpg",
@@ -2606,8 +6171,8 @@ window.movies = [
     "postId": "47462"
   },
   {
-    "titleTh": "ฟรี Reborn Rookie (2026) มือใหม่หัดแค้น",
-    "titleEn": "ฟรี Reborn Rookie (2026) มือใหม่หัดแค้น",
+    "titleTh": "Reborn Rookie (2026) มือใหม่หัดแค้น",
+    "titleEn": "Reborn Rookie (2026) มือใหม่หัดแค้น",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/Reborn-Rookie-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/Reborn-Rookie-2026-187x269.jpg",
@@ -2636,8 +6201,8 @@ window.movies = [
     "postId": "46904"
   },
   {
-    "titleTh": "ฟรี House of the Dragon Season 3 (2026)",
-    "titleEn": "ฟรี House of the Dragon Season 3 (2026)",
+    "titleTh": "House of the Dragon Season 3 (2026)",
+    "titleEn": "House of the Dragon Season 3 (2026)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/House-of-the-Dragon-Season-Season-3-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/House-of-the-Dragon-Season-Season-3-2026-187x269.jpg",
@@ -2666,8 +6231,8 @@ window.movies = [
     "postId": "47369"
   },
   {
-    "titleTh": "ฟรี See You at Work Tomorrow (2026) เจอกันที่ออฟฟิศพรุ่งนี้นะ",
-    "titleEn": "ฟรี See You at Work Tomorrow (2026) เจอกันที่ออฟฟิศพรุ่งนี้นะ",
+    "titleTh": "See You at Work Tomorrow (2026) เจอกันที่ออฟฟิศพรุ่งนี้นะ",
+    "titleEn": "See You at Work Tomorrow (2026) เจอกันที่ออฟฟิศพรุ่งนี้นะ",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/See-You-at-Work-Tomorrow-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/See-You-at-Work-Tomorrow-2026-187x269.jpg",
@@ -2696,8 +6261,8 @@ window.movies = [
     "postId": "47372"
   },
   {
-    "titleTh": "ฟรี Doctor on the Edge (2026) หมอติดเกาะ รักติดเธอ",
-    "titleEn": "ฟรี Doctor on the Edge (2026) หมอติดเกาะ รักติดเธอ",
+    "titleTh": "Doctor on the Edge (2026) หมอติดเกาะ รักติดเธอ",
+    "titleEn": "Doctor on the Edge (2026) หมอติดเกาะ รักติดเธอ",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Doctor-on-the-Edge-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Doctor-on-the-Edge-2026-187x269.jpg",
@@ -2726,8 +6291,8 @@ window.movies = [
     "postId": "46958"
   },
   {
-    "titleTh": "ฟรี Wu (2026) อู",
-    "titleEn": "ฟรี Wu (2026) อู",
+    "titleTh": "Wu (2026) อู",
+    "titleEn": "Wu (2026) อู",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/Wu-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/Wu-2026-187x269.jpg",
@@ -2756,8 +6321,8 @@ window.movies = [
     "postId": "46389"
   },
   {
-    "titleTh": "ฟรี KNOT (2026)",
-    "titleEn": "ฟรี KNOT (2026)",
+    "titleTh": "KNOT (2026)",
+    "titleEn": "KNOT (2026)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/KNOT-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/KNOT-2026-187x269.jpg",
@@ -2786,8 +6351,8 @@ window.movies = [
     "postId": "47544"
   },
   {
-    "titleTh": "ฟรี Angels and Guards (2026) ลำนำองครักษ์หญิง",
-    "titleEn": "ฟรี Angels and Guards (2026) ลำนำองครักษ์หญิง",
+    "titleTh": "Angels and Guards (2026) ลำนำองครักษ์หญิง",
+    "titleEn": "Angels and Guards (2026) ลำนำองครักษ์หญิง",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Angels-and-Guards-2026-ลำนำองครักษ์หญิง-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Angels-and-Guards-2026-ลำนำองครักษ์หญิง-187x269.jpg",
@@ -2816,8 +6381,8 @@ window.movies = [
     "postId": "47341"
   },
   {
-    "titleTh": "ฟรี Camellias (2026) บัลลังก์บุปผาสีเลือด",
-    "titleEn": "ฟรี Camellias (2026) บัลลังก์บุปผาสีเลือด",
+    "titleTh": "Camellias (2026) บัลลังก์บุปผาสีเลือด",
+    "titleEn": "Camellias (2026) บัลลังก์บุปผาสีเลือด",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Camellias-2026-บัลลังก์บุปผาสีเลือด-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Camellias-2026-บัลลังก์บุปผาสีเลือด-187x269.jpg",
@@ -2846,8 +6411,8 @@ window.movies = [
     "postId": "47377"
   },
   {
-    "titleTh": "ฟรี The Legend of Rosy Clouds (2026) บุปผาคู่บัลลังก์",
-    "titleEn": "ฟรี The Legend of Rosy Clouds (2026) บุปผาคู่บัลลังก์",
+    "titleTh": "The Legend of Rosy Clouds (2026) บุปผาคู่บัลลังก์",
+    "titleEn": "The Legend of Rosy Clouds (2026) บุปผาคู่บัลลังก์",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/The-Legend-of-Rosy-Clouds-2026-บุปผาคู่บัลลังก์-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/The-Legend-of-Rosy-Clouds-2026-บุปผาคู่บัลลังก์-187x269.jpg",
@@ -2876,8 +6441,8 @@ window.movies = [
     "postId": "47338"
   },
   {
-    "titleTh": "ฟรี The First Jasmine (2026) ชายาเคียงหทัย",
-    "titleEn": "ฟรี The First Jasmine (2026) ชายาเคียงหทัย",
+    "titleTh": "The First Jasmine (2026) ชายาเคียงหทัย",
+    "titleEn": "The First Jasmine (2026) ชายาเคียงหทัย",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/The-First-Jasmine-2026-ชายาเคียงหทัย-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/The-First-Jasmine-2026-ชายาเคียงหทัย-187x269.jpg",
@@ -2906,8 +6471,8 @@ window.movies = [
     "postId": "47103"
   },
   {
-    "titleTh": "ฟรี The Eternal Fragrance (2026) หอมกลิ่นพันลี้",
-    "titleEn": "ฟรี The Eternal Fragrance (2026) หอมกลิ่นพันลี้",
+    "titleTh": "The Eternal Fragrance (2026) หอมกลิ่นพันลี้",
+    "titleEn": "The Eternal Fragrance (2026) หอมกลิ่นพันลี้",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/The-Eternal-Fragrance-2026-หอมกลิ่นพันลี้-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/The-Eternal-Fragrance-2026-หอมกลิ่นพันลี้-187x269.jpg",
@@ -2936,8 +6501,8 @@ window.movies = [
     "postId": "47517"
   },
   {
-    "titleTh": "ฟรี Riding the Wind (2026)",
-    "titleEn": "ฟรี Riding the Wind (2026)",
+    "titleTh": "Riding the Wind (2026)",
+    "titleEn": "Riding the Wind (2026)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Riding-the-Wind-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Riding-the-Wind-2026-187x269.jpg",
@@ -2966,8 +6531,8 @@ window.movies = [
     "postId": "47506"
   },
   {
-    "titleTh": "ฟรี The Found Family (2026)",
-    "titleEn": "ฟรี The Found Family (2026)",
+    "titleTh": "The Found Family (2026)",
+    "titleEn": "The Found Family (2026)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/The-Found-Family-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/The-Found-Family-2026-187x269.jpg",
@@ -2996,8 +6561,8 @@ window.movies = [
     "postId": "47479"
   },
   {
-    "titleTh": "ฟรี Trial Of Healer (2026)",
-    "titleEn": "ฟรี Trial Of Healer (2026)",
+    "titleTh": "Trial Of Healer (2026)",
+    "titleEn": "Trial Of Healer (2026)",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Trial-Of-Healer-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Trial-Of-Healer-2026-187x269.jpg",
@@ -3026,8 +6591,8 @@ window.movies = [
     "postId": "47396"
   },
   {
-    "titleTh": "ฟรี Inherently Kind (2026) เล่ห์รักภรรยากำมะลอ",
-    "titleEn": "ฟรี Inherently Kind (2026) เล่ห์รักภรรยากำมะลอ",
+    "titleTh": "Inherently Kind (2026) เล่ห์รักภรรยากำมะลอ",
+    "titleEn": "Inherently Kind (2026) เล่ห์รักภรรยากำมะลอ",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Inherently-Kind-2026-เล่ห์รักภรรยากำมะลอ-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Inherently-Kind-2026-เล่ห์รักภรรยากำมะลอ-187x269.jpg",
@@ -3056,8 +6621,8 @@ window.movies = [
     "postId": "47387"
   },
   {
-    "titleTh": "ฟรี Smile After Tears (2026) หันกลับมา เช็ดน้ำตาให้นาย",
-    "titleEn": "ฟรี Smile After Tears (2026) หันกลับมา เช็ดน้ำตาให้นาย",
+    "titleTh": "Smile After Tears (2026) หันกลับมา เช็ดน้ำตาให้นาย",
+    "titleEn": "Smile After Tears (2026) หันกลับมา เช็ดน้ำตาให้นาย",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/Smile-After-Tears-2026-หันกลับมา-เช็ดน้ำตาให้นาย-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/Smile-After-Tears-2026-หันกลับมา-เช็ดน้ำตาให้นาย-187x269.jpg",
@@ -3086,8 +6651,8 @@ window.movies = [
     "postId": "46698"
   },
   {
-    "titleTh": "ฟรี Love Has Fireworks (2026) เมื่อรักส่องประกาย",
-    "titleEn": "ฟรี Love Has Fireworks (2026) เมื่อรักส่องประกาย",
+    "titleTh": "Love Has Fireworks (2026) เมื่อรักส่องประกาย",
+    "titleEn": "Love Has Fireworks (2026) เมื่อรักส่องประกาย",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/06/Love-Has-Fireworks-2026-เมื่อรักส่องประกาย-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/06/Love-Has-Fireworks-2026-เมื่อรักส่องประกาย-187x269.jpg",
@@ -3116,8 +6681,8 @@ window.movies = [
     "postId": "47252"
   },
   {
-    "titleTh": "ฟรี When Oranges Fall (2026) ต้นส้มอยู่บ้านเขา แต่ผลส้มหล่นมาบ้านเราตลอดเลย",
-    "titleEn": "ฟรี When Oranges Fall (2026) ต้นส้มอยู่บ้านเขา แต่ผลส้มหล่นมาบ้านเราตลอดเลย",
+    "titleTh": "When Oranges Fall (2026) ต้นส้มอยู่บ้านเขา แต่ผลส้มหล่นมาบ้านเราตลอดเลย",
+    "titleEn": "When Oranges Fall (2026) ต้นส้มอยู่บ้านเขา แต่ผลส้มหล่นมาบ้านเราตลอดเลย",
     "year": 2026,
     "poster": "https://www.seriedays.com/wp-content/uploads/2026/05/When-Oranges-Fall-2026-187x269.jpg",
     "backdrop": "https://www.seriedays.com/wp-content/uploads/2026/05/When-Oranges-Fall-2026-187x269.jpg",
