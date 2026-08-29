@@ -1,6 +1,41 @@
 // ฐานข้อมูลภาพยนตร์รวมจาก 2 เว็บไซต์ เฉพาะตัวเล่นวิดีโอสะอาด 100% (พร้อม postId สำหรับ EP switching)
 window.movies = [
   {
+    "titleTh": "Reacher Season 3 (2025-2026) ยอดคนสืบระห่ำ รีชเชอร์ ซีซั่น 3 (พากย์ไทย)",
+    "titleEn": "Reacher Season 3 (2025-2026)",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2023/12/Reacher-Season-2-รีชเชอร์-ซีซั่น-2.jpg",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2023/12/Reacher-Season-2-รีชเชอร์-ซีซั่น-2.jpg",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "languages": [
+      "Thai (พากย์ไทย)",
+      "Soundtrack (ซับไทย)"
+    ],
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=4250f4cd804501733e7c237c&b=8260",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ Reacher ยอดคนสืบระห่ำ รีชเชอร์ ซีซั่น 3 พากย์ไทย ซับไทย ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตครบทุกตอน ไม่มีโฆษณากวนใจ",
+    "rating": 9.3,
+    "genres": [
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย",
+      "แอคชั่น",
+      "สืบสวน",
+      "ระทึกขวัญ Thriller"
+    ],
+    "duration": "8 ตอนจบ",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "Alan Ritchson",
+      "Maria Sten",
+      "Malcolm Goodwin"
+    ],
+    "source": "SERIEDAYS",
+    "id": "sd-reacher-season-3",
+    "postId": "36640"
+  },
+  {
     "titleTh": "Doctor Lawyer (2022-2026) ด็อกเตอร์ ลอยเยอร์",
     "titleEn": "Doctor Lawyer (2022-2026) ด็อกเตอร์ ลอยเยอร์",
     "year": 2026,
