@@ -423,6 +423,7 @@ function initMovieStreamApp() {
       html5VideoPlayer.pause();
       html5VideoPlayer.src = "";
       customPlayerControls.style.display = "none";
+      iframeVideoPlayer.style.display = "block";
       
       // Safe player setup: Never apply sandbox on iPhone/iOS/Mobile to prevent 403 stream token block
       const isMobileDevice = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -453,6 +454,11 @@ function initMovieStreamApp() {
       const epVideoUrl = currentActiveMovie.episodeUrls[episode];
       const isMobileDevice = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
       const isGOSeries = (typeof currentActiveMovie !== "undefined" && currentActiveMovie && currentActiveMovie.source === "GOSERIES4K");
+      
+      html5VideoPlayer.style.display = "none";
+      html5VideoPlayer.pause();
+      customPlayerControls.style.display = "none";
+      iframeVideoPlayer.style.display = "block";
       
       if (!isMobileDevice && isGOSeries) {
         iframeVideoPlayer.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms allow-presentation allow-downloads");
