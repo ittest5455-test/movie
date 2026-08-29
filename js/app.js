@@ -946,11 +946,14 @@ function initMovieStreamApp() {
       } else if (genre === "year-2024") {
         const y2024Movies = movieList.filter(m => String(m.year) === "2024" || m.titleTh.includes("2024"));
         showGridView(`📅 รวมภาพยนตร์ & ซีรีส์ปี 2024 (${y2024Movies.length} เรื่อง)`, y2024Movies);
+      } else if (genre === "SERIEDAYS") {
+        const sdMovies = movieList.filter(m => m.source === "SERIEDAYS" || (m.genres && m.genres.includes("ซีรีส์ใหม่ 2026")));
+        showGridView(`📌 ซีรีส์ใหม่ปี 2026 (พากย์ไทย) (${sdMovies.length} เรื่อง)`, sdMovies);
       } else if (genre === "24HDX" || genre === "GOSERIES4K") {
         const sourceMovies = movieList.filter(m => m.source === genre);
         showGridView(`📌 รวมภาพยนตร์ & ซีรีส์จาก ${genre} (${sourceMovies.length} เรื่อง)`, sourceMovies);
       } else {
-        const filtered = movieList.filter(m => m.genres && m.genres.includes(genre));
+        const filtered = movieList.filter(m => m.genres && (m.genres.includes(genre) || m.genres.some(g => g.includes(genre))));
         showGridView(`หมวดหมู่ภาพยนตร์: ${genre}`, filtered);
       }
     }
