@@ -1064,15 +1064,15 @@ footer {
 
 /* Video Player Modal Specifics */
 .player-modal-container {
-  max-width: 950px;
-  width: 100%;
+  max-width: 1600px;
+  width: 98%;
   background: #000;
   border: 1px solid #1f1f3a;
   border-radius: var(--border-radius-md);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  max-height: 92vh;
+  max-height: 96vh;
 }
 
 /* Player Top Server Buttons Bar */
