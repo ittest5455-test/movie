@@ -1583,3 +1583,16 @@ footer {
   padding-top: 85px;
 }
 
+
+/* TV and Large Desktop Optimizations */
+@media (min-width: 1200px) {
+  .theater-player-container {
+    max-width: 1100px;
+  }
+}
+@media (min-width: 1400px) {
+  .theater-player-container {
+    max-width: 1280px;
+  }
+}
+

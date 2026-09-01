@@ -2,14 +2,31 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" id="viewportMeta">
+  <script>
+    (function() {
+      // Fix for Android TV WebView zooming issue
+      var ua = navigator.userAgent.toLowerCase();
+      var isTV = ua.indexOf('tv') > -1 || ua.indexOf('box') > -1 || ua.indexOf('fire') > -1;
+      var isAndroidLandscape = ua.indexOf('android') > -1 && window.innerWidth > window.innerHeight;
+      
+      if (isTV || (isAndroidLandscape && window.innerWidth < 1000)) {
+        var meta = document.getElementById("viewportMeta");
+        if (meta) {
+          // Force a minimum desktop width for TVs so the UI is not squished/zoomed
+          // The WebView will automatically scale it down to fit the physical screen
+          meta.content = "width=1280, user-scalable=no";
+        }
+      }
+    })();
+  </script>
   <title>ดูหนังออนไลน์ 2026 ฟรี หนังใหม่ชนโรง HD พากย์ไทย ซับไทย เต็มเรื่อง - MovieStream</title>
   <meta name="google-site-verification" content="nwxd08Uj0YtYRJwC5nV56KlpoIdQr6yV6ZkR005dxgU" />
   <meta name="description" content="ดูหนังออนไลน์ฟรี 2026 หนังใหม่ชนโรง HD เต็มเรื่อง ทั้งหนังไทย หนังฝรั่ง ซีรีส์เกาหลี พากย์ไทย ซับไทย ไม่เสียค่าบริการ ไม่มีโฆษณากวนใจ อัปเดตใหม่ทุกวัน">
   <meta name="keywords" content="ดูหนังออนไลน์, ดูหนังฟรี, ดูหนังใหม่ 2026, หนังชนโรง, ดูหนัง HD, หนังพากย์ไทย, ดูซีรีส์ฟรี, ดูหนังไม่มีโฆษณา">
   <meta name="robots" content="index, follow">
   <meta name="referrer" content="no-referrer-when-downgrade">
-  <link rel="stylesheet" href="css/style.css?v=20260829_1525">
+  <link rel="stylesheet" href="css/style.css?v=20260901_0900">
   
   <!-- SEO Open Graph Metadata -->
   <meta property="og:title" content="ดูหนังออนไลน์ 2026 ฟรี หนังใหม่ชนโรง HD พากย์ไทย ซับไทย เต็มเรื่อง">
