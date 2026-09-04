@@ -1,38 +1,6 @@
 // ฐานข้อมูลภาพยนตร์รวม 24-HDX และ GOSERIES4K ปี 2026 พากย์ไทย
 window.movies = [
   {
-    "titleTh": "ฟรี The Mongoose (2026)",
-    "titleEn": "ฟรี The Mongoose (2026)",
-    "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/09/The-Mongoose-2026.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/09/The-Mongoose-2026.png",
-    "videoUrl": "https://main.24playerhd.com/index_th.php?id=3d99240e2e38e977eaa4675b&b=6369",
-    "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ ฟรี The Mongoose (2026) (2026) พากย์ไทย เต็มเรื่อง HD",
-    "rating": 5.8,
-    "genres": [
-      "24-HDX",
-      "พากย์ไทย",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/Z5UOOYYRoQY",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://main.24playerhd.com/index_th.php?id=3d99240e2e38e977eaa4675b&b=6369"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-40552",
-    "postId": "40552",
-    "originalUrl": "https://www.24-hdx.com/the-mongoose/"
-  },
-  {
     "titleTh": "ฟรี The Whisper Man (2026) เสียงกระซิบ",
     "titleEn": "ฟรี The Whisper Man (2026) เสียงกระซิบ",
     "year": 2026,
