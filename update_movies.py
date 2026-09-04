@@ -86,8 +86,8 @@ def update_24hdx():
             poster = img_m.group(1) if img_m and "svg" not in img_m.group(1) else ""
             raw_title = alt_m.group(1) if alt_m else link.strip("/").split("/")[-1].replace("-", " ").title()
             
-            # Filter out Sub-only (ซับไทย) movies
-            if "ซับไทย" in raw_title and "พากย์ไทย" not in raw_title:
+            # Strict filter: Block ANY movie that contains "ซับไทย"
+            if "ซับไทย" in raw_title:
                 continue
                 
             title = re.sub(r'^(ฟรี|HD|Zoom|ดูหนังออนไลน์|ดูหนัง)\s*', '', raw_title).strip()
@@ -236,8 +236,8 @@ def update_goseries4k():
                 title = og_title.group(1) if og_title else raw_card_title
                 title = html.unescape(title)
                 
-                # Final strict check on the full title
-                if "ซับไทย" in title and "พากย์ไทย" not in title:
+                # Strict filter: Block ANY series that contains "ซับไทย"
+                if "ซับไทย" in title:
                     continue
                   
                 title = re.sub(r'^(ฟรี|HD|Zoom|ดูซีรี่ย์|ดูซีรีส์|ซีรี่ย์|ซีรีส์|ออนไลน์)\s*', '', title).strip()
