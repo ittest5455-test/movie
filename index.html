@@ -211,7 +211,7 @@
 
       <div class="video-screen-wrapper" id="videoScreenWrapper">
         <!-- Direct HTML5 Video Player -->
-        <video id="html5VideoPlayer" controls playsinline></video>
+        <video id="html5VideoPlayer" playsinline tabindex="-1"></video>
         
         <!-- Custom Controls for Direct MP4 Mode -->
         <div class="custom-player-controls" id="customPlayerControls">
@@ -258,6 +258,9 @@
         <select class="player-select-btn" id="episodeSelectBtn">
           <option value="1">ตอนที่ 1 (จบในตอน)</option>
         </select>
+        <button class="player-select-btn" id="tvFullscreenBtn" style="background:#22c55e; color:#fff; border:none; margin-left:auto; font-weight:bold; cursor:pointer;">
+          🔲 ขยายเต็มจอ
+        </button>
       </div>
     </div>
   </div>
