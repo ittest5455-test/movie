@@ -149,7 +149,7 @@ def update_24hdx():
                         ep_req = urllib.request.Request(api_url, data=ep_data, headers=api_headers)
                         with urllib.request.urlopen(ep_req, timeout=5) as ep_resp:
                             ep_res = ep_resp.read().decode('utf-8', errors='ignore')
-                        ep_iframe = re.search(r'src=["']([^"']+)["']', ep_res)
+                        ep_iframe = re.search(r'src=["\']([^"\']+)["\']', ep_res)
                         if ep_iframe and "24playerhd.com" in ep_iframe.group(1):
                             ep_urls[str(ep_idx)] = ep_iframe.group(1).replace("\/", "/")
                         else:

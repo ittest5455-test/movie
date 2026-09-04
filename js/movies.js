@@ -1,6 +1,142 @@
 // ฐานข้อมูลภาพยนตร์รวม 24-HDX และ GOSERIES4K ปี 2026 พากย์ไทย
 window.movies = [
   {
+    "titleTh": "ฟรี The Mongoose (2026)",
+    "titleEn": "ฟรี The Mongoose (2026)",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/09/The-Mongoose-2026.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/09/The-Mongoose-2026.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=3d99240e2e38e977eaa4675b&b=6369",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี The Mongoose (2026) (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 5.8,
+    "genres": [
+      "24-HDX",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/Z5UOOYYRoQY",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=3d99240e2e38e977eaa4675b&b=6369"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40552",
+    "postId": "40552",
+    "originalUrl": "https://www.24-hdx.com/the-mongoose/"
+  },
+  {
+    "titleTh": "GATE24: หน่วยสกัดภัยข้ามแดน (2026) ซับไทย EP.1-10",
+    "titleEn": "GATE24: หน่วยสกัดภัยข้ามแดน (2026) ซับไทย EP.1-10",
+    "year": 2026,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/07/1-6.jpg",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/07/1-6.jpg",
+    "videoUrl": "https://torbo007.com/embed/4430f6592dc628a99a5cca729cc84fd9",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ: หน่วยสกัดภัยข้ามแดน～大空港✈️ 💥\r\n วันนี้เราจะพาทุกคนไปทำภารกิจนานาชาติ ที่ทุกอย่างเปรียบเสมือนด่านหน้าสำคัญ ของการปกป้องประเทศที่มีต่ออาชญากรรมข้ามชาติ เมื่อการเดินทางและการค้ามนุษย์ ไปจนถึงภัยก่อการร้ายที่ซ่อมตัวมากับผู้โดยสารจากทั่วทุกมุมโลก เพื่อการรับมือต่อภัยคุกคามที่ซับซ้อน รัฐบาลจึงจัดตั้งหน่วยปฏิบัติการพิเศษอย่างที่ทุกคนเรียกว่าเป็น (GATE24/ Global Airport Task Enforcement) ภายใต้สำนักงานของเลขาธิการคณะรัฐมนตรี ที่พยายามรวบรวมหลักฐานชิ้นสำคัญ จากหลายหน่วยงานมารวมไว้กับตัว แม้สมาชิกแต่ละคนจะมีความสามารถโดดเด่น แต่ความแตกต่างของวัฒนธรรมองค์กรและอำนาจหน้าที่กลับทำให้การทำงานเต็มไปด้วยความขัดแย้ง พวกเขาต้องเรียนรู้ที่จะเชื่อใจกัน พร้อมฝ่าฟันอุปสรรคจากทั้งระบบราชการและเครือข่ายอาชญากรรมระดับ ท่ามกลางคดีทวีความซับซ้อนกับทวีมากขึ้นเรื่อยๆ หน่วยงานGATE24ต้องใช้ไหวพริบ ความกล้าหาญ และการตัดสินใจที่แน่วแน่ เพื่อการปกป้องชีวิตของผู้บริสุทธิ์และรักษาความมั่งคงของประเทศ ก่อนที่ทุกอย่างจะเป็นภัยร้ายจนนำไปสู่ ประตู แห่งการแก้ไขครั้งสุดท้ายให้สำเร็จอย่างแท้จริง  \r\n",
+    "rating": 8.8,
+    "genres": [
+      "ซีรีส์แนะนำใหม่ 2026",
+      "พากย์ไทย",
+      "GOSERIES4K"
+    ],
+    "duration": "ซีรีส์ 5 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "GOSERIES4K",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/4430f6592dc628a99a5cca729cc84fd9",
+      "2": "https://torbo007.com/embed/68a288306d4ebd84bb9f092f4cb9732f",
+      "3": "https://torbo007.com/embed/bb7d1f3506a1bea93590bc8e920e6d20",
+      "4": "https://torbo007.com/embed/88cdef9fe37cd2ada356e10684847bbe",
+      "5": "https://torbo007.com/embed/51be8a5530b6a2fbf452cec0a23a02cf"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "gs-129771",
+    "postId": "129771",
+    "originalUrl": "https://goseries4k.com/gate24/"
+  },
+  {
+    "titleTh": "ฟรี The Whisper Man (2026) เสียงกระซิบ",
+    "titleEn": "ฟรี The Whisper Man (2026) เสียงกระซิบ",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Whisper-Man-2026-เสียงกระซิบ.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Whisper-Man-2026-เสียงกระซิบ.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=696dbb552a9cb0cba9af53f4&b=8310",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี The Whisper Man (2026) เสียงกระซิบ (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 6.3,
+    "genres": [
+      "24-HDX",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/ItJ_LQ8MWmE",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=696dbb552a9cb0cba9af53f4&b=8310"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40540",
+    "postId": "40540",
+    "originalUrl": "https://www.24-hdx.com/the-whisper-man/"
+  },
+  {
+    "titleTh": "ฟรี The Secret Woman (2026) ผู้หญิงลึกลับ",
+    "titleEn": "ฟรี The Secret Woman (2026) ผู้หญิงลึกลับ",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Secret-Woman-2026-ผู้หญิงลึกลับ.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Secret-Woman-2026-ผู้หญิงลึกลับ.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=013946635549c5492aab5019&b=7765",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี The Secret Woman (2026) ผู้หญิงลึกลับ (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 6.3,
+    "genres": [
+      "24-HDX",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/FldeGkt4e4k",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=013946635549c5492aab5019&b=7765"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40543",
+    "postId": "40543",
+    "originalUrl": "https://www.24-hdx.com/the-secret-woman/"
+  },
+  {
     "titleTh": "Doctor Lawyer คุณหมอทนาย (2022) พากย์ไทย",
     "titleEn": "Doctor Lawyer (2022)",
     "year": 2022,
@@ -4908,17 +5044,19 @@ window.movies = [
       "พากย์ไทย",
       "GOSERIES4K"
     ],
-    "duration": "ซีรีส์ 2 ตอนจบ",
+    "duration": "ซีรีส์ 3 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "GOSERIES4K",
     "episodes": [
       "ตอนที่ 1",
-      "ตอนที่ 2"
+      "ตอนที่ 2",
+      "ตอนที่ 3"
     ],
     "episodeUrls": {
       "1": "https://torbo007.com/embed/43b816e5524d0dc0a064bc9b006e4647",
-      "2": "https://torbo007.com/embed/805ecd49c3246e6d708878c11d9e0b57"
+      "2": "https://torbo007.com/embed/805ecd49c3246e6d708878c11d9e0b57",
+      "3": "https://torbo007.com/embed/449311d017a9abaf2befff1001c602c8"
     },
     "languages": [
       "Thai (พากย์ไทย)"

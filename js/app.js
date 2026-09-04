@@ -124,7 +124,7 @@ function initMovieStreamApp() {
     return `
       <div class="movie-card" data-id="${movie.id}" tabindex="0" role="button" aria-label="${movie.titleTh}">
         <div class="movie-poster-wrapper">
-          <img src="${movie.poster}" alt="เนเธเธชเน€เธ•เธญเธฃเนเน€เธฃเธทเนเธญเธ ${movie.titleTh}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${placeholderSvg}'">
+          <img src="${movie.poster}" alt="โปสเตอร์เรื่อง ${movie.titleTh}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${placeholderSvg}'">
           <span class="movie-rating-badge">
             <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
             ${movie.rating}
@@ -136,7 +136,7 @@ function initMovieStreamApp() {
           </button>
 
           <div class="movie-card-overlay">
-            <button class="movie-play-btn" aria-label="เน€เธฅเนเธเธซเธเธฑเธ ${movie.titleTh}">
+            <button class="movie-play-btn" aria-label="เล่นหนัง ${movie.titleTh}">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
             </button>
             <div class="movie-card-info-top">
@@ -174,7 +174,7 @@ function initMovieStreamApp() {
       const yearB = parseInt(b.year) || 0;
       return yearB - yearA;
     });
-    showGridView("๐ฌ เธ เธฒเธเธขเธเธ•เธฃเนเธ—เธฑเนเธเธซเธกเธ” (เน€เธฃเธตเธขเธเธ•เธฒเธกเธเธตเธฅเนเธฒเธชเธธเธ”)", sortedAll);
+    showGridView("🎬 ภาพยนตร์ทั้งหมด (เรียงตามปีล่าสุด)", sortedAll);
   }
 
   function showGridView(title, filteredMovies) {
@@ -187,8 +187,8 @@ function initMovieStreamApp() {
       gridMoviesList.innerHTML = `
         <div class="empty-state" style="grid-column: 1 / -1;">
           <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="12" x2="16" y2="12"></line></svg>
-          <h3>เนเธกเนเธเธเธ เธฒเธเธขเธเธ•เธฃเน</h3>
-          <p>เธฅเธญเธเธเธฃเธฑเธเธเนเธเธซเธฒเนเธซเธกเน เธซเธฃเธทเธญเธเธฅเธฑเธเนเธเธ—เธตเนเธซเธเนเธฒเธซเธฅเธฑเธ</p>
+          <h3>ไม่พบภาพยนตร์</h3>
+          <p>ลองปรับค้นหาใหม่ หรือกลับไปที่หน้าหลัก</p>
         </div>
       `;
       return;
@@ -228,10 +228,10 @@ function initMovieStreamApp() {
     const index = watchlist.indexOf(movieId);
     if (index === -1) {
       watchlist.push(movieId);
-      showToast(`เน€เธเธดเนเธก "${movie.titleTh}" เนเธเธขเธฑเธเธฃเธฒเธขเธเธฒเธฃเนเธเธฃเธ”เนเธฅเนเธง`, "success");
+      showToast(`เพิ่ม "${movie.titleTh}" ไปยังรายการโปรดแล้ว`, "success");
     } else {
       watchlist.splice(index, 1);
-      showToast(`เธฅเธ "${movie.titleTh}" เธญเธญเธเธเธฒเธเธฃเธฒเธขเธเธฒเธฃเนเธเธฃเธ”เนเธฅเนเธง`, "info");
+      showToast(`ลบ "${movie.titleTh}" ออกจากรายการโปรดแล้ว`, "info");
     }
     
     updateWatchlistUI();
@@ -291,7 +291,7 @@ function initMovieStreamApp() {
     navWatchlist.classList.add("active");
     navHome.classList.remove("active");
     const favs = movieList.filter(m => watchlist.includes(m.id));
-    showGridView("เธฃเธฒเธขเธเธฒเธฃเนเธเธฃเธ”เธเธญเธเธเธฑเธ", favs);
+    showGridView("รายการโปรดของฉัน", favs);
   }
 
   // --- Details Modal Actions ---
@@ -302,7 +302,7 @@ function initMovieStreamApp() {
     if (modalHeroBanner) modalHeroBanner.style.backgroundImage = `url('${movie.backdrop || movie.poster}')`;
     if (modalPoster) {
       modalPoster.src = movie.poster;
-      modalPoster.alt = `เธเธเธซเธเธฑเธ ${movie.titleTh}`;
+      modalPoster.alt = `ปกหนัง ${movie.titleTh}`;
     }
     if (modalTitleTh) modalTitleTh.textContent = movie.titleTh;
     if (modalTitleEn) modalTitleEn.textContent = `${movie.titleEn} (${movie.year})`;
@@ -338,7 +338,7 @@ function initMovieStreamApp() {
         if (movie.trailerUrl) {
           window.open(movie.trailerUrl, "_blank");
         } else {
-          showToast("เนเธกเนเธเธเธ•เธฑเธงเธญเธขเนเธฒเธเธ เธฒเธเธขเธเธ•เธฃเนเน€เธฃเธทเนเธญเธเธเธตเน", "info");
+          showToast("ไม่พบตัวอย่างภาพยนตร์เรื่องนี้", "info");
         }
       };
     }
@@ -362,10 +362,10 @@ function initMovieStreamApp() {
   // --- Video Player Modal Actions ---
 
   function playMovie(movie) {
-    // เธ•เธฃเธงเธเธชเธญเธเธชเธดเธ—เธเธดเนเธชเธกเธฒเธเธดเธเธเนเธญเธเน€เธเธดเธ”เน€เธฅเนเธเธซเธเธฑเธ
+    // ตรวจสอบสิทธิ์สมาชิกก่อนเปิดเล่นหนัง
     const savedUser = localStorage.getItem("moviestream_user");
     if (!savedUser) {
-      showToast("๐”’ เธเธฃเธธเธ“เธฒเน€เธเนเธฒเธชเธนเนเธฃเธฐเธเธเธชเธกเธฒเธเธดเธเธเนเธญเธเธฃเธฑเธเธเธกเธ เธฒเธเธขเธเธ•เธฃเน", "info");
+      showToast("🔒 กรุณาเข้าสู่ระบบสมาชิกก่อนรับชมภาพยนตร์", "info");
       openAuthModal();
       return;
     }
@@ -384,7 +384,7 @@ function initMovieStreamApp() {
         `<option value="${idx + 1}">${ep}</option>`
       ).join("");
     } else if (episodeSelectBtn) {
-      episodeSelectBtn.innerHTML = `<option value="1">เธ•เธญเธเธ—เธตเน 1 (เธเธเนเธเธ•เธญเธ)</option>`;
+      episodeSelectBtn.innerHTML = `<option value="1">ตอนที่ 1 (จบในตอน)</option>`;
     }
 
     // Populate Languages Select Box dynamically
@@ -393,7 +393,7 @@ function initMovieStreamApp() {
         `<option value="${lang}">${lang}</option>`
       ).join("");
     } else if (audioSelectBtn) {
-      audioSelectBtn.innerHTML = `<option value="Thai">Thai (เธเธฒเธเธขเนเนเธ—เธข)</option>`;
+      audioSelectBtn.innerHTML = `<option value="Thai">Thai (พากย์ไทย)</option>`;
     }
     
     // 1. Direct MP4 Streaming Player
@@ -415,7 +415,7 @@ function initMovieStreamApp() {
         .then(() => updatePlayPauseUI(true))
         .catch(() => updatePlayPauseUI(false));
         
-      showToast(`เธเธณเธฅเธฑเธเนเธซเธฅเธ”เน€เธฅเนเธเธงเธดเธ”เธตเนเธญเนเธเธ Direct: ${movie.titleTh}`, "success");
+      showToast(`กำลังโหลดเล่นวิดีโอแบบ Direct: ${movie.titleTh}`, "success");
     } 
     // 2. Embedded IFrame Video Player
     else if (movie.sourceType === "embed") {
@@ -442,13 +442,13 @@ function initMovieStreamApp() {
       iframeVideoPlayer.setAttribute("x5-playsinline", "true");
       iframeVideoPlayer.src = movie.videoUrl;
       
-      showToast(`เธเธณเธฅเธฑเธเน€เธเธดเธ”เน€เธเธฃเธทเนเธญเธเน€เธฅเนเธเธงเธดเธ”เธตเนเธญ: ${movie.titleTh}`, "success");
+      showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}`, "success");
     }
   }
 
   // Load specific episode directly from pre-built episodeUrls pool
   function loadEpisode(postId, episode, lang, title) {
-    showToast(`เธเธณเธฅเธฑเธเนเธซเธฅเธ” เธ•เธญเธเธ—เธตเน ${episode}...`, "success");
+    showToast(`กำลังโหลด ตอนที่ ${episode}...`, "success");
     
     if (currentActiveMovie && currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[episode]) {
       const epVideoUrl = currentActiveMovie.episodeUrls[episode];
@@ -472,7 +472,7 @@ function initMovieStreamApp() {
       iframeVideoPlayer.setAttribute("webkit-playsinline", "true");
       iframeVideoPlayer.setAttribute("x5-playsinline", "true");
       iframeVideoPlayer.src = epVideoUrl;
-      showToast(`เน€เธเธดเธ”เน€เธฅเนเธ เธ•เธญเธเธ—เธตเน ${episode} เน€เธฃเธตเธขเธเธฃเนเธญเธข`, "success");
+      showToast(`เปิดเล่น ตอนที่ ${episode} เรียบร้อย`, "success");
       return;
     }
 
@@ -495,13 +495,13 @@ function initMovieStreamApp() {
       const srcMatch = html.match(/src="([^"]+)"/);
       if (srcMatch && srcMatch[1]) {
         iframeVideoPlayer.src = srcMatch[1];
-        showToast(`เน€เธเธดเธ”เน€เธฅเนเธ เธ•เธญเธเธ—เธตเน ${episode} เน€เธฃเธตเธขเธเธฃเนเธญเธข`, "success");
+        showToast(`เปิดเล่น ตอนที่ ${episode} เรียบร้อย`, "success");
       } else {
-        showToast(`เธชเธฅเธฑเธเน€เธเธดเธ”เน€เธฅเนเธ เธ•เธญเธเธ—เธตเน ${episode}`, "success");
+        showToast(`สลับเปิดเล่น ตอนที่ ${episode}`, "success");
       }
     })
     .catch(() => {
-      showToast(`เธชเธฅเธฑเธเน€เธเธดเธ”เน€เธฅเนเธ เธ•เธญเธเธ—เธตเน ${episode}`, "success");
+      showToast(`สลับเปิดเล่น ตอนที่ ${episode}`, "success");
     });
   }
 
@@ -706,7 +706,7 @@ function initMovieStreamApp() {
     const authLogoutBtn = document.getElementById("authLogoutBtn");
 
     let isRegisterMode = false;
-    // URL Google Apps Script Web App (เน€เธเธทเนเธญเธกเธ•เนเธญ Google Sheet เน€เธฃเธตเธขเธเธฃเนเธญเธข)
+    // URL Google Apps Script Web App (เชื่อมต่อ Google Sheet เรียบร้อย)
     const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyKnLnnu7iJ3uPSV3tdpLO5HL6pZMGy5qzHSLu8Y4RoQq5MIYj1QVFXgZ3miynuNjPX/exec"; 
 
     function updateAuthUI() {
@@ -714,12 +714,12 @@ function initMovieStreamApp() {
       if (savedUser) {
         try {
           const user = JSON.parse(savedUser);
-          if (navAuthBtn) navAuthBtn.innerHTML = `๐‘‘ ${user.phone.substring(0, 3)}*** (${user.status || 'VIP'})`;
-          if (headerAuthBtn) headerAuthBtn.innerHTML = `๐‘‘ VIP`;
+          if (navAuthBtn) navAuthBtn.innerHTML = `👑 ${user.phone.substring(0, 3)}*** (${user.status || 'VIP'})`;
+          if (headerAuthBtn) headerAuthBtn.innerHTML = `👑 VIP`;
         } catch (e) {}
       } else {
-        if (navAuthBtn) navAuthBtn.innerHTML = `๐‘ค เน€เธเนเธฒเธชเธนเนเธฃเธฐเธเธ / เธชเธกเธฒเธเธดเธ`;
-        if (headerAuthBtn) headerAuthBtn.innerHTML = `๐‘ค เธชเธกเธฒเธเธดเธ`;
+        if (navAuthBtn) navAuthBtn.innerHTML = `👤 เข้าสู่ระบบ / สมาชิก`;
+        if (headerAuthBtn) headerAuthBtn.innerHTML = `👤 สมาชิก`;
       }
     }
     updateAuthUI();
@@ -730,10 +730,10 @@ function initMovieStreamApp() {
         const user = JSON.parse(savedUser);
         if (authForm) authForm.style.display = "none";
         if (authProfileView) authProfileView.style.display = "block";
-        if (profilePhone) profilePhone.textContent = `เน€เธเธญเธฃเน: ${user.phone}`;
-        if (profileStatus) profileStatus.textContent = `${user.status || 'VIP Member'} ๐‘‘`;
-        if (authModalTitle) authModalTitle.textContent = "เธเนเธญเธกเธนเธฅเธชเธกเธฒเธเธดเธเธเธญเธเธเธธเธ“";
-        if (authModalDesc) authModalDesc.textContent = "เธเธฑเธเธเธตเน€เธเธทเนเธญเธกเธ•เนเธญเน€เธฃเธตเธขเธเธฃเนเธญเธขเนเธฅเนเธง";
+        if (profilePhone) profilePhone.textContent = `เบอร์: ${user.phone}`;
+        if (profileStatus) profileStatus.textContent = `${user.status || 'VIP Member'} 👑`;
+        if (authModalTitle) authModalTitle.textContent = "ข้อมูลสมาชิกของคุณ";
+        if (authModalDesc) authModalDesc.textContent = "บัญชีเชื่อมต่อเรียบร้อยแล้ว";
       } else {
         if (authForm) authForm.style.display = "block";
         if (authProfileView) authProfileView.style.display = "none";
@@ -751,17 +751,17 @@ function initMovieStreamApp() {
     function setAuthMode(register) {
       isRegisterMode = register;
       if (register) {
-        if (authModalTitle) authModalTitle.textContent = "เธชเธกเธฑเธเธฃเธชเธกเธฒเธเธดเธเนเธซเธกเน (เธเธฃเธต)";
-        if (authModalDesc) authModalDesc.textContent = "เธชเธกเธฑเธเธฃเน€เธเธตเธขเธเธเธฃเธฑเนเธเน€เธ”เธตเธขเธง เธเธฑเธเธ—เธถเธเธฃเธฒเธขเธเธฒเธฃเนเธเธฃเธ”เนเธ”เนเธ•เธฅเธญเธ”เนเธ";
-        if (authSubmitBtn) authSubmitBtn.textContent = "เธขเธทเธเธขเธฑเธเธชเธกเธฑเธเธฃเธชเธกเธฒเธเธดเธ ๐€";
-        if (authToggleText) authToggleText.textContent = "เธกเธตเธเธฑเธเธเธตเธญเธขเธนเนเนเธฅเนเธง?";
-        if (authToggleBtn) authToggleBtn.textContent = "เน€เธเนเธฒเธชเธนเนเธฃเธฐเธเธเธ—เธตเนเธเธตเน";
+        if (authModalTitle) authModalTitle.textContent = "สมัครสมาชิกใหม่ (ฟรี)";
+        if (authModalDesc) authModalDesc.textContent = "สมัครเพียงครั้งเดียว บันทึกรายการโปรดได้ตลอดไป";
+        if (authSubmitBtn) authSubmitBtn.textContent = "ยืนยันสมัครสมาชิก 🚀";
+        if (authToggleText) authToggleText.textContent = "มีบัญชีอยู่แล้ว?";
+        if (authToggleBtn) authToggleBtn.textContent = "เข้าสู่ระบบที่นี่";
       } else {
-        if (authModalTitle) authModalTitle.textContent = "เน€เธเนเธฒเธชเธนเนเธฃเธฐเธเธเธชเธกเธฒเธเธดเธ";
-        if (authModalDesc) authModalDesc.textContent = "เธเธฑเธเธ—เธถเธเธฃเธฒเธขเธเธฒเธฃเนเธเธฃเธ”เนเธฅเธฐเธเธฃเธฐเธงเธฑเธ•เธดเธเธฒเธฃเธ”เธนเธเนเธฒเธกเธญเธธเธเธเธฃเธ“เน";
-        if (authSubmitBtn) authSubmitBtn.textContent = "เน€เธเนเธฒเธชเธนเนเธฃเธฐเธเธ ๐ฌ";
-        if (authToggleText) authToggleText.textContent = "เธขเธฑเธเนเธกเนเธกเธตเธเธฑเธเธเธตเธชเธกเธฒเธเธดเธ?";
-        if (authToggleBtn) authToggleBtn.textContent = "เธชเธกเธฑเธเธฃเธชเธกเธฒเธเธดเธเธเธฃเธต";
+        if (authModalTitle) authModalTitle.textContent = "เข้าสู่ระบบสมาชิก";
+        if (authModalDesc) authModalDesc.textContent = "บันทึกรายการโปรดและประวัติการดูข้ามอุปกรณ์";
+        if (authSubmitBtn) authSubmitBtn.textContent = "เข้าสู่ระบบ 🎬";
+        if (authToggleText) authToggleText.textContent = "ยังไม่มีบัญชีสมาชิก?";
+        if (authToggleBtn) authToggleBtn.textContent = "สมัครสมาชิกฟรี";
       }
     }
 
@@ -788,27 +788,27 @@ function initMovieStreamApp() {
         const password = authPassword ? authPassword.value.trim() : "";
 
         if (!phone || phone.length < 9) {
-          showToast("เธเธฃเธธเธ“เธฒเธเธฃเธญเธเน€เธเธญเธฃเนเนเธ—เธฃเธจเธฑเธเธ—เนเนเธซเนเธ–เธนเธเธ•เนเธญเธ", "info");
+          showToast("กรุณากรอกเบอร์โทรศัพท์ให้ถูกต้อง", "info");
           return;
         }
         if (!password || password.length < 4) {
-          showToast("เธฃเธซเธฑเธชเธเนเธฒเธเธ•เนเธญเธเธกเธตเธญเธขเนเธฒเธเธเนเธญเธข 4 เธซเธฅเธฑเธ", "info");
+          showToast("รหัสผ่านต้องมีอย่างน้อย 4 หลัก", "info");
           return;
         }
 
         authSubmitBtn.disabled = true;
-        authSubmitBtn.textContent = "เธเธณเธฅเธฑเธเธ”เธณเน€เธเธดเธเธเธฒเธฃ...";
+        authSubmitBtn.textContent = "กำลังดำเนินการ...";
 
-        // เธ–เนเธฒเธกเธต Google Script URL เนเธซเนเธขเธดเธ API
+        // ถ้ามี Google Script URL ให้ยิง API
         if (GOOGLE_SCRIPT_URL) {
-          // เธ–เนเธฒเน€เธเนเธเนเธซเธกเธ” "เธชเธกเธฑเธเธฃเธชเธกเธฒเธเธดเธ" เนเธซเนเธ•เธญเธเธชเธเธญเธเธซเธเนเธฒเน€เธงเนเธเธ—เธฑเธเธ—เธต 0.1 เธงเธด (Instant Feedback) เนเธฅเนเธงเธชเนเธเธเนเธญเธกเธนเธฅเน€เธเธทเนเธญเธเธซเธฅเธฑเธ
+          // ถ้าเป็นโหมด "สมัครสมาชิก" ให้ตอบสนองหน้าเว็บทันที 0.1 วิ (Instant Feedback) แล้วส่งข้อมูลเบื้องหลัง
           if (isRegisterMode) {
-            showToast("เธชเธกเธฑเธเธฃเธชเธกเธฒเธเธดเธเธชเธณเน€เธฃเนเธ! เธเธฃเธธเธ“เธฒเธฃเธญเนเธญเธ”เธกเธดเธเธญเธเธธเธกเธฑเธ•เธด โณ", "info");
+            showToast("สมัครสมาชิกสำเร็จ! กรุณารอแอดมินอนุมัติ ⏳", "info");
             closeAuthModal();
             authSubmitBtn.disabled = false;
-            authSubmitBtn.textContent = "เธขเธทเธเธขเธฑเธเธชเธกเธฑเธเธฃเธชเธกเธฒเธเธดเธ ๐€";
+            authSubmitBtn.textContent = "ยืนยันสมัครสมาชิก 🚀";
             
-            // เธชเนเธเธเนเธญเธกเธนเธฅเธเธถเนเธ Google Sheet เน€เธเธทเนเธญเธเธซเธฅเธฑเธเนเธเธ Asynchronous
+            // ส่งข้อมูลขึ้น Google Sheet เบื้องหลังแบบ Asynchronous
             fetch(GOOGLE_SCRIPT_URL, {
               method: "POST",
               headers: { "Content-Type": "text/plain;charset=utf-8" },
@@ -822,7 +822,7 @@ function initMovieStreamApp() {
             return;
           }
 
-          // เธ–เนเธฒเน€เธเนเธเนเธซเธกเธ” "เน€เธเนเธฒเธชเธนเนเธฃเธฐเธเธ" เนเธซเนเน€เธเนเธเธชเธดเธ—เธเธดเนเนเธเธเธเธเธ•เธด
+          // ถ้าเป็นโหมด "เข้าสู่ระบบ" ให้เช็คสิทธิ์แบบปกติ
           try {
             const res = await fetch(GOOGLE_SCRIPT_URL, {
               method: "POST",
@@ -840,7 +840,7 @@ function initMovieStreamApp() {
               result = JSON.parse(text);
             } catch(e) {
               console.error("Response not JSON:", text);
-              showToast("เธชเนเธเธเนเธญเธกเธนเธฅเธชเธณเน€เธฃเนเธ เธฃเธญเธฃเธฐเธเธเธเธฑเธเธ—เธถเธเธชเธฑเธเธเธฃเธนเน", "info");
+              showToast("ส่งข้อมูลสำเร็จ รอระบบบันทึกสักครู่", "info");
               closeAuthModal();
               authSubmitBtn.disabled = false;
               setAuthMode(isRegisterMode);
@@ -850,12 +850,12 @@ function initMovieStreamApp() {
             if (result.success) {
               localStorage.setItem("moviestream_user", JSON.stringify(result.user));
               
-              // เนเธซเธฅเธ”เธฃเธฒเธขเธเธฒเธฃเนเธเธฃเธ”เธเธญเธเธชเธกเธฒเธเธดเธเธเธฒเธ Google Sheet เธกเธฒเนเธเนเธเธฒเธเธ—เธฑเธเธ—เธต
+              // โหลดรายการโปรดของสมาชิกจาก Google Sheet มาใช้งานทันที
               if (result.user && result.user.watchlist) {
                 try {
                   const cloudFavs = typeof result.user.watchlist === "string" ? JSON.parse(result.user.watchlist) : result.user.watchlist;
                   if (Array.isArray(cloudFavs)) {
-                    // เธฃเธงเธกเธฃเธฒเธขเธเธฒเธฃเนเธเธฃเธ”เน€เธ”เธดเธกเนเธเน€เธเธฃเธทเนเธญเธเธเธฑเธเธเธเธเธฅเธฒเธงเธ”เนเน€เธเนเธฒเธ”เนเธงเธขเธเธฑเธ
+                    // รวมรายการโปรดเดิมในเครื่องกับบนคลาวด์เข้าด้วยกัน
                     watchlist = Array.from(new Set([...watchlist, ...cloudFavs]));
                     updateWatchlistUI();
                     showHomeView();
@@ -865,22 +865,22 @@ function initMovieStreamApp() {
                 }
               }
 
-              showToast(result.message || "เน€เธเนเธฒเธชเธนเนเธฃเธฐเธเธเธชเธณเน€เธฃเนเธ! ๐‘‘", "success");
+              showToast(result.message || "เข้าสู่ระบบสำเร็จ! 👑", "success");
               updateAuthUI();
               closeAuthModal();
             } else {
               if (result.isPending) {
-                showToast("โณ เธเธฑเธเธเธตเธเธญเธเธเธธเธ“เธญเธขเธนเนเธฃเธฐเธซเธงเนเธฒเธเธฃเธญเนเธญเธ”เธกเธดเธเธญเธเธธเธกเธฑเธ•เธด", "info");
+                showToast("⏳ บัญชีของคุณอยู่ระหว่างรอแอดมินอนุมัติ", "info");
               } else {
-                showToast(result.message || "เน€เธเธดเธ”เธเนเธญเธเธดเธ”เธเธฅเธฒเธ”", "info");
+                showToast(result.message || "เกิดข้อผิดพลาด", "info");
               }
             }
           } catch (err) {
             console.error("Auth fetch error:", err);
-            showToast("เน€เธเธทเนเธญเธกเธ•เนเธญเธเธฒเธเธเนเธญเธกเธนเธฅเธฅเนเธกเน€เธซเธฅเธง เธ•เธฃเธงเธเธชเธญเธเธญเธดเธเน€เธ—เธญเธฃเนเน€เธเนเธ•", "info");
+            showToast("เชื่อมต่อฐานข้อมูลล้มเหลว ตรวจสอบอินเทอร์เน็ต", "info");
           }
         } else {
-          // เนเธซเธกเธ”เธเธณเธฅเธญเธเนเธเน€เธเธฃเธทเนเธญเธ (Local Storage Offline Mode)
+          // โหมดจำลองในเครื่อง (Local Storage Offline Mode)
           const mockUser = {
             userId: "VIP-" + Math.floor(1000 + Math.random() * 9000),
             phone: phone,
@@ -888,7 +888,7 @@ function initMovieStreamApp() {
             watchlist: JSON.stringify(watchlist)
           };
           localStorage.setItem("moviestream_user", JSON.stringify(mockUser));
-          showToast(isRegisterMode ? "เธชเธกเธฑเธเธฃเธชเธกเธฒเธเธดเธเนเธฅเธฐเน€เธเนเธฒเธชเธนเนเธฃเธฐเธเธเธชเธณเน€เธฃเนเธ! (เนเธซเธกเธ”เธ—เธ”เธชเธญเธ)" : "เน€เธเนเธฒเธชเธนเนเธฃเธฐเธเธเธชเธณเน€เธฃเนเธ! ๐‘‘", "success");
+          showToast(isRegisterMode ? "สมัครสมาชิกและเข้าสู่ระบบสำเร็จ! (โหมดทดสอบ)" : "เข้าสู่ระบบสำเร็จ! 👑", "success");
           updateAuthUI();
           closeAuthModal();
         }
@@ -901,7 +901,7 @@ function initMovieStreamApp() {
     if (authLogoutBtn) {
       authLogoutBtn.addEventListener("click", () => {
         localStorage.removeItem("moviestream_user");
-        showToast("เธญเธญเธเธเธฒเธเธฃเธฐเธเธเน€เธฃเธตเธขเธเธฃเนเธญเธขเนเธฅเนเธง", "info");
+        showToast("ออกจากระบบเรียบร้อยแล้ว", "info");
         updateAuthUI();
         closeAuthModal();
       });
@@ -924,7 +924,7 @@ function initMovieStreamApp() {
         if (currentActiveMovie && currentActiveMovie.postId) {
           loadEpisode(currentActiveMovie.postId, epVal, lang, currentActiveMovie.titleEn || "");
         } else {
-          showToast(`เน€เธเธฅเธตเนเธขเธเธฃเธฐเธเธเน€เธชเธตเธขเธ: ${e.target.options[e.target.selectedIndex].text}`, "success");
+          showToast(`เปลี่ยนระบบเสียง: ${e.target.options[e.target.selectedIndex].text}`, "success");
         }
       });
     }
@@ -968,28 +968,28 @@ function initMovieStreamApp() {
         showHomeView();
       } else if (genre === "today") {
         const todayMovies = movieList.slice(0, 16);
-        showGridView("๐”ฅ เธ เธฒเธเธขเธเธ•เธฃเน & เธเธตเธฃเธตเธชเนเธญเธฑเธเน€เธ”เธ•เธงเธฑเธเธเธตเน", todayMovies);
+        showGridView("🔥 ภาพยนตร์ & ซีรีส์อัปเดตวันนี้", todayMovies);
       } else if (genre === "recommended-series") {
-        const recMovies = movieList.filter(m => (m.genres && (m.genres.includes("เธเธตเธฃเธตเธชเนเนเธเธฐเธเธณเนเธซเธกเน 2026") || m.genres.includes("เธเธตเธฃเธตเธชเนเนเธซเธกเน 2026") || m.genres.includes("เธเธตเธฃเธตเธชเนเนเธเธฐเธเธณ"))) || m.source === "GOSERIES4K" || m.source === "SERIEDAYS");
-        showGridView(`๐”ฅ เธเธตเธฃเธตเธชเนเนเธเธฐเธเธณเนเธซเธกเน 2026 (${recMovies.length} เน€เธฃเธทเนเธญเธ)`, recMovies);
+        const recMovies = movieList.filter(m => (m.genres && (m.genres.includes("ซีรีส์แนะนำใหม่ 2026") || m.genres.includes("ซีรีส์ใหม่ 2026") || m.genres.includes("ซีรีส์แนะนำ"))) || m.source === "GOSERIES4K" || m.source === "SERIEDAYS");
+        showGridView(`🔥 ซีรีส์แนะนำใหม่ 2026 (${recMovies.length} เรื่อง)`, recMovies);
       } else if (genre === "year-2026") {
         const y2026Movies = movieList.filter(m => String(m.year) === "2026" || m.titleTh.includes("2026"));
-        showGridView(`๐“… เธฃเธงเธกเธ เธฒเธเธขเธเธ•เธฃเน & เธเธตเธฃเธตเธชเนเนเธซเธกเนเธเธต 2026 (${y2026Movies.length} เน€เธฃเธทเนเธญเธ)`, y2026Movies);
+        showGridView(`📅 รวมภาพยนตร์ & ซีรีส์ใหม่ปี 2026 (${y2026Movies.length} เรื่อง)`, y2026Movies);
       } else if (genre === "year-2025") {
         const y2025Movies = movieList.filter(m => String(m.year) === "2025" || m.titleTh.includes("2025"));
-        showGridView(`๐“… เธฃเธงเธกเธ เธฒเธเธขเธเธ•เธฃเน & เธเธตเธฃเธตเธชเนเธเธต 2025 (${y2025Movies.length} เน€เธฃเธทเนเธญเธ)`, y2025Movies);
+        showGridView(`📅 รวมภาพยนตร์ & ซีรีส์ปี 2025 (${y2025Movies.length} เรื่อง)`, y2025Movies);
       } else if (genre === "year-2024") {
         const y2024Movies = movieList.filter(m => String(m.year) === "2024" || m.titleTh.includes("2024"));
-        showGridView(`๐“… เธฃเธงเธกเธ เธฒเธเธขเธเธ•เธฃเน & เธเธตเธฃเธตเธชเนเธเธต 2024 (${y2024Movies.length} เน€เธฃเธทเนเธญเธ)`, y2024Movies);
+        showGridView(`📅 รวมภาพยนตร์ & ซีรีส์ปี 2024 (${y2024Movies.length} เรื่อง)`, y2024Movies);
       } else if (genre === "SERIEDAYS") {
-        const sdMovies = movieList.filter(m => m.source === "SERIEDAYS" || (m.genres && (m.genres.includes("เธเธตเธฃเธตเธชเนเนเธซเธกเน 2026") || m.genres.includes("เธเธฒเธเธขเนเนเธ—เธข"))));
-        showGridView(`๐“ เธฃเธงเธกเธเธตเธฃเธตเธชเนเธเธฒเธเธขเนเนเธ—เธขเธขเธญเธ”เธเธดเธขเธก (${sdMovies.length} เน€เธฃเธทเนเธญเธ)`, sdMovies);
+        const sdMovies = movieList.filter(m => m.source === "SERIEDAYS" || (m.genres && (m.genres.includes("ซีรีส์ใหม่ 2026") || m.genres.includes("พากย์ไทย"))));
+        showGridView(`📌 รวมซีรีส์พากย์ไทยยอดนิยม (${sdMovies.length} เรื่อง)`, sdMovies);
       } else if (genre === "24HDX" || genre === "GOSERIES4K") {
         const sourceMovies = movieList.filter(m => m.source === genre);
-        showGridView(`๐“ เธฃเธงเธกเธ เธฒเธเธขเธเธ•เธฃเน & เธเธตเธฃเธตเธชเนเธเธฒเธ ${genre} (${sourceMovies.length} เน€เธฃเธทเนเธญเธ)`, sourceMovies);
+        showGridView(`📌 รวมภาพยนตร์ & ซีรีส์จาก ${genre} (${sourceMovies.length} เรื่อง)`, sourceMovies);
       } else {
         const filtered = movieList.filter(m => m.genres && (m.genres.includes(genre) || m.genres.some(g => g.includes(genre))));
-        showGridView(`เธซเธกเธงเธ”เธซเธกเธนเนเธ เธฒเธเธขเธเธ•เธฃเน: ${genre}`, filtered);
+        showGridView(`หมวดหมู่ภาพยนตร์: ${genre}`, filtered);
       }
     }
 
@@ -1009,7 +1009,7 @@ function initMovieStreamApp() {
                  (m.titleEn && m.titleEn.toLowerCase().includes(query)) ||
                  (m.genres && m.genres.some(g => g.toLowerCase().includes(query)))
           );
-          showGridView(`เธเธฅเธเธฒเธฃเธเนเธเธซเธฒเธชเธณเธซเธฃเธฑเธ: "${query}"`, results);
+          showGridView(`ผลการค้นหาสำหรับ: "${query}"`, results);
         }
       });
     }
@@ -1031,7 +1031,7 @@ function initMovieStreamApp() {
         });
 
         const filtered = movieList.filter(m => m.genres && m.genres.includes(genre));
-        showGridView(`เธซเธกเธงเธ”เธซเธกเธนเนเธ เธฒเธเธขเธเธ•เธฃเน: ${genre}`, filtered);
+        showGridView(`หมวดหมู่ภาพยนตร์: ${genre}`, filtered);
       });
     });
 
@@ -1040,21 +1040,21 @@ function initMovieStreamApp() {
     if (privacyBtn) {
       privacyBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        showToast("เธเนเธขเธเธฒเธขเธเธงเธฒเธกเน€เธเนเธเธชเนเธงเธเธ•เธฑเธง: เน€เธงเนเธเนเธเธ•เนเนเธกเนเธกเธตเธเธฒเธฃเน€เธเนเธเธเนเธญเธกเธนเธฅเธชเนเธงเธเธเธธเธเธเธฅเธเธญเธเธเธนเนเนเธเน", "info");
+        showToast("นโยบายความเป็นส่วนตัว: เว็บไซต์ไม่มีการเก็บข้อมูลส่วนบุคคลของผู้ใช้", "info");
       });
     }
     const dmcaBtn = document.getElementById("dmcaBtn");
     if (dmcaBtn) {
       dmcaBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        showToast("DMCA: เน€เธงเนเธเนเธเธ•เนเธเธตเนเน€เธเนเธเน€เธเธตเธขเธเธชเธทเนเธญเธเธฅเธฒเธเนเธเธเธฒเธฃเธฃเธงเธเธฃเธงเธกเธฅเธดเธเธเนเธเธฒเธเธญเธดเธเน€เธ—เธญเธฃเนเน€เธเนเธ•", "info");
+        showToast("DMCA: เว็บไซต์นี้เป็นเพียงสื่อกลางในการรวบรวมลิงก์จากอินเทอร์เน็ต", "info");
       });
     }
     const contactBtn = document.getElementById("contactBtn");
     if (contactBtn) {
       contactBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        showToast("เธ•เธดเธ”เธ•เนเธญเธเธนเนเธ”เธนเนเธฅเธฃเธฐเธเธ: เธเนเธฒเธเธเนเธญเธเธ—เธฒเธเธฃเธฐเธเธ Cloudflare Stream", "info");
+        showToast("ติดต่อผู้ดูแลระบบ: ผ่านช่องทางระบบ Cloudflare Stream", "info");
       });
     }
   }
