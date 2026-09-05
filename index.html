@@ -95,11 +95,30 @@
       </div>
       <div class="genre-tags" id="genreFilterContainer">
         <button class="genre-tag active" data-genre="all">🎬 ทั้งหมด</button>
+        <button class="genre-tag tag-highlight cw-tag" data-genre="continue-watching" id="tagContinueWatching" style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(99, 102, 241, 0.25)); border: 1px solid #a855f7; color: #fff; font-weight: bold;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          Continue Watching
+        </button>
         <button class="genre-tag tag-highlight" data-genre="today">🔥 อัปเดตวันนี้</button>
         <button class="genre-tag tag-highlight" data-genre="recommended-series">🔥 ซีรีส์แนะนำใหม่ 2026</button>
         <button class="genre-tag tag-highlight" data-genre="24HDX">📌 24-HDX</button>
       </div>
     </section>
+
+    <!-- Continue Watching Shelf Section (ดูล่าสุด / รับชมต่อ) -->
+    <section class="continue-watching-section" id="continueWatchingSection" style="display: none;">
+      <div class="section-header">
+        <h2 class="section-title continue-watching-title">
+          <svg class="cw-title-clock" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          Continue Watching
+        </h2>
+        <button id="clearContinueWatchingBtn" class="cw-btn-clear-all" title="ล้างประวัติดูล่าสุดทั้งหมด">ล้างประวัติทั้งหมด</button>
+      </div>
+      <div class="continue-watching-scroll" id="continueWatchingList">
+        <!-- Will be dynamically populated by JS -->
+      </div>
+    </section>
+
     <!-- Search Results / Watchlist View (Shared Grid Layout) -->
     <div id="gridView" class="grid-container">
       <div class="section-header">
