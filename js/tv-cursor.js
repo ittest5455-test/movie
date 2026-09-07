@@ -358,6 +358,7 @@
 
     if (isEnabled && isArrow) {
       e.preventDefault();
+      ensureWindowFocus();
       if (!isVisible) showCursor();
 
       const normalizedKey =
@@ -391,10 +392,11 @@
           if (html5Video.paused) html5Video.play();
           else html5Video.pause();
         } else if (iframe && iframe.style.display !== 'none') {
-          // IFrame Embed Video: โฟกัสไปที่ iframe ชั่วคราวเพื่อให้คำสั่ง Enter เข้าไปเริ่มเล่นวิดีโอ
+          // IFrame Embed Video: โฟกัสไปที่ iframe
           iframe.focus();
-          // และคืนโฟกัสกลับมาที่ window ทันทีหลังจาก 250ms เพื่อให้ปุ่มลูกศรยังคงเลื่อนเมาส์ได้ต่ออย่างต่อเนื่อง
-          setTimeout(ensureWindowFocus, 250);
+          if (typeof window.showToast === 'function') {
+            window.showToast('💡 คลิกที่ปุ่ม ▶ ตรงกลางจอหนังเพื่อเริ่มเล่น (หรือกดขยายเต็มจอ)', 'info', 3500);
+          }
         }
       } else {
         // ปุ่มอื่นๆ (ปุ่มปิด X, ขยายเต็มจอ, เลือกตอน, ฯลฯ)
@@ -422,18 +424,6 @@
       hideCursor();
     }
   }, { passive: true });
-
-  // คืนค่าโฟกัสเมื่อหน้าต่างเบลอ เพื่อไม่ให้ iframe ดึงโฟกัสไปจนลูกศรขยับไม่ได้
-  window.addEventListener('blur', function () {
-    const playerModal = document.getElementById('playerModal');
-    if (playerModal && playerModal.classList.contains('active')) {
-      setTimeout(() => {
-        if (!document.hidden) {
-          ensureWindowFocus();
-        }
-      }, 350);
-    }
-  });
 
   // ติดตามการเปิด-ปิด playerModal: ให้เมาส์แสดงตรงกลาง และรับปุ่มลูกศรได้ทันที
   function setupPlayerModalWatcher() {
