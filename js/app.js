@@ -1234,29 +1234,28 @@ function initMovieStreamApp() {
             showToast("⏸ พักการเล่นภาพยนตร์", "info");
           }
         } 
-        // 2. Embedded IFrame Video Mode (24-HDX, GOSERIES4K, etc.)
-        else if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
+        // 2. Embedded Video Mode (24-HDX, GOSERIES4K, etc.)
+        else {
           const epNum = episodeSelectBtn ? episodeSelectBtn.value : "1";
-          if (currentActiveMovie) {
-            let targetUrl = currentActiveMovie.videoUrl;
-            if (currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[epNum]) {
-              targetUrl = currentActiveMovie.episodeUrls[epNum];
-            }
-            if (!iframeVideoPlayer.src || iframeVideoPlayer.src === "about:blank" || iframeVideoPlayer.src !== targetUrl) {
-              iframeVideoPlayer.src = targetUrl;
-            }
+          let targetUrl = currentActiveMovie ? currentActiveMovie.videoUrl : "";
+          if (currentActiveMovie && currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[epNum]) {
+            targetUrl = currentActiveMovie.episodeUrls[epNum];
           }
-          
-          // ส่งโฟกัสและสัญญาณควบคุมไปยังหน้าจอเครื่องเล่น
-          try {
-            iframeVideoPlayer.focus();
-            const enterEvt = new KeyboardEvent("keydown", { key: "Enter", code: "Enter", keyCode: 13, which: 13, bubbles: true });
-            iframeVideoPlayer.dispatchEvent(enterEvt);
-            const spaceEvt = new KeyboardEvent("keydown", { key: " ", code: "Space", keyCode: 32, which: 32, bubbles: true });
-            iframeVideoPlayer.dispatchEvent(spaceEvt);
-          } catch (e) {}
+          if (!targetUrl && iframeVideoPlayer && iframeVideoPlayer.src && iframeVideoPlayer.src !== "about:blank") {
+            targetUrl = iframeVideoPlayer.src;
+          }
 
-          showToast("▶ เริ่มการเล่นภาพยนตร์ (กดปุ่ม OK บนรีโมทเพื่อเริ่มเล่น/หยุด)", "success");
+          if (targetUrl) {
+            if (currentActiveMovie) {
+              recordContinueWatching(currentActiveMovie, parseInt(epNum) || 1);
+            }
+            showToast("▶ กำลังเปิดหน้าจอเล่นภาพยนตร์เต็มจอ...", "success");
+            setTimeout(() => {
+              window.location.href = targetUrl;
+            }, 300);
+          } else {
+            showToast("ไม่พบลิงก์วิดีโอ กรุณาลองใหม่อีกครั้ง", "error");
+          }
         }
       });
     }
@@ -1265,8 +1264,12 @@ function initMovieStreamApp() {
     const tvFullscreenBtn = document.getElementById("tvFullscreenBtn");
     if (tvFullscreenBtn) {
       tvFullscreenBtn.addEventListener("click", () => {
-        toggleFullscreen();
-        showToast("🖥 สลับมุมมองเต็มหน้าจอ (TV)", "success");
+        if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
+          toggleFullscreen();
+          showToast("🖥 สลับมุมมองเต็มหน้าจอ (TV)", "success");
+        } else {
+          if (playVideoBtn) playVideoBtn.click();
+        }
       });
     }
 
