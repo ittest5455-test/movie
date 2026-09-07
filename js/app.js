@@ -641,7 +641,9 @@ function initMovieStreamApp() {
       html5VideoPlayer.style.display = "block";
       html5VideoPlayer.src = initialVideoUrl;
       customPlayerControls.style.display = "flex";
-      playerBlockerOverlay.style.display = "none";
+      if (typeof playerBlockerOverlay !== "undefined" && playerBlockerOverlay) {
+        playerBlockerOverlay.style.display = "none";
+      }
       
       // Set volume back to default or saved volume
       html5VideoPlayer.volume = 0.8;
@@ -651,6 +653,10 @@ function initMovieStreamApp() {
       html5VideoPlayer.play()
         .then(() => updatePlayPauseUI(true))
         .catch(() => updatePlayPauseUI(false));
+
+      setTimeout(() => {
+        if (html5VideoPlayer) html5VideoPlayer.focus();
+      }, 350);
         
       showToast(`กำลังโหลดเล่นวิดีโอ: ${movie.titleTh}`, "success");
     } 
@@ -679,6 +685,10 @@ function initMovieStreamApp() {
       iframeVideoPlayer.setAttribute("x5-playsinline", "true");
       iframeVideoPlayer.src = initialVideoUrl;
       
+      setTimeout(() => {
+        if (iframeVideoPlayer) iframeVideoPlayer.focus();
+      }, 350);
+
       const epText = (movie.episodes && movie.episodes.length > 1) ? ` (ตอนที่ ${epInt})` : "";
       showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}${epText}`, "success");
     }
@@ -1200,11 +1210,20 @@ function initMovieStreamApp() {
       });
     }
 
-    // Key Escape to close active modals
+    // Key Escape & TV Remote Back Key (keyCode 4, 27, GoBack, Back) to close active modals
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        closeDetailsModal();
-        closePlayer();
+      const code = e.keyCode || e.which;
+      if (e.key === "Escape" || code === 27 || code === 4 || e.key === "GoBack" || e.key === "Back" || code === 10009) {
+        if (playerModal && playerModal.classList.contains("active")) {
+          e.preventDefault();
+          closePlayer();
+        } else if (detailsModal && detailsModal.classList.contains("active")) {
+          e.preventDefault();
+          closeDetailsModal();
+        } else if (authModal && authModal.classList.contains("active")) {
+          e.preventDefault();
+          closeAuthModal();
+        }
       }
     });
 

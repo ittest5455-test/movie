@@ -1,22 +1,11 @@
-﻿/**
+/**
  * TV Virtual Mouse Cursor (เมาส์เสมือนสำหรับ Android TV)
- * ช่วยให้ใช้รีโมททีวี (ปุ่ม ขึ้น/ลง/ซ้าย/ขวา/ตกลง) เลื่อนเมาส์และคลิกเมนูต่างๆ ได้ง่ายเหมือนใช้คอมพิวเตอร์
+ * ช่วยให้ใช้รีโมททีวี (ปุ่ม ขึ้น/ลง/ซ้าย/ขวา/ตกลง) เลื่อนเมาส์และคลิกเมนูต่างๆ ได้ง่าย
+ * เมื่อเข้าสู่หน้าเครื่องเล่นหนัง จะสลับไปใช้โหมดรีโมททีวีปกติทันที เพื่อให้กดเล่น/หยุด/ขยายจอได้ 100%
  */
 
 (function () {
   'use strict';
-
-  // ตรวจสอบว่าเป็น Android TV หรืออุปกรณ์หน้าจอทีวี
-  const ua = navigator.userAgent.toLowerCase();
-  const isTVDevice = (
-    ua.includes('tv') ||
-    ua.includes('box') ||
-    ua.includes('fire') ||
-    ua.includes('googletv') ||
-    ua.includes('smarttv') ||
-    ua.includes('crkey') ||
-    (ua.includes('android') && (window.innerWidth >= 900 || screen.width >= 900))
-  );
 
   let isEnabled = true;
   let isVisible = false;
@@ -26,10 +15,13 @@
   let animFrameId = null;
   let holdDuration = 0;
   let lastTimestamp = 0;
+  let toggleBtnTimeout = null;
 
-  // ไอคอนลูกศรเมาส์ และไอคอนรูปมือ (SVG)
-  const ARROW_SVG = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="%2322c55e" stroke="%23000000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 3px 6px rgba(0,0,0,0.85));"><polygon points="3 3 10 22 13 13 22 10 3 3"></polygon></svg>`;
-  const HAND_SVG = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="%2338bdf8" stroke="%23000000" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 3px 6px rgba(0,0,0,0.9));"><path d="M18 11V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v3"></path><path d="M14 10V4a2 2 0 0 0-2-2 2 2 0 0 0-2 2v6"></path><path d="M10 10.5V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v8"></path><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path></svg>`;
+  // ตรวจสอบว่ากำลังเปิดหน้าต่างเล่นหนังอยู่หรือไม่
+  function isPlayerActive() {
+    const playerModal = document.getElementById('playerModal');
+    return Boolean(playerModal && playerModal.classList.contains('active'));
+  }
 
   // Injected CSS
   const styleEl = document.createElement('style');
@@ -47,13 +39,13 @@
       display: none;
       will-change: left, top, transform;
     }
-    #tv-virtual-cursor img {
+    #tv-virtual-cursor svg {
       width: 100%;
       height: 100%;
       display: block;
       transition: transform 0.1s ease;
     }
-    #tv-virtual-cursor.clicking img {
+    #tv-virtual-cursor.clicking svg {
       transform: scale(0.75);
     }
     .tv-cursor-ripple {
@@ -74,13 +66,13 @@
       outline-offset: 3px !important;
       box-shadow: 0 0 12px rgba(56, 189, 248, 0.6) !important;
     }
-    /* ป้ายบอกสถานะและปุ่มสลับโหมดเมาส์ที่มุมจอ */
+    /* ป้ายบอกสถานะและปุ่มสลับโหมดเมาส์ที่มุมจอ (ซ่อนอัตโนมัติ ไม่บังจอ) */
     #tv-mouse-toggle-btn {
       position: fixed;
-      bottom: 15px;
-      left: 15px;
+      bottom: 18px;
+      left: 18px;
       z-index: 999990;
-      background: rgba(15, 23, 42, 0.85);
+      background: rgba(15, 23, 42, 0.9);
       backdrop-filter: blur(8px);
       border: 1px solid rgba(255, 255, 255, 0.2);
       color: #cbd5e1;
@@ -92,8 +84,16 @@
       align-items: center;
       gap: 7px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-      transition: 0.2s ease;
+      transition: opacity 0.4s ease, transform 0.4s ease;
       user-select: none;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+    }
+    #tv-mouse-toggle-btn.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
     }
     #tv-mouse-toggle-btn:hover {
       background: rgba(30, 41, 59, 0.95);
@@ -114,12 +114,23 @@
   `;
   document.head.appendChild(styleEl);
 
-  // สร้าง Cursor Element
+  // สร้าง Cursor Element โดยใช้ Inline SVG 100% (ไม่มีแท็ก <img> และไม่มี alt ป้องกันข้อความต่อท้าย)
   const cursorEl = document.createElement('div');
   cursorEl.id = 'tv-virtual-cursor';
-  cursorEl.innerHTML = `<img id="tv-cursor-icon" src="${ARROW_SVG}" alt="cursor" />`;
+  cursorEl.innerHTML = `
+    <svg id="tv-cursor-arrow" width="30" height="30" viewBox="0 0 24 24" fill="#22c55e" stroke="#000000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 3px 6px rgba(0,0,0,0.85)); display: block;">
+      <polygon points="3 3 10 22 13 13 22 10 3 3"></polygon>
+    </svg>
+    <svg id="tv-cursor-hand" width="32" height="32" viewBox="0 0 24 24" fill="#38bdf8" stroke="#000000" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 3px 6px rgba(0,0,0,0.9)); display: none;">
+      <path d="M18 11V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v3"></path>
+      <path d="M14 10V4a2 2 0 0 0-2-2 2 2 0 0 0-2 2v6"></path>
+      <path d="M10 10.5V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v8"></path>
+      <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path>
+    </svg>
+  `;
   document.body.appendChild(cursorEl);
-  const cursorIcon = cursorEl.querySelector('#tv-cursor-icon');
+  const arrowIcon = cursorEl.querySelector('#tv-cursor-arrow');
+  const handIcon = cursorEl.querySelector('#tv-cursor-hand');
 
   // สร้างปุ่ม Toggle โหมดเมาส์
   const toggleBtn = document.createElement('div');
@@ -129,6 +140,14 @@
     <span id="tv-mouse-text">เมาส์รีโมท: เปิด</span>
   `;
   document.body.appendChild(toggleBtn);
+
+  function showToggleBtnBriefly(duration = 3500) {
+    toggleBtn.classList.add('visible');
+    clearTimeout(toggleBtnTimeout);
+    toggleBtnTimeout = setTimeout(() => {
+      toggleBtn.classList.remove('visible');
+    }, duration);
+  }
 
   toggleBtn.addEventListener('click', function () {
     setMouseEnabled(!isEnabled);
@@ -140,16 +159,19 @@
     if (isEnabled) {
       toggleBtn.classList.remove('disabled');
       text.textContent = 'เมาส์รีโมท: เปิด';
-      showCursor();
+      if (!isPlayerActive()) {
+        showCursor();
+      }
     } else {
       toggleBtn.classList.add('disabled');
       text.textContent = 'เมาส์รีโมท: ปิด';
       hideCursor();
     }
+    showToggleBtnBriefly(3000);
   }
 
   function showCursor() {
-    if (!isEnabled) return;
+    if (!isEnabled || isPlayerActive()) return;
     isVisible = true;
     cursorEl.style.display = 'block';
     updateCursorPos();
@@ -159,6 +181,14 @@
     isVisible = false;
     cursorEl.style.display = 'none';
     removeHoverEffect();
+    // ล้างสถานะปุ่มกดค้าง
+    for (const k in keysPressed) delete keysPressed[k];
+    if (animFrameId) {
+      cancelAnimationFrame(animFrameId);
+      animFrameId = null;
+    }
+    holdDuration = 0;
+    lastTimestamp = 0;
   }
 
   function updateCursorPos() {
@@ -180,11 +210,13 @@
         removeHoverEffect();
         currentHoveredEl = clickable;
         currentHoveredEl.classList.add('tv-virtual-hover');
-        cursorIcon.src = HAND_SVG;
+        if (arrowIcon) arrowIcon.style.display = 'none';
+        if (handIcon) handIcon.style.display = 'block';
       }
     } else {
       removeHoverEffect();
-      cursorIcon.src = ARROW_SVG;
+      if (arrowIcon) arrowIcon.style.display = 'block';
+      if (handIcon) handIcon.style.display = 'none';
     }
   }
 
@@ -222,6 +254,16 @@
 
     const target = document.elementFromPoint(cursorX, cursorY);
     if (!target) return;
+
+    // ถ้ากดคลิกโดนพื้นที่เครื่องเล่นหนัง ให้สลับไปโหมดรีโมททันทีและโฟกัสที่ตัวเล่น
+    if (target.closest('#playerModal') || target.id === 'playerModal' || target.id === 'iframeVideoPlayer') {
+      hideCursor();
+      const iframe = document.getElementById('iframeVideoPlayer');
+      const video = document.getElementById('html5VideoPlayer');
+      if (iframe && iframe.style.display !== 'none') iframe.focus();
+      else if (video && video.style.display !== 'none') video.focus();
+      return;
+    }
 
     const clickable = target.closest('button, a, select, input, textarea, .movie-card, .category-pill, [role="button"], [tabindex]') || target;
 
@@ -265,7 +307,6 @@
 
     if (dx !== 0 || dy !== 0) {
       holdDuration += delta;
-      // ความเร็วเริ่มต้น 420px/s และเร่งได้สูงสุด 1300px/s ตามการกดค้าง
       const speed = Math.min(420 + holdDuration * 1150, 1350);
 
       cursorX += dx * speed * delta;
@@ -276,7 +317,7 @@
 
       updateCursorPos();
 
-      // การเลื่อนหน้าจออัตโนมัติ (Auto-scroll) เมื่อเมาส์ชนขอบบนหรือล่าง
+      // Auto-scroll เมื่อเมาส์ชนขอบบนหรือล่าง
       const scrollThreshold = 110;
       if (cursorY < scrollThreshold) {
         const scrollFactor = (scrollThreshold - cursorY) / scrollThreshold;
@@ -306,6 +347,11 @@
     const code = e.keyCode || e.which;
     const key = e.key;
 
+    // ถ้าเปิดหน้าต่างเครื่องเล่นหนัง ให้ผ่านไปให้รีโมทควบคุมเครื่องเล่นตามปกติ 100%
+    if (isPlayerActive()) {
+      return;
+    }
+
     const isArrow = (
       key === 'ArrowUp' || key === 'ArrowDown' || key === 'ArrowLeft' || key === 'ArrowRight' ||
       code === 19 || code === 20 || code === 21 || code === 22 ||
@@ -334,6 +380,8 @@
   }, { passive: false });
 
   window.addEventListener('keyup', function (e) {
+    if (isPlayerActive()) return;
+
     const code = e.keyCode || e.which;
     const key = e.key;
 
@@ -352,9 +400,44 @@
     }
   }, { passive: true });
 
-  // โชว์เมาส์ทันทีเมื่อเปิดเข้าแอป (ตรงกลางจอ)
+  // ติดตามการเปิด-ปิด playerModal อัตโนมัติ
+  function setupPlayerModalWatcher() {
+    const playerModalEl = document.getElementById('playerModal');
+    if (!playerModalEl) return;
+
+    const observer = new MutationObserver((mutations) => {
+      for (const mutation of mutations) {
+        if (mutation.attributeName === 'class') {
+          if (playerModalEl.classList.contains('active')) {
+            // เมื่อเข้าเล่นหนัง ซ่อนเมาส์และส่งโฟกัสไปที่เครื่องเล่นหนัง
+            hideCursor();
+            setTimeout(() => {
+              const iframe = document.getElementById('iframeVideoPlayer');
+              const video = document.getElementById('html5VideoPlayer');
+              if (iframe && iframe.style.display !== 'none') {
+                iframe.focus();
+              } else if (video && video.style.display !== 'none') {
+                video.focus();
+              }
+            }, 300);
+          } else {
+            // เมื่อออกจากหน้าเล่นหนัง คืนค่าเมาส์เสมือนให้เลือกดูหนังเรื่องอื่นต่อได้ทันที
+            if (isEnabled) {
+              setTimeout(showCursor, 150);
+            }
+          }
+        }
+      }
+    });
+
+    observer.observe(playerModalEl, { attributes: true, attributeFilter: ['class'] });
+  }
+
+  // โชว์เมาส์ทันทีเมื่อเปิดเข้าแอป
   function initOnStart() {
+    setupPlayerModalWatcher();
     showCursor();
+    showToggleBtnBriefly(3500);
   }
 
   if (document.readyState === 'loading') {
@@ -362,5 +445,15 @@
   } else {
     initOnStart();
   }
+
+  // Expose API
+  window.tvCursor = {
+    show: showCursor,
+    hide: hideCursor,
+    enable: () => setMouseEnabled(true),
+    disable: () => setMouseEnabled(false),
+    isEnabled: () => isEnabled,
+    isVisible: () => isVisible
+  };
 
 })();

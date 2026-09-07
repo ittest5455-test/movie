@@ -1838,4 +1838,14 @@ footer {
   }
 }
 
-
+/* TV Remote Focus States for Player Modal */
+.player-close-btn:focus,
+.player-select-btn:focus,
+#tvFullscreenBtn:focus,
+.video-screen-wrapper iframe:focus,
+.video-screen-wrapper video:focus,
+.player-btn:focus {
+  outline: 3px solid #22c55e !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 16px rgba(34, 197, 94, 0.85) !important;
+}

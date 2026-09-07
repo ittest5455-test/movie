@@ -225,12 +225,12 @@
     <div class="theater-player-container">
       <div class="player-top-header">
         <h3 class="playing-title" id="playingMovieTitle">กำลังเล่นภาพยนตร์</h3>
-        <button class="player-close-btn" id="playerCloseBtn" aria-label="ปิดเครื่องเล่น">&times;</button>
+        <button class="player-close-btn" id="playerCloseBtn" aria-label="ปิดเครื่องเล่น" tabindex="0">&times;</button>
       </div>
 
       <div class="video-screen-wrapper" id="videoScreenWrapper">
         <!-- Direct HTML5 Video Player -->
-        <video id="html5VideoPlayer" playsinline tabindex="-1"></video>
+        <video id="html5VideoPlayer" playsinline tabindex="0"></video>
         
         <!-- Custom Controls for Direct MP4 Mode -->
         <div class="custom-player-controls" id="customPlayerControls">
@@ -239,7 +239,7 @@
           </div>
           <div class="controls-main-row">
             <div class="controls-left">
-              <button class="player-btn" id="playPauseBtn" aria-label="เล่น/หยุด">
+              <button class="player-btn" id="playPauseBtn" aria-label="เล่น/หยุด" tabindex="0">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" id="playIcon"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" id="pauseIcon" style="display:none;"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
               </button>
@@ -249,7 +249,7 @@
             </div>
             <div class="controls-right">
               <div class="volume-container">
-                <button class="player-btn" id="muteBtn" aria-label="เปิด/ปิดเสียง">
+                <button class="player-btn" id="muteBtn" aria-label="เปิด/ปิดเสียง" tabindex="0">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="volumeHighIcon"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="volumeMuteIcon" style="display:none;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
                 </button>
@@ -257,7 +257,7 @@
                   <div class="volume-filled" id="volumeFilled"></div>
                 </div>
               </div>
-              <button class="player-btn" id="fullscreenBtn" aria-label="เล่นเต็มหน้าจอ">
+              <button class="player-btn" id="fullscreenBtn" aria-label="เล่นเต็มหน้าจอ" tabindex="0">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
               </button>
             </div>
@@ -265,21 +265,24 @@
         </div>
         
         <!-- IFrame Player Container for Embed Iframe -->
-        <iframe id="iframeVideoPlayer" style="display:none;" allowfullscreen="true" scrolling="no" loading="eager" allow="autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline; accelerometer; gyroscope"></iframe>
+        <iframe id="iframeVideoPlayer" style="display:none;" allowfullscreen="true" scrolling="no" loading="eager" tabindex="0" allow="autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline; accelerometer; gyroscope"></iframe>
       </div>
 
       <!-- Bottom Language & Episode Bar -->
       <div class="player-bottom-bar">
-        <select class="player-select-btn" id="audioSelectBtn">
+        <select class="player-select-btn" id="audioSelectBtn" tabindex="0">
           <option value="thai">Thai (พากย์ไทย)</option>
           <option value="soundtrack">Soundtrack (ซับไทย)</option>
         </select>
-        <select class="player-select-btn" id="episodeSelectBtn">
+        <select class="player-select-btn" id="episodeSelectBtn" tabindex="0">
           <option value="1">ตอนที่ 1 (จบในตอน)</option>
         </select>
-        <button class="player-select-btn" id="tvFullscreenBtn" style="background:#22c55e; color:#fff; border:none; margin-left:auto; font-weight:bold; cursor:pointer;">
+        <button class="player-select-btn" id="tvFullscreenBtn" tabindex="0" style="background:#22c55e; color:#fff; border:none; margin-left:auto; font-weight:bold; cursor:pointer;">
           ขยายเต็มจอ (TV)
         </button>
+      </div>
+      <div style="text-align: center; font-size: 0.78rem; color: #94a3b8; padding: 6px 10px; background: rgba(0,0,0,0.4); border-top: 1px solid rgba(255,255,255,0.05);">
+        💡 ใช้ปุ่มลูกศรและปุ่มตกลง (OK) บนรีโมททีวีเพื่อควบคุมเครื่องเล่น | กดปุ่มย้อนกลับ (Back) เพื่อปิด
       </div>
     </div>
   </div>
@@ -336,9 +339,9 @@
   <div class="toast-container" id="toastContainer"></div>
 
   <!-- JavaScript Scripts -->
-  <script src="js/movies.js?v=20260905_0805"></script>
-  <script src="js/app.js?v=20260905_0805"></script>
-  <script src="js/tv-cursor.js?v=20260905_0805"></script>
+  <script src="js/movies.js?v=20260907_0820"></script>
+  <script src="js/app.js?v=20260907_0820"></script>
+  <script src="js/tv-cursor.js?v=20260907_0820"></script>
   <script>
     // Bulletproof direct renderer & counter inline
     (function() {

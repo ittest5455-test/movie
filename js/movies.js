@@ -1,6 +1,70 @@
 // ฐานข้อมูลภาพยนตร์รวม 24-HDX และ GOSERIES4K ปี 2026 พากย์ไทย
 window.movies = [
   {
+    "titleTh": "ฟรี The Mongoose (2026)",
+    "titleEn": "ฟรี The Mongoose (2026)",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/09/The-Mongoose-2026.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/09/The-Mongoose-2026.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=3d99240e2e38e977eaa4675b&b=1445",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี The Mongoose (2026) (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 5.8,
+    "genres": [
+      "24-HDX",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/Z5UOOYYRoQY",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=3d99240e2e38e977eaa4675b&b=1445"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40552",
+    "postId": "40552",
+    "originalUrl": "https://www.24-hdx.com/the-mongoose/"
+  },
+  {
+    "titleTh": "ฟรี God Skin (2026) หมัดเทวา ท้าเดิมพัน",
+    "titleEn": "ฟรี God Skin (2026) หมัดเทวา ท้าเดิมพัน",
+    "year": 2026,
+    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/09/God-Skin-2026-หมัดเทวา-ท้าเดิมพัน.png",
+    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/09/God-Skin-2026-หมัดเทวา-ท้าเดิมพัน.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=573a933ca9ddc929878fd150&b=4819",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี God Skin (2026) หมัดเทวา ท้าเดิมพัน (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 7.1,
+    "genres": [
+      "24-HDX",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/UEah0PyQdWM",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=573a933ca9ddc929878fd150&b=4819"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40566",
+    "postId": "40566",
+    "originalUrl": "https://www.24-hdx.com/god-skin/"
+  },
+  {
     "titleTh": "ฟรี The Whisper Man (2026) เสียงกระซิบ",
     "titleEn": "ฟรี The Whisper Man (2026) เสียงกระซิบ",
     "year": 2026,
@@ -3842,7 +3906,7 @@ window.movies = [
       "พากย์ไทย",
       "GOSERIES4K"
     ],
-    "duration": "ซีรีส์ 6 ตอนจบ",
+    "duration": "ซีรีส์ 7 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "GOSERIES4K",
@@ -3852,7 +3916,8 @@ window.movies = [
       "ตอนที่ 3",
       "ตอนที่ 4",
       "ตอนที่ 5",
-      "ตอนที่ 6"
+      "ตอนที่ 6",
+      "ตอนที่ 7"
     ],
     "episodeUrls": {
       "1": "https://torbo007.com/embed/58cd723c5b2e210f66b62ec4e66e6fd2",
@@ -3860,7 +3925,8 @@ window.movies = [
       "3": "https://torbo007.com/embed/fb688dbdff301648e66a911bd5b31471",
       "4": "https://torbo007.com/embed/ba382a8f631d1d8abeece86b0b46fd53",
       "5": "https://torbo007.com/embed/916ebfbbbd192f47c64399b1ebb2526c",
-      "6": "https://torbo007.com/embed/7087e9e4e7635cf6da95d2832670365d"
+      "6": "https://torbo007.com/embed/7087e9e4e7635cf6da95d2832670365d",
+      "7": "https://torbo007.com/embed/c2a12cf780071689d0d665f384670926"
     },
     "languages": [
       "Thai (พากย์ไทย)"
