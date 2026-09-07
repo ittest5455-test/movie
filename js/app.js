@@ -654,9 +654,8 @@ function initMovieStreamApp() {
         .then(() => updatePlayPauseUI(true))
         .catch(() => updatePlayPauseUI(false));
 
-      setTimeout(() => {
-        if (html5VideoPlayer) html5VideoPlayer.focus();
-      }, 350);
+      window.focus();
+      if (document.body) document.body.focus();
         
       showToast(`กำลังโหลดเล่นวิดีโอ: ${movie.titleTh}`, "success");
     } 
@@ -685,9 +684,8 @@ function initMovieStreamApp() {
       iframeVideoPlayer.setAttribute("x5-playsinline", "true");
       iframeVideoPlayer.src = initialVideoUrl;
       
-      setTimeout(() => {
-        if (iframeVideoPlayer) iframeVideoPlayer.focus();
-      }, 350);
+      window.focus();
+      if (document.body) document.body.focus();
 
       const epText = (movie.episodes && movie.episodes.length > 1) ? ` (ตอนที่ ${epInt})` : "";
       showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}${epText}`, "success");

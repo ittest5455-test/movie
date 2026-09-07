@@ -1,7 +1,7 @@
 /**
  * TV Virtual Mouse Cursor (เมาส์เสมือนสำหรับ Android TV)
  * ช่วยให้ใช้รีโมททีวี (ปุ่ม ขึ้น/ลง/ซ้าย/ขวา/ตกลง) เลื่อนเมาส์และคลิกเมนูต่างๆ ได้ง่าย
- * ทำงานได้ทุกหน้าจอ รวมถึงหน้าเล่นหนัง (Player Modal) สามารถคลิกสั่งเล่น/หยุด/ขยายจอได้สมบูรณ์
+ * ทำงานได้ทุกหน้าจอ รวมถึงหน้าเล่นหนัง (Player Modal) ลูกศรเลื่อนได้ตลอดเวลา ไม่ล็อกโฟกัส
  */
 
 (function () {
@@ -327,6 +327,20 @@
     }
   }
 
+  // ฟังก์ชันรักษาโฟกัสให้อยู่ที่หน้าจอหลัก เพื่อให้รับปุ่มลูกศรได้ตลอด 100%
+  function ensureWindowFocus() {
+    if (document.activeElement && document.activeElement.tagName === 'IFRAME') {
+      document.activeElement.blur();
+    }
+    window.focus();
+    if (document.body) {
+      if (!document.body.hasAttribute('tabindex')) {
+        document.body.setAttribute('tabindex', '-1');
+      }
+      document.body.focus();
+    }
+  }
+
   // ดักจับการกดปุ่มจากรีโมททีวี
   window.addEventListener('keydown', function (e) {
     const code = e.keyCode || e.which;
@@ -345,9 +359,6 @@
     if (isEnabled && isArrow) {
       e.preventDefault();
       if (!isVisible) showCursor();
-
-      // ดึงโฟกัสกลับมาที่หน้าจอหลัก เพื่อให้เมาส์เสมือนเลื่อนได้อย่างอิสระตลอดเวลา
-      window.focus();
 
       const normalizedKey =
         (key === 'ArrowUp' || code === 19 || code === 38) ? 'ArrowUp' :
@@ -380,9 +391,10 @@
           if (html5Video.paused) html5Video.play();
           else html5Video.pause();
         } else if (iframe && iframe.style.display !== 'none') {
-          // IFrame Embed Video: โฟกัสไปที่ iframe และปล่อยปุ่ม Enter ให้เข้าไปสั่ง Play/Pause ใน iframe 100%
+          // IFrame Embed Video: โฟกัสไปที่ iframe ชั่วคราวเพื่อให้คำสั่ง Enter เข้าไปเริ่มเล่นวิดีโอ
           iframe.focus();
-          // ไม่เรียก e.preventDefault() เพื่อให้สัญญาณ Enter จากรีโมทส่งตรงเข้าไปที่ตัวเล่นใน iframe
+          // และคืนโฟกัสกลับมาที่ window ทันทีหลังจาก 250ms เพื่อให้ปุ่มลูกศรยังคงเลื่อนเมาส์ได้ต่ออย่างต่อเนื่อง
+          setTimeout(ensureWindowFocus, 250);
         }
       } else {
         // ปุ่มอื่นๆ (ปุ่มปิด X, ขยายเต็มจอ, เลือกตอน, ฯลฯ)
@@ -411,7 +423,19 @@
     }
   }, { passive: true });
 
-  // ติดตามการเปิด-ปิด playerModal: ให้เมาส์ยังคงอยู่เสมอ
+  // คืนค่าโฟกัสเมื่อหน้าต่างเบลอ เพื่อไม่ให้ iframe ดึงโฟกัสไปจนลูกศรขยับไม่ได้
+  window.addEventListener('blur', function () {
+    const playerModal = document.getElementById('playerModal');
+    if (playerModal && playerModal.classList.contains('active')) {
+      setTimeout(() => {
+        if (!document.hidden) {
+          ensureWindowFocus();
+        }
+      }, 350);
+    }
+  });
+
+  // ติดตามการเปิด-ปิด playerModal: ให้เมาส์แสดงตรงกลาง และรับปุ่มลูกศรได้ทันที
   function setupPlayerModalWatcher() {
     const playerModalEl = document.getElementById('playerModal');
     if (!playerModalEl) return;
@@ -420,12 +444,14 @@
       for (const mutation of mutations) {
         if (mutation.attributeName === 'class') {
           if (playerModalEl.classList.contains('active')) {
-            // เมื่อเปิดหน้าเล่นหนัง ตั้งตำแหน่งเมาส์ให้อยู่ตรงกลางปุ่มเล่นวิดีโอ และแสดงเมาส์ไว้เสมอ!
+            // เมื่อเปิดหน้าเล่นหนัง ตั้งตำแหน่งเมาส์ให้อยู่ตรงกลางปุ่มเล่นวิดีโอ และดึงโฟกัสกลับมาทันที!
             cursorX = window.innerWidth / 2;
             cursorY = window.innerHeight / 2;
             showCursor();
+            setTimeout(ensureWindowFocus, 100);
           } else {
             showCursor();
+            ensureWindowFocus();
           }
         }
       }
@@ -436,6 +462,7 @@
 
   // โชว์เมาส์ทันทีเมื่อเปิดเข้าแอป
   function initOnStart() {
+    ensureWindowFocus();
     setupPlayerModalWatcher();
     showCursor();
     showToggleBtnBriefly(3500);
