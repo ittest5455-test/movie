@@ -62,6 +62,7 @@ function initMovieStreamApp() {
   const volumeFilled = document.getElementById("volumeFilled");
   const fullscreenBtn = document.getElementById("fullscreenBtn");
   const videoScreenWrapper = document.getElementById("videoScreenWrapper");
+  const centerPlayOverlay = document.getElementById("centerPlayOverlay");
 
   const toastContainer = document.getElementById("toastContainer");
 
@@ -601,6 +602,7 @@ function initMovieStreamApp() {
     playerModal.classList.add("active");
     document.body.style.overflow = "hidden";
     currentActiveMovie = movie;
+    if (centerPlayOverlay) centerPlayOverlay.style.display = "flex";
 
     const epInt = parseInt(startEpisode) || 1;
 
@@ -866,9 +868,11 @@ function initMovieStreamApp() {
 
   function updatePlayPauseUI(isPlaying) {
     if (isPlaying) {
-      playIcon.innerHTML = `<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>`; // Pause icon
+      if (playIcon) playIcon.innerHTML = `<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>`; // Pause icon
+      if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
     } else {
-      playIcon.innerHTML = `<path d="M8 5v14l11-7z"></path>`; // Play icon
+      if (playIcon) playIcon.innerHTML = `<path d="M8 5v14l11-7z"></path>`; // Play icon
+      if (centerPlayOverlay) centerPlayOverlay.style.display = "flex";
     }
   }
 
@@ -1297,50 +1301,86 @@ function initMovieStreamApp() {
       });
     }
 
-    // Play Video Button (สำหรับรีโมททีวีและคอมพิวเตอร์)
+    // Unified Play/Pause Handler (รองรับทั้งกดปุ่มตรงกลางจอ และกดปุ่มด้านล่าง - กดได้ 2 ที่)
+    function handlePlayRequest() {
+      // 1. Direct HTML5 / HLS Video Mode
+      if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
+        if (html5VideoPlayer.paused) {
+          html5VideoPlayer.play()
+            .then(() => {
+              updatePlayPauseUI(true);
+              showToast("▶ กำลังเล่นภาพยนตร์", "success");
+            })
+            .catch((err) => {
+              console.warn("Play error:", err);
+              updatePlayPauseUI(false);
+            });
+        } else {
+          html5VideoPlayer.pause();
+          updatePlayPauseUI(false);
+          showToast("⏸ พักการเล่นภาพยนตร์", "info");
+        }
+        return;
+      }
+
+      // 2. Embedded Video Mode (24-HDX, etc.)
+      const epNum = episodeSelectBtn ? episodeSelectBtn.value : "1";
+      let targetUrl = currentActiveMovie ? currentActiveMovie.videoUrl : "";
+      if (currentActiveMovie && currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[epNum]) {
+        targetUrl = currentActiveMovie.episodeUrls[epNum];
+      }
+      if (!targetUrl && iframeVideoPlayer && iframeVideoPlayer.src && iframeVideoPlayer.src !== "about:blank") {
+        targetUrl = iframeVideoPlayer.src;
+      }
+
+      const idMatch = targetUrl ? targetUrl.match(/[?&]id=([a-zA-Z0-9]+)/) : null;
+      if (idMatch && idMatch[1]) {
+        playNativeHls(`/api/hls?id=${idMatch[1]}`, (currentActiveMovie ? currentActiveMovie.titleTh : "ภาพยนตร์"), targetUrl);
+        showToast("▶ เริ่มเล่นภาพยนตร์แล้ว", "success");
+        return;
+      }
+
+      // 3. IFrame Video Mode (Fallback / ซีรีส์แหล่งอื่น)
+      if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
+        if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
+        showToast("▶ กำลังเริ่มเล่นภาพยนตร์...", "success");
+        iframeVideoPlayer.focus();
+        try {
+          iframeVideoPlayer.contentWindow.focus();
+        } catch(e) {}
+      }
+    }
+
+    // Connect Bottom Play Button (ปุ่มเล่นด้านล่าง)
     const playVideoBtn = document.getElementById("playVideoBtn");
     if (playVideoBtn) {
-      playVideoBtn.addEventListener("click", () => {
-        // 1. Direct HTML5 / HLS Video Mode
-        if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
-          if (html5VideoPlayer.paused) {
-            html5VideoPlayer.play()
-              .then(() => {
-                updatePlayPauseUI(true);
-                showToast("▶ กำลังเล่นภาพยนตร์", "success");
-              })
-              .catch((err) => {
-                console.warn("Play error:", err);
-                updatePlayPauseUI(false);
-              });
-          } else {
-            html5VideoPlayer.pause();
-            updatePlayPauseUI(false);
-            showToast("⏸ พักการเล่นภาพยนตร์", "info");
+      playVideoBtn.addEventListener("click", handlePlayRequest);
+      playVideoBtn.addEventListener("keydown", (e) => {
+        const code = e.keyCode || e.which;
+        if (e.key === "ArrowUp" || code === 38 || e.key === "Up") {
+          e.preventDefault();
+          if (centerPlayOverlay && centerPlayOverlay.style.display !== "none") {
+            centerPlayOverlay.focus();
+          } else if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
+            html5VideoPlayer.focus();
+          } else if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
+            iframeVideoPlayer.focus();
           }
-          return;
         }
+      });
+    }
 
-        // 2. Embedded Video Mode (24-HDX, etc.)
-        const epNum = episodeSelectBtn ? episodeSelectBtn.value : "1";
-        let targetUrl = currentActiveMovie ? currentActiveMovie.videoUrl : "";
-        if (currentActiveMovie && currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[epNum]) {
-          targetUrl = currentActiveMovie.episodeUrls[epNum];
-        }
-        if (!targetUrl && iframeVideoPlayer && iframeVideoPlayer.src && iframeVideoPlayer.src !== "about:blank") {
-          targetUrl = iframeVideoPlayer.src;
-        }
-
-        const idMatch = targetUrl ? targetUrl.match(/[?&]id=([a-zA-Z0-9]+)/) : null;
-        if (idMatch && idMatch[1]) {
-          playNativeHls(`/api/hls?id=${idMatch[1]}`, (currentActiveMovie ? currentActiveMovie.titleTh : "ภาพยนตร์"), targetUrl);
-          showToast("▶ เริ่มเล่นภาพยนตร์แล้ว", "success");
-          return;
-        }
-
-        if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
-          showToast("💡 กรุณากดปุ่มเล่นตรงกลาง หรือใช้ปุ่มลูกศร", "info");
-          iframeVideoPlayer.focus();
+    // Connect Center Play Button (ปุ่มเล่นตรงกลางจอ)
+    if (centerPlayOverlay) {
+      centerPlayOverlay.addEventListener("click", handlePlayRequest);
+      centerPlayOverlay.addEventListener("keydown", (e) => {
+        const code = e.keyCode || e.which;
+        if (e.key === "Enter" || code === 13 || e.key === " " || code === 32) {
+          e.preventDefault();
+          handlePlayRequest();
+        } else if (e.key === "ArrowDown" || code === 40 || e.key === "Down") {
+          e.preventDefault();
+          if (playVideoBtn) playVideoBtn.focus();
         }
       });
     }
@@ -1364,11 +1404,12 @@ function initMovieStreamApp() {
       playerBottomBar.addEventListener("keydown", (e) => {
         const code = e.keyCode || e.which;
         if (e.key === "ArrowUp" || code === 38 || e.key === "Up") {
-          if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
-            e.preventDefault();
+          e.preventDefault();
+          if (centerPlayOverlay && centerPlayOverlay.style.display !== "none") {
+            centerPlayOverlay.focus();
+          } else if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
             iframeVideoPlayer.focus();
           } else if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
-            e.preventDefault();
             html5VideoPlayer.focus();
           }
         }

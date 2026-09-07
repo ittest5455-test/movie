@@ -26,7 +26,7 @@
   <meta name="keywords" content="ดูหนังออนไลน์, ดูหนังฟรี, ดูหนังใหม่ 2026, หนังชนโรง, ดูหนัง HD, หนังพากย์ไทย, ดูซีรีส์ฟรี, ดูหนังไม่มีโฆษณา">
   <meta name="robots" content="index, follow">
   <meta name="referrer" content="no-referrer-when-downgrade">
-  <link rel="stylesheet" href="css/style.css?v=20260902_0828">
+  <link rel="stylesheet" href="css/style.css?v=20260907_1130">
   
   <!-- SEO Open Graph Metadata -->
   <meta property="og:title" content="ดูหนังออนไลน์ 2026 ฟรี หนังใหม่ชนโรง HD พากย์ไทย ซับไทย เต็มเรื่อง">
@@ -228,9 +228,17 @@
         <button class="player-close-btn" id="playerCloseBtn" aria-label="ปิดเครื่องเล่น" tabindex="0">&times;</button>
       </div>
 
-      <div class="video-screen-wrapper" id="videoScreenWrapper">
+      <div class="video-screen-wrapper video-frame-wrapper" id="videoScreenWrapper">
         <!-- Direct HTML5 Video Player -->
         <video id="html5VideoPlayer" playsinline tabindex="0"></video>
+        
+        <!-- Big Center Play Button Overlay (ปุ่มเล่นตรงกลางจอ) -->
+        <div class="center-play-overlay" id="centerPlayOverlay" tabindex="0" role="button" aria-label="กดเพื่อเริ่มเล่นภาพยนตร์">
+          <div class="center-play-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+          <span class="center-play-text">▶ กดเพื่อเริ่มเล่น</span>
+        </div>
         
         <!-- Custom Controls for Direct MP4 Mode -->
         <div class="custom-player-controls" id="customPlayerControls">
@@ -344,8 +352,8 @@
 
   <!-- JavaScript Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-  <script src="js/movies.js?v=20260907_1125"></script>
-  <script src="js/app.js?v=20260907_1125"></script>
+  <script src="js/movies.js?v=20260907_1130"></script>
+  <script src="js/app.js?v=20260907_1130"></script>
   <script>
     // Bulletproof direct renderer & counter inline
     (function() {
