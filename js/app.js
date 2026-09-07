@@ -685,7 +685,7 @@ function initMovieStreamApp() {
       iframeVideoPlayer.src = initialVideoUrl;
       
       setTimeout(() => {
-        const pBtn = document.getElementById("playAndFullscreenBtn");
+        const pBtn = document.getElementById("playVideoBtn");
         if (pBtn) pBtn.focus();
       }, 150);
 
@@ -1215,17 +1215,26 @@ function initMovieStreamApp() {
       });
     }
 
-    // Play & Fullscreen Button (สำหรับรีโมททีวีและคอมพิวเตอร์)
-    const playAndFullscreenBtn = document.getElementById("playAndFullscreenBtn");
-    if (playAndFullscreenBtn) {
-      playAndFullscreenBtn.addEventListener("click", () => {
-        // 1. Direct MP4 Video
+    // Play Video Button (สำหรับรีโมททีวีและคอมพิวเตอร์)
+    const playVideoBtn = document.getElementById("playVideoBtn");
+    if (playVideoBtn) {
+      playVideoBtn.addEventListener("click", () => {
+        // 1. Direct MP4 Video Mode
         if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
-          html5VideoPlayer.play()
-            .then(() => updatePlayPauseUI(true))
-            .catch(() => updatePlayPauseUI(false));
+          if (html5VideoPlayer.paused) {
+            html5VideoPlayer.play()
+              .then(() => {
+                updatePlayPauseUI(true);
+                showToast("▶ เริ่มเล่นภาพยนตร์แล้ว", "success");
+              })
+              .catch(() => updatePlayPauseUI(false));
+          } else {
+            html5VideoPlayer.pause();
+            updatePlayPauseUI(false);
+            showToast("⏸ พักการเล่นภาพยนตร์", "info");
+          }
         } 
-        // 2. Embedded IFrame Player
+        // 2. Embedded IFrame Video Mode (24-HDX, GOSERIES4K, etc.)
         else if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
           const epNum = episodeSelectBtn ? episodeSelectBtn.value : "1";
           if (currentActiveMovie) {
@@ -1233,17 +1242,58 @@ function initMovieStreamApp() {
             if (currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[epNum]) {
               targetUrl = currentActiveMovie.episodeUrls[epNum];
             }
-            if (iframeVideoPlayer.src !== targetUrl) {
+            if (!iframeVideoPlayer.src || iframeVideoPlayer.src === "about:blank" || iframeVideoPlayer.src !== targetUrl) {
               iframeVideoPlayer.src = targetUrl;
             }
           }
+          
+          // ส่งโฟกัสและสัญญาณควบคุมไปยังหน้าจอเครื่องเล่น
           try {
             iframeVideoPlayer.focus();
-          } catch(e) {}
-        }
+            const enterEvt = new KeyboardEvent("keydown", { key: "Enter", code: "Enter", keyCode: 13, which: 13, bubbles: true });
+            iframeVideoPlayer.dispatchEvent(enterEvt);
+            const spaceEvt = new KeyboardEvent("keydown", { key: " ", code: "Space", keyCode: 32, which: 32, bubbles: true });
+            iframeVideoPlayer.dispatchEvent(spaceEvt);
+          } catch (e) {}
 
+          showToast("▶ เริ่มการเล่นภาพยนตร์ (กดปุ่ม OK บนรีโมทเพื่อเริ่มเล่น/หยุด)", "success");
+        }
+      });
+    }
+
+    // TV Fullscreen Button (ขยายเต็มจอ TV แยกปุ่มเฉพาะ)
+    const tvFullscreenBtn = document.getElementById("tvFullscreenBtn");
+    if (tvFullscreenBtn) {
+      tvFullscreenBtn.addEventListener("click", () => {
         toggleFullscreen();
-        showToast("▶ กำลังเล่นภาพยนตร์แบบเต็มจอ (TV)", "success");
+        showToast("🖥 สลับมุมมองเต็มหน้าจอ (TV)", "success");
+      });
+    }
+
+    // D-Pad Navigation Helper for Player Modal (ArrowUp ไปที่จอภาพ / ArrowDown ลงมาที่เมนูปุ่ม)
+    const playerBottomBar = document.querySelector(".player-bottom-bar");
+    if (playerBottomBar) {
+      playerBottomBar.addEventListener("keydown", (e) => {
+        const code = e.keyCode || e.which;
+        if (e.key === "ArrowUp" || code === 38 || e.key === "Up") {
+          if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
+            e.preventDefault();
+            iframeVideoPlayer.focus();
+          } else if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
+            e.preventDefault();
+            html5VideoPlayer.focus();
+          }
+        }
+      });
+    }
+
+    if (iframeVideoPlayer) {
+      iframeVideoPlayer.addEventListener("keydown", (e) => {
+        const code = e.keyCode || e.which;
+        if (e.key === "ArrowDown" || code === 40 || e.key === "Down") {
+          e.preventDefault();
+          if (playVideoBtn) playVideoBtn.focus();
+        }
       });
     }
 
