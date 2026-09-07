@@ -1112,6 +1112,68 @@ footer {
   background: linear-gradient(135deg, #ff416c, #ff4b2b);
 }
 
+/* Persistent Player Timeline Bar (แถบเวลาเล่นหนังเลื่อนตามจริง) */
+.player-timeline-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  background: #090d16;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
+}
+
+.timeline-time-text {
+  color: #94a3b8;
+  font-size: 0.88rem;
+  font-weight: 600;
+  font-family: monospace, sans-serif;
+  min-width: 48px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.timeline-slider-container {
+  flex: 1;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+
+.timeline-slider-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  transition: height 0.15s ease;
+}
+
+.timeline-slider-container:hover .timeline-slider-track,
+.timeline-slider-container:focus .timeline-slider-track {
+  height: 8px;
+}
+
+.timeline-slider-container:focus {
+  outline: 2px solid #22c55e !important;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.timeline-slider-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #3b82f6, #a855f7, #ec4899);
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.7);
+  transition: width 0.1s linear;
+}
+
 /* Player Bottom Selectors Bar */
 .player-bottom-bar {
   display: flex;
@@ -1196,13 +1258,15 @@ footer {
   height: 8px;
 }
 
-.progress-filled {
+.progress-filled,
+.progress-bar-filled {
   height: 100%;
-  background-color: var(--color-accent);
+  background: linear-gradient(90deg, #3b82f6, #a855f7, #ec4899);
   border-radius: 3px;
-  width: 0;
+  width: 0%;
   position: relative;
-  box-shadow: 0 0 10px var(--color-accent-glow);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.8);
+  transition: width 0.1s linear;
 }
 
 .progress-handle {

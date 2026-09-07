@@ -63,6 +63,10 @@ function initMovieStreamApp() {
   const fullscreenBtn = document.getElementById("fullscreenBtn");
   const videoScreenWrapper = document.getElementById("videoScreenWrapper");
   const centerPlayOverlay = document.getElementById("centerPlayOverlay");
+  const bottomProgressBarContainer = document.getElementById("bottomProgressBarContainer");
+  const bottomProgressBarFilled = document.getElementById("bottomProgressBarFilled");
+  const bottomCurrentTimeLabel = document.getElementById("bottomCurrentTime");
+  const bottomTotalDurationLabel = document.getElementById("bottomTotalDuration");
 
   const toastContainer = document.getElementById("toastContainer");
 
@@ -680,6 +684,7 @@ function initMovieStreamApp() {
   let hlsInstance = null;
 
   function playNativeHls(streamUrl, movieTitle, originalEmbedUrl) {
+    window._activeVideoDuration = 0;
     if (hlsInstance) {
       try { hlsInstance.destroy(); } catch(e) {}
       hlsInstance = null;
@@ -700,6 +705,13 @@ function initMovieStreamApp() {
 
       hlsInstance.loadSource(streamUrl);
       hlsInstance.attachMedia(html5VideoPlayer);
+
+      hlsInstance.on(Hls.Events.LEVEL_LOADED, function (event, data) {
+        if (data.details && typeof data.details.totalduration === "number" && data.details.totalduration > 0) {
+          window._activeVideoDuration = data.details.totalduration;
+          updateTimeAndProgress();
+        }
+      });
 
       hlsInstance.on(Hls.Events.MANIFEST_PARSED, function () {
         html5VideoPlayer.play()
@@ -837,6 +849,7 @@ function initMovieStreamApp() {
   }
 
   function closePlayer() {
+    window._activeVideoDuration = 0;
     playerModal.classList.remove("active");
     document.body.style.overflow = "";
     
@@ -878,12 +891,18 @@ function initMovieStreamApp() {
 
   // Skip time (seconds)
   function skipTime(amount) {
-    html5VideoPlayer.currentTime += amount;
+    if (!html5VideoPlayer) return;
+    const dur = isFinite(html5VideoPlayer.duration) && html5VideoPlayer.duration > 0
+      ? html5VideoPlayer.duration
+      : (window._activeVideoDuration || 0);
+    const newTime = Math.max(0, Math.min(dur || 999999, (html5VideoPlayer.currentTime || 0) + amount));
+    html5VideoPlayer.currentTime = newTime;
+    updateTimeAndProgress();
   }
 
   // Format time (seconds -> hh:mm:ss / mm:ss)
   function formatTime(seconds) {
-    if (isNaN(seconds)) return "00:00";
+    if (!isFinite(seconds) || isNaN(seconds) || seconds < 0) return "00:00";
     const hrs = Math.floor(seconds / 3600);
     const mins = Math.floor((seconds % 3600) / 60);
     const secs = Math.floor(seconds % 60);
@@ -897,38 +916,100 @@ function initMovieStreamApp() {
     return result;
   }
 
-  // Update progress bar as video plays
-  if (html5VideoPlayer) {
-    html5VideoPlayer.addEventListener("timeupdate", () => {
-      const curTime = html5VideoPlayer.currentTime;
-      const durTime = html5VideoPlayer.duration;
-      
-      if (durTime > 0 && progressBarFilled) {
-        const percentage = (curTime / durTime) * 100;
-        progressBarFilled.style.width = `${percentage}%`;
+  // Unified Real-time Timeline & Progress Bar Updater
+  function updateTimeAndProgress() {
+    if (!html5VideoPlayer) return;
+    const curTime = html5VideoPlayer.currentTime || 0;
+    let durTime = html5VideoPlayer.duration;
+    if (!isFinite(durTime) || isNaN(durTime) || durTime <= 0) {
+      durTime = window._activeVideoDuration || 0;
+    }
 
-        // Save progress to Continue Watching periodically (every 5 seconds)
-        if (currentActiveMovie && (!window._lastCwSync || Date.now() - window._lastCwSync > 5000)) {
-          window._lastCwSync = Date.now();
-          const ep = parseInt(episodeSelectBtn ? episodeSelectBtn.value : 1) || 1;
-          recordContinueWatching(currentActiveMovie, ep, Math.round(percentage));
-        }
+    if (durTime > 0) {
+      const percentage = Math.min(100, Math.max(0, (curTime / durTime) * 100));
+      if (progressBarFilled) progressBarFilled.style.width = `${percentage}%`;
+      if (bottomProgressBarFilled) bottomProgressBarFilled.style.width = `${percentage}%`;
+
+      // Save progress to Continue Watching periodically (every 5 seconds)
+      if (currentActiveMovie && (!window._lastCwSync || Date.now() - window._lastCwSync > 5000)) {
+        window._lastCwSync = Date.now();
+        const ep = parseInt(episodeSelectBtn ? episodeSelectBtn.value : 1) || 1;
+        recordContinueWatching(currentActiveMovie, ep, Math.round(percentage));
       }
-      
-      if (currentTimeLabel) currentTimeLabel.textContent = formatTime(curTime);
-    });
+    }
 
-    html5VideoPlayer.addEventListener("loadedmetadata", () => {
-      if (totalDurationLabel) totalDurationLabel.textContent = formatTime(html5VideoPlayer.duration);
-    });
+    const curStr = formatTime(curTime);
+    if (currentTimeLabel) currentTimeLabel.textContent = curStr;
+    if (bottomCurrentTimeLabel) bottomCurrentTimeLabel.textContent = curStr;
+
+    if (durTime > 0) {
+      const durStr = formatTime(durTime);
+      if (totalDurationLabel) totalDurationLabel.textContent = durStr;
+      if (bottomTotalDurationLabel) bottomTotalDurationLabel.textContent = durStr;
+    }
   }
 
-  // Seeking on Progress Bar Click
+  // Update progress bar as video plays
+  if (html5VideoPlayer) {
+    html5VideoPlayer.addEventListener("timeupdate", updateTimeAndProgress);
+    html5VideoPlayer.addEventListener("durationchange", updateTimeAndProgress);
+    html5VideoPlayer.addEventListener("loadedmetadata", updateTimeAndProgress);
+    html5VideoPlayer.addEventListener("progress", updateTimeAndProgress);
+  }
+
+  // Seeking Helper
+  function seekVideoToPosition(posRatio) {
+    if (!html5VideoPlayer) return;
+    let dur = html5VideoPlayer.duration;
+    if (!isFinite(dur) || isNaN(dur) || dur <= 0) {
+      dur = window._activeVideoDuration || 0;
+    }
+    if (dur > 0) {
+      html5VideoPlayer.currentTime = Math.max(0, Math.min(dur, posRatio * dur));
+      updateTimeAndProgress();
+    }
+  }
+
+  // Seeking on Top Progress Bar Click
   if (progressBarContainer) {
     progressBarContainer.addEventListener("click", (e) => {
       const rect = progressBarContainer.getBoundingClientRect();
-      const pos = (e.clientX - rect.left) / rect.width;
-      html5VideoPlayer.currentTime = pos * html5VideoPlayer.duration;
+      seekVideoToPosition((e.clientX - rect.left) / rect.width);
+    });
+  }
+
+  // Seeking on Bottom Timeline Bar (คลิกหรือใช้รีโมททีวีเลื่อนเวลา)
+  if (bottomProgressBarContainer) {
+    bottomProgressBarContainer.addEventListener("click", (e) => {
+      const rect = bottomProgressBarContainer.getBoundingClientRect();
+      seekVideoToPosition((e.clientX - rect.left) / rect.width);
+    });
+
+    bottomProgressBarContainer.addEventListener("keydown", (e) => {
+      const code = e.keyCode || e.which;
+      if (e.key === "ArrowLeft" || code === 37 || e.key === "Left") {
+        e.preventDefault();
+        skipTime(-10);
+        showToast("⏪ กรอถอยหลัง 10 วินาที", "info");
+      } else if (e.key === "ArrowRight" || code === 39 || e.key === "Right") {
+        e.preventDefault();
+        skipTime(10);
+        showToast("⏩ กรอไปข้างหน้า 10 วินาที", "info");
+      } else if (e.key === "ArrowUp" || code === 38 || e.key === "Up") {
+        e.preventDefault();
+        if (centerPlayOverlay && centerPlayOverlay.style.display !== "none") {
+          centerPlayOverlay.focus();
+        } else if (html5VideoPlayer) {
+          html5VideoPlayer.focus();
+        }
+      } else if (e.key === "ArrowDown" || code === 40 || e.key === "Down") {
+        e.preventDefault();
+        const pBtn = document.getElementById("playVideoBtn");
+        if (pBtn) pBtn.focus();
+      } else if (e.key === "Enter" || code === 13 || e.key === " " || code === 32) {
+        e.preventDefault();
+        handlePlayRequest();
+      }
     });
   }
 
@@ -1359,7 +1440,9 @@ function initMovieStreamApp() {
         const code = e.keyCode || e.which;
         if (e.key === "ArrowUp" || code === 38 || e.key === "Up") {
           e.preventDefault();
-          if (centerPlayOverlay && centerPlayOverlay.style.display !== "none") {
+          if (bottomProgressBarContainer) {
+            bottomProgressBarContainer.focus();
+          } else if (centerPlayOverlay && centerPlayOverlay.style.display !== "none") {
             centerPlayOverlay.focus();
           } else if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
             html5VideoPlayer.focus();
@@ -1380,7 +1463,11 @@ function initMovieStreamApp() {
           handlePlayRequest();
         } else if (e.key === "ArrowDown" || code === 40 || e.key === "Down") {
           e.preventDefault();
-          if (playVideoBtn) playVideoBtn.focus();
+          if (bottomProgressBarContainer) {
+            bottomProgressBarContainer.focus();
+          } else if (playVideoBtn) {
+            playVideoBtn.focus();
+          }
         }
       });
     }
@@ -1398,14 +1485,16 @@ function initMovieStreamApp() {
       });
     }
 
-    // D-Pad Navigation Helper for Player Modal (ArrowUp ไปที่จอภาพ / ArrowDown ลงมาที่เมนูปุ่ม)
+    // D-Pad Navigation Helper for Player Modal (ArrowUp ไปที่แถบเวลา / ArrowDown ลงมาที่เมนูปุ่ม)
     const playerBottomBar = document.querySelector(".player-bottom-bar");
     if (playerBottomBar) {
       playerBottomBar.addEventListener("keydown", (e) => {
         const code = e.keyCode || e.which;
         if (e.key === "ArrowUp" || code === 38 || e.key === "Up") {
           e.preventDefault();
-          if (centerPlayOverlay && centerPlayOverlay.style.display !== "none") {
+          if (bottomProgressBarContainer) {
+            bottomProgressBarContainer.focus();
+          } else if (centerPlayOverlay && centerPlayOverlay.style.display !== "none") {
             centerPlayOverlay.focus();
           } else if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
             iframeVideoPlayer.focus();
@@ -1421,7 +1510,11 @@ function initMovieStreamApp() {
         const code = e.keyCode || e.which;
         if (e.key === "ArrowDown" || code === 40 || e.key === "Down") {
           e.preventDefault();
-          if (playVideoBtn) playVideoBtn.focus();
+          if (bottomProgressBarContainer) {
+            bottomProgressBarContainer.focus();
+          } else if (playVideoBtn) {
+            playVideoBtn.focus();
+          }
         }
       });
     }

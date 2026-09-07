@@ -26,7 +26,7 @@
   <meta name="keywords" content="ดูหนังออนไลน์, ดูหนังฟรี, ดูหนังใหม่ 2026, หนังชนโรง, ดูหนัง HD, หนังพากย์ไทย, ดูซีรีส์ฟรี, ดูหนังไม่มีโฆษณา">
   <meta name="robots" content="index, follow">
   <meta name="referrer" content="no-referrer-when-downgrade">
-  <link rel="stylesheet" href="css/style.css?v=20260907_1130">
+  <link rel="stylesheet" href="css/style.css?v=20260907_1135">
   
   <!-- SEO Open Graph Metadata -->
   <meta property="og:title" content="ดูหนังออนไลน์ 2026 ฟรี หนังใหม่ชนโรง HD พากย์ไทย ซับไทย เต็มเรื่อง">
@@ -276,6 +276,17 @@
         <iframe id="iframeVideoPlayer" style="display:none;" allowfullscreen="true" scrolling="no" loading="eager" tabindex="0" allow="autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline; accelerometer; gyroscope"></iframe>
       </div>
 
+      <!-- Persistent Player Timeline & Progress Bar (แถบเวลาเลื่อนตามจริง) -->
+      <div class="player-timeline-bar" id="playerTimelineBar">
+        <span class="timeline-time-text" id="bottomCurrentTime">00:00</span>
+        <div class="timeline-slider-container" id="bottomProgressBarContainer" tabindex="0" role="slider" aria-label="แถบเวลาภาพยนตร์">
+          <div class="timeline-slider-track">
+            <div class="timeline-slider-fill" id="bottomProgressBarFilled"></div>
+          </div>
+        </div>
+        <span class="timeline-time-text" id="bottomTotalDuration">00:00</span>
+      </div>
+
       <!-- Bottom Language & Episode Bar -->
       <div class="player-bottom-bar">
         <select class="player-select-btn" id="audioSelectBtn" tabindex="0">
@@ -352,8 +363,8 @@
 
   <!-- JavaScript Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-  <script src="js/movies.js?v=20260907_1130"></script>
-  <script src="js/app.js?v=20260907_1130"></script>
+  <script src="js/movies.js?v=20260907_1135"></script>
+  <script src="js/app.js?v=20260907_1135"></script>
   <script>
     // Bulletproof direct renderer & counter inline
     (function() {
