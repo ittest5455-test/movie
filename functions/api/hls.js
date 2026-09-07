@@ -28,7 +28,8 @@ export async function onRequest(context) {
       const chunkRes = await fetch(ts, { headers: fetchHeaders });
 
       const responseHeaders = new Headers(corsHeaders);
-      responseHeaders.set("Content-Type", chunkRes.headers.get("Content-Type") || "video/mp2t");
+      const isMp4 = ts.includes(".mp4") || ts.includes(".m4s");
+      responseHeaders.set("Content-Type", isMp4 ? "video/mp4" : "video/mp2t");
       const len = chunkRes.headers.get("Content-Length");
       if (len) responseHeaders.set("Content-Length", len);
       if (chunkRes.headers.get("Content-Range")) {

@@ -713,13 +713,25 @@ function initMovieStreamApp() {
 
       hlsInstance.on(Hls.Events.ERROR, function (event, data) {
         if (data.fatal) {
-          console.warn("HLS fatal error, falling back to iframe:", data);
-          if (hlsInstance) {
-            try { hlsInstance.destroy(); } catch(e) {}
-            hlsInstance = null;
-          }
-          if (originalEmbedUrl) {
-            fallbackToIframe(originalEmbedUrl);
+          switch (data.type) {
+            case Hls.ErrorTypes.NETWORK_ERROR:
+              console.warn("HLS network error, attempting to recover...");
+              hlsInstance.startLoad();
+              break;
+            case Hls.ErrorTypes.MEDIA_ERROR:
+              console.warn("HLS media error, attempting to recover...");
+              hlsInstance.recoverMediaError();
+              break;
+            default:
+              console.warn("HLS unrecoverable error, fallback to iframe:", data);
+              if (hlsInstance) {
+                try { hlsInstance.destroy(); } catch(e) {}
+                hlsInstance = null;
+              }
+              if (originalEmbedUrl) {
+                fallbackToIframe(originalEmbedUrl);
+              }
+              break;
           }
         }
       });
