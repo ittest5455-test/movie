@@ -684,8 +684,10 @@ function initMovieStreamApp() {
       iframeVideoPlayer.setAttribute("x5-playsinline", "true");
       iframeVideoPlayer.src = initialVideoUrl;
       
-      window.focus();
-      if (document.body) document.body.focus();
+      setTimeout(() => {
+        const pBtn = document.getElementById("playAndFullscreenBtn");
+        if (pBtn) pBtn.focus();
+      }, 150);
 
       const epText = (movie.episodes && movie.episodes.length > 1) ? ` (ตอนที่ ${epInt})` : "";
       showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}${epText}`, "success");
@@ -1210,6 +1212,38 @@ function initMovieStreamApp() {
         } else {
           showToast("ภาพยนตร์เต็มเรื่อง (จบในตอน)", "info");
         }
+      });
+    }
+
+    // Play & Fullscreen Button (สำหรับรีโมททีวีและคอมพิวเตอร์)
+    const playAndFullscreenBtn = document.getElementById("playAndFullscreenBtn");
+    if (playAndFullscreenBtn) {
+      playAndFullscreenBtn.addEventListener("click", () => {
+        // 1. Direct MP4 Video
+        if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
+          html5VideoPlayer.play()
+            .then(() => updatePlayPauseUI(true))
+            .catch(() => updatePlayPauseUI(false));
+        } 
+        // 2. Embedded IFrame Player
+        else if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
+          const epNum = episodeSelectBtn ? episodeSelectBtn.value : "1";
+          if (currentActiveMovie) {
+            let targetUrl = currentActiveMovie.videoUrl;
+            if (currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[epNum]) {
+              targetUrl = currentActiveMovie.episodeUrls[epNum];
+            }
+            if (iframeVideoPlayer.src !== targetUrl) {
+              iframeVideoPlayer.src = targetUrl;
+            }
+          }
+          try {
+            iframeVideoPlayer.focus();
+          } catch(e) {}
+        }
+
+        toggleFullscreen();
+        showToast("▶ กำลังเล่นภาพยนตร์แบบเต็มจอ (TV)", "success");
       });
     }
 

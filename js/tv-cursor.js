@@ -6,8 +6,8 @@
 
 (function () {
   'use strict';
-
-  let isEnabled = true;
+  // Deactivated: Standard Android TV Remote D-Pad Navigation is used instead of virtual mouse
+  return;
   let isVisible = false;
   let cursorX = window.innerWidth / 2;
   let cursorY = window.innerHeight / 2;
