@@ -645,53 +645,130 @@ function initMovieStreamApp() {
         playerBlockerOverlay.style.display = "none";
       }
       
-      // Set volume back to default or saved volume
       html5VideoPlayer.volume = 0.8;
       updateVolumeBarUI();
       
-      // Auto Play
       html5VideoPlayer.play()
         .then(() => updatePlayPauseUI(true))
         .catch(() => updatePlayPauseUI(false));
 
-      window.focus();
-      if (document.body) document.body.focus();
-        
-      showToast(`กำลังโหลดเล่นวิดีโอ: ${movie.titleTh}`, "success");
-    } 
-    // 2. Embedded IFrame Video Player
-    else if (movie.sourceType === "embed") {
-      html5VideoPlayer.style.display = "none";
-      html5VideoPlayer.pause();
-      html5VideoPlayer.src = "";
-      customPlayerControls.style.display = "none";
-      iframeVideoPlayer.style.display = "block";
-      
-      // Safe player setup: Never apply sandbox on iPhone/iOS/Mobile to prevent 403 stream token block
-      const isMobileDevice = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      const isGOSeries = (typeof movie !== "undefined" && movie && movie.source === "GOSERIES4K") || (typeof currentActiveMovie !== "undefined" && currentActiveMovie && currentActiveMovie.source === "GOSERIES4K");
-      
-      if (!isMobileDevice && isGOSeries) {
-        iframeVideoPlayer.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms allow-presentation allow-downloads");
-      } else {
-        iframeVideoPlayer.removeAttribute("sandbox");
-      }
-      
-      iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
-      iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline; accelerometer; gyroscope");
-      iframeVideoPlayer.setAttribute("playsinline", "true");
-      iframeVideoPlayer.setAttribute("webkit-playsinline", "true");
-      iframeVideoPlayer.setAttribute("x5-playsinline", "true");
-      iframeVideoPlayer.src = initialVideoUrl;
-      
       setTimeout(() => {
         const pBtn = document.getElementById("playVideoBtn");
         if (pBtn) pBtn.focus();
       }, 150);
+        
+      showToast(`กำลังโหลดเล่นวิดีโอ: ${movie.titleTh}`, "success");
+      return;
+    } 
 
-      const epText = (movie.episodes && movie.episodes.length > 1) ? ` (ตอนที่ ${epInt})` : "";
-      showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}${epText}`, "success");
+    // 2. 24playerhd Stream via Native HLS (เล่นได้ทันทีภายในหน้านี้ ไม่ต้องเต็มจอ)
+    const idMatch = initialVideoUrl ? initialVideoUrl.match(/[?&]id=([a-zA-Z0-9]+)/) : null;
+    if (idMatch && idMatch[1]) {
+      const hlsUrl = `/api/hls?id=${idMatch[1]}`;
+      playNativeHls(hlsUrl, movie.titleTh, initialVideoUrl);
+      return;
     }
+
+    // 3. Embedded IFrame Video Player (Fallback สำหรับซีรีส์แหล่งอื่น)
+    fallbackToIframe(initialVideoUrl);
+    const epText = (movie.episodes && movie.episodes.length > 1) ? ` (ตอนที่ ${epInt})` : "";
+    showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}${epText}`, "success");
+  }
+
+  let hlsInstance = null;
+
+  function playNativeHls(streamUrl, movieTitle, originalEmbedUrl) {
+    if (hlsInstance) {
+      try { hlsInstance.destroy(); } catch(e) {}
+      hlsInstance = null;
+    }
+
+    iframeVideoPlayer.style.display = "none";
+    iframeVideoPlayer.src = "about:blank";
+
+    html5VideoPlayer.style.display = "block";
+    customPlayerControls.style.display = "flex";
+
+    if (window.Hls && Hls.isSupported()) {
+      hlsInstance = new Hls({
+        debug: false,
+        enableWorker: true,
+        lowLatencyMode: false
+      });
+
+      hlsInstance.loadSource(streamUrl);
+      hlsInstance.attachMedia(html5VideoPlayer);
+
+      hlsInstance.on(Hls.Events.MANIFEST_PARSED, function () {
+        html5VideoPlayer.play()
+          .then(() => {
+            updatePlayPauseUI(true);
+            showToast(`▶ กำลังเล่นภาพยนตร์: ${movieTitle}`, "success");
+          })
+          .catch((err) => {
+            console.warn("Autoplay notice:", err);
+            updatePlayPauseUI(false);
+          });
+      });
+
+      hlsInstance.on(Hls.Events.ERROR, function (event, data) {
+        if (data.fatal) {
+          console.warn("HLS fatal error, falling back to iframe:", data);
+          if (hlsInstance) {
+            try { hlsInstance.destroy(); } catch(e) {}
+            hlsInstance = null;
+          }
+          if (originalEmbedUrl) {
+            fallbackToIframe(originalEmbedUrl);
+          }
+        }
+      });
+    } else if (html5VideoPlayer.canPlayType("application/vnd.apple.mpegurl")) {
+      html5VideoPlayer.src = streamUrl;
+      html5VideoPlayer.play()
+        .then(() => updatePlayPauseUI(true))
+        .catch(() => updatePlayPauseUI(false));
+    } else {
+      if (originalEmbedUrl) fallbackToIframe(originalEmbedUrl);
+    }
+
+    setTimeout(() => {
+      const pBtn = document.getElementById("playVideoBtn");
+      if (pBtn) pBtn.focus();
+    }, 150);
+  }
+
+  function fallbackToIframe(url) {
+    if (hlsInstance) {
+      try { hlsInstance.destroy(); } catch(e) {}
+      hlsInstance = null;
+    }
+    html5VideoPlayer.style.display = "none";
+    html5VideoPlayer.pause();
+    html5VideoPlayer.src = "";
+    customPlayerControls.style.display = "none";
+    iframeVideoPlayer.style.display = "block";
+
+    const isMobileDevice = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const isGOSeries = (typeof currentActiveMovie !== "undefined" && currentActiveMovie && currentActiveMovie.source === "GOSERIES4K");
+    
+    if (!isMobileDevice && isGOSeries) {
+      iframeVideoPlayer.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms allow-presentation allow-downloads");
+    } else {
+      iframeVideoPlayer.removeAttribute("sandbox");
+    }
+    
+    iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
+    iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline; accelerometer; gyroscope");
+    iframeVideoPlayer.setAttribute("playsinline", "true");
+    iframeVideoPlayer.setAttribute("webkit-playsinline", "true");
+    iframeVideoPlayer.setAttribute("x5-playsinline", "true");
+    iframeVideoPlayer.src = url;
+
+    setTimeout(() => {
+      const pBtn = document.getElementById("playVideoBtn");
+      if (pBtn) pBtn.focus();
+    }, 150);
   }
 
   // Load specific episode directly from pre-built episodeUrls pool
@@ -700,26 +777,13 @@ function initMovieStreamApp() {
     
     if (currentActiveMovie && currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[episode]) {
       const epVideoUrl = currentActiveMovie.episodeUrls[episode];
-      const isMobileDevice = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      const isGOSeries = (typeof currentActiveMovie !== "undefined" && currentActiveMovie && currentActiveMovie.source === "GOSERIES4K");
-      
-      html5VideoPlayer.style.display = "none";
-      html5VideoPlayer.pause();
-      customPlayerControls.style.display = "none";
-      iframeVideoPlayer.style.display = "block";
-      
-      if (!isMobileDevice && isGOSeries) {
-        iframeVideoPlayer.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms allow-presentation allow-downloads");
-      } else {
-        iframeVideoPlayer.removeAttribute("sandbox");
+      const idMatch = epVideoUrl ? epVideoUrl.match(/[?&]id=([a-zA-Z0-9]+)/) : null;
+      if (idMatch && idMatch[1]) {
+        playNativeHls(`/api/hls?id=${idMatch[1]}`, currentActiveMovie.titleTh, epVideoUrl);
+        showToast(`เปิดเล่น ตอนที่ ${episode} เรียบร้อย`, "success");
+        return;
       }
-      
-      iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
-      iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline");
-      iframeVideoPlayer.setAttribute("playsinline", "true");
-      iframeVideoPlayer.setAttribute("webkit-playsinline", "true");
-      iframeVideoPlayer.setAttribute("x5-playsinline", "true");
-      iframeVideoPlayer.src = epVideoUrl;
+      fallbackToIframe(epVideoUrl);
       showToast(`เปิดเล่น ตอนที่ ${episode} เรียบร้อย`, "success");
       return;
     }
@@ -742,7 +806,12 @@ function initMovieStreamApp() {
     .then(html => {
       const srcMatch = html.match(/src="([^"]+)"/);
       if (srcMatch && srcMatch[1]) {
-        iframeVideoPlayer.src = srcMatch[1];
+        const idMatch = srcMatch[1].match(/[?&]id=([a-zA-Z0-9]+)/);
+        if (idMatch && idMatch[1]) {
+          playNativeHls(`/api/hls?id=${idMatch[1]}`, (currentActiveMovie ? currentActiveMovie.titleTh : "ภาพยนตร์"), srcMatch[1]);
+        } else {
+          fallbackToIframe(srcMatch[1]);
+        }
         showToast(`เปิดเล่น ตอนที่ ${episode} เรียบร้อย`, "success");
       } else {
         showToast(`สลับเปิดเล่น ตอนที่ ${episode}`, "success");
@@ -757,6 +826,11 @@ function initMovieStreamApp() {
     playerModal.classList.remove("active");
     document.body.style.overflow = "";
     
+    if (hlsInstance) {
+      try { hlsInstance.destroy(); } catch(e) {}
+      hlsInstance = null;
+    }
+
     // Stop all media playback
     html5VideoPlayer.pause();
     html5VideoPlayer.removeAttribute('src');
@@ -855,10 +929,6 @@ function initMovieStreamApp() {
 
   if (fullscreenBtn) {
     fullscreenBtn.addEventListener("click", toggleFullscreen);
-  }
-  const tvFullscreenBtn = document.getElementById("tvFullscreenBtn");
-  if (tvFullscreenBtn) {
-    tvFullscreenBtn.addEventListener("click", toggleFullscreen);
   }
 
   // Volume Slider Logic
@@ -1219,43 +1289,46 @@ function initMovieStreamApp() {
     const playVideoBtn = document.getElementById("playVideoBtn");
     if (playVideoBtn) {
       playVideoBtn.addEventListener("click", () => {
-        // 1. Direct MP4 Video Mode
+        // 1. Direct HTML5 / HLS Video Mode
         if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
           if (html5VideoPlayer.paused) {
             html5VideoPlayer.play()
               .then(() => {
                 updatePlayPauseUI(true);
-                showToast("▶ เริ่มเล่นภาพยนตร์แล้ว", "success");
+                showToast("▶ กำลังเล่นภาพยนตร์", "success");
               })
-              .catch(() => updatePlayPauseUI(false));
+              .catch((err) => {
+                console.warn("Play error:", err);
+                updatePlayPauseUI(false);
+              });
           } else {
             html5VideoPlayer.pause();
             updatePlayPauseUI(false);
             showToast("⏸ พักการเล่นภาพยนตร์", "info");
           }
-        } 
-        // 2. Embedded Video Mode (24-HDX, GOSERIES4K, etc.)
-        else {
-          const epNum = episodeSelectBtn ? episodeSelectBtn.value : "1";
-          let targetUrl = currentActiveMovie ? currentActiveMovie.videoUrl : "";
-          if (currentActiveMovie && currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[epNum]) {
-            targetUrl = currentActiveMovie.episodeUrls[epNum];
-          }
-          if (!targetUrl && iframeVideoPlayer && iframeVideoPlayer.src && iframeVideoPlayer.src !== "about:blank") {
-            targetUrl = iframeVideoPlayer.src;
-          }
+          return;
+        }
 
-          if (targetUrl) {
-            if (currentActiveMovie) {
-              recordContinueWatching(currentActiveMovie, parseInt(epNum) || 1);
-            }
-            showToast("▶ กำลังเปิดหน้าจอเล่นภาพยนตร์เต็มจอ...", "success");
-            setTimeout(() => {
-              window.location.href = targetUrl;
-            }, 300);
-          } else {
-            showToast("ไม่พบลิงก์วิดีโอ กรุณาลองใหม่อีกครั้ง", "error");
-          }
+        // 2. Embedded Video Mode (24-HDX, etc.)
+        const epNum = episodeSelectBtn ? episodeSelectBtn.value : "1";
+        let targetUrl = currentActiveMovie ? currentActiveMovie.videoUrl : "";
+        if (currentActiveMovie && currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[epNum]) {
+          targetUrl = currentActiveMovie.episodeUrls[epNum];
+        }
+        if (!targetUrl && iframeVideoPlayer && iframeVideoPlayer.src && iframeVideoPlayer.src !== "about:blank") {
+          targetUrl = iframeVideoPlayer.src;
+        }
+
+        const idMatch = targetUrl ? targetUrl.match(/[?&]id=([a-zA-Z0-9]+)/) : null;
+        if (idMatch && idMatch[1]) {
+          playNativeHls(`/api/hls?id=${idMatch[1]}`, (currentActiveMovie ? currentActiveMovie.titleTh : "ภาพยนตร์"), targetUrl);
+          showToast("▶ เริ่มเล่นภาพยนตร์แล้ว", "success");
+          return;
+        }
+
+        if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
+          showToast("💡 กรุณากดปุ่มเล่นตรงกลาง หรือใช้ปุ่มลูกศร", "info");
+          iframeVideoPlayer.focus();
         }
       });
     }
