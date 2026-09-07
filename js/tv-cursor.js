@@ -416,14 +416,41 @@
     if (key === 'ArrowRight' || code === 22 || code === 39) delete keysPressed['ArrowRight'];
   });
 
-  // ซ่อนเมาส์เสมือนเฉพาะเมื่อผู้ใช้ขยับเมาส์จริง (ถ้าต่อเมาส์ USB หรือ Bluetooth)
+  // ซ่อนเมาส์เสมือนเฉพาะเมื่อผู้ใช้ขยับเมาส์จริง (หากอยู่ในหน้าเล่นหนัง ให้แสดงเมาส์ไว้เสมอเพื่อให้เลื่อนต่อได้ทันที)
   window.addEventListener('mousemove', function (e) {
     if (e.isTrusted && !keysPressed['ArrowUp'] && !keysPressed['ArrowDown'] && !keysPressed['ArrowLeft'] && !keysPressed['ArrowRight']) {
       cursorX = e.clientX;
       cursorY = e.clientY;
-      hideCursor();
+      const playerModal = document.getElementById('playerModal');
+      const isPlayerOpen = playerModal && playerModal.classList.contains('active');
+      if (!isPlayerOpen) {
+        hideCursor();
+      } else {
+        showCursor();
+      }
     }
   }, { passive: true });
+
+  // กู้คืนโฟกัสกลับมาที่หน้าต่างหลักเมื่อคลิกที่ IFrame เพื่อให้ปุ่มลูกศรเลื่อนเมาส์ได้ต่อทันที 100%
+  window.addEventListener('blur', function () {
+    setTimeout(function () {
+      if (!document.hidden && document.activeElement && document.activeElement.tagName === 'IFRAME') {
+        ensureWindowFocus();
+        showCursor();
+      }
+    }, 150);
+  });
+
+  // คอยตรวจสอบขณะเปิดหน้าเล่นหนัง หาก IFrame ล็อกโฟกัส ให้ดึงกลับมาเพื่อให้ลูกศรเลื่อนเมาส์ได้ตลอดเวลา
+  setInterval(function () {
+    const playerModal = document.getElementById('playerModal');
+    if (playerModal && playerModal.classList.contains('active')) {
+      if (document.activeElement && document.activeElement.tagName === 'IFRAME') {
+        ensureWindowFocus();
+        showCursor();
+      }
+    }
+  }, 350);
 
   // ติดตามการเปิด-ปิด playerModal: ให้เมาส์แสดงตรงกลาง และรับปุ่มลูกศรได้ทันที
   function setupPlayerModalWatcher() {
