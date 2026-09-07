@@ -1186,6 +1186,13 @@ function initMovieStreamApp() {
           showToast(`เปลี่ยนระบบเสียง: ${e.target.options[e.target.selectedIndex].text}`, "success");
         }
       });
+
+      audioSelectBtn.addEventListener("click", () => {
+        if (audioSelectBtn.options && audioSelectBtn.options.length > 1) {
+          audioSelectBtn.selectedIndex = (audioSelectBtn.selectedIndex + 1) % audioSelectBtn.options.length;
+          audioSelectBtn.dispatchEvent(new Event("change"));
+        }
+      });
     }
 
     if (episodeSelectBtn) {
@@ -1195,6 +1202,15 @@ function initMovieStreamApp() {
         if (currentActiveMovie) {
           loadEpisode(currentActiveMovie.postId || "", epNum, lang, currentActiveMovie.titleEn || "");
           recordContinueWatching(currentActiveMovie, parseInt(epNum) || 1);
+        }
+      });
+
+      episodeSelectBtn.addEventListener("click", () => {
+        if (episodeSelectBtn.options && episodeSelectBtn.options.length > 1) {
+          episodeSelectBtn.selectedIndex = (episodeSelectBtn.selectedIndex + 1) % episodeSelectBtn.options.length;
+          episodeSelectBtn.dispatchEvent(new Event("change"));
+        } else {
+          showToast("ภาพยนตร์เต็มเรื่อง (จบในตอน)", "info");
         }
       });
     }

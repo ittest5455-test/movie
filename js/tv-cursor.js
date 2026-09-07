@@ -1,7 +1,7 @@
 /**
  * TV Virtual Mouse Cursor (เมาส์เสมือนสำหรับ Android TV)
  * ช่วยให้ใช้รีโมททีวี (ปุ่ม ขึ้น/ลง/ซ้าย/ขวา/ตกลง) เลื่อนเมาส์และคลิกเมนูต่างๆ ได้ง่าย
- * เมื่อเข้าสู่หน้าเครื่องเล่นหนัง จะสลับไปใช้โหมดรีโมททีวีปกติทันที เพื่อให้กดเล่น/หยุด/ขยายจอได้ 100%
+ * ทำงานได้ทุกหน้าจอ รวมถึงหน้าเล่นหนัง (Player Modal) สามารถคลิกสั่งเล่น/หยุด/ขยายจอได้สมบูรณ์
  */
 
 (function () {
@@ -17,12 +17,6 @@
   let lastTimestamp = 0;
   let toggleBtnTimeout = null;
 
-  // ตรวจสอบว่ากำลังเปิดหน้าต่างเล่นหนังอยู่หรือไม่
-  function isPlayerActive() {
-    const playerModal = document.getElementById('playerModal');
-    return Boolean(playerModal && playerModal.classList.contains('active'));
-  }
-
   // Injected CSS
   const styleEl = document.createElement('style');
   styleEl.textContent = `
@@ -33,7 +27,7 @@
       width: 32px;
       height: 32px;
       pointer-events: none !important;
-      z-index: 9999999;
+      z-index: 99999999;
       transform: translate(-4px, -4px);
       transition: transform 0.04s linear;
       display: none;
@@ -52,7 +46,7 @@
       position: fixed;
       border-radius: 50%;
       pointer-events: none;
-      z-index: 9999998;
+      z-index: 99999998;
       border: 3px solid #22c55e;
       animation: tvRippleAnim 0.35s ease-out forwards;
       transform: translate(-50%, -50%);
@@ -64,9 +58,9 @@
     .tv-virtual-hover {
       outline: 2px solid #38bdf8 !important;
       outline-offset: 3px !important;
-      box-shadow: 0 0 12px rgba(56, 189, 248, 0.6) !important;
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.7) !important;
     }
-    /* ป้ายบอกสถานะและปุ่มสลับโหมดเมาส์ที่มุมจอ (ซ่อนอัตโนมัติ ไม่บังจอ) */
+    /* ป้ายบอกสถานะและปุ่มสลับโหมดเมาส์ที่มุมจอ (ซ่อนอัตโนมัติ ไม่บังสายตา) */
     #tv-mouse-toggle-btn {
       position: fixed;
       bottom: 18px;
@@ -114,7 +108,7 @@
   `;
   document.head.appendChild(styleEl);
 
-  // สร้าง Cursor Element โดยใช้ Inline SVG 100% (ไม่มีแท็ก <img> และไม่มี alt ป้องกันข้อความต่อท้าย)
+  // สร้าง Cursor Element โดยใช้ Inline SVG เวกเตอร์แท้ 100% (ไม่มีแท็ก <img> และไม่มี alt)
   const cursorEl = document.createElement('div');
   cursorEl.id = 'tv-virtual-cursor';
   cursorEl.innerHTML = `
@@ -159,9 +153,7 @@
     if (isEnabled) {
       toggleBtn.classList.remove('disabled');
       text.textContent = 'เมาส์รีโมท: เปิด';
-      if (!isPlayerActive()) {
-        showCursor();
-      }
+      showCursor();
     } else {
       toggleBtn.classList.add('disabled');
       text.textContent = 'เมาส์รีโมท: ปิด';
@@ -171,7 +163,7 @@
   }
 
   function showCursor() {
-    if (!isEnabled || isPlayerActive()) return;
+    if (!isEnabled) return;
     isVisible = true;
     cursorEl.style.display = 'block';
     updateCursorPos();
@@ -181,7 +173,6 @@
     isVisible = false;
     cursorEl.style.display = 'none';
     removeHoverEffect();
-    // ล้างสถานะปุ่มกดค้าง
     for (const k in keysPressed) delete keysPressed[k];
     if (animFrameId) {
       cancelAnimationFrame(animFrameId);
@@ -204,7 +195,7 @@
     const target = document.elementFromPoint(cursorX, cursorY);
     if (!target) return;
 
-    const clickable = target.closest('button, a, select, input, textarea, .movie-card, .category-pill, [role="button"]');
+    const clickable = target.closest('button, a, select, input, textarea, .movie-card, .category-pill, .player-select-btn, .player-btn, [role="button"], [tabindex]');
     if (clickable) {
       if (currentHoveredEl !== clickable) {
         removeHoverEffect();
@@ -227,7 +218,7 @@
     }
   }
 
-  // วงคลื่นเมื่อกด OK
+  // วงคลื่นแสดงผลเมื่อกดปุ่มคลิก
   function createRipple(x, y) {
     const ripple = document.createElement('div');
     ripple.className = 'tv-cursor-ripple';
@@ -255,17 +246,7 @@
     const target = document.elementFromPoint(cursorX, cursorY);
     if (!target) return;
 
-    // ถ้ากดคลิกโดนพื้นที่เครื่องเล่นหนัง ให้สลับไปโหมดรีโมททันทีและโฟกัสที่ตัวเล่น
-    if (target.closest('#playerModal') || target.id === 'playerModal' || target.id === 'iframeVideoPlayer') {
-      hideCursor();
-      const iframe = document.getElementById('iframeVideoPlayer');
-      const video = document.getElementById('html5VideoPlayer');
-      if (iframe && iframe.style.display !== 'none') iframe.focus();
-      else if (video && video.style.display !== 'none') video.focus();
-      return;
-    }
-
-    const clickable = target.closest('button, a, select, input, textarea, .movie-card, .category-pill, [role="button"], [tabindex]') || target;
+    const clickable = target.closest('button, a, select, input, textarea, .movie-card, .category-pill, .player-select-btn, .player-btn, [role="button"], [tabindex]') || target;
 
     const opts = {
       bubbles: true,
@@ -307,7 +288,7 @@
 
     if (dx !== 0 || dy !== 0) {
       holdDuration += delta;
-      const speed = Math.min(420 + holdDuration * 1150, 1350);
+      const speed = Math.min(450 + holdDuration * 1200, 1400);
 
       cursorX += dx * speed * delta;
       cursorY += dy * speed * delta;
@@ -317,14 +298,18 @@
 
       updateCursorPos();
 
-      // Auto-scroll เมื่อเมาส์ชนขอบบนหรือล่าง
-      const scrollThreshold = 110;
-      if (cursorY < scrollThreshold) {
-        const scrollFactor = (scrollThreshold - cursorY) / scrollThreshold;
-        window.scrollBy({ top: -scrollFactor * 26, behavior: 'auto' });
-      } else if (cursorY > window.innerHeight - scrollThreshold) {
-        const scrollFactor = (cursorY - (window.innerHeight - scrollThreshold)) / scrollThreshold;
-        window.scrollBy({ top: scrollFactor * 26, behavior: 'auto' });
+      // Auto-scroll เมื่อเมาส์ชนขอบบนหรือล่าง (เฉพาะตอนที่ไม่ได้เปิด modal เล่นหนัง)
+      const playerModal = document.getElementById('playerModal');
+      const isPlayerOpen = playerModal && playerModal.classList.contains('active');
+      if (!isPlayerOpen) {
+        const scrollThreshold = 110;
+        if (cursorY < scrollThreshold) {
+          const scrollFactor = (scrollThreshold - cursorY) / scrollThreshold;
+          window.scrollBy({ top: -scrollFactor * 26, behavior: 'auto' });
+        } else if (cursorY > window.innerHeight - scrollThreshold) {
+          const scrollFactor = (cursorY - (window.innerHeight - scrollThreshold)) / scrollThreshold;
+          window.scrollBy({ top: scrollFactor * 26, behavior: 'auto' });
+        }
       }
 
       animFrameId = requestAnimationFrame(processMovement);
@@ -347,11 +332,6 @@
     const code = e.keyCode || e.which;
     const key = e.key;
 
-    // ถ้าเปิดหน้าต่างเครื่องเล่นหนัง ให้ผ่านไปให้รีโมทควบคุมเครื่องเล่นตามปกติ 100%
-    if (isPlayerActive()) {
-      return;
-    }
-
     const isArrow = (
       key === 'ArrowUp' || key === 'ArrowDown' || key === 'ArrowLeft' || key === 'ArrowRight' ||
       code === 19 || code === 20 || code === 21 || code === 22 ||
@@ -366,6 +346,9 @@
       e.preventDefault();
       if (!isVisible) showCursor();
 
+      // ดึงโฟกัสกลับมาที่หน้าจอหลัก เพื่อให้เมาส์เสมือนเลื่อนได้อย่างอิสระตลอดเวลา
+      window.focus();
+
       const normalizedKey =
         (key === 'ArrowUp' || code === 19 || code === 38) ? 'ArrowUp' :
         (key === 'ArrowDown' || code === 20 || code === 40) ? 'ArrowDown' :
@@ -374,14 +357,42 @@
       keysPressed[normalizedKey] = true;
       startMovementLoop();
     } else if (isEnabled && isOk && isVisible) {
-      e.preventDefault();
-      triggerClick();
+      const target = document.elementFromPoint(cursorX, cursorY);
+      const isVideoArea = Boolean(
+        target && (
+          target.id === 'iframeVideoPlayer' ||
+          target.id === 'html5VideoPlayer' ||
+          target.id === 'videoScreenWrapper' ||
+          target.closest('#videoScreenWrapper')
+        )
+      );
+
+      if (isVideoArea) {
+        // เมื่อกดคลิกที่ตัวเล่นวิดีโอ
+        createRipple(cursorX, cursorY);
+
+        const html5Video = document.getElementById('html5VideoPlayer');
+        const iframe = document.getElementById('iframeVideoPlayer');
+
+        if (html5Video && html5Video.style.display !== 'none') {
+          // Direct MP4 Video: สั่งเล่น/หยุดได้ทันที
+          e.preventDefault();
+          if (html5Video.paused) html5Video.play();
+          else html5Video.pause();
+        } else if (iframe && iframe.style.display !== 'none') {
+          // IFrame Embed Video: โฟกัสไปที่ iframe และปล่อยปุ่ม Enter ให้เข้าไปสั่ง Play/Pause ใน iframe 100%
+          iframe.focus();
+          // ไม่เรียก e.preventDefault() เพื่อให้สัญญาณ Enter จากรีโมทส่งตรงเข้าไปที่ตัวเล่นใน iframe
+        }
+      } else {
+        // ปุ่มอื่นๆ (ปุ่มปิด X, ขยายเต็มจอ, เลือกตอน, ฯลฯ)
+        e.preventDefault();
+        triggerClick();
+      }
     }
   }, { passive: false });
 
   window.addEventListener('keyup', function (e) {
-    if (isPlayerActive()) return;
-
     const code = e.keyCode || e.which;
     const key = e.key;
 
@@ -391,7 +402,7 @@
     if (key === 'ArrowRight' || code === 22 || code === 39) delete keysPressed['ArrowRight'];
   });
 
-  // ซ่อนเมาส์เสมือนเมื่อผู้ใช้ขยับเมาส์จริง (ถ้าต่อเมาส์ USB หรือ Bluetooth)
+  // ซ่อนเมาส์เสมือนเฉพาะเมื่อผู้ใช้ขยับเมาส์จริง (ถ้าต่อเมาส์ USB หรือ Bluetooth)
   window.addEventListener('mousemove', function (e) {
     if (e.isTrusted && !keysPressed['ArrowUp'] && !keysPressed['ArrowDown'] && !keysPressed['ArrowLeft'] && !keysPressed['ArrowRight']) {
       cursorX = e.clientX;
@@ -400,7 +411,7 @@
     }
   }, { passive: true });
 
-  // ติดตามการเปิด-ปิด playerModal อัตโนมัติ
+  // ติดตามการเปิด-ปิด playerModal: ให้เมาส์ยังคงอยู่เสมอ
   function setupPlayerModalWatcher() {
     const playerModalEl = document.getElementById('playerModal');
     if (!playerModalEl) return;
@@ -409,22 +420,12 @@
       for (const mutation of mutations) {
         if (mutation.attributeName === 'class') {
           if (playerModalEl.classList.contains('active')) {
-            // เมื่อเข้าเล่นหนัง ซ่อนเมาส์และส่งโฟกัสไปที่เครื่องเล่นหนัง
-            hideCursor();
-            setTimeout(() => {
-              const iframe = document.getElementById('iframeVideoPlayer');
-              const video = document.getElementById('html5VideoPlayer');
-              if (iframe && iframe.style.display !== 'none') {
-                iframe.focus();
-              } else if (video && video.style.display !== 'none') {
-                video.focus();
-              }
-            }, 300);
+            // เมื่อเปิดหน้าเล่นหนัง ตั้งตำแหน่งเมาส์ให้อยู่ตรงกลางปุ่มเล่นวิดีโอ และแสดงเมาส์ไว้เสมอ!
+            cursorX = window.innerWidth / 2;
+            cursorY = window.innerHeight / 2;
+            showCursor();
           } else {
-            // เมื่อออกจากหน้าเล่นหนัง คืนค่าเมาส์เสมือนให้เลือกดูหนังเรื่องอื่นต่อได้ทันที
-            if (isEnabled) {
-              setTimeout(showCursor, 150);
-            }
+            showCursor();
           }
         }
       }
