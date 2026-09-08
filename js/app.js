@@ -617,7 +617,7 @@ function initMovieStreamApp() {
       ).join("");
       episodeSelectBtn.value = String(epInt);
     } else if (episodeSelectBtn) {
-      episodeSelectBtn.innerHTML = `<option value="1">ตอนที่ 1 (จบในตอน)</option>`;
+      episodeSelectBtn.innerHTML = `<option value="1">ตอนที่ 1</option>`;
       episodeSelectBtn.value = "1";
     }
 
