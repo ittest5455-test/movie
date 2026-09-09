@@ -687,25 +687,7 @@ function initMovieStreamApp() {
     showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}${epText}`, "success");
   }
 
-  // Helper to send play/pause commands to cross-origin iframe players (JWPlayer, Plyr, VideoJS, etc.)
-  function sendIframePlayCommand() {
-    if (!iframeVideoPlayer || !iframeVideoPlayer.contentWindow) return;
-    const cmds = [
-      'play',
-      '{"event":"command","func":"playVideo","args":""}',
-      '{"action":"play"}',
-      '{"method":"play"}',
-      JSON.stringify({ event: "command", func: "playVideo" }),
-      JSON.stringify({ type: "play" }),
-      JSON.stringify({ method: "play" }),
-      JSON.stringify({ event: "play" })
-    ];
-    cmds.forEach(cmd => {
-      try {
-        iframeVideoPlayer.contentWindow.postMessage(cmd, "*");
-      } catch(e) {}
-    });
-  }
+  let hlsInstance = null;
 
   function playNativeHls(streamUrl, movieTitle, originalEmbedUrl) {
     window._activeVideoDuration = 0;
@@ -762,16 +744,8 @@ function initMovieStreamApp() {
             showToast(`▶ กำลังเล่น: ${movieTitle}`, "success");
           })
           .catch((err) => {
-            console.warn("Autoplay audio blocked, retrying with quick mute/unmute:", err);
-            html5VideoPlayer.muted = true;
-            html5VideoPlayer.play()
-              .then(() => {
-                updatePlayPauseUI(true);
-                setTimeout(() => {
-                  html5VideoPlayer.muted = false;
-                }, 400);
-              })
-              .catch(() => updatePlayPauseUI(false));
+            console.warn("Autoplay notice:", err);
+            updatePlayPauseUI(false);
           });
       });
 
@@ -853,27 +827,12 @@ function initMovieStreamApp() {
     iframeVideoPlayer.setAttribute("playsinline", "true");
     iframeVideoPlayer.setAttribute("webkit-playsinline", "true");
     iframeVideoPlayer.setAttribute("x5-playsinline", "true");
-
-    // Add autoplay parameters to iframe URL to trigger automatic playback
-    let autoUrl = url;
-    if (!autoUrl.includes("autoplay=") && !autoUrl.includes("autostart=")) {
-      autoUrl += (autoUrl.includes("?") ? "&" : "?") + "autoplay=1&autostart=1&auto_play=1";
-    }
-    iframeVideoPlayer.src = autoUrl;
-
-    // Send autoplay commands automatically as iframe finishes loading
-    iframeVideoPlayer.onload = () => {
-      [200, 600, 1200, 2000].forEach(delay => {
-        setTimeout(() => {
-          sendIframePlayCommand();
-        }, delay);
-      });
-    };
+    iframeVideoPlayer.src = url;
 
     const pBtn = document.getElementById("playVideoBtn");
     if (pBtn) {
       const span = pBtn.querySelector("span");
-      if (span) span.textContent = "แตะจอเล่น";
+      if (span) span.textContent = "เล่น / หยุด";
     }
 
     setTimeout(() => {
@@ -1495,14 +1454,13 @@ function initMovieStreamApp() {
       // 2. IFrame Video Mode (Fallback / ซีรีส์ เช่น torbo007.com)
       if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
         if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
-        sendIframePlayCommand();
         iframeVideoPlayer.focus();
         try {
           if (iframeVideoPlayer.contentWindow) {
             iframeVideoPlayer.contentWindow.focus();
           }
         } catch(e) {}
-        showToast("▶ แตะที่จอวิดีโอเพื่อเริ่มเล่น (เครื่องเล่นภายนอก)", "info");
+        showToast("▶ แตะที่หน้าจอวิดีโอเพื่อเริ่มเล่น (เครื่องเล่นภายนอก)", "info");
         return;
       }
 
