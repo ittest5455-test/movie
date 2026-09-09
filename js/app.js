@@ -687,7 +687,25 @@ function initMovieStreamApp() {
     showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}${epText}`, "success");
   }
 
-  let hlsInstance = null;
+  // Helper to send play/pause commands to cross-origin iframe players (JWPlayer, Plyr, VideoJS, etc.)
+  function sendIframePlayCommand() {
+    if (!iframeVideoPlayer || !iframeVideoPlayer.contentWindow) return;
+    const cmds = [
+      'play',
+      '{"event":"command","func":"playVideo","args":""}',
+      '{"action":"play"}',
+      '{"method":"play"}',
+      JSON.stringify({ event: "command", func: "playVideo" }),
+      JSON.stringify({ type: "play" }),
+      JSON.stringify({ method: "play" }),
+      JSON.stringify({ event: "play" })
+    ];
+    cmds.forEach(cmd => {
+      try {
+        iframeVideoPlayer.contentWindow.postMessage(cmd, "*");
+      } catch(e) {}
+    });
+  }
 
   function playNativeHls(streamUrl, movieTitle, originalEmbedUrl) {
     window._activeVideoDuration = 0;
@@ -714,6 +732,12 @@ function initMovieStreamApp() {
     const pTimeline = document.getElementById("playerTimelineBar");
     if (pTimeline) pTimeline.style.display = "flex";
 
+    const pBtn = document.getElementById("playVideoBtn");
+    if (pBtn) {
+      const span = pBtn.querySelector("span");
+      if (span) span.textContent = "เล่น / หยุด";
+    }
+
     if (window.Hls && Hls.isSupported()) {
       hlsInstance = new Hls({
         debug: false,
@@ -735,11 +759,19 @@ function initMovieStreamApp() {
         html5VideoPlayer.play()
           .then(() => {
             updatePlayPauseUI(true);
-            showToast(`▶ กำลังเล่นภาพยนตร์: ${movieTitle}`, "success");
+            showToast(`▶ กำลังเล่น: ${movieTitle}`, "success");
           })
           .catch((err) => {
-            console.warn("Autoplay notice:", err);
-            updatePlayPauseUI(false);
+            console.warn("Autoplay audio blocked, retrying with quick mute/unmute:", err);
+            html5VideoPlayer.muted = true;
+            html5VideoPlayer.play()
+              .then(() => {
+                updatePlayPauseUI(true);
+                setTimeout(() => {
+                  html5VideoPlayer.muted = false;
+                }, 400);
+              })
+              .catch(() => updatePlayPauseUI(false));
           });
       });
 
@@ -821,17 +853,37 @@ function initMovieStreamApp() {
     iframeVideoPlayer.setAttribute("playsinline", "true");
     iframeVideoPlayer.setAttribute("webkit-playsinline", "true");
     iframeVideoPlayer.setAttribute("x5-playsinline", "true");
-    iframeVideoPlayer.src = url;
+
+    // Add autoplay parameters to iframe URL to trigger automatic playback
+    let autoUrl = url;
+    if (!autoUrl.includes("autoplay=") && !autoUrl.includes("autostart=")) {
+      autoUrl += (autoUrl.includes("?") ? "&" : "?") + "autoplay=1&autostart=1&auto_play=1";
+    }
+    iframeVideoPlayer.src = autoUrl;
+
+    // Send autoplay commands automatically as iframe finishes loading
+    iframeVideoPlayer.onload = () => {
+      [200, 600, 1200, 2000].forEach(delay => {
+        setTimeout(() => {
+          sendIframePlayCommand();
+        }, delay);
+      });
+    };
+
+    const pBtn = document.getElementById("playVideoBtn");
+    if (pBtn) {
+      const span = pBtn.querySelector("span");
+      if (span) span.textContent = "แตะจอเล่น";
+    }
 
     setTimeout(() => {
-      const pBtn = document.getElementById("playVideoBtn");
       if (pBtn) pBtn.focus();
     }, 150);
   }
 
   // Load specific episode directly from pre-built episodeUrls pool
   function loadEpisode(postId, episode, lang, title) {
-    showToast(`กำลังโหลด ตอนที่ ${episode}...`, "success");
+    showToast(`▶ กำลังเปิดเล่น ตอนที่ ${episode} อัตโนมัติ...`, "success");
     const epKey = String(episode);
     
     if (currentActiveMovie && currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[epKey]) {
@@ -842,11 +894,11 @@ function initMovieStreamApp() {
       const idMatch = epVideoUrl ? epVideoUrl.match(/[?&]id=([a-zA-Z0-9]+)/) : null;
       if (idMatch && idMatch[1]) {
         playNativeHls(`/api/hls?id=${idMatch[1]}`, currentActiveMovie.titleTh, epVideoUrl);
-        showToast(`เปิดเล่น ตอนที่ ${episode} เรียบร้อย`, "success");
+        showToast(`▶ เริ่มเล่น ตอนที่ ${episode} แล้ว`, "success");
         return;
       }
       fallbackToIframe(epVideoUrl);
-      showToast(`เปิดเล่น ตอนที่ ${episode} เรียบร้อย`, "success");
+      showToast(`▶ เริ่มเล่น ตอนที่ ${episode} แล้ว`, "success");
       return;
     }
 
@@ -1412,25 +1464,6 @@ function initMovieStreamApp() {
           loadEpisode(currentActiveMovie.postId || "", epNum, lang, currentActiveMovie.titleEn || "");
           recordContinueWatching(currentActiveMovie, parseInt(epNum) || 1);
         }
-      });
-    }
-
-    // Helper to send play/pause commands to cross-origin iframe players (JWPlayer, Plyr, VideoJS, etc.)
-    function sendIframePlayCommand() {
-      if (!iframeVideoPlayer || !iframeVideoPlayer.contentWindow) return;
-      const cmds = [
-        'play',
-        '{"event":"command","func":"playVideo","args":""}',
-        '{"action":"play"}',
-        '{"method":"play"}',
-        JSON.stringify({ event: "command", func: "playVideo" }),
-        JSON.stringify({ type: "play" }),
-        JSON.stringify({ method: "play" })
-      ];
-      cmds.forEach(cmd => {
-        try {
-          iframeVideoPlayer.contentWindow.postMessage(cmd, "*");
-        } catch(e) {}
       });
     }
 
