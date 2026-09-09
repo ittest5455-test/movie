@@ -1284,6 +1284,15 @@ footer {
   border: none;
 }
 
+.video-frame-wrapper iframe {
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.video-frame-wrapper video {
+  z-index: 5;
+}
+
 /* Custom HTML5 Video Player Controls */
 .custom-player-controls {
   position: absolute;

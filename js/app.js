@@ -606,9 +606,9 @@ function initMovieStreamApp() {
     playerModal.classList.add("active");
     document.body.style.overflow = "hidden";
     currentActiveMovie = movie;
-    if (centerPlayOverlay) centerPlayOverlay.style.display = "flex";
 
     const epInt = parseInt(startEpisode) || 1;
+    currentActiveMovie.currentEpisode = epInt;
 
     // Populate Episodes Select Box dynamically
     if (episodeSelectBtn && movie.episodes && movie.episodes.length > 0) {
@@ -635,12 +635,18 @@ function initMovieStreamApp() {
     
     // Resolve initial URL (if jumping directly to an episode from Continue Watching)
     let initialVideoUrl = movie.videoUrl;
-    if (epInt > 1 && movie.episodeUrls && movie.episodeUrls[String(epInt)]) {
-      initialVideoUrl = movie.episodeUrls[String(epInt)];
+    if (movie.episodeUrls) {
+      if (movie.episodeUrls[String(epInt)]) {
+        initialVideoUrl = movie.episodeUrls[String(epInt)];
+      } else if (movie.episodeUrls["1"]) {
+        initialVideoUrl = movie.episodeUrls["1"];
+      }
     }
+    currentActiveMovie.videoUrl = initialVideoUrl;
 
     // 1. Direct MP4 Streaming Player
     if (movie.sourceType === "direct") {
+      if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
       iframeVideoPlayer.style.display = "none";
       iframeVideoPlayer.src = "";
       
@@ -690,11 +696,23 @@ function initMovieStreamApp() {
       hlsInstance = null;
     }
 
+    if (currentActiveMovie && originalEmbedUrl) {
+      currentActiveMovie.videoUrl = originalEmbedUrl;
+    }
+
+    // Reset iframe player
     iframeVideoPlayer.style.display = "none";
     iframeVideoPlayer.src = "about:blank";
 
+    // Reset html5VideoPlayer completely
+    html5VideoPlayer.pause();
+    html5VideoPlayer.removeAttribute('src');
+    html5VideoPlayer.load();
+
     html5VideoPlayer.style.display = "block";
     customPlayerControls.style.display = "flex";
+    const pTimeline = document.getElementById("playerTimelineBar");
+    if (pTimeline) pTimeline.style.display = "flex";
 
     if (window.Hls && Hls.isSupported()) {
       hlsInstance = new Hls({
@@ -769,11 +787,25 @@ function initMovieStreamApp() {
       try { hlsInstance.destroy(); } catch(e) {}
       hlsInstance = null;
     }
+    
+    // Completely pause and reset html5 player
     html5VideoPlayer.style.display = "none";
     html5VideoPlayer.pause();
-    html5VideoPlayer.src = "";
+    html5VideoPlayer.removeAttribute('src');
+    html5VideoPlayer.load();
+
     customPlayerControls.style.display = "none";
+    const pTimeline = document.getElementById("playerTimelineBar");
+    if (pTimeline) pTimeline.style.display = "none";
+
+    // CRITICAL: Hide center play overlay immediately so it doesn't block iframe touches!
+    if (centerPlayOverlay) {
+      centerPlayOverlay.style.display = "none";
+    }
+
     iframeVideoPlayer.style.display = "block";
+    iframeVideoPlayer.style.zIndex = "10";
+    iframeVideoPlayer.style.pointerEvents = "auto";
 
     const isMobileDevice = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     const isGOSeries = (typeof currentActiveMovie !== "undefined" && currentActiveMovie && currentActiveMovie.source === "GOSERIES4K");
@@ -800,9 +832,13 @@ function initMovieStreamApp() {
   // Load specific episode directly from pre-built episodeUrls pool
   function loadEpisode(postId, episode, lang, title) {
     showToast(`กำลังโหลด ตอนที่ ${episode}...`, "success");
+    const epKey = String(episode);
     
-    if (currentActiveMovie && currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[episode]) {
-      const epVideoUrl = currentActiveMovie.episodeUrls[episode];
+    if (currentActiveMovie && currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[epKey]) {
+      const epVideoUrl = currentActiveMovie.episodeUrls[epKey];
+      currentActiveMovie.videoUrl = epVideoUrl;
+      currentActiveMovie.currentEpisode = parseInt(episode) || 1;
+
       const idMatch = epVideoUrl ? epVideoUrl.match(/[?&]id=([a-zA-Z0-9]+)/) : null;
       if (idMatch && idMatch[1]) {
         playNativeHls(`/api/hls?id=${idMatch[1]}`, currentActiveMovie.titleTh, epVideoUrl);
@@ -832,6 +868,10 @@ function initMovieStreamApp() {
     .then(html => {
       const srcMatch = html.match(/src="([^"]+)"/);
       if (srcMatch && srcMatch[1]) {
+        if (currentActiveMovie) {
+          currentActiveMovie.videoUrl = srcMatch[1];
+          currentActiveMovie.currentEpisode = parseInt(episode) || 1;
+        }
         const idMatch = srcMatch[1].match(/[?&]id=([a-zA-Z0-9]+)/);
         if (idMatch && idMatch[1]) {
           playNativeHls(`/api/hls?id=${idMatch[1]}`, (currentActiveMovie ? currentActiveMovie.titleTh : "ภาพยนตร์"), srcMatch[1]);
@@ -863,7 +903,11 @@ function initMovieStreamApp() {
     html5VideoPlayer.removeAttribute('src');
     html5VideoPlayer.load();
     
-    iframeVideoPlayer.src = "";
+    iframeVideoPlayer.src = "about:blank";
+    iframeVideoPlayer.style.display = "none";
+    if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
+    const pTimeline = document.getElementById("playerTimelineBar");
+    if (pTimeline) pTimeline.style.display = "flex";
   }
 
   // --- Custom Player Controls System ---
@@ -885,7 +929,12 @@ function initMovieStreamApp() {
       if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
     } else {
       if (playIcon) playIcon.innerHTML = `<path d="M8 5v14l11-7z"></path>`; // Play icon
-      if (centerPlayOverlay) centerPlayOverlay.style.display = "flex";
+      // Only show center play overlay if html5 video player is actively visible (not iframe mode)
+      if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
+        if (centerPlayOverlay) centerPlayOverlay.style.display = "flex";
+      } else {
+        if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
+      }
     }
   }
 
@@ -1366,6 +1415,25 @@ function initMovieStreamApp() {
       });
     }
 
+    // Helper to send play/pause commands to cross-origin iframe players (JWPlayer, Plyr, VideoJS, etc.)
+    function sendIframePlayCommand() {
+      if (!iframeVideoPlayer || !iframeVideoPlayer.contentWindow) return;
+      const cmds = [
+        'play',
+        '{"event":"command","func":"playVideo","args":""}',
+        '{"action":"play"}',
+        '{"method":"play"}',
+        JSON.stringify({ event: "command", func: "playVideo" }),
+        JSON.stringify({ type: "play" }),
+        JSON.stringify({ method: "play" })
+      ];
+      cmds.forEach(cmd => {
+        try {
+          iframeVideoPlayer.contentWindow.postMessage(cmd, "*");
+        } catch(e) {}
+      });
+    }
+
     // Unified Play/Pause Handler (รองรับทั้งกดปุ่มตรงกลางจอ และกดปุ่มด้านล่าง - กดได้ 2 ที่)
     function handlePlayRequest() {
       // 1. Direct HTML5 / HLS Video Mode
@@ -1378,7 +1446,10 @@ function initMovieStreamApp() {
             })
             .catch((err) => {
               console.warn("Play error:", err);
-              updatePlayPauseUI(false);
+              html5VideoPlayer.muted = false;
+              html5VideoPlayer.play()
+                .then(() => updatePlayPauseUI(true))
+                .catch(() => updatePlayPauseUI(false));
             });
         } else {
           html5VideoPlayer.pause();
@@ -1388,31 +1459,25 @@ function initMovieStreamApp() {
         return;
       }
 
-      // 2. Embedded Video Mode (24-HDX, etc.)
-      const epNum = episodeSelectBtn ? episodeSelectBtn.value : "1";
-      let targetUrl = currentActiveMovie ? currentActiveMovie.videoUrl : "";
-      if (currentActiveMovie && currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[epNum]) {
-        targetUrl = currentActiveMovie.episodeUrls[epNum];
-      }
-      if (!targetUrl && iframeVideoPlayer && iframeVideoPlayer.src && iframeVideoPlayer.src !== "about:blank") {
-        targetUrl = iframeVideoPlayer.src;
-      }
-
-      const idMatch = targetUrl ? targetUrl.match(/[?&]id=([a-zA-Z0-9]+)/) : null;
-      if (idMatch && idMatch[1]) {
-        playNativeHls(`/api/hls?id=${idMatch[1]}`, (currentActiveMovie ? currentActiveMovie.titleTh : "ภาพยนตร์"), targetUrl);
-        showToast("▶ เริ่มเล่นภาพยนตร์แล้ว", "success");
+      // 2. IFrame Video Mode (Fallback / ซีรีส์ เช่น torbo007.com)
+      if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
+        if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
+        sendIframePlayCommand();
+        iframeVideoPlayer.focus();
+        try {
+          if (iframeVideoPlayer.contentWindow) {
+            iframeVideoPlayer.contentWindow.focus();
+          }
+        } catch(e) {}
+        showToast("▶ แตะที่จอวิดีโอเพื่อเริ่มเล่น (เครื่องเล่นภายนอก)", "info");
         return;
       }
 
-      // 3. IFrame Video Mode (Fallback / ซีรีส์แหล่งอื่น)
-      if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
-        if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
-        showToast("▶ กำลังเริ่มเล่นภาพยนตร์...", "success");
-        iframeVideoPlayer.focus();
-        try {
-          iframeVideoPlayer.contentWindow.focus();
-        } catch(e) {}
+      // 3. Fallback: Initialize playback for currently selected episode
+      const epNum = episodeSelectBtn ? episodeSelectBtn.value : "1";
+      if (currentActiveMovie) {
+        const lang = audioSelectBtn && audioSelectBtn.value.toLowerCase().includes("thai") ? "Thai" : "Sound Track";
+        loadEpisode(currentActiveMovie.postId || "", epNum, lang, currentActiveMovie.titleEn || "");
       }
     }
 
@@ -1456,16 +1521,12 @@ function initMovieStreamApp() {
       });
     }
 
-    // TV Fullscreen Button (ขยายเต็มจอ TV แยกปุ่มเฉพาะ)
+    // Fullscreen Button (ขยายเต็มจอ รองรับทั้ง HTML5 และ Iframe)
     const tvFullscreenBtn = document.getElementById("tvFullscreenBtn");
     if (tvFullscreenBtn) {
       tvFullscreenBtn.addEventListener("click", () => {
-        if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
-          toggleFullscreen();
-          showToast("🖥 สลับมุมมองเต็มหน้าจอ (TV)", "success");
-        } else {
-          if (playVideoBtn) playVideoBtn.click();
-        }
+        toggleFullscreen();
+        showToast("🖥 สลับมุมมองเต็มหน้าจอ", "success");
       });
     }
 
