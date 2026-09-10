@@ -1842,23 +1842,21 @@ footer {
   left: 0 !important;
   width: 100% !important;
   z-index: 50 !important;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 70%, transparent 100%) !important;
+  background: rgba(0, 0, 0, 0.75) !important;
   border-bottom: none !important;
-  padding: 0.8rem 1.5rem !important;
-  transition: opacity 0.3s ease, transform 0.3s ease !important;
+  padding: 0.6rem 1.5rem !important;
 }
 
 .is-tv-device .player-timeline-bar,
 .player-modal-overlay.theater-fullscreen-mode .player-timeline-bar {
   position: absolute !important;
-  bottom: 56px !important;
+  bottom: 50px !important;
   left: 0 !important;
   width: 100% !important;
   z-index: 50 !important;
   background: transparent !important;
   border: none !important;
   padding: 4px 1.5rem !important;
-  transition: opacity 0.3s ease, transform 0.3s ease !important;
 }
 
 .is-tv-device .player-bottom-bar,
@@ -1868,10 +1866,9 @@ footer {
   left: 0 !important;
   width: 100% !important;
   z-index: 50 !important;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 70%, transparent 100%) !important;
+  background: rgba(0, 0, 0, 0.85) !important;
   border-top: none !important;
-  padding: 0.6rem 1.2rem !important;
-  transition: opacity 0.3s ease, transform 0.3s ease !important;
+  padding: 0.5rem 1.2rem !important;
 }
 
 .is-tv-device .player-hint-bar,
@@ -1879,20 +1876,12 @@ footer {
   display: none !important;
 }
 
-/* Auto-hide controls when watching movie (Idle) */
+/* Lightweight Zero-Lag Auto-hide for Mi Box / TV */
 .player-controls-idle .player-top-header,
 .player-controls-idle .player-timeline-bar,
 .player-controls-idle .player-bottom-bar,
 .player-controls-idle .custom-player-controls {
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
-.player-controls-idle .player-top-header {
-  transform: translateY(-20px) !important;
-}
-.player-controls-idle .player-timeline-bar,
-.player-controls-idle .player-bottom-bar {
-  transform: translateY(20px) !important;
+  display: none !important;
 }
 
 /* ===================================================

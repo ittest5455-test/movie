@@ -673,15 +673,7 @@ function initMovieStreamApp() {
       return;
     } 
 
-    // 2. 24playerhd Stream via Native HLS (เล่นได้ทันทีภายในหน้านี้ ไม่ต้องเต็มจอ)
-    const idMatch = initialVideoUrl ? initialVideoUrl.match(/[?&]id=([a-zA-Z0-9]+)/) : null;
-    if (idMatch && idMatch[1]) {
-      const hlsUrl = `/api/hls?id=${idMatch[1]}`;
-      playNativeHls(hlsUrl, movie.titleTh, initialVideoUrl);
-      return;
-    }
-
-    // 3. Embedded IFrame Video Player (Fallback สำหรับซีรีส์แหล่งอื่น)
+    // 2. Embedded Video Player (Direct Hardware-accelerated CDN Streaming)
     fallbackToIframe(initialVideoUrl);
     const epText = (movie.episodes && movie.episodes.length > 1) ? ` (ตอนที่ ${epInt})` : "";
     showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}${epText}`, "success");
@@ -850,12 +842,6 @@ function initMovieStreamApp() {
       currentActiveMovie.videoUrl = epVideoUrl;
       currentActiveMovie.currentEpisode = parseInt(episode) || 1;
 
-      const idMatch = epVideoUrl ? epVideoUrl.match(/[?&]id=([a-zA-Z0-9]+)/) : null;
-      if (idMatch && idMatch[1]) {
-        playNativeHls(`/api/hls?id=${idMatch[1]}`, currentActiveMovie.titleTh, epVideoUrl);
-        showToast(`▶ เริ่มเล่น ตอนที่ ${episode} แล้ว`, "success");
-        return;
-      }
       fallbackToIframe(epVideoUrl);
       showToast(`▶ เริ่มเล่น ตอนที่ ${episode} แล้ว`, "success");
       return;
@@ -883,12 +869,7 @@ function initMovieStreamApp() {
           currentActiveMovie.videoUrl = srcMatch[1];
           currentActiveMovie.currentEpisode = parseInt(episode) || 1;
         }
-        const idMatch = srcMatch[1].match(/[?&]id=([a-zA-Z0-9]+)/);
-        if (idMatch && idMatch[1]) {
-          playNativeHls(`/api/hls?id=${idMatch[1]}`, (currentActiveMovie ? currentActiveMovie.titleTh : "ภาพยนตร์"), srcMatch[1]);
-        } else {
-          fallbackToIframe(srcMatch[1]);
-        }
+        fallbackToIframe(srcMatch[1]);
         showToast(`เปิดเล่น ตอนที่ ${episode} เรียบร้อย`, "success");
       } else {
         showToast(`สลับเปิดเล่น ตอนที่ ${episode}`, "success");
@@ -918,7 +899,7 @@ function initMovieStreamApp() {
     }
   }
 
-  ['mousemove', 'keydown', 'touchstart', 'pointermove'].forEach(evtName => {
+  ['keydown', 'click'].forEach(evtName => {
     document.addEventListener(evtName, () => {
       if (playerModal && playerModal.classList.contains("active")) {
         resetPlayerControlsIdleTimer();
