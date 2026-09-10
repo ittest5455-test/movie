@@ -899,9 +899,41 @@ function initMovieStreamApp() {
     });
   }
 
+  let playerControlsIdleTimer = null;
+  function resetPlayerControlsIdleTimer() {
+    if (playerModal) {
+      playerModal.classList.remove("player-controls-idle");
+    }
+    clearTimeout(playerControlsIdleTimer);
+    if (playerModal && playerModal.classList.contains("active")) {
+      const isHtml5Playing = html5VideoPlayer && !html5VideoPlayer.paused && html5VideoPlayer.style.display !== "none";
+      const isIframePlaying = iframeVideoPlayer && iframeVideoPlayer.style.display !== "none";
+      if (isHtml5Playing || isIframePlaying) {
+        playerControlsIdleTimer = setTimeout(() => {
+          if (playerModal && playerModal.classList.contains("active")) {
+            playerModal.classList.add("player-controls-idle");
+          }
+        }, 3500);
+      }
+    }
+  }
+
+  ['mousemove', 'keydown', 'touchstart', 'pointermove'].forEach(evtName => {
+    document.addEventListener(evtName, () => {
+      if (playerModal && playerModal.classList.contains("active")) {
+        resetPlayerControlsIdleTimer();
+      }
+    }, { passive: true });
+  });
+
   function closePlayer() {
     window._activeVideoDuration = 0;
-    playerModal.classList.remove("active");
+    clearTimeout(playerControlsIdleTimer);
+    if (playerModal) {
+      playerModal.classList.remove("active");
+      playerModal.classList.remove("player-controls-idle");
+      playerModal.classList.remove("theater-fullscreen-mode");
+    }
     document.body.style.overflow = "";
     
     if (hlsInstance) {
@@ -918,7 +950,7 @@ function initMovieStreamApp() {
     iframeVideoPlayer.style.display = "none";
     if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
     const pTimeline = document.getElementById("playerTimelineBar");
-    if (pTimeline) pTimeline.style.display = "flex";
+    if (pTimeline) pTimeline.style.display = "none";
   }
 
   // --- Custom Player Controls System ---
@@ -932,12 +964,14 @@ function initMovieStreamApp() {
       html5VideoPlayer.pause();
       updatePlayPauseUI(false);
     }
+    resetPlayerControlsIdleTimer();
   }
 
   function updatePlayPauseUI(isPlaying) {
     if (isPlaying) {
       if (playIcon) playIcon.innerHTML = `<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>`; // Pause icon
       if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
+      resetPlayerControlsIdleTimer();
     } else {
       if (playIcon) playIcon.innerHTML = `<path d="M8 5v14l11-7z"></path>`; // Play icon
       // Only show center play overlay if html5 video player is actively visible (not iframe mode)
@@ -946,6 +980,7 @@ function initMovieStreamApp() {
       } else {
         if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
       }
+      if (playerModal) playerModal.classList.remove("player-controls-idle");
     }
   }
 
@@ -1073,15 +1108,22 @@ function initMovieStreamApp() {
     });
   }
 
-  // Fullscreen Action
+  // Fullscreen Action (Toggle Theater Fullscreen & HTML5 Fullscreen)
   function toggleFullscreen() {
-    const targetWrap = videoScreenWrapper || html5VideoPlayer;
-    if (!document.fullscreenElement) {
-      if (targetWrap.requestFullscreen) targetWrap.requestFullscreen();
-      else if (targetWrap.webkitRequestFullscreen) targetWrap.webkitRequestFullscreen();
-    } else {
-      if (document.exitFullscreen) document.exitFullscreen();
+    if (playerModal) {
+      playerModal.classList.toggle("theater-fullscreen-mode");
     }
+    const targetWrap = videoScreenWrapper || html5VideoPlayer || document.documentElement;
+    try {
+      if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (targetWrap.requestFullscreen) targetWrap.requestFullscreen().catch(() => {});
+        else if (targetWrap.webkitRequestFullscreen) targetWrap.webkitRequestFullscreen().catch(() => {});
+      } else {
+        if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen().catch(() => {});
+      }
+    } catch(e) {}
+    resetPlayerControlsIdleTimer();
   }
 
   if (fullscreenBtn) {
