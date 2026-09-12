@@ -6,6 +6,7 @@ __pycache__/
 
 # Large binary files
 *.apk
+!tv.apk
 
 # OS & dump files
 .DS_Store
