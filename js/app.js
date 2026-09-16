@@ -191,18 +191,28 @@ function initMovieStreamApp() {
   // Create single movie card structure
   function createMovieCardMarkup(movie) {
     const isSaved = watchlist.includes(movie.id);
+    const isTopHot = movie.genres && (movie.genres.includes("ยอดนิยม 2026") || movie.genres.includes("ยอดนิยม"));
     const placeholderSvg = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22300%22%20height%3D%22450%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20300%20450%22%3E%3Crect%20fill%3D%22%231e293b%22%20width%3D%22300%22%20height%3D%22450%22%2F%3E%3Ctext%20fill%3D%22%2394a3b8%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20dy%3D%2210.5%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EMovieStream%20HD%3C%2Ftext%3E%3C%2Fsvg%3E";
+    const posterUrl = movie.poster || placeholderSvg;
+    const hotBadgeHtml = isTopHot ? `<div class="movie-hot-badge" style="position: absolute; top: 0; right: 0; background: linear-gradient(135deg, #ef4444, #dc2626); color: #fff; font-size: 0.68rem; font-weight: 900; padding: 3px 10px; border-bottom-left-radius: 8px; box-shadow: 0 2px 8px rgba(239, 68, 68, 0.6); z-index: 9; letter-spacing: 0.5px;">HOT</div>` : '';
+    const ratingBadgeHtml = isTopHot ? `
+      <span class="movie-rating-badge" style="background: linear-gradient(135deg, #eab308, #f59e0b); color: #000; font-weight: 800; border: none; box-shadow: 0 2px 6px rgba(234, 179, 8, 0.5);">
+        TOP ★ ${movie.rating}
+      </span>` : `
+      <span class="movie-rating-badge">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+        ${movie.rating}
+      </span>`;
+    const favTopPos = isTopHot ? "36px" : "10px";
     return `
       <div class="movie-card" data-id="${movie.id}" tabindex="0" role="button" aria-label="${movie.titleTh}">
         <div class="movie-poster-wrapper">
-          <img src="${movie.poster}" alt="โปสเตอร์เรื่อง ${movie.titleTh}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${placeholderSvg}'">
-          <span class="movie-rating-badge">
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-            ${movie.rating}
-          </span>
+          <img src="${posterUrl}" alt="โปสเตอร์เรื่อง ${movie.titleTh}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${placeholderSvg}'">
+          ${hotBadgeHtml}
+          ${ratingBadgeHtml}
           <span class="movie-year-badge">${movie.year}</span>
           
-          <button class="movie-fav-btn" style="position: absolute; top: 10px; right: 10px; z-index: 10; background: rgba(0,0,0,0.7); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: ${isSaved ? '#22c55e' : '#ffffff'}; transition: 0.3s;" aria-label="Toggle Favorite">
+          <button class="movie-fav-btn" style="position: absolute; top: ${favTopPos}; right: 10px; z-index: 10; background: rgba(0,0,0,0.7); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: ${isSaved ? '#22c55e' : '#ffffff'}; transition: 0.3s;" aria-label="Toggle Favorite">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="${isSaved ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
           </button>
 
@@ -262,9 +272,11 @@ function initMovieStreamApp() {
         timeText = "เมื่อสักครู่";
       }
 
+      const cwPlaceholder = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22300%22%20height%3D%22450%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20300%20450%22%3E%3Crect%20fill%3D%22%231e293b%22%20width%3D%22300%22%20height%3D%22450%22%2F%3E%3Ctext%20fill%3D%22%2394a3b8%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20dy%3D%2210.5%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EMovieStream%20HD%3C%2Ftext%3E%3C%2Fsvg%3E";
+      const cwImgSrc = movie.backdrop || movie.poster || cwPlaceholder;
       card.innerHTML = `
         <div class="cw-poster-wrapper">
-          <img src="${movie.backdrop || movie.poster}" alt="${movie.titleTh}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${movie.poster}'">
+          <img src="${cwImgSrc}" alt="${movie.titleTh}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${cwPlaceholder}'">
           <div class="cw-badge-ep">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
             ${epLabel}
@@ -814,8 +826,12 @@ function initMovieStreamApp() {
       iframeVideoPlayer.removeAttribute("sandbox");
     }
     
+    iframeVideoPlayer.setAttribute("allowfullscreen", "true");
+    iframeVideoPlayer.setAttribute("webkitallowfullscreen", "true");
+    iframeVideoPlayer.setAttribute("mozallowfullscreen", "true");
+    iframeVideoPlayer.allowFullscreen = true;
     iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
-    iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline; accelerometer; gyroscope");
+    iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline; accelerometer; gyroscope; fullscreen; autoplay; encrypted-media");
     iframeVideoPlayer.setAttribute("playsinline", "true");
     iframeVideoPlayer.setAttribute("webkit-playsinline", "true");
     iframeVideoPlayer.setAttribute("x5-playsinline", "true");
@@ -889,17 +905,23 @@ function initMovieStreamApp() {
     if (playerModal && playerModal.classList.contains("active")) {
       const isHtml5Playing = html5VideoPlayer && !html5VideoPlayer.paused && html5VideoPlayer.style.display !== "none";
       const isIframePlaying = iframeVideoPlayer && iframeVideoPlayer.style.display !== "none";
-      if (isHtml5Playing || isIframePlaying) {
+      const isTV = document.documentElement.classList.contains("is-tv-device");
+      const isFs = playerModal.classList.contains("theater-fullscreen-mode") || !!(document.fullscreenElement || document.webkitFullscreenElement);
+
+      // Only auto-hide controls if it is a TV device OR currently in Fullscreen mode!
+      // In normal modal view on tablet/mobile/PC, controls stay permanently visible
+      if ((isHtml5Playing || isIframePlaying) && (isTV || isFs)) {
+        const hideDelay = isTV ? 3500 : 5000;
         playerControlsIdleTimer = setTimeout(() => {
           if (playerModal && playerModal.classList.contains("active")) {
             playerModal.classList.add("player-controls-idle");
           }
-        }, 3500);
+        }, hideDelay);
       }
     }
   }
 
-  ['keydown', 'click'].forEach(evtName => {
+  ['keydown', 'click', 'touchstart', 'pointerdown'].forEach(evtName => {
     document.addEventListener(evtName, () => {
       if (playerModal && playerModal.classList.contains("active")) {
         resetPlayerControlsIdleTimer();
@@ -916,6 +938,20 @@ function initMovieStreamApp() {
       playerModal.classList.remove("theater-fullscreen-mode");
     }
     document.body.style.overflow = "";
+
+    // Exit fullscreen and orientation lock if active
+    try {
+      if (document.fullscreenElement || document.webkitFullscreenElement) {
+        if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen().catch(() => {});
+      }
+      if (screen.orientation && screen.orientation.unlock) {
+        try { screen.orientation.unlock(); } catch(e) {}
+      }
+    } catch(e) {}
+    if (typeof updateFullscreenBtnUI === "function") {
+      updateFullscreenBtnUI(false);
+    }
     
     if (hlsInstance) {
       try { hlsInstance.destroy(); } catch(e) {}
@@ -1089,23 +1125,106 @@ function initMovieStreamApp() {
     });
   }
 
-  // Fullscreen Action (Toggle Theater Fullscreen & HTML5 Fullscreen)
-  function toggleFullscreen() {
-    if (playerModal) {
-      playerModal.classList.toggle("theater-fullscreen-mode");
-    }
-    const targetWrap = videoScreenWrapper || html5VideoPlayer || document.documentElement;
-    try {
-      if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-        if (targetWrap.requestFullscreen) targetWrap.requestFullscreen().catch(() => {});
-        else if (targetWrap.webkitRequestFullscreen) targetWrap.webkitRequestFullscreen().catch(() => {});
+  // Fullscreen UI State Updater
+  function updateFullscreenBtnUI(isFs) {
+    const expandIcon = '<path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>';
+    const compressIcon = '<path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path>';
+
+    const tvFsBtn = document.getElementById("tvFullscreenBtn");
+    if (tvFsBtn) {
+      const svg = tvFsBtn.querySelector("svg");
+      const span = tvFsBtn.querySelector("span");
+      if (svg) svg.innerHTML = isFs ? compressIcon : expandIcon;
+      if (span) span.textContent = isFs ? "ย่อจอ" : "เต็มจอ";
+      if (isFs) {
+        tvFsBtn.classList.add("is-fullscreen");
       } else {
+        tvFsBtn.classList.remove("is-fullscreen");
+      }
+    }
+
+    if (fullscreenBtn) {
+      const svg = fullscreenBtn.querySelector("svg");
+      if (svg) svg.innerHTML = isFs ? compressIcon : expandIcon;
+      fullscreenBtn.setAttribute("aria-label", isFs ? "ออกจากเต็มหน้าจอ" : "เล่นเต็มหน้าจอ");
+    }
+  }
+
+  // Fullscreen Action (Toggle Theater Fullscreen & HTML5 Fullscreen with Tablet Landscape Support)
+  function toggleFullscreen() {
+    const isCurrentlyFs = !!(
+      document.fullscreenElement ||
+      document.webkitFullscreenElement ||
+      (playerModal && playerModal.classList.contains("theater-fullscreen-mode"))
+    );
+
+    if (isCurrentlyFs) {
+      // 1. Exit Fullscreen
+      if (playerModal) {
+        playerModal.classList.remove("theater-fullscreen-mode");
+      }
+      updateFullscreenBtnUI(false);
+      try {
         if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
         else if (document.webkitExitFullscreen) document.webkitExitFullscreen().catch(() => {});
+      } catch(e) {}
+      try {
+        if (screen.orientation && screen.orientation.unlock) {
+          screen.orientation.unlock();
+        }
+      } catch(e) {}
+      showToast("📺 ย่อหน้าจอปกติ", "info");
+    } else {
+      // 2. Enter Fullscreen
+      if (playerModal) {
+        playerModal.classList.add("theater-fullscreen-mode");
       }
-    } catch(e) {}
+      updateFullscreenBtnUI(true);
+
+      // In Android WebView / Tablets: Request fullscreen on playerModal or documentElement
+      try {
+        const targetElem = document.documentElement || playerModal || videoScreenWrapper;
+        if (targetElem.requestFullscreen) {
+          targetElem.requestFullscreen().catch(() => {
+            if (playerModal && playerModal.requestFullscreen) {
+              playerModal.requestFullscreen().catch(() => {});
+            }
+          });
+        } else if (targetElem.webkitRequestFullscreen) {
+          targetElem.webkitRequestFullscreen().catch(() => {});
+        }
+      } catch(e) {}
+
+      // Attempt orientation lock to landscape for mobile & tablet apps
+      try {
+        if (screen.orientation && screen.orientation.lock) {
+          screen.orientation.lock("landscape").catch(() => {
+            if (screen.orientation.lock) screen.orientation.lock("sensor-landscape").catch(() => {});
+          });
+        }
+      } catch(e) {}
+      showToast("🖥 สลับมุมมองเต็มหน้าจอ", "success");
+    }
     resetPlayerControlsIdleTimer();
   }
+
+  // Synchronize fullscreen events from browser or internal video player
+  ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'].forEach(evtName => {
+    document.addEventListener(evtName, () => {
+      const isFs = !!(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement);
+      if (playerModal) {
+        if (isFs) {
+          playerModal.classList.add("theater-fullscreen-mode");
+        } else {
+          playerModal.classList.remove("theater-fullscreen-mode");
+        }
+      }
+      updateFullscreenBtnUI(isFs);
+      if (!isFs && screen.orientation && screen.orientation.unlock) {
+        try { screen.orientation.unlock(); } catch(e) {}
+      }
+    }, { passive: true });
+  });
 
   if (fullscreenBtn) {
     fullscreenBtn.addEventListener("click", toggleFullscreen);
@@ -1535,13 +1654,21 @@ function initMovieStreamApp() {
       });
     }
 
-    // Fullscreen Button (ขยายเต็มจอ รองรับทั้ง HTML5 และ Iframe)
+    // Fullscreen Button (ขยายเต็มจอ รองรับทั้ง HTML5, Iframe และ Touch บนแท็บเล็ต/มือถือ)
     const tvFullscreenBtn = document.getElementById("tvFullscreenBtn");
     if (tvFullscreenBtn) {
-      tvFullscreenBtn.addEventListener("click", () => {
+      let lastFsClick = 0;
+      const onFsButtonClick = (e) => {
+        if (e && e.cancelable) {
+          e.preventDefault();
+        }
+        const now = Date.now();
+        if (now - lastFsClick < 350) return; // Prevent double-trigger from touch+click
+        lastFsClick = now;
         toggleFullscreen();
-        showToast("🖥 สลับมุมมองเต็มหน้าจอ", "success");
-      });
+      };
+      tvFullscreenBtn.addEventListener("click", onFsButtonClick);
+      tvFullscreenBtn.addEventListener("touchend", onFsButtonClick);
     }
 
     // D-Pad Navigation Helper for Player Modal (ArrowUp ไปที่แถบเวลา / ArrowDown ลงมาที่เมนูปุ่ม)
@@ -1618,6 +1745,24 @@ function initMovieStreamApp() {
       const genre = btn.getAttribute("data-genre");
       if (genre === "all") {
         showHomeView();
+      } else if (genre === "popular") {
+        const popMovies = movieList.filter(m => (m.genres && (m.genres.includes("ยอดนิยม") || m.genres.includes("ยอดนิยม 2026"))) || (m.rating && m.rating >= 7.8));
+        popMovies.sort((a, b) => {
+          const aTop = (a.genres && (a.genres.includes("ยอดนิยม 2026") || a.genres.includes("ยอดนิยม"))) ? 1 : 0;
+          const bTop = (b.genres && (b.genres.includes("ยอดนิยม 2026") || b.genres.includes("ยอดนิยม"))) ? 1 : 0;
+          if (bTop !== aTop) return bTop - aTop;
+          return (b.rating || 0) - (a.rating || 0);
+        });
+        showGridView(`⭐ รวมภาพยนตร์ยอดนิยมทั้งหมด (${popMovies.length} เรื่อง)`, popMovies);
+      } else if (genre === "popular-2026") {
+        const popMovies = movieList.filter(m => (m.genres && m.genres.includes("ยอดนิยม 2026")) || (m.rating && m.rating >= 7.0 && (m.year === 2026 || String(m.year) === "2026")));
+        popMovies.sort((a, b) => {
+          const aTop = (a.genres && a.genres.includes("ยอดนิยม 2026")) ? 1 : 0;
+          const bTop = (b.genres && b.genres.includes("ยอดนิยม 2026")) ? 1 : 0;
+          if (bTop !== aTop) return bTop - aTop;
+          return (b.rating || 0) - (a.rating || 0);
+        });
+        showGridView(`⭐ รวมภาพยนตร์ยอดนิยม 2026 (TOP & HOT) (${popMovies.length} เรื่อง)`, popMovies);
       } else if (genre === "continue-watching") {
         displayContinueWatchingGridView();
       } else if (genre === "today") {

@@ -17,7 +17,8 @@
   <meta name="description" content="ดูหนังออนไลน์ฟรี 2026 หนังใหม่ชนโรง HD เต็มเรื่อง ทั้งหนังไทย หนังฝรั่ง ซีรีส์เกาหลี พากย์ไทย ซับไทย ไม่เสียค่าบริการ ไม่มีโฆษณากวนใจ อัปเดตใหม่ทุกวัน">
   <meta name="keywords" content="ดูหนังออนไลน์, ดูหนังฟรี, ดูหนังใหม่ 2026, หนังชนโรง, ดูหนัง HD, หนังพากย์ไทย, ดูซีรีส์ฟรี, ดูหนังไม่มีโฆษณา">
   <meta name="robots" content="index, follow">
-  <link rel="stylesheet" href="css/style.css?v=20260910_1030">
+  <meta name="referrer" content="no-referrer">
+  <link rel="stylesheet" href="css/style.css?v=20260914_0815">
   
   <!-- SEO Open Graph Metadata -->
   <meta property="og:title" content="ดูหนังออนไลน์ 2026 ฟรี หนังใหม่ชนโรง HD พากย์ไทย ซับไทย เต็มเรื่อง">
@@ -86,6 +87,8 @@
       </div>
       <div class="genre-tags" id="genreFilterContainer">
         <button class="genre-tag active" data-genre="all">🎬 ทั้งหมด</button>
+        <button class="genre-tag tag-highlight" data-genre="popular" style="background: linear-gradient(135deg, rgba(234, 179, 8, 0.25), rgba(249, 115, 22, 0.25)); border: 1px solid #eab308; color: #fff; font-weight: bold;">⭐ หนังยอดนิยมทั้งหมด</button>
+        <button class="genre-tag tag-highlight" data-genre="popular-2026">⭐ ยอดนิยม 2026</button>
         <button class="genre-tag tag-highlight cw-tag" data-genre="continue-watching" id="tagContinueWatching" style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(99, 102, 241, 0.25)); border: 1px solid #a855f7; color: #fff; font-weight: bold;">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           Continue Watching
@@ -166,7 +169,7 @@
 
       <div class="modal-body">
         <div class="modal-poster-wrapper">
-          <img id="modalPoster" src="" alt="โปสเตอร์ภาพยนตร์">
+          <img id="modalPoster" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="โปสเตอร์ภาพยนตร์" referrerpolicy="no-referrer">
         </div>
         
         <div class="modal-details-content">
@@ -264,7 +267,7 @@
         </div>
         
         <!-- IFrame Player Container for Embed Iframe -->
-        <iframe id="iframeVideoPlayer" style="display:none;" allowfullscreen="true" scrolling="no" loading="eager" tabindex="0" allow="autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline; accelerometer; gyroscope"></iframe>
+        <iframe id="iframeVideoPlayer" style="display:none;" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no" loading="eager" tabindex="0" allow="autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline; accelerometer; gyroscope; fullscreen; autoplay; encrypted-media"></iframe>
       </div>
 
       <!-- Persistent Player Timeline & Progress Bar (แถบเวลาเลื่อนตามจริง) -->
@@ -355,7 +358,7 @@
 
   <!-- JavaScript Scripts -->
   <script src="js/movies.js?v=20260909_0930"></script>
-  <script src="js/app.js?v=20260910_1030"></script>
+  <script src="js/app.js?v=20260914_0815"></script>
   <script>
     // Bulletproof direct renderer & counter inline
     (function() {

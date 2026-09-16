@@ -1,16 +1,1744 @@
-// ฐานข้อมูลภาพยนตร์รวม 24-HDX และ GOSERIES4K ปี 2026 พากย์ไทย
+// ฐานข้อมูลภาพยนตร์รวม 24-HD และ GOSERIES4K ปี 2026 พากย์ไทย
 window.movies = [
   {
-    "titleTh": "ฟรี The Mongoose (2026)",
-    "titleEn": "ฟรี The Mongoose (2026)",
+    "titleTh": "Just Play Dead (2026)",
+    "titleEn": "Just Play Dead (2026)",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/09/The-Mongoose-2026.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/09/The-Mongoose-2026.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Just-Play-Dead-2026.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Just-Play-Dead-2026.png",
+    "videoUrl": "https://www.youtube.com/embed/NQwryUyyotY",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Just Play Dead (2026) พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 7.0,
+    "genres": [
+      "ยอดนิยม 2026",
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/NQwryUyyotY",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://www.youtube.com/embed/NQwryUyyotY"
+    },
+    "id": "24hdx-40580",
+    "postId": "40580",
+    "originalUrl": "https://www.24-hda.com/just-play-dead/"
+  },
+  {
+    "titleTh": "Ghost in the Cell (2026) วัยหนุ่มคุกผี",
+    "titleEn": "Ghost in the Cell (2026) วัยหนุ่มคุกผี",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Ghost-in-the-Cell-2026-%E0%B8%A7%E0%B8%B1%E0%B8%A2%E0%B8%AB%E0%B8%99%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%84%E0%B8%B8%E0%B8%81%E0%B8%9C%E0%B8%B5.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Ghost-in-the-Cell-2026-%E0%B8%A7%E0%B8%B1%E0%B8%A2%E0%B8%AB%E0%B8%99%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%84%E0%B8%B8%E0%B8%81%E0%B8%9C%E0%B8%B5.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=646571ff2e9c893f52f510d8&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Ghost in the Cell (2026) วัยหนุ่มคุกผี พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 6.9,
+    "genres": [
+      "ยอดนิยม 2026",
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/MaE3lCFjg_0",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=646571ff2e9c893f52f510d8&typew=W"
+    },
+    "id": "24hdx-40078",
+    "postId": "40078",
+    "originalUrl": "https://www.24-hda.com/ghost-in-the-cell/"
+  },
+  {
+    "titleTh": "The Runner (2026) เดอะรันเนอร์",
+    "titleEn": "The Runner (2026) เดอะรันเนอร์",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Runner-2026.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Runner-2026.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=0ab79c6d3de4baab0c0876f5&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ The Runner (2026) เดอะรันเนอร์ พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 6.4,
+    "genres": [
+      "ยอดนิยม 2026",
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/zz4rsZLcauY",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=0ab79c6d3de4baab0c0876f5&typew=W"
+    },
+    "id": "24hdx-40570",
+    "postId": "40570",
+    "originalUrl": "https://www.24-hda.com/the-runner/"
+  },
+  {
+    "titleTh": "Scissors (2026)",
+    "titleEn": "Scissors (2026)",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/Scissors-2026.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/Scissors-2026.png",
+    "videoUrl": "https://www.youtube.com/embed/-pj97rRicEM",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Scissors (2026) พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 6.6,
+    "genres": [
+      "ยอดนิยม 2026",
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/-pj97rRicEM",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://www.youtube.com/embed/-pj97rRicEM"
+    },
+    "id": "24hdx-39786",
+    "postId": "39786",
+    "originalUrl": "https://www.24-hda.com/scissors/"
+  },
+  {
+    "titleTh": "One Night Only (2026)",
+    "titleEn": "One Night Only (2026)",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/One-Night-Only-2026.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/One-Night-Only-2026.png",
+    "videoUrl": "https://www.youtube.com/embed/AvKoSR3O4NQ",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ One Night Only (2026) พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 5.5,
+    "genres": [
+      "ยอดนิยม 2026",
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/AvKoSR3O4NQ",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://www.youtube.com/embed/AvKoSR3O4NQ"
+    },
+    "id": "24hdx-40668",
+    "postId": "40668",
+    "originalUrl": "https://www.24-hda.com/one-night-only/"
+  },
+  {
+    "titleTh": "The Woman in the Hole (2026)",
+    "titleEn": "The Woman in the Hole (2026)",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/0.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/0.png",
+    "videoUrl": "https://www.youtube.com/embed/adruBLjR0FU",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ The Woman in the Hole (2026) พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 5.2,
+    "genres": [
+      "ยอดนิยม 2026",
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/adruBLjR0FU",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://www.youtube.com/embed/adruBLjR0FU"
+    },
+    "id": "24hdx-40692",
+    "postId": "40692",
+    "originalUrl": "https://www.24-hda.com/the-woman-in-the-hole/"
+  },
+  {
+    "titleTh": "Apoy Sa Ibabaw Apoy Sa Ilalim (2026)",
+    "titleEn": "Apoy Sa Ibabaw Apoy Sa Ilalim (2026)",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Apoy-Sa-Ibabaw-Apoy-Sa-Ilalim-2026.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Apoy-Sa-Ibabaw-Apoy-Sa-Ilalim-2026.png",
+    "videoUrl": "https://www.youtube.com/embed/5E2oaKUdakw",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Apoy Sa Ibabaw Apoy Sa Ilalim (2026) พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 6.1,
+    "genres": [
+      "ยอดนิยม 2026",
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/5E2oaKUdakw",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://www.youtube.com/embed/5E2oaKUdakw"
+    },
+    "id": "24hdx-40561",
+    "postId": "40561",
+    "originalUrl": "https://www.24-hda.com/apoy-sa-ibabaw-apoy-sa-ilalim/"
+  },
+  {
+    "titleTh": "Sex Drive (2026)",
+    "titleEn": "Sex Drive (2026)",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Sex-Drive-20261.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Sex-Drive-20261.png",
+    "videoUrl": "https://www.youtube.com/embed/eM6Aq7jSZwc",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Sex Drive (2026) พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 6.6,
+    "genres": [
+      "ยอดนิยม 2026",
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/eM6Aq7jSZwc",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://www.youtube.com/embed/eM6Aq7jSZwc"
+    },
+    "id": "24hdx-40583",
+    "postId": "40583",
+    "originalUrl": "https://www.24-hda.com/sex-drive/"
+  },
+  {
+    "titleTh": "War Machine (2026) สงครามจักรกลถล่มโลก",
+    "titleEn": "War Machine (2026) สงครามจักรกลถล่มโลก",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/03/War-Machine-2026-%E0%B8%AA%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B8%81%E0%B8%A5%E0%B8%96%E0%B8%A5%E0%B9%88%E0%B8%A1%E0%B9%82%E0%B8%A5%E0%B8%81.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/03/War-Machine-2026-%E0%B8%AA%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B8%81%E0%B8%A5%E0%B8%96%E0%B8%A5%E0%B9%88%E0%B8%A1%E0%B9%82%E0%B8%A5%E0%B8%81.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=2ca33e5cbde1d7e0bcd0f74b&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ War Machine (2026) สงครามจักรกลถล่มโลก พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 6.5,
+    "genres": [
+      "ยอดนิยม 2026",
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/AFuE1LRxm80",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=2ca33e5cbde1d7e0bcd0f74b&typew=W"
+    },
+    "id": "24hdx-38313",
+    "postId": "38313",
+    "originalUrl": "https://www.24-hda.com/war-machine/"
+  },
+  {
+    "titleTh": "Avatar Aang The Last Airbender (2026)",
+    "titleEn": "Avatar Aang The Last Airbender (2026)",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Avatar-Aang-The-Last-Airbender-2026.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Avatar-Aang-The-Last-Airbender-2026.png",
+    "videoUrl": "https://www.youtube.com/embed/7b20GRFZBFE",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Avatar Aang The Last Airbender (2026) (2026) พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 8.0,
+    "genres": [
+      "ยอดนิยม",
+      "ยอดนิยม 2026",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/7b20GRFZBFE",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "id": "24hdx-40651"
+  },
+  {
+    "titleTh": "The Monkey Hero (2026) เห้งเจียแจ๊ส",
+    "titleEn": "The Monkey Hero (2026) เห้งเจียแจ๊ส",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Monkey-Hero-2026-%E0%B9%80%E0%B8%AB%E0%B9%89%E0%B8%87%E0%B9%80%E0%B8%88%E0%B8%B5%E0%B8%A2%E0%B9%81%E0%B8%88%E0%B9%8A%E0%B8%AA.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Monkey-Hero-2026-%E0%B9%80%E0%B8%AB%E0%B9%89%E0%B8%87%E0%B9%80%E0%B8%88%E0%B8%B5%E0%B8%A2%E0%B9%81%E0%B8%88%E0%B9%8A%E0%B8%AA.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=47728e1c453de9b798ae2937&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ The Monkey Hero (2026) เห้งเจียแจ๊ส (2026) พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 8.0,
+    "genres": [
+      "ยอดนิยม",
+      "ยอดนิยม 2026",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/GxklWfXfhqo",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "id": "24hdx-40618"
+  },
+  {
+    "titleTh": "Overdo รักเกินแค้น-หากวินาทีนั้นไม่พบเธอ (2026) พากย์ไทย-ซับไทย EP1-33",
+    "titleEn": "Overdo รักเกินแค้น-หากวินาทีนั้นไม่พบเธอ (2026) พากย์ไทย-ซับไทย EP1-33",
+    "year": 2026,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/07/1784439703765.jpg",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/07/1784439703765.jpg",
+    "videoUrl": "https://torbo007.com/embed/da5e4eebd97056e93134445258a3ce1c",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ: รักเกินแค้น-หากวินาทีนั้นไม่พบเธอ | 这一秒过火\r\n เมื่อเรื่องราวความรักที่พร้อมการกับการล้างแค้น ซึ่งเป็นจุดสุดท้ายของการถักทอทุกอย่างเข้าหากัน ต่างต้องผ่านเรื่องราวร้ายๆในชีวิตไปให้ได้ บอกเล่าเรื่องราวของชายหนุ่มอย่าง มู่หรงชิงอี้ (จางหลิงเฮ่อ) ที่สูญเสียทุกๆอย่างไปในเหตุการณ์ครั้งก่อน เมื่อเขาเติบโตมาพร้อมกับความเจ็บปวด และความแค้นที่ฝังลึกอยู่ในใจมานานแสนนาน แต่แล้วทุกอย่างกลับมีเป้าหมายอย่างเดียคือ การออกตามหาความจริง และทวงคืนความยุติธรรม ให้กับครอบครัวไม่ว่าจะแลกอะไรมาเพื่อสิ่งนี้เลยก็ตาม ในระหว่างเป้าหมายที่กำลังเดินทางแก้แค้น เข้ากลับได้มาพบกับ เหรินซู่ซู่ (หวังฉู่หรัน) หญิงสาวผู้มีชีวิตเรียบง่าย อบอุ่น และเต็มไปด้วยรอยยิ้ม การพบกันครั้งนี้กลับทำให้เขาต้องเปลี่ยนแลปงชีวิตไปในชั่วข้ามคืน เหรินซู่ซู่ เธอกลับเข้ามาเติมเต็มหัวใจที่บอบซ้ำ จึงทำให้เขาเริ่มตั้งคำถามกับตัวเอง ว่าความยุติธรรมที่เป็นเพียงการปล่อยให้ความแค้งครองชีวิต แต่อย่างไรก็ตามความสัมพันธ์ของทั้งสองต่างเริ่มเบ่งบานกับท่ามกลางอุปสรรคครั้งใหญ่ เมื่อความจริงถูกเปิดเผิยว่าหญิงสาวมีความเกี่ยวข้องกับครอบครัวของศัตรูที่เขากำลังตามล่า แม้ว่าเธอจะไม่มีส่วนเกี่ยวข้องกับเหตุการณ์ในอดีตเลยก็ตาม แต่แล้วสายสัมพันธ์ทุกอย่างกลับกลายเป็นกำแพงที่ทำให้ทั้งสอง ไม่สามารถอยู่เคียงบาเคียงไหล่กันอย่างที่คิด ทว่าเรื่องราวทุกอย่างกลับมีบุคคลที่อยู่เบื้องหลังโศกนาฏกรรมก็เริ่มเคลื่อนไหว เพื่อปกปิดความลับที่เก็บซ่อนมานานหลายปี จึงทำให้แผนการแก้แค้นเดินหน้า ความรักและความไว้วางใจของทั้งคู่ เมื่อแผนการแก้แค้นเดินหน้า ความรักและความไว้วางใจของทั้งคู่ก็เริ่มสั่นคลอน พวกเขาต้องเผชิญกับการทรยศ การเสียสละ และบททดสอบที่บีบให้ต้องเลือกว่าจะยึดติดกับอดีต หรือเปิดใจให้กับอนาคตที่กำลังรออยู่ ทุกการตัดสินใจล้วนส่งผลต่อชีวิตของผู้คนรอบตัว และอาจเปลี่ยนชะตากรรมของทั้งสองไปตลอดกาล อย่างไรก็ตามความสัมพันธ์ของพวกเขาทั้งสองที่กำลังเบ่งบาน กลับต้องเผชิญหน้ากับเรื่องราวต่างๆ ที่ปนไปพร้อมท่ามกลางปริศนาความจริงที่ค่อยๆ ถูกเปิดโปรงมากขึ้นเรื่อยๆพร้อมต่อสู้กับอำนาจและผลประโยชน์ที่ทำให้หลายชีวิตต้องสูญเสีย ระหว่างเส้นทางที่เต็มไปด้วยอันตราย ความรักของพวกเขาจะเข้มแข็งพอที่จะเอาชนะความแค้นได้หรือไม่ หรือสุดท้ายแล้วโชคชะตาจะนำพาให้ทั้งสองต้องแยกจากกันเหมือนที่อดีตได้ลิขิตไว้ สุดท้ายแล้วทั้งสองคนจะสามารถแก้ไขปัญหาเหล่านี้ได้หรือไม่  \r\n",
+    "rating": 8.8,
+    "genres": [
+      "ซีรีส์แนะนำใหม่ 2026",
+      "พากย์ไทย",
+      "GOSERIES4K"
+    ],
+    "duration": "ซีรีส์ 33 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "GOSERIES4K",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16",
+      "ตอนที่ 17",
+      "ตอนที่ 18",
+      "ตอนที่ 19",
+      "ตอนที่ 20",
+      "ตอนที่ 21",
+      "ตอนที่ 22",
+      "ตอนที่ 23",
+      "ตอนที่ 24",
+      "ตอนที่ 25",
+      "ตอนที่ 26",
+      "ตอนที่ 27",
+      "ตอนที่ 28",
+      "ตอนที่ 29",
+      "ตอนที่ 30",
+      "ตอนที่ 31",
+      "ตอนที่ 32",
+      "ตอนที่ 33"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/da5e4eebd97056e93134445258a3ce1c",
+      "2": "https://torbo007.com/embed/dc41d6b93c6798279a689d8a66369414",
+      "3": "https://torbo007.com/embed/b2e77542c1fe19246ad3ed09f6dd9cae",
+      "4": "https://torbo007.com/embed/2cf44477e205d6e0ac1572b99e294635",
+      "5": "https://torbo007.com/embed/5197351ac6ace1f1468415f056b3a208",
+      "6": "https://torbo007.com/embed/4894471db6e1ce48039fbb703dfc168f",
+      "7": "https://torbo007.com/embed/7c1e314ed1f2147ff6bde1afe9aab3da",
+      "8": "https://torbo007.com/embed/08f0e4ee01e30e70263cb0afbbea8dd2",
+      "9": "https://torbo007.com/embed/56f41b3549d49ed4c5ae59bc0f359157",
+      "10": "https://torbo007.com/embed/fc3b89d77069c0756f3bbdec749b402e",
+      "11": "https://torbo007.com/embed/a633abf7f08735cff11fe0c3158c7016",
+      "12": "https://torbo007.com/embed/121d30352c666aad29d8d3e5aabd8e02",
+      "13": "https://torbo007.com/embed/57aab48ec06b5cc1ef4fc2218907d289",
+      "14": "https://torbo007.com/embed/6f80b2a3124995fdedcf5ca99d721ddd",
+      "15": "https://torbo007.com/embed/0e7041b5ffcd0b3b293ea03460fe947c",
+      "16": "https://torbo007.com/embed/1abb1676e8bf08851303b026751977f4",
+      "17": "https://torbo007.com/embed/59dc48501e406c5fda1dd95bb8e11392",
+      "18": "https://torbo007.com/embed/be5f0bca58e6e683efb410adf32d84a4",
+      "19": "https://torbo007.com/embed/7f97d39e5176f32b9f092d9f06e83f5e",
+      "20": "https://torbo007.com/embed/c54a5551b2fa10f79ef16d7b350ea09e",
+      "21": "https://torbo007.com/embed/c1d22e3cec44363aeaafbf15abdb12fe",
+      "22": "https://torbo007.com/embed/afce30c379bfe6b4be3bfa7379fb6090",
+      "23": "https://torbo007.com/embed/5b81b072b2192a39f0e6d6d9e27d755c",
+      "24": "https://torbo007.com/embed/c8465333f9bbde85a36b7a03c152f021",
+      "25": "https://torbo007.com/embed/9a0d7ad0c56bab5dbd257a4bc6a600d5",
+      "26": "https://torbo007.com/embed/d0fde145e6da16827e7862159d5cf57b",
+      "27": "https://torbo007.com/embed/9bda9f43f71bf6365f480269ff429427",
+      "28": "https://torbo007.com/embed/11a0628a277917d7e6f69297fe999911",
+      "29": "https://torbo007.com/embed/0c77229cdfb229d2fdd0cbab80a443e8",
+      "30": "https://torbo007.com/embed/3067e09566fa3375e2b2c750d65563c7",
+      "31": "https://torbo007.com/embed/1930d244c129c75ee96f64417f4b9a26",
+      "32": "https://torbo007.com/embed/c981810068a33bf309964f8f81c4d751",
+      "33": "https://torbo007.com/embed/63462470575c98c47e26a03fa06a7e2c"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "gs-128620",
+    "postId": "128620",
+    "originalUrl": "https://goseries4k.com/overdo/"
+  },
+  {
+    "titleTh": "จีน จั่นเจาตะลุยยุทธภพ Zhan Zhao Adventures (2026) ซับไทย พากย์ไทย EP.1-37",
+    "titleEn": "จีน จั่นเจาตะลุยยุทธภพ Zhan Zhao Adventures (2026) ซับไทย พากย์ไทย EP.1-37",
+    "year": 2026,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/05/9-4.jpg",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/05/9-4.jpg",
+    "videoUrl": "https://torbo007.com/embed/301587c77d743a446d465ae958fa619a",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ:จั่นเจาตะลุยยุทธภพ | 雨霖铃☄️☀️\r\n เมื่อจอมยุทธผู้ยึดมั่นในความยุติธรรมอย่าง “จั่นเจา” ต้องก้าวเข้าสู่เส้นทางแห่งการสืบคดีปริศนาที่ถูกปิดซ่อนมานาน เขาจึงถูกดึงเข้าสู่วังวนแห่งอำนาจและการหักหลังในยุทธภพโดยไม่อาจหลีกเลี่ยงได้\r\nหลังได้รับเบาะแสสำคัญจากสหายเก่า จั่นเจาตัดสินใจออกเดินทางเพื่อตามหาความจริงเกี่ยวกับคดีลับที่อาจสั่นคลอนราชสำนักแห่งราชวงศ์ซ่งเหนือ ทว่าระหว่างทาง เขากลับต้องเผชิญหน้ากับศัตรูมากมาย ทั้งคนแปลกหน้าและผู้คนใกล้ตัวที่พร้อมหันคมดาบเข้าหาเขาทุกเมื่อ ภายใต้เงามืดของการแย่งชิงอำนาจ จั่นเจาได้พบกับ “ฮั่วหลิงหลง” บุตรสาวเพียงคนเดียวแห่งสำนักหลิงหลง ผู้เฉลียวฉลาดและกล้าหาญเกินหญิงทั่วไป อีกทั้งยังได้ร่วมทางกับ “ไป๋อวี้ถัง” จอมยุทธหนุ่มผู้มีฉายาว่า “นกน้อยในกรงทอง” แต่กลับซ่อนฝีมือการต่อสู้อันเหนือชั้นเอาไว้ภายใน จากคนแปลกหน้าที่มีเป้าหมายต่างกัน ทั้งสามค่อย ๆ กลายเป็นสหายร่วมเป็นร่วมตาย ท่ามกลางการไล่ล่าความจริงที่เต็มไปด้วยอันตราย เบื้งหลังคดีปริศนาครั้งนี้ กลับเชื่อมโยงไปถึง “อ๋องเซียงหยาง” ผู้กำลังแผ่อิทธิพลมืดเข้าครอบงำทั้งราชสำนักและวงการยุทธภพ ยิ่งพวกเขาเข้าใกล้ความจริงมากเท่าไร ศัตรูที่หมายเอาชีวิตก็ยิ่งปรากฏตัวมากขึ้นเท่านั้น จั่นเจาจึงต้องใช้ทั้งคมดาบ สติปัญญา และหัวใจ เพื่อนำพาทุกคนฝ่าฟันแผนการอันโหดเหี้ยมที่ซ่อนอยู่เบื้องหลัง และการเดินทางครั้งนี้ อาจกลายเป็นศึกครั้งสำคัญที่เปลี่ยนชะตาของแผ่นดินและยุทธภพไปตลอดกาล…",
+    "rating": 8.8,
+    "genres": [
+      "ซีรีส์แนะนำใหม่ 2026",
+      "พากย์ไทย",
+      "GOSERIES4K"
+    ],
+    "duration": "ซีรีส์ 37 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "GOSERIES4K",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16",
+      "ตอนที่ 17",
+      "ตอนที่ 18",
+      "ตอนที่ 19",
+      "ตอนที่ 20",
+      "ตอนที่ 21",
+      "ตอนที่ 22",
+      "ตอนที่ 23",
+      "ตอนที่ 24",
+      "ตอนที่ 25",
+      "ตอนที่ 26",
+      "ตอนที่ 27",
+      "ตอนที่ 28",
+      "ตอนที่ 29",
+      "ตอนที่ 30",
+      "ตอนที่ 31",
+      "ตอนที่ 32",
+      "ตอนที่ 33",
+      "ตอนที่ 34",
+      "ตอนที่ 35",
+      "ตอนที่ 36",
+      "ตอนที่ 37"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/301587c77d743a446d465ae958fa619a",
+      "2": "https://torbo007.com/embed/d49e5757cc56175b691b013e147ce133",
+      "3": "https://torbo007.com/embed/dd21b95f9b7ad11c0c43fe606658d177",
+      "4": "https://torbo007.com/embed/a1a45a12cd37f637039a52aac54c1415",
+      "5": "https://torbo007.com/embed/b4b675f0202e643d2887e1ae0511d61f",
+      "6": "https://torbo007.com/embed/b9d2b5b339a5031661f0903ddb6c1b4d",
+      "7": "https://torbo007.com/embed/f838e2874ce810822eaf85c0552d4a65",
+      "8": "https://torbo007.com/embed/c0df05dda1b07ef0ab1ca676f0c91ba1",
+      "9": "https://torbo007.com/embed/442cc3deaf99891c9e63a75d35735d01",
+      "10": "https://torbo007.com/embed/48114beb418966b1b8f56721cd129a9c",
+      "11": "https://torbo007.com/embed/50187bc9cd59d83d94694cdb89297b90",
+      "12": "https://torbo007.com/embed/889ff40b958b34f6f9185a1748a583d0",
+      "13": "https://torbo007.com/embed/ca06121e00d939eb54bbff8551ed729b",
+      "14": "https://torbo007.com/embed/45342f501cef9748db079fe8c6ae12a2",
+      "15": "https://torbo007.com/embed/3f65c894ba585b956f39f887e36c6b37",
+      "16": "https://torbo007.com/embed/5e5dcd74fe0bc61ab29dbfa33ce6251a",
+      "17": "https://torbo007.com/embed/1b18c9c7d536caf5d1e5797ecad1782c",
+      "18": "https://torbo007.com/embed/1882c468bbf7563d6ab79dfee2f620b1",
+      "19": "https://torbo007.com/embed/af2722bef241554dd99cc2e07b883623",
+      "20": "https://torbo007.com/embed/153ed9256df794d0bb4446ec3ccf7b30",
+      "21": "https://torbo007.com/embed/01655b926a9a3b46ba82021977441ee5",
+      "22": "https://torbo007.com/embed/ca80c59ea89a73f4c2db40e6294a2c31",
+      "23": "https://torbo007.com/embed/3deba05b1fe62dd6589e34b40f086998",
+      "24": "https://torbo007.com/embed/76608ffb5c9aa0782b0c2aa2db99c1d7",
+      "25": "https://torbo007.com/embed/2a97e7888d5f764944b46a1fb2f64e54",
+      "26": "https://torbo007.com/embed/8a4bef692a50784badc7a88a2b95da19",
+      "27": "https://torbo007.com/embed/775e7a9411c57e1bddd430a2331ac134",
+      "28": "https://torbo007.com/embed/9fc1ae11f4f674792dfa3e3cca37a82f",
+      "29": "https://torbo007.com/embed/7a626db6b894a1bdcf3531adaec4f736",
+      "30": "https://torbo007.com/embed/79a7f26941071c40942ef42df50e92b8",
+      "31": "https://torbo007.com/embed/d10a4594ea349ef0ae9fc32470ae4d4c",
+      "32": "https://torbo007.com/embed/31719d85b7b38ab44c92ee25240d80e0",
+      "33": "https://torbo007.com/embed/10c7a1bf46fd77715ef1fd4730e67432",
+      "34": "https://torbo007.com/embed/a365e16b945faac23f2bf4af6ff493bf",
+      "35": "https://torbo007.com/embed/77e39b01c6d7c718130f3d99f17ab7f9",
+      "36": "https://torbo007.com/embed/2b000db94e5e69a0b447c1a17e6595ea",
+      "37": "https://torbo007.com/embed/ce0cdf60e61f83319cbe07df763a2cde"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "gs-124754",
+    "postId": "124754",
+    "originalUrl": "https://goseries4k.com/%e0%b8%88%e0%b8%b1%e0%b9%88%e0%b8%99%e0%b9%80%e0%b8%88%e0%b8%b2%e0%b8%95%e0%b8%b0%e0%b8%a5%e0%b8%b8%e0%b8%a2%e0%b8%a2%e0%b8%b8%e0%b8%97%e0%b8%98%e0%b8%a0%e0%b8%9e-thai/"
+  },
+  {
+    "titleTh": "Princess Zhaoyang องค์หญิงเจาหยาง (2026) พากย์ไทย/ซับไทย EP.1-36",
+    "titleEn": "Princess Zhaoyang องค์หญิงเจาหยาง (2026) พากย์ไทย/ซับไทย EP.1-36",
+    "year": 2026,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/07/2-4.jpg",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/07/2-4.jpg",
+    "videoUrl": "https://torbo007.com/embed/6c589e454161a918c340dd5ce316756e",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ: องค์หญิงเจาหยาง | 昭阳公主\r\n “จากหญิงองค์หญิงสาวสายดาร์กกับบัณฑิตผู้ต่ำต้อยพร้อมการปรากฎตัวมาพร้อมกับความแค้น” บอกเล่าเรื่องราวของ “เจาหยาง/หลี่ซู่” ที่ถูกผู้คนรอบข้างตั้งฉายาว่าเป็นตัวแม่แห่งความเสเพล และใช้ชีวิตอย่างกับวันนี้เป็นวันสุดท้าย แต่แล้วเมื่อเธอได้มาพบกับ “เชินเซี่ยว” บันฑิตหนุ่มผู้ต่ำต้อยจากหมู่บ้านยากจน ที่พยายามเข้ามาสืบหาความจริทุกอย่างที่ถูกเก็บซ่อนเอาไว้ เพียงเพราะเบื้องหลังการตายของบิดาซึ่งทุกอย่างกลับทำให้พวกเขาต้องจับพลัดจับหูกันอีกครั้ง หลังจากค่ำคืนงามเช้าวันใหม่ หลี่ซู่ กลับไล่ชายหนุ่มออกจากจวนพร้อมทอดทิ้งให้เขาอยู่คนเดียว ทว่าแทนที่เธอจะมอบโอกาสมให้กับเขาตามคำที่เคยพูดไว้ ในเมื่อทั้งสองได้กลับมาพบกันอีกครั้งพร้อมการฝึกฝน และติดอยูากับอันดับหนึ่ง ถูกฮ่องเต้รับเข้าราชการเป็นขุนนางราชสำนัก เมื่อเขาได้พบกับฮ่องเต้องค์ใหม่ สิ่งแรกที่ทั้งสองต้องมาพบเจอกับศาลฎีกา คือการออกตามหาองค์หญิง ที่ใช้จ่ายฟุ่มเฟือยจนทำให้เธอต้องถูกลงโทษอย่างสาสม  แต่แล้วเมื่อทั้งสองได้ใกล้ชิดกันมากขึ้นเรื่อยๆ ต่างก็พร้อมร่วมจับมือกันฝ่าฟันอุปสรรคเพื่อเอาชนะศัตรู สุดท้ายนี้เรื่องราวของคนทั้งสองคนจะเป็นอย่างไรเราไปรับชมพร้อมๆกันค่ะ สานต่อความสนุกและความเข้มข้นของซีรี่ย์เรื่องนี้ไปพร้อมกันกับเราต่อได้ที่ เว็บดูซีรี่ย์ G4 ที่เรามัดนำความสนุกมาเสิร์ฟให้แฟนๆได้รับชมกันแล้วในช่วงเวลานี้\r\n",
+    "rating": 8.8,
+    "genres": [
+      "ซีรีส์แนะนำใหม่ 2026",
+      "พากย์ไทย",
+      "GOSERIES4K"
+    ],
+    "duration": "ซีรีส์ 36 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "GOSERIES4K",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16",
+      "ตอนที่ 17",
+      "ตอนที่ 18",
+      "ตอนที่ 19",
+      "ตอนที่ 20",
+      "ตอนที่ 21",
+      "ตอนที่ 22",
+      "ตอนที่ 23",
+      "ตอนที่ 24",
+      "ตอนที่ 25",
+      "ตอนที่ 26",
+      "ตอนที่ 27",
+      "ตอนที่ 28",
+      "ตอนที่ 29",
+      "ตอนที่ 30",
+      "ตอนที่ 31",
+      "ตอนที่ 32",
+      "ตอนที่ 33",
+      "ตอนที่ 34",
+      "ตอนที่ 35",
+      "ตอนที่ 36"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/6c589e454161a918c340dd5ce316756e",
+      "2": "https://torbo007.com/embed/1ad3e38059675f70857542ff088a312b",
+      "3": "https://torbo007.com/embed/55d2f52490e29862bdb60da0ae4bafed",
+      "4": "https://torbo007.com/embed/a48da9ef71b0d1a9121c36eea2db5240",
+      "5": "https://torbo007.com/embed/ed61f401690b3536c4224bc8e8dc2de2",
+      "6": "https://torbo007.com/embed/72f691fe9db411a74554072c9417db9d",
+      "7": "https://torbo007.com/embed/e96e0753ebf81887350124531192b96d",
+      "8": "https://torbo007.com/embed/e0198ada1e3221c76477faff28ee22fd",
+      "9": "https://torbo007.com/embed/62eb1bfda37f5bfbc238270d0c870f5c",
+      "10": "https://torbo007.com/embed/e32df2e184f1ba5d8b54958899c5c333",
+      "11": "https://torbo007.com/embed/a2d90e21157cb39abab1355b293bd95a",
+      "12": "https://torbo007.com/embed/680f3799a3f4890b844f3a123f380a44",
+      "13": "https://torbo007.com/embed/bc1bf7114b68016716d0b15af7c7a07d",
+      "14": "https://torbo007.com/embed/9bb1761a7c194aad6812ff5c00bab434",
+      "15": "https://torbo007.com/embed/1c502e3d688374b368f1ba14df259321",
+      "16": "https://torbo007.com/embed/ea2bda5da237ae08767807e41995302f",
+      "17": "https://torbo007.com/embed/acbd16430403efea5c2ecf67af5aa888",
+      "18": "https://torbo007.com/embed/4904721941ced24f1ee4be64ec279a86",
+      "19": "https://torbo007.com/embed/0b061a280032a52e97caf206ed1f09c5",
+      "20": "https://torbo007.com/embed/cbe15f0ae85394838c684a3f065a3ed9",
+      "21": "https://torbo007.com/embed/a9f03966ba064745e765fed704218b83",
+      "22": "https://torbo007.com/embed/35a730d4f24d09e4e4849d7a1da8130a",
+      "23": "https://torbo007.com/embed/13c1f1e5619af7ec7a025cec056be5cf",
+      "24": "https://torbo007.com/embed/ba9b4a1d23734624e5a782b2a165aa1c",
+      "25": "https://torbo007.com/embed/1ebb85fa9b7dd2cbbda0d6062665e873",
+      "26": "https://torbo007.com/embed/7adc949bb71fb39701f2b8aef45969bb",
+      "27": "https://torbo007.com/embed/f2d98c7423df0227a3a1e947505f8eb8",
+      "28": "https://torbo007.com/embed/949a729b9d467aa5d60d21845266902d",
+      "29": "https://torbo007.com/embed/dd3556de099b84d59096372304a87d34",
+      "30": "https://torbo007.com/embed/6dfdd8ba44f0756cfc0e786452232247",
+      "31": "https://torbo007.com/embed/d3fbe74ac25f5692c64513947e4d1a14",
+      "32": "https://torbo007.com/embed/c73f99a2f3505d5115d40d2eac82d45d",
+      "33": "https://torbo007.com/embed/055c7b61fccc2e0eaed88623c9f82c34",
+      "34": "https://torbo007.com/embed/06f96918a62a62d3a04e2b09657ad056",
+      "35": "https://torbo007.com/embed/9f7d0c5006e1642cd611e90b18d9601a",
+      "36": "https://torbo007.com/embed/1cb2ed3de92490e03f70d556d6d3842b"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "gs-129267",
+    "postId": "129267",
+    "originalUrl": "https://goseries4k.com/princess-zhaoyang/"
+  },
+  {
+    "titleTh": "Our Stricky Love รักติดหนึบ (2026) พากย์ไทย/ซับไทย EP.1-12",
+    "titleEn": "Our Stricky Love รักติดหนึบ (2026) พากย์ไทย/ซับไทย EP.1-12",
+    "year": 2026,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/07/2-5.jpg",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/07/2-5.jpg",
+    "videoUrl": "https://torbo007.com/embed/4bd7e0958d6a544e8d5fcd6a0ba5f572",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ: รักติดหนึบ | 이런 엿같은 사랑\r\n เป็นอีกหนึ่งเรื่องราวของ โกอึนแซ อัยการสาวผู้ซื่อตรงมุ่งมั่นและมีความพยายาม เมื่อเธอเข้ามารับผิดชอบคดีไล่ล่าองค์กรอาชญากรรมครั้งใหญ่ เพื่อการสร้างสรรค์ผลงานในหน้าที่ ของแต่ละหน่วยงาน แต่แล้วเธอกลับประสบอุบัติเหตุจนทำให้สูญเสียความทรงจำ และเมื่อตื่นขึ้นมาอีกครั้งในคลินิกเล็กๆ กลางป่าเขาโดยต่างไม่สามารถหลีกเลี่ยงได้ เพียงพร้อมความทรงทุกอย่างของเธอหลีกหายไปในครั้งก่อน ที่นั่นเธอได้พบกับ จางแทฮา อดีตนักมวยดาวรุ่งผู้เคยก้าวเข้าสู่โลกของแก๊งอันธพาล ก่อนจะผันตัวมาเป็นโค้ชมวยในหมู่บ้าน เขายืนกรานว่าเขาคือ แฟนหนุ่ม ของอึนแซ แม้ความจริงจะไม่ใช่ทั้งหมด เพราะเขาเลือกโกหกเพื่อปกป้องหญิงสาวซึ่งเป็นรักแรกของเขา จากอันตรายที่ยังตามล่าเธอไม่หยุด การใช้ชีวิตร่วมกันในหมู่บ้านที่ขึ้นชื่อเรื่องร้านขายตังเม ทำให้ทั้งสองค่อย ๆ สร้างความผูกพันท่ามกลางบรรยากาศอบอุ่นและเหตุการณ์ชวนปั่นป่วน เมื่อความทรงจำของอึนแซเริ่มกลับคืนมา ความลับที่แทฮาปิดบังไว้ก็เริ่มถูกเปิดเผย ขณะที่ศัตรูจากอดีตและคดีอาชญากรรมที่ยังไม่สิ้นสุดกลับเข้ามาคุกคามทั้งคู่ ทำให้พวกเขาต้องเลือกระหว่างการปกป้องความจริงหรือรักษาความรักที่ก่อตัวขึ้นจากคำโกหกครั้งนั้น     \r\n",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์แนะนำใหม่ 2026",
+      "พากย์ไทย",
+      "GOSERIES4K"
+    ],
+    "duration": "ซีรีส์ 12 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "GOSERIES4K",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/4bd7e0958d6a544e8d5fcd6a0ba5f572",
+      "2": "https://torbo007.com/embed/82f97ed496e4fd66170991f6078f2c3a",
+      "3": "https://torbo007.com/embed/541e26b67d2534b5085e0454220afcfc",
+      "4": "https://torbo007.com/embed/8bf2f04cfc896d8c72cde1e5a99cb594",
+      "5": "https://torbo007.com/embed/749f894ab3a3c76492f1a8944d25433e",
+      "6": "https://torbo007.com/embed/c161e97a2d1e20a406478de3326ba7fe",
+      "7": "https://torbo007.com/embed/8c049e30d286126c1741a9aaaaef3dc9",
+      "8": "https://torbo007.com/embed/796d463a40f8873bcf665e89a950093c",
+      "9": "https://torbo007.com/embed/02025a47cb27ef45dea5456962f3042d",
+      "10": "https://torbo007.com/embed/dde9a1427ee3b30cb73c47b3f8daec3e",
+      "11": "https://torbo007.com/embed/ed09255ea698b075b8175ecfcd4526fe",
+      "12": "https://torbo007.com/embed/8b2158ca11593fd0004cbfcab7edf761"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "gs-130061",
+    "postId": "130061",
+    "originalUrl": "https://goseries4k.com/our-stricky-love/"
+  },
+  {
+    "titleTh": "Mutiny (2026)",
+    "titleEn": "Mutiny (2026)",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/Mutiny-2026-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/Mutiny-2026-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=4a7badb35c8eea3261c17fd8&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Mutiny (2026) (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 6.7,
+    "genres": [
+      "ยอดนิยม",
+      "ยอดนิยม 2026",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/MPyXlWTZ32E",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=4a7badb35c8eea3261c17fd8&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40448",
+    "postId": "40448",
+    "originalUrl": "https://www.24-hda.com/mutiny/"
+  },
+  {
+    "titleTh": "Dear You (2026) จดหมายรักถึงอาม่า",
+    "titleEn": "Dear You (2026) จดหมายรักถึงอาม่า",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Dear-You-2026-%E0%B8%88%E0%B8%94%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%96%E0%B8%B6%E0%B8%87%E0%B8%AD%E0%B8%B2%E0%B8%A1%E0%B9%88%E0%B8%B2-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Dear-You-2026-%E0%B8%88%E0%B8%94%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%96%E0%B8%B6%E0%B8%87%E0%B8%AD%E0%B8%B2%E0%B8%A1%E0%B9%88%E0%B8%B2-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=e719eb6218d2d9003af1987b&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Dear You (2026) จดหมายรักถึงอาม่า (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 8.6,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/OLBMbNkTO5c",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=e719eb6218d2d9003af1987b&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40606",
+    "postId": "40606",
+    "originalUrl": "https://www.24-hda.com/dear-you/"
+  },
+  {
+    "titleTh": "Drawn Together (2026)",
+    "titleEn": "Drawn Together (2026)",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Drawn-Together-2026-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Drawn-Together-2026-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=439a21ea79551e28e18bb8a3&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Drawn Together (2026) (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 6.1,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/WlGzP8FvsfY",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=439a21ea79551e28e18bb8a3&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40612",
+    "postId": "40612",
+    "originalUrl": "https://www.24-hda.com/drawn-together/"
+  },
+  {
+    "titleTh": "Call My Agent The Movie (2026) เรียกผู้จัดการมาสิ เดอะ มูฟวี่",
+    "titleEn": "Call My Agent The Movie (2026) เรียกผู้จัดการมาสิ เดอะ มูฟวี่",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Call-My-Agent-The-Movie-2026-%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%81%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A1%E0%B8%B2%E0%B8%AA%E0%B8%B4-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Call-My-Agent-The-Movie-2026-%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%81%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A1%E0%B8%B2%E0%B8%AA%E0%B8%B4-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=3f2fab099618cf665c48cbcd&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Call My Agent The Movie (2026) เรียกผู้จัดการมาสิ เดอะ มูฟวี่ (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 6.4,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/01PX2jZNW5A",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=3f2fab099618cf665c48cbcd&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40621",
+    "postId": "40621",
+    "originalUrl": "https://www.24-hda.com/call-my-agent-the-movie/"
+  },
+  {
+    "titleTh": "Vanishing Point (2026) คดีลึกตึกลับ",
+    "titleEn": "Vanishing Point (2026) คดีลึกตึกลับ",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Vanishing-Point-2026-%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B8%95%E0%B8%B6%E0%B8%81%E0%B8%A5%E0%B8%B1%E0%B8%9A-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Vanishing-Point-2026-%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B8%95%E0%B8%B6%E0%B8%81%E0%B8%A5%E0%B8%B1%E0%B8%9A-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=4442eaf9c8e808b9af3c2715&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Vanishing Point (2026) คดีลึกตึกลับ (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 6.6,
+    "genres": [
+      "ยอดนิยม",
+      "ยอดนิยม 2026",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/0-061wxwrss",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=4442eaf9c8e808b9af3c2715&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40624",
+    "postId": "40624",
+    "originalUrl": "https://www.24-hda.com/vanishing-point/"
+  },
+  {
+    "titleTh": "Fall 2 Deadpoint (2026) แส่! ท้านรก",
+    "titleEn": "Fall 2 Deadpoint (2026) แส่! ท้านรก",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Fall-2-Deadpoint-2026-%E0%B9%81%E0%B8%AA%E0%B9%88-%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%A3%E0%B8%81-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Fall-2-Deadpoint-2026-%E0%B9%81%E0%B8%AA%E0%B9%88-%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%A3%E0%B8%81-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=9605553293fe52ae446cd856&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Fall 2 Deadpoint (2026) แส่! ท้านรก (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 5.7,
+    "genres": [
+      "ยอดนิยม",
+      "ยอดนิยม 2026",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/Rsztt5qDj_A",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=9605553293fe52ae446cd856&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40630",
+    "postId": "40630",
+    "originalUrl": "https://www.24-hda.com/fall-2-deadpoint/"
+  },
+  {
+    "titleTh": "Go Team (2026) ลุยเลยทีมเรา!",
+    "titleEn": "Go Team (2026) ลุยเลยทีมเรา!",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Go-Team-2026-%E0%B8%A5%E0%B8%B8%E0%B8%A2%E0%B9%80%E0%B8%A5%E0%B8%A2%E0%B8%97%E0%B8%B5%E0%B8%A1%E0%B9%80%E0%B8%A3%E0%B8%B2-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Go-Team-2026-%E0%B8%A5%E0%B8%B8%E0%B8%A2%E0%B9%80%E0%B8%A5%E0%B8%A2%E0%B8%97%E0%B8%B5%E0%B8%A1%E0%B9%80%E0%B8%A3%E0%B8%B2-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=95010df48663ff008305903f&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Go Team (2026) ลุยเลยทีมเรา! (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 5.7,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/VSN8YM6urHo",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=95010df48663ff008305903f&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40635",
+    "postId": "40635",
+    "originalUrl": "https://www.24-hda.com/go-team/"
+  },
+  {
+    "titleTh": "Why Did I Get Married Again (2026) วิวาห์ป่วนชวนอลวน&#8230; อีกแล้ว",
+    "titleEn": "Why Did I Get Married Again (2026) วิวาห์ป่วนชวนอลวน&#8230; อีกแล้ว",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Why-Did-I-Get-Married-Again-2026-%E0%B8%A7%E0%B8%B4%E0%B8%A7%E0%B8%B2%E0%B8%AB%E0%B9%8C%E0%B8%9B%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%8A%E0%B8%A7%E0%B8%99%E0%B8%AD%E0%B8%A5%E0%B8%A7%E0%B8%99.-%E0%B8%AD%E0%B8%B5%E0%B8%81%E0%B9%81%E0%B8%A5%E0%B9%89%E0%B8%A7-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Why-Did-I-Get-Married-Again-2026-%E0%B8%A7%E0%B8%B4%E0%B8%A7%E0%B8%B2%E0%B8%AB%E0%B9%8C%E0%B8%9B%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%8A%E0%B8%A7%E0%B8%99%E0%B8%AD%E0%B8%A5%E0%B8%A7%E0%B8%99.-%E0%B8%AD%E0%B8%B5%E0%B8%81%E0%B9%81%E0%B8%A5%E0%B9%89%E0%B8%A7-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=4d07b82cfcd48aab052c4769&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Why Did I Get Married Again (2026) วิวาห์ป่วนชวนอลวน&#8230; อีกแล้ว (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 5.7,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/VylsOZBYxQA",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=4d07b82cfcd48aab052c4769&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40638",
+    "postId": "40638",
+    "originalUrl": "https://www.24-hda.com/why-did-i-get-married-again/"
+  },
+  {
+    "titleTh": "Shelter (2026) คลั่งนรก หลบตาย",
+    "titleEn": "Shelter (2026) คลั่งนรก หลบตาย",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/02/Shelter-2026-%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%87%E0%B8%99%E0%B8%A3%E0%B8%81-%E0%B8%AB%E0%B8%A5%E0%B8%9A%E0%B8%95%E0%B8%B2%E0%B8%A2-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/02/Shelter-2026-%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%87%E0%B8%99%E0%B8%A3%E0%B8%81-%E0%B8%AB%E0%B8%A5%E0%B8%9A%E0%B8%95%E0%B8%B2%E0%B8%A2-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=67d3ed275586ff8fb5cc5c89&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Shelter (2026) คลั่งนรก หลบตาย (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 6.5,
+    "genres": [
+      "ยอดนิยม",
+      "ยอดนิยม 2026",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/Nz1OM1Xl61w",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=67d3ed275586ff8fb5cc5c89&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-38048",
+    "postId": "38048",
+    "originalUrl": "https://www.24-hda.com/shelter/"
+  },
+  {
+    "titleTh": "Hope (2026) โฮป",
+    "titleEn": "Hope (2026) โฮป",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Hope-2026-%E0%B9%82%E0%B8%AE%E0%B8%9B-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Hope-2026-%E0%B9%82%E0%B8%AE%E0%B8%9B-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=1bb8b8f0bf4b6c3cf5607c71&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Hope (2026) โฮป (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 6.9,
+    "genres": [
+      "ยอดนิยม",
+      "ยอดนิยม 2026",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/dBUM0G64ysQ",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=1bb8b8f0bf4b6c3cf5607c71&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40679",
+    "postId": "40679",
+    "originalUrl": "https://www.24-hda.com/hope-2/"
+  },
+  {
+    "titleTh": "Blue Lock The Movie Live Action (2026) ขังดวลแข้ง เดอะมูฟวี่",
+    "titleEn": "Blue Lock The Movie Live Action (2026) ขังดวลแข้ง เดอะมูฟวี่",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Blue-Lock-The-Movie-Live-Action-2026-%E0%B8%82%E0%B8%B1%E0%B8%87%E0%B8%94%E0%B8%A7%E0%B8%A5%E0%B9%81%E0%B8%82%E0%B9%89%E0%B8%87-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Blue-Lock-The-Movie-Live-Action-2026-%E0%B8%82%E0%B8%B1%E0%B8%87%E0%B8%94%E0%B8%A7%E0%B8%A5%E0%B9%81%E0%B8%82%E0%B9%89%E0%B8%87-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=36a9e063795beb34a11e5c25&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Blue Lock The Movie Live Action (2026) ขังดวลแข้ง เดอะมูฟวี่ (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 6.7,
+    "genres": [
+      "ยอดนิยม",
+      "ยอดนิยม 2026",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/Eq8hje_Tblg",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=36a9e063795beb34a11e5c25&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40682",
+    "postId": "40682",
+    "originalUrl": "https://www.24-hda.com/blue-lock-the-movie-live-action/"
+  },
+  {
+    "titleTh": "Practical Magic 2 (2026) สองสาวพลังรัก เมจิกมนตราเสน่หา",
+    "titleEn": "Practical Magic 2 (2026) สองสาวพลังรัก เมจิกมนตราเสน่หา",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Practical-Magic-2-2026-%E0%B8%AA%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A7%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%A3%E0%B8%B1%E0%B8%81-%E0%B9%80%E0%B8%A1%E0%B8%88%E0%B8%B4%E0%B8%81%E0%B8%A1%E0%B8%99%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B9%88%E0%B8%AB%E0%B8%B2-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Practical-Magic-2-2026-%E0%B8%AA%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A7%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%A3%E0%B8%B1%E0%B8%81-%E0%B9%80%E0%B8%A1%E0%B8%88%E0%B8%B4%E0%B8%81%E0%B8%A1%E0%B8%99%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B9%88%E0%B8%AB%E0%B8%B2-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=66875a3f13470c5626ef1f86&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Practical Magic 2 (2026) สองสาวพลังรัก เมจิกมนตราเสน่หา (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 6.4,
+    "genres": [
+      "ยอดนิยม",
+      "ยอดนิยม 2026",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/oWrLpUkKhdY",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=66875a3f13470c5626ef1f86&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40685",
+    "postId": "40685",
+    "originalUrl": "https://www.24-hda.com/practical-magic-2/"
+  },
+  {
+    "titleTh": "Against The Current (2026) หอมรักมิรู้เลือน EP.1-47",
+    "titleEn": "Against The Current (2026) หอมรักมิรู้เลือน EP.1-47",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Against-The-Current-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Against-The-Current-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/22l-aBij4j_K1",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Against The Current (2026) หอมรักมิรู้เลือน EP.1-47 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/22l-aBij4j_K1"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133425",
+    "postId": "133425",
+    "originalUrl": "https://www.24hd.media/against-the-current-2026"
+  },
+  {
+    "titleTh": "Crew Girl (2026) แปดฝีพาย พิโรธมหากาฬ EP.1-8",
+    "titleEn": "Crew Girl (2026) แปดฝีพาย พิโรธมหากาฬ EP.1-8",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Crew-Girl-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Crew-Girl-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/5B-A7Zq87_F61",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Crew Girl (2026) แปดฝีพาย พิโรธมหากาฬ EP.1-8 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/5B-A7Zq87_F61"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133424",
+    "postId": "133424",
+    "originalUrl": "https://www.24hd.media/crew-girl-2026"
+  },
+  {
+    "titleTh": "Khom Khlang (2026) ข่มขลัง EP.1-10",
+    "titleEn": "Khom Khlang (2026) ข่มขลัง EP.1-10",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Khom-Khlang-2026-e1789353554443.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Khom-Khlang-2026-e1789353554443.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/bEfPGq-YZ_YbP",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Khom Khlang (2026) ข่มขลัง EP.1-10 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/bEfPGq-YZ_YbP"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133423",
+    "postId": "133423",
+    "originalUrl": "https://www.24hd.media/khom-khlang-2026"
+  },
+  {
+    "titleTh": "Go Team (2026) ลุยเลยทีมเรา",
+    "titleEn": "Go Team (2026) ลุยเลยทีมเรา",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Go-Team-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Go-Team-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/E-2g_cvSYEPBG",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Go Team (2026) ลุยเลยทีมเรา ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/E-2g_cvSYEPBG"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133450",
+    "postId": "133450",
+    "originalUrl": "https://www.24hd.media/go-team-2026"
+  },
+  {
+    "titleTh": "Libang Libu (2026) อลหม่านบ้านเรา",
+    "titleEn": "Libang Libu (2026) อลหม่านบ้านเรา",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Libang-Libu-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Libang-Libu-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/Ss-cP_mFOwKGH",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Libang Libu (2026) อลหม่านบ้านเรา ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/Ss-cP_mFOwKGH"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133438",
+    "postId": "133438",
+    "originalUrl": "https://www.24hd.media/libang-libu-2026"
+  },
+  {
+    "titleTh": "Raja Shivaji (2026) ศิวาจี มหาราช",
+    "titleEn": "Raja Shivaji (2026) ศิวาจี มหาราช",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Raja-Shivaji-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Raja-Shivaji-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/Y_7UNH5mJ6-Zu",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Raja Shivaji (2026) ศิวาจี มหาราช ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/Y_7UNH5mJ6-Zu"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133448",
+    "postId": "133448",
+    "originalUrl": "https://www.24hd.media/raja-shivaji-2026"
+  },
+  {
+    "titleTh": "The Shallows (2025) มฤตยูน้ำตื้น",
+    "titleEn": "The Shallows (2025) มฤตยูน้ำตื้น",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/The-Shallows-2025.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/The-Shallows-2025.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/7-S7_9rs3VAnb",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง The Shallows (2025) มฤตยูน้ำตื้น ปีที่ฉาย 2025 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/7-S7_9rs3VAnb"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133447",
+    "postId": "133447",
+    "originalUrl": "https://www.24hd.media/the-shallows-2025"
+  },
+  {
+    "titleTh": "Fangs (2002) ฝูงมัจจุราชพันธุ์กระหายเลือด",
+    "titleEn": "Fangs (2002) ฝูงมัจจุราชพันธุ์กระหายเลือด",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Fangs-2002.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Fangs-2002.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/K41-fxb_miSJb",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Fangs (2002) ฝูงมัจจุราชพันธุ์กระหายเลือด ปีที่ฉาย 2002 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/K41-fxb_miSJb"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133446",
+    "postId": "133446",
+    "originalUrl": "https://www.24hd.media/fangs-2002"
+  },
+  {
+    "titleTh": "A Love Other Than Yours (2026) เมื่อหัวใจมีใครอีกคน EP.1-14",
+    "titleEn": "A Love Other Than Yours (2026) เมื่อหัวใจมีใครอีกคน EP.1-14",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/A-Love-Other-Than-Yours-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/A-Love-Other-Than-Yours-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/YWaUU-K_165Ce",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง A Love Other Than Yours (2026) เมื่อหัวใจมีใครอีกคน EP.1-14 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/YWaUU-K_165Ce"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133485",
+    "postId": "133485",
+    "originalUrl": "https://www.24hd.media/a-love-other-than-yours-2026"
+  },
+  {
+    "titleTh": "Cycle Of Sin (2026) สามเราเอาตาย EP.1-10",
+    "titleEn": "Cycle Of Sin (2026) สามเราเอาตาย EP.1-10",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Cycle-of-Sin-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Cycle-of-Sin-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/Ln2jZuS_uR-e0",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Cycle of Sin (2026) สามเราเอาตาย EP.1-10 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/Ln2jZuS_uR-e0"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133519",
+    "postId": "133519",
+    "originalUrl": "https://www.24hd.media/cycle-of-sin-2026"
+  },
+  {
+    "titleTh": "Lioness Season 1 (2023) หน่วยปฏิบัติการพิเศษ ไลโอเนส ซีซั่น 1 EP.1-8",
+    "titleEn": "Lioness Season 1 (2023) หน่วยปฏิบัติการพิเศษ ไลโอเนส ซีซั่น 1 EP.1-8",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Lioness-Season-1-2023.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Lioness-Season-1-2023.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/a_88EWn6-A3NG",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Lioness Season 1 (2023) หน่วยปฏิบัติการพิเศษ ไลโอเนส ซีซั่น 1 EP.1-8 ปีที่ฉาย 2023 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/a_88EWn6-A3NG"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133522",
+    "postId": "133522",
+    "originalUrl": "https://www.24hd.media/lioness-season-1-2023"
+  },
+  {
+    "titleTh": "City Rong (2026) EP.1-24",
+    "titleEn": "City Rong (2026) EP.1-24",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/City-Rong-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/City-Rong-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/Or-a6Z_y30ZBk",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง City Rong (2026) EP.1-24 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/Or-a6Z_y30ZBk"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133521",
+    "postId": "133521",
+    "originalUrl": "https://www.24hd.media/city-rong-2026"
+  },
+  {
+    "titleTh": "Digital Man (1995) โคตรหุ่นอสูรสังหาร",
+    "titleEn": "Digital Man (1995) โคตรหุ่นอสูรสังหาร",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Digital-Man-1995.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Digital-Man-1995.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/0a1i-g_G3gZ4N",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Digital Man (1995) โคตรหุ่นอสูรสังหาร ปีที่ฉาย 1995 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/0a1i-g_G3gZ4N"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133520",
+    "postId": "133520",
+    "originalUrl": "https://www.24hd.media/digital-man-1995"
+  },
+  {
+    "titleTh": "Grand Theft Auto (1977) ขับแหลก หนีพ่อไปจดทะเบียน",
+    "titleEn": "Grand Theft Auto (1977) ขับแหลก หนีพ่อไปจดทะเบียน",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Grand-Theft-Auto-1977.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Grand-Theft-Auto-1977.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/RjW_at-WLqZcN",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Grand Theft Auto (1977) ขับแหลก หนีพ่อไปจดทะเบียน ปีที่ฉาย 1977 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/RjW_at-WLqZcN"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133538",
+    "postId": "133538",
+    "originalUrl": "https://www.24hd.media/grand-theft-auto-1977"
+  },
+  {
+    "titleTh": "Riot (1996) ระห่ำยึดเมือง",
+    "titleEn": "Riot (1996) ระห่ำยึดเมือง",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Riot-1996.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Riot-1996.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/K8h-uCGS_gpVs",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Riot (1996) ระห่ำยึดเมือง ปีที่ฉาย 1996 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/K8h-uCGS_gpVs"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133536",
+    "postId": "133536",
+    "originalUrl": "https://www.24hd.media/riot-1996"
+  },
+  {
+    "titleTh": "Saccharine (2026)",
+    "titleEn": "Saccharine (2026)",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Saccharine-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Saccharine-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/S_WoyOT-j5Y80",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Saccharine (2026) ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/S_WoyOT-j5Y80"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133535",
+    "postId": "133535",
+    "originalUrl": "https://www.24hd.media/saccharine-2026/"
+  },
+  {
+    "titleTh": "Spit Or Swallow (2026)",
+    "titleEn": "Spit Or Swallow (2026)",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Spit-or-Swallow-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Spit-or-Swallow-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/D_Qest-am2mMm",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Spit or Swallow (2026) ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "ยอดนิยม 2026",
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/D_Qest-am2mMm"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133534",
+    "postId": "133534",
+    "originalUrl": "https://www.24hd.media/spit-or-swallow-2026/"
+  },
+  {
+    "titleTh": "The First Ride (2025) ทริปแรก ทริปรั่ว ทัวร์ไทยแลนด์",
+    "titleEn": "The First Ride (2025) ทริปแรก ทริปรั่ว ทัวร์ไทยแลนด์",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/The-First-Ride-2025.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/The-First-Ride-2025.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/GhlvdO-2_vywS",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง The First Ride (2025) ทริปแรก ทริปรั่ว ทัวร์ไทยแลนด์ ปีที่ฉาย 2025 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/GhlvdO-2_vywS"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133533",
+    "postId": "133533",
+    "originalUrl": "https://www.24hd.media/the-first-ride-2025"
+  },
+  {
+    "titleTh": "Dont Lets Go To The Dogs Tonight (2025) โลกวัยเยาว์ ใต้เงาไฟสงคราม",
+    "titleEn": "Dont Lets Go To The Dogs Tonight (2025) โลกวัยเยาว์ ใต้เงาไฟสงคราม",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Dont-Lets-Go-to-the-Dogs-Tonight-2025.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Dont-Lets-Go-to-the-Dogs-Tonight-2025.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/PLBD_B-D2ywna",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Dont Lets Go to the Dogs Tonight (2025) โลกวัยเยาว์ ใต้เงาไฟสงคราม ปีที่ฉาย 2025 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/PLBD_B-D2ywna"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133532",
+    "postId": "133532",
+    "originalUrl": "https://www.24hd.media/dont-lets-go-to-the-dogs-tonight-2025"
+  },
+  {
+    "titleTh": "Blue Lock The Movie Live Action (2026) ขังดวลแข้ง เดอะมูฟวี่",
+    "titleEn": "Blue Lock The Movie Live Action (2026) ขังดวลแข้ง เดอะมูฟวี่",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Blue-Lock-The-Movie-Live-Action-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Blue-Lock-The-Movie-Live-Action-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/7K-5nyFZ_3FCR",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Blue Lock The Movie Live Action (2026) ขังดวลแข้ง เดอะมูฟวี่ ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "ยอดนิยม 2026",
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/7K-5nyFZ_3FCR"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133552",
+    "postId": "133552",
+    "originalUrl": "https://www.24hd.media/blue-lock-the-movie-live-action-2026"
+  },
+  {
+    "titleTh": "The Mongoose (2026)",
+    "titleEn": "The Mongoose (2026)",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Mongoose-2026.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Mongoose-2026.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=3d99240e2e38e977eaa4675b&b=1445",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Mongoose (2026) (2026) พากย์ไทย เต็มเรื่อง HD",
     "rating": 5.8,
     "genres": [
+      "ยอดนิยม 2026",
       "24-HDX",
       "พากย์ไทย",
       "หนังปี 2026"
@@ -30,19 +1758,21 @@ window.movies = [
     ],
     "id": "24hdx-40552",
     "postId": "40552",
-    "originalUrl": "https://www.24-hdx.com/the-mongoose/"
+    "originalUrl": "https://www.24-hda.com/the-mongoose/"
   },
   {
-    "titleTh": "ฟรี God Skin (2026) หมัดเทวา ท้าเดิมพัน",
-    "titleEn": "ฟรี God Skin (2026) หมัดเทวา ท้าเดิมพัน",
+    "titleTh": "God Skin (2026) หมัดเทวา ท้าเดิมพัน",
+    "titleEn": "God Skin (2026) หมัดเทวา ท้าเดิมพัน",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/09/God-Skin-2026-หมัดเทวา-ท้าเดิมพัน.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/09/God-Skin-2026-หมัดเทวา-ท้าเดิมพัน.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/God-Skin-2026-%E0%B8%AB%E0%B8%A1%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%97%E0%B8%A7%E0%B8%B2-%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%94%E0%B8%B4%E0%B8%A1%E0%B8%9E%E0%B8%B1%E0%B8%99.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/God-Skin-2026-%E0%B8%AB%E0%B8%A1%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%97%E0%B8%A7%E0%B8%B2-%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%94%E0%B8%B4%E0%B8%A1%E0%B8%9E%E0%B8%B1%E0%B8%99.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=573a933ca9ddc929878fd150&b=4819",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี God Skin (2026) หมัดเทวา ท้าเดิมพัน (2026) พากย์ไทย เต็มเรื่อง HD",
     "rating": 7.1,
     "genres": [
+      "ยอดนิยม",
+      "ยอดนิยม 2026",
       "24-HDX",
       "พากย์ไทย",
       "หนังปี 2026"
@@ -62,14 +1792,14 @@ window.movies = [
     ],
     "id": "24hdx-40566",
     "postId": "40566",
-    "originalUrl": "https://www.24-hdx.com/god-skin/"
+    "originalUrl": "https://www.24-hda.com/god-skin/"
   },
   {
-    "titleTh": "ฟรี The Whisper Man (2026) เสียงกระซิบ",
-    "titleEn": "ฟรี The Whisper Man (2026) เสียงกระซิบ",
+    "titleTh": "The Whisper Man (2026) เสียงกระซิบ",
+    "titleEn": "The Whisper Man (2026) เสียงกระซิบ",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Whisper-Man-2026-เสียงกระซิบ.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Whisper-Man-2026-เสียงกระซิบ.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/The-Whisper-Man-2026-%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%8B%E0%B8%B4%E0%B8%9A.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/The-Whisper-Man-2026-%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%8B%E0%B8%B4%E0%B8%9A.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=696dbb552a9cb0cba9af53f4&b=8310",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Whisper Man (2026) เสียงกระซิบ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -94,14 +1824,14 @@ window.movies = [
     ],
     "id": "24hdx-40540",
     "postId": "40540",
-    "originalUrl": "https://www.24-hdx.com/the-whisper-man/"
+    "originalUrl": "https://www.24-hda.com/the-whisper-man/"
   },
   {
-    "titleTh": "ฟรี The Secret Woman (2026) ผู้หญิงลึกลับ",
-    "titleEn": "ฟรี The Secret Woman (2026) ผู้หญิงลึกลับ",
+    "titleTh": "The Secret Woman (2026) ผู้หญิงลึกลับ",
+    "titleEn": "The Secret Woman (2026) ผู้หญิงลึกลับ",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Secret-Woman-2026-ผู้หญิงลึกลับ.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Secret-Woman-2026-ผู้หญิงลึกลับ.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/The-Secret-Woman-2026-%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B8%A5%E0%B8%B1%E0%B8%9A.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/The-Secret-Woman-2026-%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B8%A5%E0%B8%B1%E0%B8%9A.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=013946635549c5492aab5019&b=7765",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Secret Woman (2026) ผู้หญิงลึกลับ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -126,7 +1856,7 @@ window.movies = [
     ],
     "id": "24hdx-40543",
     "postId": "40543",
-    "originalUrl": "https://www.24-hdx.com/the-secret-woman/"
+    "originalUrl": "https://www.24-hda.com/the-secret-woman/"
   },
   {
     "titleTh": "Doctor Lawyer คุณหมอทนาย (2022) พากย์ไทย",
@@ -201,8 +1931,8 @@ window.movies = [
     "titleTh": "Pinocchio Unstrung (2026) พินอคคิโอ หุ่นไม้สายเชือด",
     "titleEn": "Pinocchio Unstrung (2026) พินอคคิโอ หุ่นไม้สายเชือด",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Pinocchio-Unstrung-2026-%E0%B8%9E%E0%B8%B4%E0%B8%99%E0%B8%AD%E0%B8%84%E0%B8%84%E0%B8%B4%E0%B9%82%E0%B8%AD-%E0%B8%AB%E0%B8%B8%E0%B9%88%E0%B8%99%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B8%AD%E0%B8%94.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Pinocchio-Unstrung-2026-%E0%B8%9E%E0%B8%B4%E0%B8%99%E0%B8%AD%E0%B8%84%E0%B8%84%E0%B8%B4%E0%B9%82%E0%B8%AD-%E0%B8%AB%E0%B8%B8%E0%B9%88%E0%B8%99%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B8%AD%E0%B8%94.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Pinocchio-Unstrung-2026-%E0%B8%9E%E0%B8%B4%E0%B8%99%E0%B8%AD%E0%B8%84%E0%B8%84%E0%B8%B4%E0%B9%82%E0%B8%AD-%E0%B8%AB%E0%B8%B8%E0%B9%88%E0%B8%99%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B8%AD%E0%B8%94.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Pinocchio-Unstrung-2026-%E0%B8%9E%E0%B8%B4%E0%B8%99%E0%B8%AD%E0%B8%84%E0%B8%84%E0%B8%B4%E0%B9%82%E0%B8%AD-%E0%B8%AB%E0%B8%B8%E0%B9%88%E0%B8%99%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B8%AD%E0%B8%94.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=999e31d1ec192dad1de751c1&b=2665",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Pinocchio Unstrung (2026) พินอคคิโอ หุ่นไม้สายเชือด (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -224,19 +1954,20 @@ window.movies = [
     ],
     "id": "24hdx-40210",
     "postId": "40210",
-    "originalUrl": "https://www.24-hdx.com/pinocchio-unstrung/"
+    "originalUrl": "https://www.24-hda.com/pinocchio-unstrung/"
   },
   {
     "titleTh": "Kung Fu Soccer (2026) กังฟูซอคเกอร์",
     "titleEn": "Kung Fu Soccer (2026) กังฟูซอคเกอร์",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Kung-Fu-Soccer-2026-%E0%B8%81%E0%B8%B1%E0%B8%87%E0%B8%9F%E0%B8%B9%E0%B8%8B%E0%B8%AD%E0%B8%84%E0%B9%80%E0%B8%81%E0%B8%AD%E0%B8%A3%E0%B9%8C.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Kung-Fu-Soccer-2026-%E0%B8%81%E0%B8%B1%E0%B8%87%E0%B8%9F%E0%B8%B9%E0%B8%8B%E0%B8%AD%E0%B8%84%E0%B9%80%E0%B8%81%E0%B8%AD%E0%B8%A3%E0%B9%8C.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/Kung-Fu-Soccer-2026-%E0%B8%81%E0%B8%B1%E0%B8%87%E0%B8%9F%E0%B8%B9%E0%B8%8B%E0%B8%AD%E0%B8%84%E0%B9%80%E0%B8%81%E0%B8%AD%E0%B8%A3%E0%B9%8C.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/Kung-Fu-Soccer-2026-%E0%B8%81%E0%B8%B1%E0%B8%87%E0%B8%9F%E0%B8%B9%E0%B8%8B%E0%B8%AD%E0%B8%84%E0%B9%80%E0%B8%81%E0%B8%AD%E0%B8%A3%E0%B9%8C.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=ca4c5d3ba08d64d59b21982c&b=7961",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Kung Fu Soccer (2026) กังฟูซอคเกอร์ (2026) พากย์ไทย เต็มเรื่อง HD",
     "rating": 5.6,
     "genres": [
+      "ยอดนิยม 2026",
       "24-HDX",
       "พากย์ไทย",
       "หนังปี 2026"
@@ -253,14 +1984,14 @@ window.movies = [
     ],
     "id": "24hdx-40477",
     "postId": "40477",
-    "originalUrl": "https://www.24-hdx.com/kung-fu-soccer/"
+    "originalUrl": "https://www.24-hda.com/kung-fu-soccer/"
   },
   {
     "titleTh": "Confessions of a Shaman (2026) คำสารภาพของหมอผี",
     "titleEn": "Confessions of a Shaman (2026) คำสารภาพของหมอผี",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Confessions-of-a-Shaman-2026-%E0%B8%84%E0%B8%B3%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B8%A1%E0%B8%AD%E0%B8%9C%E0%B8%B5.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Confessions-of-a-Shaman-2026-%E0%B8%84%E0%B8%B3%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B8%A1%E0%B8%AD%E0%B8%9C%E0%B8%B5.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/Confessions-of-a-Shaman-2026-%E0%B8%84%E0%B8%B3%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B8%A1%E0%B8%AD%E0%B8%9C%E0%B8%B5.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/Confessions-of-a-Shaman-2026-%E0%B8%84%E0%B8%B3%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B8%A1%E0%B8%AD%E0%B8%9C%E0%B8%B5.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=f1c8cfbeae60cc925ffe51ad&b=2156",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Confessions of a Shaman (2026) คำสารภาพของหมอผี (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -282,19 +2013,20 @@ window.movies = [
     ],
     "id": "24hdx-40445",
     "postId": "40445",
-    "originalUrl": "https://www.24-hdx.com/confessions-of-a-shaman/"
+    "originalUrl": "https://www.24-hda.com/confessions-of-a-shaman/"
   },
   {
     "titleTh": "Haunted Universities 4 (2026) เทอม 4",
     "titleEn": "Haunted Universities 4 (2026) เทอม 4",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Haunted-Universities-4-2026-%E0%B9%80%E0%B8%97%E0%B8%AD%E0%B8%A1-4.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Haunted-Universities-4-2026-%E0%B9%80%E0%B8%97%E0%B8%AD%E0%B8%A1-4.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Haunted-Universities-4-2026-%E0%B9%80%E0%B8%97%E0%B8%AD%E0%B8%A1-4.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Haunted-Universities-4-2026-%E0%B9%80%E0%B8%97%E0%B8%AD%E0%B8%A1-4.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=0795a41ba3c27b1ab6916f7d&b=6860",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Haunted Universities 4 (2026) เทอม 4 (2026) พากย์ไทย เต็มเรื่อง HD",
     "rating": 6.2,
     "genres": [
+      "ยอดนิยม 2026",
       "24-HDX",
       "พากย์ไทย",
       "หนังปี 2026"
@@ -311,19 +2043,20 @@ window.movies = [
     ],
     "id": "24hdx-40152",
     "postId": "40152",
-    "originalUrl": "https://www.24-hdx.com/haunted-universities-4/"
+    "originalUrl": "https://www.24-hda.com/haunted-universities-4/"
   },
   {
     "titleTh": "The Odyssey (2026) มหากาพย์โอดิสซี",
     "titleEn": "The Odyssey (2026) มหากาพย์โอดิสซี",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/The-Odyssey-2026-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%9E%E0%B8%A2%E0%B9%8C%E0%B9%82%E0%B8%AD%E0%B8%94%E0%B8%B4%E0%B8%AA%E0%B8%8B%E0%B8%B5.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/The-Odyssey-2026-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%9E%E0%B8%A2%E0%B9%8C%E0%B9%82%E0%B8%AD%E0%B8%94%E0%B8%B4%E0%B8%AA%E0%B8%8B%E0%B8%B5.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/The-Odyssey-2026-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%9E%E0%B8%A2%E0%B9%8C%E0%B9%82%E0%B8%AD%E0%B8%94%E0%B8%B4%E0%B8%AA%E0%B8%8B%E0%B8%B5.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/The-Odyssey-2026-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%9E%E0%B8%A2%E0%B9%8C%E0%B9%82%E0%B8%AD%E0%B8%94%E0%B8%B4%E0%B8%AA%E0%B8%8B%E0%B8%B5.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=b1ea65a61f5c9514f97fa9da&b=8640",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Odyssey (2026) มหากาพย์โอดิสซี (2026) พากย์ไทย เต็มเรื่อง HD",
     "rating": 8.3,
     "genres": [
+      "ยอดนิยม 2026",
       "24-HDX",
       "พากย์ไทย",
       "หนังปี 2026"
@@ -340,19 +2073,20 @@ window.movies = [
     ],
     "id": "24hdx-40112",
     "postId": "40112",
-    "originalUrl": "https://www.24-hdx.com/the-odyssey/"
+    "originalUrl": "https://www.24-hda.com/the-odyssey/"
   },
   {
     "titleTh": "House of the Dragon Season 3 (2026) ตระกูลแห่งมังกร ซีซั่น 3",
     "titleEn": "House of the Dragon Season 3 (2026) ตระกูลแห่งมังกร ซีซั่น 3",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/House-of-the-Dragon-Season-3-2026-%E0%B8%95%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B9%E0%B8%A5%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%A1%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B8%A3-%E0%B8%8B%E0%B8%B5%E0%B8%8B%E0%B8%B1%E0%B9%88%E0%B8%99-3.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/House-of-the-Dragon-Season-3-2026-%E0%B8%95%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B9%E0%B8%A5%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%A1%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B8%A3-%E0%B8%8B%E0%B8%B5%E0%B8%8B%E0%B8%B1%E0%B9%88%E0%B8%99-3.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/House-of-the-Dragon-Season-3-2026-%E0%B8%95%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B9%E0%B8%A5%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%A1%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B8%A3-%E0%B8%8B%E0%B8%B5%E0%B8%8B%E0%B8%B1%E0%B9%88%E0%B8%99-3.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/House-of-the-Dragon-Season-3-2026-%E0%B8%95%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B9%E0%B8%A5%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%A1%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B8%A3-%E0%B8%8B%E0%B8%B5%E0%B8%8B%E0%B8%B1%E0%B9%88%E0%B8%99-3.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=a96cb2709f6f26649de95776&b=3886",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี House of the Dragon Season 3 (2026) ตระกูลแห่งมังกร ซีซั่น 3 (2026) พากย์ไทย เต็มเรื่อง HD",
     "rating": 8.3,
     "genres": [
+      "ยอดนิยม 2026",
       "24-HDX",
       "พากย์ไทย",
       "หนังปี 2026"
@@ -376,7 +2110,7 @@ window.movies = [
     ],
     "id": "24hdx-39743",
     "postId": "39743",
-    "originalUrl": "https://www.24-hdx.com/house-of-the-dragon-season-3/",
+    "originalUrl": "https://www.24-hda.com/house-of-the-dragon-season-3/",
     "episodeUrls": {
       "1": "https://main.24playerhd.com/index_th.php?id=a96cb2709f6f26649de95776&b=3886",
       "2": "https://main.24playerhd.com/index_th.php?id=e635f266c10a50e6657360c3&b=6540",
@@ -392,13 +2126,15 @@ window.movies = [
     "titleTh": "Spider-Man Brand New Day (2026) สไปเดอร์แมน แบรนด์ นิว เดย์",
     "titleEn": "Spider-Man Brand New Day (2026) สไปเดอร์แมน แบรนด์ นิว เดย์",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Spider-Man-Brand-New-Day-2026-%E0%B8%AA%E0%B9%84%E0%B8%9B%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%81%E0%B8%A1%E0%B8%99-%E0%B9%81%E0%B8%9A%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C-%E0%B8%99%E0%B8%B4%E0%B8%A7-%E0%B9%80%E0%B8%94%E0%B8%A2%E0%B9%8C.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Spider-Man-Brand-New-Day-2026-%E0%B8%AA%E0%B9%84%E0%B8%9B%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%81%E0%B8%A1%E0%B8%99-%E0%B9%81%E0%B8%9A%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C-%E0%B8%99%E0%B8%B4%E0%B8%A7-%E0%B9%80%E0%B8%94%E0%B8%A2%E0%B9%8C.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Spider-Man-Brand-New-Day-2026-%E0%B8%AA%E0%B9%84%E0%B8%9B%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%81%E0%B8%A1%E0%B8%99-%E0%B9%81%E0%B8%9A%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C-%E0%B8%99%E0%B8%B4%E0%B8%A7-%E0%B9%80%E0%B8%94%E0%B8%A2%E0%B9%8C.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Spider-Man-Brand-New-Day-2026-%E0%B8%AA%E0%B9%84%E0%B8%9B%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%81%E0%B8%A1%E0%B8%99-%E0%B9%81%E0%B8%9A%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C-%E0%B8%99%E0%B8%B4%E0%B8%A7-%E0%B9%80%E0%B8%94%E0%B8%A2%E0%B9%8C.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=157478efe59a1830ede36cf9&b=3953",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Spider-Man Brand New Day (2026) สไปเดอร์แมน แบรนด์ นิว เดย์ (2026) พากย์ไทย เต็มเรื่อง HD",
     "rating": 8.3,
     "genres": [
+      "ยอดนิยม",
+      "ยอดนิยม 2026",
       "24-HDX",
       "พากย์ไทย",
       "หนังปี 2026"
@@ -415,19 +2151,20 @@ window.movies = [
     ],
     "id": "24hdx-40265",
     "postId": "40265",
-    "originalUrl": "https://www.24-hdx.com/spider-man-brand-new-day/"
+    "originalUrl": "https://www.24-hda.com/spider-man-brand-new-day/"
   },
   {
     "titleTh": "Cold War 1994 (2026)",
     "titleEn": "Cold War 1994 (2026)",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Cold-War-1994-2026.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Cold-War-1994-2026.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Cold-War-1994-2026.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Cold-War-1994-2026.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=6aed6c9fbbc3d250cd6aeb05&b=4720",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Cold War 1994 (2026) (2026) พากย์ไทย เต็มเรื่อง HD",
     "rating": 6.6,
     "genres": [
+      "ยอดนิยม 2026",
       "24-HDX",
       "พากย์ไทย",
       "หนังปี 2026"
@@ -444,14 +2181,14 @@ window.movies = [
     ],
     "id": "24hdx-40207",
     "postId": "40207",
-    "originalUrl": "https://www.24-hdx.com/cold-war-1994/"
+    "originalUrl": "https://www.24-hda.com/cold-war-1994/"
   },
   {
     "titleTh": "Mor Lam Rhythm (2026) อ้ายต้าวว เอวหวาน ระเบียบวาทะศิลป์",
     "titleEn": "Mor Lam Rhythm (2026) อ้ายต้าวว เอวหวาน ระเบียบวาทะศิลป์",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Mor-Lam-Rhythm-2026-%E0%B8%AD%E0%B9%89%E0%B8%B2%E0%B8%A2%E0%B8%95%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%A7-%E0%B9%80%E0%B8%AD%E0%B8%A7%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99-%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%9A%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A7%E0%B8%B2%E0%B8%97%E0%B8%B0%E0%B8%A8%E0%B8%B4%E0%B8%A5%E0%B8%9B%E0%B9%8C.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Mor-Lam-Rhythm-2026-%E0%B8%AD%E0%B9%89%E0%B8%B2%E0%B8%A2%E0%B8%95%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%A7-%E0%B9%80%E0%B8%AD%E0%B8%A7%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99-%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%9A%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A7%E0%B8%B2%E0%B8%97%E0%B8%B0%E0%B8%A8%E0%B8%B4%E0%B8%A5%E0%B8%9B%E0%B9%8C.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/Mor-Lam-Rhythm-2026-%E0%B8%AD%E0%B9%89%E0%B8%B2%E0%B8%A2%E0%B8%95%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%A7-%E0%B9%80%E0%B8%AD%E0%B8%A7%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99-%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%9A%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A7%E0%B8%B2%E0%B8%97%E0%B8%B0%E0%B8%A8%E0%B8%B4%E0%B8%A5%E0%B8%9B%E0%B9%8C.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/Mor-Lam-Rhythm-2026-%E0%B8%AD%E0%B9%89%E0%B8%B2%E0%B8%A2%E0%B8%95%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%A7-%E0%B9%80%E0%B8%AD%E0%B8%A7%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99-%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%9A%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A7%E0%B8%B2%E0%B8%97%E0%B8%B0%E0%B8%A8%E0%B8%B4%E0%B8%A5%E0%B8%9B%E0%B9%8C.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=a6b9bfdd16193b5d10273948&b=4703",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Mor Lam Rhythm (2026) อ้ายต้าวว เอวหวาน ระเบียบวาทะศิลป์ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -473,19 +2210,20 @@ window.movies = [
     ],
     "id": "24hdx-40293",
     "postId": "40293",
-    "originalUrl": "https://www.24-hdx.com/mor-lam-rhythm/"
+    "originalUrl": "https://www.24-hda.com/mor-lam-rhythm/"
   },
   {
     "titleTh": "The Death of Robin Hood (2026) บันทึกสุดท้ายของจอมโจร",
     "titleEn": "The Death of Robin Hood (2026) บันทึกสุดท้ายของจอมโจร",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/The-Death-of-Robin-Hood-2026-%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B6%E0%B8%81%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%A2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%88%E0%B8%AD%E0%B8%A1%E0%B9%82%E0%B8%88%E0%B8%A3.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/The-Death-of-Robin-Hood-2026-%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B6%E0%B8%81%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%A2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%88%E0%B8%AD%E0%B8%A1%E0%B9%82%E0%B8%88%E0%B8%A3.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/The-Death-of-Robin-Hood-2026-%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B6%E0%B8%81%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%A2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%88%E0%B8%AD%E0%B8%A1%E0%B9%82%E0%B8%88%E0%B8%A3.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/The-Death-of-Robin-Hood-2026-%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B6%E0%B8%81%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%A2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%88%E0%B8%AD%E0%B8%A1%E0%B9%82%E0%B8%88%E0%B8%A3.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=bca243c4022d2db88d10e9fc&b=1726",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Death of Robin Hood (2026) บันทึกสุดท้ายของจอมโจร (2026) พากย์ไทย เต็มเรื่อง HD",
     "rating": 7.4,
     "genres": [
+      "ยอดนิยม 2026",
       "24-HDX",
       "พากย์ไทย",
       "หนังปี 2026"
@@ -502,19 +2240,20 @@ window.movies = [
     ],
     "id": "24hdx-39933",
     "postId": "39933",
-    "originalUrl": "https://www.24-hdx.com/the-death-of-robin-hood/"
+    "originalUrl": "https://www.24-hda.com/the-death-of-robin-hood/"
   },
   {
     "titleTh": "Toy Story 5 (2026) ทอย สตอรี่ 5",
     "titleEn": "Toy Story 5 (2026) ทอย สตอรี่ 5",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Toy-Story-5-2026-%E0%B8%97%E0%B8%AD%E0%B8%A2-%E0%B8%AA%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B8%B5%E0%B9%88-5.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Toy-Story-5-2026-%E0%B8%97%E0%B8%AD%E0%B8%A2-%E0%B8%AA%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B8%B5%E0%B9%88-5.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Toy-Story-5-2026-%E0%B8%97%E0%B8%AD%E0%B8%A2-%E0%B8%AA%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B8%B5%E0%B9%88-5.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Toy-Story-5-2026-%E0%B8%97%E0%B8%AD%E0%B8%A2-%E0%B8%AA%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B8%B5%E0%B9%88-5.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=9c494cc6ef772221f13ca81c&b=7177",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Toy Story 5 (2026) ทอย สตอรี่ 5 (2026) พากย์ไทย เต็มเรื่อง HD",
     "rating": 7.8,
     "genres": [
+      "ยอดนิยม 2026",
       "24-HDX",
       "พากย์ไทย",
       "หนังปี 2026"
@@ -531,19 +2270,20 @@ window.movies = [
     ],
     "id": "24hdx-39342",
     "postId": "39342",
-    "originalUrl": "https://www.24-hdx.com/toy-story-5/"
+    "originalUrl": "https://www.24-hda.com/toy-story-5/"
   },
   {
     "titleTh": "Gohan (2026) โกฮัง..หัวใจโกโฮม",
     "titleEn": "Gohan (2026) โกฮัง..หัวใจโกโฮม",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Gohan-2026-%E0%B9%82%E0%B8%81%E0%B8%AE%E0%B8%B1%E0%B8%87.%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B9%83%E0%B8%88%E0%B9%82%E0%B8%81%E0%B9%82%E0%B8%AE%E0%B8%A1.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Gohan-2026-%E0%B9%82%E0%B8%81%E0%B8%AE%E0%B8%B1%E0%B8%87.%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B9%83%E0%B8%88%E0%B9%82%E0%B8%81%E0%B9%82%E0%B8%AE%E0%B8%A1.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/Gohan-2026-%E0%B9%82%E0%B8%81%E0%B8%AE%E0%B8%B1%E0%B8%87.%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B9%83%E0%B8%88%E0%B9%82%E0%B8%81%E0%B9%82%E0%B8%AE%E0%B8%A1.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/Gohan-2026-%E0%B9%82%E0%B8%81%E0%B8%AE%E0%B8%B1%E0%B8%87.%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B9%83%E0%B8%88%E0%B9%82%E0%B8%81%E0%B9%82%E0%B8%AE%E0%B8%A1.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=095cb8755971f5e2bdc300d4&b=7762",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Gohan (2026) โกฮัง..หัวใจโกโฮม (2026) พากย์ไทย เต็มเรื่อง HD",
     "rating": 7.7,
     "genres": [
+      "ยอดนิยม 2026",
       "24-HDX",
       "พากย์ไทย",
       "หนังปี 2026"
@@ -560,14 +2300,14 @@ window.movies = [
     ],
     "id": "24hdx-40523",
     "postId": "40523",
-    "originalUrl": "https://www.24-hdx.com/gohan/"
+    "originalUrl": "https://www.24-hda.com/gohan/"
   },
   {
     "titleTh": "The Last Sunrise (2026)",
     "titleEn": "The Last Sunrise (2026)",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Last-Sunrise-2026.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Last-Sunrise-2026.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/The-Last-Sunrise-2026.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/The-Last-Sunrise-2026.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=fa16c062d0fdbc4516083c19&b=6002",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Last Sunrise (2026) (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -589,14 +2329,14 @@ window.movies = [
     ],
     "id": "24hdx-40508",
     "postId": "40508",
-    "originalUrl": "https://www.24-hdx.com/the-last-sunrise/"
+    "originalUrl": "https://www.24-hda.com/the-last-sunrise/"
   },
   {
     "titleTh": "Insidious Out of the Further (2026) วิญญาณตามติด หลุดจากนรก",
     "titleEn": "Insidious Out of the Further (2026) วิญญาณตามติด หลุดจากนรก",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Insidious-Out-of-the-Further-2026-%E0%B8%A7%E0%B8%B4%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93%E0%B8%95%E0%B8%B2%E0%B8%A1%E0%B8%95%E0%B8%B4%E0%B8%94-%E0%B8%AB%E0%B8%A5%E0%B8%B8%E0%B8%94%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%99%E0%B8%A3%E0%B8%81.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Insidious-Out-of-the-Further-2026-%E0%B8%A7%E0%B8%B4%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93%E0%B8%95%E0%B8%B2%E0%B8%A1%E0%B8%95%E0%B8%B4%E0%B8%94-%E0%B8%AB%E0%B8%A5%E0%B8%B8%E0%B8%94%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%99%E0%B8%A3%E0%B8%81.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/Insidious-Out-of-the-Further-2026-%E0%B8%A7%E0%B8%B4%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93%E0%B8%95%E0%B8%B2%E0%B8%A1%E0%B8%95%E0%B8%B4%E0%B8%94-%E0%B8%AB%E0%B8%A5%E0%B8%B8%E0%B8%94%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%99%E0%B8%A3%E0%B8%81.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/Insidious-Out-of-the-Further-2026-%E0%B8%A7%E0%B8%B4%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93%E0%B8%95%E0%B8%B2%E0%B8%A1%E0%B8%95%E0%B8%B4%E0%B8%94-%E0%B8%AB%E0%B8%A5%E0%B8%B8%E0%B8%94%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%99%E0%B8%A3%E0%B8%81.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=e16404fae8fe5aff04326dc4&b=2854",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Insidious Out of the Further (2026) วิญญาณตามติด หลุดจากนรก (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -618,14 +2358,14 @@ window.movies = [
     ],
     "id": "24hdx-40487",
     "postId": "40487",
-    "originalUrl": "https://www.24-hdx.com/insidious-out-of-the-further/"
+    "originalUrl": "https://www.24-hda.com/insidious-out-of-the-further/"
   },
   {
     "titleTh": "Facing El Chapo (2026) เผชิญหน้าเอล ชาโป",
     "titleEn": "Facing El Chapo (2026) เผชิญหน้าเอล ชาโป",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Facing-El-Chapo-2026-%E0%B9%80%E0%B8%9C%E0%B8%8A%E0%B8%B4%E0%B8%8D%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%AD%E0%B8%A5-%E0%B8%8A%E0%B8%B2%E0%B9%82%E0%B8%9B.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Facing-El-Chapo-2026-%E0%B9%80%E0%B8%9C%E0%B8%8A%E0%B8%B4%E0%B8%8D%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%AD%E0%B8%A5-%E0%B8%8A%E0%B8%B2%E0%B9%82%E0%B8%9B.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/Facing-El-Chapo-2026-%E0%B9%80%E0%B8%9C%E0%B8%8A%E0%B8%B4%E0%B8%8D%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%AD%E0%B8%A5-%E0%B8%8A%E0%B8%B2%E0%B9%82%E0%B8%9B.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/Facing-El-Chapo-2026-%E0%B9%80%E0%B8%9C%E0%B8%8A%E0%B8%B4%E0%B8%8D%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%AD%E0%B8%A5-%E0%B8%8A%E0%B8%B2%E0%B9%82%E0%B8%9B.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=3e8f086eaa9aafdf8e6da8cd&b=3703",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Facing El Chapo (2026) เผชิญหน้าเอล ชาโป (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -647,14 +2387,14 @@ window.movies = [
     ],
     "id": "24hdx-40468",
     "postId": "40468",
-    "originalUrl": "https://www.24-hdx.com/facing-el-chapo/"
+    "originalUrl": "https://www.24-hda.com/facing-el-chapo/"
   },
   {
     "titleTh": "Chompoo Lost & Forgotten (2026) คดีชมพู่ เด็กหายที่ถูกลืม",
     "titleEn": "Chompoo Lost & Forgotten (2026) คดีชมพู่ เด็กหายที่ถูกลืม",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Chompoo-Lost-Forgotten-2026-%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B8%8A%E0%B8%A1%E0%B8%9E%E0%B8%B9%E0%B9%88-%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%81%E0%B8%AB%E0%B8%B2%E0%B8%A2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%96%E0%B8%B9%E0%B8%81%E0%B8%A5%E0%B8%B7%E0%B8%A1.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Chompoo-Lost-Forgotten-2026-%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B8%8A%E0%B8%A1%E0%B8%9E%E0%B8%B9%E0%B9%88-%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%81%E0%B8%AB%E0%B8%B2%E0%B8%A2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%96%E0%B8%B9%E0%B8%81%E0%B8%A5%E0%B8%B7%E0%B8%A1.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/Chompoo-Lost-Forgotten-2026-%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B8%8A%E0%B8%A1%E0%B8%9E%E0%B8%B9%E0%B9%88-%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%81%E0%B8%AB%E0%B8%B2%E0%B8%A2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%96%E0%B8%B9%E0%B8%81%E0%B8%A5%E0%B8%B7%E0%B8%A1.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/Chompoo-Lost-Forgotten-2026-%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B8%8A%E0%B8%A1%E0%B8%9E%E0%B8%B9%E0%B9%88-%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%81%E0%B8%AB%E0%B8%B2%E0%B8%A2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%96%E0%B8%B9%E0%B8%81%E0%B8%A5%E0%B8%B7%E0%B8%A1.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=ff4649a85ac30728ff98fc3b&b=8827",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Chompoo Lost &#038; Forgotten (2026) คดีชมพู่ เด็กหายที่ถูกลืม (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -676,19 +2416,20 @@ window.movies = [
     ],
     "id": "24hdx-40463",
     "postId": "40463",
-    "originalUrl": "https://www.24-hdx.com/chompoo-lost-forgotten/"
+    "originalUrl": "https://www.24-hda.com/chompoo-lost-forgotten/"
   },
   {
     "titleTh": "The Mandalorian and Grogu (2026) แมนดาลอเรี่ยนและโกรกู",
     "titleEn": "The Mandalorian and Grogu (2026) แมนดาลอเรี่ยนและโกรกู",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/The-Mandalorian-and-Grogu-2026-%E0%B9%81%E0%B8%A1%E0%B8%99%E0%B8%94%E0%B8%B2%E0%B8%A5%E0%B8%AD%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%82%E0%B8%81%E0%B8%A3%E0%B8%81%E0%B8%B9.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/The-Mandalorian-and-Grogu-2026-%E0%B9%81%E0%B8%A1%E0%B8%99%E0%B8%94%E0%B8%B2%E0%B8%A5%E0%B8%AD%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%82%E0%B8%81%E0%B8%A3%E0%B8%81%E0%B8%B9.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/The-Mandalorian-and-Grogu-2026-%E0%B9%81%E0%B8%A1%E0%B8%99%E0%B8%94%E0%B8%B2%E0%B8%A5%E0%B8%AD%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%82%E0%B8%81%E0%B8%A3%E0%B8%81%E0%B8%B9.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/The-Mandalorian-and-Grogu-2026-%E0%B9%81%E0%B8%A1%E0%B8%99%E0%B8%94%E0%B8%B2%E0%B8%A5%E0%B8%AD%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%82%E0%B8%81%E0%B8%A3%E0%B8%81%E0%B8%B9.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=1053ebeb5c3b8c0d015a29aa&b=2593",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Mandalorian and Grogu (2026) แมนดาลอเรี่ยนและโกรกู (2026) พากย์ไทย เต็มเรื่อง HD",
     "rating": 7.0,
     "genres": [
+      "ยอดนิยม 2026",
       "24-HDX",
       "พากย์ไทย",
       "หนังปี 2026"
@@ -705,14 +2446,14 @@ window.movies = [
     ],
     "id": "24hdx-39293",
     "postId": "39293",
-    "originalUrl": "https://www.24-hdx.com/the-mandalorian-and-grogu/"
+    "originalUrl": "https://www.24-hda.com/the-mandalorian-and-grogu/"
   },
   {
     "titleTh": "Mobile Suit Gundam Hathaway The Sorcery of Nymph Circe (2026) โมบิลสูท กันดั้ม ฮาธาเวย์ เดอะ ซอร์เซอรี ออฟ นิมฟ์ เซอร์ซี",
     "titleEn": "Mobile Suit Gundam Hathaway The Sorcery of Nymph Circe (2026) โมบิลสูท กันดั้ม ฮาธาเวย์ เดอะ ซอร์เซอรี ออฟ นิมฟ์ เซอร์ซี",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Mobile-Suit-Gundam-Hathaway-The-Sorcery-of-Nymph-Circe-2026-%E0%B9%82%E0%B8%A1%E0%B8%9A%E0%B8%B4%E0%B8%A5%E0%B8%AA%E0%B8%B9%E0%B8%97-%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%94%E0%B8%B1%E0%B9%89%E0%B8%A1-%E0%B8%AE%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B8%A2%E0%B9%8C-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%8B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%8B%E0%B8%AD%E0%B8%A3%E0%B8%B5-%E0%B8%AD%E0%B8%AD%E0%B8%9F-%E0%B8%99%E0%B8%B4%E0%B8%A1%E0%B8%9F%E0%B9%8C-%E0%B9%80%E0%B8%8B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%8B%E0%B8%B5.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Mobile-Suit-Gundam-Hathaway-The-Sorcery-of-Nymph-Circe-2026-%E0%B9%82%E0%B8%A1%E0%B8%9A%E0%B8%B4%E0%B8%A5%E0%B8%AA%E0%B8%B9%E0%B8%97-%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%94%E0%B8%B1%E0%B9%89%E0%B8%A1-%E0%B8%AE%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B8%A2%E0%B9%8C-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%8B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%8B%E0%B8%AD%E0%B8%A3%E0%B8%B5-%E0%B8%AD%E0%B8%AD%E0%B8%9F-%E0%B8%99%E0%B8%B4%E0%B8%A1%E0%B8%9F%E0%B9%8C-%E0%B9%80%E0%B8%8B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%8B%E0%B8%B5.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/Mobile-Suit-Gundam-Hathaway-The-Sorcery-of-Nymph-Circe-2026-%E0%B9%82%E0%B8%A1%E0%B8%9A%E0%B8%B4%E0%B8%A5%E0%B8%AA%E0%B8%B9%E0%B8%97-%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%94%E0%B8%B1%E0%B9%89%E0%B8%A1-%E0%B8%AE%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B8%A2%E0%B9%8C-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%8B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%8B%E0%B8%AD%E0%B8%A3%E0%B8%B5-%E0%B8%AD%E0%B8%AD%E0%B8%9F-%E0%B8%99%E0%B8%B4%E0%B8%A1%E0%B8%9F%E0%B9%8C-%E0%B9%80%E0%B8%8B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%8B%E0%B8%B5.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/Mobile-Suit-Gundam-Hathaway-The-Sorcery-of-Nymph-Circe-2026-%E0%B9%82%E0%B8%A1%E0%B8%9A%E0%B8%B4%E0%B8%A5%E0%B8%AA%E0%B8%B9%E0%B8%97-%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%94%E0%B8%B1%E0%B9%89%E0%B8%A1-%E0%B8%AE%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B8%A2%E0%B9%8C-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%8B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%8B%E0%B8%AD%E0%B8%A3%E0%B8%B5-%E0%B8%AD%E0%B8%AD%E0%B8%9F-%E0%B8%99%E0%B8%B4%E0%B8%A1%E0%B8%9F%E0%B9%8C-%E0%B9%80%E0%B8%8B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%8B%E0%B8%B5.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=4677edf11cb7c4381d9b968c&b=8066",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Mobile Suit Gundam Hathaway The Sorcery of Nymph Circe (2026) โมบิลสูท กันดั้ม ฮาธาเวย์ เดอะ ซอร์เซอรี ออฟ นิมฟ์ เซอร์ซี (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -734,19 +2475,20 @@ window.movies = [
     ],
     "id": "24hdx-39215",
     "postId": "39215",
-    "originalUrl": "https://www.24-hdx.com/mobile-suit-gundam-hathaway-the-sorcery-of-nymph-circe/"
+    "originalUrl": "https://www.24-hda.com/mobile-suit-gundam-hathaway-the-sorcery-of-nymph-circe/"
   },
   {
     "titleTh": "The Stain (2026) ราคี",
     "titleEn": "The Stain (2026) ราคี",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Stain-2026-%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B5.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Stain-2026-%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B5.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/The-Stain-2026-%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B5.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/The-Stain-2026-%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B5.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=1e9d5ea73643dab5daf613eb&b=1085",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Stain (2026) ราคี (2026) พากย์ไทย เต็มเรื่อง HD",
     "rating": 5.5,
     "genres": [
+      "ยอดนิยม 2026",
       "24-HDX",
       "พากย์ไทย",
       "หนังปี 2026"
@@ -763,14 +2505,14 @@ window.movies = [
     ],
     "id": "24hdx-40451",
     "postId": "40451",
-    "originalUrl": "https://www.24-hdx.com/the-stain/"
+    "originalUrl": "https://www.24-hda.com/the-stain/"
   },
   {
     "titleTh": "Freefall A Reckoning for Boeing (2026) ดิ่ง สางปมโบอิ้ง",
     "titleEn": "Freefall A Reckoning for Boeing (2026) ดิ่ง สางปมโบอิ้ง",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Freefall-A-Reckoning-for-Boeing-2026-%E0%B8%94%E0%B8%B4%E0%B9%88%E0%B8%87-%E0%B8%AA%E0%B8%B2%E0%B8%87%E0%B8%9B%E0%B8%A1%E0%B9%82%E0%B8%9A%E0%B8%AD%E0%B8%B4%E0%B9%89%E0%B8%87.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Freefall-A-Reckoning-for-Boeing-2026-%E0%B8%94%E0%B8%B4%E0%B9%88%E0%B8%87-%E0%B8%AA%E0%B8%B2%E0%B8%87%E0%B8%9B%E0%B8%A1%E0%B9%82%E0%B8%9A%E0%B8%AD%E0%B8%B4%E0%B9%89%E0%B8%87.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/Freefall-A-Reckoning-for-Boeing-2026-%E0%B8%94%E0%B8%B4%E0%B9%88%E0%B8%87-%E0%B8%AA%E0%B8%B2%E0%B8%87%E0%B8%9B%E0%B8%A1%E0%B9%82%E0%B8%9A%E0%B8%AD%E0%B8%B4%E0%B9%89%E0%B8%87.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/Freefall-A-Reckoning-for-Boeing-2026-%E0%B8%94%E0%B8%B4%E0%B9%88%E0%B8%87-%E0%B8%AA%E0%B8%B2%E0%B8%87%E0%B8%9B%E0%B8%A1%E0%B9%82%E0%B8%9A%E0%B8%AD%E0%B8%B4%E0%B9%89%E0%B8%87.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=c003c026b6c6e594efec4e2b&b=4820",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Freefall A Reckoning for Boeing (2026) ดิ่ง สางปมโบอิ้ง (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -792,14 +2534,14 @@ window.movies = [
     ],
     "id": "24hdx-40439",
     "postId": "40439",
-    "originalUrl": "https://www.24-hdx.com/freefall-a-reckoning-for-boeing/"
+    "originalUrl": "https://www.24-hda.com/freefall-a-reckoning-for-boeing/"
   },
   {
     "titleTh": "Is God Is (2026)",
     "titleEn": "Is God Is (2026)",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Is-God-Is-2026.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Is-God-Is-2026.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Is-God-Is-2026.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Is-God-Is-2026.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=f1f2c18a1a23cae84ea8654a&b=5424",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Is God Is (2026) (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -821,19 +2563,21 @@ window.movies = [
     ],
     "id": "24hdx-40072",
     "postId": "40072",
-    "originalUrl": "https://www.24-hdx.com/is-god-is/"
+    "originalUrl": "https://www.24-hda.com/is-god-is/"
   },
   {
     "titleTh": "The End of Oak Street (2026) มหาภัยสุดถนนโอ๊ค",
     "titleEn": "The End of Oak Street (2026) มหาภัยสุดถนนโอ๊ค",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-End-of-Oak-Street-2026-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%96%E0%B8%99%E0%B8%99%E0%B9%82%E0%B8%AD%E0%B9%8A%E0%B8%84.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-End-of-Oak-Street-2026-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%96%E0%B8%99%E0%B8%99%E0%B9%82%E0%B8%AD%E0%B9%8A%E0%B8%84.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/The-End-of-Oak-Street-2026-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%96%E0%B8%99%E0%B8%99%E0%B9%82%E0%B8%AD%E0%B9%8A%E0%B8%84.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/The-End-of-Oak-Street-2026-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%96%E0%B8%99%E0%B8%99%E0%B9%82%E0%B8%AD%E0%B9%8A%E0%B8%84.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=6b89a76500e99552777f9e67&b=7318",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The End of Oak Street (2026) มหาภัยสุดถนนโอ๊ค (2026) พากย์ไทย เต็มเรื่อง HD",
     "rating": 6.6,
     "genres": [
+      "ยอดนิยม",
+      "ยอดนิยม 2026",
       "24-HDX",
       "พากย์ไทย",
       "หนังปี 2026"
@@ -850,19 +2594,20 @@ window.movies = [
     ],
     "id": "24hdx-40398",
     "postId": "40398",
-    "originalUrl": "https://www.24-hdx.com/the-end-of-oak-street/"
+    "originalUrl": "https://www.24-hda.com/the-end-of-oak-street/"
   },
   {
     "titleTh": "Minions & Monsters (2026) มินเนี่ยน & มอนสเตอร์",
     "titleEn": "Minions & Monsters (2026) มินเนี่ยน & มอนสเตอร์",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Minions-Monsters-2026-%E0%B8%A1%E0%B8%B4%E0%B8%99%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99-%E0%B8%A1%E0%B8%AD%E0%B8%99%E0%B8%AA%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Minions-Monsters-2026-%E0%B8%A1%E0%B8%B4%E0%B8%99%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99-%E0%B8%A1%E0%B8%AD%E0%B8%99%E0%B8%AA%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Minions-Monsters-2026-%E0%B8%A1%E0%B8%B4%E0%B8%99%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99-%E0%B8%A1%E0%B8%AD%E0%B8%99%E0%B8%AA%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Minions-Monsters-2026-%E0%B8%A1%E0%B8%B4%E0%B8%99%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99-%E0%B8%A1%E0%B8%AD%E0%B8%99%E0%B8%AA%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=4beeb269b90d07a0ef9cd86a&b=4881",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Minions &#038; Monsters (2026) มินเนี่ยน &#038; มอนสเตอร์ (2026) พากย์ไทย เต็มเรื่อง HD",
     "rating": 7.4,
     "genres": [
+      "ยอดนิยม 2026",
       "24-HDX",
       "พากย์ไทย",
       "หนังปี 2026"
@@ -879,14 +2624,14 @@ window.movies = [
     ],
     "id": "24hdx-39936",
     "postId": "39936",
-    "originalUrl": "https://www.24-hdx.com/minions-monsters/"
+    "originalUrl": "https://www.24-hda.com/minions-monsters/"
   },
   {
     "titleTh": "PAW Patrol The Dino Movie (2026) ขบวนการเจ้าตูบสี่ขา เดอะ ไดโน มูฟวี่",
     "titleEn": "PAW Patrol The Dino Movie (2026) ขบวนการเจ้าตูบสี่ขา เดอะ ไดโน มูฟวี่",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/PAW-Patrol-The-Dino-Movie-2026-%E0%B8%82%E0%B8%9A%E0%B8%A7%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%95%E0%B8%B9%E0%B8%9A%E0%B8%AA%E0%B8%B5%E0%B9%88%E0%B8%82%E0%B8%B2-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B9%84%E0%B8%94%E0%B9%82%E0%B8%99-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/PAW-Patrol-The-Dino-Movie-2026-%E0%B8%82%E0%B8%9A%E0%B8%A7%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%95%E0%B8%B9%E0%B8%9A%E0%B8%AA%E0%B8%B5%E0%B9%88%E0%B8%82%E0%B8%B2-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B9%84%E0%B8%94%E0%B9%82%E0%B8%99-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/PAW-Patrol-The-Dino-Movie-2026-%E0%B8%82%E0%B8%9A%E0%B8%A7%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%95%E0%B8%B9%E0%B8%9A%E0%B8%AA%E0%B8%B5%E0%B9%88%E0%B8%82%E0%B8%B2-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B9%84%E0%B8%94%E0%B9%82%E0%B8%99-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/PAW-Patrol-The-Dino-Movie-2026-%E0%B8%82%E0%B8%9A%E0%B8%A7%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%95%E0%B8%B9%E0%B8%9A%E0%B8%AA%E0%B8%B5%E0%B9%88%E0%B8%82%E0%B8%B2-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B9%84%E0%B8%94%E0%B9%82%E0%B8%99-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=2029ad0eb81e00f069d05da0&b=8039",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี PAW Patrol The Dino Movie (2026) ขบวนการเจ้าตูบสี่ขา เดอะ ไดโน มูฟวี่ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -908,14 +2653,14 @@ window.movies = [
     ],
     "id": "24hdx-40425",
     "postId": "40425",
-    "originalUrl": "https://www.24-hdx.com/paw-patrol-the-dino-movie/"
+    "originalUrl": "https://www.24-hda.com/paw-patrol-the-dino-movie/"
   },
   {
     "titleTh": "Blades of The Guardians (2026) ยอดยุทธ์ดาบพิทักษ์",
     "titleEn": "Blades of The Guardians (2026) ยอดยุทธ์ดาบพิทักษ์",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/03/Blades-of-The-Guardians-2026-%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B8%A2%E0%B8%B8%E0%B8%97%E0%B8%98%E0%B9%8C%E0%B8%94%E0%B8%B2%E0%B8%9A%E0%B8%9E%E0%B8%B4%E0%B8%97%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B9%8C.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/03/Blades-of-The-Guardians-2026-%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B8%A2%E0%B8%B8%E0%B8%97%E0%B8%98%E0%B9%8C%E0%B8%94%E0%B8%B2%E0%B8%9A%E0%B8%9E%E0%B8%B4%E0%B8%97%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B9%8C.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/03/Blades-of-The-Guardians-2026-%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B8%A2%E0%B8%B8%E0%B8%97%E0%B8%98%E0%B9%8C%E0%B8%94%E0%B8%B2%E0%B8%9A%E0%B8%9E%E0%B8%B4%E0%B8%97%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B9%8C.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/03/Blades-of-The-Guardians-2026-%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B8%A2%E0%B8%B8%E0%B8%97%E0%B8%98%E0%B9%8C%E0%B8%94%E0%B8%B2%E0%B8%9A%E0%B8%9E%E0%B8%B4%E0%B8%97%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B9%8C.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=e5e412971be0786b6979ea29&b=8049",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Blades of The Guardians (2026) ยอดยุทธ์ดาบพิทักษ์ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -937,14 +2682,14 @@ window.movies = [
     ],
     "id": "24hdx-38541",
     "postId": "38541",
-    "originalUrl": "https://www.24-hdx.com/blades-of-the-guardians/"
+    "originalUrl": "https://www.24-hda.com/blades-of-the-guardians/"
   },
   {
     "titleTh": "My Best Friend, His Girlfriend and Me (2026) เพื่อนรัก แฟนเพื่อน และตัวผม",
     "titleEn": "My Best Friend, His Girlfriend and Me (2026) เพื่อนรัก แฟนเพื่อน และตัวผม",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/My-Best-Friend-His-Girlfriend-and-Me-2026-%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%A3%E0%B8%B1%E0%B8%81-%E0%B9%81%E0%B8%9F%E0%B8%99%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%99-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%9C%E0%B8%A1.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/My-Best-Friend-His-Girlfriend-and-Me-2026-%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%A3%E0%B8%B1%E0%B8%81-%E0%B9%81%E0%B8%9F%E0%B8%99%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%99-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%9C%E0%B8%A1.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/My-Best-Friend-His-Girlfriend-and-Me-2026-%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%A3%E0%B8%B1%E0%B8%81-%E0%B9%81%E0%B8%9F%E0%B8%99%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%99-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%9C%E0%B8%A1.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/My-Best-Friend-His-Girlfriend-and-Me-2026-%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%A3%E0%B8%B1%E0%B8%81-%E0%B9%81%E0%B8%9F%E0%B8%99%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%99-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%9C%E0%B8%A1.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=53ae0744b1d99781e2326d29&b=2383",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี My Best Friend, His Girlfriend and Me (2026) เพื่อนรัก แฟนเพื่อน และตัวผม (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -966,14 +2711,14 @@ window.movies = [
     ],
     "id": "24hdx-40381",
     "postId": "40381",
-    "originalUrl": "https://www.24-hdx.com/my-best-friend-his-girlfriend-and-me/"
+    "originalUrl": "https://www.24-hda.com/my-best-friend-his-girlfriend-and-me/"
   },
   {
     "titleTh": "To The Max (2026) ไปให้สุด",
     "titleEn": "To The Max (2026) ไปให้สุด",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/To-The-Max-2026-%E0%B9%84%E0%B8%9B%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B8%AA%E0%B8%B8%E0%B8%94.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/To-The-Max-2026-%E0%B9%84%E0%B8%9B%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B8%AA%E0%B8%B8%E0%B8%94.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/To-The-Max-2026-%E0%B9%84%E0%B8%9B%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B8%AA%E0%B8%B8%E0%B8%94.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/To-The-Max-2026-%E0%B9%84%E0%B8%9B%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B8%AA%E0%B8%B8%E0%B8%94.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=410ed015e8388a92a23f1ca6&b=6430",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี To The Max (2026) ไปให้สุด (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -995,14 +2740,14 @@ window.movies = [
     ],
     "id": "24hdx-40378",
     "postId": "40378",
-    "originalUrl": "https://www.24-hdx.com/to-the-max/"
+    "originalUrl": "https://www.24-hda.com/to-the-max/"
   },
   {
     "titleTh": "Don’t Say Good Luck (2026) ถ้าอยากจะปัง อย่าขอให้โชคช่วย",
     "titleEn": "Don’t Say Good Luck (2026) ถ้าอยากจะปัง อย่าขอให้โชคช่วย",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Dont-Say-Good-Luck-2026-%E0%B8%96%E0%B9%89%E0%B8%B2%E0%B8%AD%E0%B8%A2%E0%B8%B2%E0%B8%81%E0%B8%88%E0%B8%B0%E0%B8%9B%E0%B8%B1%E0%B8%87-%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%82%E0%B8%8A%E0%B8%84%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Dont-Say-Good-Luck-2026-%E0%B8%96%E0%B9%89%E0%B8%B2%E0%B8%AD%E0%B8%A2%E0%B8%B2%E0%B8%81%E0%B8%88%E0%B8%B0%E0%B8%9B%E0%B8%B1%E0%B8%87-%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%82%E0%B8%8A%E0%B8%84%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/Dont-Say-Good-Luck-2026-%E0%B8%96%E0%B9%89%E0%B8%B2%E0%B8%AD%E0%B8%A2%E0%B8%B2%E0%B8%81%E0%B8%88%E0%B8%B0%E0%B8%9B%E0%B8%B1%E0%B8%87-%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%82%E0%B8%8A%E0%B8%84%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/Dont-Say-Good-Luck-2026-%E0%B8%96%E0%B9%89%E0%B8%B2%E0%B8%AD%E0%B8%A2%E0%B8%B2%E0%B8%81%E0%B8%88%E0%B8%B0%E0%B8%9B%E0%B8%B1%E0%B8%87-%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%82%E0%B8%8A%E0%B8%84%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=cb4288fbcd0d4926104f91c9&b=4256",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Don&#8217;t Say Good Luck (2026) ถ้าอยากจะปัง อย่าขอให้โชคช่วย (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1024,14 +2769,14 @@ window.movies = [
     ],
     "id": "24hdx-40375",
     "postId": "40375",
-    "originalUrl": "https://www.24-hdx.com/dont-say-good-luck/"
+    "originalUrl": "https://www.24-hda.com/dont-say-good-luck/"
   },
   {
     "titleTh": "Nando Between Two Worlds (2026) ทางสู่ฝันของนานโด",
     "titleEn": "Nando Between Two Worlds (2026) ทางสู่ฝันของนานโด",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Nando-Between-Two-Worlds-2026-%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%9D%E0%B8%B1%E0%B8%99%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B9%82%E0%B8%94.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Nando-Between-Two-Worlds-2026-%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%9D%E0%B8%B1%E0%B8%99%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B9%82%E0%B8%94.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/Nando-Between-Two-Worlds-2026-%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%9D%E0%B8%B1%E0%B8%99%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B9%82%E0%B8%94.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/Nando-Between-Two-Worlds-2026-%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%9D%E0%B8%B1%E0%B8%99%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B9%82%E0%B8%94.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=fa67af6cc3b3cdfbfce142be&b=9974",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Nando Between Two Worlds (2026) ทางสู่ฝันของนานโด (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1053,19 +2798,20 @@ window.movies = [
     ],
     "id": "24hdx-40364",
     "postId": "40364",
-    "originalUrl": "https://www.24-hdx.com/nando-between-two-worlds/"
+    "originalUrl": "https://www.24-hda.com/nando-between-two-worlds/"
   },
   {
     "titleTh": "A Shop for Killers Season 2 (2026) มรดกร้านนักฆ่า ซีซั่น 2",
     "titleEn": "A Shop for Killers Season 2 (2026) มรดกร้านนักฆ่า ซีซั่น 2",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/A-Shop-for-Killers-Season-2-2026-%E0%B8%A1%E0%B8%A3%E0%B8%94%E0%B8%81%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%86%E0%B9%88%E0%B8%B2-%E0%B8%8B%E0%B8%B5%E0%B8%8B%E0%B8%B1%E0%B9%88%E0%B8%99-2.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/A-Shop-for-Killers-Season-2-2026-%E0%B8%A1%E0%B8%A3%E0%B8%94%E0%B8%81%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%86%E0%B9%88%E0%B8%B2-%E0%B8%8B%E0%B8%B5%E0%B8%8B%E0%B8%B1%E0%B9%88%E0%B8%99-2.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/A-Shop-for-Killers-Season-2-2026-%E0%B8%A1%E0%B8%A3%E0%B8%94%E0%B8%81%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%86%E0%B9%88%E0%B8%B2-%E0%B8%8B%E0%B8%B5%E0%B8%8B%E0%B8%B1%E0%B9%88%E0%B8%99-2.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/A-Shop-for-Killers-Season-2-2026-%E0%B8%A1%E0%B8%A3%E0%B8%94%E0%B8%81%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%86%E0%B9%88%E0%B8%B2-%E0%B8%8B%E0%B8%B5%E0%B8%8B%E0%B8%B1%E0%B9%88%E0%B8%99-2.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=f7cc0c60ab7b0b528fb8251f&b=5470",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี A Shop for Killers Season 2 (2026) มรดกร้านนักฆ่า ซีซั่น 2 (2026) พากย์ไทย เต็มเรื่อง HD",
     "rating": 8.0,
     "genres": [
+      "ยอดนิยม 2026",
       "24-HDX",
       "พากย์ไทย",
       "หนังปี 2026"
@@ -1089,7 +2835,7 @@ window.movies = [
     ],
     "id": "24hdx-40139",
     "postId": "40139",
-    "originalUrl": "https://www.24-hdx.com/a-shop-for-killers-season-2/",
+    "originalUrl": "https://www.24-hda.com/a-shop-for-killers-season-2/",
     "episodeUrls": {
       "1": "https://main.24playerhd.com/index_th.php?id=f7cc0c60ab7b0b528fb8251f&b=5470",
       "2": "https://main.24playerhd.com/index_th.php?id=2a90782a4df05d157c73fb2c&b=2424",
@@ -1105,8 +2851,8 @@ window.movies = [
     "titleTh": "Number One (2026) นับหนึ่งถึงมื้อแม่",
     "titleEn": "Number One (2026) นับหนึ่งถึงมื้อแม่",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Number-One-2026-%E0%B8%99%E0%B8%B1%E0%B8%9A%E0%B8%AB%E0%B8%99%E0%B8%B6%E0%B9%88%E0%B8%87%E0%B8%96%E0%B8%B6%E0%B8%87%E0%B8%A1%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%81%E0%B8%A1%E0%B9%88.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Number-One-2026-%E0%B8%99%E0%B8%B1%E0%B8%9A%E0%B8%AB%E0%B8%99%E0%B8%B6%E0%B9%88%E0%B8%87%E0%B8%96%E0%B8%B6%E0%B8%87%E0%B8%A1%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%81%E0%B8%A1%E0%B9%88.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/Number-One-2026-%E0%B8%99%E0%B8%B1%E0%B8%9A%E0%B8%AB%E0%B8%99%E0%B8%B6%E0%B9%88%E0%B8%87%E0%B8%96%E0%B8%B6%E0%B8%87%E0%B8%A1%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%81%E0%B8%A1%E0%B9%88.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/Number-One-2026-%E0%B8%99%E0%B8%B1%E0%B8%9A%E0%B8%AB%E0%B8%99%E0%B8%B6%E0%B9%88%E0%B8%87%E0%B8%96%E0%B8%B6%E0%B8%87%E0%B8%A1%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%81%E0%B8%A1%E0%B9%88.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=534e4bd0399c66e6168e38e0&b=7125",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Number One (2026) นับหนึ่งถึงมื้อแม่ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1128,14 +2874,14 @@ window.movies = [
     ],
     "id": "24hdx-40357",
     "postId": "40357",
-    "originalUrl": "https://www.24-hdx.com/number-one/"
+    "originalUrl": "https://www.24-hda.com/number-one/"
   },
   {
     "titleTh": "The Last House (2026) บ้านหลังสุดท้าย",
     "titleEn": "The Last House (2026) บ้านหลังสุดท้าย",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Last-House-2026-%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%A2.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Last-House-2026-%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%A2.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/The-Last-House-2026-%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%A2.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/The-Last-House-2026-%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%A2.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=4ebf521de1e5e53d1b2d1e0e&b=6210",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Last House (2026) บ้านหลังสุดท้าย (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1157,14 +2903,14 @@ window.movies = [
     ],
     "id": "24hdx-40321",
     "postId": "40321",
-    "originalUrl": "https://www.24-hdx.com/the-last-house/"
+    "originalUrl": "https://www.24-hda.com/the-last-house/"
   },
   {
     "titleTh": "The Ribbon Hero (2026) เดอะริบบิ้นฮีโร่",
     "titleEn": "The Ribbon Hero (2026) เดอะริบบิ้นฮีโร่",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Ribbon-Hero-2026-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%A3%E0%B8%B4%E0%B8%9A%E0%B8%9A%E0%B8%B4%E0%B9%89%E0%B8%99%E0%B8%AE%E0%B8%B5%E0%B9%82%E0%B8%A3%E0%B9%88.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Ribbon-Hero-2026-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%A3%E0%B8%B4%E0%B8%9A%E0%B8%9A%E0%B8%B4%E0%B9%89%E0%B8%99%E0%B8%AE%E0%B8%B5%E0%B9%82%E0%B8%A3%E0%B9%88.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/The-Ribbon-Hero-2026-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%A3%E0%B8%B4%E0%B8%9A%E0%B8%9A%E0%B8%B4%E0%B9%89%E0%B8%99%E0%B8%AE%E0%B8%B5%E0%B9%82%E0%B8%A3%E0%B9%88.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/The-Ribbon-Hero-2026-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%A3%E0%B8%B4%E0%B8%9A%E0%B8%9A%E0%B8%B4%E0%B9%89%E0%B8%99%E0%B8%AE%E0%B8%B5%E0%B9%82%E0%B8%A3%E0%B9%88.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=9ed5f16067df1b9129723dc5&b=9858",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Ribbon Hero (2026) เดอะริบบิ้นฮีโร่ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1186,14 +2932,14 @@ window.movies = [
     ],
     "id": "24hdx-40314",
     "postId": "40314",
-    "originalUrl": "https://www.24-hdx.com/the-ribbon-hero/"
+    "originalUrl": "https://www.24-hda.com/the-ribbon-hero/"
   },
   {
     "titleTh": "Supergirl (2026) ซูเปอร์เกิร์ล",
     "titleEn": "Supergirl (2026) ซูเปอร์เกิร์ล",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/tt8814476_poster.jpg",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/tt8814476_poster.jpg",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/tt8814476_poster.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/tt8814476_poster.jpg",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=0bb3146b19b0b7c580d68423&b=1902",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Supergirl (2026) ซูเปอร์เกิร์ล (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1215,14 +2961,14 @@ window.movies = [
     ],
     "id": "24hdx-39917",
     "postId": "39917",
-    "originalUrl": "https://www.24-hdx.com/supergirl/"
+    "originalUrl": "https://www.24-hda.com/supergirl/"
   },
   {
     "titleTh": "The Drunken Prodigy (2026) พลังหมัดเมา",
     "titleEn": "The Drunken Prodigy (2026) พลังหมัดเมา",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Drunken-Prodigy-2026-%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A1%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%A1%E0%B8%B2.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Drunken-Prodigy-2026-%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A1%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%A1%E0%B8%B2.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/The-Drunken-Prodigy-2026-%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A1%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%A1%E0%B8%B2.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/The-Drunken-Prodigy-2026-%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A1%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%A1%E0%B8%B2.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=f11552073c6f9a7ffe51a8c2&b=2352",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Drunken Prodigy (2026) พลังหมัดเมา (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1244,14 +2990,14 @@ window.movies = [
     ],
     "id": "24hdx-40302",
     "postId": "40302",
-    "originalUrl": "https://www.24-hdx.com/the-drunken-prodigy/"
+    "originalUrl": "https://www.24-hda.com/the-drunken-prodigy/"
   },
   {
     "titleTh": "The Dragon Tomb Ancient Legend (2026) สุสานมังกร ราชาหมาป่าแห่งซีเซี่ย",
     "titleEn": "The Dragon Tomb Ancient Legend (2026) สุสานมังกร ราชาหมาป่าแห่งซีเซี่ย",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Dragon-Tomb-Ancient-Legend-2026-%E0%B8%AA%E0%B8%B8%E0%B8%AA%E0%B8%B2%E0%B8%99%E0%B8%A1%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B8%A3-%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%B2%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%9B%E0%B9%88%E0%B8%B2%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8B%E0%B8%B5%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B9%88%E0%B8%A2.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/The-Dragon-Tomb-Ancient-Legend-2026-%E0%B8%AA%E0%B8%B8%E0%B8%AA%E0%B8%B2%E0%B8%99%E0%B8%A1%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B8%A3-%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%B2%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%9B%E0%B9%88%E0%B8%B2%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8B%E0%B8%B5%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B9%88%E0%B8%A2.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/The-Dragon-Tomb-Ancient-Legend-2026-%E0%B8%AA%E0%B8%B8%E0%B8%AA%E0%B8%B2%E0%B8%99%E0%B8%A1%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B8%A3-%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%B2%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%9B%E0%B9%88%E0%B8%B2%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8B%E0%B8%B5%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B9%88%E0%B8%A2.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/The-Dragon-Tomb-Ancient-Legend-2026-%E0%B8%AA%E0%B8%B8%E0%B8%AA%E0%B8%B2%E0%B8%99%E0%B8%A1%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B8%A3-%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%B2%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%9B%E0%B9%88%E0%B8%B2%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8B%E0%B8%B5%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B9%88%E0%B8%A2.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=61812ef47b9e707e27ff2c1a&b=5622",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Dragon Tomb Ancient Legend (2026) สุสานมังกร ราชาหมาป่าแห่งซีเซี่ย (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1273,14 +3019,14 @@ window.movies = [
     ],
     "id": "24hdx-40309",
     "postId": "40309",
-    "originalUrl": "https://www.24-hdx.com/the-dragon-tomb-ancient-legend/"
+    "originalUrl": "https://www.24-hda.com/the-dragon-tomb-ancient-legend/"
   },
   {
     "titleTh": "SnowStorm (2024) วิกฤตพายุหิมะ",
     "titleEn": "SnowStorm (2024) วิกฤตพายุหิมะ",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2024/02/SnowStorm-2024-%E0%B8%A7%E0%B8%B4%E0%B8%81%E0%B8%A4%E0%B8%95%E0%B8%9E%E0%B8%B2%E0%B8%A2%E0%B8%B8%E0%B8%AB%E0%B8%B4%E0%B8%A1%E0%B8%B0.jpg",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2024/02/SnowStorm-2024-%E0%B8%A7%E0%B8%B4%E0%B8%81%E0%B8%A4%E0%B8%95%E0%B8%9E%E0%B8%B2%E0%B8%A2%E0%B8%B8%E0%B8%AB%E0%B8%B4%E0%B8%A1%E0%B8%B0.jpg",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2024/02/SnowStorm-2024-%E0%B8%A7%E0%B8%B4%E0%B8%81%E0%B8%A4%E0%B8%95%E0%B8%9E%E0%B8%B2%E0%B8%A2%E0%B8%B8%E0%B8%AB%E0%B8%B4%E0%B8%A1%E0%B8%B0.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2024/02/SnowStorm-2024-%E0%B8%A7%E0%B8%B4%E0%B8%81%E0%B8%A4%E0%B8%95%E0%B8%9E%E0%B8%B2%E0%B8%A2%E0%B8%B8%E0%B8%AB%E0%B8%B4%E0%B8%A1%E0%B8%B0.jpg",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=25e0ac62906345daf3222eb3&b=5372",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี SnowStorm (2024) วิกฤตพายุหิมะ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1302,14 +3048,14 @@ window.movies = [
     ],
     "id": "24hdx-29511",
     "postId": "29511",
-    "originalUrl": "https://www.24-hdx.com/snowstorm/"
+    "originalUrl": "https://www.24-hda.com/snowstorm/"
   },
   {
     "titleTh": "Big Chicken A Fast Food Conspiracy (2026) ธุรกิจฟาร์มไก่ แผนสมคบคิดวงการฟาสต์ฟู้ด",
     "titleEn": "Big Chicken A Fast Food Conspiracy (2026) ธุรกิจฟาร์มไก่ แผนสมคบคิดวงการฟาสต์ฟู้ด",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Big-Chicken-A-Fast-Food-Conspiracy-2026-%E0%B8%98%E0%B8%B8%E0%B8%A3%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%9F%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B9%84%E0%B8%81%E0%B9%88-%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B8%84%E0%B8%9A%E0%B8%84%E0%B8%B4%E0%B8%94%E0%B8%A7%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9F%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B9%8C%E0%B8%9F%E0%B8%B9%E0%B9%89%E0%B8%94.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Big-Chicken-A-Fast-Food-Conspiracy-2026-%E0%B8%98%E0%B8%B8%E0%B8%A3%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%9F%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B9%84%E0%B8%81%E0%B9%88-%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B8%84%E0%B8%9A%E0%B8%84%E0%B8%B4%E0%B8%94%E0%B8%A7%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9F%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B9%8C%E0%B8%9F%E0%B8%B9%E0%B9%89%E0%B8%94.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/Big-Chicken-A-Fast-Food-Conspiracy-2026-%E0%B8%98%E0%B8%B8%E0%B8%A3%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%9F%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B9%84%E0%B8%81%E0%B9%88-%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B8%84%E0%B8%9A%E0%B8%84%E0%B8%B4%E0%B8%94%E0%B8%A7%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9F%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B9%8C%E0%B8%9F%E0%B8%B9%E0%B9%89%E0%B8%94.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/Big-Chicken-A-Fast-Food-Conspiracy-2026-%E0%B8%98%E0%B8%B8%E0%B8%A3%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%9F%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B9%84%E0%B8%81%E0%B9%88-%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B8%84%E0%B8%9A%E0%B8%84%E0%B8%B4%E0%B8%94%E0%B8%A7%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9F%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B9%8C%E0%B8%9F%E0%B8%B9%E0%B9%89%E0%B8%94.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=8d34519c32fc239095e80ffa&b=9086",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Big Chicken A Fast Food Conspiracy (2026) ธุรกิจฟาร์มไก่ แผนสมคบคิดวงการฟาสต์ฟู้ด (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1331,14 +3077,14 @@ window.movies = [
     ],
     "id": "24hdx-40290",
     "postId": "40290",
-    "originalUrl": "https://www.24-hdx.com/big-chicken-a-fast-food-conspiracy/"
+    "originalUrl": "https://www.24-hda.com/big-chicken-a-fast-food-conspiracy/"
   },
   {
     "titleTh": "Evil Dead Burn (2026)",
     "titleEn": "Evil Dead Burn (2026)",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Evil-Dead-Burn-2026.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Evil-Dead-Burn-2026.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Evil-Dead-Burn-2026.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Evil-Dead-Burn-2026.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=50485dc415ac6f1203fac38b&b=7477",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Evil Dead Burn (2026) (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1360,14 +3106,14 @@ window.movies = [
     ],
     "id": "24hdx-40053",
     "postId": "40053",
-    "originalUrl": "https://www.24-hdx.com/evil-dead-burn/"
+    "originalUrl": "https://www.24-hda.com/evil-dead-burn/"
   },
   {
     "titleTh": "Elize Shadow Of a Women (2026) เอลีซ หญิงสาวในเงาโศก",
     "titleEn": "Elize Shadow Of a Women (2026) เอลีซ หญิงสาวในเงาโศก",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Elize-Shadow-Of-a-Women-2026-%E0%B9%80%E0%B8%AD%E0%B8%A5%E0%B8%B5%E0%B8%8B-%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A7%E0%B9%83%E0%B8%99%E0%B9%80%E0%B8%87%E0%B8%B2%E0%B9%82%E0%B8%A8%E0%B8%81.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Elize-Shadow-Of-a-Women-2026-%E0%B9%80%E0%B8%AD%E0%B8%A5%E0%B8%B5%E0%B8%8B-%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A7%E0%B9%83%E0%B8%99%E0%B9%80%E0%B8%87%E0%B8%B2%E0%B9%82%E0%B8%A8%E0%B8%81.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Elize-Shadow-Of-a-Women-2026-%E0%B9%80%E0%B8%AD%E0%B8%A5%E0%B8%B5%E0%B8%8B-%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A7%E0%B9%83%E0%B8%99%E0%B9%80%E0%B8%87%E0%B8%B2%E0%B9%82%E0%B8%A8%E0%B8%81.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Elize-Shadow-Of-a-Women-2026-%E0%B9%80%E0%B8%AD%E0%B8%A5%E0%B8%B5%E0%B8%8B-%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A7%E0%B9%83%E0%B8%99%E0%B9%80%E0%B8%87%E0%B8%B2%E0%B9%82%E0%B8%A8%E0%B8%81.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=45102931d59c612996de5da2&b=7309",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Elize Shadow Of a Women (2026) เอลีซ หญิงสาวในเงาโศก (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1389,14 +3135,14 @@ window.movies = [
     ],
     "id": "24hdx-40136",
     "postId": "40136",
-    "originalUrl": "https://www.24-hdx.com/elize-shadow-of-a-women/"
+    "originalUrl": "https://www.24-hda.com/elize-shadow-of-a-women/"
   },
   {
     "titleTh": "The Debt Collector (2026) คนเดือดทวงแค้น",
     "titleEn": "The Debt Collector (2026) คนเดือดทวงแค้น",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/The-Debt-Collector-2026-%E0%B8%84%E0%B8%99%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD%E0%B8%94%E0%B8%97%E0%B8%A7%E0%B8%87%E0%B9%81%E0%B8%84%E0%B9%89%E0%B8%99.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/The-Debt-Collector-2026-%E0%B8%84%E0%B8%99%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD%E0%B8%94%E0%B8%97%E0%B8%A7%E0%B8%87%E0%B9%81%E0%B8%84%E0%B9%89%E0%B8%99.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/The-Debt-Collector-2026-%E0%B8%84%E0%B8%99%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD%E0%B8%94%E0%B8%97%E0%B8%A7%E0%B8%87%E0%B9%81%E0%B8%84%E0%B9%89%E0%B8%99.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/The-Debt-Collector-2026-%E0%B8%84%E0%B8%99%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD%E0%B8%94%E0%B8%97%E0%B8%A7%E0%B8%87%E0%B9%81%E0%B8%84%E0%B9%89%E0%B8%99.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=96a98ccc33777b8e9a6570ec&b=5791",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Debt Collector (2026) คนเดือดทวงแค้น (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1418,14 +3164,14 @@ window.movies = [
     ],
     "id": "24hdx-40147",
     "postId": "40147",
-    "originalUrl": "https://www.24-hdx.com/the-debt-collector/"
+    "originalUrl": "https://www.24-hda.com/the-debt-collector/"
   },
   {
     "titleTh": "The Truthers (2026) ผู้แสวงหาความจริง",
     "titleEn": "The Truthers (2026) ผู้แสวงหาความจริง",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/The-Truthers-2026-%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B9%81%E0%B8%AA%E0%B8%A7%E0%B8%87%E0%B8%AB%E0%B8%B2%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%87.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/The-Truthers-2026-%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B9%81%E0%B8%AA%E0%B8%A7%E0%B8%87%E0%B8%AB%E0%B8%B2%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%87.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/The-Truthers-2026-%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B9%81%E0%B8%AA%E0%B8%A7%E0%B8%87%E0%B8%AB%E0%B8%B2%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%87.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/The-Truthers-2026-%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B9%81%E0%B8%AA%E0%B8%A7%E0%B8%87%E0%B8%AB%E0%B8%B2%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%87.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=cfb412e3e0f6467ce473e05c&b=5276",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Truthers (2026) ผู้แสวงหาความจริง (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1447,14 +3193,14 @@ window.movies = [
     ],
     "id": "24hdx-40155",
     "postId": "40155",
-    "originalUrl": "https://www.24-hdx.com/the-truthers/"
+    "originalUrl": "https://www.24-hda.com/the-truthers/"
   },
   {
     "titleTh": "Sesame Street (2026) เมื่อพายุมาเยือน",
     "titleEn": "Sesame Street (2026) เมื่อพายุมาเยือน",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/08/Sesame-Street-2026-%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%9E%E0%B8%B2%E0%B8%A2%E0%B8%B8%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%A2%E0%B8%B7%E0%B8%AD%E0%B8%99.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/08/Sesame-Street-2026-%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%9E%E0%B8%B2%E0%B8%A2%E0%B8%B8%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%A2%E0%B8%B7%E0%B8%AD%E0%B8%99.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/Sesame-Street-2026-%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%9E%E0%B8%B2%E0%B8%A2%E0%B8%B8%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%A2%E0%B8%B7%E0%B8%AD%E0%B8%99.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/Sesame-Street-2026-%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%9E%E0%B8%B2%E0%B8%A2%E0%B8%B8%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%A2%E0%B8%B7%E0%B8%AD%E0%B8%99.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=85d3bf8cce7125546e09104c&b=6213",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Sesame Street (2026) เมื่อพายุมาเยือน (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1476,14 +3222,14 @@ window.movies = [
     ],
     "id": "24hdx-40272",
     "postId": "40272",
-    "originalUrl": "https://www.24-hdx.com/sesame-street/"
+    "originalUrl": "https://www.24-hda.com/sesame-street/"
   },
   {
     "titleTh": "Tom Clancys Jack Ryan Ghost War (2026)",
     "titleEn": "Tom Clancys Jack Ryan Ghost War (2026)",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Tom-Clancys-Jack-Ryan-Ghost-War-2026.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Tom-Clancys-Jack-Ryan-Ghost-War-2026.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/Tom-Clancys-Jack-Ryan-Ghost-War-2026.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/Tom-Clancys-Jack-Ryan-Ghost-War-2026.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=a5590420cae4b11254ce5a3f&b=1723",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Tom Clancys Jack Ryan Ghost War (2026) (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1505,14 +3251,14 @@ window.movies = [
     ],
     "id": "24hdx-39256",
     "postId": "39256",
-    "originalUrl": "https://www.24-hdx.com/tom-clancys-jack-ryan-ghost-war/"
+    "originalUrl": "https://www.24-hda.com/tom-clancys-jack-ryan-ghost-war/"
   },
   {
     "titleTh": "Wild Sing (2026) ขาแดนซ์คืนเวทีขยี้ไมค์",
     "titleEn": "Wild Sing (2026) ขาแดนซ์คืนเวทีขยี้ไมค์",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Wild-Sing-2026-%E0%B8%82%E0%B8%B2%E0%B9%81%E0%B8%94%E0%B8%99%E0%B8%8B%E0%B9%8C%E0%B8%84%E0%B8%B7%E0%B8%99%E0%B9%80%E0%B8%A7%E0%B8%97%E0%B8%B5%E0%B8%82%E0%B8%A2%E0%B8%B5%E0%B9%89%E0%B9%84%E0%B8%A1%E0%B8%84%E0%B9%8C.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Wild-Sing-2026-%E0%B8%82%E0%B8%B2%E0%B9%81%E0%B8%94%E0%B8%99%E0%B8%8B%E0%B9%8C%E0%B8%84%E0%B8%B7%E0%B8%99%E0%B9%80%E0%B8%A7%E0%B8%97%E0%B8%B5%E0%B8%82%E0%B8%A2%E0%B8%B5%E0%B9%89%E0%B9%84%E0%B8%A1%E0%B8%84%E0%B9%8C.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Wild-Sing-2026-%E0%B8%82%E0%B8%B2%E0%B9%81%E0%B8%94%E0%B8%99%E0%B8%8B%E0%B9%8C%E0%B8%84%E0%B8%B7%E0%B8%99%E0%B9%80%E0%B8%A7%E0%B8%97%E0%B8%B5%E0%B8%82%E0%B8%A2%E0%B8%B5%E0%B9%89%E0%B9%84%E0%B8%A1%E0%B8%84%E0%B9%8C.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Wild-Sing-2026-%E0%B8%82%E0%B8%B2%E0%B9%81%E0%B8%94%E0%B8%99%E0%B8%8B%E0%B9%8C%E0%B8%84%E0%B8%B7%E0%B8%99%E0%B9%80%E0%B8%A7%E0%B8%97%E0%B8%B5%E0%B8%82%E0%B8%A2%E0%B8%B5%E0%B9%89%E0%B9%84%E0%B8%A1%E0%B8%84%E0%B9%8C.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=d55bff216421f5c3a0d8aeaf&b=9553",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Wild Sing (2026) ขาแดนซ์คืนเวทีขยี้ไมค์ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1534,14 +3280,14 @@ window.movies = [
     ],
     "id": "24hdx-40254",
     "postId": "40254",
-    "originalUrl": "https://www.24-hdx.com/wild-sing/"
+    "originalUrl": "https://www.24-hda.com/wild-sing/"
   },
   {
     "titleTh": "Assassination Classroom the Movie Our Time (2026) ห้องเรียนลอบสังหาร เดอะ มูฟวี่ ห้วงเวลาของพวกเรา",
     "titleEn": "Assassination Classroom the Movie Our Time (2026) ห้องเรียนลอบสังหาร เดอะ มูฟวี่ ห้วงเวลาของพวกเรา",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Assassination-Classroom-the-Movie-Our-Time-2026-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%A5%E0%B8%AD%E0%B8%9A%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%B2%E0%B8%A3-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88-%E0%B8%AB%E0%B9%89%E0%B8%A7%E0%B8%87%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%9E%E0%B8%A7%E0%B8%81%E0%B9%80%E0%B8%A3%E0%B8%B2.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Assassination-Classroom-the-Movie-Our-Time-2026-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%A5%E0%B8%AD%E0%B8%9A%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%B2%E0%B8%A3-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88-%E0%B8%AB%E0%B9%89%E0%B8%A7%E0%B8%87%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%9E%E0%B8%A7%E0%B8%81%E0%B9%80%E0%B8%A3%E0%B8%B2.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Assassination-Classroom-the-Movie-Our-Time-2026-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%A5%E0%B8%AD%E0%B8%9A%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%B2%E0%B8%A3-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88-%E0%B8%AB%E0%B9%89%E0%B8%A7%E0%B8%87%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%9E%E0%B8%A7%E0%B8%81%E0%B9%80%E0%B8%A3%E0%B8%B2.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Assassination-Classroom-the-Movie-Our-Time-2026-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%A5%E0%B8%AD%E0%B8%9A%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%B2%E0%B8%A3-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88-%E0%B8%AB%E0%B9%89%E0%B8%A7%E0%B8%87%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%9E%E0%B8%A7%E0%B8%81%E0%B9%80%E0%B8%A3%E0%B8%B2.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=543da3ad7d771c97795b64a3&b=5929",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Assassination Classroom the Movie Our Time (2026) ห้องเรียนลอบสังหาร เดอะ มูฟวี่ ห้วงเวลาของพวกเรา (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1563,14 +3309,14 @@ window.movies = [
     ],
     "id": "24hdx-40250",
     "postId": "40250",
-    "originalUrl": "https://www.24-hdx.com/assassination-classroom-the-movie-our-time/"
+    "originalUrl": "https://www.24-hda.com/assassination-classroom-the-movie-our-time/"
   },
   {
     "titleTh": "Blast (2026) ศึกเดือด ครอบครัวระห่ำ",
     "titleEn": "Blast (2026) ศึกเดือด ครอบครัวระห่ำ",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Blast-2026-%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD%E0%B8%94-%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B9%88%E0%B8%B3.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Blast-2026-%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD%E0%B8%94-%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B9%88%E0%B8%B3.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Blast-2026-%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD%E0%B8%94-%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B9%88%E0%B8%B3.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Blast-2026-%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD%E0%B8%94-%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B9%88%E0%B8%B3.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=2a96c3b66c0fa8972a06d52b&b=7299",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Blast (2026) ศึกเดือด ครอบครัวระห่ำ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1592,14 +3338,14 @@ window.movies = [
     ],
     "id": "24hdx-40247",
     "postId": "40247",
-    "originalUrl": "https://www.24-hdx.com/blast/"
+    "originalUrl": "https://www.24-hda.com/blast/"
   },
   {
     "titleTh": "Leviticus (2026) รักร้ายกลายร่าง",
     "titleEn": "Leviticus (2026) รักร้ายกลายร่าง",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Leviticus-2026-%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%A3%E0%B9%88%E0%B8%B2%E0%B8%87.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Leviticus-2026-%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%A3%E0%B9%88%E0%B8%B2%E0%B8%87.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Leviticus-2026-%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%A3%E0%B9%88%E0%B8%B2%E0%B8%87.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Leviticus-2026-%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%A3%E0%B9%88%E0%B8%B2%E0%B8%87.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=56042c6f98feaa4fda3e361d&b=8503",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Leviticus (2026) รักร้ายกลายร่าง (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1621,14 +3367,14 @@ window.movies = [
     ],
     "id": "24hdx-40237",
     "postId": "40237",
-    "originalUrl": "https://www.24-hdx.com/leviticus/"
+    "originalUrl": "https://www.24-hda.com/leviticus/"
   },
   {
     "titleTh": "The Devil Wears Prada 2 (2026) นางมารสวมปราด้า 2",
     "titleEn": "The Devil Wears Prada 2 (2026) นางมารสวมปราด้า 2",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/The-Devil-Wears-Prada-2-2026-%E0%B8%99%E0%B8%B2%E0%B8%87%E0%B8%A1%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%A7%E0%B8%A1%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%94%E0%B9%89%E0%B8%B2-2.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/The-Devil-Wears-Prada-2-2026-%E0%B8%99%E0%B8%B2%E0%B8%87%E0%B8%A1%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%A7%E0%B8%A1%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%94%E0%B9%89%E0%B8%B2-2.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/The-Devil-Wears-Prada-2-2026-%E0%B8%99%E0%B8%B2%E0%B8%87%E0%B8%A1%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%A7%E0%B8%A1%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%94%E0%B9%89%E0%B8%B2-2.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/The-Devil-Wears-Prada-2-2026-%E0%B8%99%E0%B8%B2%E0%B8%87%E0%B8%A1%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%A7%E0%B8%A1%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%94%E0%B9%89%E0%B8%B2-2.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=812b64f32d64a719409c0c4c&b=4143",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Devil Wears Prada 2 (2026) นางมารสวมปราด้า 2 (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1650,14 +3396,14 @@ window.movies = [
     ],
     "id": "24hdx-38888",
     "postId": "38888",
-    "originalUrl": "https://www.24-hdx.com/the-devil-wears-prada-2/"
+    "originalUrl": "https://www.24-hda.com/the-devil-wears-prada-2/"
   },
   {
     "titleTh": "Masters of the Universe (2026) นักรบเจ้าจักรวาล",
     "titleEn": "Masters of the Universe (2026) นักรบเจ้าจักรวาล",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Masters-of-the-Universe-2026-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B8%9A%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B8%A7%E0%B8%B2%E0%B8%A5.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Masters-of-the-Universe-2026-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B8%9A%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B8%A7%E0%B8%B2%E0%B8%A5.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/Masters-of-the-Universe-2026-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B8%9A%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B8%A7%E0%B8%B2%E0%B8%A5.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/Masters-of-the-Universe-2026-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B8%9A%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B8%A7%E0%B8%B2%E0%B8%A5.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=2de72b0100de4020bf745418&b=2825",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Masters of the Universe (2026) นักรบเจ้าจักรวาล (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1679,14 +3425,14 @@ window.movies = [
     ],
     "id": "24hdx-39492",
     "postId": "39492",
-    "originalUrl": "https://www.24-hdx.com/masters-of-the-universe/"
+    "originalUrl": "https://www.24-hda.com/masters-of-the-universe/"
   },
   {
     "titleTh": "The Secret Agent (2026) ประเทศนี้ อยู่เฉย ๆ ก็ผิดได้",
     "titleEn": "The Secret Agent (2026) ประเทศนี้ อยู่เฉย ๆ ก็ผิดได้",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/The-Secret-Agent-2026-%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B8%99%E0%B8%B5%E0%B9%89-%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B9%80%E0%B8%89%E0%B8%A2-%E0%B9%86-%E0%B8%81%E0%B9%87%E0%B8%9C%E0%B8%B4%E0%B8%94%E0%B9%84%E0%B8%94%E0%B9%89.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/The-Secret-Agent-2026-%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B8%99%E0%B8%B5%E0%B9%89-%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B9%80%E0%B8%89%E0%B8%A2-%E0%B9%86-%E0%B8%81%E0%B9%87%E0%B8%9C%E0%B8%B4%E0%B8%94%E0%B9%84%E0%B8%94%E0%B9%89.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/The-Secret-Agent-2026-%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B8%99%E0%B8%B5%E0%B9%89-%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B9%80%E0%B8%89%E0%B8%A2-%E0%B9%86-%E0%B8%81%E0%B9%87%E0%B8%9C%E0%B8%B4%E0%B8%94%E0%B9%84%E0%B8%94%E0%B9%89.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/The-Secret-Agent-2026-%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B8%99%E0%B8%B5%E0%B9%89-%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B9%80%E0%B8%89%E0%B8%A2-%E0%B9%86-%E0%B8%81%E0%B9%87%E0%B8%9C%E0%B8%B4%E0%B8%94%E0%B9%84%E0%B8%94%E0%B9%89.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=7fe914b5e69534157a43cf0d&b=9314",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Secret Agent (2026) ประเทศนี้ อยู่เฉย ๆ ก็ผิดได้ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1708,14 +3454,14 @@ window.movies = [
     ],
     "id": "24hdx-40224",
     "postId": "40224",
-    "originalUrl": "https://www.24-hdx.com/the-secret-agent/"
+    "originalUrl": "https://www.24-hda.com/the-secret-agent/"
   },
   {
     "titleTh": "Disclosure Day (2026) วันเปิดโปง ไขปริศนาลวงโลก",
     "titleEn": "Disclosure Day (2026) วันเปิดโปง ไขปริศนาลวงโลก",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Disclosure-Day-2026-%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94%E0%B9%82%E0%B8%9B%E0%B8%87-%E0%B9%84%E0%B8%82%E0%B8%9B%E0%B8%A3%E0%B8%B4%E0%B8%A8%E0%B8%99%E0%B8%B2%E0%B8%A5%E0%B8%A7%E0%B8%87%E0%B9%82%E0%B8%A5%E0%B8%81.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Disclosure-Day-2026-%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94%E0%B9%82%E0%B8%9B%E0%B8%87-%E0%B9%84%E0%B8%82%E0%B8%9B%E0%B8%A3%E0%B8%B4%E0%B8%A8%E0%B8%99%E0%B8%B2%E0%B8%A5%E0%B8%A7%E0%B8%87%E0%B9%82%E0%B8%A5%E0%B8%81.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/Disclosure-Day-2026-%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94%E0%B9%82%E0%B8%9B%E0%B8%87-%E0%B9%84%E0%B8%82%E0%B8%9B%E0%B8%A3%E0%B8%B4%E0%B8%A8%E0%B8%99%E0%B8%B2%E0%B8%A5%E0%B8%A7%E0%B8%87%E0%B9%82%E0%B8%A5%E0%B8%81.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/Disclosure-Day-2026-%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94%E0%B9%82%E0%B8%9B%E0%B8%87-%E0%B9%84%E0%B8%82%E0%B8%9B%E0%B8%A3%E0%B8%B4%E0%B8%A8%E0%B8%99%E0%B8%B2%E0%B8%A5%E0%B8%A7%E0%B8%87%E0%B9%82%E0%B8%A5%E0%B8%81.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=e86e47a97d2ef4214a946f23&b=1642",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Disclosure Day (2026) วันเปิดโปง ไขปริศนาลวงโลก (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1737,14 +3483,14 @@ window.movies = [
     ],
     "id": "24hdx-39640",
     "postId": "39640",
-    "originalUrl": "https://www.24-hdx.com/disclosure-day/"
+    "originalUrl": "https://www.24-hda.com/disclosure-day/"
   },
   {
     "titleTh": "Raakaasa (2026) รักหลอนซ่อนอสูร",
     "titleEn": "Raakaasa (2026) รักหลอนซ่อนอสูร",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Raakaasa-2026-%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%AB%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%8B%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%AD%E0%B8%AA%E0%B8%B9%E0%B8%A3.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Raakaasa-2026-%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%AB%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%8B%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%AD%E0%B8%AA%E0%B8%B9%E0%B8%A3.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/Raakaasa-2026-%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%AB%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%8B%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%AD%E0%B8%AA%E0%B8%B9%E0%B8%A3.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/Raakaasa-2026-%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%AB%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%8B%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%AD%E0%B8%AA%E0%B8%B9%E0%B8%A3.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=aa24385473dab99cf446fea4&b=9721",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Raakaasa (2026) รักหลอนซ่อนอสูร (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1766,14 +3512,14 @@ window.movies = [
     ],
     "id": "24hdx-39314",
     "postId": "39314",
-    "originalUrl": "https://www.24-hdx.com/raakaasa/"
+    "originalUrl": "https://www.24-hda.com/raakaasa/"
   },
   {
     "titleTh": "Mortal Kombat II (2026) มอร์ทัล คอมแบท 2",
     "titleEn": "Mortal Kombat II (2026) มอร์ทัล คอมแบท 2",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Mortal-Kombat-II-2026-%E0%B8%A1%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%97%E0%B8%B1%E0%B8%A5-%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B9%81%E0%B8%9A%E0%B8%97-2.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Mortal-Kombat-II-2026-%E0%B8%A1%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%97%E0%B8%B1%E0%B8%A5-%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B9%81%E0%B8%9A%E0%B8%97-2.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/Mortal-Kombat-II-2026-%E0%B8%A1%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%97%E0%B8%B1%E0%B8%A5-%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B9%81%E0%B8%9A%E0%B8%97-2.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/Mortal-Kombat-II-2026-%E0%B8%A1%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%97%E0%B8%B1%E0%B8%A5-%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B9%81%E0%B8%9A%E0%B8%97-2.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=2c694403b93fa1c6faf9c393&b=5619",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Mortal Kombat II (2026) มอร์ทัล คอมแบท 2 (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1795,14 +3541,14 @@ window.movies = [
     ],
     "id": "24hdx-38963",
     "postId": "38963",
-    "originalUrl": "https://www.24-hdx.com/mortal-kombat-ii/"
+    "originalUrl": "https://www.24-hda.com/mortal-kombat-ii/"
   },
   {
     "titleTh": "72 Hours (2026) 72 ชั่วโมงในไมแอมี",
     "titleEn": "72 Hours (2026) 72 ชั่วโมงในไมแอมี",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/72-Hours-2026-72-%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%82%E0%B8%A1%E0%B8%87%E0%B9%83%E0%B8%99%E0%B9%84%E0%B8%A1%E0%B9%81%E0%B8%AD%E0%B8%A1%E0%B8%B5.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/72-Hours-2026-72-%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%82%E0%B8%A1%E0%B8%87%E0%B9%83%E0%B8%99%E0%B9%84%E0%B8%A1%E0%B9%81%E0%B8%AD%E0%B8%A1%E0%B8%B5.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/72-Hours-2026-72-%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%82%E0%B8%A1%E0%B8%87%E0%B9%83%E0%B8%99%E0%B9%84%E0%B8%A1%E0%B9%81%E0%B8%AD%E0%B8%A1%E0%B8%B5.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/72-Hours-2026-72-%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%82%E0%B8%A1%E0%B8%87%E0%B9%83%E0%B8%99%E0%B9%84%E0%B8%A1%E0%B9%81%E0%B8%AD%E0%B8%A1%E0%B8%B5.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=a5201ce21370b948dd00bda9&b=2481",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี 72 Hours (2026) 72 ชั่วโมงในไมแอมี (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1824,19 +3570,20 @@ window.movies = [
     ],
     "id": "24hdx-40165",
     "postId": "40165",
-    "originalUrl": "https://www.24-hdx.com/72-hours/"
+    "originalUrl": "https://www.24-hda.com/72-hours/"
   },
   {
     "titleTh": "The Undertaker 2 Afterlife (2026) สัปเหร่อ 2",
     "titleEn": "The Undertaker 2 Afterlife (2026) สัปเหร่อ 2",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/The-Undertaker-2-Afterlife-2026-%E0%B8%AA%E0%B8%B1%E0%B8%9B%E0%B9%80%E0%B8%AB%E0%B8%A3%E0%B9%88%E0%B8%AD-2.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/The-Undertaker-2-Afterlife-2026-%E0%B8%AA%E0%B8%B1%E0%B8%9B%E0%B9%80%E0%B8%AB%E0%B8%A3%E0%B9%88%E0%B8%AD-2.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/The-Undertaker-2-Afterlife-2026-%E0%B8%AA%E0%B8%B1%E0%B8%9B%E0%B9%80%E0%B8%AB%E0%B8%A3%E0%B9%88%E0%B8%AD-2.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/The-Undertaker-2-Afterlife-2026-%E0%B8%AA%E0%B8%B1%E0%B8%9B%E0%B9%80%E0%B8%AB%E0%B8%A3%E0%B9%88%E0%B8%AD-2.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=3bf54f6a1faad5ab77b6c114&b=7709",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Undertaker 2 Afterlife (2026) สัปเหร่อ 2 (2026) พากย์ไทย เต็มเรื่อง HD",
     "rating": 7.9,
     "genres": [
+      "ยอดนิยม 2026",
       "24-HDX",
       "พากย์ไทย",
       "หนังปี 2026"
@@ -1853,14 +3600,14 @@ window.movies = [
     ],
     "id": "24hdx-40046",
     "postId": "40046",
-    "originalUrl": "https://www.24-hdx.com/the-undertaker-2-afterlife/"
+    "originalUrl": "https://www.24-hda.com/the-undertaker-2-afterlife/"
   },
   {
     "titleTh": "The East Palace (2026) บูรพาอาถรรพ์",
     "titleEn": "The East Palace (2026) บูรพาอาถรรพ์",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/The-East-Palace-2026-%E0%B8%9A%E0%B8%B9%E0%B8%A3%E0%B8%9E%E0%B8%B2%E0%B8%AD%E0%B8%B2%E0%B8%96%E0%B8%A3%E0%B8%A3%E0%B8%9E%E0%B9%8C.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/The-East-Palace-2026-%E0%B8%9A%E0%B8%B9%E0%B8%A3%E0%B8%9E%E0%B8%B2%E0%B8%AD%E0%B8%B2%E0%B8%96%E0%B8%A3%E0%B8%A3%E0%B8%9E%E0%B9%8C.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/The-East-Palace-2026-%E0%B8%9A%E0%B8%B9%E0%B8%A3%E0%B8%9E%E0%B8%B2%E0%B8%AD%E0%B8%B2%E0%B8%96%E0%B8%A3%E0%B8%A3%E0%B8%9E%E0%B9%8C.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/The-East-Palace-2026-%E0%B8%9A%E0%B8%B9%E0%B8%A3%E0%B8%9E%E0%B8%B2%E0%B8%AD%E0%B8%B2%E0%B8%96%E0%B8%A3%E0%B8%A3%E0%B8%9E%E0%B9%8C.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=759fae523ddebf02c35dbc6a&b=7501",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The East Palace (2026) บูรพาอาถรรพ์ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1889,7 +3636,7 @@ window.movies = [
     ],
     "id": "24hdx-40100",
     "postId": "40100",
-    "originalUrl": "https://www.24-hdx.com/the-east-palace/",
+    "originalUrl": "https://www.24-hda.com/the-east-palace/",
     "episodeUrls": {
       "1": "https://main.24playerhd.com/index_th.php?id=759fae523ddebf02c35dbc6a&b=7501",
       "2": "https://main.24playerhd.com/index_th.php?id=0af6188c08e2fc7ac696d632&b=1843",
@@ -1905,8 +3652,8 @@ window.movies = [
     "titleTh": "Desire (2026) ปรารถนาต้องห้าม",
     "titleEn": "Desire (2026) ปรารถนาต้องห้าม",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Desire-2026-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%A3%E0%B8%96%E0%B8%99%E0%B8%B2%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2%E0%B8%A1.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Desire-2026-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%A3%E0%B8%96%E0%B8%99%E0%B8%B2%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2%E0%B8%A1.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Desire-2026-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%A3%E0%B8%96%E0%B8%99%E0%B8%B2%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2%E0%B8%A1.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Desire-2026-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%A3%E0%B8%96%E0%B8%99%E0%B8%B2%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2%E0%B8%A1.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=31a94ad04e9a1fcf488e1431&b=7988",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Desire (2026) ปรารถนาต้องห้าม (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1928,14 +3675,14 @@ window.movies = [
     ],
     "id": "24hdx-40097",
     "postId": "40097",
-    "originalUrl": "https://www.24-hdx.com/desire/"
+    "originalUrl": "https://www.24-hda.com/desire/"
   },
   {
     "titleTh": "23000 Lives (2026) 23000 ชีวิต",
     "titleEn": "23000 Lives (2026) 23000 ชีวิต",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/23000-Lives-2026-23000-%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/23000-Lives-2026-23000-%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/23000-Lives-2026-23000-%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/23000-Lives-2026-23000-%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=8bd6a473a5571012b175e539&b=5345",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี 23000 Lives (2026) 23000 ชีวิต (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1957,14 +3704,14 @@ window.movies = [
     ],
     "id": "24hdx-40093",
     "postId": "40093",
-    "originalUrl": "https://www.24-hdx.com/23000-lives/"
+    "originalUrl": "https://www.24-hda.com/23000-lives/"
   },
   {
     "titleTh": "Thunder Rescue (2026) ภารกิจช่วยเหลือเหนือสายฟ้า",
     "titleEn": "Thunder Rescue (2026) ภารกิจช่วยเหลือเหนือสายฟ้า",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/01/Thunder-Rescue-2026-%E0%B8%A0%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B8%9F%E0%B9%89%E0%B8%B2.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/01/Thunder-Rescue-2026-%E0%B8%A0%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B8%9F%E0%B9%89%E0%B8%B2.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/01/Thunder-Rescue-2026-%E0%B8%A0%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B8%9F%E0%B9%89%E0%B8%B2.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/01/Thunder-Rescue-2026-%E0%B8%A0%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B8%9F%E0%B9%89%E0%B8%B2.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=460eacf446ccd68904cfcabd&b=1131",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Thunder Rescue (2026) ภารกิจช่วยเหลือเหนือสายฟ้า (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -1986,14 +3733,14 @@ window.movies = [
     ],
     "id": "24hdx-37686",
     "postId": "37686",
-    "originalUrl": "https://www.24-hdx.com/thunder-rescue-2026/"
+    "originalUrl": "https://www.24-hda.com/thunder-rescue-2026/"
   },
   {
     "titleTh": "The Real Monkey King (2026) คาถารัตเกล้าแห่งภูผาไร้อารยะ",
     "titleEn": "The Real Monkey King (2026) คาถารัตเกล้าแห่งภูผาไร้อารยะ",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/01/The-Real-Monkey-King-2026-%E0%B8%84%E0%B8%B2%E0%B8%96%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%95%E0%B9%80%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%A0%E0%B8%B9%E0%B8%9C%E0%B8%B2%E0%B9%84%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B8%A2%E0%B8%B0.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/01/The-Real-Monkey-King-2026-%E0%B8%84%E0%B8%B2%E0%B8%96%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%95%E0%B9%80%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%A0%E0%B8%B9%E0%B8%9C%E0%B8%B2%E0%B9%84%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B8%A2%E0%B8%B0.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/01/The-Real-Monkey-King-2026-%E0%B8%84%E0%B8%B2%E0%B8%96%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%95%E0%B9%80%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%A0%E0%B8%B9%E0%B8%9C%E0%B8%B2%E0%B9%84%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B8%A2%E0%B8%B0.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/01/The-Real-Monkey-King-2026-%E0%B8%84%E0%B8%B2%E0%B8%96%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%95%E0%B9%80%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%A0%E0%B8%B9%E0%B8%9C%E0%B8%B2%E0%B9%84%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B8%A2%E0%B8%B0.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=b149cadc6fc9668fe7e229d3&b=4677",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Real Monkey King (2026) คาถารัตเกล้าแห่งภูผาไร้อารยะ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2015,14 +3762,14 @@ window.movies = [
     ],
     "id": "24hdx-37986",
     "postId": "37986",
-    "originalUrl": "https://www.24-hdx.com/the-real-monkey-king/"
+    "originalUrl": "https://www.24-hda.com/the-real-monkey-king/"
   },
   {
     "titleTh": "Me Before Me (2026) ฉันก่อนเป็นฉัน",
     "titleEn": "Me Before Me (2026) ฉันก่อนเป็นฉัน",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Me-Before-Me-2026-%E0%B8%89%E0%B8%B1%E0%B8%99%E0%B8%81%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%89%E0%B8%B1%E0%B8%99.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Me-Before-Me-2026-%E0%B8%89%E0%B8%B1%E0%B8%99%E0%B8%81%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%89%E0%B8%B1%E0%B8%99.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Me-Before-Me-2026-%E0%B8%89%E0%B8%B1%E0%B8%99%E0%B8%81%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%89%E0%B8%B1%E0%B8%99.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Me-Before-Me-2026-%E0%B8%89%E0%B8%B1%E0%B8%99%E0%B8%81%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%89%E0%B8%B1%E0%B8%99.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=380acab296764bd24cc5dbb8&b=3702",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Me Before Me (2026) ฉันก่อนเป็นฉัน (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2044,14 +3791,14 @@ window.movies = [
     ],
     "id": "24hdx-40090",
     "postId": "40090",
-    "originalUrl": "https://www.24-hdx.com/me-before-me/"
+    "originalUrl": "https://www.24-hda.com/me-before-me/"
   },
   {
     "titleTh": "Ghost Board (2026) กล่องผีสุ่มวิญญาณ",
     "titleEn": "Ghost Board (2026) กล่องผีสุ่มวิญญาณ",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Ghost-Board-2026-%E0%B8%81%E0%B8%A5%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%9C%E0%B8%B5%E0%B8%AA%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Ghost-Board-2026-%E0%B8%81%E0%B8%A5%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%9C%E0%B8%B5%E0%B8%AA%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Ghost-Board-2026-%E0%B8%81%E0%B8%A5%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%9C%E0%B8%B5%E0%B8%AA%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Ghost-Board-2026-%E0%B8%81%E0%B8%A5%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%9C%E0%B8%B5%E0%B8%AA%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=29de39cbebb87fc6b764c991&b=1990",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Ghost Board (2026) กล่องผีสุ่มวิญญาณ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2073,14 +3820,14 @@ window.movies = [
     ],
     "id": "24hdx-40081",
     "postId": "40081",
-    "originalUrl": "https://www.24-hdx.com/ghost-board/"
+    "originalUrl": "https://www.24-hda.com/ghost-board/"
   },
   {
     "titleTh": "Backrooms (2026) นรกห้องลับ",
     "titleEn": "Backrooms (2026) นรกห้องลับ",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Backrooms-2026-%E0%B8%99%E0%B8%A3%E0%B8%81%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%A5%E0%B8%B1%E0%B8%9A.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Backrooms-2026-%E0%B8%99%E0%B8%A3%E0%B8%81%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%A5%E0%B8%B1%E0%B8%9A.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/Backrooms-2026-%E0%B8%99%E0%B8%A3%E0%B8%81%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%A5%E0%B8%B1%E0%B8%9A.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/Backrooms-2026-%E0%B8%99%E0%B8%A3%E0%B8%81%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%A5%E0%B8%B1%E0%B8%9A.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=c140159c83746bae3128e569&b=2855",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Backrooms (2026) นรกห้องลับ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2102,14 +3849,14 @@ window.movies = [
     ],
     "id": "24hdx-39507",
     "postId": "39507",
-    "originalUrl": "https://www.24-hdx.com/backrooms/"
+    "originalUrl": "https://www.24-hda.com/backrooms/"
   },
   {
     "titleTh": "Fearless Kungfu King (2020) จอมคนผงาดโลก",
     "titleEn": "Fearless Kungfu King (2020) จอมคนผงาดโลก",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Fearless-Kungfu-King-2020-%E0%B8%88%E0%B8%AD%E0%B8%A1%E0%B8%84%E0%B8%99%E0%B8%9C%E0%B8%87%E0%B8%B2%E0%B8%94%E0%B9%82%E0%B8%A5%E0%B8%81.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Fearless-Kungfu-King-2020-%E0%B8%88%E0%B8%AD%E0%B8%A1%E0%B8%84%E0%B8%99%E0%B8%9C%E0%B8%87%E0%B8%B2%E0%B8%94%E0%B9%82%E0%B8%A5%E0%B8%81.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Fearless-Kungfu-King-2020-%E0%B8%88%E0%B8%AD%E0%B8%A1%E0%B8%84%E0%B8%99%E0%B8%9C%E0%B8%87%E0%B8%B2%E0%B8%94%E0%B9%82%E0%B8%A5%E0%B8%81.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Fearless-Kungfu-King-2020-%E0%B8%88%E0%B8%AD%E0%B8%A1%E0%B8%84%E0%B8%99%E0%B8%9C%E0%B8%87%E0%B8%B2%E0%B8%94%E0%B9%82%E0%B8%A5%E0%B8%81.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=f77b81f125d30e07c27c508c&b=5538",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Fearless Kungfu King (2020) จอมคนผงาดโลก (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2131,14 +3878,14 @@ window.movies = [
     ],
     "id": "24hdx-40069",
     "postId": "40069",
-    "originalUrl": "https://www.24-hdx.com/fearless-kungfu-king/"
+    "originalUrl": "https://www.24-hda.com/fearless-kungfu-king/"
   },
   {
     "titleTh": "Golden Kamuy Assault on Abashiri Prison (2026) โกลเดนคามุย การจู่โจมคุกอะบาชิริ",
     "titleEn": "Golden Kamuy Assault on Abashiri Prison (2026) โกลเดนคามุย การจู่โจมคุกอะบาชิริ",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Golden-Kamuy-Assault-on-Abashiri-Prison-2026-%E0%B9%82%E0%B8%81%E0%B8%A5%E0%B9%80%E0%B8%94%E0%B8%99%E0%B8%84%E0%B8%B2%E0%B8%A1%E0%B8%B8%E0%B8%A2-%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%88%E0%B8%B9%E0%B9%88%E0%B9%82%E0%B8%88%E0%B8%A1%E0%B8%84%E0%B8%B8%E0%B8%81%E0%B8%AD%E0%B8%B0%E0%B8%9A%E0%B8%B2%E0%B8%8A%E0%B8%B4%E0%B8%A3%E0%B8%B4.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Golden-Kamuy-Assault-on-Abashiri-Prison-2026-%E0%B9%82%E0%B8%81%E0%B8%A5%E0%B9%80%E0%B8%94%E0%B8%99%E0%B8%84%E0%B8%B2%E0%B8%A1%E0%B8%B8%E0%B8%A2-%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%88%E0%B8%B9%E0%B9%88%E0%B9%82%E0%B8%88%E0%B8%A1%E0%B8%84%E0%B8%B8%E0%B8%81%E0%B8%AD%E0%B8%B0%E0%B8%9A%E0%B8%B2%E0%B8%8A%E0%B8%B4%E0%B8%A3%E0%B8%B4.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Golden-Kamuy-Assault-on-Abashiri-Prison-2026-%E0%B9%82%E0%B8%81%E0%B8%A5%E0%B9%80%E0%B8%94%E0%B8%99%E0%B8%84%E0%B8%B2%E0%B8%A1%E0%B8%B8%E0%B8%A2-%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%88%E0%B8%B9%E0%B9%88%E0%B9%82%E0%B8%88%E0%B8%A1%E0%B8%84%E0%B8%B8%E0%B8%81%E0%B8%AD%E0%B8%B0%E0%B8%9A%E0%B8%B2%E0%B8%8A%E0%B8%B4%E0%B8%A3%E0%B8%B4.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Golden-Kamuy-Assault-on-Abashiri-Prison-2026-%E0%B9%82%E0%B8%81%E0%B8%A5%E0%B9%80%E0%B8%94%E0%B8%99%E0%B8%84%E0%B8%B2%E0%B8%A1%E0%B8%B8%E0%B8%A2-%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%88%E0%B8%B9%E0%B9%88%E0%B9%82%E0%B8%88%E0%B8%A1%E0%B8%84%E0%B8%B8%E0%B8%81%E0%B8%AD%E0%B8%B0%E0%B8%9A%E0%B8%B2%E0%B8%8A%E0%B8%B4%E0%B8%A3%E0%B8%B4.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=5f0c15608bb9943f186b711f&b=1578",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Golden Kamuy Assault on Abashiri Prison (2026) โกลเดนคามุย การจู่โจมคุกอะบาชิริ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2160,14 +3907,14 @@ window.movies = [
     ],
     "id": "24hdx-40060",
     "postId": "40060",
-    "originalUrl": "https://www.24-hdx.com/golden-kamuy-assault-on-abashiri-prison/"
+    "originalUrl": "https://www.24-hda.com/golden-kamuy-assault-on-abashiri-prison/"
   },
   {
     "titleTh": "Moana (2026)",
     "titleEn": "Moana (2026)",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Moana-2026.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Moana-2026.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Moana-2026.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Moana-2026.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=31ef3d76ce3f29db46aea3c9&b=7060",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Moana (2026) (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2189,14 +3936,14 @@ window.movies = [
     ],
     "id": "24hdx-40049",
     "postId": "40049",
-    "originalUrl": "https://www.24-hdx.com/moana-2026/"
+    "originalUrl": "https://www.24-hda.com/moana-2026/"
   },
   {
     "titleTh": "IKKA (2026) ไพ่ตาย ทนายเหนือคน",
     "titleEn": "IKKA (2026) ไพ่ตาย ทนายเหนือคน",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/IKKA-2026-%E0%B9%84%E0%B8%9E%E0%B9%88%E0%B8%95%E0%B8%B2%E0%B8%A2-%E0%B8%97%E0%B8%99%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD%E0%B8%84%E0%B8%99.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/IKKA-2026-%E0%B9%84%E0%B8%9E%E0%B9%88%E0%B8%95%E0%B8%B2%E0%B8%A2-%E0%B8%97%E0%B8%99%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD%E0%B8%84%E0%B8%99.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/IKKA-2026-%E0%B9%84%E0%B8%9E%E0%B9%88%E0%B8%95%E0%B8%B2%E0%B8%A2-%E0%B8%97%E0%B8%99%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD%E0%B8%84%E0%B8%99.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/IKKA-2026-%E0%B9%84%E0%B8%9E%E0%B9%88%E0%B8%95%E0%B8%B2%E0%B8%A2-%E0%B8%97%E0%B8%99%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD%E0%B8%84%E0%B8%99.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=205144190f5c3790e075315a&b=6081",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี IKKA (2026) ไพ่ตาย ทนายเหนือคน (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2218,14 +3965,14 @@ window.movies = [
     ],
     "id": "24hdx-40023",
     "postId": "40023",
-    "originalUrl": "https://www.24-hdx.com/ikka/"
+    "originalUrl": "https://www.24-hda.com/ikka/"
   },
   {
     "titleTh": "Shipwrecked Nightmare at Sea (2026) เรืออับปาง ฝันร้ายกลางทะเล",
     "titleEn": "Shipwrecked Nightmare at Sea (2026) เรืออับปาง ฝันร้ายกลางทะเล",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Shipwrecked-Nightmare-at-Sea-2026-%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%9E%E0%B8%B2%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%A1%E0%B8%B4%E0%B9%80%E0%B8%81%E0%B8%A5-%E0%B8%AD%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%AE%E0%B8%A5-%E0%B8%9A%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B9%82%E0%B8%81-48-%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%82%E0%B8%A1%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B8%AA%E0%B9%80%E0%B8%9B%E0%B8%99.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Shipwrecked-Nightmare-at-Sea-2026-%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%9E%E0%B8%B2%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%A1%E0%B8%B4%E0%B9%80%E0%B8%81%E0%B8%A5-%E0%B8%AD%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%AE%E0%B8%A5-%E0%B8%9A%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B9%82%E0%B8%81-48-%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%82%E0%B8%A1%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B8%AA%E0%B9%80%E0%B8%9B%E0%B8%99.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Shipwrecked-Nightmare-at-Sea-2026-%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%9E%E0%B8%B2%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%A1%E0%B8%B4%E0%B9%80%E0%B8%81%E0%B8%A5-%E0%B8%AD%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%AE%E0%B8%A5-%E0%B8%9A%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B9%82%E0%B8%81-48-%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%82%E0%B8%A1%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B8%AA%E0%B9%80%E0%B8%9B%E0%B8%99.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Shipwrecked-Nightmare-at-Sea-2026-%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%9E%E0%B8%B2%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%A1%E0%B8%B4%E0%B9%80%E0%B8%81%E0%B8%A5-%E0%B8%AD%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%AE%E0%B8%A5-%E0%B8%9A%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B9%82%E0%B8%81-48-%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%82%E0%B8%A1%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B8%AA%E0%B9%80%E0%B8%9B%E0%B8%99.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=d3a413e68cb4c2e41f641246&b=7618",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Shipwrecked Nightmare at Sea (2026) เรืออับปาง ฝันร้ายกลางทะเล (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2247,14 +3994,14 @@ window.movies = [
     ],
     "id": "24hdx-40019",
     "postId": "40019",
-    "originalUrl": "https://www.24-hdx.com/shipwrecked-nightmare-at-sea/"
+    "originalUrl": "https://www.24-hda.com/shipwrecked-nightmare-at-sea/"
   },
   {
     "titleTh": "The Furious (2026) คนเดือดระห่ำ",
     "titleEn": "The Furious (2026) คนเดือดระห่ำ",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/The-Furious-2026-%E0%B8%84%E0%B8%99%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD%E0%B8%94%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B9%88%E0%B8%B3.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/The-Furious-2026-%E0%B8%84%E0%B8%99%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD%E0%B8%94%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B9%88%E0%B8%B3.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/The-Furious-2026-%E0%B8%84%E0%B8%99%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD%E0%B8%94%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B9%88%E0%B8%B3.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/The-Furious-2026-%E0%B8%84%E0%B8%99%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD%E0%B8%94%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B9%88%E0%B8%B3.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=cbbb1ea59af1bb711e0689d6&b=1680",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Furious (2026) คนเดือดระห่ำ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2276,14 +4023,14 @@ window.movies = [
     ],
     "id": "24hdx-39720",
     "postId": "39720",
-    "originalUrl": "https://www.24-hdx.com/the-furious/"
+    "originalUrl": "https://www.24-hda.com/the-furious/"
   },
   {
     "titleTh": "Passenger (2026) ผู้ร่วมทางตาย",
     "titleEn": "Passenger (2026) ผู้ร่วมทางตาย",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Passenger-2026-%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%A3%E0%B9%88%E0%B8%A7%E0%B8%A1%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%95%E0%B8%B2%E0%B8%A2.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Passenger-2026-%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%A3%E0%B9%88%E0%B8%A7%E0%B8%A1%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%95%E0%B8%B2%E0%B8%A2.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/Passenger-2026-%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%A3%E0%B9%88%E0%B8%A7%E0%B8%A1%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%95%E0%B8%B2%E0%B8%A2.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/Passenger-2026-%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%A3%E0%B9%88%E0%B8%A7%E0%B8%A1%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%95%E0%B8%B2%E0%B8%A2.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=68688cf596f8bf46187f315f&b=1504",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Passenger (2026) ผู้ร่วมทางตาย (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2305,14 +4052,14 @@ window.movies = [
     ],
     "id": "24hdx-39315",
     "postId": "39315",
-    "originalUrl": "https://www.24-hdx.com/passenger-2026/"
+    "originalUrl": "https://www.24-hda.com/passenger-2026/"
   },
   {
     "titleTh": "Swords of Legends Soul and Blade (2026) กระบี่แห่งตำนาน จิตวิญญาณและคมดาบ",
     "titleEn": "Swords of Legends Soul and Blade (2026) กระบี่แห่งตำนาน จิตวิญญาณและคมดาบ",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/03/Swords-of-Legends-Soul-and-Blade-2026-%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B5%E0%B9%88%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%95%E0%B8%B3%E0%B8%99%E0%B8%B2%E0%B8%99-%E0%B8%88%E0%B8%B4%E0%B8%95%E0%B8%A7%E0%B8%B4%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%84%E0%B8%A1%E0%B8%94%E0%B8%B2%E0%B8%9A.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/03/Swords-of-Legends-Soul-and-Blade-2026-%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B5%E0%B9%88%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%95%E0%B8%B3%E0%B8%99%E0%B8%B2%E0%B8%99-%E0%B8%88%E0%B8%B4%E0%B8%95%E0%B8%A7%E0%B8%B4%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%84%E0%B8%A1%E0%B8%94%E0%B8%B2%E0%B8%9A.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/03/Swords-of-Legends-Soul-and-Blade-2026-%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B5%E0%B9%88%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%95%E0%B8%B3%E0%B8%99%E0%B8%B2%E0%B8%99-%E0%B8%88%E0%B8%B4%E0%B8%95%E0%B8%A7%E0%B8%B4%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%84%E0%B8%A1%E0%B8%94%E0%B8%B2%E0%B8%9A.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/03/Swords-of-Legends-Soul-and-Blade-2026-%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B5%E0%B9%88%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%95%E0%B8%B3%E0%B8%99%E0%B8%B2%E0%B8%99-%E0%B8%88%E0%B8%B4%E0%B8%95%E0%B8%A7%E0%B8%B4%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%84%E0%B8%A1%E0%B8%94%E0%B8%B2%E0%B8%9A.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=bb286f2e631cb2637622a366&b=7456",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Swords of Legends Soul and Blade (2026) กระบี่แห่งตำนาน จิตวิญญาณและคมดาบ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2334,14 +4081,14 @@ window.movies = [
     ],
     "id": "24hdx-38505",
     "postId": "38505",
-    "originalUrl": "https://www.24-hdx.com/swords-of-legends-soul-and-blade/"
+    "originalUrl": "https://www.24-hda.com/swords-of-legends-soul-and-blade/"
   },
   {
     "titleTh": "Detective Dee Buddha’s Wrath (2026) ตี๋เหรินเจี๋ย เจดีย์สู่สวรรค์",
     "titleEn": "Detective Dee Buddha’s Wrath (2026) ตี๋เหรินเจี๋ย เจดีย์สู่สวรรค์",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/03/Detective-Dee-Buddhas-Wrath-2026-%E0%B8%95%E0%B8%B5%E0%B9%8B%E0%B9%80%E0%B8%AB%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B9%80%E0%B8%88%E0%B8%B5%E0%B9%8B%E0%B8%A2-%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%AA%E0%B8%A7%E0%B8%A3%E0%B8%A3%E0%B8%84%E0%B9%8C.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/03/Detective-Dee-Buddhas-Wrath-2026-%E0%B8%95%E0%B8%B5%E0%B9%8B%E0%B9%80%E0%B8%AB%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B9%80%E0%B8%88%E0%B8%B5%E0%B9%8B%E0%B8%A2-%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%AA%E0%B8%A7%E0%B8%A3%E0%B8%A3%E0%B8%84%E0%B9%8C.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/03/Detective-Dee-Buddhas-Wrath-2026-%E0%B8%95%E0%B8%B5%E0%B9%8B%E0%B9%80%E0%B8%AB%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B9%80%E0%B8%88%E0%B8%B5%E0%B9%8B%E0%B8%A2-%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%AA%E0%B8%A7%E0%B8%A3%E0%B8%A3%E0%B8%84%E0%B9%8C.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/03/Detective-Dee-Buddhas-Wrath-2026-%E0%B8%95%E0%B8%B5%E0%B9%8B%E0%B9%80%E0%B8%AB%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B9%80%E0%B8%88%E0%B8%B5%E0%B9%8B%E0%B8%A2-%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%AA%E0%B8%A7%E0%B8%A3%E0%B8%A3%E0%B8%84%E0%B9%8C.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=1f12409698de98cdb56cd828&b=5040",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Detective Dee Buddha&#8217;s Wrath (2026) ตี๋เหรินเจี๋ย เจดีย์สู่สวรรค์ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2363,14 +4110,14 @@ window.movies = [
     ],
     "id": "24hdx-38320",
     "postId": "38320",
-    "originalUrl": "https://www.24-hdx.com/detective-dee-buddhas-wrath/"
+    "originalUrl": "https://www.24-hda.com/detective-dee-buddhas-wrath/"
   },
   {
     "titleTh": "Hunt (2022) ล่าคนปลอมคน",
     "titleEn": "Hunt (2022) ล่าคนปลอมคน",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Hunt-2022-%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%99%E0%B8%9B%E0%B8%A5%E0%B8%AD%E0%B8%A1%E0%B8%84%E0%B8%99.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Hunt-2022-%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%99%E0%B8%9B%E0%B8%A5%E0%B8%AD%E0%B8%A1%E0%B8%84%E0%B8%99.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Hunt-2022-%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%99%E0%B8%9B%E0%B8%A5%E0%B8%AD%E0%B8%A1%E0%B8%84%E0%B8%99.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Hunt-2022-%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%99%E0%B8%9B%E0%B8%A5%E0%B8%AD%E0%B8%A1%E0%B8%84%E0%B8%99.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=bc3e7b929ce4e8b10138bb86&b=2157",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Hunt (2022) ล่าคนปลอมคน (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2392,14 +4139,14 @@ window.movies = [
     ],
     "id": "24hdx-40004",
     "postId": "40004",
-    "originalUrl": "https://www.24-hdx.com/hunt-2/"
+    "originalUrl": "https://www.24-hda.com/hunt-2/"
   },
   {
     "titleTh": "Human Vapor (2026) มนุษย์ก๊าซ",
     "titleEn": "Human Vapor (2026) มนุษย์ก๊าซ",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Human-Vapor-2026-%E0%B8%A1%E0%B8%99%E0%B8%B8%E0%B8%A9%E0%B8%A2%E0%B9%8C%E0%B8%81%E0%B9%8A%E0%B8%B2%E0%B8%8B.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Human-Vapor-2026-%E0%B8%A1%E0%B8%99%E0%B8%B8%E0%B8%A9%E0%B8%A2%E0%B9%8C%E0%B8%81%E0%B9%8A%E0%B8%B2%E0%B8%8B.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Human-Vapor-2026-%E0%B8%A1%E0%B8%99%E0%B8%B8%E0%B8%A9%E0%B8%A2%E0%B9%8C%E0%B8%81%E0%B9%8A%E0%B8%B2%E0%B8%8B.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Human-Vapor-2026-%E0%B8%A1%E0%B8%99%E0%B8%B8%E0%B8%A9%E0%B8%A2%E0%B9%8C%E0%B8%81%E0%B9%8A%E0%B8%B2%E0%B8%8B.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=a85554457eb1f824d9e12bc3&b=2491",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Human Vapor (2026) มนุษย์ก๊าซ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2428,7 +4175,7 @@ window.movies = [
     ],
     "id": "24hdx-39971",
     "postId": "39971",
-    "originalUrl": "https://www.24-hdx.com/human-vapor/",
+    "originalUrl": "https://www.24-hda.com/human-vapor/",
     "episodeUrls": {
       "1": "https://main.24playerhd.com/index_th.php?id=a85554457eb1f824d9e12bc3&b=2491",
       "2": "https://main.24playerhd.com/index_th.php?id=01900fe4f60988db5161c8ed&b=2682",
@@ -2444,8 +4191,8 @@ window.movies = [
     "titleTh": "Strange Tales of Huangquan Village (2026) เรื่องพิศวงแห่งหมู่บ้านหวงเฉวียน",
     "titleEn": "Strange Tales of Huangquan Village (2026) เรื่องพิศวงแห่งหมู่บ้านหวงเฉวียน",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Strange-Tales-of-Huangquan-Village-2026-%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%9E%E0%B8%B4%E0%B8%A8%E0%B8%A7%E0%B8%87%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%88%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AB%E0%B8%A7%E0%B8%87%E0%B9%80%E0%B8%89%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%99.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Strange-Tales-of-Huangquan-Village-2026-%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%9E%E0%B8%B4%E0%B8%A8%E0%B8%A7%E0%B8%87%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%88%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AB%E0%B8%A7%E0%B8%87%E0%B9%80%E0%B8%89%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%99.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Strange-Tales-of-Huangquan-Village-2026-%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%9E%E0%B8%B4%E0%B8%A8%E0%B8%A7%E0%B8%87%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%88%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AB%E0%B8%A7%E0%B8%87%E0%B9%80%E0%B8%89%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%99.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Strange-Tales-of-Huangquan-Village-2026-%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%9E%E0%B8%B4%E0%B8%A8%E0%B8%A7%E0%B8%87%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%88%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AB%E0%B8%A7%E0%B8%87%E0%B9%80%E0%B8%89%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%99.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=23af89bc393a3ce766bfb0eb&b=3013",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Strange Tales of Huangquan Village (2026) เรื่องพิศวงแห่งหมู่บ้านหวงเฉวียน (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2467,14 +4214,14 @@ window.movies = [
     ],
     "id": "24hdx-39968",
     "postId": "39968",
-    "originalUrl": "https://www.24-hdx.com/strange-tales-of-huangquan-village/"
+    "originalUrl": "https://www.24-hda.com/strange-tales-of-huangquan-village/"
   },
   {
     "titleTh": "The Super Mario Galaxy Movie (2026) เดอะ ซูเปอร์ มาริโอ กาแล็คซี่ มูฟวี่",
     "titleEn": "The Super Mario Galaxy Movie (2026) เดอะ ซูเปอร์ มาริโอ กาแล็คซี่ มูฟวี่",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/04/The-Super-Mario-Galaxy-Movie-2026-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%8B%E0%B8%B9%E0%B9%80%E0%B8%9B%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%A1%E0%B8%B2%E0%B8%A3%E0%B8%B4%E0%B9%82%E0%B8%AD-%E0%B8%81%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B9%87%E0%B8%84%E0%B8%8B%E0%B8%B5%E0%B9%88-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/04/The-Super-Mario-Galaxy-Movie-2026-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%8B%E0%B8%B9%E0%B9%80%E0%B8%9B%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%A1%E0%B8%B2%E0%B8%A3%E0%B8%B4%E0%B9%82%E0%B8%AD-%E0%B8%81%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B9%87%E0%B8%84%E0%B8%8B%E0%B8%B5%E0%B9%88-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/04/The-Super-Mario-Galaxy-Movie-2026-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%8B%E0%B8%B9%E0%B9%80%E0%B8%9B%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%A1%E0%B8%B2%E0%B8%A3%E0%B8%B4%E0%B9%82%E0%B8%AD-%E0%B8%81%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B9%87%E0%B8%84%E0%B8%8B%E0%B8%B5%E0%B9%88-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/04/The-Super-Mario-Galaxy-Movie-2026-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%8B%E0%B8%B9%E0%B9%80%E0%B8%9B%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%A1%E0%B8%B2%E0%B8%A3%E0%B8%B4%E0%B9%82%E0%B8%AD-%E0%B8%81%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B9%87%E0%B8%84%E0%B8%8B%E0%B8%B5%E0%B9%88-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=bd7c22bcf69d2f5e102e454c&b=6928",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Super Mario Galaxy Movie (2026) เดอะ ซูเปอร์ มาริโอ กาแล็คซี่ มูฟวี่ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2496,14 +4243,14 @@ window.movies = [
     ],
     "id": "24hdx-38827",
     "postId": "38827",
-    "originalUrl": "https://www.24-hdx.com/the-super-mario-galaxy-movie/"
+    "originalUrl": "https://www.24-hda.com/the-super-mario-galaxy-movie/"
   },
   {
     "titleTh": "Lee Cronins The Mummy (2026) ลี โครนิน เดอะ มัมมี่",
     "titleEn": "Lee Cronins The Mummy (2026) ลี โครนิน เดอะ มัมมี่",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/04/Lee-Cronins-The-Mummy-2026-%E0%B8%A5%E0%B8%B5-%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%99%E0%B8%B4%E0%B8%99-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%A1%E0%B8%B1%E0%B8%A1%E0%B8%A1%E0%B8%B5%E0%B9%88.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/04/Lee-Cronins-The-Mummy-2026-%E0%B8%A5%E0%B8%B5-%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%99%E0%B8%B4%E0%B8%99-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%A1%E0%B8%B1%E0%B8%A1%E0%B8%A1%E0%B8%B5%E0%B9%88.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/04/Lee-Cronins-The-Mummy-2026-%E0%B8%A5%E0%B8%B5-%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%99%E0%B8%B4%E0%B8%99-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%A1%E0%B8%B1%E0%B8%A1%E0%B8%A1%E0%B8%B5%E0%B9%88.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/04/Lee-Cronins-The-Mummy-2026-%E0%B8%A5%E0%B8%B5-%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%99%E0%B8%B4%E0%B8%99-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%A1%E0%B8%B1%E0%B8%A1%E0%B8%A1%E0%B8%B5%E0%B9%88.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=1ee36893866a9aa16377a1e1&b=3475",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Lee Cronins The Mummy (2026) ลี โครนิน เดอะ มัมมี่ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2525,14 +4272,14 @@ window.movies = [
     ],
     "id": "24hdx-38807",
     "postId": "38807",
-    "originalUrl": "https://www.24-hdx.com/lee-cronins-the-mummy/"
+    "originalUrl": "https://www.24-hda.com/lee-cronins-the-mummy/"
   },
   {
     "titleTh": "Pee Nak 5 (2026) พี่นาค 5",
     "titleEn": "Pee Nak 5 (2026) พี่นาค 5",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Pee-Nak-5-2026-%E0%B8%9E%E0%B8%B5%E0%B9%88%E0%B8%99%E0%B8%B2%E0%B8%84-5.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Pee-Nak-5-2026-%E0%B8%9E%E0%B8%B5%E0%B9%88%E0%B8%99%E0%B8%B2%E0%B8%84-5.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Pee-Nak-5-2026-%E0%B8%9E%E0%B8%B5%E0%B9%88%E0%B8%99%E0%B8%B2%E0%B8%84-5.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Pee-Nak-5-2026-%E0%B8%9E%E0%B8%B5%E0%B9%88%E0%B8%99%E0%B8%B2%E0%B8%84-5.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=556f7b765f7cd139422492ae&b=8867",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Pee Nak 5 (2026) พี่นาค 5 (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2554,14 +4301,14 @@ window.movies = [
     ],
     "id": "24hdx-39939",
     "postId": "39939",
-    "originalUrl": "https://www.24-hdx.com/pee-nak-5/"
+    "originalUrl": "https://www.24-hda.com/pee-nak-5/"
   },
   {
     "titleTh": "Enola Holmes 3 (2026) เอโนลา โฮล์มส์ 3",
     "titleEn": "Enola Holmes 3 (2026) เอโนลา โฮล์มส์ 3",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/07/Enola-Holmes-3-2026-%E0%B9%80%E0%B8%AD%E0%B9%82%E0%B8%99%E0%B8%A5%E0%B8%B2-%E0%B9%82%E0%B8%AE%E0%B8%A5%E0%B9%8C%E0%B8%A1%E0%B8%AA%E0%B9%8C-3.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/07/Enola-Holmes-3-2026-%E0%B9%80%E0%B8%AD%E0%B9%82%E0%B8%99%E0%B8%A5%E0%B8%B2-%E0%B9%82%E0%B8%AE%E0%B8%A5%E0%B9%8C%E0%B8%A1%E0%B8%AA%E0%B9%8C-3.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/07/Enola-Holmes-3-2026-%E0%B9%80%E0%B8%AD%E0%B9%82%E0%B8%99%E0%B8%A5%E0%B8%B2-%E0%B9%82%E0%B8%AE%E0%B8%A5%E0%B9%8C%E0%B8%A1%E0%B8%AA%E0%B9%8C-3.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/07/Enola-Holmes-3-2026-%E0%B9%80%E0%B8%AD%E0%B9%82%E0%B8%99%E0%B8%A5%E0%B8%B2-%E0%B9%82%E0%B8%AE%E0%B8%A5%E0%B9%8C%E0%B8%A1%E0%B8%AA%E0%B9%8C-3.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=b1b85eff30f6844e01710caa&b=3046",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Enola Holmes 3 (2026) เอโนลา โฮล์มส์ 3 (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2583,14 +4330,14 @@ window.movies = [
     ],
     "id": "24hdx-39928",
     "postId": "39928",
-    "originalUrl": "https://www.24-hdx.com/enola-holmes-3/"
+    "originalUrl": "https://www.24-hda.com/enola-holmes-3/"
   },
   {
     "titleTh": "Scary Movie 6 (2026) ยำหนังจี้ 6",
     "titleEn": "Scary Movie 6 (2026) ยำหนังจี้ 6",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Scary-Movie-6-2026-%E0%B8%A2%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%B1%E0%B8%87%E0%B8%88%E0%B8%B5%E0%B9%89-6.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Scary-Movie-6-2026-%E0%B8%A2%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%B1%E0%B8%87%E0%B8%88%E0%B8%B5%E0%B9%89-6.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/Scary-Movie-6-2026-%E0%B8%A2%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%B1%E0%B8%87%E0%B8%88%E0%B8%B5%E0%B9%89-6.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/Scary-Movie-6-2026-%E0%B8%A2%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%B1%E0%B8%87%E0%B8%88%E0%B8%B5%E0%B9%89-6.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=6d34ee60331693529dce34f4&b=5011",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Scary Movie 6 (2026) ยำหนังจี้ 6 (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2612,14 +4359,14 @@ window.movies = [
     ],
     "id": "24hdx-39506",
     "postId": "39506",
-    "originalUrl": "https://www.24-hdx.com/scary-movie-6/"
+    "originalUrl": "https://www.24-hda.com/scary-movie-6/"
   },
   {
     "titleTh": "Little Brother (2026) บทเรียนจากรุ่นน้อง",
     "titleEn": "Little Brother (2026) บทเรียนจากรุ่นน้อง",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Little-Brother-2026-%E0%B8%9A%E0%B8%97%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%87.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Little-Brother-2026-%E0%B8%9A%E0%B8%97%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%87.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/Little-Brother-2026-%E0%B8%9A%E0%B8%97%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%87.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/Little-Brother-2026-%E0%B8%9A%E0%B8%97%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%87.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=9af227f8dc1a0f8ebdcddab9&b=7235",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Little Brother (2026) บทเรียนจากรุ่นน้อง (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2641,19 +4388,20 @@ window.movies = [
     ],
     "id": "24hdx-39867",
     "postId": "39867",
-    "originalUrl": "https://www.24-hdx.com/little-brother/"
+    "originalUrl": "https://www.24-hda.com/little-brother/"
   },
   {
     "titleTh": "Avatar The Last Airbender Season 2 (2026) เณรน้อยเจ้าอภินิหาร ซีซั่น 2",
     "titleEn": "Avatar The Last Airbender Season 2 (2026) เณรน้อยเจ้าอภินิหาร ซีซั่น 2",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/new-poster-for-avatar-the-last-airbender-season-2-v0-nexeqr1fpdsg1.webp",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/new-poster-for-avatar-the-last-airbender-season-2-v0-nexeqr1fpdsg1.webp",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/new-poster-for-avatar-the-last-airbender-season-2-v0-nexeqr1fpdsg1.webp",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/new-poster-for-avatar-the-last-airbender-season-2-v0-nexeqr1fpdsg1.webp",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=e6283aa67cf9802ed9c1a2b6&b=7888",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Avatar The Last Airbender Season 2 (2026) เณรน้อยเจ้าอภินิหาร ซีซั่น 2 (2026) พากย์ไทย เต็มเรื่อง HD",
     "rating": 7.2,
     "genres": [
+      "ยอดนิยม 2026",
       "24-HDX",
       "พากย์ไทย",
       "หนังปี 2026"
@@ -2676,7 +4424,7 @@ window.movies = [
     ],
     "id": "24hdx-39873",
     "postId": "39873",
-    "originalUrl": "https://www.24-hdx.com/avatar-the-last-airbender-season-2/",
+    "originalUrl": "https://www.24-hda.com/avatar-the-last-airbender-season-2/",
     "episodeUrls": {
       "1": "https://main.24playerhd.com/index_th.php?id=e6283aa67cf9802ed9c1a2b6&b=7888",
       "2": "https://main.24playerhd.com/index_th.php?id=730564856268626051267659&b=5592",
@@ -2691,8 +4439,8 @@ window.movies = [
     "titleTh": "Hungry (2026) มันเด้งขึ้นมาแดก",
     "titleEn": "Hungry (2026) มันเด้งขึ้นมาแดก",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Hungry-2026-%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%94%E0%B9%89%E0%B8%87%E0%B8%82%E0%B8%B6%E0%B9%89%E0%B8%99%E0%B8%A1%E0%B8%B2%E0%B9%81%E0%B8%94%E0%B8%81.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Hungry-2026-%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%94%E0%B9%89%E0%B8%87%E0%B8%82%E0%B8%B6%E0%B9%89%E0%B8%99%E0%B8%A1%E0%B8%B2%E0%B9%81%E0%B8%94%E0%B8%81.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/Hungry-2026-%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%94%E0%B9%89%E0%B8%87%E0%B8%82%E0%B8%B6%E0%B9%89%E0%B8%99%E0%B8%A1%E0%B8%B2%E0%B9%81%E0%B8%94%E0%B8%81.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/Hungry-2026-%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%94%E0%B9%89%E0%B8%87%E0%B8%82%E0%B8%B6%E0%B9%89%E0%B8%99%E0%B8%A1%E0%B8%B2%E0%B9%81%E0%B8%94%E0%B8%81.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=622448539828e15ada31ceb8&b=1465",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Hungry (2026) มันเด้งขึ้นมาแดก (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2714,14 +4462,14 @@ window.movies = [
     ],
     "id": "24hdx-39789",
     "postId": "39789",
-    "originalUrl": "https://www.24-hdx.com/hungry/"
+    "originalUrl": "https://www.24-hda.com/hungry/"
   },
   {
     "titleTh": "Ready or Not 2 Here I Come (2026) เกมพร้อมตาย ภาค 2",
     "titleEn": "Ready or Not 2 Here I Come (2026) เกมพร้อมตาย ภาค 2",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/03/Ready-or-Not-2-Here-I-Come-2026-%E0%B9%80%E0%B8%81%E0%B8%A1%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%95%E0%B8%B2%E0%B8%A2-%E0%B8%A0%E0%B8%B2%E0%B8%84-2.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/03/Ready-or-Not-2-Here-I-Come-2026-%E0%B9%80%E0%B8%81%E0%B8%A1%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%95%E0%B8%B2%E0%B8%A2-%E0%B8%A0%E0%B8%B2%E0%B8%84-2.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/03/Ready-or-Not-2-Here-I-Come-2026-%E0%B9%80%E0%B8%81%E0%B8%A1%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%95%E0%B8%B2%E0%B8%A2-%E0%B8%A0%E0%B8%B2%E0%B8%84-2.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/03/Ready-or-Not-2-Here-I-Come-2026-%E0%B9%80%E0%B8%81%E0%B8%A1%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%95%E0%B8%B2%E0%B8%A2-%E0%B8%A0%E0%B8%B2%E0%B8%84-2.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=1b510d32e27311a5e2f8f83c&b=9179",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Ready or Not 2 Here I Come (2026) เกมพร้อมตาย ภาค 2 (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2743,14 +4491,14 @@ window.movies = [
     ],
     "id": "24hdx-38512",
     "postId": "38512",
-    "originalUrl": "https://www.24-hdx.com/ready-or-not-2-here-i-come/"
+    "originalUrl": "https://www.24-hda.com/ready-or-not-2-here-i-come/"
   },
   {
     "titleTh": "The Sheep Detectives (2026) แก๊งแกะรอย ยอดนักสืบ",
     "titleEn": "The Sheep Detectives (2026) แก๊งแกะรอย ยอดนักสืบ",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/The-Sheep-Detectives-2026-%E0%B9%81%E0%B8%81%E0%B9%8A%E0%B8%87%E0%B9%81%E0%B8%81%E0%B8%B0%E0%B8%A3%E0%B8%AD%E0%B8%A2-%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B7%E0%B8%9A.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/The-Sheep-Detectives-2026-%E0%B9%81%E0%B8%81%E0%B9%8A%E0%B8%87%E0%B9%81%E0%B8%81%E0%B8%B0%E0%B8%A3%E0%B8%AD%E0%B8%A2-%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B7%E0%B8%9A.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/The-Sheep-Detectives-2026-%E0%B9%81%E0%B8%81%E0%B9%8A%E0%B8%87%E0%B9%81%E0%B8%81%E0%B8%B0%E0%B8%A3%E0%B8%AD%E0%B8%A2-%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B7%E0%B8%9A.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/The-Sheep-Detectives-2026-%E0%B9%81%E0%B8%81%E0%B9%8A%E0%B8%87%E0%B9%81%E0%B8%81%E0%B8%B0%E0%B8%A3%E0%B8%AD%E0%B8%A2-%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B7%E0%B8%9A.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=7b8eb364dde094e200192b74&b=5753",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Sheep Detectives (2026) แก๊งแกะรอย ยอดนักสืบ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2772,14 +4520,14 @@ window.movies = [
     ],
     "id": "24hdx-39264",
     "postId": "39264",
-    "originalUrl": "https://www.24-hdx.com/the-sheep-detectives/"
+    "originalUrl": "https://www.24-hda.com/the-sheep-detectives/"
   },
   {
     "titleTh": "King Kaew (2026) กิ่งแก้ว",
     "titleEn": "King Kaew (2026) กิ่งแก้ว",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/King-Kaew-2026-%E0%B8%81%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B9%81%E0%B8%81%E0%B9%89%E0%B8%A7.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/King-Kaew-2026-%E0%B8%81%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B9%81%E0%B8%81%E0%B9%89%E0%B8%A7.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/King-Kaew-2026-%E0%B8%81%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B9%81%E0%B8%81%E0%B9%89%E0%B8%A7.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/King-Kaew-2026-%E0%B8%81%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B9%81%E0%B8%81%E0%B9%89%E0%B8%A7.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=cd71dbd16d46093e0a87f295&b=6462",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี King Kaew (2026) กิ่งแก้ว (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2801,14 +4549,14 @@ window.movies = [
     ],
     "id": "24hdx-39795",
     "postId": "39795",
-    "originalUrl": "https://www.24-hdx.com/king-kaew-2026-%e0%b8%81%e0%b8%b4%e0%b9%88%e0%b8%87%e0%b9%81%e0%b8%81%e0%b9%89%e0%b8%a7/"
+    "originalUrl": "https://www.24-hda.com/king-kaew-2026-%e0%b8%81%e0%b8%b4%e0%b9%88%e0%b8%87%e0%b9%81%e0%b8%81%e0%b9%89%e0%b8%a7/"
   },
   {
     "titleTh": "In the Hand of Dante (2026) ดันเต้ลิขิต",
     "titleEn": "In the Hand of Dante (2026) ดันเต้ลิขิต",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/In-the-Hand-of-Dante-2026-%E0%B8%94%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%95%E0%B9%89%E0%B8%A5%E0%B8%B4%E0%B8%82%E0%B8%B4%E0%B8%95.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/In-the-Hand-of-Dante-2026-%E0%B8%94%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%95%E0%B9%89%E0%B8%A5%E0%B8%B4%E0%B8%82%E0%B8%B4%E0%B8%95.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/In-the-Hand-of-Dante-2026-%E0%B8%94%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%95%E0%B9%89%E0%B8%A5%E0%B8%B4%E0%B8%82%E0%B8%B4%E0%B8%95.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/In-the-Hand-of-Dante-2026-%E0%B8%94%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%95%E0%B9%89%E0%B8%A5%E0%B8%B4%E0%B8%82%E0%B8%B4%E0%B8%95.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=03a34a6e4ba0554c6e526052&b=6610",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี In the Hand of Dante (2026) ดันเต้ลิขิต (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2830,14 +4578,14 @@ window.movies = [
     ],
     "id": "24hdx-39792",
     "postId": "39792",
-    "originalUrl": "https://www.24-hdx.com/in-the-hand-of-dante/"
+    "originalUrl": "https://www.24-hda.com/in-the-hand-of-dante/"
   },
   {
     "titleTh": "They Will Kill You (2026) พวกมันจะฆ่าแก",
     "titleEn": "They Will Kill You (2026) พวกมันจะฆ่าแก",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/04/They-Will-Kill-You-2026-%E0%B8%9E%E0%B8%A7%E0%B8%81%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B8%88%E0%B8%B0%E0%B8%86%E0%B9%88%E0%B8%B2%E0%B9%81%E0%B8%81.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/04/They-Will-Kill-You-2026-%E0%B8%9E%E0%B8%A7%E0%B8%81%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B8%88%E0%B8%B0%E0%B8%86%E0%B9%88%E0%B8%B2%E0%B9%81%E0%B8%81.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/04/They-Will-Kill-You-2026-%E0%B8%9E%E0%B8%A7%E0%B8%81%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B8%88%E0%B8%B0%E0%B8%86%E0%B9%88%E0%B8%B2%E0%B9%81%E0%B8%81.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/04/They-Will-Kill-You-2026-%E0%B8%9E%E0%B8%A7%E0%B8%81%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B8%88%E0%B8%B0%E0%B8%86%E0%B9%88%E0%B8%B2%E0%B9%81%E0%B8%81.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=ecaba7b45c175afac794afcd&b=7757",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี They Will Kill You (2026) พวกมันจะฆ่าแก (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2859,14 +4607,14 @@ window.movies = [
     ],
     "id": "24hdx-38598",
     "postId": "38598",
-    "originalUrl": "https://www.24-hdx.com/they-will-kill-you/"
+    "originalUrl": "https://www.24-hda.com/they-will-kill-you/"
   },
   {
     "titleTh": "Normal (2026) เมืองธรรมดานรกเรียกพ่อ",
     "titleEn": "Normal (2026) เมืองธรรมดานรกเรียกพ่อ",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/04/Normal-2025-%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%94%E0%B8%B2%E0%B8%99%E0%B8%A3%E0%B8%81%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%81%E0%B8%9E%E0%B9%88%E0%B8%AD.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/04/Normal-2025-%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%94%E0%B8%B2%E0%B8%99%E0%B8%A3%E0%B8%81%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%81%E0%B8%9E%E0%B9%88%E0%B8%AD.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/04/Normal-2025-%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%94%E0%B8%B2%E0%B8%99%E0%B8%A3%E0%B8%81%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%81%E0%B8%9E%E0%B9%88%E0%B8%AD.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/04/Normal-2025-%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%94%E0%B8%B2%E0%B8%99%E0%B8%A3%E0%B8%81%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%81%E0%B8%9E%E0%B9%88%E0%B8%AD.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=0c3e2891c9732884569bc65a&b=3886",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Normal (2026) เมืองธรรมดานรกเรียกพ่อ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2888,14 +4636,14 @@ window.movies = [
     ],
     "id": "24hdx-38825",
     "postId": "38825",
-    "originalUrl": "https://www.24-hdx.com/normal/"
+    "originalUrl": "https://www.24-hda.com/normal/"
   },
   {
     "titleTh": "Husbands in Action (2026) คุณสามีส์ช่วยด้วย!",
     "titleEn": "Husbands in Action (2026) คุณสามีส์ช่วยด้วย!",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Husbands-in-Action-2026-%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%B5%E0%B8%AA%E0%B9%8C%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Husbands-in-Action-2026-%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%B5%E0%B8%AA%E0%B9%8C%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/Husbands-in-Action-2026-%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%B5%E0%B8%AA%E0%B9%8C%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/Husbands-in-Action-2026-%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%B5%E0%B8%AA%E0%B9%8C%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=df753f343ca97854eea3caf8&b=8579",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Husbands in Action (2026) คุณสามีส์ช่วยด้วย! (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2917,14 +4665,14 @@ window.movies = [
     ],
     "id": "24hdx-39713",
     "postId": "39713",
-    "originalUrl": "https://www.24-hdx.com/husbands-in-action/"
+    "originalUrl": "https://www.24-hda.com/husbands-in-action/"
   },
   {
     "titleTh": "Voicemails for Isabelle (2026) ข้อความเสียงแด่อิชาเบล",
     "titleEn": "Voicemails for Isabelle (2026) ข้อความเสียงแด่อิชาเบล",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Voicemails-for-Isabelle-2026-%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%81%E0%B8%94%E0%B9%88%E0%B8%AD%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B9%80%E0%B8%9A%E0%B8%A5.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Voicemails-for-Isabelle-2026-%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%81%E0%B8%94%E0%B9%88%E0%B8%AD%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B9%80%E0%B8%9A%E0%B8%A5.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/Voicemails-for-Isabelle-2026-%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%81%E0%B8%94%E0%B9%88%E0%B8%AD%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B9%80%E0%B8%9A%E0%B8%A5.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/Voicemails-for-Isabelle-2026-%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%81%E0%B8%94%E0%B9%88%E0%B8%AD%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B9%80%E0%B8%9A%E0%B8%A5.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=bfd01402936471883f3ccdef&b=2231",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Voicemails for Isabelle (2026) ข้อความเสียงแด่อิชาเบล (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2946,14 +4694,14 @@ window.movies = [
     ],
     "id": "24hdx-39707",
     "postId": "39707",
-    "originalUrl": "https://www.24-hdx.com/voicemails-for-isabelle/"
+    "originalUrl": "https://www.24-hda.com/voicemails-for-isabelle/"
   },
   {
     "titleTh": "Your Fault London (2026) คำขอโทษ ลอนดอน 2",
     "titleEn": "Your Fault London (2026) คำขอโทษ ลอนดอน 2",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Your-Fault-London-2026-%E0%B8%84%E0%B8%B3%E0%B8%82%E0%B8%AD%E0%B9%82%E0%B8%97%E0%B8%A9-%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%94%E0%B8%AD%E0%B8%99-2.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Your-Fault-London-2026-%E0%B8%84%E0%B8%B3%E0%B8%82%E0%B8%AD%E0%B9%82%E0%B8%97%E0%B8%A9-%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%94%E0%B8%AD%E0%B8%99-2.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/Your-Fault-London-2026-%E0%B8%84%E0%B8%B3%E0%B8%82%E0%B8%AD%E0%B9%82%E0%B8%97%E0%B8%A9-%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%94%E0%B8%AD%E0%B8%99-2.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/Your-Fault-London-2026-%E0%B8%84%E0%B8%B3%E0%B8%82%E0%B8%AD%E0%B9%82%E0%B8%97%E0%B8%A9-%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%94%E0%B8%AD%E0%B8%99-2.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=97d688da6da5ca3b10eafd60&b=6553",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Your Fault London (2026) คำขอโทษ ลอนดอน 2 (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -2975,19 +4723,20 @@ window.movies = [
     ],
     "id": "24hdx-39674",
     "postId": "39674",
-    "originalUrl": "https://www.24-hdx.com/your-fault-london/"
+    "originalUrl": "https://www.24-hda.com/your-fault-london/"
   },
   {
     "titleTh": "Over Your Dead Body (2026) ร่วมหอ…ลงโลง",
     "titleEn": "Over Your Dead Body (2026) ร่วมหอ…ลงโลง",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Over-Your-Dead-Body-2026.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Over-Your-Dead-Body-2026.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/Over-Your-Dead-Body-2026.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/Over-Your-Dead-Body-2026.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=ed613064e920defa9a4a1118&b=7127",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Over Your Dead Body (2026) ร่วมหอ…ลงโลง (2026) พากย์ไทย เต็มเรื่อง HD",
     "rating": 7.1,
     "genres": [
+      "ยอดนิยม 2026",
       "24-HDX",
       "พากย์ไทย",
       "หนังปี 2026"
@@ -3004,14 +4753,14 @@ window.movies = [
     ],
     "id": "24hdx-39326",
     "postId": "39326",
-    "originalUrl": "https://www.24-hdx.com/over-your-dead-body/"
+    "originalUrl": "https://www.24-hda.com/over-your-dead-body/"
   },
   {
     "titleTh": "The Marked Woman (2026) หญิงนิรนามกับมลทินปริศนา",
     "titleEn": "The Marked Woman (2026) หญิงนิรนามกับมลทินปริศนา",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/The-Marked-Woman-2026-%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B8%99%E0%B8%B4%E0%B8%A3%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%A1%E0%B8%A5%E0%B8%97%E0%B8%B4%E0%B8%99%E0%B8%9B%E0%B8%A3%E0%B8%B4%E0%B8%A8%E0%B8%99%E0%B8%B2.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/The-Marked-Woman-2026-%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B8%99%E0%B8%B4%E0%B8%A3%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%A1%E0%B8%A5%E0%B8%97%E0%B8%B4%E0%B8%99%E0%B8%9B%E0%B8%A3%E0%B8%B4%E0%B8%A8%E0%B8%99%E0%B8%B2.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/The-Marked-Woman-2026-%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B8%99%E0%B8%B4%E0%B8%A3%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%A1%E0%B8%A5%E0%B8%97%E0%B8%B4%E0%B8%99%E0%B8%9B%E0%B8%A3%E0%B8%B4%E0%B8%A8%E0%B8%99%E0%B8%B2.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/The-Marked-Woman-2026-%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B8%99%E0%B8%B4%E0%B8%A3%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%A1%E0%B8%A5%E0%B8%97%E0%B8%B4%E0%B8%99%E0%B8%9B%E0%B8%A3%E0%B8%B4%E0%B8%A8%E0%B8%99%E0%B8%B2.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=923cbdf02e05dd9f0d9d1c49&b=8981",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Marked Woman (2026) หญิงนิรนามกับมลทินปริศนา (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3033,14 +4782,14 @@ window.movies = [
     ],
     "id": "24hdx-39501",
     "postId": "39501",
-    "originalUrl": "https://www.24-hdx.com/the-marked-woman/"
+    "originalUrl": "https://www.24-hda.com/the-marked-woman/"
   },
   {
     "titleTh": "Office Romance (2026) ปิ๊งรักในออฟฟิศ",
     "titleEn": "Office Romance (2026) ปิ๊งรักในออฟฟิศ",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Office-Romance-2026-%E0%B8%9B%E0%B8%B4%E0%B9%8A%E0%B8%87%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B9%83%E0%B8%99%E0%B8%AD%E0%B8%AD%E0%B8%9F%E0%B8%9F%E0%B8%B4%E0%B8%A8.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Office-Romance-2026-%E0%B8%9B%E0%B8%B4%E0%B9%8A%E0%B8%87%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B9%83%E0%B8%99%E0%B8%AD%E0%B8%AD%E0%B8%9F%E0%B8%9F%E0%B8%B4%E0%B8%A8.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/Office-Romance-2026-%E0%B8%9B%E0%B8%B4%E0%B9%8A%E0%B8%87%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B9%83%E0%B8%99%E0%B8%AD%E0%B8%AD%E0%B8%9F%E0%B8%9F%E0%B8%B4%E0%B8%A8.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/Office-Romance-2026-%E0%B8%9B%E0%B8%B4%E0%B9%8A%E0%B8%87%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B9%83%E0%B8%99%E0%B8%AD%E0%B8%AD%E0%B8%9F%E0%B8%9F%E0%B8%B4%E0%B8%A8.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=ba2883b319051e1f847046f1&b=7782",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Office Romance (2026) ปิ๊งรักในออฟฟิศ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3062,14 +4811,14 @@ window.movies = [
     ],
     "id": "24hdx-39493",
     "postId": "39493",
-    "originalUrl": "https://www.24-hdx.com/office-romance/"
+    "originalUrl": "https://www.24-hda.com/office-romance/"
   },
   {
     "titleTh": "Maternal Instinct (2026) สัญชาตญาณของแม่ ปริศนาคดีเทย์เลอร์ พาร์เกอร์",
     "titleEn": "Maternal Instinct (2026) สัญชาตญาณของแม่ ปริศนาคดีเทย์เลอร์ พาร์เกอร์",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Maternal-Instinct-2026-%E0%B8%AA%E0%B8%B1%E0%B8%8D%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%8D%E0%B8%B2%E0%B8%93%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%A1%E0%B9%88-%E0%B8%9B%E0%B8%A3%E0%B8%B4%E0%B8%A8%E0%B8%99%E0%B8%B2%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B9%80%E0%B8%97%E0%B8%A2%E0%B9%8C%E0%B9%80%E0%B8%A5%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%9E%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%81%E0%B8%AD%E0%B8%A3%E0%B9%8C.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Maternal-Instinct-2026-%E0%B8%AA%E0%B8%B1%E0%B8%8D%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%8D%E0%B8%B2%E0%B8%93%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%A1%E0%B9%88-%E0%B8%9B%E0%B8%A3%E0%B8%B4%E0%B8%A8%E0%B8%99%E0%B8%B2%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B9%80%E0%B8%97%E0%B8%A2%E0%B9%8C%E0%B9%80%E0%B8%A5%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%9E%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%81%E0%B8%AD%E0%B8%A3%E0%B9%8C.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/Maternal-Instinct-2026-%E0%B8%AA%E0%B8%B1%E0%B8%8D%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%8D%E0%B8%B2%E0%B8%93%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%A1%E0%B9%88-%E0%B8%9B%E0%B8%A3%E0%B8%B4%E0%B8%A8%E0%B8%99%E0%B8%B2%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B9%80%E0%B8%97%E0%B8%A2%E0%B9%8C%E0%B9%80%E0%B8%A5%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%9E%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%81%E0%B8%AD%E0%B8%A3%E0%B9%8C.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/Maternal-Instinct-2026-%E0%B8%AA%E0%B8%B1%E0%B8%8D%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%8D%E0%B8%B2%E0%B8%93%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%A1%E0%B9%88-%E0%B8%9B%E0%B8%A3%E0%B8%B4%E0%B8%A8%E0%B8%99%E0%B8%B2%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B9%80%E0%B8%97%E0%B8%A2%E0%B9%8C%E0%B9%80%E0%B8%A5%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%9E%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%81%E0%B8%AD%E0%B8%A3%E0%B9%8C.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=ff4d918b1c74a6b802cbe47d&b=9713",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Maternal Instinct (2026) สัญชาตญาณของแม่ ปริศนาคดีเทย์เลอร์ พาร์เกอร์ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3091,19 +4840,20 @@ window.movies = [
     ],
     "id": "24hdx-39579",
     "postId": "39579",
-    "originalUrl": "https://www.24-hdx.com/maternal-instinct/"
+    "originalUrl": "https://www.24-hda.com/maternal-instinct/"
   },
   {
     "titleTh": "The Evil Lawyer (2026) ทนายปีศาจ",
     "titleEn": "The Evil Lawyer (2026) ทนายปีศาจ",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/The-Evil-Lawyer-2026-%E0%B8%97%E0%B8%99%E0%B8%B2%E0%B8%A2%E0%B8%9B%E0%B8%B5%E0%B8%A8%E0%B8%B2%E0%B8%88.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/The-Evil-Lawyer-2026-%E0%B8%97%E0%B8%99%E0%B8%B2%E0%B8%A2%E0%B8%9B%E0%B8%B5%E0%B8%A8%E0%B8%B2%E0%B8%88.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/The-Evil-Lawyer-2026-%E0%B8%97%E0%B8%99%E0%B8%B2%E0%B8%A2%E0%B8%9B%E0%B8%B5%E0%B8%A8%E0%B8%B2%E0%B8%88.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/The-Evil-Lawyer-2026-%E0%B8%97%E0%B8%99%E0%B8%B2%E0%B8%A2%E0%B8%9B%E0%B8%B5%E0%B8%A8%E0%B8%B2%E0%B8%88.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=c9a94f78c568f0c9c137d5b1&b=4816",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Evil Lawyer (2026) ทนายปีศาจ (2026) พากย์ไทย เต็มเรื่อง HD",
     "rating": 5.2,
     "genres": [
+      "ยอดนิยม 2026",
       "24-HDX",
       "พากย์ไทย",
       "หนังปี 2026"
@@ -3127,7 +4877,7 @@ window.movies = [
     ],
     "id": "24hdx-39576",
     "postId": "39576",
-    "originalUrl": "https://www.24-hdx.com/the-evil-lawyer/",
+    "originalUrl": "https://www.24-hda.com/the-evil-lawyer/",
     "episodeUrls": {
       "1": "https://main.24playerhd.com/index_th.php?id=c9a94f78c568f0c9c137d5b1&b=4816",
       "2": "https://main.24playerhd.com/index_th.php?id=1ed914adea1c0b0efdf2d7e3&b=2865",
@@ -3143,8 +4893,8 @@ window.movies = [
     "titleTh": "Viral Hit (2026) นักสู้ทูปเบอร์",
     "titleEn": "Viral Hit (2026) นักสู้ทูปเบอร์",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Viral-Hit-2026-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%97%E0%B8%B9%E0%B8%9B%E0%B9%80%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8C.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Viral-Hit-2026-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%97%E0%B8%B9%E0%B8%9B%E0%B9%80%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8C.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/Viral-Hit-2026-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%97%E0%B8%B9%E0%B8%9B%E0%B9%80%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8C.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/Viral-Hit-2026-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%97%E0%B8%B9%E0%B8%9B%E0%B9%80%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8C.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=e0fe66bcf57e597917eb7db2&b=6703",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Viral Hit (2026) นักสู้ทูปเบอร์ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3171,7 +4921,7 @@ window.movies = [
     ],
     "id": "24hdx-39572",
     "postId": "39572",
-    "originalUrl": "https://www.24-hdx.com/viral-hit/",
+    "originalUrl": "https://www.24-hda.com/viral-hit/",
     "episodeUrls": {
       "1": "https://main.24playerhd.com/index_th.php?id=e0fe66bcf57e597917eb7db2&b=6703",
       "2": "https://main.24playerhd.com/index_th.php?id=a874e5ef65071329a036d277&b=6079",
@@ -3185,8 +4935,8 @@ window.movies = [
     "titleTh": "The Punisher One Last Kill (2026) เดอะ พันนิชเชอร์ ฆ่าทิ้งทวน",
     "titleEn": "The Punisher One Last Kill (2026) เดอะ พันนิชเชอร์ ฆ่าทิ้งทวน",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/The-Punisher-One-Last-Kill-2026-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%99%E0%B8%B4%E0%B8%8A%E0%B9%80%E0%B8%8A%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%86%E0%B9%88%E0%B8%B2%E0%B8%97%E0%B8%B4%E0%B9%89%E0%B8%87%E0%B8%97%E0%B8%A7%E0%B8%99.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/The-Punisher-One-Last-Kill-2026-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%99%E0%B8%B4%E0%B8%8A%E0%B9%80%E0%B8%8A%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%86%E0%B9%88%E0%B8%B2%E0%B8%97%E0%B8%B4%E0%B9%89%E0%B8%87%E0%B8%97%E0%B8%A7%E0%B8%99.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/The-Punisher-One-Last-Kill-2026-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%99%E0%B8%B4%E0%B8%8A%E0%B9%80%E0%B8%8A%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%86%E0%B9%88%E0%B8%B2%E0%B8%97%E0%B8%B4%E0%B9%89%E0%B8%87%E0%B8%97%E0%B8%A7%E0%B8%99.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/The-Punisher-One-Last-Kill-2026-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%99%E0%B8%B4%E0%B8%8A%E0%B9%80%E0%B8%8A%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%86%E0%B9%88%E0%B8%B2%E0%B8%97%E0%B8%B4%E0%B9%89%E0%B8%87%E0%B8%97%E0%B8%A7%E0%B8%99.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=51f7c79de3cb6ad3e871d1b7&b=1338",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Punisher One Last Kill (2026) เดอะ พันนิชเชอร์ ฆ่าทิ้งทวน (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3208,14 +4958,14 @@ window.movies = [
     ],
     "id": "24hdx-39091",
     "postId": "39091",
-    "originalUrl": "https://www.24-hdx.com/the-punisher-one-last-kill/"
+    "originalUrl": "https://www.24-hda.com/the-punisher-one-last-kill/"
   },
   {
     "titleTh": "Teach You a Lesson (2026) อย่างนี้ต้องโดนสั่งสอน",
     "titleEn": "Teach You a Lesson (2026) อย่างนี้ต้องโดนสั่งสอน",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Teach-You-a-Lesson-2026-%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%82%E0%B8%94%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B9%88%E0%B8%87%E0%B8%AA%E0%B8%AD%E0%B8%99.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Teach-You-a-Lesson-2026-%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%82%E0%B8%94%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B9%88%E0%B8%87%E0%B8%AA%E0%B8%AD%E0%B8%99.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/Teach-You-a-Lesson-2026-%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%82%E0%B8%94%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B9%88%E0%B8%87%E0%B8%AA%E0%B8%AD%E0%B8%99.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/Teach-You-a-Lesson-2026-%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%82%E0%B8%94%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B9%88%E0%B8%87%E0%B8%AA%E0%B8%AD%E0%B8%99.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=ba6684fcbbf4033e00afc09e&b=8260",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Teach You a Lesson (2026) อย่างนี้ต้องโดนสั่งสอน (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3246,7 +4996,7 @@ window.movies = [
     ],
     "id": "24hdx-39512",
     "postId": "39512",
-    "originalUrl": "https://www.24-hdx.com/teach-you-a-lesson/",
+    "originalUrl": "https://www.24-hda.com/teach-you-a-lesson/",
     "episodeUrls": {
       "1": "https://main.24playerhd.com/index_th.php?id=ba6684fcbbf4033e00afc09e&b=8260",
       "2": "https://main.24playerhd.com/index_th.php?id=cc0421b717608d9a6546aae7&b=6080",
@@ -3264,8 +5014,8 @@ window.movies = [
     "titleTh": "Milky Subway The Galactic Limited Express to the Theater (2026) มิลกี้ ซับเวย์ รถไฟด่วนทะลุกาแล็กซี เดอะ มูฟวี่",
     "titleEn": "Milky Subway The Galactic Limited Express to the Theater (2026) มิลกี้ ซับเวย์ รถไฟด่วนทะลุกาแล็กซี เดอะ มูฟวี่",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Milky-Subway-The-Galactic-Limited-Express-to-the-Theater-2026-%E0%B8%A1%E0%B8%B4%E0%B8%A5%E0%B8%81%E0%B8%B5%E0%B9%89-%E0%B8%8B%E0%B8%B1%E0%B8%9A%E0%B9%80%E0%B8%A7%E0%B8%A2%E0%B9%8C-%E0%B8%A3%E0%B8%96%E0%B9%84%E0%B8%9F%E0%B8%94%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%97%E0%B8%B0%E0%B8%A5%E0%B8%B8%E0%B8%81%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B9%87%E0%B8%81%E0%B8%8B%E0%B8%B5-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Milky-Subway-The-Galactic-Limited-Express-to-the-Theater-2026-%E0%B8%A1%E0%B8%B4%E0%B8%A5%E0%B8%81%E0%B8%B5%E0%B9%89-%E0%B8%8B%E0%B8%B1%E0%B8%9A%E0%B9%80%E0%B8%A7%E0%B8%A2%E0%B9%8C-%E0%B8%A3%E0%B8%96%E0%B9%84%E0%B8%9F%E0%B8%94%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%97%E0%B8%B0%E0%B8%A5%E0%B8%B8%E0%B8%81%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B9%87%E0%B8%81%E0%B8%8B%E0%B8%B5-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/Milky-Subway-The-Galactic-Limited-Express-to-the-Theater-2026-%E0%B8%A1%E0%B8%B4%E0%B8%A5%E0%B8%81%E0%B8%B5%E0%B9%89-%E0%B8%8B%E0%B8%B1%E0%B8%9A%E0%B9%80%E0%B8%A7%E0%B8%A2%E0%B9%8C-%E0%B8%A3%E0%B8%96%E0%B9%84%E0%B8%9F%E0%B8%94%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%97%E0%B8%B0%E0%B8%A5%E0%B8%B8%E0%B8%81%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B9%87%E0%B8%81%E0%B8%8B%E0%B8%B5-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/Milky-Subway-The-Galactic-Limited-Express-to-the-Theater-2026-%E0%B8%A1%E0%B8%B4%E0%B8%A5%E0%B8%81%E0%B8%B5%E0%B9%89-%E0%B8%8B%E0%B8%B1%E0%B8%9A%E0%B9%80%E0%B8%A7%E0%B8%A2%E0%B9%8C-%E0%B8%A3%E0%B8%96%E0%B9%84%E0%B8%9F%E0%B8%94%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%97%E0%B8%B0%E0%B8%A5%E0%B8%B8%E0%B8%81%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B9%87%E0%B8%81%E0%B8%8B%E0%B8%B5-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=f02dae7c6a90e354b30edb84&b=9330",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Milky Subway The Galactic Limited Express to the Theater (2026) มิลกี้ ซับเวย์ รถไฟด่วนทะลุกาแล็กซี เดอะ มูฟวี่ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3287,14 +5037,14 @@ window.movies = [
     ],
     "id": "24hdx-39516",
     "postId": "39516",
-    "originalUrl": "https://www.24-hdx.com/milky-subway-the-galactic-limited-express-to-the-theater/"
+    "originalUrl": "https://www.24-hda.com/milky-subway-the-galactic-limited-express-to-the-theater/"
   },
   {
     "titleTh": "Hokum (2026) ห้องกุมวิญญาณ",
     "titleEn": "Hokum (2026) ห้องกุมวิญญาณ",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Hokum-2026-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%B8%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Hokum-2026-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%B8%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/Hokum-2026-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%B8%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/Hokum-2026-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%B8%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=b0769fd2ad600c33e1a410e6&b=9212",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Hokum (2026) ห้องกุมวิญญาณ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3316,14 +5066,14 @@ window.movies = [
     ],
     "id": "24hdx-39467",
     "postId": "39467",
-    "originalUrl": "https://www.24-hdx.com/hokum/"
+    "originalUrl": "https://www.24-hda.com/hokum/"
   },
   {
     "titleTh": "Maa Behen (2026) เรื่องวุ่นๆ คุณแม่กับลูกสาว",
     "titleEn": "Maa Behen (2026) เรื่องวุ่นๆ คุณแม่กับลูกสาว",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Maa-Behen-2026-%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A7%E0%B8%B8%E0%B9%88%E0%B8%99%E0%B9%86-%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A7.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Maa-Behen-2026-%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A7%E0%B8%B8%E0%B9%88%E0%B8%99%E0%B9%86-%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A7.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/Maa-Behen-2026-%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A7%E0%B8%B8%E0%B9%88%E0%B8%99%E0%B9%86-%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A7.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/Maa-Behen-2026-%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A7%E0%B8%B8%E0%B9%88%E0%B8%99%E0%B9%86-%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A7.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=6fedd5c44f15e756f28449c8&b=1352",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Maa Behen (2026) เรื่องวุ่นๆ คุณแม่กับลูกสาว (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3345,14 +5095,14 @@ window.movies = [
     ],
     "id": "24hdx-39481",
     "postId": "39481",
-    "originalUrl": "https://www.24-hdx.com/maa-behen/"
+    "originalUrl": "https://www.24-hda.com/maa-behen/"
   },
   {
     "titleTh": "Poldi (2026) พรินซ์โพลดี้แห่งโคโลญ เส้นทางชีวิตนักเตะ",
     "titleEn": "Poldi (2026) พรินซ์โพลดี้แห่งโคโลญ เส้นทางชีวิตนักเตะ",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/Poldi-2026-%E0%B8%9E%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B8%8B%E0%B9%8C%E0%B9%82%E0%B8%9E%E0%B8%A5%E0%B8%94%E0%B8%B5%E0%B9%89%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B9%82%E0%B8%84%E0%B9%82%E0%B8%A5%E0%B8%8D-%E0%B9%80%E0%B8%AA%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B9%80%E0%B8%95%E0%B8%B0.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/Poldi-2026-%E0%B8%9E%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B8%8B%E0%B9%8C%E0%B9%82%E0%B8%9E%E0%B8%A5%E0%B8%94%E0%B8%B5%E0%B9%89%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B9%82%E0%B8%84%E0%B9%82%E0%B8%A5%E0%B8%8D-%E0%B9%80%E0%B8%AA%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B9%80%E0%B8%95%E0%B8%B0.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/Poldi-2026-%E0%B8%9E%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B8%8B%E0%B9%8C%E0%B9%82%E0%B8%9E%E0%B8%A5%E0%B8%94%E0%B8%B5%E0%B9%89%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B9%82%E0%B8%84%E0%B9%82%E0%B8%A5%E0%B8%8D-%E0%B9%80%E0%B8%AA%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B9%80%E0%B8%95%E0%B8%B0.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/Poldi-2026-%E0%B8%9E%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B8%8B%E0%B9%8C%E0%B9%82%E0%B8%9E%E0%B8%A5%E0%B8%94%E0%B8%B5%E0%B9%89%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B9%82%E0%B8%84%E0%B9%82%E0%B8%A5%E0%B8%8D-%E0%B9%80%E0%B8%AA%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B9%80%E0%B8%95%E0%B8%B0.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=9a6648944130defe85cdcb84&b=4895",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Poldi (2026) พรินซ์โพลดี้แห่งโคโลญ เส้นทางชีวิตนักเตะ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3374,14 +5124,14 @@ window.movies = [
     ],
     "id": "24hdx-39480",
     "postId": "39480",
-    "originalUrl": "https://www.24-hdx.com/poldi/"
+    "originalUrl": "https://www.24-hda.com/poldi/"
   },
   {
     "titleTh": "The Murder of Rachel Nickell (2026) คดีฆาตกรรมเรเชล นิกเคลล์",
     "titleEn": "The Murder of Rachel Nickell (2026) คดีฆาตกรรมเรเชล นิกเคลล์",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/06/The-Murder-of-Rachel-Nickell-2026-%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B8%86%E0%B8%B2%E0%B8%95%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A3%E0%B9%80%E0%B8%8A%E0%B8%A5-%E0%B8%99%E0%B8%B4%E0%B8%81%E0%B9%80%E0%B8%84%E0%B8%A5%E0%B8%A5%E0%B9%8C.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/06/The-Murder-of-Rachel-Nickell-2026-%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B8%86%E0%B8%B2%E0%B8%95%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A3%E0%B9%80%E0%B8%8A%E0%B8%A5-%E0%B8%99%E0%B8%B4%E0%B8%81%E0%B9%80%E0%B8%84%E0%B8%A5%E0%B8%A5%E0%B9%8C.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/The-Murder-of-Rachel-Nickell-2026-%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B8%86%E0%B8%B2%E0%B8%95%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A3%E0%B9%80%E0%B8%8A%E0%B8%A5-%E0%B8%99%E0%B8%B4%E0%B8%81%E0%B9%80%E0%B8%84%E0%B8%A5%E0%B8%A5%E0%B9%8C.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/The-Murder-of-Rachel-Nickell-2026-%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B8%86%E0%B8%B2%E0%B8%95%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A3%E0%B9%80%E0%B8%8A%E0%B8%A5-%E0%B8%99%E0%B8%B4%E0%B8%81%E0%B9%80%E0%B8%84%E0%B8%A5%E0%B8%A5%E0%B9%8C.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=2226386d36e05786a35cfc37&b=3375",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Murder of Rachel Nickell (2026) คดีฆาตกรรมเรเชล นิกเคลล์ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3403,14 +5153,14 @@ window.movies = [
     ],
     "id": "24hdx-39479",
     "postId": "39479",
-    "originalUrl": "https://www.24-hdx.com/the-murder-of-rachel-nickell/"
+    "originalUrl": "https://www.24-hda.com/the-murder-of-rachel-nickell/"
   },
   {
     "titleTh": "Hoppers (2026) เด้งโดด เปลี่ยนโหมดเป็นบีเวอร์",
     "titleEn": "Hoppers (2026) เด้งโดด เปลี่ยนโหมดเป็นบีเวอร์",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Hoppers-2026-%E0%B9%80%E0%B8%94%E0%B9%89%E0%B8%87%E0%B9%82%E0%B8%94%E0%B8%94-%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B9%82%E0%B8%AB%E0%B8%A1%E0%B8%94%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%9A%E0%B8%B5%E0%B9%80%E0%B8%A7%E0%B8%AD%E0%B8%A3%E0%B9%8C.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Hoppers-2026-%E0%B9%80%E0%B8%94%E0%B9%89%E0%B8%87%E0%B9%82%E0%B8%94%E0%B8%94-%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B9%82%E0%B8%AB%E0%B8%A1%E0%B8%94%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%9A%E0%B8%B5%E0%B9%80%E0%B8%A7%E0%B8%AD%E0%B8%A3%E0%B9%8C.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/Hoppers-2026-%E0%B9%80%E0%B8%94%E0%B9%89%E0%B8%87%E0%B9%82%E0%B8%94%E0%B8%94-%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B9%82%E0%B8%AB%E0%B8%A1%E0%B8%94%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%9A%E0%B8%B5%E0%B9%80%E0%B8%A7%E0%B8%AD%E0%B8%A3%E0%B9%8C.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/Hoppers-2026-%E0%B9%80%E0%B8%94%E0%B9%89%E0%B8%87%E0%B9%82%E0%B8%94%E0%B8%94-%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B9%82%E0%B8%AB%E0%B8%A1%E0%B8%94%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%9A%E0%B8%B5%E0%B9%80%E0%B8%A7%E0%B8%AD%E0%B8%A3%E0%B9%8C.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=44c314ae5007160869d21587&b=2089",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Hoppers (2026) เด้งโดด เปลี่ยนโหมดเป็นบีเวอร์ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3432,14 +5182,14 @@ window.movies = [
     ],
     "id": "24hdx-38869",
     "postId": "38869",
-    "originalUrl": "https://www.24-hdx.com/hoppers/"
+    "originalUrl": "https://www.24-hda.com/hoppers/"
   },
   {
     "titleTh": "In the Grey (2026) เหลี่ยมจารชน คนเหนือเทา",
     "titleEn": "In the Grey (2026) เหลี่ยมจารชน คนเหนือเทา",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/In-the-Grey-2026-%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A1%E0%B8%88%E0%B8%B2%E0%B8%A3%E0%B8%8A%E0%B8%99-%E0%B8%84%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD%E0%B9%80%E0%B8%97%E0%B8%B2.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/In-the-Grey-2026-%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A1%E0%B8%88%E0%B8%B2%E0%B8%A3%E0%B8%8A%E0%B8%99-%E0%B8%84%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD%E0%B9%80%E0%B8%97%E0%B8%B2.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/In-the-Grey-2026-%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A1%E0%B8%88%E0%B8%B2%E0%B8%A3%E0%B8%8A%E0%B8%99-%E0%B8%84%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD%E0%B9%80%E0%B8%97%E0%B8%B2.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/In-the-Grey-2026-%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A1%E0%B8%88%E0%B8%B2%E0%B8%A3%E0%B8%8A%E0%B8%99-%E0%B8%84%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD%E0%B9%80%E0%B8%97%E0%B8%B2.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=0dfe85e71ad45df2c34786eb&b=7379",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี In the Grey (2026) เหลี่ยมจารชน คนเหนือเทา (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3461,14 +5211,14 @@ window.movies = [
     ],
     "id": "24hdx-39188",
     "postId": "39188",
-    "originalUrl": "https://www.24-hdx.com/in-the-grey/"
+    "originalUrl": "https://www.24-hda.com/in-the-grey/"
   },
   {
     "titleTh": "Gone (2026) โกน",
     "titleEn": "Gone (2026) โกน",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Gone-2026-%E0%B9%82%E0%B8%81%E0%B8%99.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Gone-2026-%E0%B9%82%E0%B8%81%E0%B8%99.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/Gone-2026-%E0%B9%82%E0%B8%81%E0%B8%99.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/Gone-2026-%E0%B9%82%E0%B8%81%E0%B8%99.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=4a1e1644340b02eb6d4ca114&b=2760",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Gone (2026) โกน (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3490,14 +5240,14 @@ window.movies = [
     ],
     "id": "24hdx-39424",
     "postId": "39424",
-    "originalUrl": "https://www.24-hdx.com/gone/"
+    "originalUrl": "https://www.24-hda.com/gone/"
   },
   {
     "titleTh": "The Convenience Store (2026) มันแอบอยู่ในร้าน",
     "titleEn": "The Convenience Store (2026) มันแอบอยู่ในร้าน",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/The-Convenience-Store-2026-%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B9%81%E0%B8%AD%E0%B8%9A%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B9%83%E0%B8%99%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/The-Convenience-Store-2026-%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B9%81%E0%B8%AD%E0%B8%9A%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B9%83%E0%B8%99%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/The-Convenience-Store-2026-%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B9%81%E0%B8%AD%E0%B8%9A%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B9%83%E0%B8%99%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/The-Convenience-Store-2026-%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B9%81%E0%B8%AD%E0%B8%9A%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B9%83%E0%B8%99%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=6f56caebe0ce7109d9be93e7&b=8915",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Convenience Store (2026) มันแอบอยู่ในร้าน (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3519,14 +5269,14 @@ window.movies = [
     ],
     "id": "24hdx-39421",
     "postId": "39421",
-    "originalUrl": "https://www.24-hdx.com/the-convenience-store/"
+    "originalUrl": "https://www.24-hda.com/the-convenience-store/"
   },
   {
     "titleTh": "Spider-Noir (2026) สไปเดอร์ นัวร์ ไอ้แมงมุมพันธุ์นรก",
     "titleEn": "Spider-Noir (2026) สไปเดอร์ นัวร์ ไอ้แมงมุมพันธุ์นรก",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Spider-Noir-2026-%E0%B8%AA%E0%B9%84%E0%B8%9B%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%99%E0%B8%B1%E0%B8%A7%E0%B8%A3%E0%B9%8C-%E0%B9%84%E0%B8%AD%E0%B9%89%E0%B9%81%E0%B8%A1%E0%B8%87%E0%B8%A1%E0%B8%B8%E0%B8%A1%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%B8%E0%B9%8C%E0%B8%99%E0%B8%A3%E0%B8%81.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Spider-Noir-2026-%E0%B8%AA%E0%B9%84%E0%B8%9B%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%99%E0%B8%B1%E0%B8%A7%E0%B8%A3%E0%B9%8C-%E0%B9%84%E0%B8%AD%E0%B9%89%E0%B9%81%E0%B8%A1%E0%B8%87%E0%B8%A1%E0%B8%B8%E0%B8%A1%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%B8%E0%B9%8C%E0%B8%99%E0%B8%A3%E0%B8%81.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/Spider-Noir-2026-%E0%B8%AA%E0%B9%84%E0%B8%9B%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%99%E0%B8%B1%E0%B8%A7%E0%B8%A3%E0%B9%8C-%E0%B9%84%E0%B8%AD%E0%B9%89%E0%B9%81%E0%B8%A1%E0%B8%87%E0%B8%A1%E0%B8%B8%E0%B8%A1%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%B8%E0%B9%8C%E0%B8%99%E0%B8%A3%E0%B8%81.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/Spider-Noir-2026-%E0%B8%AA%E0%B9%84%E0%B8%9B%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%99%E0%B8%B1%E0%B8%A7%E0%B8%A3%E0%B9%8C-%E0%B9%84%E0%B8%AD%E0%B9%89%E0%B9%81%E0%B8%A1%E0%B8%87%E0%B8%A1%E0%B8%B8%E0%B8%A1%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%B8%E0%B9%8C%E0%B8%99%E0%B8%A3%E0%B8%81.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=d0a969a322717d91af9ba870&b=8276",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Spider-Noir (2026) สไปเดอร์ นัวร์ ไอ้แมงมุมพันธุ์นรก (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3555,7 +5305,7 @@ window.movies = [
     ],
     "id": "24hdx-39404",
     "postId": "39404",
-    "originalUrl": "https://www.24-hdx.com/spider-noir/",
+    "originalUrl": "https://www.24-hda.com/spider-noir/",
     "episodeUrls": {
       "1": "https://main.24playerhd.com/index_th.php?id=d0a969a322717d91af9ba870&b=8276",
       "2": "https://main.24playerhd.com/index_th.php?id=ba5e28287d9fe3ee339dc056&b=6502",
@@ -3571,8 +5321,8 @@ window.movies = [
     "titleTh": "Thief Female Hero (2026)",
     "titleEn": "Thief Female Hero (2026)",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Thief-Female-Hero-2026.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Thief-Female-Hero-2026.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/Thief-Female-Hero-2026.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/Thief-Female-Hero-2026.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=7c046c22462f39e257cafb6f&b=3806",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Thief Female Hero (2026) (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3594,14 +5344,14 @@ window.movies = [
     ],
     "id": "24hdx-39303",
     "postId": "39303",
-    "originalUrl": "https://www.24-hdx.com/thief-female-hero/"
+    "originalUrl": "https://www.24-hda.com/thief-female-hero/"
   },
   {
     "titleTh": "Swat Angels In Mission (2026) ภารกิจนางฟ้าหน่วยสวาท",
     "titleEn": "Swat Angels In Mission (2026) ภารกิจนางฟ้าหน่วยสวาท",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Swat-Angels-In-Mission-2026-%E0%B8%A0%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%99%E0%B8%B2%E0%B8%87%E0%B8%9F%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%AA%E0%B8%A7%E0%B8%B2%E0%B8%97.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Swat-Angels-In-Mission-2026-%E0%B8%A0%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%99%E0%B8%B2%E0%B8%87%E0%B8%9F%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%AA%E0%B8%A7%E0%B8%B2%E0%B8%97.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/Swat-Angels-In-Mission-2026-%E0%B8%A0%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%99%E0%B8%B2%E0%B8%87%E0%B8%9F%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%AA%E0%B8%A7%E0%B8%B2%E0%B8%97.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/Swat-Angels-In-Mission-2026-%E0%B8%A0%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%99%E0%B8%B2%E0%B8%87%E0%B8%9F%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%AA%E0%B8%A7%E0%B8%B2%E0%B8%97.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=1ce323d1cf333bc3d0a29bef&b=2100",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Swat Angels In Mission (2026) ภารกิจนางฟ้าหน่วยสวาท (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3623,14 +5373,14 @@ window.movies = [
     ],
     "id": "24hdx-39290",
     "postId": "39290",
-    "originalUrl": "https://www.24-hdx.com/swat-angels-in-mission/"
+    "originalUrl": "https://www.24-hda.com/swat-angels-in-mission/"
   },
   {
     "titleTh": "Crazy Beggar SuQiEr (2026) ยาจกซู หมัดเมาสะท้านฟ้า",
     "titleEn": "Crazy Beggar SuQiEr (2026) ยาจกซู หมัดเมาสะท้านฟ้า",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Crazy-Beggar-SuQiEr-2026-%E0%B8%A2%E0%B8%B2%E0%B8%88%E0%B8%81%E0%B8%8B%E0%B8%B9-%E0%B8%AB%E0%B8%A1%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%A1%E0%B8%B2%E0%B8%AA%E0%B8%B0%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%9F%E0%B9%89%E0%B8%B2.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Crazy-Beggar-SuQiEr-2026-%E0%B8%A2%E0%B8%B2%E0%B8%88%E0%B8%81%E0%B8%8B%E0%B8%B9-%E0%B8%AB%E0%B8%A1%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%A1%E0%B8%B2%E0%B8%AA%E0%B8%B0%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%9F%E0%B9%89%E0%B8%B2.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/Crazy-Beggar-SuQiEr-2026-%E0%B8%A2%E0%B8%B2%E0%B8%88%E0%B8%81%E0%B8%8B%E0%B8%B9-%E0%B8%AB%E0%B8%A1%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%A1%E0%B8%B2%E0%B8%AA%E0%B8%B0%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%9F%E0%B9%89%E0%B8%B2.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/Crazy-Beggar-SuQiEr-2026-%E0%B8%A2%E0%B8%B2%E0%B8%88%E0%B8%81%E0%B8%8B%E0%B8%B9-%E0%B8%AB%E0%B8%A1%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%A1%E0%B8%B2%E0%B8%AA%E0%B8%B0%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%9F%E0%B9%89%E0%B8%B2.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=e037cf7238980a97174f63b0&b=8345",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Crazy Beggar SuQiEr (2026) ยาจกซู หมัดเมาสะท้านฟ้า (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3652,14 +5402,14 @@ window.movies = [
     ],
     "id": "24hdx-39286",
     "postId": "39286",
-    "originalUrl": "https://www.24-hdx.com/crazy-beggar-suqier/"
+    "originalUrl": "https://www.24-hda.com/crazy-beggar-suqier/"
   },
   {
     "titleTh": "The Bride! (2026) เจ้าสาว!",
     "titleEn": "The Bride! (2026) เจ้าสาว!",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/04/The-Bride-2026-%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%A7.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/04/The-Bride-2026-%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%A7.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/04/The-Bride-2026-%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%A7.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/04/The-Bride-2026-%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%A7.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=88c7ce61a58f147db06a38bf&b=8353",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Bride! (2026) เจ้าสาว! (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3681,14 +5431,14 @@ window.movies = [
     ],
     "id": "24hdx-38678",
     "postId": "38678",
-    "originalUrl": "https://www.24-hdx.com/the-bride/"
+    "originalUrl": "https://www.24-hda.com/the-bride/"
   },
   {
     "titleTh": "Ladies First (2026) ตื่นมาอีกที โลกนี้ผู้หญิงใหญ่",
     "titleEn": "Ladies First (2026) ตื่นมาอีกที โลกนี้ผู้หญิงใหญ่",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Ladies-First-2026-%E0%B8%95%E0%B8%B7%E0%B9%88%E0%B8%99%E0%B8%A1%E0%B8%B2%E0%B8%AD%E0%B8%B5%E0%B8%81%E0%B8%97%E0%B8%B5-%E0%B9%82%E0%B8%A5%E0%B8%81%E0%B8%99%E0%B8%B5%E0%B9%89%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Ladies-First-2026-%E0%B8%95%E0%B8%B7%E0%B9%88%E0%B8%99%E0%B8%A1%E0%B8%B2%E0%B8%AD%E0%B8%B5%E0%B8%81%E0%B8%97%E0%B8%B5-%E0%B9%82%E0%B8%A5%E0%B8%81%E0%B8%99%E0%B8%B5%E0%B9%89%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/Ladies-First-2026-%E0%B8%95%E0%B8%B7%E0%B9%88%E0%B8%99%E0%B8%A1%E0%B8%B2%E0%B8%AD%E0%B8%B5%E0%B8%81%E0%B8%97%E0%B8%B5-%E0%B9%82%E0%B8%A5%E0%B8%81%E0%B8%99%E0%B8%B5%E0%B9%89%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/Ladies-First-2026-%E0%B8%95%E0%B8%B7%E0%B9%88%E0%B8%99%E0%B8%A1%E0%B8%B2%E0%B8%AD%E0%B8%B5%E0%B8%81%E0%B8%97%E0%B8%B5-%E0%B9%82%E0%B8%A5%E0%B8%81%E0%B8%99%E0%B8%B5%E0%B9%89%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=2f4909cfa7a3bd4758168a73&b=6867",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Ladies First (2026) ตื่นมาอีกที โลกนี้ผู้หญิงใหญ่ (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3710,14 +5460,14 @@ window.movies = [
     ],
     "id": "24hdx-39274",
     "postId": "39274",
-    "originalUrl": "https://www.24-hdx.com/ladies-first/"
+    "originalUrl": "https://www.24-hda.com/ladies-first/"
   },
   {
     "titleTh": "Perfect Crown (2026)",
     "titleEn": "Perfect Crown (2026)",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Perfect-Crown-2026.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Perfect-Crown-2026.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/Perfect-Crown-2026.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/Perfect-Crown-2026.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=eba3f19d018ebf41cdd45305&b=5524",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Perfect Crown (2026) (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3750,7 +5500,7 @@ window.movies = [
     ],
     "id": "24hdx-39271",
     "postId": "39271",
-    "originalUrl": "https://www.24-hdx.com/perfect-crown/",
+    "originalUrl": "https://www.24-hda.com/perfect-crown/",
     "episodeUrls": {
       "1": "https://main.24playerhd.com/index_th.php?id=eba3f19d018ebf41cdd45305&b=5524",
       "2": "https://main.24playerhd.com/index_th.php?id=ee20196ebe9cdfd6692eada2&b=3340",
@@ -3770,8 +5520,8 @@ window.movies = [
     "titleTh": "The Boys Season 5 (2026) ก๊วนหนุ่มซ่าล่าซูเปอร์ฮีโร่ ซีซั่น 5",
     "titleEn": "The Boys Season 5 (2026) ก๊วนหนุ่มซ่าล่าซูเปอร์ฮีโร่ ซีซั่น 5",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/04/The-Boys-Season-4-2024-%E0%B8%81%E0%B9%8A%E0%B8%A7%E0%B8%99%E0%B8%AB%E0%B8%99%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%8B%E0%B9%88%E0%B8%B2%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%8B%E0%B8%B9%E0%B9%80%E0%B8%9B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AE%E0%B8%B5%E0%B9%82%E0%B8%A3%E0%B9%88.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/04/The-Boys-Season-4-2024-%E0%B8%81%E0%B9%8A%E0%B8%A7%E0%B8%99%E0%B8%AB%E0%B8%99%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%8B%E0%B9%88%E0%B8%B2%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%8B%E0%B8%B9%E0%B9%80%E0%B8%9B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AE%E0%B8%B5%E0%B9%82%E0%B8%A3%E0%B9%88.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/04/The-Boys-Season-4-2024-%E0%B8%81%E0%B9%8A%E0%B8%A7%E0%B8%99%E0%B8%AB%E0%B8%99%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%8B%E0%B9%88%E0%B8%B2%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%8B%E0%B8%B9%E0%B9%80%E0%B8%9B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AE%E0%B8%B5%E0%B9%82%E0%B8%A3%E0%B9%88.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/04/The-Boys-Season-4-2024-%E0%B8%81%E0%B9%8A%E0%B8%A7%E0%B8%99%E0%B8%AB%E0%B8%99%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%8B%E0%B9%88%E0%B8%B2%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%8B%E0%B8%B9%E0%B9%80%E0%B8%9B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AE%E0%B8%B5%E0%B9%82%E0%B8%A3%E0%B9%88.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=663723f2f8f5726d4a2eddfd&b=4795",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี The Boys Season 5 (2026) ก๊วนหนุ่มซ่าล่าซูเปอร์ฮีโร่ ซีซั่น 5 (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3800,7 +5550,7 @@ window.movies = [
     ],
     "id": "24hdx-38724",
     "postId": "38724",
-    "originalUrl": "https://www.24-hdx.com/the-boys-season-5/",
+    "originalUrl": "https://www.24-hda.com/the-boys-season-5/",
     "episodeUrls": {
       "1": "https://main.24playerhd.com/index_th.php?id=663723f2f8f5726d4a2eddfd&b=4795",
       "2": "https://main.24playerhd.com/index_th.php?id=49b61c77c9b38988ae796d21&b=5888",
@@ -3816,8 +5566,8 @@ window.movies = [
     "titleTh": "Wuthering Heights (2026) วัทเตอริ่ง ไฮต์ส",
     "titleEn": "Wuthering Heights (2026) วัทเตอริ่ง ไฮต์ส",
     "year": 2026,
-    "poster": "https://www.24-hdx.com/wp-content/uploads/2026/05/Wuthering-Heights-2026-%E0%B8%A7%E0%B8%B1%E0%B8%97%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B8%B4%E0%B9%88%E0%B8%87-%E0%B9%84%E0%B8%AE%E0%B8%95%E0%B9%8C%E0%B8%AA.png",
-    "backdrop": "https://www.24-hdx.com/wp-content/uploads/2026/05/Wuthering-Heights-2026-%E0%B8%A7%E0%B8%B1%E0%B8%97%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B8%B4%E0%B9%88%E0%B8%87-%E0%B9%84%E0%B8%AE%E0%B8%95%E0%B9%8C%E0%B8%AA.png",
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/Wuthering-Heights-2026-%E0%B8%A7%E0%B8%B1%E0%B8%97%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B8%B4%E0%B9%88%E0%B8%87-%E0%B9%84%E0%B8%AE%E0%B8%95%E0%B9%8C%E0%B8%AA.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/Wuthering-Heights-2026-%E0%B8%A7%E0%B8%B1%E0%B8%97%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B8%B4%E0%B9%88%E0%B8%87-%E0%B9%84%E0%B8%AE%E0%B8%95%E0%B9%8C%E0%B8%AA.png",
     "videoUrl": "https://main.24playerhd.com/index_th.php?id=865455fe1ba5148a53938918&b=1354",
     "sourceType": "embed",
     "description": "ดูหนังออนไลน์ ฟรี Wuthering Heights (2026) วัทเตอริ่ง ไฮต์ส (2026) พากย์ไทย เต็มเรื่อง HD",
@@ -3839,7 +5589,7 @@ window.movies = [
     ],
     "id": "24hdx-39225",
     "postId": "39225",
-    "originalUrl": "https://www.24-hdx.com/wuthering-heights/"
+    "originalUrl": "https://www.24-hda.com/wuthering-heights/"
   },
   {
     "titleTh": "Mousetrap กับดักจับลวง (2026) พากย์ไทย EP.1-10",
@@ -3906,7 +5656,7 @@ window.movies = [
       "พากย์ไทย",
       "GOSERIES4K"
     ],
-    "duration": "ซีรีส์ 7 ตอนจบ",
+    "duration": "ซีรีส์ 8 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "GOSERIES4K",
@@ -3917,7 +5667,8 @@ window.movies = [
       "ตอนที่ 4",
       "ตอนที่ 5",
       "ตอนที่ 6",
-      "ตอนที่ 7"
+      "ตอนที่ 7",
+      "ตอนที่ 8"
     ],
     "episodeUrls": {
       "1": "https://torbo007.com/embed/58cd723c5b2e210f66b62ec4e66e6fd2",
@@ -3926,7 +5677,8 @@ window.movies = [
       "4": "https://torbo007.com/embed/ba382a8f631d1d8abeece86b0b46fd53",
       "5": "https://torbo007.com/embed/916ebfbbbd192f47c64399b1ebb2526c",
       "6": "https://torbo007.com/embed/7087e9e4e7635cf6da95d2832670365d",
-      "7": "https://torbo007.com/embed/c2a12cf780071689d0d665f384670926"
+      "7": "https://torbo007.com/embed/c2a12cf780071689d0d665f384670926",
+      "8": "https://torbo007.com/embed/a3b3a2a768a68cf513c363563768901f"
     },
     "languages": [
       "Thai (พากย์ไทย)"
@@ -4082,19 +5834,23 @@ window.movies = [
       "พากย์ไทย",
       "GOSERIES4K"
     ],
-    "duration": "ซีรีส์ 3 ตอนจบ",
+    "duration": "ซีรีส์ 5 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "GOSERIES4K",
     "episodes": [
       "ตอนที่ 1",
       "ตอนที่ 2",
-      "ตอนที่ 3"
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5"
     ],
     "episodeUrls": {
       "1": "https://torbo007.com/embed/43b816e5524d0dc0a064bc9b006e4647",
       "2": "https://torbo007.com/embed/805ecd49c3246e6d708878c11d9e0b57",
-      "3": "https://torbo007.com/embed/449311d017a9abaf2befff1001c602c8"
+      "3": "https://torbo007.com/embed/449311d017a9abaf2befff1001c602c8",
+      "4": "https://torbo007.com/embed/33f8afb3145ec977ef901cc3bf5a035e",
+      "5": "https://torbo007.com/embed/b7c8633acaeba4cca43ae5db7331d633"
     },
     "languages": [
       "Thai (พากย์ไทย)"
@@ -7712,6 +9468,922 @@ window.movies = [
     "id": "gs-117911",
     "postId": "117911",
     "originalUrl": "https://goseries4k.com/run-away-%e0%b8%ab%e0%b8%99%e0%b8%b5/"
+  },
+  {
+    "titleTh": "4 Tigers (2025) เสือ",
+    "titleEn": "4 Tigers (2025) เสือ",
+    "year": 2025,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2025/11/4-Tigers-2025-%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B8%AD.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2025/11/4-Tigers-2025-%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B8%AD.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=c65f7ad3af13b260f33fc9c6&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ 4 Tigers (2025) เสือ พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 6.6,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/NbYwrVt_bEM",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=c65f7ad3af13b260f33fc9c6&typew=W"
+    },
+    "id": "24hdx-37104",
+    "postId": "37104",
+    "originalUrl": "https://www.24-hda.com/4-tigers/"
+  },
+  {
+    "titleTh": "The Dragon Trace Palace of Exquisite Wild Flowers (2023) พระราชวังรอยมังกรแห่งดอกไม้ป่า",
+    "titleEn": "The Dragon Trace Palace of Exquisite Wild Flowers (2023) พระราชวังรอยมังกรแห่งดอกไม้ป่า",
+    "year": 2023,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2023/07/The-Dragon-Trace-Palace-of-Exquisite-Wild-Flowers-2023-%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A7%E0%B8%B1%E0%B8%87%E0%B8%A3%E0%B8%AD%E0%B8%A2%E0%B8%A1%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B8%A3%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%94%E0%B8%AD%E0%B8%81%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%9B%E0%B9%88%E0%B8%B2.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2023/07/The-Dragon-Trace-Palace-of-Exquisite-Wild-Flowers-2023-%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A7%E0%B8%B1%E0%B8%87%E0%B8%A3%E0%B8%AD%E0%B8%A2%E0%B8%A1%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B8%A3%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%94%E0%B8%AD%E0%B8%81%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%9B%E0%B9%88%E0%B8%B2.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=46cd031f97887dedc69b1e9a&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ The Dragon Trace Palace of Exquisite Wild Flowers (2023) พระราชวังรอยมังกรแห่งดอกไม้ป่า พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 6.3,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/bqlU9-uaB-U",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=46cd031f97887dedc69b1e9a&typew=W"
+    },
+    "id": "24hdx-25184",
+    "postId": "25184",
+    "originalUrl": "https://www.24-hda.com/the-dragon-trace-palace-of-exquisite-wild-flowers/"
+  },
+  {
+    "titleTh": "Death Whisperer 3 (2025) ธี่หยด 3",
+    "titleEn": "Death Whisperer 3 (2025) ธี่หยด 3",
+    "year": 2025,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2025/10/Death-Whisperer-3-2025-%E0%B8%98%E0%B8%B5%E0%B9%88%E0%B8%AB%E0%B8%A2%E0%B8%94-3.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2025/10/Death-Whisperer-3-2025-%E0%B8%98%E0%B8%B5%E0%B9%88%E0%B8%AB%E0%B8%A2%E0%B8%94-3.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=abd82a71ec04762c078c4432&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Death Whisperer 3 (2025) ธี่หยด 3 พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 2.8,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/DXV3x2Htbyg",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=abd82a71ec04762c078c4432&typew=W"
+    },
+    "id": "24hdx-36746",
+    "postId": "36746",
+    "originalUrl": "https://www.24-hda.com/death-whisperer-%e0%b8%a0%e0%b8%b2%e0%b8%84-3/"
+  },
+  {
+    "titleTh": "Avatar Fire and Ash (2025) อวตาร อัคนีและธุลีดิน",
+    "titleEn": "Avatar Fire and Ash (2025) อวตาร อัคนีและธุลีดิน",
+    "year": 2025,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2025/12/Avatar-Fire-and-Ash-2025-%E0%B8%AD%E0%B8%A7%E0%B8%95%E0%B8%B2%E0%B8%A3-%E0%B8%AD%E0%B8%B1%E0%B8%84%E0%B8%99%E0%B8%B5%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%98%E0%B8%B8%E0%B8%A5%E0%B8%B5%E0%B8%94%E0%B8%B4%E0%B8%99.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2025/12/Avatar-Fire-and-Ash-2025-%E0%B8%AD%E0%B8%A7%E0%B8%95%E0%B8%B2%E0%B8%A3-%E0%B8%AD%E0%B8%B1%E0%B8%84%E0%B8%99%E0%B8%B5%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%98%E0%B8%B8%E0%B8%A5%E0%B8%B5%E0%B8%94%E0%B8%B4%E0%B8%99.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=5e7b8487a8df19cf3465a40c&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Avatar Fire and Ash (2025) อวตาร อัคนีและธุลีดิน พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 8.8,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/NSDAbJ4E_y4",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=5e7b8487a8df19cf3465a40c&typew=W"
+    },
+    "id": "24hdx-37435",
+    "postId": "37435",
+    "originalUrl": "https://www.24-hda.com/avatar-fire-and-ash/"
+  },
+  {
+    "titleTh": "Ip Man The Awakening (2021) ยิปมัน เจ้ากังฟูสู้ยิบตา ปรมาจารย์ตื่นแล้ว",
+    "titleEn": "Ip Man The Awakening (2021) ยิปมัน เจ้ากังฟูสู้ยิบตา ปรมาจารย์ตื่นแล้ว",
+    "year": 2021,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2022/12/Ip-Man-The-Awakening-2021.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2022/12/Ip-Man-The-Awakening-2021.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=29dbfd5da5b7c622acc3d50a&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Ip Man The Awakening (2021) ยิปมัน เจ้ากังฟูสู้ยิบตา ปรมาจารย์ตื่นแล้ว พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 7.2,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/DcEVuNnvtk8",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=29dbfd5da5b7c622acc3d50a&typew=W"
+    },
+    "id": "24hdx-18707",
+    "postId": "18707",
+    "originalUrl": "https://www.24-hda.com/ip-man-the-awakening/"
+  },
+  {
+    "titleTh": "Our House (2025) ข้างบ้าน",
+    "titleEn": "Our House (2025) ข้างบ้าน",
+    "year": 2025,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/Our-House-2025-%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/Our-House-2025-%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=e6243ae2f1ae31212e7ec4a7&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Our House (2025) ข้างบ้าน พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 9.1,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/6c8L_6qjxrs",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=e6243ae2f1ae31212e7ec4a7&typew=W"
+    },
+    "id": "24hdx-38871",
+    "postId": "38871",
+    "originalUrl": "https://www.24-hda.com/our-house/"
+  },
+  {
+    "titleTh": "Game of Thrones Season 1 (2011) มหาศึกชิงบัลลังก์ ปี 1",
+    "titleEn": "Game of Thrones Season 1 (2011) มหาศึกชิงบัลลังก์ ปี 1",
+    "year": 2011,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2022/11/Game-of-Thrones-Season-1-2011.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2022/11/Game-of-Thrones-Season-1-2011.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=823fe5d99691f924ced34414&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Game of Thrones Season 1 (2011) มหาศึกชิงบัลลังก์ ปี 1 พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 5.9,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 10 ตอนจบ",
+    "trailerUrl": "https://www.youtube.com/embed/KYKpcWuZDYs",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=823fe5d99691f924ced34414&typew=W",
+      "2": "https://main.24playerhd.com/index_th.php?id=1064043fda99cc7e18618d13&typew=W",
+      "3": "https://main.24playerhd.com/index_th.php?id=4a09e1fb3328345f8d7d24a0&typew=W",
+      "4": "https://main.24playerhd.com/index_th.php?id=5ad36670230c85ab12d56c40&typew=W",
+      "5": "https://main.24playerhd.com/index_th.php?id=aec2cd0ca8984564cd2a4dbe&typew=W",
+      "6": "https://main.24playerhd.com/index_th.php?id=2b497c9efa2feb2f195e34b2&typew=W",
+      "7": "https://main.24playerhd.com/index_th.php?id=7ab0f41dfba5faf7bdb52bb5&typew=W",
+      "8": "https://main.24playerhd.com/index_th.php?id=d47a733ab8cf29f54ac9a6f1&typew=W",
+      "9": "https://main.24playerhd.com/index_th.php?id=73ccf383beacb0075bbcbe31&typew=W",
+      "10": "https://main.24playerhd.com/index_th.php?id=52d506951839db1d7fb4bc9d&typew=W"
+    },
+    "id": "24hdx-17722",
+    "postId": "17722",
+    "originalUrl": "https://www.24-hda.com/game-of-thrones-season-1/"
+  },
+  {
+    "titleTh": "Harry Potter 4 And The Goblet Of Fire (2005) แฮร์รี่ พอตเตอร์ 4 กับถ้วยอัคนี",
+    "titleEn": "Harry Potter 4 And The Goblet Of Fire (2005) แฮร์รี่ พอตเตอร์ 4 กับถ้วยอัคนี",
+    "year": 2005,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2022/08/Harry-Potter-4-And-The-Goblet-Of-Fire-2005.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2022/08/Harry-Potter-4-And-The-Goblet-Of-Fire-2005.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=1facf185181e88daddf8d8c7&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Harry Potter 4 And The Goblet Of Fire (2005) แฮร์รี่ พอตเตอร์ 4 กับถ้วยอัคนี พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 5.6,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/3EGojp4Hh6I",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=1facf185181e88daddf8d8c7&typew=W"
+    },
+    "id": "24hdx-14966",
+    "postId": "14966",
+    "originalUrl": "https://www.24-hda.com/harry-potter-4/"
+  },
+  {
+    "titleTh": "The Shadow’s Edge (2025) แผนระห่ำ ใหญ่ฟัดเดือด",
+    "titleEn": "The Shadow’s Edge (2025) แผนระห่ำ ใหญ่ฟัดเดือด",
+    "year": 2025,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2025/09/The-Shadows-Edge-2025-%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B9%88%E0%B8%B3-%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88%E0%B8%9F%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD%E0%B8%94.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2025/09/The-Shadows-Edge-2025-%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B9%88%E0%B8%B3-%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88%E0%B8%9F%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD%E0%B8%94.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=48cb5a08850619a63a36547f&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ The Shadow’s Edge (2025) แผนระห่ำ ใหญ่ฟัดเดือด พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 7.1,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/dDuzTlur3NU",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=48cb5a08850619a63a36547f&typew=W"
+    },
+    "id": "24hdx-36554",
+    "postId": "36554",
+    "originalUrl": "https://www.24-hda.com/the-shadows-edge/"
+  },
+  {
+    "titleTh": "The Boys Season 3 (2022)",
+    "titleEn": "The Boys Season 3 (2022)",
+    "year": 2022,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2023/02/The-Boys-Season-3-2022.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2023/02/The-Boys-Season-3-2022.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=401616fde8db54849fd99df2&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ The Boys Season 3 (2022) พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 7.3,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 8 ตอนจบ",
+    "trailerUrl": "https://www.youtube.com/embed/K-8VYKUZYiw",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=401616fde8db54849fd99df2&typew=W",
+      "2": "https://main.24playerhd.com/index_th.php?id=90b3b48f0040d3dfd7bc5431&typew=W",
+      "3": "https://main.24playerhd.com/index_th.php?id=91c98828496d2258762bab10&typew=W",
+      "4": "https://main.24playerhd.com/index_th.php?id=bb39287990efff8ce2ce433e&typew=W",
+      "5": "https://main.24playerhd.com/index_th.php?id=d4fa4bfea53396de63fc9978&typew=W",
+      "6": "https://main.24playerhd.com/index_th.php?id=2bb6849643ce927b2af4bcec&typew=W",
+      "7": "https://main.24playerhd.com/index_th.php?id=ac92f0bc08d8c07521afeb6b&typew=W",
+      "8": "https://main.24playerhd.com/index_th.php?id=b393390de327f746de716330&typew=W"
+    },
+    "id": "24hdx-19909",
+    "postId": "19909",
+    "originalUrl": "https://www.24-hda.com/the-boys-season-3/"
+  },
+  {
+    "titleTh": "Harry Potter 1 And The Sorcerer’s Stone (2001) แฮร์รี่ พอตเตอร์ 1 กับศิลาอาถรรพ์",
+    "titleEn": "Harry Potter 1 And The Sorcerer’s Stone (2001) แฮร์รี่ พอตเตอร์ 1 กับศิลาอาถรรพ์",
+    "year": 2001,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2022/08/Harry-Potter-1-And-The-Sorcerers-Stone-2001.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2022/08/Harry-Potter-1-And-The-Sorcerers-Stone-2001.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=bac166e525fde62698416bee&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Harry Potter 1 And The Sorcerer’s Stone (2001) แฮร์รี่ พอตเตอร์ 1 กับศิลาอาถรรพ์ พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 6.9,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/VyHV0BRtdxo",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=bac166e525fde62698416bee&typew=W"
+    },
+    "id": "24hdx-14963",
+    "postId": "14963",
+    "originalUrl": "https://www.24-hda.com/harry-potter/"
+  },
+  {
+    "titleTh": "In Youth We Trust (2024) วัยหนุ่ม 2544",
+    "titleEn": "In Youth We Trust (2024) วัยหนุ่ม 2544",
+    "year": 2024,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2025/03/In-Youth-We-Trust-2024-%E0%B8%A7%E0%B8%B1%E0%B8%A2%E0%B8%AB%E0%B8%99%E0%B8%B8%E0%B9%88%E0%B8%A1-2544-1.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2025/03/In-Youth-We-Trust-2024-%E0%B8%A7%E0%B8%B1%E0%B8%A2%E0%B8%AB%E0%B8%99%E0%B8%B8%E0%B9%88%E0%B8%A1-2544-1.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=3e6a3afc76304b960592fe44&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ In Youth We Trust (2024) วัยหนุ่ม 2544 พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 4.8,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/bM3LWEp37gc",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=3e6a3afc76304b960592fe44&typew=W"
+    },
+    "id": "24hdx-34749",
+    "postId": "34749",
+    "originalUrl": "https://www.24-hda.com/in-youth-we-trust/"
+  },
+  {
+    "titleTh": "Pirates of the Caribbean (2003) คืนชีพกองทัพโจรสลัดสยองโลก",
+    "titleEn": "Pirates of the Caribbean (2003) คืนชีพกองทัพโจรสลัดสยองโลก",
+    "year": 2003,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2023/06/Pirates-of-the-Caribbean-2003-%E0%B8%84%E0%B8%B7%E0%B8%99%E0%B8%8A%E0%B8%B5%E0%B8%9E%E0%B8%81%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B1%E0%B8%9E%E0%B9%82%E0%B8%88%E0%B8%A3%E0%B8%AA%E0%B8%A5%E0%B8%B1%E0%B8%94%E0%B8%AA%E0%B8%A2%E0%B8%AD%E0%B8%87%E0%B9%82%E0%B8%A5%E0%B8%81.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2023/06/Pirates-of-the-Caribbean-2003-%E0%B8%84%E0%B8%B7%E0%B8%99%E0%B8%8A%E0%B8%B5%E0%B8%9E%E0%B8%81%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B1%E0%B8%9E%E0%B9%82%E0%B8%88%E0%B8%A3%E0%B8%AA%E0%B8%A5%E0%B8%B1%E0%B8%94%E0%B8%AA%E0%B8%A2%E0%B8%AD%E0%B8%87%E0%B9%82%E0%B8%A5%E0%B8%81.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=85efc4b7094f99caa94be2d2&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Pirates of the Caribbean (2003) คืนชีพกองทัพโจรสลัดสยองโลก พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 8.1,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/naQr0uTrH_s",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=85efc4b7094f99caa94be2d2&typew=W"
+    },
+    "id": "24hdx-24360",
+    "postId": "24360",
+    "originalUrl": "https://www.24-hda.com/pirates-of-the-caribbeans/"
+  },
+  {
+    "titleTh": "Harry Potter 2 And The Chamber Of Secrets (2002) แฮร์รี่ พอตเตอร์ 2 กับห้องแห่งความลับ",
+    "titleEn": "Harry Potter 2 And The Chamber Of Secrets (2002) แฮร์รี่ พอตเตอร์ 2 กับห้องแห่งความลับ",
+    "year": 2002,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2022/08/Harry-Potter-2-And-The-Chamber-Of-Secrets-2002.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2022/08/Harry-Potter-2-And-The-Chamber-Of-Secrets-2002.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=3c8baff3f698db5066d5e335&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Harry Potter 2 And The Chamber Of Secrets (2002) แฮร์รี่ พอตเตอร์ 2 กับห้องแห่งความลับ พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 5.4,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/1bq0qff4iF8",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=3c8baff3f698db5066d5e335&typew=W"
+    },
+    "id": "24hdx-14964",
+    "postId": "14964",
+    "originalUrl": "https://www.24-hda.com/harry-potter-2/"
+  },
+  {
+    "titleTh": "Avengers 3 Infinity War (2018) อเวนเจอร์ส 3 มหาสงครามอัญมณีล้างจักรวาล",
+    "titleEn": "Avengers 3 Infinity War (2018) อเวนเจอร์ส 3 มหาสงครามอัญมณีล้างจักรวาล",
+    "year": 2018,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2022/08/Avengers-3-Infinity-War-2018-%E0%B8%AD%E0%B9%80%E0%B8%A7%E0%B8%99%E0%B9%80%E0%B8%88%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA-3-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%AA%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%AD%E0%B8%B1%E0%B8%8D%E0%B8%A1%E0%B8%93%E0%B8%B5%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B8%A7%E0%B8%B2%E0%B8%A5.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2022/08/Avengers-3-Infinity-War-2018-%E0%B8%AD%E0%B9%80%E0%B8%A7%E0%B8%99%E0%B9%80%E0%B8%88%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA-3-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%AA%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%AD%E0%B8%B1%E0%B8%8D%E0%B8%A1%E0%B8%93%E0%B8%B5%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B8%A7%E0%B8%B2%E0%B8%A5.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=7cc33551e0d32ce3eeac2aa6&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Avengers 3 Infinity War (2018) อเวนเจอร์ส 3 มหาสงครามอัญมณีล้างจักรวาล พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 5.5,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/6ZfuNTqbHE8",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=7cc33551e0d32ce3eeac2aa6&typew=W"
+    },
+    "id": "24hdx-15057",
+    "postId": "15057",
+    "originalUrl": "https://www.24-hda.com/avengers-3-infinity-war/"
+  },
+  {
+    "titleTh": "Oppenheimer (2023) ออพเพนไฮเมอร์",
+    "titleEn": "Oppenheimer (2023) ออพเพนไฮเมอร์",
+    "year": 2023,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2023/07/Oppenheimer-2023-%E0%B8%AD%E0%B8%AD%E0%B8%9E%E0%B9%80%E0%B8%9E%E0%B8%99%E0%B9%84%E0%B8%AE%E0%B9%80%E0%B8%A1%E0%B8%AD%E0%B8%A3%E0%B9%8C.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2023/07/Oppenheimer-2023-%E0%B8%AD%E0%B8%AD%E0%B8%9E%E0%B9%80%E0%B8%9E%E0%B8%99%E0%B9%84%E0%B8%AE%E0%B9%80%E0%B8%A1%E0%B8%AD%E0%B8%A3%E0%B9%8C.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=c90098057ea1b5ec99e2c7a0&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Oppenheimer (2023) ออพเพนไฮเมอร์ พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 7.6,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/dRTD5UKcQgQ",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=c90098057ea1b5ec99e2c7a0&typew=W"
+    },
+    "id": "24hdx-25034",
+    "postId": "25034",
+    "originalUrl": "https://www.24-hda.com/oppenheimer/"
+  },
+  {
+    "titleTh": "Zootopia 2 (2025) นครสัตว์มหาสนุก 2",
+    "titleEn": "Zootopia 2 (2025) นครสัตว์มหาสนุก 2",
+    "year": 2025,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2025/12/Zootopia-2-2025-%E0%B8%99%E0%B8%84%E0%B8%A3%E0%B8%AA%E0%B8%B1%E0%B8%95%E0%B8%A7%E0%B9%8C%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%AA%E0%B8%99%E0%B8%B8%E0%B8%81-2.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2025/12/Zootopia-2-2025-%E0%B8%99%E0%B8%84%E0%B8%A3%E0%B8%AA%E0%B8%B1%E0%B8%95%E0%B8%A7%E0%B9%8C%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%AA%E0%B8%99%E0%B8%B8%E0%B8%81-2.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=cd2ea86aaa73e3e0321ef4ef&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Zootopia 2 (2025) นครสัตว์มหาสนุก 2 พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 5.6,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/MGcqvj9Q7vs",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=cd2ea86aaa73e3e0321ef4ef&typew=W"
+    },
+    "id": "24hdx-37346",
+    "postId": "37346",
+    "originalUrl": "https://www.24-hda.com/zootopia-2/"
+  },
+  {
+    "titleTh": "Deadpool 2 (2018) เดดพูล 2",
+    "titleEn": "Deadpool 2 (2018) เดดพูล 2",
+    "year": 2018,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2024/02/Deadpool-2-2018-%E0%B9%80%E0%B8%94%E0%B8%94%E0%B8%9E%E0%B8%B9%E0%B8%A5-2.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2024/02/Deadpool-2-2018-%E0%B9%80%E0%B8%94%E0%B8%94%E0%B8%9E%E0%B8%B9%E0%B8%A5-2.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=9af3fa0d3b2aaedc72adbf68&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Deadpool 2 (2018) เดดพูล 2 พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 7.1,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/_Ay49goSUDk",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=9af3fa0d3b2aaedc72adbf68&typew=W"
+    },
+    "id": "24hdx-29676",
+    "postId": "29676",
+    "originalUrl": "https://www.24-hda.com/deadpool-2/"
+  },
+  {
+    "titleTh": "Spider-Man No Way Home (2021) สไปเดอร์แมน โน เวย์ โฮม",
+    "titleEn": "Spider-Man No Way Home (2021) สไปเดอร์แมน โน เวย์ โฮม",
+    "year": 2021,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2022/11/Spider-Man-No-Way-Home-2021.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2022/11/Spider-Man-No-Way-Home-2021.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=cafd3cddb76a23bbbd67324a&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Spider-Man No Way Home (2021) สไปเดอร์แมน โน เวย์ โฮม พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 5.8,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/4A6Z2GT9DJU",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=cafd3cddb76a23bbbd67324a&typew=W"
+    },
+    "id": "24hdx-17385",
+    "postId": "17385",
+    "originalUrl": "https://www.24-hda.com/spider-man-no-way-home/"
+  },
+  {
+    "titleTh": "Top Gun 2 Maverick (2022) ท็อปกัน 2 มาเวอริค",
+    "titleEn": "Top Gun 2 Maverick (2022) ท็อปกัน 2 มาเวอริค",
+    "year": 2022,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2022/08/Top-Gun-2-Maverick-2022-%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B%E0%B8%81%E0%B8%B1%E0%B8%99-2-%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B8%AD%E0%B8%A3%E0%B8%B4%E0%B8%84.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2022/08/Top-Gun-2-Maverick-2022-%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B%E0%B8%81%E0%B8%B1%E0%B8%99-2-%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B8%AD%E0%B8%A3%E0%B8%B4%E0%B8%84.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=0218d707889248f1d6f6dec5&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Top Gun 2 Maverick (2022) ท็อปกัน 2 มาเวอริค พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 6.6,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/7ZCOpMpLEn4",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=0218d707889248f1d6f6dec5&typew=W"
+    },
+    "id": "24hdx-15111",
+    "postId": "15111",
+    "originalUrl": "https://www.24-hda.com/top-gun-%e0%b8%a0%e0%b8%b2%e0%b8%84-2/"
+  },
+  {
+    "titleTh": "Kung Fu Panda 3 (2016) กังฟูแพนด้า 3",
+    "titleEn": "Kung Fu Panda 3 (2016) กังฟูแพนด้า 3",
+    "year": 2016,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2024/03/Kung-Fu-Panda-3-2016-%E0%B8%81%E0%B8%B1%E0%B8%87%E0%B8%9F%E0%B8%B9%E0%B9%81%E0%B8%9E%E0%B8%99%E0%B8%94%E0%B9%89%E0%B8%B2-3-1.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2024/03/Kung-Fu-Panda-3-2016-%E0%B8%81%E0%B8%B1%E0%B8%87%E0%B8%9F%E0%B8%B9%E0%B9%81%E0%B8%9E%E0%B8%99%E0%B8%94%E0%B9%89%E0%B8%B2-3-1.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=9a23e1713a10c509cc412265&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Kung Fu Panda 3 (2016) กังฟูแพนด้า 3 พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 5.9,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/10r9ozshGVE",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=9a23e1713a10c509cc412265&typew=W"
+    },
+    "id": "24hdx-30248",
+    "postId": "30248",
+    "originalUrl": "https://www.24-hda.com/kung-fu-panda-3/"
+  },
+  {
+    "titleTh": "The Mandalorian Season 2 (2020)",
+    "titleEn": "The Mandalorian Season 2 (2020)",
+    "year": 2020,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2023/03/The-Mandalorian-Season-2-2020.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2023/03/The-Mandalorian-Season-2-2020.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=2ff583b1f95f29398704b58c&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ The Mandalorian Season 2 (2020) พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 5.3,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 8 ตอนจบ",
+    "trailerUrl": "https://www.youtube.com/embed/eW7Twd85m2g",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=2ff583b1f95f29398704b58c&typew=W",
+      "2": "https://main.24playerhd.com/index_th.php?id=40d8856553c5245920f47630&typew=W",
+      "3": "https://main.24playerhd.com/index_th.php?id=faa0929ae2b957549dc9c9f6&typew=W",
+      "4": "https://main.24playerhd.com/index_th.php?id=b8abcff4cc8f4c3be69ac581&typew=W",
+      "5": "https://main.24playerhd.com/index_th.php?id=fa60d2697eb0beb525e68a78&typew=W",
+      "6": "https://main.24playerhd.com/index_th.php?id=dbe6589760012f71aabca73a&typew=W",
+      "7": "https://main.24playerhd.com/index_th.php?id=898e49f220c35c5cc5e12e47&typew=W",
+      "8": "https://main.24playerhd.com/index_th.php?id=bf09877355eaf0f024ebdcdc&typew=W"
+    },
+    "id": "24hdx-20911",
+    "postId": "20911",
+    "originalUrl": "https://www.24-hda.com/the-mandalorian-season-2/"
+  },
+  {
+    "titleTh": "Avatar 2 The Way of Water (2022) อวตาร วิถีแห่งสายน้ำ",
+    "titleEn": "Avatar 2 The Way of Water (2022) อวตาร วิถีแห่งสายน้ำ",
+    "year": 2022,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2022/12/Avatar-The-Way-of-Water-2022-%E0%B8%AD%E0%B8%A7%E0%B8%95%E0%B8%B2%E0%B8%A3-%E0%B8%A7%E0%B8%B4%E0%B8%96%E0%B8%B5%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B8%99%E0%B9%89%E0%B8%B3.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2022/12/Avatar-The-Way-of-Water-2022-%E0%B8%AD%E0%B8%A7%E0%B8%95%E0%B8%B2%E0%B8%A3-%E0%B8%A7%E0%B8%B4%E0%B8%96%E0%B8%B5%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B8%99%E0%B9%89%E0%B8%B3.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=941263c03702b4af487ad407&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Avatar 2 The Way of Water (2022) อวตาร วิถีแห่งสายน้ำ พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 4.9,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/clt4mmjKGFI",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=941263c03702b4af487ad407&typew=W"
+    },
+    "id": "24hdx-18800",
+    "postId": "18800",
+    "originalUrl": "https://www.24-hda.com/avatar-2-the-way-of-water/"
+  },
+  {
+    "titleTh": "The Villainess (2017) สวยแค้นโหด",
+    "titleEn": "The Villainess (2017) สวยแค้นโหด",
+    "year": 2017,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Villainess-2017-%E0%B8%AA%E0%B8%A7%E0%B8%A2%E0%B9%81%E0%B8%84%E0%B9%89%E0%B8%99%E0%B9%82%E0%B8%AB%E0%B8%94.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Villainess-2017-%E0%B8%AA%E0%B8%A7%E0%B8%A2%E0%B9%81%E0%B8%84%E0%B9%89%E0%B8%99%E0%B9%82%E0%B8%AB%E0%B8%94.png",
+    "videoUrl": "https://www.youtube.com/embed/MaNwMTAdSn0",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ The Villainess (2017) สวยแค้นโหด พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 6.5,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/MaNwMTAdSn0",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://www.youtube.com/embed/MaNwMTAdSn0"
+    },
+    "id": "24hdx-40592",
+    "postId": "40592",
+    "originalUrl": "https://www.24-hda.com/the-villainess/"
+  },
+  {
+    "titleTh": "Mechanic Resurrection (2016) โคตรเพชฌฆาต แค้นข้ามโลก",
+    "titleEn": "Mechanic Resurrection (2016) โคตรเพชฌฆาต แค้นข้ามโลก",
+    "year": 2016,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2024/01/Mechanic-Resurrection-2016-%E0%B9%82%E0%B8%84%E0%B8%95%E0%B8%A3%E0%B9%80%E0%B8%9E%E0%B8%8A%E0%B8%8C%E0%B8%86%E0%B8%B2%E0%B8%95-%E0%B9%81%E0%B8%84%E0%B9%89%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A1%E0%B9%82%E0%B8%A5%E0%B8%81.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2024/01/Mechanic-Resurrection-2016-%E0%B9%82%E0%B8%84%E0%B8%95%E0%B8%A3%E0%B9%80%E0%B8%9E%E0%B8%8A%E0%B8%8C%E0%B8%86%E0%B8%B2%E0%B8%95-%E0%B9%81%E0%B8%84%E0%B9%89%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A1%E0%B9%82%E0%B8%A5%E0%B8%81.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=d4d4a4a14a04b211ebf02b02&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Mechanic Resurrection (2016) โคตรเพชฌฆาต แค้นข้ามโลก พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 5.8,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/QF903RaKLvs",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=d4d4a4a14a04b211ebf02b02&typew=W"
+    },
+    "id": "24hdx-29021",
+    "postId": "29021",
+    "originalUrl": "https://www.24-hda.com/mechanic-resurrection/"
+  },
+  {
+    "titleTh": "Venom 2 Let There Be Carnage (2021) เวน่อม 2 ศึกอสูรแดงเดือด",
+    "titleEn": "Venom 2 Let There Be Carnage (2021) เวน่อม 2 ศึกอสูรแดงเดือด",
+    "year": 2021,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2022/09/Venom-2-Let-There-Be-Carnage-2021.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2022/09/Venom-2-Let-There-Be-Carnage-2021.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=b91fd5bd105e589ec0111f12&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Venom 2 Let There Be Carnage (2021) เวน่อม 2 ศึกอสูรแดงเดือด พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 5.7,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/WlUL6KncgeM",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=b91fd5bd105e589ec0111f12&typew=W"
+    },
+    "id": "24hdx-15706",
+    "postId": "15706",
+    "originalUrl": "https://www.24-hda.com/venom-2/"
+  },
+  {
+    "titleTh": "Speak No Evil (2022) พักร้อนซ่อนตาย",
+    "titleEn": "Speak No Evil (2022) พักร้อนซ่อนตาย",
+    "year": 2022,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2023/10/Speak-No-Evil-2022-%E0%B8%9E%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%99%E0%B8%8B%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%95%E0%B8%B2%E0%B8%A2.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2023/10/Speak-No-Evil-2022-%E0%B8%9E%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%99%E0%B8%8B%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%95%E0%B8%B2%E0%B8%A2.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=e771ac50a7a0fc87ac309128&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Speak No Evil (2022) พักร้อนซ่อนตาย พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 6.8,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/INHM--6XQzQ",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=e771ac50a7a0fc87ac309128&typew=W"
+    },
+    "id": "24hdx-27448",
+    "postId": "27448",
+    "originalUrl": "https://www.24-hda.com/speak-no-evil/"
+  },
+  {
+    "titleTh": "Malena (2000) มาเลน่า ผู้หญิงสะกดโลก",
+    "titleEn": "Malena (2000) มาเลน่า ผู้หญิงสะกดโลก",
+    "year": 2000,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/Malena-2000-%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%A5%E0%B8%99%E0%B9%88%E0%B8%B2-%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B8%AA%E0%B8%B0%E0%B8%81%E0%B8%94%E0%B9%82%E0%B8%A5%E0%B8%81.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/Malena-2000-%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%A5%E0%B8%99%E0%B9%88%E0%B8%B2-%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B8%AA%E0%B8%B0%E0%B8%81%E0%B8%94%E0%B9%82%E0%B8%A5%E0%B8%81.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=2c0c4265eb9f8345070dc06f&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Malena (2000) มาเลน่า ผู้หญิงสะกดโลก พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 4.6,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/nGmG4olJCYU",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=2c0c4265eb9f8345070dc06f&typew=W"
+    },
+    "id": "24hdx-40455",
+    "postId": "40455",
+    "originalUrl": "https://www.24-hda.com/malena/"
+  },
+  {
+    "titleTh": "Rampant (2018) นครนรกซอมบี้คลั่ง",
+    "titleEn": "Rampant (2018) นครนรกซอมบี้คลั่ง",
+    "year": 2018,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2022/11/Rampant-2018-%E0%B8%99%E0%B8%84%E0%B8%A3%E0%B8%99%E0%B8%A3%E0%B8%81%E0%B8%8B%E0%B8%AD%E0%B8%A1%E0%B8%9A%E0%B8%B5%E0%B9%89%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%87.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2022/11/Rampant-2018-%E0%B8%99%E0%B8%84%E0%B8%A3%E0%B8%99%E0%B8%A3%E0%B8%81%E0%B8%8B%E0%B8%AD%E0%B8%A1%E0%B8%9A%E0%B8%B5%E0%B9%89%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%87.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=52fc6e2a1248b725fb751996&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Rampant (2018) นครนรกซอมบี้คลั่ง พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 8.1,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/8QanxnduCaQ",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=52fc6e2a1248b725fb751996&typew=W"
+    },
+    "id": "24hdx-17790",
+    "postId": "17790",
+    "originalUrl": "https://www.24-hda.com/rampant/"
+  },
+  {
+    "titleTh": "Police Story Lockdown (2013) วิ่งสู้ฟัด 6",
+    "titleEn": "Police Story Lockdown (2013) วิ่งสู้ฟัด 6",
+    "year": 2013,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/Police-Story-Lockdown-2013-%E0%B8%A7%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%9F%E0%B8%B1%E0%B8%94-6.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/Police-Story-Lockdown-2013-%E0%B8%A7%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%9F%E0%B8%B1%E0%B8%94-6.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=acff9c0dc48590dbbceeda9d&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Police Story Lockdown (2013) วิ่งสู้ฟัด 6 พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 6.0,
+    "genres": [
+      "ยอดนิยม",
+      "24-HD",
+      "พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/omchkkWqqns",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=acff9c0dc48590dbbceeda9d&typew=W"
+    },
+    "id": "24hdx-39035",
+    "postId": "39035",
+    "originalUrl": "https://www.24-hda.com/police-story-lockdown/"
   }
 ];
 var movies = window.movies;

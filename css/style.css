@@ -1192,6 +1192,11 @@ footer {
 .player-select-btn {
   flex: 1 1 0;
   min-width: 0 !important;
+  min-height: 40px !important;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
   background: #16a34a;
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1237,8 +1242,22 @@ footer {
   color: #fff !important;
   border: none !important;
   font-weight: bold !important;
-  padding: 0.42rem 0.35rem !important;
-  font-size: 0.82rem !important;
+  padding: 0.42rem 0.5rem !important;
+  min-height: 40px !important;
+  font-size: 0.84rem !important;
+  touch-action: manipulation !important;
+  -webkit-tap-highlight-color: transparent !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+}
+
+.player-btn-fullscreen:active {
+  transform: scale(0.96);
+}
+
+.player-btn-fullscreen.is-fullscreen {
+  background: #f59e0b !important;
+  color: #000 !important;
 }
 
 .player-hint-bar {
@@ -1729,18 +1748,23 @@ footer {
   }
 }
 
-/* Tablet Landscape Mode Fix */
-@media (min-height: 501px) and (max-height: 750px) and (orientation: landscape) {
+/* Tablet & Medium Landscape Mode Fix (Up to 1050px height for Android tablets / iPads) */
+@media (min-height: 501px) and (max-height: 1050px) and (orientation: landscape) {
   .theater-player-container,
   .player-modal-container {
     max-height: 96vh !important;
-    max-width: 90vw !important;
-    overflow-y: auto !important;
+    max-width: 94vw !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
   }
   .video-frame-wrapper,
   .video-screen-wrapper {
     padding-top: 0 !important;
-    height: 56vh !important;
+    flex: 1 1 auto !important;
+    height: 58vh !important;
+    max-height: 65vh !important;
+    min-height: 240px !important;
   }
   .video-frame-wrapper iframe, 
   .video-frame-wrapper video,
@@ -1754,21 +1778,30 @@ footer {
   }
   .player-top-header {
     padding: 0.45rem 1rem !important;
+    flex-shrink: 0 !important;
   }
   .playing-title {
     font-size: 1rem !important;
   }
   .player-timeline-bar {
     padding: 4px 12px !important;
+    flex-shrink: 0 !important;
   }
   .player-bottom-bar {
-    padding: 0.35rem 0.8rem !important;
+    padding: 0.4rem 0.8rem !important;
     gap: 0.5rem !important;
+    flex-shrink: 0 !important;
   }
   .player-select-btn {
-    padding: 0.4rem 0.5rem !important;
-    font-size: 0.82rem !important;
+    padding: 0.45rem 0.5rem !important;
+    font-size: 0.84rem !important;
+    min-height: 38px !important;
     min-width: 0 !important;
+  }
+  .player-hint-bar {
+    padding: 4px 8px !important;
+    font-size: 0.72rem !important;
+    flex-shrink: 0 !important;
   }
 }
 
@@ -1876,11 +1909,15 @@ footer {
   display: none !important;
 }
 
-/* Lightweight Zero-Lag Auto-hide for Mi Box / TV */
-.player-controls-idle .player-top-header,
-.player-controls-idle .player-timeline-bar,
-.player-controls-idle .player-bottom-bar,
-.player-controls-idle .custom-player-controls {
+/* Lightweight Zero-Lag Auto-hide - ONLY for TV or Fullscreen Mode (Never hides in normal tablet/mobile view) */
+.is-tv-device.player-controls-idle .player-top-header,
+.is-tv-device.player-controls-idle .player-timeline-bar,
+.is-tv-device.player-controls-idle .player-bottom-bar,
+.is-tv-device.player-controls-idle .custom-player-controls,
+.player-modal-overlay.theater-fullscreen-mode.player-controls-idle .player-top-header,
+.player-modal-overlay.theater-fullscreen-mode.player-controls-idle .player-timeline-bar,
+.player-modal-overlay.theater-fullscreen-mode.player-controls-idle .player-bottom-bar,
+.player-modal-overlay.theater-fullscreen-mode.player-controls-idle .custom-player-controls {
   display: none !important;
 }
 
