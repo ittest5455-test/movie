@@ -1,37 +1,6 @@
 // ฐานข้อมูลภาพยนตร์รวม 24-HD และ GOSERIES4K ปี 2026 พากย์ไทย
 window.movies = [
   {
-    "titleTh": "Just Play Dead (2026)",
-    "titleEn": "Just Play Dead (2026)",
-    "year": 2026,
-    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Just-Play-Dead-2026.png",
-    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Just-Play-Dead-2026.png",
-    "videoUrl": "https://www.youtube.com/embed/NQwryUyyotY",
-    "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ Just Play Dead (2026) พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
-    "rating": 7.0,
-    "genres": [
-      "ยอดนิยม 2026",
-      "ยอดนิยม",
-      "24-HD",
-      "พากย์ไทย",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/NQwryUyyotY",
-    "cast": [],
-    "source": "24-HD",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://www.youtube.com/embed/NQwryUyyotY"
-    },
-    "id": "24hdx-40580",
-    "postId": "40580",
-    "originalUrl": "https://www.24-hda.com/just-play-dead/"
-  },
-  {
     "titleTh": "Ghost in the Cell (2026) วัยหนุ่มคุกผี",
     "titleEn": "Ghost in the Cell (2026) วัยหนุ่มคุกผี",
     "year": 2026,
@@ -94,161 +63,6 @@ window.movies = [
     "originalUrl": "https://www.24-hda.com/the-runner/"
   },
   {
-    "titleTh": "Scissors (2026)",
-    "titleEn": "Scissors (2026)",
-    "year": 2026,
-    "poster": "https://www.24-hda.com/wp-content/uploads/2026/06/Scissors-2026.png",
-    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/06/Scissors-2026.png",
-    "videoUrl": "https://www.youtube.com/embed/-pj97rRicEM",
-    "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ Scissors (2026) พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
-    "rating": 6.6,
-    "genres": [
-      "ยอดนิยม 2026",
-      "ยอดนิยม",
-      "24-HD",
-      "พากย์ไทย",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/-pj97rRicEM",
-    "cast": [],
-    "source": "24-HD",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://www.youtube.com/embed/-pj97rRicEM"
-    },
-    "id": "24hdx-39786",
-    "postId": "39786",
-    "originalUrl": "https://www.24-hda.com/scissors/"
-  },
-  {
-    "titleTh": "One Night Only (2026)",
-    "titleEn": "One Night Only (2026)",
-    "year": 2026,
-    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/One-Night-Only-2026.png",
-    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/One-Night-Only-2026.png",
-    "videoUrl": "https://www.youtube.com/embed/AvKoSR3O4NQ",
-    "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ One Night Only (2026) พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
-    "rating": 5.5,
-    "genres": [
-      "ยอดนิยม 2026",
-      "ยอดนิยม",
-      "24-HD",
-      "พากย์ไทย",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/AvKoSR3O4NQ",
-    "cast": [],
-    "source": "24-HD",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://www.youtube.com/embed/AvKoSR3O4NQ"
-    },
-    "id": "24hdx-40668",
-    "postId": "40668",
-    "originalUrl": "https://www.24-hda.com/one-night-only/"
-  },
-  {
-    "titleTh": "The Woman in the Hole (2026)",
-    "titleEn": "The Woman in the Hole (2026)",
-    "year": 2026,
-    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/0.png",
-    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/0.png",
-    "videoUrl": "https://www.youtube.com/embed/adruBLjR0FU",
-    "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ The Woman in the Hole (2026) พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
-    "rating": 5.2,
-    "genres": [
-      "ยอดนิยม 2026",
-      "ยอดนิยม",
-      "24-HD",
-      "พากย์ไทย",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/adruBLjR0FU",
-    "cast": [],
-    "source": "24-HD",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://www.youtube.com/embed/adruBLjR0FU"
-    },
-    "id": "24hdx-40692",
-    "postId": "40692",
-    "originalUrl": "https://www.24-hda.com/the-woman-in-the-hole/"
-  },
-  {
-    "titleTh": "Apoy Sa Ibabaw Apoy Sa Ilalim (2026)",
-    "titleEn": "Apoy Sa Ibabaw Apoy Sa Ilalim (2026)",
-    "year": 2026,
-    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Apoy-Sa-Ibabaw-Apoy-Sa-Ilalim-2026.png",
-    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Apoy-Sa-Ibabaw-Apoy-Sa-Ilalim-2026.png",
-    "videoUrl": "https://www.youtube.com/embed/5E2oaKUdakw",
-    "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ Apoy Sa Ibabaw Apoy Sa Ilalim (2026) พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
-    "rating": 6.1,
-    "genres": [
-      "ยอดนิยม 2026",
-      "ยอดนิยม",
-      "24-HD",
-      "พากย์ไทย",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/5E2oaKUdakw",
-    "cast": [],
-    "source": "24-HD",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://www.youtube.com/embed/5E2oaKUdakw"
-    },
-    "id": "24hdx-40561",
-    "postId": "40561",
-    "originalUrl": "https://www.24-hda.com/apoy-sa-ibabaw-apoy-sa-ilalim/"
-  },
-  {
-    "titleTh": "Sex Drive (2026)",
-    "titleEn": "Sex Drive (2026)",
-    "year": 2026,
-    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Sex-Drive-20261.png",
-    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Sex-Drive-20261.png",
-    "videoUrl": "https://www.youtube.com/embed/eM6Aq7jSZwc",
-    "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ Sex Drive (2026) พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
-    "rating": 6.6,
-    "genres": [
-      "ยอดนิยม 2026",
-      "ยอดนิยม",
-      "24-HD",
-      "พากย์ไทย",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/eM6Aq7jSZwc",
-    "cast": [],
-    "source": "24-HD",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://www.youtube.com/embed/eM6Aq7jSZwc"
-    },
-    "id": "24hdx-40583",
-    "postId": "40583",
-    "originalUrl": "https://www.24-hda.com/sex-drive/"
-  },
-  {
     "titleTh": "War Machine (2026) สงครามจักรกลถล่มโลก",
     "titleEn": "War Machine (2026) สงครามจักรกลถล่มโลก",
     "year": 2026,
@@ -278,32 +92,6 @@ window.movies = [
     "id": "24hdx-38313",
     "postId": "38313",
     "originalUrl": "https://www.24-hda.com/war-machine/"
-  },
-  {
-    "titleTh": "Avatar Aang The Last Airbender (2026)",
-    "titleEn": "Avatar Aang The Last Airbender (2026)",
-    "year": 2026,
-    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Avatar-Aang-The-Last-Airbender-2026.png",
-    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Avatar-Aang-The-Last-Airbender-2026.png",
-    "videoUrl": "https://www.youtube.com/embed/7b20GRFZBFE",
-    "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ Avatar Aang The Last Airbender (2026) (2026) พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
-    "rating": 8.0,
-    "genres": [
-      "ยอดนิยม",
-      "ยอดนิยม 2026",
-      "24-HD",
-      "พากย์ไทย",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/7b20GRFZBFE",
-    "cast": [],
-    "source": "24-HD",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "id": "24hdx-40651"
   },
   {
     "titleTh": "The Monkey Hero (2026) เห้งเจียแจ๊ส",
@@ -10181,35 +9969,6 @@ window.movies = [
     "id": "24hdx-18800",
     "postId": "18800",
     "originalUrl": "https://www.24-hda.com/avatar-2-the-way-of-water/"
-  },
-  {
-    "titleTh": "The Villainess (2017) สวยแค้นโหด",
-    "titleEn": "The Villainess (2017) สวยแค้นโหด",
-    "year": 2017,
-    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Villainess-2017-%E0%B8%AA%E0%B8%A7%E0%B8%A2%E0%B9%81%E0%B8%84%E0%B9%89%E0%B8%99%E0%B9%82%E0%B8%AB%E0%B8%94.png",
-    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Villainess-2017-%E0%B8%AA%E0%B8%A7%E0%B8%A2%E0%B9%81%E0%B8%84%E0%B9%89%E0%B8%99%E0%B9%82%E0%B8%AB%E0%B8%94.png",
-    "videoUrl": "https://www.youtube.com/embed/MaNwMTAdSn0",
-    "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ The Villainess (2017) สวยแค้นโหด พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
-    "rating": 6.5,
-    "genres": [
-      "ยอดนิยม",
-      "24-HD",
-      "พากย์ไทย"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/MaNwMTAdSn0",
-    "cast": [],
-    "source": "24-HD",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://www.youtube.com/embed/MaNwMTAdSn0"
-    },
-    "id": "24hdx-40592",
-    "postId": "40592",
-    "originalUrl": "https://www.24-hda.com/the-villainess/"
   },
   {
     "titleTh": "Mechanic Resurrection (2016) โคตรเพชฌฆาต แค้นข้ามโลก",

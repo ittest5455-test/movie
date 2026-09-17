@@ -5,11 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" id="viewportMeta">
   <script>
     (function() {
-      var ua = navigator.userAgent.toLowerCase();
-      var isTV = ua.indexOf('tv') > -1 || ua.indexOf('box') > -1 || ua.indexOf('googletv') > -1 || ua.indexOf('smarttv') > -1 || ua.indexOf('aft') > -1 || ua.indexOf('leanback') > -1;
-      if (isTV) {
-        document.documentElement.classList.add("is-tv-device");
+      function applyTVViewport() {
+        var ua = navigator.userAgent.toLowerCase();
+        var isMobilePhone = /mobile|iphone|ipod|android.*mobile/i.test(ua);
+        var isTV = ua.indexOf('tv') > -1 || 
+                   ua.indexOf('box') > -1 || 
+                   ua.indexOf('googletv') > -1 || 
+                   ua.indexOf('smarttv') > -1 || 
+                   ua.indexOf('aft') > -1 || 
+                   ua.indexOf('leanback') > -1 || 
+                   ua.indexOf('crkey') > -1 || 
+                   ua.indexOf('mibox') > -1 || 
+                   ua.indexOf('bravia') > -1 || 
+                   (ua.indexOf('median') > -1 && !isMobilePhone) ||
+                   (ua.indexOf('android') > -1 && !isMobilePhone) ||
+                   (window.innerWidth > window.innerHeight && (ua.indexOf('median') > -1 || ua.indexOf('box') > -1 || ua.indexOf('tv') > -1));
+
+        if (isTV) {
+          document.documentElement.classList.add("is-tv-device");
+          var meta = document.getElementById("viewportMeta");
+          if (meta && meta.content !== "width=1280, user-scalable=no") {
+            meta.content = "width=1280, user-scalable=no";
+          }
+        }
       }
+      applyTVViewport();
+      window.addEventListener("DOMContentLoaded", applyTVViewport);
+      window.addEventListener("resize", applyTVViewport);
     })();
   </script>
   <title>ดูหนังออนไลน์ 2026 ฟรี หนังใหม่ชนโรง HD พากย์ไทย ซับไทย เต็มเรื่อง - MovieStream</title>
@@ -18,7 +40,7 @@
   <meta name="keywords" content="ดูหนังออนไลน์, ดูหนังฟรี, ดูหนังใหม่ 2026, หนังชนโรง, ดูหนัง HD, หนังพากย์ไทย, ดูซีรีส์ฟรี, ดูหนังไม่มีโฆษณา">
   <meta name="robots" content="index, follow">
   <meta name="referrer" content="no-referrer">
-  <link rel="stylesheet" href="css/style.css?v=20260914_0815">
+  <link rel="stylesheet" href="css/style.css?v=20260917_0935">
   
   <!-- SEO Open Graph Metadata -->
   <meta property="og:title" content="ดูหนังออนไลน์ 2026 ฟรี หนังใหม่ชนโรง HD พากย์ไทย ซับไทย เต็มเรื่อง">
@@ -357,8 +379,8 @@
   <div class="toast-container" id="toastContainer"></div>
 
   <!-- JavaScript Scripts -->
-  <script src="js/movies.js?v=20260909_0930"></script>
-  <script src="js/app.js?v=20260914_0815"></script>
+  <script src="js/movies.js?v=20260917_0935"></script>
+  <script src="js/app.js?v=20260917_0935"></script>
   <script>
     // Bulletproof direct renderer & counter inline
     (function() {

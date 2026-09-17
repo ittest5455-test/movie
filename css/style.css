@@ -1820,6 +1820,12 @@ footer {
   }
 }
 
+/* TV Device Viewport Lock (1280px Standard Layout for Mi Box, Mi TV Stick & Android TV) */
+html.is-tv-device,
+html.is-tv-device body {
+  min-width: 1280px !important;
+}
+
 /* TV & Full Theater Mode - True 100% Fullscreen for TV & Expanded Player */
 .is-tv-device .player-modal-overlay,
 .player-modal-overlay.theater-fullscreen-mode {

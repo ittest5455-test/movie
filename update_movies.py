@@ -297,11 +297,9 @@ def update_24hda_topmovies():
                         video_url = iframe_m.group(1).replace("\\/", "/")
             except Exception: pass
             
-            if not video_url and trailer:
-                video_url = trailer
-                
             if not video_url:
                 continue
+
                 
             movie_obj = {
                 "titleTh": title_clean,
