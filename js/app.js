@@ -616,6 +616,7 @@ function initMovieStreamApp() {
     }
     
     playerModal.classList.add("active");
+    document.body.classList.add("player-is-active");
     document.body.style.overflow = "hidden";
     currentActiveMovie = movie;
 
@@ -937,6 +938,7 @@ function initMovieStreamApp() {
       playerModal.classList.remove("player-controls-idle");
       playerModal.classList.remove("theater-fullscreen-mode");
     }
+    document.body.classList.remove("player-is-active");
     document.body.style.overflow = "";
 
     // Exit fullscreen and orientation lock if active

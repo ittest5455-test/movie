@@ -1826,6 +1826,14 @@ html.is-tv-device body {
   min-width: 1280px !important;
 }
 
+/* Zero-Lag Background Freeze while Playing Video (Frees CPU/GPU on TV Boxes) */
+body.player-is-active #headerNav,
+body.player-is-active .main-content,
+body.player-is-active footer {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
 /* TV & Full Theater Mode - True 100% Fullscreen for TV & Expanded Player */
 .is-tv-device .player-modal-overlay,
 .player-modal-overlay.theater-fullscreen-mode {
