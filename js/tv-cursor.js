@@ -5,9 +5,7 @@
  */
 
 (function () {
-  'use strict';
-  // Deactivated: Standard Android TV Remote D-Pad Navigation is used instead of virtual mouse
-  return;
+  let isEnabled = true;
   let isVisible = false;
   let cursorX = window.innerWidth / 2;
   let cursorY = window.innerHeight / 2;
@@ -195,7 +193,7 @@
     const target = document.elementFromPoint(cursorX, cursorY);
     if (!target) return;
 
-    const clickable = target.closest('button, a, select, input, textarea, .movie-card, .category-pill, .player-select-btn, .player-btn, [role="button"], [tabindex]');
+    const clickable = target.closest('button, a, select, input, textarea, .movie-card, .category-pill, .genre-tag, .player-select-btn, .player-btn, .player-close-btn, .nav-links a, .header-nav a, [role="button"], [tabindex]');
     if (clickable) {
       if (currentHoveredEl !== clickable) {
         removeHoverEffect();
@@ -246,7 +244,7 @@
     const target = document.elementFromPoint(cursorX, cursorY);
     if (!target) return;
 
-    const clickable = target.closest('button, a, select, input, textarea, .movie-card, .category-pill, .player-select-btn, .player-btn, [role="button"], [tabindex]') || target;
+    const clickable = target.closest('button, a, select, input, textarea, .movie-card, .category-pill, .genre-tag, .player-select-btn, .player-btn, .player-close-btn, .nav-links a, .header-nav a, [role="button"], [tabindex]') || target;
 
     const opts = {
       bubbles: true,

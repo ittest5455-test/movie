@@ -909,10 +909,10 @@ function initMovieStreamApp() {
       const isTV = document.documentElement.classList.contains("is-tv-device");
       const isFs = playerModal.classList.contains("theater-fullscreen-mode") || !!(document.fullscreenElement || document.webkitFullscreenElement);
 
-      // Only auto-hide controls if it is a TV device OR currently in Fullscreen mode!
-      // In normal modal view on tablet/mobile/PC, controls stay permanently visible
-      if ((isHtml5Playing || isIframePlaying) && (isTV || isFs)) {
-        const hideDelay = isTV ? 3500 : 5000;
+      // Only auto-hide controls if currently in Fullscreen mode!
+      // In normal modal view (including TV windowed mode), controls stay permanently visible
+      if ((isHtml5Playing || isIframePlaying) && isFs) {
+        const hideDelay = 4000;
         playerControlsIdleTimer = setTimeout(() => {
           if (playerModal && playerModal.classList.contains("active")) {
             playerModal.classList.add("player-controls-idle");
