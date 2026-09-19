@@ -286,7 +286,7 @@
 
     if (dx !== 0 || dy !== 0) {
       holdDuration += delta;
-      const speed = Math.min(450 + holdDuration * 1200, 1400);
+      const speed = Math.min(180 + holdDuration * 400, 550);
 
       cursorX += dx * speed * delta;
       cursorY += dy * speed * delta;
