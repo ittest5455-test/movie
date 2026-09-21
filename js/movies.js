@@ -1,6 +1,796 @@
 // ฐานข้อมูลภาพยนตร์รวม 24-HD และ GOSERIES4K ปี 2026 พากย์ไทย
 window.movies = [
   {
+    "titleTh": "ฟรี Special Bodyguard (2026)",
+    "titleEn": "ฟรี Special Bodyguard (2026)",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Special-Bodyguard-2026-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Special-Bodyguard-2026-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=c7a66784eaddf8599a506b30&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Special Bodyguard (2026) (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 5.7,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/TGJfkY2JiGA",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=c7a66784eaddf8599a506b30&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40698",
+    "postId": "40698",
+    "originalUrl": "https://www.24-hda.com/special-bodyguard/"
+  },
+  {
+    "titleTh": "ฟรี The Last Witcher (2026)",
+    "titleEn": "ฟรี The Last Witcher (2026)",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Last-Witcher-2026-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Last-Witcher-2026-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=39c3d72f5e89637eea3cb72f&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี The Last Witcher (2026) (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 5.7,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/GLVS9K9584o",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=39c3d72f5e89637eea3cb72f&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40714",
+    "postId": "40714",
+    "originalUrl": "https://www.24-hda.com/the-last-witcher/"
+  },
+  {
+    "titleTh": "ฟรี Reminders of Him (2026) ร่องรอยรัก",
+    "titleEn": "ฟรี Reminders of Him (2026) ร่องรอยรัก",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/04/Reminders-of-Him-2026-%E0%B8%A3%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A3%E0%B8%AD%E0%B8%A2%E0%B8%A3%E0%B8%B1%E0%B8%81-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/04/Reminders-of-Him-2026-%E0%B8%A3%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A3%E0%B8%AD%E0%B8%A2%E0%B8%A3%E0%B8%B1%E0%B8%81-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=ce2c5eb7cf9789a31c2b3fb9&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Reminders of Him (2026) ร่องรอยรัก (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 6.3,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/rfY7p0SFnNg",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=ce2c5eb7cf9789a31c2b3fb9&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-38800",
+    "postId": "38800",
+    "originalUrl": "https://www.24-hda.com/reminders-of-him/"
+  },
+  {
+    "titleTh": "ฟรี Lego Star Wars The Mandalorian (2026)",
+    "titleEn": "ฟรี Lego Star Wars The Mandalorian (2026)",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Lego-Star-Wars-The-Mandalorian-2026-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Lego-Star-Wars-The-Mandalorian-2026-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=0d1c542d37f89b1472f24074&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Lego Star Wars The Mandalorian (2026) (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 6.8,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/NEqBkXeEpkk",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=0d1c542d37f89b1472f24074&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40722",
+    "postId": "40722",
+    "originalUrl": "https://www.24-hda.com/lego-star-wars-the-mandalorian/"
+  },
+  {
+    "titleTh": "The Final Piece (2025)",
+    "titleEn": "The Final Piece (2025)",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/The-Final-Piece-2025.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/The-Final-Piece-2025.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/g_xVhEm2-Njej",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง The Final Piece (2025) ปีที่ฉาย 2025 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/g_xVhEm2-Njej"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133685",
+    "postId": "133685",
+    "originalUrl": "https://www.24hd.media/the-final-piece-2025/"
+  },
+  {
+    "titleTh": "The Woman In The Hole (2025)",
+    "titleEn": "The Woman In The Hole (2025)",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/The-Woman-in-the-Hole-2025.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/The-Woman-in-the-Hole-2025.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/J7_E3mJl4-cHv",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง The Woman in the Hole (2025) ปีที่ฉาย 2025 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/J7_E3mJl4-cHv"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133683",
+    "postId": "133683",
+    "originalUrl": "https://www.24hd.media/the-woman-in-the-hole-2025/"
+  },
+  {
+    "titleTh": "Tom And Jerry Forbidden Compass (2025)",
+    "titleEn": "Tom And Jerry Forbidden Compass (2025)",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Tom-and-Jerry-Forbidden-Compass-2025.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Tom-and-Jerry-Forbidden-Compass-2025.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/e6fR-EbKX_UGD",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Tom and Jerry Forbidden Compass (2025) ปีที่ฉาย 2025 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/e6fR-EbKX_UGD"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133682",
+    "postId": "133682",
+    "originalUrl": "https://www.24hd.media/tom-and-jerry-forbidden-compass-2025/"
+  },
+  {
+    "titleTh": "Your Sky Hare No Chi Koi (2026) พยากรณ์ว่ารัก EP.1-9",
+    "titleEn": "Your Sky Hare No Chi Koi (2026) พยากรณ์ว่ารัก EP.1-9",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Your-Sky-Hare-No-Chi-Koi-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Your-Sky-Hare-No-Chi-Koi-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/thHl_j-tioOe3",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Your Sky Hare No Chi Koi (2026) พยากรณ์ว่ารัก EP.1-9 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/thHl_j-tioOe3"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133718",
+    "postId": "133718",
+    "originalUrl": "https://www.24hd.media/your-sky-hare-no-chi-koi-2026"
+  },
+  {
+    "titleTh": "Cold Hunt (2026) คดีเดือดเมืองมรณะ EP.1-18",
+    "titleEn": "Cold Hunt (2026) คดีเดือดเมืองมรณะ EP.1-18",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Cold-Hunt-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Cold-Hunt-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/rO1x8_ULd-Ybz",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Cold Hunt (2026) คดีเดือดเมืองมรณะ EP.1-18 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/rO1x8_ULd-Ybz"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133723",
+    "postId": "133723",
+    "originalUrl": "https://www.24hd.media/cold-hunt-2026"
+  },
+  {
+    "titleTh": "Resident Evil (2026) เรสซิเดนท์ อีวิล",
+    "titleEn": "Resident Evil (2026) เรสซิเดนท์ อีวิล",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Resident-Evil-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Resident-Evil-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/Gm-36_y553Wuq",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Resident Evil (2026) เรสซิเดนท์ อีวิล ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/Gm-36_y553Wuq"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133758",
+    "postId": "133758",
+    "originalUrl": "https://www.24hd.media/resident-evil-2026"
+  },
+  {
+    "titleTh": "The Last Kiss (2026)",
+    "titleEn": "The Last Kiss (2026)",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/The-Last-Kiss-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/The-Last-Kiss-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/efhC-YV_d3c0q",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง The Last Kiss (2026) ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/efhC-YV_d3c0q"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133761",
+    "postId": "133761",
+    "originalUrl": "https://www.24hd.media/the-last-kiss-2026/"
+  },
+  {
+    "titleTh": "Death Machine (1995) เอเลี่ยนเหล็ก",
+    "titleEn": "Death Machine (1995) เอเลี่ยนเหล็ก",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Death-Machine-1995.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Death-Machine-1995.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/PiJ-PUXLg_Ajl",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Death Machine (1995) เอเลี่ยนเหล็ก ปีที่ฉาย 1995 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/PiJ-PUXLg_Ajl"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133780",
+    "postId": "133780",
+    "originalUrl": "https://www.24hd.media/death-machine-1995"
+  },
+  {
+    "titleTh": "Full Eclipse (1993) มือปราบนิ้วเขมือบ",
+    "titleEn": "Full Eclipse (1993) มือปราบนิ้วเขมือบ",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Full-Eclipse-1993.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Full-Eclipse-1993.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/Ae_NA8GK-T4px",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Full Eclipse (1993) มือปราบนิ้วเขมือบ ปีที่ฉาย 1993 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/Ae_NA8GK-T4px"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133773",
+    "postId": "133773",
+    "originalUrl": "https://www.24hd.media/full-eclipse-1993"
+  },
+  {
+    "titleTh": "The Choice (2016) ถ้าเลือกได้ คือรักเธอ",
+    "titleEn": "The Choice (2016) ถ้าเลือกได้ คือรักเธอ",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/The-Choice-2016.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/The-Choice-2016.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/AA2s_5-4oN1tU",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง The Choice (2016) ถ้าเลือกได้ คือรักเธอ ปีที่ฉาย 2016 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/AA2s_5-4oN1tU"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133778",
+    "postId": "133778",
+    "originalUrl": "https://www.24hd.media/the-choice-2016"
+  },
+  {
+    "titleTh": "A Long Goodbye (2019)",
+    "titleEn": "A Long Goodbye (2019)",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/A-Long-Goodbye-2019.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/A-Long-Goodbye-2019.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/Iq-Pa_2inchjW",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง A Long Goodbye (2019) ปีที่ฉาย 2019 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/Iq-Pa_2inchjW"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133777",
+    "postId": "133777",
+    "originalUrl": "https://www.24hd.media/a-long-goodbye-2019/"
+  },
+  {
+    "titleTh": "Crayon Shinchan The Movie Super Hot The Spicy Kasukabe Dancers (2025) ชินจัง เดอะมูฟวี่ ร้อนแรงแซ่บเวอร์ แดนเซอร์แห่งคาซึคาเบะ",
+    "titleEn": "Crayon Shinchan The Movie Super Hot The Spicy Kasukabe Dancers (2025) ชินจัง เดอะมูฟวี่ ร้อนแรงแซ่บเวอร์ แดนเซอร์แห่งคาซึคาเบะ",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Crayon-Shinchan-the-Movie-Super-Hot-The-Spicy-Kasukabe-Dancers-2025.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Crayon-Shinchan-the-Movie-Super-Hot-The-Spicy-Kasukabe-Dancers-2025.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/h-MMd_odAgGjN",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Crayon Shinchan the Movie Super Hot The Spicy Kasukabe Dancers (2025) ชินจัง เดอะมูฟวี่ ร้อนแรงแซ่บเวอร์ แดนเซอร์แห่งคาซึคาเบะ ปีที่ฉาย",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/h-MMd_odAgGjN"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133801",
+    "postId": "133801",
+    "originalUrl": "https://www.24hd.media/crayon-shinchan-the-movie-super-hot-the-spicy-kasukabe-dancers-2025"
+  },
+  {
+    "titleTh": "The Doll (2026) EP.1-6",
+    "titleEn": "The Doll (2026) EP.1-6",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/The-Doll-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/The-Doll-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/PZbiEs_6-tiIM",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง The Doll (2026) EP.1-6 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/PZbiEs_6-tiIM"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133800",
+    "postId": "133800",
+    "originalUrl": "https://www.24hd.media/the-doll-2026"
+  },
+  {
+    "titleTh": "Juliet & Juliet (2026) จูเลียตแอนด์จูเลียต EP.1-10",
+    "titleEn": "Juliet & Juliet (2026) จูเลียตแอนด์จูเลียต EP.1-10",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Juliet-Juliet-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Juliet-Juliet-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/wrKR_ya9-Q0Ac",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Juliet &amp; Juliet (2026) จูเลียตแอนด์จูเลียต EP.1-10 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/wrKR_ya9-Q0Ac"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133799",
+    "postId": "133799",
+    "originalUrl": "https://www.24hd.media/juliet-juliet-2026"
+  },
+  {
+    "titleTh": "Neagley (2026) เนียลี่ย์ นักสืบคดีระทึก EP.1-8",
+    "titleEn": "Neagley (2026) เนียลี่ย์ นักสืบคดีระทึก EP.1-8",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Neagley-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Neagley-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/uP-xz_n7zi3QZ",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Neagley (2026) เนียลี่ย์ นักสืบคดีระทึก EP.1-8 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/uP-xz_n7zi3QZ"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133798",
+    "postId": "133798",
+    "originalUrl": "https://www.24hd.media/neagley-2026"
+  },
+  {
+    "titleTh": "Spring Of The Blade (2026) คมวสันต์ซ่อนรัก EP.1-30",
+    "titleEn": "Spring Of The Blade (2026) คมวสันต์ซ่อนรัก EP.1-30",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Spring-of-The-Blade-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Spring-of-The-Blade-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/fbQBes_VJn-R4",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Spring of The Blade (2026) คมวสันต์ซ่อนรัก EP.1-30 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/fbQBes_VJn-R4"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133810",
+    "postId": "133810",
+    "originalUrl": "https://www.24hd.media/spring-of-the-blade-2026"
+  },
+  {
+    "titleTh": "Plastic Beauty (2026) สวยพลาสติก EP.1-8",
+    "titleEn": "Plastic Beauty (2026) สวยพลาสติก EP.1-8",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/Plastic-Beauty-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/Plastic-Beauty-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/G_3pbxP-VicAf",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Plastic Beauty (2026) สวยพลาสติก EP.1-8 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/G_3pbxP-VicAf"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133841",
+    "postId": "133841",
+    "originalUrl": "https://www.24hd.media/plastic-beauty-2026"
+  },
+  {
+    "titleTh": "The Fixers (2026) เดอะ ฟิกเซอร์ส คู่หูล้างเงื่อนงำ EP.1-10",
+    "titleEn": "The Fixers (2026) เดอะ ฟิกเซอร์ส คู่หูล้างเงื่อนงำ EP.1-10",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/The-Fixers-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/The-Fixers-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/b_bdjuLf-ByDB",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง The Fixers (2026) เดอะ ฟิกเซอร์ส คู่หูล้างเงื่อนงำ EP.1-10 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/b_bdjuLf-ByDB"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133847",
+    "postId": "133847",
+    "originalUrl": "https://www.24hd.media/the-fixers-2026"
+  },
+  {
+    "titleTh": "The Scandal (2026) ฉาวโฉ่โชซอน EP.1-8",
+    "titleEn": "The Scandal (2026) ฉาวโฉ่โชซอน EP.1-8",
+    "year": 2026,
+    "poster": "https://www.24hd.media/wp-content/uploads/2026/09/The-Scandal-2026.webp",
+    "backdrop": "https://www.24hd.media/wp-content/uploads/2026/09/The-Scandal-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/R_XWoEpSx-uuU",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง The Scandal (2026) ฉาวโฉ่โชซอน EP.1-8 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.5,
+    "genres": [
+      "24HD.MEDIA",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.MEDIA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/R_XWoEpSx-uuU"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdmedia-133844",
+    "postId": "133844",
+    "originalUrl": "https://www.24hd.media/the-scandal-2026"
+  },
+  {
+    "titleTh": "Ghostfluencer (2026) สาปเมือง",
+    "titleEn": "Ghostfluencer (2026) สาปเมือง",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Ghostfluencer-2026-%E0%B8%AA%E0%B8%B2%E0%B8%9B%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Ghostfluencer-2026-%E0%B8%AA%E0%B8%B2%E0%B8%9B%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=de41919deb5156cd5b6e114b&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Ghostfluencer (2026) สาปเมือง (2026) พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 8.0,
+    "genres": [
+      "ยอดนิยม 2026",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/KlS5iOSq-RM",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "id": "24hdx-40707",
+    "postId": "40707",
+    "originalUrl": "https://www.24-hda.com/ghostfluencer/"
+  },
+  {
+    "titleTh": "All Wishes Come True! (2026) 8 เซียน ขอให้จึ้ง!",
+    "titleEn": "All Wishes Come True! (2026) 8 เซียน ขอให้จึ้ง!",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/All-Wishes-Come-True-2026-8-%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%99-%E0%B8%82%E0%B8%AD%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B8%88%E0%B8%B6%E0%B9%89%E0%B8%87.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/All-Wishes-Come-True-2026-8-%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%99-%E0%B8%82%E0%B8%AD%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B8%88%E0%B8%B6%E0%B9%89%E0%B8%87.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=18228a8a003c7311f263325b&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ All Wishes Come True! (2026) 8 เซียน ขอให้จึ้ง! (2026) พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 8.0,
+    "genres": [
+      "ยอดนิยม 2026",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/V4ccZ1K0Srk",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "id": "24hdx-40701",
+    "postId": "40701",
+    "originalUrl": "https://www.24-hda.com/all-wishes-come-true/"
+  },
+  {
     "titleTh": "Ghost in the Cell (2026) วัยหนุ่มคุกผี",
     "titleEn": "Ghost in the Cell (2026) วัยหนุ่มคุกผี",
     "year": 2026,
@@ -5444,7 +6234,7 @@ window.movies = [
       "พากย์ไทย",
       "GOSERIES4K"
     ],
-    "duration": "ซีรีส์ 8 ตอนจบ",
+    "duration": "ซีรีส์ 9 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "GOSERIES4K",
@@ -5456,7 +6246,8 @@ window.movies = [
       "ตอนที่ 5",
       "ตอนที่ 6",
       "ตอนที่ 7",
-      "ตอนที่ 8"
+      "ตอนที่ 8",
+      "ตอนที่ 9"
     ],
     "episodeUrls": {
       "1": "https://torbo007.com/embed/58cd723c5b2e210f66b62ec4e66e6fd2",
@@ -5466,7 +6257,8 @@ window.movies = [
       "5": "https://torbo007.com/embed/916ebfbbbd192f47c64399b1ebb2526c",
       "6": "https://torbo007.com/embed/7087e9e4e7635cf6da95d2832670365d",
       "7": "https://torbo007.com/embed/c2a12cf780071689d0d665f384670926",
-      "8": "https://torbo007.com/embed/a3b3a2a768a68cf513c363563768901f"
+      "8": "https://torbo007.com/embed/a3b3a2a768a68cf513c363563768901f",
+      "9": "https://torbo007.com/embed/3d82f8e3d5fe7dca5fed131eeea15310"
     },
     "languages": [
       "Thai (พากย์ไทย)"

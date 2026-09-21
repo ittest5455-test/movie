@@ -354,6 +354,11 @@
       key === 'Enter' || code === 13 || code === 23 || code === 66
     );
 
+    // ปล่อยให้ระบบจัดการ dropdown ของ select เองโดยไม่ดักจับปุ่มลูกศร/Enter
+    if (document.activeElement && document.activeElement.tagName === 'SELECT') {
+      return;
+    }
+
     if (isEnabled && isArrow) {
       e.preventDefault();
       ensureWindowFocus();

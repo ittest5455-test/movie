@@ -305,13 +305,12 @@
 
       <!-- Bottom Language & Episode Bar -->
       <div class="player-bottom-bar">
-        <select class="player-select-btn" id="audioSelectBtn" tabindex="0">
-          <option value="thai">พากย์ไทย</option>
-          <option value="soundtrack">ซับไทย</option>
-        </select>
-        <select class="player-select-btn" id="episodeSelectBtn" tabindex="0">
-          <option value="1">ตอนที่ 1</option>
-        </select>
+        <button class="player-select-btn" id="audioSelectBtn" tabindex="0" data-value="Thai">
+          <span>พากย์ไทย</span>
+        </button>
+        <button class="player-select-btn" id="episodeSelectBtn" tabindex="0" data-value="1">
+          <span>ตอนที่ 1</span>
+        </button>
         <button class="player-select-btn player-btn-play" id="playVideoBtn" tabindex="0">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
           <span>เล่น / หยุด</span>
@@ -323,6 +322,27 @@
       </div>
       <div class="player-hint-bar">
         💡 ใช้ปุ่มลูกศรเลือกตอน/ระบบเสียง แล้วกด <b>"เล่น / หยุด"</b> เพื่อเริ่มเล่นหรือพักหนัง | กดปุ่มย้อนกลับ (Back) บนรีโมทเพื่อกลับมาเลือกเรื่องอื่น
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Dropdown Modals for TV Compatibility -->
+  <div class="modal-overlay" id="episodesModal" role="dialog" aria-modal="true" aria-hidden="true" style="z-index: 1000000;">
+    <div class="modal-content auth-modal-content" style="max-width: 600px; padding: 2rem; border-radius: 16px; background: #0f172a; border: 1px solid rgba(56, 189, 248, 0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.8); position: relative; max-height: 85vh; display: flex; flex-direction: column;">
+      <button class="modal-close-btn" id="episodesModalCloseBtn" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; color: #94a3b8; cursor: pointer;">&times;</button>
+      <h2 style="font-size: 1.4rem; color: #fff; font-weight: bold; margin-bottom: 1.2rem; text-align: center;">เลือกตอน (EP)</h2>
+      <div id="episodesGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; overflow-y: auto; padding-right: 5px;">
+        <!-- Buttons injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="audioModal" role="dialog" aria-modal="true" aria-hidden="true" style="z-index: 1000000;">
+    <div class="modal-content auth-modal-content" style="max-width: 320px; padding: 2rem; border-radius: 16px; background: #0f172a; border: 1px solid rgba(56, 189, 248, 0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.8); position: relative;">
+      <button class="modal-close-btn" id="audioModalCloseBtn" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; color: #94a3b8; cursor: pointer;">&times;</button>
+      <h2 style="font-size: 1.4rem; color: #fff; font-weight: bold; margin-bottom: 1.2rem; text-align: center;">เลือกระบบเสียง</h2>
+      <div id="audioGrid" style="display: flex; flex-direction: column; gap: 10px;">
+        <!-- Buttons injected by JS -->
       </div>
     </div>
   </div>

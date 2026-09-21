@@ -623,27 +623,30 @@ function initMovieStreamApp() {
     const epInt = parseInt(startEpisode) || 1;
     currentActiveMovie.currentEpisode = epInt;
 
-    // Populate Episodes Select Box dynamically
-    if (episodeSelectBtn && movie.episodes && movie.episodes.length > 0) {
-      episodeSelectBtn.innerHTML = movie.episodes.map((ep, idx) => 
-        `<option value="${idx + 1}">${ep}</option>`
-      ).join("");
-      episodeSelectBtn.value = String(epInt);
-    } else if (episodeSelectBtn) {
-      episodeSelectBtn.innerHTML = `<option value="1">ตอนที่ 1</option>`;
-      episodeSelectBtn.value = "1";
+    // Populate Episodes Custom Button
+    if (episodeSelectBtn) {
+      const span = episodeSelectBtn.querySelector("span") || episodeSelectBtn;
+      if (movie.episodes && movie.episodes.length > 0) {
+        span.textContent = movie.episodes[epInt - 1] || ("ตอนที่ " + epInt);
+      } else {
+        span.textContent = "ตอนที่ 1";
+      }
+      episodeSelectBtn.dataset.value = String(epInt);
     }
 
     // Record continue watching immediately
     recordContinueWatching(movie, epInt);
 
-    // Populate Languages Select Box dynamically
-    if (audioSelectBtn && movie.languages && movie.languages.length > 0) {
-      audioSelectBtn.innerHTML = movie.languages.map(lang => 
-        `<option value="${lang}">${lang}</option>`
-      ).join("");
-    } else if (audioSelectBtn) {
-      audioSelectBtn.innerHTML = `<option value="Thai">Thai (พากย์ไทย)</option>`;
+    // Populate Languages Custom Button
+    if (audioSelectBtn) {
+      const span = audioSelectBtn.querySelector("span") || audioSelectBtn;
+      if (movie.languages && movie.languages.length > 0) {
+        span.textContent = movie.languages[0]; // Default to first lang
+        audioSelectBtn.dataset.value = movie.languages[0];
+      } else {
+        span.textContent = "Thai (พากย์ไทย)";
+        audioSelectBtn.dataset.value = "Thai";
+      }
     }
     
     // Resolve initial URL (if jumping directly to an episode from Continue Watching)
@@ -679,7 +682,7 @@ function initMovieStreamApp() {
 
       setTimeout(() => {
         const pBtn = document.getElementById("playVideoBtn");
-        if (pBtn) pBtn.focus();
+        if (pBtn && document.activeElement && document.activeElement.tagName !== 'SELECT') pBtn.focus();
       }, 150);
         
       showToast(`กำลังโหลดเล่นวิดีโอ: ${movie.titleTh}`, "success");
@@ -789,7 +792,7 @@ function initMovieStreamApp() {
 
     setTimeout(() => {
       const pBtn = document.getElementById("playVideoBtn");
-      if (pBtn) pBtn.focus();
+      if (pBtn && document.activeElement && document.activeElement.tagName !== 'SELECT') pBtn.focus();
     }, 150);
   }
 
@@ -845,7 +848,7 @@ function initMovieStreamApp() {
     }
 
     setTimeout(() => {
-      if (pBtn) pBtn.focus();
+      if (pBtn && document.activeElement && document.activeElement.tagName !== 'SELECT') pBtn.focus();
     }, 150);
   }
 
@@ -938,6 +941,11 @@ function initMovieStreamApp() {
       playerModal.classList.remove("player-controls-idle");
       playerModal.classList.remove("theater-fullscreen-mode");
     }
+    const epModal = document.getElementById("episodesModal");
+    const auModal = document.getElementById("audioModal");
+    if (epModal) epModal.style.display = "none";
+    if (auModal) auModal.style.display = "none";
+
     document.body.classList.remove("player-is-active");
     document.body.style.overflow = "";
 
@@ -1047,7 +1055,7 @@ function initMovieStreamApp() {
       // Save progress to Continue Watching periodically (every 5 seconds)
       if (currentActiveMovie && (!window._lastCwSync || Date.now() - window._lastCwSync > 5000)) {
         window._lastCwSync = Date.now();
-        const ep = parseInt(episodeSelectBtn ? episodeSelectBtn.value : 1) || 1;
+        const ep = parseInt(episodeSelectBtn ? (episodeSelectBtn.dataset.value || "1") : 1) || 1;
         recordContinueWatching(currentActiveMovie, ep, Math.round(percentage));
       }
     }
@@ -1545,27 +1553,176 @@ function initMovieStreamApp() {
       });
     }
 
-    // Audio & Episode Selection Listeners
+    // Custom Modals for TV Compatibility (Episodes & Audio)
+    const episodesModal = document.getElementById("episodesModal");
+    const audioModal = document.getElementById("audioModal");
+    const episodesGrid = document.getElementById("episodesGrid");
+    const audioGrid = document.getElementById("audioGrid");
+    
+    function closeAllPlayerModals() {
+      if (episodesModal) {
+        episodesModal.classList.remove("active");
+        episodesModal.style.display = "none";
+      }
+      if (audioModal) {
+        audioModal.classList.remove("active");
+        audioModal.style.display = "none";
+      }
+    }
+    
+    if (document.getElementById("episodesModalCloseBtn")) {
+      document.getElementById("episodesModalCloseBtn").addEventListener("click", closeAllPlayerModals);
+    }
+    if (document.getElementById("audioModalCloseBtn")) {
+      document.getElementById("audioModalCloseBtn").addEventListener("click", closeAllPlayerModals);
+    }
+    if (episodesModal) {
+      episodesModal.addEventListener("click", (e) => {
+        if (e.target === episodesModal) closeAllPlayerModals();
+      });
+    }
+    if (audioModal) {
+      audioModal.addEventListener("click", (e) => {
+        if (e.target === audioModal) closeAllPlayerModals();
+      });
+    }
 
     if (audioSelectBtn) {
-      audioSelectBtn.addEventListener("change", (e) => {
-        const lang = e.target.value.toLowerCase().includes("thai") ? "Thai" : "Sound Track";
-        const epVal = episodeSelectBtn ? episodeSelectBtn.value : "1";
-        if (currentActiveMovie && currentActiveMovie.postId) {
-          loadEpisode(currentActiveMovie.postId, epVal, lang, currentActiveMovie.titleEn || "");
+      audioSelectBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        let langs = [];
+        if (currentActiveMovie && Array.isArray(currentActiveMovie.languages) && currentActiveMovie.languages.length > 0) {
+          langs = currentActiveMovie.languages;
         } else {
-          showToast(`เปลี่ยนระบบเสียง: ${e.target.options[e.target.selectedIndex].text}`, "success");
+          langs = ["Thai (พากย์ไทย)", "Sound Track (ซับไทย)"];
+        }
+
+        const currentVal = audioSelectBtn.dataset.value || "Thai";
+
+        if (audioGrid) {
+          audioGrid.innerHTML = "";
+          langs.forEach(lang => {
+            const btn = document.createElement("button");
+            btn.className = "player-select-btn";
+            btn.style.width = "100%";
+            btn.style.margin = "0";
+            btn.style.padding = "0.75rem 1rem";
+            btn.style.fontSize = "1rem";
+            btn.style.borderRadius = "8px";
+            btn.style.cursor = "pointer";
+
+            const isSelected = currentVal && lang.toLowerCase().includes(currentVal.toLowerCase());
+            if (isSelected) {
+              btn.style.background = "#22c55e";
+              btn.style.borderColor = "#86efac";
+              btn.style.boxShadow = "0 0 12px rgba(34, 197, 94, 0.6)";
+              btn.textContent = `✓ ${lang}`;
+            } else {
+              btn.style.background = "#1e293b";
+              btn.textContent = lang;
+            }
+
+            btn.addEventListener("click", () => {
+              closeAllPlayerModals();
+              audioSelectBtn.dataset.value = lang;
+              const span = audioSelectBtn.querySelector("span") || audioSelectBtn;
+              span.textContent = lang;
+              
+              const l = lang.toLowerCase().includes("thai") ? "Thai" : "Sound Track";
+              const epVal = episodeSelectBtn ? (episodeSelectBtn.dataset.value || "1") : "1";
+              if (currentActiveMovie && currentActiveMovie.postId) {
+                loadEpisode(currentActiveMovie.postId, epVal, l, currentActiveMovie.titleEn || "");
+              } else {
+                showToast(`เลือกระบบเสียง: ${lang}`, "success");
+              }
+            });
+            audioGrid.appendChild(btn);
+          });
+        }
+
+        if (audioModal) {
+          audioModal.style.display = "flex";
+          audioModal.classList.add("active");
+          setTimeout(() => {
+            const first = audioGrid ? audioGrid.querySelector("button") : null;
+            if (first) first.focus();
+          }, 100);
         }
       });
     }
 
     if (episodeSelectBtn) {
-      episodeSelectBtn.addEventListener("change", (e) => {
-        const epNum = e.target.value;
-        const lang = audioSelectBtn && audioSelectBtn.value.toLowerCase().includes("thai") ? "Thai" : "Sound Track";
-        if (currentActiveMovie) {
-          loadEpisode(currentActiveMovie.postId || "", epNum, lang, currentActiveMovie.titleEn || "");
-          recordContinueWatching(currentActiveMovie, parseInt(epNum) || 1);
+      episodeSelectBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        let eps = [];
+        if (currentActiveMovie && Array.isArray(currentActiveMovie.episodes) && currentActiveMovie.episodes.length > 0) {
+          eps = currentActiveMovie.episodes;
+        } else if (currentActiveMovie && currentActiveMovie.episodeUrls && typeof currentActiveMovie.episodeUrls === "object") {
+          const keys = Object.keys(currentActiveMovie.episodeUrls);
+          if (keys.length > 0) {
+            eps = keys.map(k => "ตอนที่ " + k);
+          }
+        }
+        if (eps.length === 0) {
+          eps = ["ตอนที่ 1 (เต็มเรื่อง)"];
+        }
+
+        const currentEpVal = String(episodeSelectBtn.dataset.value || (currentActiveMovie ? currentActiveMovie.currentEpisode : "1") || "1");
+
+        if (episodesGrid) {
+          episodesGrid.innerHTML = "";
+          eps.forEach((ep, idx) => {
+            const epNum = String(idx + 1);
+            const btn = document.createElement("button");
+            btn.className = "player-select-btn";
+            btn.style.margin = "0";
+            btn.style.padding = "0.75rem 0.5rem";
+            btn.style.fontSize = "0.95rem";
+            btn.style.borderRadius = "8px";
+            btn.style.cursor = "pointer";
+            btn.style.display = "flex";
+            btn.style.alignItems = "center";
+            btn.style.justifyContent = "center";
+            btn.style.textAlign = "center";
+
+            const isCurrent = (epNum === currentEpVal);
+            if (isCurrent) {
+              btn.style.background = "#22c55e";
+              btn.style.borderColor = "#86efac";
+              btn.style.boxShadow = "0 0 12px rgba(34, 197, 94, 0.6)";
+              btn.textContent = `▶ ${ep}`;
+            } else {
+              btn.style.background = "#1e293b";
+              btn.textContent = ep;
+            }
+
+            btn.addEventListener("click", () => {
+              closeAllPlayerModals();
+              episodeSelectBtn.dataset.value = epNum;
+              const span = episodeSelectBtn.querySelector("span") || episodeSelectBtn;
+              span.textContent = ep;
+              
+              const l = audioSelectBtn && (audioSelectBtn.dataset.value || "").toLowerCase().includes("thai") ? "Thai" : "Sound Track";
+              if (currentActiveMovie) {
+                loadEpisode(currentActiveMovie.postId || "", epNum, l, currentActiveMovie.titleEn || "");
+                recordContinueWatching(currentActiveMovie, parseInt(epNum) || 1);
+              }
+            });
+            episodesGrid.appendChild(btn);
+          });
+        }
+
+        if (episodesModal) {
+          episodesModal.style.display = "flex";
+          episodesModal.classList.add("active");
+          setTimeout(() => {
+            const activeBtn = episodesGrid ? (episodesGrid.querySelector("button[style*='22c55e']") || episodesGrid.querySelector("button")) : null;
+            if (activeBtn) activeBtn.focus();
+          }, 100);
         }
       });
     }
@@ -1609,9 +1766,9 @@ function initMovieStreamApp() {
       }
 
       // 3. Fallback: Initialize playback for currently selected episode
-      const epNum = episodeSelectBtn ? episodeSelectBtn.value : "1";
+      const epNum = episodeSelectBtn ? (episodeSelectBtn.dataset.value || "1") : "1";
       if (currentActiveMovie) {
-        const lang = audioSelectBtn && audioSelectBtn.value.toLowerCase().includes("thai") ? "Thai" : "Sound Track";
+        const lang = audioSelectBtn && (audioSelectBtn.dataset.value || "").toLowerCase().includes("thai") ? "Thai" : "Sound Track";
         loadEpisode(currentActiveMovie.postId || "", epNum, lang, currentActiveMovie.titleEn || "");
       }
     }
@@ -1677,6 +1834,8 @@ function initMovieStreamApp() {
     const playerBottomBar = document.querySelector(".player-bottom-bar");
     if (playerBottomBar) {
       playerBottomBar.addEventListener("keydown", (e) => {
+        if (document.activeElement && document.activeElement.tagName === 'SELECT') return;
+        
         const code = e.keyCode || e.which;
         if (e.key === "ArrowUp" || code === 38 || e.key === "Up") {
           e.preventDefault();
@@ -1722,7 +1881,16 @@ function initMovieStreamApp() {
     document.addEventListener("keydown", (e) => {
       const code = e.keyCode || e.which;
       if (e.key === "Escape" || code === 27 || code === 4 || e.key === "GoBack" || e.key === "Back" || code === 10009) {
-        if (playerModal && playerModal.classList.contains("active")) {
+        if (document.activeElement && document.activeElement.tagName === 'SELECT') {
+          document.activeElement.blur();
+          e.preventDefault();
+          return;
+        }
+        
+        if ((episodesModal && (episodesModal.classList.contains("active") || episodesModal.style.display === "flex")) || (audioModal && (audioModal.classList.contains("active") || audioModal.style.display === "flex"))) {
+          e.preventDefault();
+          closeAllPlayerModals();
+        } else if (playerModal && playerModal.classList.contains("active")) {
           e.preventDefault();
           closePlayer();
         } else if (detailsModal && detailsModal.classList.contains("active")) {
