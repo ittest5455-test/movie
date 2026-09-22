@@ -1956,6 +1956,15 @@ function initMovieStreamApp() {
       } else if (genre === "24HDX" || genre === "GOSERIES4K") {
         const sourceMovies = movieList.filter(m => m.source === genre);
         showGridView(`📌 รวมภาพยนตร์ & ซีรีส์จาก ${genre} (${sourceMovies.length} เรื่อง)`, sourceMovies);
+      } else if (genre === "ละครไทย") {
+        const dramaMovies = movieList.filter(m => (m.genres && (m.genres.includes("ละครไทย") || m.genres.includes("ละครไทย ย้อนหลัง"))) || (m.titleTh && (m.titleTh.includes("ละคร") || m.titleTh.includes("EP"))));
+        showGridView(`🎭 รวมดูละครไทย ย้อนหลัง (${dramaMovies.length} เรื่อง)`, dramaMovies);
+      } else if (genre === "พากย์ไทย") {
+        const thaiMovies = movieList.filter(m => (m.genres && m.genres.includes("พากย์ไทย")) || (m.languages && m.languages.some(l => l.includes("Thai"))));
+        showGridView(`🔊 รวมภาพยนตร์ & ซีรีส์พากย์ไทย (${thaiMovies.length} เรื่อง)`, thaiMovies);
+      } else if (genre === "WOW-DRAMA") {
+        const wowMovies = movieList.filter(m => m.source === "WOW-DRAMA" || (m.genres && m.genres.includes("WOW-DRAMA")));
+        showGridView(`📺 รวมละครไทยและซีรีส์จาก WOW-DRAMA (${wowMovies.length} เรื่อง)`, wowMovies);
       } else {
         const filtered = movieList.filter(m => m.genres && (m.genres.includes(genre) || m.genres.some(g => g.includes(genre))));
         showGridView(`หมวดหมู่ภาพยนตร์: ${genre}`, filtered);

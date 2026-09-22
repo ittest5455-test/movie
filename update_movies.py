@@ -529,6 +529,183 @@ def update_goseries4k():
             
     return new_series
 
+def update_wow_drama(max_pages=2):
+    """
+    ดึงข้อมูลละครไทยย้อนหลังและซีรีส์พากย์ไทยจาก WOW-DRAMA (https://wow-drama.com/)
+    ครอบคลุม:
+      1. ดูละครไทย ย้อนหลัง (the-series-th & cat_category ดูละครไทย-ย้อนหลัง)
+      2. ซีรีส์จีนพากย์ไทย (cn-2024-th)
+      3. ซีรีส์เกาหลีพากย์ไทย (korea-thai-sound)
+      4. ซีรีส์ญี่ปุ่นพากย์ไทย (jp-thai-sound)
+    """
+    print("\n--- กำลังตรวจสอบละครไทยย้อนหลังและซีรีส์พากย์ไทยจาก WOW-DRAMA ---")
+    categories = [
+        ("ละครไทย", "https://wow-drama.com/cat_category/%e0%b8%94%e0%b8%b9%e0%b8%a5%e0%b8%b0%e0%b8%84%e0%b8%a3%e0%b9%84%e0%b8%97%e0%b8%a2-%e0%b8%a2%e0%b9%89%e0%b8%ad%e0%b8%99%e0%b8%ab%e0%b8%a5%e0%b8%b1%e0%b8%87/"),
+        ("ละครไทย", "https://wow-drama.com/category/the-series-th/"),
+        ("ซีรีส์จีนพากย์ไทย", "https://wow-drama.com/cat_category/cn-2024-th/"),
+        ("ซีรีส์เกาหลีพากย์ไทย", "https://wow-drama.com/cat_category/korea-thai-sound/"),
+        ("ซีรีส์ญี่ปุ่นพากย์ไทย", "https://wow-drama.com/cat_category/jp-thai-sound/")
+    ]
+    
+    new_items = []
+    seen_links = set()
+    
+    for cat_name, cat_url in categories:
+        print(f"\n[*] ดึงหมวดหมู่ WOW-DRAMA: {cat_name}")
+        for page in range(1, max_pages + 1):
+            p_url = cat_url if page == 1 else f"{cat_url}page/{page}/"
+            try:
+                req = urllib.request.Request(p_url, headers=HEADERS)
+                with urllib.request.urlopen(req, timeout=10) as resp:
+                    page_html = resp.read().decode('utf-8', errors='ignore')
+            except Exception as e:
+                print(f"  [-] ข้อผิดพลาดหน้า {page} ({cat_name}): {e}")
+                break
+                
+            items = re.findall(r'<a[^>]+href=["\'](https?://wow-drama\.com/[^"\'#/]+/?)["\'][^>]*>', page_html)
+            page_links = []
+            for l in items:
+                if any(x in l for x in ['category', 'cat_category', 'tag', 'page', 'wp-']) or l == 'https://wow-drama.com/':
+                    continue
+                if l not in seen_links:
+                    seen_links.add(l)
+                    page_links.append(l)
+                    
+            print(f"  หน้า {page}: พบ {len(page_links)} เรื่อง")
+            
+            for link in page_links:
+                try:
+                    m_req = urllib.request.Request(link, headers=HEADERS)
+                    with urllib.request.urlopen(m_req, timeout=8) as m_resp:
+                        m_html = m_resp.read().decode('utf-8', errors='ignore')
+                        
+                    og_title = re.search(r'<meta property="og:title" content="([^"]+)"', m_html)
+                    raw_title = og_title.group(1) if og_title else ""
+                    raw_title = html.unescape(raw_title)
+                    
+                    # Clean title
+                    title = re.sub(r'^(ฟรี|HD|Zoom|ดูซีรี่[ยส]์?|ดูซีรีส์|ซีรี่[ยส]์?|ซีรีส์|ดูละคร|ละคร|ดูหนัง)\s*(ไทย|จีน|เกาหลี|ญี่ปุ่น)?\s*[:|]?\s*', '', raw_title, flags=re.IGNORECASE).strip()
+                    title = re.sub(r'\s*(\(พากย์ไทย/ซับไทย\)|\(พากย์ไทย\)|พากย์ไทย\+ซับ|พากย์ไทย/ซับไทย|พากย์ไทย|ซับไทย\s*\|\s*พากย์ไทย|ซับไทย|ครบทุกตอน|จบเรื่อง|เต็มเรื่อง|จบ\s*G4|G4|HD|Full HD|EP[\s\.\d\-]+|ตอนที่[\s\.\d\-]+|ตอนจบ|\(ตอนจบ\)|\(จบ\))\s*$', '', title, flags=re.IGNORECASE).strip()
+                    title = re.sub(r'\s*[:|]\s*$', '', title).strip()
+                    
+                    if not title:
+                        continue
+                        
+                    og_img = re.search(r'<meta property="og:image" content="([^"]+)"', m_html)
+                    poster = og_img.group(1) if og_img else ""
+                    safe_poster = safe_url(poster)
+                    
+                    og_desc = re.search(r'<meta property="og:description" content="([^"]+)"', m_html)
+                    desc = og_desc.group(1) if og_desc else f"ดู {title} พากย์ไทย ละครไทยย้อนหลัง เต็มเรื่อง HD"
+                    
+                    year_m = re.search(r'\b(202[0-9])\b', title + " " + raw_title + " " + link)
+                    year = int(year_m.group(1)) if year_m else 2026
+                    
+                    ep_data_m = re.search(r'var epData\s*=\s*(\{.*?\});', m_html, re.DOTALL)
+                    nonce_m = re.search(r'var miruNonce\s*=\s*["\']([^"\']+)["\']', m_html)
+                    ajax_m = re.search(r'var miruAjaxUrl\s*=\s*["\']([^"\']+)["\']', m_html)
+                    post_id_m = re.search(r'var parentPostId\s*=\s*["\']([^"\']+)["\']', m_html) or re.search(r'post-(\d+)', m_html)
+                    
+                    post_id = post_id_m.group(1) if post_id_m else str(abs(hash(link)))[:6]
+                    nonce = nonce_m.group(1) if nonce_m else ""
+                    ajax_url = ajax_m.group(1) if ajax_m else "https://wow-drama.com/wp-admin/admin-ajax.php"
+                    
+                    if not ep_data_m or not nonce:
+                        continue
+                        
+                    ep_json = json.loads(ep_data_m.group(1))
+                    if not ep_json:
+                        continue
+                        
+                    api_headers = {
+                        'User-Agent': HEADERS['User-Agent'],
+                        'Referer': link,
+                        'Origin': 'https://wow-drama.com',
+                        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                    
+                    def fetch_single_ep(args):
+                        idx, ep_id, ep_info = args
+                        direct_embed = ep_info.get("embed", "")
+                        if direct_embed:
+                            return str(idx), direct_embed
+                        data = urllib.parse.urlencode({
+                            'action': 'miru_get_api_player_url',
+                            'ep_id': ep_id,
+                            'server_idx': '0',
+                            'nonce': nonce
+                        }).encode('utf-8')
+                        try:
+                            api_req = urllib.request.Request(ajax_url, data=data, headers=api_headers)
+                            with urllib.request.urlopen(api_req, timeout=6) as api_resp:
+                                api_res = json.loads(api_resp.read().decode('utf-8'))
+                                if api_res.get('success') and api_res.get('data', {}).get('url'):
+                                    return str(idx), api_res['data']['url']
+                        except Exception:
+                            pass
+                        return str(idx), None
+
+                    from concurrent.futures import ThreadPoolExecutor
+                    tasks = [(i, eid, einfo) for i, (eid, einfo) in enumerate(ep_json.items(), 1)]
+                    with ThreadPoolExecutor(max_workers=12) as executor:
+                        ep_results = executor.map(fetch_single_ep, tasks)
+                    
+                    ep_urls = {k: v for k, v in ep_results if v}
+                        
+                    if not ep_urls:
+                        continue
+                        
+                    total_eps = len(ep_urls)
+                    first_video = ep_urls.get("1", "")
+                    
+                    genres = ["พากย์ไทย", "WOW-DRAMA"]
+                    if cat_name == "ละครไทย":
+                        genres.extend(["ละครไทย", "ละครไทย ย้อนหลัง"])
+                    elif "จีน" in cat_name:
+                        genres.extend(["ซีรีส์จีน", "ซีรีส์จีน พากย์ไทย"])
+                    elif "เกาหลี" in cat_name:
+                        genres.extend(["ซีรีส์เกาหลี", "ซีรีส์เกาหลี พากย์ไทย"])
+                    elif "ญี่ปุ่น" in cat_name:
+                        genres.extend(["ซีรีส์ญี่ปุ่น", "ซีรีส์ญี่ปุ่น พากย์ไทย"])
+                        
+                    if year == 2026:
+                        genres.append("ซีรีส์ใหม่ 2026")
+                        
+                    duration_str = f"ซีรีส์ {total_eps} ตอนจบ" if total_eps > 1 else "ภาพยนตร์"
+                    ep_list = [f"ตอนที่ {i}" for i in range(1, total_eps + 1)] if total_eps > 1 else ["เต็มเรื่อง"]
+                    
+                    item_obj = {
+                        "titleTh": title,
+                        "titleEn": title,
+                        "year": year,
+                        "poster": safe_poster,
+                        "backdrop": safe_poster,
+                        "videoUrl": first_video,
+                        "sourceType": "embed",
+                        "description": desc,
+                        "rating": 8.7,
+                        "genres": genres,
+                        "duration": duration_str,
+                        "trailerUrl": "",
+                        "cast": [],
+                        "source": "WOW-DRAMA",
+                        "episodes": ep_list,
+                        "episodeUrls": ep_urls,
+                        "languages": ["Thai (พากย์ไทย)"],
+                        "id": f"wow-{post_id}",
+                        "postId": post_id,
+                        "originalUrl": link
+                    }
+                    new_items.append(item_obj)
+                    print(f"    [+] WOW-DRAMA: {title} ({total_eps} ตอน)")
+                    time.sleep(0.06)
+                except Exception:
+                    pass
+                    
+    print(f"\n[✓] รวมดึงได้ทั้งหมด: {len(new_items)} เรื่องจาก WOW-DRAMA")
+    return new_items
+
 def main():
     print("=" * 60)
     print("🚀 เริ่มต้นระบบอัปเดตภาพยนตร์และซีรีส์ใหม่ล่าสุด...")
@@ -542,6 +719,7 @@ def main():
     scraped_24hda = update_24hda()
     scraped_media = update_24hd_media()
     scraped_gs = update_goseries4k()
+    scraped_wow = update_wow_drama(max_pages=2)
     
     # 2. Merge intelligently
     existing_map = {m.get("originalUrl", m.get("id", "")): m for m in existing}
@@ -552,7 +730,7 @@ def main():
     added_new = 0
     updated_eps = 0
     
-    all_new_items = scraped_top + scraped_media + scraped_24hda + scraped_gs
+    all_new_items = scraped_top + scraped_media + scraped_24hda + scraped_gs + scraped_wow
     
     for item in all_new_items:
         key = item.get("originalUrl", item.get("id", ""))
