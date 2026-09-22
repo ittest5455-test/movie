@@ -1,5 +1,500 @@
-// ฐานข้อมูลภาพยนตร์รวม 24-HD, GOSERIES4K และ WOW-DRAMA (ละครไทยย้อนหลัง & พากย์ไทย)
+// ฐานข้อมูลภาพยนตร์รวม 24-HD, GOSERIES4K และ WOW-DRAMA (อัปเดตล่าสุด 2026)
 window.movies = [
+  {
+    "titleTh": "Beast Race (2026) เกมนรก สัตว์เดือด",
+    "titleEn": "Beast Race (2026) เกมนรก สัตว์เดือด",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/Beast-Race-2026-%E0%B9%80%E0%B8%81%E0%B8%A1%E0%B8%99%E0%B8%A3%E0%B8%81-%E0%B8%AA%E0%B8%B1%E0%B8%95%E0%B8%A7%E0%B9%8C%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD%E0%B8%94-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/Beast-Race-2026-%E0%B9%80%E0%B8%81%E0%B8%A1%E0%B8%99%E0%B8%A3%E0%B8%81-%E0%B8%AA%E0%B8%B1%E0%B8%95%E0%B8%A7%E0%B9%8C%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD%E0%B8%94-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=d96b9036a3a5a97f0430a0c9&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Beast Race (2026) เกมนรก สัตว์เดือด พากย์ไทย เต็มเรื่อง HD",
+    "rating": 7.8,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026",
+      "หนังชนโรง"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/SSEFqn2_meo",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=d96b9036a3a5a97f0430a0c9&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40318",
+    "postId": "40318",
+    "originalUrl": "https://www.24-hda.com/beast-race/"
+  },
+  {
+    "titleTh": "Almost Human (2026) แฟนสาวมนุษย์กล",
+    "titleEn": "Almost Human (2026) แฟนสาวมนุษย์กล",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/08/Almost-Human-2026-%E0%B9%81%E0%B8%9F%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%A7%E0%B8%A1%E0%B8%99%E0%B8%B8%E0%B8%A9%E0%B8%A2%E0%B9%8C%E0%B8%81%E0%B8%A5-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/08/Almost-Human-2026-%E0%B9%81%E0%B8%9F%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%A7%E0%B8%A1%E0%B8%99%E0%B8%B8%E0%B8%A9%E0%B8%A2%E0%B9%8C%E0%B8%81%E0%B8%A5-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=92dbb9a1fd2c9937c9079db7&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Almost Human (2026) แฟนสาวมนุษย์กล พากย์ไทย เต็มเรื่อง HD",
+    "rating": 7.8,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026",
+      "หนังชนโรง"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/KxLfhv2iOjY",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=92dbb9a1fd2c9937c9079db7&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40459",
+    "postId": "40459",
+    "originalUrl": "https://www.24-hda.com/almost-human-2026/"
+  },
+  {
+    "titleTh": "Tell the World I Love You (2022) บอกโลกให้รู้ว่า กูรักมึง",
+    "titleEn": "Tell the World I Love You (2022) บอกโลกให้รู้ว่า กูรักมึง",
+    "year": 2022,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Tell-the-World-I-Love-You-2022-%E0%B8%9A%E0%B8%AD%E0%B8%81%E0%B9%82%E0%B8%A5%E0%B8%81%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%A7%E0%B9%88%E0%B8%B2-%E0%B8%81%E0%B8%B9%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A1%E0%B8%B6%E0%B8%87-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Tell-the-World-I-Love-You-2022-%E0%B8%9A%E0%B8%AD%E0%B8%81%E0%B9%82%E0%B8%A5%E0%B8%81%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%A7%E0%B9%88%E0%B8%B2-%E0%B8%81%E0%B8%B9%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A1%E0%B8%B6%E0%B8%87-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=32ca35bf5b03ab67f2e0c8e8&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Tell the World I Love You (2022) บอกโลกให้รู้ว่า กูรักมึง พากย์ไทย เต็มเรื่อง HD",
+    "rating": 7.8,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2022",
+      "หนังชนโรง"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/jud4PRL7V-Q",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=32ca35bf5b03ab67f2e0c8e8&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40574",
+    "postId": "40574",
+    "originalUrl": "https://www.24-hda.com/tell-the-world-i-love-you/"
+  },
+  {
+    "titleTh": "The Floor Plan (2024) บ้านวิกล",
+    "titleEn": "The Floor Plan (2024) บ้านวิกล",
+    "year": 2024,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Floor-Plan-2024-%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%A7%E0%B8%B4%E0%B8%81%E0%B8%A5-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Floor-Plan-2024-%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%A7%E0%B8%B4%E0%B8%81%E0%B8%A5-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=3e2c8302a3728b7940818820&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี The Floor Plan (2024) บ้านวิกล พากย์ไทย เต็มเรื่อง HD",
+    "rating": 7.8,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2024",
+      "หนังชนโรง"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/Z2B1f-iubTU",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=3e2c8302a3728b7940818820&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40577",
+    "postId": "40577",
+    "originalUrl": "https://www.24-hda.com/the-floor-plan/"
+  },
+  {
+    "titleTh": "Gandhari (2026) แม่ผู้ล่าในเงามืด",
+    "titleEn": "Gandhari (2026) แม่ผู้ล่าในเงามืด",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Gandhari-2026-%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B9%83%E0%B8%99%E0%B9%80%E0%B8%87%E0%B8%B2%E0%B8%A1%E0%B8%B7%E0%B8%94-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Gandhari-2026-%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B9%83%E0%B8%99%E0%B9%80%E0%B8%87%E0%B8%B2%E0%B8%A1%E0%B8%B7%E0%B8%94-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=93f15cfdffb78ceba3dbbfd2&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Gandhari (2026) แม่ผู้ล่าในเงามืด พากย์ไทย เต็มเรื่อง HD",
+    "rating": 7.8,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026",
+      "หนังชนโรง"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/zV1vBe6GIjM",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=93f15cfdffb78ceba3dbbfd2&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40597",
+    "postId": "40597",
+    "originalUrl": "https://www.24-hda.com/gandhari/"
+  },
+  {
+    "titleTh": "Solitary Gourmet New Year Special 2026 (2026) โกโร่ อร่อยฉายเดี่ยว สเปเชียล ปีใหม่ 2026",
+    "titleEn": "Solitary Gourmet New Year Special 2026 (2026) โกโร่ อร่อยฉายเดี่ยว สเปเชียล ปีใหม่ 2026",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Solitary-Gourmet-2025-New-Years-Eve-Special-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Solitary-Gourmet-2025-New-Years-Eve-Special-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=a8b397525a46b4709c04c3eb&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Solitary Gourmet New Year Special 2026 (2026) โกโร่ อร่อยฉายเดี่ยว สเปเชียล ปีใหม่ 2026 พากย์ไทย เต็มเรื่อง HD",
+    "rating": 7.8,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026",
+      "หนังชนโรง"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/mDwIUtT089k",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=a8b397525a46b4709c04c3eb&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40603",
+    "postId": "40603",
+    "originalUrl": "https://www.24-hda.com/solitary-gourmet-new-year-specia/"
+  },
+  {
+    "titleTh": "The Monkey Hero (2026) เห้งเจียแจ๊ส",
+    "titleEn": "The Monkey Hero (2026) เห้งเจียแจ๊ส",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Monkey-Hero-2026-%E0%B9%80%E0%B8%AB%E0%B9%89%E0%B8%87%E0%B9%80%E0%B8%88%E0%B8%B5%E0%B8%A2%E0%B9%81%E0%B8%88%E0%B9%8A%E0%B8%AA-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Monkey-Hero-2026-%E0%B9%80%E0%B8%AB%E0%B9%89%E0%B8%87%E0%B9%80%E0%B8%88%E0%B8%B5%E0%B8%A2%E0%B9%81%E0%B8%88%E0%B9%8A%E0%B8%AA-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=47728e1c453de9b798ae2937&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี The Monkey Hero (2026) เห้งเจียแจ๊ส พากย์ไทย เต็มเรื่อง HD",
+    "rating": 7.8,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026",
+      "หนังชนโรง"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/GxklWfXfhqo",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=47728e1c453de9b798ae2937&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40618",
+    "postId": "40618",
+    "originalUrl": "https://www.24-hda.com/the-monkey-hero/"
+  },
+  {
+    "titleTh": "The Shallows (2025) มฤตยูน้ำตื้น",
+    "titleEn": "The Shallows (2025) มฤตยูน้ำตื้น",
+    "year": 2025,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Shallows-2025-%E0%B8%A1%E0%B8%A4%E0%B8%95%E0%B8%A2%E0%B8%B9%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%B7%E0%B9%89%E0%B8%99-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Shallows-2025-%E0%B8%A1%E0%B8%A4%E0%B8%95%E0%B8%A2%E0%B8%B9%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%B7%E0%B9%89%E0%B8%99-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=df036b80724408d61a662a27&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี The Shallows (2025) มฤตยูน้ำตื้น พากย์ไทย เต็มเรื่อง HD",
+    "rating": 7.8,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2025",
+      "หนังชนโรง"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/PoilwIOI2Dc",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=df036b80724408d61a662a27&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40627",
+    "postId": "40627",
+    "originalUrl": "https://www.24-hda.com/the-shallows-2025/"
+  },
+  {
+    "titleTh": "Vjeran Tomic The Spider-Man of Paris (2023) เวรัน โทมิช สไปเดอร์แมน แห่งปารีส",
+    "titleEn": "Vjeran Tomic The Spider-Man of Paris (2023) เวรัน โทมิช สไปเดอร์แมน แห่งปารีส",
+    "year": 2023,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2023/10/Vjeran-Tomic-The-Spider-Man-of-Paris-2023-%E0%B9%80%E0%B8%A7%E0%B8%A3%E0%B8%B1%E0%B8%99-%E0%B9%82%E0%B8%97%E0%B8%A1%E0%B8%B4%E0%B8%8A-%E0%B8%AA%E0%B9%84%E0%B8%9B%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%81%E0%B8%A1%E0%B8%99-%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%9B%E0%B8%B2%E0%B8%A3%E0%B8%B5%E0%B8%AA-187x269.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2023/10/Vjeran-Tomic-The-Spider-Man-of-Paris-2023-%E0%B9%80%E0%B8%A7%E0%B8%A3%E0%B8%B1%E0%B8%99-%E0%B9%82%E0%B8%97%E0%B8%A1%E0%B8%B4%E0%B8%8A-%E0%B8%AA%E0%B9%84%E0%B8%9B%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%81%E0%B8%A1%E0%B8%99-%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%9B%E0%B8%B2%E0%B8%A3%E0%B8%B5%E0%B8%AA-187x269.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=749740cbf91850f6e21f3563&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Vjeran Tomic The Spider-Man of Paris (2023) เวรัน โทมิช สไปเดอร์แมน แห่งปารีส พากย์ไทย เต็มเรื่อง HD",
+    "rating": 7.8,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2023",
+      "หนังชนโรง"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/O0kdR4yRJmw",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=749740cbf91850f6e21f3563&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-27157",
+    "postId": "27157",
+    "originalUrl": "https://www.24-hda.com/vjeran-tomic-the-spider-man-of-paris/"
+  },
+  {
+    "titleTh": "Elevator Game (2023) ลิฟต์ซ่อนผี",
+    "titleEn": "Elevator Game (2023) ลิฟต์ซ่อนผี",
+    "year": 2023,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2024/05/Elevator-Game-2023-%E0%B8%A5%E0%B8%B4%E0%B8%9F%E0%B8%95%E0%B9%8C%E0%B8%8B%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%9C%E0%B8%B5-1-187x269.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2024/05/Elevator-Game-2023-%E0%B8%A5%E0%B8%B4%E0%B8%9F%E0%B8%95%E0%B9%8C%E0%B8%8B%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%9C%E0%B8%B5-1-187x269.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=184228e446b9762054bbf1de&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Elevator Game (2023) ลิฟต์ซ่อนผี พากย์ไทย เต็มเรื่อง HD",
+    "rating": 7.8,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2023",
+      "หนังชนโรง"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/C0ibkRcleXo",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=184228e446b9762054bbf1de&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-31296",
+    "postId": "31296",
+    "originalUrl": "https://www.24-hda.com/elevator-game/"
+  },
+  {
+    "titleTh": "My Sassy Girl (2001) ยัยตัวร้ายกับนายเจี๋ยมเจี้ยม",
+    "titleEn": "My Sassy Girl (2001) ยัยตัวร้ายกับนายเจี๋ยมเจี้ยม",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/05/My-Sassy-Girl-2001-%E0%B8%A2%E0%B8%B1%E0%B8%A2%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%99%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%88%E0%B8%B5%E0%B9%8B%E0%B8%A2%E0%B8%A1%E0%B9%80%E0%B8%88%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%A1-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/05/My-Sassy-Girl-2001-%E0%B8%A2%E0%B8%B1%E0%B8%A2%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%99%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%88%E0%B8%B5%E0%B9%8B%E0%B8%A2%E0%B8%A1%E0%B9%80%E0%B8%88%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%A1-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=48d43ab63e575311d610efe0&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี My Sassy Girl (2001) ยัยตัวร้ายกับนายเจี๋ยมเจี้ยม พากย์ไทย เต็มเรื่อง HD",
+    "rating": 7.8,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026",
+      "หนังชนโรง"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/4lnyW3vIGvI",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=48d43ab63e575311d610efe0&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-39240",
+    "postId": "39240",
+    "originalUrl": "https://www.24-hda.com/my-sassy-girl/"
+  },
+  {
+    "titleTh": "My Dear Bodyguard (2022) หญิงแกร่งบอดี้การ์ด",
+    "titleEn": "My Dear Bodyguard (2022) หญิงแกร่งบอดี้การ์ด",
+    "year": 2022,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2022/11/My-Dear-Bodyguard-2022-187x269.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2022/11/My-Dear-Bodyguard-2022-187x269.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=878c07ee3232534e12dbe608&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี My Dear Bodyguard (2022) หญิงแกร่งบอดี้การ์ด พากย์ไทย เต็มเรื่อง HD",
+    "rating": 7.8,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2022",
+      "หนังชนโรง"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/N1XWCuCR5Z8",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=878c07ee3232534e12dbe608&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-17216",
+    "postId": "17216",
+    "originalUrl": "https://www.24-hda.com/my-dear-bodyguard/"
+  },
+  {
+    "titleTh": "Don’t Let’s Go to the Dogs Tonight (2025) โลกวัยเยาว์ ใต้เงาไฟสงคราม",
+    "titleEn": "Don’t Let’s Go to the Dogs Tonight (2025) โลกวัยเยาว์ ใต้เงาไฟสงคราม",
+    "year": 2025,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Dont-Lets-Go-to-the-Dogs-Tonight-2025-%E0%B9%82%E0%B8%A5%E0%B8%81%E0%B8%A7%E0%B8%B1%E0%B8%A2%E0%B9%80%E0%B8%A2%E0%B8%B2%E0%B8%A7%E0%B9%8C-%E0%B9%83%E0%B8%95%E0%B9%89%E0%B9%80%E0%B8%87%E0%B8%B2%E0%B9%84%E0%B8%9F%E0%B8%AA%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%A1-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Dont-Lets-Go-to-the-Dogs-Tonight-2025-%E0%B9%82%E0%B8%A5%E0%B8%81%E0%B8%A7%E0%B8%B1%E0%B8%A2%E0%B9%80%E0%B8%A2%E0%B8%B2%E0%B8%A7%E0%B9%8C-%E0%B9%83%E0%B8%95%E0%B9%89%E0%B9%80%E0%B8%87%E0%B8%B2%E0%B9%84%E0%B8%9F%E0%B8%AA%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%A1-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=8204fc4d41ffa605ca3e468c&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Don&#8217;t Let&#8217;s Go to the Dogs Tonight (2025) โลกวัยเยาว์ ใต้เงาไฟสงคราม พากย์ไทย เต็มเรื่อง HD",
+    "rating": 7.8,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2025",
+      "หนังชนโรง"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/WoDuyG6jLyA",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=8204fc4d41ffa605ca3e468c&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40702",
+    "postId": "40702",
+    "originalUrl": "https://www.24-hda.com/dont-lets-go-to-the-dogs-tonight/"
+  },
+  {
+    "titleTh": "Black Hunting (2023) ล่าทมิฬ",
+    "titleEn": "Black Hunting (2023) ล่าทมิฬ",
+    "year": 2023,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2023/04/Black-Hunting-2023-%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%97%E0%B8%A1%E0%B8%B4%E0%B8%AC-187x269.jpg",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2023/04/Black-Hunting-2023-%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%97%E0%B8%A1%E0%B8%B4%E0%B8%AC-187x269.jpg",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=0cdb6a8262e3b354c82092b6&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Black Hunting (2023) ล่าทมิฬ พากย์ไทย เต็มเรื่อง HD",
+    "rating": 7.8,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2023",
+      "หนังชนโรง"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/rnejCD42oqA",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=0cdb6a8262e3b354c82092b6&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-22594",
+    "postId": "22594",
+    "originalUrl": "https://www.24-hda.com/black-hunting/"
+  },
+  {
+    "titleTh": "You+Me Against the World (2026) เธอ+ฉัน – และโลกที่ขวางเรา",
+    "titleEn": "You+Me Against the World (2026) เธอ+ฉัน – และโลกที่ขวางเรา",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/YouMe-Against-the-World-2026-%E0%B9%80%E0%B8%98%E0%B8%AD%E0%B8%89%E0%B8%B1%E0%B8%99-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%82%E0%B8%A5%E0%B8%81%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%82%E0%B8%A7%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B2-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/YouMe-Against-the-World-2026-%E0%B9%80%E0%B8%98%E0%B8%AD%E0%B8%89%E0%B8%B1%E0%B8%99-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%82%E0%B8%A5%E0%B8%81%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%82%E0%B8%A7%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B2-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=e608e55a5489823fec9a8ef5&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี You+Me Against the World (2026) เธอ+ฉัน &#8211; และโลกที่ขวางเรา พากย์ไทย เต็มเรื่อง HD",
+    "rating": 7.8,
+    "genres": [
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026",
+      "หนังชนโรง"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/xURtez4mda8",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=e608e55a5489823fec9a8ef5&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40719",
+    "postId": "40719",
+    "originalUrl": "https://www.24-hda.com/youme-against-the-world/"
+  },
   {
     "titleTh": "First Love Affair: Can I Call This My First Love?",
     "titleEn": "First Love Affair: Can I Call This My First Love?",
@@ -4715,8 +5210,8 @@ window.movies = [
     "originalUrl": "https://www.24hd.media/i-mperfect-2025/"
   },
   {
-    "titleTh": "ฟรี Special Bodyguard (2026)",
-    "titleEn": "ฟรี Special Bodyguard (2026)",
+    "titleTh": "Special Bodyguard (2026)",
+    "titleEn": "Special Bodyguard (2026)",
     "year": 2026,
     "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Special-Bodyguard-2026-187x269.png",
     "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Special-Bodyguard-2026-187x269.png",
@@ -4747,8 +5242,8 @@ window.movies = [
     "originalUrl": "https://www.24-hda.com/special-bodyguard/"
   },
   {
-    "titleTh": "ฟรี The Last Witcher (2026)",
-    "titleEn": "ฟรี The Last Witcher (2026)",
+    "titleTh": "The Last Witcher (2026)",
+    "titleEn": "The Last Witcher (2026)",
     "year": 2026,
     "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Last-Witcher-2026-187x269.png",
     "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/The-Last-Witcher-2026-187x269.png",
@@ -4779,8 +5274,8 @@ window.movies = [
     "originalUrl": "https://www.24-hda.com/the-last-witcher/"
   },
   {
-    "titleTh": "ฟรี Reminders of Him (2026) ร่องรอยรัก",
-    "titleEn": "ฟรี Reminders of Him (2026) ร่องรอยรัก",
+    "titleTh": "Reminders of Him (2026) ร่องรอยรัก",
+    "titleEn": "Reminders of Him (2026) ร่องรอยรัก",
     "year": 2026,
     "poster": "https://www.24-hda.com/wp-content/uploads/2026/04/Reminders-of-Him-2026-%E0%B8%A3%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A3%E0%B8%AD%E0%B8%A2%E0%B8%A3%E0%B8%B1%E0%B8%81-187x269.png",
     "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/04/Reminders-of-Him-2026-%E0%B8%A3%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A3%E0%B8%AD%E0%B8%A2%E0%B8%A3%E0%B8%B1%E0%B8%81-187x269.png",
@@ -4811,8 +5306,8 @@ window.movies = [
     "originalUrl": "https://www.24-hda.com/reminders-of-him/"
   },
   {
-    "titleTh": "ฟรี Lego Star Wars The Mandalorian (2026)",
-    "titleEn": "ฟรี Lego Star Wars The Mandalorian (2026)",
+    "titleTh": "Lego Star Wars The Mandalorian (2026)",
+    "titleEn": "Lego Star Wars The Mandalorian (2026)",
     "year": 2026,
     "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Lego-Star-Wars-The-Mandalorian-2026-187x269.png",
     "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Lego-Star-Wars-The-Mandalorian-2026-187x269.png",
@@ -6210,8 +6705,8 @@ window.movies = [
     "originalUrl": "https://www.24-hda.com/go-team/"
   },
   {
-    "titleTh": "Why Did I Get Married Again (2026) วิวาห์ป่วนชวนอลวน&#8230; อีกแล้ว",
-    "titleEn": "Why Did I Get Married Again (2026) วิวาห์ป่วนชวนอลวน&#8230; อีกแล้ว",
+    "titleTh": "Why Did I Get Married Again (2026) วิวาห์ป่วนชวนอลวน… อีกแล้ว",
+    "titleEn": "Why Did I Get Married Again (2026) วิวาห์ป่วนชวนอลวน… อีกแล้ว",
     "year": 2026,
     "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Why-Did-I-Get-Married-Again-2026-%E0%B8%A7%E0%B8%B4%E0%B8%A7%E0%B8%B2%E0%B8%AB%E0%B9%8C%E0%B8%9B%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%8A%E0%B8%A7%E0%B8%99%E0%B8%AD%E0%B8%A5%E0%B8%A7%E0%B8%99.-%E0%B8%AD%E0%B8%B5%E0%B8%81%E0%B9%81%E0%B8%A5%E0%B9%89%E0%B8%A7-187x269.png",
     "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Why-Did-I-Get-Married-Again-2026-%E0%B8%A7%E0%B8%B4%E0%B8%A7%E0%B8%B2%E0%B8%AB%E0%B9%8C%E0%B8%9B%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%8A%E0%B8%A7%E0%B8%99%E0%B8%AD%E0%B8%A5%E0%B8%A7%E0%B8%99.-%E0%B8%AD%E0%B8%B5%E0%B8%81%E0%B9%81%E0%B8%A5%E0%B9%89%E0%B8%A7-187x269.png",
