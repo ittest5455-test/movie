@@ -67,60 +67,144 @@
 
   <!-- Navigation Header -->
   <header class="header-nav" id="headerNav">
-    <a href="#" class="logo" id="logoLink">
-      <span>Movie</span>Stream<span class="logo-badge">FREE</span>
-    </a>
-    
-    <nav aria-label="Main Navigation">
-      <ul class="nav-links">
-        <li><a href="#" class="active" id="navHome">หน้าแรก</a></li>
-        <li><a href="#" id="navWatchlist">รายการโปรด (<span id="watchlistCount">0</span>)</a></li>
-        <li><a href="#" id="navAnalyticsBtn" style="color: #22c55e; font-weight: bold;">📊 ผู้เข้าชม: <span id="visitorCountDisplay">...</span> คน</a></li>
-        <li><a href="#" id="navAuthBtn" style="color: #a855f7; font-weight: bold;">👤 เข้าสู่ระบบ / สมาชิก</a></li>
-      </ul>
-    </nav>
+    <div class="header-left">
+      <a href="#" class="logo" id="logoLink">
+        <span class="logo-accent">Movie</span><span class="logo-main">Stream</span>
+        <span class="logo-badge">VIP HD</span>
+      </a>
+      
+      <nav aria-label="Main Navigation" class="main-nav">
+        <ul class="nav-links">
+          <li><a href="#" class="active" id="navHome">หน้าแรก</a></li>
+          <li><a href="#" id="navPopular">🔥 ยอดนิยม</a></li>
+          <li><a href="#" id="navThaiDrama">🎭 ละครไทย</a></li>
+          <li><a href="#" id="navSeries">📺 ซีรีส์</a></li>
+          <li><a href="#" id="navWatchlist">❤️ รายการโปรด (<span id="watchlistCount">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
     
     <div class="nav-actions">
-      <button class="auth-btn-header" id="headerAuthBtn" style="display:none; background: linear-gradient(135deg, #a855f7, #6366f1); color: #fff; border:none; padding: 0.4rem 0.9rem; border-radius: 20px; font-weight: bold; font-size: 0.85rem; cursor: pointer;">
-        👤 สมาชิก
-      </button>
-      <a href="app.apk" download="app.apk" class="apk-download-btn" id="apkDownloadHeaderBtn" style="background:#f59e0b; color:#000; padding:0.4rem 0.9rem; border-radius:20px; font-weight:bold; font-size:0.85rem;" title="สำหรับมือถือ/แท็บเล็ต">
-        📲(APK)
-      </a>
-      <a href="tv.apk" download="tv.apk" class="apk-download-btn" id="tvApkDownloadHeaderBtn" style="background:#22c55e; color:#fff; padding:0.4rem 0.9rem; border-radius:20px; font-weight:bold; font-size:0.85rem;" title="สำหรับ Android TV / Mi Stick / Mi Box">
-        📺(TV)
-      </a>
+      <!-- Live Visitor Counter Badge -->
+      <div class="nav-stat-pill" id="navAnalyticsBtn" title="จำนวนผู้ชมที่กำลังรับชมสด">
+        <span class="live-dot"></span>
+        <span class="stat-text"><b id="visitorCountDisplay">...</b> คนออนไลน์</span>
+      </div>
+
+      <!-- App Download Buttons -->
+      <div class="nav-download-group">
+        <a href="app.apk" download="app.apk" class="nav-btn-apk nav-btn-mobile" id="apkDownloadHeaderBtn" title="ดาวน์โหลดแอปสำหรับมือถือและแท็บเล็ต">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+          <span>มือถือ</span>
+        </a>
+        <a href="tv.apk" download="tv.apk" class="nav-btn-apk nav-btn-tv" id="tvApkDownloadHeaderBtn" title="ดาวน์โหลดแอปสำหรับ Android TV / Mi Box">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M17 2l-5 5-5-5"></path></svg>
+          <span>ทีวี</span>
+        </a>
+      </div>
+
+      <!-- Live Search Box -->
       <div class="search-container">
         <span class="search-icon" aria-hidden="true">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         </span>
-        <input type="text" placeholder="ค้นหาชื่อหนัง..." class="search-input" id="searchInput" aria-label="ค้นหาภาพยนตร์">
+        <input type="text" placeholder="ค้นหาชื่อหนัง, ซีรีส์..." class="search-input" id="searchInput" aria-label="ค้นหาภาพยนตร์">
       </div>
+
+      <!-- VIP Member Auth Button -->
+      <button class="nav-vip-btn" id="navAuthBtn">
+        <span class="crown-icon">👑</span>
+        <span class="vip-btn-text">เข้าสู่ระบบ</span>
+      </button>
+      <button class="auth-btn-header" id="headerAuthBtn" style="display:none;"></button>
     </div>
   </header>
 
   <!-- Main Content Layout -->
   <main id="mainContent">
-    
-    <!-- Category & Update Filter Bar (Persistent on Top) -->
+
+    <!-- Featured Hero Spotlight Showcase (โรงภาพยนตร์ดิจิทัลระดับพรีเมียม) -->
+    <section class="hero-section" id="heroSection">
+      <div class="hero-backdrop-img" id="heroBackdrop"></div>
+      <div class="hero-gradient-overlay"></div>
+      
+      <div class="hero-content">
+        <div class="hero-badge-row">
+          <span class="hero-badge-hot" id="heroTag">🔥 แนะนำอันดับ 1 • ชนโรง 2026</span>
+          <span class="hero-badge-quality">4K ULTRA HD</span>
+          <span class="hero-badge-audio" id="heroSoundBadge">🔊 พากย์ไทย 5.1</span>
+        </div>
+        
+        <h1 class="hero-title" id="heroTitle">กำลังโหลดภาพยนตร์แนะนำ...</h1>
+        <div class="hero-title-sub" id="heroTitleSub">Featured Movie 2026</div>
+        
+        <div class="hero-meta">
+          <div class="hero-rating">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+            <span id="heroRatingVal">8.5</span>
+          </div>
+          <span class="hero-meta-dot">•</span>
+          <span class="hero-badge" id="heroYear">2026</span>
+          <span class="hero-meta-dot">•</span>
+          <span class="hero-badge" id="heroDuration">ภาพยนตร์</span>
+          <span class="hero-meta-dot">•</span>
+          <span class="hero-genres-list" id="heroGenres">แอคชั่น / ชนโรง</span>
+        </div>
+        
+        <p class="hero-description" id="heroDesc">
+          สัมผัสประสบการณ์รับชมภาพยนตร์ออนไลน์คุณภาพสูงระดับ 4K คมชัดทั้งภาพและเสียง พากย์ไทย ซับไทย เต็มเรื่อง ไม่มีโฆษณากวนใจ
+        </p>
+        
+        <div class="hero-buttons">
+          <button class="btn btn-hero-play" id="heroPlayBtn" tabindex="0">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            <span>รับชมภาพยนตร์</span>
+          </button>
+          <button class="btn btn-hero-info" id="heroInfoBtn" tabindex="0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            <span>รายละเอียด</span>
+          </button>
+          <button class="btn btn-hero-fav" id="heroFavBtn" tabindex="0" title="เพิ่มลงในรายการโปรด">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Slide Navigation Controls -->
+      <div class="hero-slider-nav">
+        <button class="hero-arrow hero-arrow-prev" id="heroPrevBtn" aria-label="เรื่องก่อนหน้า">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="hero-dots" id="heroDots"></div>
+        <button class="hero-arrow hero-arrow-next" id="heroNextBtn" aria-label="เรื่องถัดไป">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Category & Filter Bar -->
     <section class="genre-filter-bar" aria-label="Filters">
       <div class="section-header">
-        <h2 class="section-title">เลือกชมตามหมวดหมู่ & อัปเดตล่าสุด</h2>
+        <h2 class="section-title">
+          <span class="section-title-icon">✨</span> หมวดหมู่ภาพยนตร์ & คัดสรรยอดนิยม
+        </h2>
       </div>
-      <div class="genre-tags" id="genreFilterContainer">
-        <button class="genre-tag active" data-genre="all">🎬 ทั้งหมด</button>
-        <button class="genre-tag tag-highlight" data-genre="popular" style="background: linear-gradient(135deg, rgba(234, 179, 8, 0.25), rgba(249, 115, 22, 0.25)); border: 1px solid #eab308; color: #fff; font-weight: bold;">⭐ หนังยอดนิยมทั้งหมด</button>
-        <button class="genre-tag tag-highlight" data-genre="popular-2026">⭐ ยอดนิยม 2026</button>
-        <button class="genre-tag tag-highlight cw-tag" data-genre="continue-watching" id="tagContinueWatching" style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(99, 102, 241, 0.25)); border: 1px solid #a855f7; color: #fff; font-weight: bold;">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          Continue Watching
-        </button>
-        <button class="genre-tag tag-highlight" data-genre="today">🔥 อัปเดตวันนี้</button>
-        <button class="genre-tag tag-highlight" data-genre="recommended-series">🔥 ซีรีส์แนะนำใหม่ 2026</button>
-        <button class="genre-tag tag-highlight" data-genre="ละครไทย" style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.25), rgba(244, 63, 94, 0.25)); border: 1px solid #ec4899; color: #fff; font-weight: bold;">🎭 ดูละครไทย ย้อนหลัง</button>
-        <button class="genre-tag tag-highlight" data-genre="พากย์ไทย" style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.25), rgba(16, 185, 129, 0.25)); border: 1px solid #22c55e; color: #fff; font-weight: bold;">🔊 รวมพากย์ไทย</button>
-        <button class="genre-tag tag-highlight" data-genre="WOW-DRAMA">📺 WOW-DRAMA</button>
-        <button class="genre-tag tag-highlight" data-genre="24HDX">📌 24-HDX</button>
+      <div class="genre-tags-wrapper">
+        <div class="genre-tags" id="genreFilterContainer">
+          <button class="genre-tag active" data-genre="all">🎬 ทั้งหมด</button>
+          <button class="genre-tag tag-gold" data-genre="popular">⭐ หนังยอดนิยม</button>
+          <button class="genre-tag tag-blue" data-genre="popular-2026">🔥 ยอดนิยม 2026</button>
+          <button class="genre-tag tag-purple cw-tag" data-genre="continue-watching" id="tagContinueWatching">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align: -2px; margin-right: 4px;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            รับชมต่อ
+          </button>
+          <button class="genre-tag tag-red" data-genre="today">⚡ อัปเดตล่าสุด</button>
+          <button class="genre-tag tag-cyan" data-genre="recommended-series">📺 ซีรีส์แนะนำใหม่</button>
+          <button class="genre-tag tag-pink" data-genre="ละครไทย">🎭 ดูละครไทย ย้อนหลัง</button>
+          <button class="genre-tag tag-green" data-genre="พากย์ไทย">🔊 รวมพากย์ไทย</button>
+          <button class="genre-tag tag-indigo" data-genre="WOW-DRAMA">🌐 WOW-DRAMA</button>
+          <button class="genre-tag tag-slate" data-genre="24HDX">📌 24-HDX</button>
+        </div>
       </div>
     </section>
 

@@ -7,9 +7,13 @@ function initMovieStreamApp() {
   const headerNav = document.getElementById("headerNav");
   const logoLink = document.getElementById("logoLink");
   const navHome = document.getElementById("navHome");
+  const navPopular = document.getElementById("navPopular");
+  const navThaiDrama = document.getElementById("navThaiDrama");
+  const navSeries = document.getElementById("navSeries");
   const navWatchlist = document.getElementById("navWatchlist");
   const watchlistCount = document.getElementById("watchlistCount");
   const searchInput = document.getElementById("searchInput");
+  const heroSection = document.getElementById("heroSection");
   
   const gridView = document.getElementById("gridView");
   const gridTitle = document.getElementById("gridTitle");
@@ -150,6 +154,7 @@ function initMovieStreamApp() {
 
   try {
     initVisitorCounter();
+    initHeroSpotlight();
     showHomeView();
     updateWatchlistUI();
     renderContinueWatchingShelf();
@@ -184,50 +189,234 @@ function initMovieStreamApp() {
     }
   });
 
+  // --- Hero Spotlight Carousel System (แบนเนอร์ภาพยนตร์แนะนำชนโรง) ---
+  function initHeroSpotlight() {
+    if (!heroSection) return;
 
+    const heroBackdrop = document.getElementById("heroBackdrop");
+    const heroTag = document.getElementById("heroTag");
+    const heroSoundBadge = document.getElementById("heroSoundBadge");
+    const heroTitle = document.getElementById("heroTitle");
+    const heroTitleSub = document.getElementById("heroTitleSub");
+    const heroRatingVal = document.getElementById("heroRatingVal");
+    const heroYear = document.getElementById("heroYear");
+    const heroDuration = document.getElementById("heroDuration");
+    const heroGenres = document.getElementById("heroGenres");
+    const heroDesc = document.getElementById("heroDesc");
+    const heroPlayBtn = document.getElementById("heroPlayBtn");
+    const heroInfoBtn = document.getElementById("heroInfoBtn");
+    const heroFavBtn = document.getElementById("heroFavBtn");
+    const heroPrevBtn = document.getElementById("heroPrevBtn");
+    const heroNextBtn = document.getElementById("heroNextBtn");
+    const heroDots = document.getElementById("heroDots");
 
-  
+    // Select featured movies: High rated or recent 2026/2025 movies with valid posters/backdrops
+    let heroMovies = movieList.filter(m => {
+      const hasImg = m.backdrop || m.poster;
+      const isRecent = m.year === 2026 || m.year === "2026" || m.year === 2025 || m.year === "2025";
+      const isHighRating = parseFloat(m.rating) >= 7.5;
+      return hasImg && (isRecent || isHighRating);
+    });
+
+    if (heroMovies.length < 5) {
+      heroMovies = movieList.slice(0, 6);
+    } else {
+      heroMovies = heroMovies.slice(0, 6);
+    }
+
+    if (heroMovies.length === 0) {
+      heroSection.style.display = "none";
+      return;
+    }
+
+    let currentIndex = 0;
+    let heroAutoTimer = null;
+
+    // Render Indicator Dots
+    if (heroDots) {
+      heroDots.innerHTML = heroMovies.map((_, i) => `<span class="hero-dot ${i === 0 ? 'active' : ''}" data-index="${i}"></span>`).join("");
+      heroDots.querySelectorAll(".hero-dot").forEach(dot => {
+        dot.addEventListener("click", () => {
+          const idx = parseInt(dot.getAttribute("data-index"), 10);
+          if (!isNaN(idx)) {
+            currentIndex = idx;
+            renderHero(currentIndex);
+            resetHeroTimer();
+          }
+        });
+      });
+    }
+
+    function updateHeroFavBtn(movieId) {
+      if (!heroFavBtn) return;
+      const isSaved = watchlist.includes(movieId);
+      heroFavBtn.innerHTML = `
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="${isSaved ? '#ef4444' : 'none'}" stroke="${isSaved ? '#ef4444' : 'currentColor'}" stroke-width="2.2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      `;
+      heroFavBtn.title = isSaved ? "ลบออกจากรายการโปรด" : "เพิ่มลงในรายการโปรด";
+    }
+
+    function renderHero(index) {
+      const movie = heroMovies[index];
+      if (!movie) return;
+
+      const bgImg = movie.backdrop || movie.poster || "";
+      if (heroBackdrop) {
+        heroBackdrop.style.backgroundImage = `url('${bgImg}')`;
+      }
+
+      if (heroTag) {
+        if (movie.year === 2026 || movie.year === "2026") {
+          heroTag.textContent = `🔥 แนะนำอันดับ ${index + 1} • ชนโรง 2026`;
+        } else {
+          heroTag.textContent = `⭐ ภาพยนตร์ยอดนิยม • แนะนำอันดับ ${index + 1}`;
+        }
+      }
+
+      if (heroSoundBadge) {
+        const hasThai = (movie.languages && movie.languages.some(l => l.includes("Thai"))) || (movie.genres && movie.genres.includes("พากย์ไทย"));
+        heroSoundBadge.textContent = hasThai ? "🔊 พากย์ไทย 5.1" : "🔊 เสียงไทย/ซับไทย";
+      }
+
+      if (heroTitle) heroTitle.textContent = movie.titleTh || "ภาพยนตร์แนะนำ";
+      if (heroTitleSub) heroTitleSub.textContent = movie.titleEn ? `${movie.titleEn} (${movie.year || '2026'})` : `${movie.year || '2026'}`;
+      if (heroRatingVal) heroRatingVal.textContent = movie.rating || "8.5";
+      if (heroYear) heroYear.textContent = movie.year || "2026";
+      if (heroDuration) heroDuration.textContent = movie.duration || (movie.episodes && movie.episodes.length > 1 ? `ซีรีส์ ${movie.episodes.length} ตอน` : "ภาพยนตร์เต็มเรื่อง");
+
+      if (heroGenres) {
+        if (movie.genres && Array.isArray(movie.genres)) {
+          heroGenres.textContent = movie.genres.filter(g => g !== "24-HD" && g !== "GOSERIES4K" && g !== "WOW-DRAMA").slice(0, 3).join(" • ") || "ภาพยนตร์คมชัด HD";
+        } else {
+          heroGenres.textContent = "ภาพยนตร์ยอดนิยม";
+        }
+      }
+
+      if (heroDesc) {
+        heroDesc.textContent = movie.description || "สัมผัสประสบการณ์รับชมภาพยนตร์ออนไลน์คุณภาพสูงระดับ 4K คมชัดทั้งภาพและเสียง พากย์ไทย ซับไทย เต็มเรื่อง ไม่มีโฆษณากวนใจ";
+      }
+
+      updateHeroFavBtn(movie.id);
+
+      if (heroDots) {
+        heroDots.querySelectorAll(".hero-dot").forEach((dot, i) => {
+          if (i === index) dot.classList.add("active");
+          else dot.classList.remove("active");
+        });
+      }
+    }
+
+    function nextHero() {
+      currentIndex = (currentIndex + 1) % heroMovies.length;
+      renderHero(currentIndex);
+    }
+
+    function prevHero() {
+      currentIndex = (currentIndex - 1 + heroMovies.length) % heroMovies.length;
+      renderHero(currentIndex);
+    }
+
+    function resetHeroTimer() {
+      if (heroAutoTimer) clearInterval(heroAutoTimer);
+      heroAutoTimer = setInterval(nextHero, 7000);
+    }
+
+    if (heroPrevBtn) {
+      heroPrevBtn.addEventListener("click", () => {
+        prevHero();
+        resetHeroTimer();
+      });
+    }
+
+    if (heroNextBtn) {
+      heroNextBtn.addEventListener("click", () => {
+        nextHero();
+        resetHeroTimer();
+      });
+    }
+
+    if (heroPlayBtn) {
+      heroPlayBtn.addEventListener("click", () => {
+        const m = heroMovies[currentIndex];
+        if (m) playMovie(m);
+      });
+    }
+
+    if (heroInfoBtn) {
+      heroInfoBtn.addEventListener("click", () => {
+        const m = heroMovies[currentIndex];
+        if (m) openDetailsModal(m);
+      });
+    }
+
+    if (heroFavBtn) {
+      heroFavBtn.addEventListener("click", () => {
+        const m = heroMovies[currentIndex];
+        if (m) {
+          toggleWatchlist(m.id);
+          updateHeroFavBtn(m.id);
+        }
+      });
+    }
+
+    heroSection.addEventListener("mouseenter", () => {
+      if (heroAutoTimer) clearInterval(heroAutoTimer);
+    });
+
+    heroSection.addEventListener("mouseleave", () => {
+      resetHeroTimer();
+    });
+
+    // Initial render
+    renderHero(0);
+    resetHeroTimer();
+  }
 
   // Create single movie card structure
   function createMovieCardMarkup(movie) {
     const isSaved = watchlist.includes(movie.id);
-    const isTopHot = movie.genres && (movie.genres.includes("ยอดนิยม 2026") || movie.genres.includes("ยอดนิยม"));
-    const placeholderSvg = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22300%22%20height%3D%22450%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20300%20450%22%3E%3Crect%20fill%3D%22%231e293b%22%20width%3D%22300%22%20height%3D%22450%22%2F%3E%3Ctext%20fill%3D%22%2394a3b8%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20dy%3D%2210.5%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EMovieStream%20HD%3C%2Ftext%3E%3C%2Fsvg%3E";
+    const isTopHot = movie.genres && (movie.genres.includes("ยอดนิยม 2026") || movie.genres.includes("ยอดนิยม") || (parseFloat(movie.rating) >= 7.8));
+    const placeholderSvg = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22300%22%20height%3D%22450%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20300%20450%22%3E%3Crect%20fill%3D%22%230e1222%22%20width%3D%22300%22%20height%3D%22450%22%2F%3E%3Ctext%20fill%3D%22%2364748b%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20dy%3D%2210.5%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EMovieStream%3C%2Ftext%3E%3C%2Fsvg%3E";
     const posterUrl = movie.poster || placeholderSvg;
-    const hotBadgeHtml = isTopHot ? `<div class="movie-hot-badge" style="position: absolute; top: 0; right: 0; background: linear-gradient(135deg, #ef4444, #dc2626); color: #fff; font-size: 0.68rem; font-weight: 900; padding: 3px 10px; border-bottom-left-radius: 8px; box-shadow: 0 2px 8px rgba(239, 68, 68, 0.6); z-index: 9; letter-spacing: 0.5px;">HOT</div>` : '';
-    const ratingBadgeHtml = isTopHot ? `
-      <span class="movie-rating-badge" style="background: linear-gradient(135deg, #eab308, #f59e0b); color: #000; font-weight: 800; border: none; box-shadow: 0 2px 6px rgba(234, 179, 8, 0.5);">
-        TOP ★ ${movie.rating}
-      </span>` : `
-      <span class="movie-rating-badge">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-        ${movie.rating}
-      </span>`;
-    const favTopPos = isTopHot ? "36px" : "10px";
+
+    const hotBadgeHtml = isTopHot ? `<div class="card-badge-hot">HOT</div>` : '';
+    const ratingVal = movie.rating || "8.0";
+    const qualityTag = (movie.genres && movie.genres.includes("ละครไทย")) ? "HD ละคร" : "4K ULTRA";
+
+    let langText = "พากย์ไทย";
+    if (movie.languages && movie.languages.length > 0) {
+      langText = movie.languages[0].includes("Thai") ? "พากย์ไทย" : movie.languages[0];
+    } else if (movie.genres && movie.genres.includes("พากย์ไทย")) {
+      langText = "พากย์ไทย";
+    }
+
     return `
       <div class="movie-card" data-id="${movie.id}" tabindex="0" role="button" aria-label="${movie.titleTh}">
         <div class="movie-poster-wrapper">
           <img src="${posterUrl}" alt="โปสเตอร์เรื่อง ${movie.titleTh}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${placeholderSvg}'">
           ${hotBadgeHtml}
-          ${ratingBadgeHtml}
-          <span class="movie-year-badge">${movie.year}</span>
-          
-          <button class="movie-fav-btn" style="position: absolute; top: ${favTopPos}; right: 10px; z-index: 10; background: rgba(0,0,0,0.7); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: ${isSaved ? '#22c55e' : '#ffffff'}; transition: 0.3s;" aria-label="Toggle Favorite">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="${isSaved ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <div class="card-badge-top-left">${qualityTag}</div>
+          <div class="card-badge-top-right">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+            ${ratingVal}
+          </div>
+
+          <button class="movie-fav-btn" aria-label="เพิ่มในรายการโปรด" title="บันทึกรายการโปรด">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="${isSaved ? '#ef4444' : 'none'}" stroke="${isSaved ? '#ef4444' : 'currentColor'}" stroke-width="2.2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
           </button>
 
-          <div class="movie-card-overlay">
-            <button class="movie-play-btn" aria-label="เล่นหนัง ${movie.titleTh}">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
-            </button>
-            <div class="movie-card-info-top">
-              <div class="movie-card-genres">${movie.genres.join(" / ")}</div>
-              <h3 class="movie-card-title">${movie.titleTh}</h3>
-              <div class="movie-card-title-en">${movie.titleEn}</div>
+          <div class="movie-card-hover-overlay">
+            <div class="card-hover-play-btn" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
             </div>
-            <div class="movie-card-details">
-              <span>${movie.duration}</span>
-            </div>
+          </div>
+        </div>
+
+        <div class="movie-card-info">
+          <h3 class="movie-card-title" title="${movie.titleTh}">${movie.titleTh}</h3>
+          <div class="movie-card-meta">
+            <span class="movie-card-year">${movie.year}</span>
+            <span class="movie-card-lang-chip">${langText}</span>
           </div>
         </div>
       </div>
@@ -387,9 +576,13 @@ function initMovieStreamApp() {
   // --- View Swappers ---
 
   function showHomeView() {
-    navHome.classList.add("active");
-    navWatchlist.classList.remove("active");
-    searchInput.value = "";
+    if (navHome) navHome.classList.add("active");
+    if (navPopular) navPopular.classList.remove("active");
+    if (navThaiDrama) navThaiDrama.classList.remove("active");
+    if (navSeries) navSeries.classList.remove("active");
+    if (navWatchlist) navWatchlist.classList.remove("active");
+    if (searchInput) searchInput.value = "";
+    if (heroSection) heroSection.style.display = "flex";
     
     // Reset active genres tag
     document.querySelectorAll(".genre-tag").forEach(tag => {
@@ -416,6 +609,14 @@ function initMovieStreamApp() {
         continueWatchingSection.style.display = continueWatchingList.length > 0 ? "block" : "none";
       } else {
         continueWatchingSection.style.display = "none";
+      }
+    }
+
+    if (heroSection) {
+      if (title.includes("ทั้งหมด")) {
+        heroSection.style.display = "flex";
+      } else {
+        heroSection.style.display = "none";
       }
     }
 
@@ -529,10 +730,14 @@ function initMovieStreamApp() {
   }
 
   function displayWatchlistView() {
-    navWatchlist.classList.add("active");
-    navHome.classList.remove("active");
+    if (navHome) navHome.classList.remove("active");
+    if (navPopular) navPopular.classList.remove("active");
+    if (navThaiDrama) navThaiDrama.classList.remove("active");
+    if (navSeries) navSeries.classList.remove("active");
+    if (navWatchlist) navWatchlist.classList.add("active");
+    if (heroSection) heroSection.style.display = "none";
     const favs = movieList.filter(m => watchlist.includes(m.id));
-    showGridView("รายการโปรดของฉัน", favs);
+    showGridView("❤️ รายการโปรดของฉัน", favs);
   }
 
   // --- Details Modal Actions ---
@@ -1305,6 +1510,45 @@ function initMovieStreamApp() {
       navHome.addEventListener("click", (e) => {
         e.preventDefault();
         showHomeView();
+      });
+    }
+
+    // Nav Popular Click
+    if (navPopular) {
+      navPopular.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelectorAll(".nav-links a").forEach(a => a.classList.remove("active"));
+        navPopular.classList.add("active");
+        const popMovies = movieList.filter(m => (m.genres && (m.genres.includes("ยอดนิยม") || m.genres.includes("ยอดนิยม 2026"))) || (m.rating && parseFloat(m.rating) >= 7.8));
+        popMovies.sort((a, b) => {
+          const aTop = (a.genres && (a.genres.includes("ยอดนิยม 2026") || a.genres.includes("ยอดนิยม"))) ? 1 : 0;
+          const bTop = (b.genres && (b.genres.includes("ยอดนิยม 2026") || b.genres.includes("ยอดนิยม"))) ? 1 : 0;
+          if (bTop !== aTop) return bTop - aTop;
+          return (parseFloat(b.rating) || 0) - (parseFloat(a.rating) || 0);
+        });
+        showGridView(`⭐ รวมภาพยนตร์ยอดนิยมทั้งหมด (${popMovies.length} เรื่อง)`, popMovies);
+      });
+    }
+
+    // Nav Thai Drama Click
+    if (navThaiDrama) {
+      navThaiDrama.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelectorAll(".nav-links a").forEach(a => a.classList.remove("active"));
+        navThaiDrama.classList.add("active");
+        const dramaMovies = movieList.filter(m => (m.genres && (m.genres.includes("ละครไทย") || m.genres.includes("ละครไทย ย้อนหลัง"))) || (m.titleTh && (m.titleTh.includes("ละคร") || m.titleTh.includes("EP"))));
+        showGridView(`🎭 รวมดูละครไทย ย้อนหลัง (${dramaMovies.length} เรื่อง)`, dramaMovies);
+      });
+    }
+
+    // Nav Series Click
+    if (navSeries) {
+      navSeries.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelectorAll(".nav-links a").forEach(a => a.classList.remove("active"));
+        navSeries.classList.add("active");
+        const seriesMovies = movieList.filter(m => (m.genres && (m.genres.includes("ซีรีส์") || m.genres.includes("ซีรีส์แนะนำใหม่ 2026") || m.genres.includes("ซีรีส์ใหม่ 2026"))) || m.source === "GOSERIES4K" || m.source === "SERIEDAYS" || (m.episodes && m.episodes.length > 1));
+        showGridView(`📺 รวมซีรีส์และละครชุด (${seriesMovies.length} เรื่อง)`, seriesMovies);
       });
     }
 
