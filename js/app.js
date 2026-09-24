@@ -428,12 +428,18 @@ function initMovieStreamApp() {
   function renderContinueWatchingShelf() {
     if (!continueWatchingSection || !continueWatchingListEl) return;
     
+    const cwCountBadge = document.getElementById("cwCountBadge");
+
     if (!continueWatchingList || continueWatchingList.length === 0) {
       continueWatchingSection.style.display = "none";
+      if (cwCountBadge) cwCountBadge.textContent = "0";
       return;
     }
 
     continueWatchingSection.style.display = "block";
+    if (cwCountBadge) {
+      cwCountBadge.textContent = continueWatchingList.length;
+    }
     continueWatchingListEl.innerHTML = "";
 
     continueWatchingList.forEach(item => {
@@ -474,6 +480,7 @@ function initMovieStreamApp() {
             <div class="cw-play-btn-circle">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
             </div>
+            <span class="cw-play-label">กดรับชมต่อ</span>
           </div>
           <div class="cw-progress-track">
             <div class="cw-progress-fill" style="width: ${percent}%;"></div>
