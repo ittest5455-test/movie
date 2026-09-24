@@ -601,8 +601,18 @@ function initMovieStreamApp() {
   }
 
   // --- Video Player Modal Actions ---
+  let pendingPlayMovie = null;
 
   function playMovie(movie, startEpisode = 1) {
+    // ตรวจสอบสิทธิ์สมาชิกก่อนเปิดเล่นหนัง (ต้อง Login ถึงจะดูได้)
+    const savedUser = localStorage.getItem("moviestream_user");
+    if (!savedUser) {
+      pendingPlayMovie = { movie, startEpisode };
+      showToast("🔒 กรุณาเข้าสู่ระบบสมาชิกก่อนรับชมภาพยนตร์", "info");
+      openAuthModal();
+      return;
+    }
+
     if (playingMovieTitle) {
       playingMovieTitle.textContent = movie.titleTh;
     }
@@ -1371,11 +1381,15 @@ function initMovieStreamApp() {
       }
       if (authModal) authModal.classList.add("active");
       document.body.style.overflow = "hidden";
+      setTimeout(() => {
+        if (authPhone && !savedUser) authPhone.focus();
+      }, 200);
     }
 
     function closeAuthModal() {
       if (authModal) authModal.classList.remove("active");
       document.body.style.overflow = "";
+      pendingPlayMovie = null;
     }
 
     function setAuthMode(register) {
@@ -1498,6 +1512,14 @@ function initMovieStreamApp() {
               showToast(result.message || "เข้าสู่ระบบสำเร็จ! 👑", "success");
               updateAuthUI();
               closeAuthModal();
+
+              if (pendingPlayMovie && pendingPlayMovie.movie) {
+                const target = pendingPlayMovie;
+                pendingPlayMovie = null;
+                setTimeout(() => {
+                  playMovie(target.movie, target.startEpisode);
+                }, 350);
+              }
             } else {
               if (result.isPending) {
                 showToast("⏳ บัญชีของคุณอยู่ระหว่างรอแอดมินอนุมัติ", "info");
@@ -1521,6 +1543,14 @@ function initMovieStreamApp() {
           showToast(isRegisterMode ? "สมัครสมาชิกและเข้าสู่ระบบสำเร็จ! (โหมดทดสอบ)" : "เข้าสู่ระบบสำเร็จ! 👑", "success");
           updateAuthUI();
           closeAuthModal();
+
+          if (pendingPlayMovie && pendingPlayMovie.movie) {
+            const target = pendingPlayMovie;
+            pendingPlayMovie = null;
+            setTimeout(() => {
+              playMovie(target.movie, target.startEpisode);
+            }, 350);
+          }
         }
 
         authSubmitBtn.disabled = false;
