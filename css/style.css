@@ -2205,15 +2205,19 @@ body.player-is-active footer {
    Continue Watching (ดูล่าสุด / กำลังรับชมต่อ - อันดับ 1 เด่นชัด)
    =================================================== */
 .continue-watching-section {
-  padding: 1.5rem 5% 1.8rem 5%;
+  padding: 95px 5% 1.6rem 5%;
   position: relative;
   width: 100%;
-  background: radial-gradient(ellipse at 15% 20%, rgba(168, 85, 247, 0.15) 0%, transparent 65%),
-              linear-gradient(180deg, rgba(15, 23, 42, 0.8) 0%, rgba(5, 6, 15, 0.95) 100%);
-  border-top: 1px solid rgba(168, 85, 247, 0.28);
-  border-bottom: 1px solid rgba(168, 85, 247, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  margin-bottom: 1.5rem;
+  background: radial-gradient(ellipse at 15% 50%, rgba(168, 85, 247, 0.22) 0%, transparent 65%),
+              linear-gradient(180deg, #090c19 0%, #05060f 100%);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65);
+  margin-bottom: 0;
+}
+
+body.has-continue-watching .hero-section {
+  padding-top: 40px;
+  min-height: 500px;
 }
 
 .cw-title-wrapper {
@@ -2516,10 +2520,14 @@ body.player-is-active footer {
     flex: 0 0 190px;
   }
   .continue-watching-section {
-    padding: 1.2rem 4% 1.4rem 4%;
+    padding: 80px 4% 1.3rem 4%;
   }
   .continue-watching-title {
     font-size: 1.2rem;
+  }
+  body.has-continue-watching .hero-section {
+    padding-top: 30px;
+    min-height: 440px;
   }
 }
 

@@ -432,11 +432,13 @@ function initMovieStreamApp() {
 
     if (!continueWatchingList || continueWatchingList.length === 0) {
       continueWatchingSection.style.display = "none";
+      document.body.classList.remove("has-continue-watching");
       if (cwCountBadge) cwCountBadge.textContent = "0";
       return;
     }
 
     continueWatchingSection.style.display = "block";
+    document.body.classList.add("has-continue-watching");
     if (cwCountBadge) {
       cwCountBadge.textContent = continueWatchingList.length;
     }
@@ -612,10 +614,12 @@ function initMovieStreamApp() {
 
   function showGridView(title, filteredMovies) {
     if (continueWatchingSection) {
-      if (title.includes("ทั้งหมด")) {
-        continueWatchingSection.style.display = continueWatchingList.length > 0 ? "block" : "none";
+      if (title.includes("ทั้งหมด") && continueWatchingList.length > 0) {
+        continueWatchingSection.style.display = "block";
+        document.body.classList.add("has-continue-watching");
       } else {
         continueWatchingSection.style.display = "none";
+        document.body.classList.remove("has-continue-watching");
       }
     }
 
