@@ -603,14 +603,6 @@ function initMovieStreamApp() {
   // --- Video Player Modal Actions ---
 
   function playMovie(movie, startEpisode = 1) {
-    // ตรวจสอบสิทธิ์สมาชิกก่อนเปิดเล่นหนัง
-    const savedUser = localStorage.getItem("moviestream_user");
-    if (!savedUser) {
-      showToast("🔒 กรุณาเข้าสู่ระบบสมาชิกก่อนรับชมภาพยนตร์", "info");
-      openAuthModal();
-      return;
-    }
-
     if (playingMovieTitle) {
       playingMovieTitle.textContent = movie.titleTh;
     }
@@ -1752,16 +1744,25 @@ function initMovieStreamApp() {
         return;
       }
 
-      // 2. IFrame Video Mode (Fallback / ซีรีส์ เช่น torbo007.com)
+      // 2. IFrame Video Mode (Fallback / ซีรีส์ เช่น torbo007.com, wow-drama.com)
       if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
         if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
         iframeVideoPlayer.focus();
         try {
           if (iframeVideoPlayer.contentWindow) {
             iframeVideoPlayer.contentWindow.focus();
+            const playMsgs = [
+              '{"event":"command","func":"playVideo","args":""}',
+              '{"method":"play"}',
+              JSON.stringify({ type: 'play' }),
+              'play'
+            ];
+            playMsgs.forEach(msg => {
+              try { iframeVideoPlayer.contentWindow.postMessage(msg, '*'); } catch(err) {}
+            });
           }
         } catch(e) {}
-        showToast("▶ แตะที่หน้าจอวิดีโอเพื่อเริ่มเล่น (เครื่องเล่นภายนอก)", "info");
+        showToast("▶ กำลังเชื่อมต่อและเริ่มเล่นภาพยนตร์...", "success", 2000);
         return;
       }
 

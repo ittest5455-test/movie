@@ -260,6 +260,7 @@
     clickable.dispatchEvent(new MouseEvent('mousedown', opts));
     clickable.dispatchEvent(new MouseEvent('pointerup', opts));
     clickable.dispatchEvent(new MouseEvent('mouseup', opts));
+    clickable.dispatchEvent(new MouseEvent('click', opts));
 
     if (typeof clickable.click === 'function') {
       clickable.click();
@@ -372,39 +373,35 @@
       keysPressed[normalizedKey] = true;
       startMovementLoop();
     } else if (isEnabled && isOk && isVisible) {
-      const target = document.elementFromPoint(cursorX, cursorY);
-      const isVideoArea = Boolean(
-        target && (
-          target.id === 'iframeVideoPlayer' ||
-          target.id === 'html5VideoPlayer' ||
-          target.id === 'videoScreenWrapper' ||
-          target.closest('#videoScreenWrapper')
-        )
-      );
+      e.preventDefault();
+      triggerClick();
 
-      if (isVideoArea) {
-        // เมื่อกดคลิกที่ตัวเล่นวิดีโอ
-        createRipple(cursorX, cursorY);
+      const html5Video = document.getElementById('html5VideoPlayer');
+      const iframe = document.getElementById('iframeVideoPlayer');
 
-        const html5Video = document.getElementById('html5VideoPlayer');
-        const iframe = document.getElementById('iframeVideoPlayer');
-
-        if (html5Video && html5Video.style.display !== 'none') {
-          // Direct MP4 Video: สั่งเล่น/หยุดได้ทันที
-          e.preventDefault();
-          if (html5Video.paused) html5Video.play();
-          else html5Video.pause();
-        } else if (iframe && iframe.style.display !== 'none') {
-          // IFrame Embed Video: โฟกัสไปที่ iframe
-          iframe.focus();
-          if (typeof window.showToast === 'function') {
-            window.showToast('💡 คลิกที่ปุ่ม ▶ ตรงกลางจอหนังเพื่อเริ่มเล่น (หรือกดขยายเต็มจอ)', 'info', 3500);
-          }
+      if (html5Video && html5Video.style.display !== 'none') {
+        // Direct MP4 Video: toggle play
+        if (html5Video.paused) {
+          html5Video.play().catch(() => {});
+        } else {
+          html5Video.pause();
         }
-      } else {
-        // ปุ่มอื่นๆ (ปุ่มปิด X, ขยายเต็มจอ, เลือกตอน, ฯลฯ)
-        e.preventDefault();
-        triggerClick();
+      } else if (iframe && iframe.style.display !== 'none') {
+        iframe.focus();
+        try {
+          if (iframe.contentWindow) {
+            iframe.contentWindow.focus();
+            const playMsgs = [
+              '{"event":"command","func":"playVideo","args":""}',
+              '{"method":"play"}',
+              JSON.stringify({ type: 'play' }),
+              'play'
+            ];
+            playMsgs.forEach(msg => {
+              try { iframe.contentWindow.postMessage(msg, '*'); } catch(err) {}
+            });
+          }
+        } catch(e) {}
       }
     }
   }, { passive: false });
@@ -433,27 +430,6 @@
       }
     }
   }, { passive: true });
-
-  // กู้คืนโฟกัสกลับมาที่หน้าต่างหลักเมื่อคลิกที่ IFrame เพื่อให้ปุ่มลูกศรเลื่อนเมาส์ได้ต่อทันที 100%
-  window.addEventListener('blur', function () {
-    setTimeout(function () {
-      if (!document.hidden && document.activeElement && document.activeElement.tagName === 'IFRAME') {
-        ensureWindowFocus();
-        showCursor();
-      }
-    }, 150);
-  });
-
-  // คอยตรวจสอบขณะเปิดหน้าเล่นหนัง หาก IFrame ล็อกโฟกัส ให้ดึงกลับมาเพื่อให้ลูกศรเลื่อนเมาส์ได้ตลอดเวลา
-  setInterval(function () {
-    const playerModal = document.getElementById('playerModal');
-    if (playerModal && playerModal.classList.contains('active')) {
-      if (document.activeElement && document.activeElement.tagName === 'IFRAME') {
-        ensureWindowFocus();
-        showCursor();
-      }
-    }
-  }, 350);
 
   // ติดตามการเปิด-ปิด playerModal: ให้เมาส์แสดงตรงกลาง และรับปุ่มลูกศรได้ทันที
   function setupPlayerModalWatcher() {
