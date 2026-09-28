@@ -40,7 +40,7 @@
   <meta name="keywords" content="ดูหนังออนไลน์, ดูหนังฟรี, ดูหนังใหม่ 2026, หนังชนโรง, ดูหนัง HD, หนังพากย์ไทย, ดูซีรีส์ฟรี, ดูหนังไม่มีโฆษณา">
   <meta name="robots" content="index, follow">
   <meta name="referrer" content="no-referrer">
-  <link rel="stylesheet" href="css/style.css?v=20260918_1155">
+  <link rel="stylesheet" href="css/style.css?v=20260928_1830">
   
   <!-- SEO Open Graph Metadata -->
   <meta property="og:title" content="ดูหนังออนไลน์ 2026 ฟรี หนังใหม่ชนโรง HD พากย์ไทย ซับไทย เต็มเรื่อง">
@@ -67,65 +67,68 @@
 
   <!-- Navigation Header -->
   <header class="header-nav" id="headerNav">
-    <div class="header-left">
-      <a href="#" class="logo" id="logoLink">
-        <span class="logo-accent">Movie</span><span class="logo-main">Stream</span>
-        <span class="logo-badge">VIP HD</span>
-      </a>
+    <div class="header-main-bar">
+      <div class="header-left">
+        <a href="#" class="logo" id="logoLink">
+          <span class="logo-accent">Movie</span><span class="logo-main">Stream</span>
+          <span class="logo-badge">VIP HD</span>
+        </a>
+      </div>
       
-      <nav aria-label="Main Navigation" class="main-nav">
-        <ul class="nav-links">
-          <li><a href="#" class="active" id="navHome">หน้าแรก</a></li>
-          <li><a href="#" id="navPopular">🔥 ยอดนิยม</a></li>
-          <li><a href="#" id="navThaiDrama">🎭 ละครไทย</a></li>
-          <li><a href="#" id="navSeries">📺 ซีรีส์</a></li>
-          <li><a href="#" id="navWatchlist">❤️ รายการโปรด (<span id="watchlistCount">0</span>)</a></li>
-          <li id="navLogoutTabItem" style="display: none;"><a href="#" id="navLogoutTab" class="nav-logout-tab-link" title="ออกจากระบบ"><span class="tab-logout-icon">🚪</span><span>ออกจากระบบ</span></a></li>
-        </ul>
-      </nav>
+      <div class="nav-actions">
+        <!-- Live Visitor Counter Badge -->
+        <div class="nav-stat-pill" id="navAnalyticsBtn" title="จำนวนผู้ชมที่กำลังรับชมสด">
+          <span class="live-dot"></span>
+          <span class="stat-text"><b id="visitorCountDisplay">...</b> คนออนไลน์</span>
+        </div>
+
+        <!-- App Download Buttons -->
+        <div class="nav-download-group">
+          <a href="app.apk" download="app.apk" class="nav-btn-apk nav-btn-mobile" id="apkDownloadHeaderBtn" title="ดาวน์โหลดแอปสำหรับมือถือและแท็บเล็ต">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            <span>มือถือ</span>
+          </a>
+          <a href="tv.apk" download="tv.apk" class="nav-btn-apk nav-btn-tv" id="tvApkDownloadHeaderBtn" title="ดาวน์โหลดแอปสำหรับ Android TV / Mi Box">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M17 2l-5 5-5-5"></path></svg>
+            <span>ทีวี</span>
+          </a>
+        </div>
+
+        <!-- Live Search Box -->
+        <div class="search-container">
+          <span class="search-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </span>
+          <input type="text" placeholder="ค้นหาชื่อหนัง, ซีรีส์..." class="search-input" id="searchInput" aria-label="ค้นหาภาพยนตร์">
+        </div>
+
+        <!-- VIP Member Auth Button -->
+        <button class="nav-vip-btn" id="navAuthBtn" title="ข้อมูลสมาชิก">
+          <span class="crown-icon">👑</span>
+          <span class="vip-btn-text">เข้าสู่ระบบ</span>
+        </button>
+
+        <!-- Direct Header Logout Button -->
+        <button class="nav-logout-btn" id="navHeaderLogoutBtn" style="display: none;" title="ออกจากระบบ">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          <span>ออกจากระบบ</span>
+        </button>
+
+        <button class="auth-btn-header" id="headerAuthBtn" style="display:none;"></button>
+      </div>
     </div>
-    
-    <div class="nav-actions">
-      <!-- Live Visitor Counter Badge -->
-      <div class="nav-stat-pill" id="navAnalyticsBtn" title="จำนวนผู้ชมที่กำลังรับชมสด">
-        <span class="live-dot"></span>
-        <span class="stat-text"><b id="visitorCountDisplay">...</b> คนออนไลน์</span>
-      </div>
 
-      <!-- App Download Buttons -->
-      <div class="nav-download-group">
-        <a href="app.apk" download="app.apk" class="nav-btn-apk nav-btn-mobile" id="apkDownloadHeaderBtn" title="ดาวน์โหลดแอปสำหรับมือถือและแท็บเล็ต">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
-          <span>มือถือ</span>
-        </a>
-        <a href="tv.apk" download="tv.apk" class="nav-btn-apk nav-btn-tv" id="tvApkDownloadHeaderBtn" title="ดาวน์โหลดแอปสำหรับ Android TV / Mi Box">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M17 2l-5 5-5-5"></path></svg>
-          <span>ทีวี</span>
-        </a>
-      </div>
-
-      <!-- Live Search Box -->
-      <div class="search-container">
-        <span class="search-icon" aria-hidden="true">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        </span>
-        <input type="text" placeholder="ค้นหาชื่อหนัง, ซีรีส์..." class="search-input" id="searchInput" aria-label="ค้นหาภาพยนตร์">
-      </div>
-
-      <!-- VIP Member Auth Button -->
-      <button class="nav-vip-btn" id="navAuthBtn" title="ข้อมูลสมาชิก">
-        <span class="crown-icon">👑</span>
-        <span class="vip-btn-text">เข้าสู่ระบบ</span>
-      </button>
-
-      <!-- Direct Header Logout Button -->
-      <button class="nav-logout-btn" id="navHeaderLogoutBtn" style="display: none;" title="ออกจากระบบ">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
-        <span>ออกจากระบบ</span>
-      </button>
-
-      <button class="auth-btn-header" id="headerAuthBtn" style="display:none;"></button>
-    </div>
+    <!-- Category / Navigation Menu Tabs -->
+    <nav aria-label="Main Navigation" class="main-nav">
+      <ul class="nav-links">
+        <li><a href="#" class="active" id="navHome">หน้าแรก</a></li>
+        <li><a href="#" id="navPopular">🔥 ยอดนิยม</a></li>
+        <li><a href="#" id="navThaiDrama">🎭 ละครไทย</a></li>
+        <li><a href="#" id="navSeries">📺 ซีรีส์</a></li>
+        <li><a href="#" id="navWatchlist">❤️ รายการโปรด (<span id="watchlistCount">0</span>)</a></li>
+        <li id="navLogoutTabItem" style="display: none;"><a href="#" id="navLogoutTab" class="nav-logout-tab-link" title="ออกจากระบบ"><span class="tab-logout-icon">🚪</span><span>ออกจากระบบ</span></a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Main Content Layout -->
