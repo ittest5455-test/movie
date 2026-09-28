@@ -80,6 +80,7 @@
           <li><a href="#" id="navThaiDrama">🎭 ละครไทย</a></li>
           <li><a href="#" id="navSeries">📺 ซีรีส์</a></li>
           <li><a href="#" id="navWatchlist">❤️ รายการโปรด (<span id="watchlistCount">0</span>)</a></li>
+          <li id="navLogoutTabItem" style="display: none;"><a href="#" id="navLogoutTab" class="nav-logout-tab-link" title="ออกจากระบบ"><span class="tab-logout-icon">🚪</span><span>ออกจากระบบ</span></a></li>
         </ul>
       </nav>
     </div>
@@ -112,10 +113,17 @@
       </div>
 
       <!-- VIP Member Auth Button -->
-      <button class="nav-vip-btn" id="navAuthBtn">
+      <button class="nav-vip-btn" id="navAuthBtn" title="ข้อมูลสมาชิก">
         <span class="crown-icon">👑</span>
         <span class="vip-btn-text">เข้าสู่ระบบ</span>
       </button>
+
+      <!-- Direct Header Logout Button -->
+      <button class="nav-logout-btn" id="navHeaderLogoutBtn" style="display: none;" title="ออกจากระบบ">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+        <span>ออกจากระบบ</span>
+      </button>
+
       <button class="auth-btn-header" id="headerAuthBtn" style="display:none;"></button>
     </div>
   </header>

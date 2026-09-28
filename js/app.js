@@ -1595,6 +1595,9 @@ function initMovieStreamApp() {
     const profileStatus = document.getElementById("profileStatus");
     const profilePhone = document.getElementById("profilePhone");
     const authLogoutBtn = document.getElementById("authLogoutBtn");
+    const navHeaderLogoutBtn = document.getElementById("navHeaderLogoutBtn");
+    const navLogoutTabItem = document.getElementById("navLogoutTabItem");
+    const navLogoutTab = document.getElementById("navLogoutTab");
 
     let isRegisterMode = false;
     // URL Google Apps Script Web App (เชื่อมต่อ Google Sheet เรียบร้อย)
@@ -1605,12 +1608,24 @@ function initMovieStreamApp() {
       if (savedUser) {
         try {
           const user = JSON.parse(savedUser);
-          if (navAuthBtn) navAuthBtn.innerHTML = `👑 ${user.phone.substring(0, 3)}*** (${user.status || 'VIP'})`;
+          const shortPhone = user.phone ? user.phone.substring(0, 3) + '***' : 'VIP';
+          const statusText = user.status || 'อนุมัติ';
+          if (navAuthBtn) {
+            navAuthBtn.innerHTML = `👑 ${shortPhone} (${statusText})`;
+            navAuthBtn.title = "คลิกเพื่อดูข้อมูลสมาชิก";
+          }
           if (headerAuthBtn) headerAuthBtn.innerHTML = `👑 VIP`;
+          if (navHeaderLogoutBtn) navHeaderLogoutBtn.style.display = "inline-flex";
+          if (navLogoutTabItem) navLogoutTabItem.style.display = "inline-block";
         } catch (e) {}
       } else {
-        if (navAuthBtn) navAuthBtn.innerHTML = `👤 เข้าสู่ระบบ / สมาชิก`;
+        if (navAuthBtn) {
+          navAuthBtn.innerHTML = `👑 <span class="vip-btn-text">เข้าสู่ระบบ</span>`;
+          navAuthBtn.title = "เข้าสู่ระบบสมาชิก VIP";
+        }
         if (headerAuthBtn) headerAuthBtn.innerHTML = `👤 สมาชิก`;
+        if (navHeaderLogoutBtn) navHeaderLogoutBtn.style.display = "none";
+        if (navLogoutTabItem) navLogoutTabItem.style.display = "none";
       }
 
       // โหลดประวัติ Continue Watching เฉพาะของ User ปัจจุบัน (user ใคร user มัน)
@@ -1813,12 +1828,27 @@ function initMovieStreamApp() {
       });
     }
 
+    function performLogout() {
+      localStorage.removeItem("moviestream_user");
+      showToast("ออกจากระบบเรียบร้อยแล้ว", "info");
+      updateAuthUI();
+      closeAuthModal();
+      showHomeView();
+    }
+
     if (authLogoutBtn) {
-      authLogoutBtn.addEventListener("click", () => {
-        localStorage.removeItem("moviestream_user");
-        showToast("ออกจากระบบเรียบร้อยแล้ว", "info");
-        updateAuthUI();
-        closeAuthModal();
+      authLogoutBtn.addEventListener("click", performLogout);
+    }
+    if (navHeaderLogoutBtn) {
+      navHeaderLogoutBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        performLogout();
+      });
+    }
+    if (navLogoutTab) {
+      navLogoutTab.addEventListener("click", (e) => {
+        e.preventDefault();
+        performLogout();
       });
     }
 
