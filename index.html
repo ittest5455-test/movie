@@ -7,25 +7,46 @@
     (function() {
       function applyTVViewport() {
         var ua = navigator.userAgent.toLowerCase();
-        var isMobilePhone = /mobile|iphone|ipod|android.*mobile/i.test(ua);
-        var isTV = ua.indexOf('tv') > -1 || 
-                   ua.indexOf('box') > -1 || 
-                   ua.indexOf('googletv') > -1 || 
+        // Check for touch screen capability (Redmi Pad, tablets, phones have touch screen)
+        var hasTouch = (navigator.maxTouchPoints && navigator.maxTouchPoints > 0) || ('ontouchstart' in window);
+        var isTabletOrPad = /pad|tablet|tab|sm-t|sm-x|redmi/i.test(ua);
+
+        // If the device has a touch screen or is identified as tablet/pad/phone, NEVER treat as TV!
+        if (hasTouch || isTabletOrPad) {
+          document.documentElement.classList.remove("is-tv-device");
+          var meta = document.getElementById("viewportMeta");
+          if (meta && meta.content !== "width=device-width, initial-scale=1.0, maximum-scale=5.0") {
+            meta.content = "width=device-width, initial-scale=1.0, maximum-scale=5.0";
+          }
+          return;
+        }
+
+        // Only true TV devices without touch (Mi Box, Mi TV Stick, Android TV, Smart TV)
+        var isTV = ua.indexOf('googletv') > -1 || 
                    ua.indexOf('smarttv') > -1 || 
+                   ua.indexOf('smart-tv') > -1 || 
                    ua.indexOf('aft') > -1 || 
                    ua.indexOf('leanback') > -1 || 
                    ua.indexOf('crkey') > -1 || 
                    ua.indexOf('mibox') > -1 || 
                    ua.indexOf('bravia') > -1 || 
-                   (ua.indexOf('median') > -1 && !isMobilePhone) ||
-                   (ua.indexOf('android') > -1 && !isMobilePhone) ||
-                   (window.innerWidth > window.innerHeight && (ua.indexOf('median') > -1 || ua.indexOf('box') > -1 || ua.indexOf('tv') > -1));
+                   ua.indexOf('tizen') > -1 || 
+                   ua.indexOf('webos') > -1 || 
+                   ua.indexOf('android tv') > -1 || 
+                   (ua.indexOf('tv') > -1 && !isTabletOrPad) ||
+                   (ua.indexOf('box') > -1 && !isTabletOrPad);
 
         if (isTV) {
           document.documentElement.classList.add("is-tv-device");
           var meta = document.getElementById("viewportMeta");
           if (meta && meta.content !== "width=1280, user-scalable=no") {
             meta.content = "width=1280, user-scalable=no";
+          }
+        } else {
+          document.documentElement.classList.remove("is-tv-device");
+          var meta = document.getElementById("viewportMeta");
+          if (meta && meta.content !== "width=device-width, initial-scale=1.0, maximum-scale=5.0") {
+            meta.content = "width=device-width, initial-scale=1.0, maximum-scale=5.0";
           }
         }
       }
@@ -40,7 +61,7 @@
   <meta name="keywords" content="ดูหนังออนไลน์, ดูหนังฟรี, ดูหนังใหม่ 2026, หนังชนโรง, ดูหนัง HD, หนังพากย์ไทย, ดูซีรีส์ฟรี, ดูหนังไม่มีโฆษณา">
   <meta name="robots" content="index, follow">
   <meta name="referrer" content="no-referrer">
-  <link rel="stylesheet" href="css/style.css?v=20260928_1830">
+  <link rel="stylesheet" href="css/style.css?v=20260928_1845">
   
   <!-- SEO Open Graph Metadata -->
   <meta property="og:title" content="ดูหนังออนไลน์ 2026 ฟรี หนังใหม่ชนโรง HD พากย์ไทย ซับไทย เต็มเรื่อง">
