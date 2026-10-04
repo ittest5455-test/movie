@@ -1,0 +1,31 @@
+{
+  "name": "MovieStream VIP - ดูหนังออนไลน์ 4K",
+  "short_name": "MovieStream",
+  "description": "เว็บดูหนังออนไลน์และซีรีส์ฟรี คมชัดระดับ 4K พากย์ไทย ซับไทย ไม่มีโฆษณากวนใจ พร้อมฟังก์ชันข้ามอินโทรและดูต่อ",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0a0c14",
+  "theme_color": "#0a0c14",
+  "lang": "th",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "entertainment",
+    "movies",
+    "video"
+  ]
+}

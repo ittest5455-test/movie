@@ -706,6 +706,95 @@ def update_wow_drama(max_pages=2):
     print(f"\n[✓] รวมดึงได้ทั้งหมด: {len(new_items)} เรื่องจาก WOW-DRAMA")
     return new_items
 
+def update_2499hd():
+    print("\n--- กำลังตรวจสอบภาพยนตร์ใหม่จาก 2499HD (2026 พร้อมตัวเล่น FastHD ข้ามอินโทร/ดูต่อ) ---")
+    new_items = []
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36',
+        'Referer': 'https://2499hdonline.com/'
+    }
+    
+    # ดึง URL จาก sitemap ล่าสุดและหน้า year 2026
+    urls = set()
+    for sitemap_url in ["https://2499hdonline.com/post-sitemap5.xml", "https://2499hdonline.com/post-sitemap4.xml", "https://2499hdonline.com/year/2026/"]:
+        try:
+            req = urllib.request.Request(sitemap_url, headers=headers)
+            with urllib.request.urlopen(req, timeout=10) as r:
+                body = r.read().decode('utf-8', errors='ignore')
+            found = re.findall(r'href=["\'](https://2499hdonline\.com/[^"\'#/]+/)["\']', body)
+            found += re.findall(r'<loc>(https://2499hdonline\.com/[^<]+)</loc>', body)
+            for f in found:
+                if '2026' in f and not any(x in f for x in ['/year/', '/category/', '/tag/', '/author/', '/page/']):
+                    urls.add(f)
+        except Exception:
+            pass
+
+    for url in list(urls)[:40]:
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, timeout=10) as r:
+                body = r.read().decode('utf-8', errors='ignore')
+
+            # Extract title
+            title_m = re.search(r'<title>(.*?)</title>', body)
+            raw_title = title_m.group(1).split('-')[0].strip() if title_m else ""
+            if not raw_title: continue
+
+            # Extract player
+            vid_m = re.search(r'src=["\'](https://2499hdonline\.com/play/vid\.php\?[^"\']+)["\']', body)
+            player_url = ""
+            post_id = ""
+            if vid_m:
+                vid_url = vid_m.group(1).replace('&#038;', '&')
+                id_m = re.search(r'id=([0-9a-zA-Z_-]+)', vid_url)
+                if id_m:
+                    post_id = id_m.group(1)
+                    player_url = f"https://play.gan-play.com/embed/fasthd.php?key=2499hdonline&id={post_id}&ep=&type="
+            if not player_url: continue
+
+            poster_m = re.search(r'property=["\']og:image["\']\s+content=["\']([^"\']+)["\']', body)
+            poster = poster_m.group(1) if poster_m else ""
+
+            rating_m = re.search(r'ratingValue["\']:\s*["\']?([0-9.]+)["\']?', body) or re.search(r'IMDB\s*([0-9.]+)', body)
+            rating = float(rating_m.group(1)) if rating_m else 7.5
+
+            dur_m = re.search(r'ความยาวประมาณ\s*<strong>(\d+)\s*นาที', body)
+            duration = f"{int(dur_m.group(1)) // 60} ชม. {int(dur_m.group(1)) % 60} นาที" if dur_m else "ภาพยนตร์เต็มเรื่อง"
+
+            genres = ["พากย์ไทย", "2499HD", "หนังใหม่ 2026", "ข้าม Intro", "ดูต่อได้"]
+            movie_id = f"2499-{post_id}"
+
+            item_obj = {
+                "titleTh": raw_title,
+                "titleEn": raw_title,
+                "year": 2026,
+                "poster": poster,
+                "backdrop": poster,
+                "videoUrl": player_url,
+                "sourceType": "embed",
+                "description": f"รับชมภาพยนตร์ {raw_title} ปี 2026 คมชัดระดับ 1080p พากย์ไทย พร้อมระบบดูต่อจากจุดเดิมและข้ามอินโทรอัตโนมัติ",
+                "rating": rating,
+                "genres": genres,
+                "duration": duration,
+                "trailerUrl": "",
+                "cast": [],
+                "source": "2499HD",
+                "episodes": ["เต็มเรื่อง"],
+                "episodeUrls": {"1": player_url},
+                "languages": ["Thai (พากย์ไทย)"],
+                "id": movie_id,
+                "postId": post_id,
+                "originalUrl": url
+            }
+            new_items.append(item_obj)
+            print(f"    [+] 2499HD: {raw_title}")
+            time.sleep(0.05)
+        except Exception:
+            pass
+
+    print(f"\n[✓] รวมดึงได้ทั้งหมด: {len(new_items)} เรื่องจาก 2499HD")
+    return new_items
+
 def main():
     print("=" * 60)
     print("🚀 เริ่มต้นระบบอัปเดตภาพยนตร์และซีรีส์ใหม่ล่าสุด...")
@@ -720,6 +809,7 @@ def main():
     scraped_media = update_24hd_media()
     scraped_gs = update_goseries4k()
     scraped_wow = update_wow_drama(max_pages=2)
+    scraped_2499 = update_2499hd()
     
     # 2. Merge intelligently
     existing_map = {m.get("originalUrl", m.get("id", "")): m for m in existing}
@@ -730,7 +820,7 @@ def main():
     added_new = 0
     updated_eps = 0
     
-    all_new_items = scraped_top + scraped_media + scraped_24hda + scraped_gs + scraped_wow
+    all_new_items = scraped_2499 + scraped_top + scraped_media + scraped_24hda + scraped_gs + scraped_wow
     
     for item in all_new_items:
         key = item.get("originalUrl", item.get("id", ""))

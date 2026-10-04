@@ -15,3 +15,11 @@ Thumbs.db
 html_dump.txt
 *.log
 apk_tools/
+n8n-git-ui/
+OPEN_GIT_UI.bat
+scripts/f1_page.html
+scripts/miru_cache_dump.txt
+initvpla.txt
+initvpla_dump.js
+js/movies_backup.js
+.github/

@@ -842,29 +842,34 @@ function initMovieStreamApp() {
     currentActiveMovie.currentEpisode = epInt;
 
     // Populate Episodes Custom Button
+    // Populate Episodes Custom Button in Player Controls Bar
     if (episodeSelectBtn) {
-      const span = episodeSelectBtn.querySelector("span") || episodeSelectBtn;
-      if (movie.episodes && movie.episodes.length > 0) {
-        span.textContent = movie.episodes[epInt - 1] || ("ตอนที่ " + epInt);
+      const span = document.getElementById("episodeBtnLabel") || episodeSelectBtn.querySelector("span") || episodeSelectBtn;
+      if (movie.episodes && movie.episodes.length > 1) {
+        span.textContent = `${movie.episodes[epInt - 1] || ("ตอนที่ " + epInt)} (เลือกตอน EP) ▾`;
+      } else if (movie.episodes && movie.episodes.length === 1) {
+        span.textContent = `${movie.episodes[0] || "เต็มเรื่อง"} (เลือกตอน EP) ▾`;
       } else {
-        span.textContent = "ตอนที่ 1";
+        span.textContent = "เลือกตอน (EP) ▾";
       }
+      episodeSelectBtn.style.display = "inline-flex";
       episodeSelectBtn.dataset.value = String(epInt);
     }
 
     // Record continue watching immediately
     recordContinueWatching(movie, epInt);
 
-    // Populate Languages Custom Button
+    // Populate Languages Custom Button in Player Controls Bar
     if (audioSelectBtn) {
-      const span = audioSelectBtn.querySelector("span") || audioSelectBtn;
+      const span = document.getElementById("audioBtnLabel") || audioSelectBtn.querySelector("span") || audioSelectBtn;
       if (movie.languages && movie.languages.length > 0) {
-        span.textContent = movie.languages[0]; // Default to first lang
+        span.textContent = `${movie.languages[0]} ▾`;
         audioSelectBtn.dataset.value = movie.languages[0];
       } else {
-        span.textContent = "Thai (พากย์ไทย)";
+        span.textContent = "พากย์ไทย ▾";
         audioSelectBtn.dataset.value = "Thai";
       }
+      audioSelectBtn.style.display = "inline-flex";
     }
     
     // Resolve initial URL (if jumping directly to an episode from Continue Watching)
@@ -904,6 +909,7 @@ function initMovieStreamApp() {
       }, 150);
         
       showToast(`กำลังโหลดเล่นวิดีโอ: ${movie.titleTh}`, "success");
+      triggerVideoOverlays(movie, epInt);
       return;
     } 
 
@@ -911,6 +917,7 @@ function initMovieStreamApp() {
     fallbackToIframe(initialVideoUrl);
     const epText = (movie.episodes && movie.episodes.length > 1) ? ` (ตอนที่ ${epInt})` : "";
     showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}${epText}`, "success");
+    triggerVideoOverlays(movie, epInt);
   }
 
   let hlsInstance = null;
@@ -1154,6 +1161,19 @@ function initMovieStreamApp() {
   function closePlayer() {
     window._activeVideoDuration = 0;
     clearTimeout(playerControlsIdleTimer);
+    if (typeof skipIntroCountdownTimer !== "undefined" && skipIntroCountdownTimer) {
+      clearInterval(skipIntroCountdownTimer);
+      skipIntroCountdownTimer = null;
+    }
+    if (typeof resumePopupTimeout !== "undefined" && resumePopupTimeout) {
+      clearTimeout(resumePopupTimeout);
+      resumePopupTimeout = null;
+    }
+    const resumePopup = document.getElementById("resumePlaybackPopup");
+    if (resumePopup) resumePopup.style.display = "none";
+    const skipContainer = document.getElementById("skipIntroContainer");
+    if (skipContainer) skipContainer.style.display = "none";
+
     if (playerModal) {
       playerModal.classList.remove("active");
       playerModal.classList.remove("player-controls-idle");
@@ -1240,6 +1260,119 @@ function initMovieStreamApp() {
     updateTimeAndProgress();
   }
 
+  let skipIntroCountdownTimer = null;
+  let resumePopupTimeout = null;
+
+  // Video Overlay Popups (เด้งขึ้นในวีดีโอเหมือน 2499HD / FastHD)
+  function triggerVideoOverlays(movie, episodeNum = 1) {
+    if (!movie) return;
+    const resumePopup = document.getElementById("resumePlaybackPopup");
+    const resumeTitle = document.getElementById("resumePopupTitle");
+    const skipContainer = document.getElementById("skipIntroContainer");
+    const skipBadge = document.getElementById("skipIntroTimerBadge");
+
+    // 1. Popup ดูต่อจากจุดเดิม (Resume Watching) ถ้ามีประวัติการดู
+    const existing = (continueWatchingList || []).find(item => item.movieId === movie.id);
+    if (existing && existing.progressPercent && existing.progressPercent > 5 && existing.progressPercent < 95) {
+      if (resumePopup && resumeTitle) {
+        clearTimeout(resumePopupTimeout);
+        const epLabel = existing.episodeLabel || `ตอนที่ ${existing.episode || episodeNum}`;
+        const pct = existing.progressPercent;
+        const estMin = Math.round((pct / 100) * 115);
+        const timeDisplay = `${formatTime(estMin * 60)} (${pct}%)`;
+
+        resumeTitle.textContent = `คุณรับชมค้างไว้ที่ ${epLabel} - ${timeDisplay}`;
+        resumePopup.style.display = "flex";
+
+        resumePopupTimeout = setTimeout(() => {
+          resumePopup.style.display = "none";
+        }, 12000);
+      }
+    } else {
+      if (resumePopup) resumePopup.style.display = "none";
+    }
+
+    // 2. Popup ข้าม Intro ลอยในจอวิดีโอ (Skip Intro)
+    if (skipContainer) {
+      clearInterval(skipIntroCountdownTimer);
+      setTimeout(() => {
+        if (!playerModal || !playerModal.classList.contains("active")) return;
+        skipContainer.style.display = "inline-flex";
+        let secondsLeft = 15;
+        if (skipBadge) skipBadge.textContent = `${secondsLeft}s`;
+
+        skipIntroCountdownTimer = setInterval(() => {
+          secondsLeft--;
+          if (skipBadge) skipBadge.textContent = `${secondsLeft}s`;
+          if (secondsLeft <= 0) {
+            clearInterval(skipIntroCountdownTimer);
+            skipContainer.style.display = "none";
+          }
+        }, 1000);
+      }, 700);
+    }
+  }
+
+  // Universal Skip Intro (ข้าม Intro ทุกเรื่อง - 90 วินาที)
+  function performSkipIntro(skipSec = 90) {
+    if (typeof clearInterval === "function" && skipIntroCountdownTimer) {
+      clearInterval(skipIntroCountdownTimer);
+      skipIntroCountdownTimer = null;
+    }
+    const skipContainer = document.getElementById("skipIntroContainer");
+    if (skipContainer) skipContainer.style.display = "none";
+    const skipIntroOverlayBtn = document.getElementById("skipIntroOverlayBtn");
+    if (skipIntroOverlayBtn) skipIntroOverlayBtn.style.display = "none";
+
+    // 1. Direct HTML5 / HLS Player Mode
+    if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
+      const cur = html5VideoPlayer.currentTime || 0;
+      const dur = html5VideoPlayer.duration || 0;
+      const target = cur < skipSec ? skipSec : Math.min(dur || 999999, cur + skipSec);
+      html5VideoPlayer.currentTime = target;
+      updateTimeAndProgress();
+      showToast(`⚡ ข้าม Intro ไปที่ ${formatTime(target)} เรียบร้อย`, "success");
+      return;
+    }
+
+    // 2. IFrame Embed Mode (2499HD, GOSERIES, WOW-DRAMA, 24-HD, 24HDX)
+    if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
+      let triggered = false;
+
+      // A. Try direct DOM click if accessible (e.g. 2499HD gan-play button)
+      try {
+        const ifrDoc = iframeVideoPlayer.contentDocument || (iframeVideoPlayer.contentWindow && iframeVideoPlayer.contentWindow.document);
+        if (ifrDoc) {
+          const btn = ifrDoc.getElementById('skip-intro') || ifrDoc.querySelector('.skip-intro, [id*="skip"]');
+          if (btn) {
+            btn.click();
+            triggered = true;
+          }
+        }
+      } catch(e) {}
+
+      // B. Dispatch postMessage protocols for all embedded video players
+      try {
+        if (iframeVideoPlayer.contentWindow) {
+          const msgs = [
+            { type: 'skipIntro' },
+            { type: 'seek', time: skipSec },
+            { event: 'command', func: 'seekTo', args: [skipSec, true] },
+            { method: 'setCurrentTime', value: skipSec },
+            JSON.stringify({ type: 'skipIntro' }),
+            JSON.stringify({ event: 'command', func: 'seekTo', args: [skipSec, true] }),
+            JSON.stringify({ method: 'setCurrentTime', value: skipSec })
+          ];
+          msgs.forEach(m => {
+            try { iframeVideoPlayer.contentWindow.postMessage(m, '*'); } catch(err) {}
+          });
+        }
+      } catch(e) {}
+
+      showToast(`⚡ ส่งคำสั่งข้าม Intro (${skipSec} วินาที) แล้ว`, "success");
+    }
+  }
+
   // Format time (seconds -> hh:mm:ss / mm:ss)
   function formatTime(seconds) {
     if (!isFinite(seconds) || isNaN(seconds) || seconds < 0) return "00:00";
@@ -1275,6 +1408,16 @@ function initMovieStreamApp() {
         window._lastCwSync = Date.now();
         const ep = parseInt(episodeSelectBtn ? (episodeSelectBtn.dataset.value || "1") : 1) || 1;
         recordContinueWatching(currentActiveMovie, ep, Math.round(percentage));
+      }
+    }
+
+    // Auto-show Floating Skip Intro button during the first 120 seconds of video
+    const skipIntroOverlayBtn = document.getElementById("skipIntroOverlayBtn");
+    if (skipIntroOverlayBtn) {
+      if (curTime >= 3 && curTime <= 120) {
+        skipIntroOverlayBtn.style.display = "inline-flex";
+      } else {
+        skipIntroOverlayBtn.style.display = "none";
       }
     }
 
@@ -2146,6 +2289,133 @@ function initMovieStreamApp() {
       tvFullscreenBtn.addEventListener("touchend", onFsButtonClick);
     }
 
+    // Skip Intro Buttons (ข้าม Intro ทุกเรื่อง ทั้งปุ่มลอยบนจอ และปุ่มบนแถบควบคุม)
+    const skipIntroOverlayBtn = document.getElementById("skipIntroOverlayBtn");
+    if (skipIntroOverlayBtn) {
+      skipIntroOverlayBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        performSkipIntro(90);
+      });
+    }
+
+    const skipIntroDismissBtn = document.getElementById("skipIntroDismissBtn");
+    if (skipIntroDismissBtn) {
+      skipIntroDismissBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (typeof clearInterval === "function" && skipIntroCountdownTimer) {
+          clearInterval(skipIntroCountdownTimer);
+          skipIntroCountdownTimer = null;
+        }
+        const skipContainer = document.getElementById("skipIntroContainer");
+        if (skipContainer) skipContainer.style.display = "none";
+      });
+    }
+
+    const globalSkipIntroBtn = document.getElementById("globalSkipIntroBtn");
+    if (globalSkipIntroBtn) {
+      globalSkipIntroBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        performSkipIntro(90);
+      });
+    }
+
+    // Resume Playback inside Video Handlers (เหมือน 2499HD)
+    const resumeContinueBtn = document.getElementById("resumeContinueBtn");
+    if (resumeContinueBtn) {
+      resumeContinueBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (typeof clearTimeout === "function" && resumePopupTimeout) {
+          clearTimeout(resumePopupTimeout);
+          resumePopupTimeout = null;
+        }
+        const resumePopup = document.getElementById("resumePlaybackPopup");
+        if (resumePopup) resumePopup.style.display = "none";
+        
+        if (!currentActiveMovie) return;
+        const existing = (continueWatchingList || []).find(item => item.movieId === currentActiveMovie.id);
+        if (existing) {
+          if (existing.episode && existing.episode !== currentActiveMovie.currentEpisode) {
+            const l = audioSelectBtn && (audioSelectBtn.dataset.value || "").toLowerCase().includes("thai") ? "Thai" : "Sound Track";
+            loadEpisode(currentActiveMovie.postId || "", existing.episode, l, currentActiveMovie.titleEn || "");
+          }
+          if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
+            const dur = html5VideoPlayer.duration || window._activeVideoDuration || 7200;
+            const target = (existing.progressPercent / 100) * dur;
+            html5VideoPlayer.currentTime = target;
+            html5VideoPlayer.play().catch(() => {});
+            updateTimeAndProgress();
+            showToast(`▶ เล่นต่อจากเดิมที่ ${formatTime(target)}`, "success");
+          } else if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
+            const approxSec = Math.round((existing.progressPercent / 100) * 5400);
+            try {
+              if (iframeVideoPlayer.contentWindow) {
+                iframeVideoPlayer.contentWindow.postMessage({ type: 'seek', time: approxSec }, '*');
+                iframeVideoPlayer.contentWindow.postMessage({ event: 'command', func: 'seekTo', args: [approxSec, true] }, '*');
+              }
+            } catch(err) {}
+            showToast(`▶ รับชมต่อจากจุดเดิม (${existing.progressPercent}%)`, "success");
+          }
+        }
+      });
+    }
+
+    const resumeRestartBtn = document.getElementById("resumeRestartBtn");
+    if (resumeRestartBtn) {
+      resumeRestartBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (typeof clearTimeout === "function" && resumePopupTimeout) {
+          clearTimeout(resumePopupTimeout);
+          resumePopupTimeout = null;
+        }
+        const resumePopup = document.getElementById("resumePlaybackPopup");
+        if (resumePopup) resumePopup.style.display = "none";
+
+        if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
+          html5VideoPlayer.currentTime = 0;
+          html5VideoPlayer.play().catch(() => {});
+          updateTimeAndProgress();
+        } else if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
+          try {
+            if (iframeVideoPlayer.contentWindow) {
+              iframeVideoPlayer.contentWindow.postMessage({ type: 'seek', time: 0 }, '*');
+              iframeVideoPlayer.contentWindow.postMessage({ event: 'command', func: 'seekTo', args: [0, true] }, '*');
+            }
+          } catch(err) {}
+        }
+        showToast("🔄 เริ่มเล่นใหม่ตั้งแต่ต้น", "info");
+      });
+    }
+
+    const resumeCloseBtn = document.getElementById("resumeCloseBtn");
+    if (resumeCloseBtn) {
+      resumeCloseBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (typeof clearTimeout === "function" && resumePopupTimeout) {
+          clearTimeout(resumePopupTimeout);
+          resumePopupTimeout = null;
+        }
+        const resumePopup = document.getElementById("resumePlaybackPopup");
+        if (resumePopup) resumePopup.style.display = "none";
+      });
+    }
+
+    // Keyboard Shortcut 'S' for Skip Intro when player is active
+    document.addEventListener("keydown", (e) => {
+      if (document.activeElement && (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA')) return;
+      if (playerModal && playerModal.classList.contains("active")) {
+        if (e.key === "s" || e.key === "S" || e.key === "i" || e.key === "I") {
+          e.preventDefault();
+          performSkipIntro(90);
+        }
+      }
+    });
+
     // D-Pad Navigation Helper for Player Modal (ArrowUp ไปที่แถบเวลา / ArrowDown ลงมาที่เมนูปุ่ม)
     const playerBottomBar = document.querySelector(".player-bottom-bar");
     if (playerBottomBar) {
@@ -2219,8 +2489,41 @@ function initMovieStreamApp() {
       }
     });
 
-    // Genre Filters Buttons (Support Click and Touch)
+    // ---------------------------------------------------------
+    // Genre Tags Horizontal Scroll & Drag Navigation System
+    // ---------------------------------------------------------
+    const genreTagsWrapper = document.querySelector(".genre-tags-wrapper");
+    const genreScrollPrev = document.getElementById("genreScrollPrev");
+    const genreScrollNext = document.getElementById("genreScrollNext");
+
+    let isDraggingGenre = false;
+    let genreStartX = 0;
+    let genreScrollLeft = 0;
+    let hasDraggedGenre = false;
+
+    function updateGenreScrollNav() {
+      if (!genreFilterContainer) return;
+      const { scrollLeft, scrollWidth, clientWidth } = genreFilterContainer;
+      const maxScroll = scrollWidth - clientWidth;
+      
+      const canScrollLeft = scrollLeft > 8;
+      const canScrollRight = scrollLeft < maxScroll - 8;
+
+      if (genreScrollPrev) {
+        genreScrollPrev.classList.toggle("visible", canScrollLeft);
+      }
+      if (genreScrollNext) {
+        genreScrollNext.classList.toggle("visible", canScrollRight);
+      }
+      if (genreTagsWrapper) {
+        genreTagsWrapper.classList.toggle("can-scroll-left", canScrollLeft);
+        genreTagsWrapper.classList.toggle("can-scroll-right", canScrollRight);
+      }
+    }
+
+    // Genre Filters Buttons (Support Click, Drag, and Touch)
     function handleGenreClick(e) {
+      if (hasDraggedGenre) return;
       const btn = e.target.closest(".genre-tag");
       if (!btn) return;
       
@@ -2228,6 +2531,12 @@ function initMovieStreamApp() {
       document.querySelectorAll(".genre-tag").forEach(tag => tag.classList.remove("active"));
       btn.classList.add("active");
       
+      // Smoothly center the active tag in view
+      try {
+        btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      } catch(err) {}
+      setTimeout(updateGenreScrollNav, 320);
+
       const genre = btn.getAttribute("data-genre");
       if (genre === "all") {
         showHomeView();
@@ -2281,6 +2590,9 @@ function initMovieStreamApp() {
       } else if (genre === "WOW-DRAMA") {
         const wowMovies = movieList.filter(m => m.source === "WOW-DRAMA" || (m.genres && m.genres.includes("WOW-DRAMA")));
         showGridView(`📺 รวมละครไทยและซีรีส์จาก WOW-DRAMA (${wowMovies.length} เรื่อง)`, wowMovies);
+      } else if (genre === "2499HD") {
+        const m2499 = movieList.filter(m => m.source === "2499HD" || (m.genres && m.genres.includes("2499HD")));
+        showGridView(`🚀 รวมหนังปี 2026 จาก 2499HD (ตัวเล่น FastHD ข้าม Intro / ดูต่อได้) (${m2499.length} เรื่อง)`, m2499);
       } else {
         const filtered = movieList.filter(m => m.genres && (m.genres.includes(genre) || m.genres.some(g => g.includes(genre))));
         showGridView(`หมวดหมู่ภาพยนตร์: ${genre}`, filtered);
@@ -2288,7 +2600,69 @@ function initMovieStreamApp() {
     }
 
     if (genreFilterContainer) {
+      // 1. Mouse wheel horizontal scroll (เลื่อนล้อเมาส์ขึ้นลงจะเลื่อนแถบซ้ายขวาอย่างนุ่มนวล)
+      genreFilterContainer.addEventListener("wheel", (e) => {
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+          e.preventDefault();
+          genreFilterContainer.scrollLeft += e.deltaY * 0.95;
+          updateGenreScrollNav();
+        }
+      }, { passive: false });
+
+      // 2. Click & Drag to scroll (ลากด้วยเมาส์เพื่อเลื่อนแถบ)
+      genreFilterContainer.addEventListener("mousedown", (e) => {
+        if (e.button !== 0) return;
+        isDraggingGenre = true;
+        hasDraggedGenre = false;
+        genreFilterContainer.classList.add("is-dragging");
+        genreStartX = e.pageX - genreFilterContainer.offsetLeft;
+        genreScrollLeft = genreFilterContainer.scrollLeft;
+      });
+
+      window.addEventListener("mouseup", () => {
+        if (isDraggingGenre) {
+          isDraggingGenre = false;
+          genreFilterContainer.classList.remove("is-dragging");
+          setTimeout(() => {
+            hasDraggedGenre = false;
+          }, 120);
+        }
+      });
+
+      genreFilterContainer.addEventListener("mousemove", (e) => {
+        if (!isDraggingGenre) return;
+        e.preventDefault();
+        const x = e.pageX - genreFilterContainer.offsetLeft;
+        const walk = (x - genreStartX) * 1.5;
+        if (Math.abs(walk) > 5) {
+          hasDraggedGenre = true;
+        }
+        genreFilterContainer.scrollLeft = genreScrollLeft - walk;
+        updateGenreScrollNav();
+      });
+
+      // 3. Scroll event & window resize to update arrow visibility
+      genreFilterContainer.addEventListener("scroll", updateGenreScrollNav, { passive: true });
+      window.addEventListener("resize", updateGenreScrollNav);
+      setTimeout(updateGenreScrollNav, 350);
+
+      // 4. Click event for tags
       genreFilterContainer.addEventListener("click", handleGenreClick);
+    }
+
+    // 5. Left/Right Navigation Arrow Buttons
+    if (genreScrollPrev) {
+      genreScrollPrev.addEventListener("click", () => {
+        genreFilterContainer.scrollBy({ left: -280, behavior: "smooth" });
+        setTimeout(updateGenreScrollNav, 300);
+      });
+    }
+
+    if (genreScrollNext) {
+      genreScrollNext.addEventListener("click", () => {
+        genreFilterContainer.scrollBy({ left: 280, behavior: "smooth" });
+        setTimeout(updateGenreScrollNav, 300);
+      });
     }
 
     // Live Search input filter
@@ -2350,6 +2724,159 @@ function initMovieStreamApp() {
         e.preventDefault();
         showToast("ติดต่อผู้ดูแลระบบ: ผ่านช่องทางระบบ Cloudflare Stream", "info");
       });
+    }
+
+    // ==========================================================
+    // PWA & Install App Controller (ระบบติดตั้งแอปพลิเคชัน)
+    // ==========================================================
+    let deferredInstallPrompt = null;
+    const installAppModal = document.getElementById("installAppModal");
+    const installAppHeaderBtn = document.getElementById("installAppHeaderBtn");
+    const installModalCloseBtn = document.getElementById("installModalCloseBtn");
+    const pwaModalInstallBtn = document.getElementById("pwaModalInstallBtn");
+    const iosInstallGuide = document.getElementById("iosInstallGuide");
+    const floatingInstallBanner = document.getElementById("floatingInstallBanner");
+    const floatingInstallBtn = document.getElementById("floatingInstallBtn");
+    const floatingDismissBtn = document.getElementById("floatingDismissBtn");
+
+    const isIOSDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    const isStandaloneMode = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+
+    // 1. Register Service Worker for PWA
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => {
+            console.log('MovieStream PWA ServiceWorker registered with scope:', reg.scope);
+          })
+          .catch(err => {
+            console.log('PWA ServiceWorker registration skipped/failed:', err);
+          });
+      });
+    }
+
+    // 2. Capture PWA beforeinstallprompt event
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredInstallPrompt = e;
+
+      // Show floating install banner for mobile users if not dismissed
+      const dismissed = sessionStorage.getItem("moviestream_install_dismissed");
+      if (!isStandaloneMode && !dismissed && floatingInstallBanner && window.innerWidth <= 768) {
+        floatingInstallBanner.style.display = "flex";
+      }
+    });
+
+    window.addEventListener('appinstalled', () => {
+      deferredInstallPrompt = null;
+      if (floatingInstallBanner) floatingInstallBanner.style.display = "none";
+      closeInstallModal();
+      showToast("🎉 ติดตั้งแอปพลิเคชัน MovieStream สำเร็จแล้ว!", "success");
+    });
+
+    function openInstallModal() {
+      if (installAppModal) {
+        installAppModal.style.display = "flex";
+        requestAnimationFrame(() => installAppModal.classList.add("active"));
+        installAppModal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+
+        // If iOS device, show the iOS guide by default
+        if (isIOSDevice && iosInstallGuide) {
+          iosInstallGuide.style.display = "block";
+          if (pwaModalInstallBtn) {
+            pwaModalInstallBtn.innerHTML = `<span>📱 ทำตามขั้นตอนด้านล่างบน Safari</span>`;
+          }
+        }
+      }
+    }
+
+    function closeInstallModal() {
+      if (installAppModal) {
+        installAppModal.classList.remove("active");
+        installAppModal.setAttribute("aria-hidden", "true");
+        setTimeout(() => {
+          if (!installAppModal.classList.contains("active")) {
+            installAppModal.style.display = "none";
+          }
+        }, 250);
+        document.body.style.overflow = "";
+      }
+    }
+
+    function triggerPwaInstall() {
+      if (isStandaloneMode) {
+        showToast("แอปพลิเคชัน MovieStream ติดตั้งบนเครื่องของคุณอยู่แล้ว", "info");
+        return;
+      }
+
+      if (deferredInstallPrompt) {
+        deferredInstallPrompt.prompt();
+        deferredInstallPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            showToast("กำลังติดตั้งแอปพลิเคชัน...", "success");
+            if (floatingInstallBanner) floatingInstallBanner.style.display = "none";
+          }
+          deferredInstallPrompt = null;
+          closeInstallModal();
+        });
+      } else if (isIOSDevice) {
+        if (iosInstallGuide) {
+          iosInstallGuide.style.display = "block";
+          iosInstallGuide.scrollIntoView({ behavior: 'smooth' });
+        }
+        showToast("แตะปุ่มแชร์ [↑] ใน Safari แล้วเลือก 'เพิ่มไปยังหน้าจอโฮม'", "info", 5000);
+      } else {
+        // Desktop or other browser
+        showToast("คลิกไอคอนติดตั้งแอปที่แถบ URL ของเบราว์เซอร์ หรือเพิ่มลงหน้าจอหลัก", "info", 4000);
+      }
+    }
+
+    if (installAppHeaderBtn) {
+      installAppHeaderBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        openInstallModal();
+      });
+    }
+
+    if (installModalCloseBtn) {
+      installModalCloseBtn.addEventListener("click", closeInstallModal);
+    }
+
+    if (installAppModal) {
+      installAppModal.addEventListener("click", (e) => {
+        if (e.target === installAppModal) closeInstallModal();
+      });
+    }
+
+    if (pwaModalInstallBtn) {
+      pwaModalInstallBtn.addEventListener("click", triggerPwaInstall);
+    }
+
+    if (floatingInstallBtn) {
+      floatingInstallBtn.addEventListener("click", () => {
+        if (deferredInstallPrompt) {
+          triggerPwaInstall();
+        } else {
+          openInstallModal();
+        }
+      });
+    }
+
+    if (floatingDismissBtn) {
+      floatingDismissBtn.addEventListener("click", () => {
+        if (floatingInstallBanner) floatingInstallBanner.style.display = "none";
+        sessionStorage.setItem("moviestream_install_dismissed", "true");
+      });
+    }
+
+    // Auto-show floating banner on mobile after 3.5 seconds if not standalone
+    if (!isStandaloneMode && window.innerWidth <= 768 && !sessionStorage.getItem("moviestream_install_dismissed")) {
+      setTimeout(() => {
+        if (floatingInstallBanner && !isStandaloneMode) {
+          floatingInstallBanner.style.display = "flex";
+        }
+      }, 3500);
     }
   }
 }
