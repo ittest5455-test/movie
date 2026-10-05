@@ -19,7 +19,10 @@ HEADERS_G4 = {
 }
 
 raw = open("js/movies.js", "r", encoding="utf-8-sig").read()
-m = json.loads(re.search(r'const movies = (\[.*\]);', raw, re.DOTALL).group(1))
+match = re.search(r'(?:window\.|const\s+|var\s+|let\s+)?movies\s*=\s*(\[[\s\S]*?\]);', raw)
+if not match:
+    match = re.search(r'(\[[\s\S]*\])', raw)
+m = json.loads(match.group(1)) if match else []
 existing_titles = set(x.get("titleTh", "").strip().lower() for x in m)
 existing_urls = set(x.get("videoUrl", "") for x in m)
 
@@ -223,7 +226,7 @@ if len(new_movies) > 0:
     updated_database = new_movies + m
     with open("js/movies.js", "w", encoding="utf-8") as f:
         f.write("// ฐานข้อมูลภาพยนตร์รวมจาก 24-HDX + GOSERIES4K (อัปเดตหนังใหม่สดล่าสุด 100%)\n")
-        f.write("const movies = ")
+        f.write("window.movies = ")
         json.dump(updated_database, f, ensure_ascii=False, indent=2)
-        f.write(";\n")
+        f.write(";\nvar movies = window.movies;\n")
     print(f"Saved updated js/movies.js with {len(updated_database)} total movies!")

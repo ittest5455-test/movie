@@ -3,8 +3,11 @@ import json
 import re
 import datetime
 
-raw = open("js/movies.js", encoding='utf-8').read()
-m = json.loads(re.search(r'const movies = (\[.*\]);', raw, re.DOTALL).group(1))
+raw = open("js/movies.js", "r", encoding="utf-8-sig").read()
+match = re.search(r'(?:window\.|const\s+|var\s+|let\s+)?movies\s*=\s*(\[[\s\S]*?\]);', raw)
+if not match:
+    match = re.search(r'(\[[\s\S]*\])', raw)
+m = json.loads(match.group(1)) if match else []
 
 today = datetime.datetime.now().strftime("%Y-%m-%d")
 
@@ -19,7 +22,7 @@ xml += '  </url>\n'
 
 for movie in m:
     xml += '  <url>\n'
-    xml += f'    <loc>./#play-{movie["id"]}</loc>\n'
+    xml += f'    <loc>./#play-{movie.get("id", "")}</loc>\n'
     xml += f'    <lastmod>{today}</lastmod>\n'
     xml += '    <changefreq>weekly</changefreq>\n'
     xml += '    <priority>0.8</priority>\n'

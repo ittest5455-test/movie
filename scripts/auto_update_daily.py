@@ -3,7 +3,8 @@
 สคริปต์อัปเดตหนังใหม่อัตโนมัติทุกวัน (Daily Auto Updater)
 1. สแกนดึงหนังและซีรีส์ใหม่ล่าสุดจาก 24-HDX และ GOSERIES4K
 2. คลีนโค้ดและ encoding ให้สะอาด 100%
-3. ผลักข้อมูลขึ้น GitHub -> Cloudflare Pages อัตโนมัติทันที
+3. อัปเดต Sitemap สำหรับ SEO
+4. ผลักข้อมูลขึ้น GitHub -> Cloudflare Pages อัตโนมัติทันที
 """
 import subprocess
 import sys
@@ -25,6 +26,10 @@ try:
     print("\n[Step 2/3] กำลังตรวจสอบความถูกต้องและคลีนไฟล์...")
     subprocess.run([sys.executable, "scripts/clean_utf8_movies.py"], check=True)
     
+    # 2.5 Sitemap
+    print("\n[Step 2.5] กำลังอัปเดต sitemap.xml...")
+    subprocess.run([sys.executable, "scripts/generate_sitemap.py"], check=True)
+    
     # 3. Push to GitHub
     print("\n[Step 3/3] กำลังส่งข้อมูลขึ้น GitHub -> Cloudflare Pages...")
     subprocess.run([sys.executable, "scripts/push_to_github.py"], check=True)
@@ -34,4 +39,4 @@ try:
     print("==================================================")
 except Exception as e:
     print(f"\n❌ เกิดข้อผิดพลาดในการอัปเดต: {e}")
-
+    sys.exit(1)

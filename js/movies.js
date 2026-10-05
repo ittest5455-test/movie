@@ -1,6 +1,962 @@
 // ฐานข้อมูลภาพยนตร์รวม 24-HD, GOSERIES4K, WOW-DRAMA และ 2499HD ปี 2026 พากย์ไทย
 window.movies = [
   {
+    "titleTh": "Against The Current (2026) /",
+    "titleEn": "Against The Current (2026) /",
+    "year": 2026,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/10/9-1.png",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/10/9-1.png",
+    "videoUrl": "https://torbo007.com/embed/984b01aff1cc77fa7dca8fc799f06aa6",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ Against The Current (2026) / อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า"
+    ],
+    "duration": "42 ตอน (ซับไทย)",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/against-the-current/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16",
+      "ตอนที่ 17",
+      "ตอนที่ 18",
+      "ตอนที่ 19",
+      "ตอนที่ 20",
+      "ตอนที่ 21",
+      "ตอนที่ 22",
+      "ตอนที่ 23",
+      "ตอนที่ 24",
+      "ตอนที่ 25",
+      "ตอนที่ 26",
+      "ตอนที่ 27",
+      "ตอนที่ 28",
+      "ตอนที่ 29",
+      "ตอนที่ 30",
+      "ตอนที่ 31",
+      "ตอนที่ 32",
+      "ตอนที่ 33",
+      "ตอนที่ 34",
+      "ตอนที่ 35",
+      "ตอนที่ 36",
+      "ตอนที่ 37",
+      "ตอนที่ 38",
+      "ตอนที่ 39",
+      "ตอนที่ 40",
+      "ตอนที่ 41",
+      "ตอนที่ 42"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/984b01aff1cc77fa7dca8fc799f06aa6",
+      "2": "https://torbo007.com/embed/b0067a95ed1d65e0d3dd1a3bf9abd744",
+      "3": "https://torbo007.com/embed/a630e24aa3acf54a70a266b15a4fc8f0",
+      "4": "https://torbo007.com/embed/608c5c523a4bbffc1f6fa1b15bd28122",
+      "5": "https://torbo007.com/embed/b748206b18e2732bc9233935da67e0d5",
+      "6": "https://torbo007.com/embed/75620224ef3a2f8ed7e98686f135a37f",
+      "7": "https://torbo007.com/embed/c7897702fb7c7352fa2649c26459b910",
+      "8": "https://torbo007.com/embed/26ddd7a5fdf6d46caf1389d7d81d8900",
+      "9": "https://torbo007.com/embed/99cfd0f9bcf6cabe606efd93051f8b89",
+      "10": "https://torbo007.com/embed/36af337605a0e1e923c3b0d33f0c226c",
+      "11": "https://torbo007.com/embed/677734153349b0ee199426cdb45d4931",
+      "12": "https://torbo007.com/embed/2010c1b9afc87cd2b2f58862fb1ea004",
+      "13": "https://torbo007.com/embed/39880b005eaee0a1ed39d802fa327231",
+      "14": "https://torbo007.com/embed/48cc49ad1d281ddae0310f92b3a2fa5b",
+      "15": "https://torbo007.com/embed/b566f5c81a8462fa7809fedd091700b2",
+      "16": "https://torbo007.com/embed/b98a0c6cb0d39d28a9ad38c7ed529c8b",
+      "17": "https://torbo007.com/embed/576533496ff914776d9e6bdf76f3edc8",
+      "18": "https://torbo007.com/embed/551b6dd709aea69f7e13c9b551a19642",
+      "19": "https://torbo007.com/embed/bc19a5d11fa1b847231265337d04f5ba",
+      "20": "https://torbo007.com/embed/827d6c54ee6a3ca7de23d36a4837fb07",
+      "21": "https://torbo007.com/embed/0301a3f43497391db1fc0a5a9eaf6f38",
+      "22": "https://torbo007.com/embed/772124dea06099602a9bb92875948a6e",
+      "23": "https://torbo007.com/embed/81bde67a0ae5214e55634c633ca5fe50",
+      "24": "https://torbo007.com/embed/4cd5b8730aeb8ad65366236ef90494fe",
+      "25": "https://torbo007.com/embed/d7234df07948ad2387b91a971dd87354",
+      "26": "https://torbo007.com/embed/f97cb501094337f15b4e44ed5f69b2c3",
+      "27": "https://torbo007.com/embed/8e3719c97ef099c064029d29f4aa4f9a",
+      "28": "https://torbo007.com/embed/dfad3b79f77aeaea7c44a7c14757ac0a",
+      "29": "https://torbo007.com/embed/13195aadd40e5f0c12610c6f0c77db62",
+      "30": "https://torbo007.com/embed/e11acad485188db6e822f20bcff6ba3e",
+      "31": "https://torbo007.com/embed/0f6a1ba42cc36b8e5cf49de8f89909a9",
+      "32": "https://torbo007.com/embed/ddac1a2d2f0d30e30d7d4e798972300f",
+      "33": "https://torbo007.com/embed/58fd4ccd996f962a40074be23624e6e2",
+      "34": "https://torbo007.com/embed/a9d3a87077b53defdecfd467231485e1",
+      "35": "https://torbo007.com/embed/1a32db35cb8951fa499f8ad638c1d1ee",
+      "36": "https://torbo007.com/embed/b19fc8963182c5b1791faf89f3732b54",
+      "37": "https://torbo007.com/embed/e7b203369ec3748d812320903a686a29",
+      "38": "https://torbo007.com/embed/3625b927bd672cc9783dded476367334",
+      "39": "https://dohd007.com/embed/50811eaf85c830f795819d68ea499e29",
+      "40": "https://torbo007.com/embed/439e0cf12a73bc53f3b2b24a0c06a143",
+      "41": "https://torbo007.com/embed/ccdb45d9300a88fe3b627629fc312dfb",
+      "42": "https://torbo007.com/embed/c7a77b1d021612bae0e2cb9c83e2d497"
+    },
+    "languages": [
+      "ซับไทย"
+    ],
+    "id": "g4-499"
+  },
+  {
+    "titleTh": "Irreplaceable กลเกมเหนือโชคชะตา (2026)",
+    "titleEn": "Irreplaceable กลเกมเหนือโชคชะตา (2026)",
+    "year": 2026,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/09/9-19.png",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/09/9-19.png",
+    "videoUrl": "https://torbo007.com/embed/3e2886e861124197329e8b0db0d07a4f",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ Irreplaceable กลเกมเหนือโชคชะตา (2026)  จบ G4 อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า"
+    ],
+    "duration": "11 ตอน (พากย์ไทย)",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/irreplaceable/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/3e2886e861124197329e8b0db0d07a4f",
+      "2": "https://torbo007.com/embed/d87f4592ee5858169798800dc9caa077",
+      "3": "https://torbo007.com/embed/59a31b19b0c5aad3ebb064ac1516bb0e",
+      "4": "https://torbo007.com/embed/d23325282752585a8eb8d746465169b8",
+      "5": "https://torbo007.com/embed/0fc123e91dbb1d1deb99c08985088107",
+      "6": "https://torbo007.com/embed/da35c5acc5e19eaf4c3aabbe9e13c896",
+      "7": "https://torbo007.com/embed/7398f19b00cd50cff77cd8fe08199ca0",
+      "8": "https://torbo007.com/embed/27fbad1d19bf3f8fe6c622d865d8e65b",
+      "9": "https://torbo007.com/embed/db1aba183db16c1d86d8da6097cca77b",
+      "10": "https://torbo007.com/embed/08696aa6d5b1c4c2699e680342b02dd0",
+      "11": "https://torbo007.com/embed/ce545741205eac68047f2e2f9ec1b4cf"
+    },
+    "languages": [
+      "พากย์ไทย"
+    ],
+    "id": "g4-500"
+  },
+  {
+    "titleTh": "Four Hands, Two Sonatas",
+    "titleEn": "Four Hands, Two Sonatas",
+    "year": 2025,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/08/9-9.png",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/08/9-9.png",
+    "videoUrl": "https://torbo007.com/embed/f83ae198c0ef0e6cb256a65ed00764d7",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ Four Hands, Two Sonatas อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า"
+    ],
+    "duration": "12 ตอน (ซับไทย)",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/four-hands-two-sonatas/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/f83ae198c0ef0e6cb256a65ed00764d7",
+      "2": "https://torbo007.com/embed/509bd5f47090ed638573b89dc4316ee8",
+      "3": "https://torbo007.com/embed/b14eb1af3f901aa8a68c9a73f32dbce7",
+      "4": "https://torbo007.com/embed/7e5316de21f01a30cd2abdef99ef569f",
+      "5": "https://torbo007.com/embed/78d97a51066c668ae4b25e1f3e0bf0ee",
+      "6": "https://torbo007.com/embed/c93ef10f51c4e2a66b31519303bd0120",
+      "7": "https://torbo007.com/embed/88b22748bb07be5d1467b613d92d4825",
+      "8": "https://torbo007.com/embed/50017be5d60c307131cbe542d0f83eec",
+      "9": "https://torbo007.com/embed/d1d2b10069d3f30a11d818be4868333e",
+      "10": "https://torbo007.com/embed/a944f627aa29d0a6f6f5458601e80232",
+      "11": "https://torbo007.com/embed/fce27b0511bb63ba5a0448322d31e1c8",
+      "12": "https://torbo007.com/embed/7640624dd2cec2a72068ce47e8f523b9"
+    },
+    "languages": [
+      "ซับไทย"
+    ],
+    "id": "g4-501"
+  },
+  {
+    "titleTh": "The Ordinary Jackpot (2026)",
+    "titleEn": "The Ordinary Jackpot (2026)",
+    "year": 2026,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/09/99-2.png",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/09/99-2.png",
+    "videoUrl": "https://torbo007.com/embed/38262f60a3287458963a23df69e0d044",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ The Ordinary Jackpot (2026) อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า"
+    ],
+    "duration": "8 ตอน (ซับไทย)",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/the-ordinary-jackpot/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/38262f60a3287458963a23df69e0d044",
+      "2": "https://torbo007.com/embed/454288b8eac40d9a0c467a1f3497f717",
+      "3": "https://torbo007.com/embed/43e0b1a4a057bb35ad412360c8ce897d",
+      "4": "https://torbo007.com/embed/5998d4308b6489df93a6ea251220b4e1",
+      "5": "https://torbo007.com/embed/7b67136e3eb116c8cff94232e6583551",
+      "6": "https://torbo007.com/embed/5d448d21817e3fed4edfaec5e36b898c",
+      "7": "https://torbo007.com/embed/50b90cb83f52674558379ad4b93b8a10",
+      "8": "https://torbo007.com/embed/7b6d50fb73bd5e63da2489077f5cf74a"
+    },
+    "languages": [
+      "ซับไทย"
+    ],
+    "id": "g4-502"
+  },
+  {
+    "titleTh": "The Masked Lover โฉมงามไร้หน้า (2026)",
+    "titleEn": "The Masked Lover โฉมงามไร้หน้า (2026)",
+    "year": 2026,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/09/9-21.png",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/09/9-21.png",
+    "videoUrl": "https://torbo007.com/embed/c44cc3cbd620bf5013d78d1ff283708b",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ The Masked Lover โฉมงามไร้หน้า (2026) อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า"
+    ],
+    "duration": "18 ตอน (ซับไทย)",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/the-masked-lover/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16",
+      "ตอนที่ 17",
+      "ตอนที่ 18"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/c44cc3cbd620bf5013d78d1ff283708b",
+      "2": "https://torbo007.com/embed/6a7186ace10cfd14128f6224f02b0fe7",
+      "3": "https://torbo007.com/embed/22150b5fe7c2739ab969926804672afd",
+      "4": "https://torbo007.com/embed/73cf29c5a496a5bdf01223a3f2f69639",
+      "5": "https://torbo007.com/embed/c4c579ef577926185fed7c2877742eeb",
+      "6": "https://torbo007.com/embed/4211b683bf553c23591e7161fe3a11a6",
+      "7": "https://torbo007.com/embed/752621046739e5b977392b0a2cf7420b",
+      "8": "https://torbo007.com/embed/52b6faee959711b27b375144d473151d",
+      "9": "https://torbo007.com/embed/6512e6e2b8b801bfc0b775404d17b042",
+      "10": "https://torbo007.com/embed/1cc10c606ff21a18ab81223c2112b32b",
+      "11": "https://torbo007.com/embed/69c68d177bb21a598d9e522332641201",
+      "12": "https://torbo007.com/embed/2c6b6697599cd5b5500c0f9c29afdc92",
+      "13": "https://torbo007.com/embed/8ab96815d610eda09395c8684ad49c0c",
+      "14": "https://torbo007.com/embed/6b1be8989f6e6450d6eecdd21f6a149f",
+      "15": "https://torbo007.com/embed/1bbdd3f157491c1107a3fc68af596e92",
+      "16": "https://dohd007.com/embed/3aa697c9ee3c4ce4571405ae05adb8ac",
+      "17": "https://torbo007.com/embed/d3e0f30db67df271410261a607f9a600",
+      "18": "https://torbo007.com/embed/254eea20b444b7e7561e37403dc2915c"
+    },
+    "languages": [
+      "ซับไทย"
+    ],
+    "id": "g4-503"
+  },
+  {
+    "titleTh": "A Love Other Than Yours เมื่อหัวใจมีใครอีกคน (2026)",
+    "titleEn": "A Love Other Than Yours เมื่อหัวใจมีใครอีกคน (2026)",
+    "year": 2026,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/08/9-19.png",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/08/9-19.png",
+    "videoUrl": "https://torbo007.com/embed/77c5d4d1c67567ab6abc3b9875050a4e",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ A Love Other Than Yours เมื่อหัวใจมีใครอีกคน (2026) อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า"
+    ],
+    "duration": "6 ตอน (พากย์ไทย)",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/a-love-other-than-yours/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/77c5d4d1c67567ab6abc3b9875050a4e",
+      "2": "https://torbo007.com/embed/08b7e7b261816b7c1a7e571077b5541c",
+      "3": "https://torbo007.com/embed/dde9ef950122fbe3bdbfcc584c4cf892",
+      "4": "https://torbo007.com/embed/a1dbfcf0663f3860e86835998899f180",
+      "5": "https://torbo007.com/embed/0a0d35a49827dd406d5bece574472cb9",
+      "6": "https://torbo007.com/embed/e153b633a838afc554e1978dfe4e8755"
+    },
+    "languages": [
+      "พากย์ไทย"
+    ],
+    "id": "g4-504"
+  },
+  {
+    "titleTh": "The Affair Was Just The Beginning ชู้รักอำพรางเลือด (2026)",
+    "titleEn": "The Affair Was Just The Beginning ชู้รักอำพรางเลือด (2026)",
+    "year": 2026,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/08/9.png",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/08/9.png",
+    "videoUrl": "https://torbo007.com/embed/b3f1814331845019bed0163574f0bf9f",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ The Affair Was Just The Beginning ชู้รักอำพรางเลือด (2026) อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า"
+    ],
+    "duration": "8 ตอน (พากย์ไทย)",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/the-affair-was-just-the-beginning/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/b3f1814331845019bed0163574f0bf9f",
+      "2": "https://torbo007.com/embed/1971ccbe3f3446e98dee0e64d03d5a9f",
+      "3": "https://torbo007.com/embed/3e9b6d692635dbfe44e04884ef192ce2",
+      "4": "https://torbo007.com/embed/92f1dca0a9757b7a1ce18141552651b1",
+      "5": "https://torbo007.com/embed/a0e5ffb41c5283569fce5f55400ef151",
+      "6": "https://torbo007.com/embed/d60bf0a886f7a4ef6ea2ef5aad9aade0",
+      "7": "https://torbo007.com/embed/3bcc6be6d9141918472faedf7c2cfe83",
+      "8": "https://torbo007.com/embed/8e6134c87338bc539fa78b966c507a05"
+    },
+    "languages": [
+      "พากย์ไทย"
+    ],
+    "id": "g4-505"
+  },
+  {
+    "titleTh": "OK! Let&#039;s Get Divorced โอเค! เราหย่ากันเถอะ (2026)",
+    "titleEn": "OK! Let&#039;s Get Divorced โอเค! เราหย่ากันเถอะ (2026)",
+    "year": 2026,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/08/9-8-foxywebp.webp",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/08/9-8-foxywebp.webp",
+    "videoUrl": "https://torbo007.com/embed/2010b76496a7ce4753d3dc4579d7d64f",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ OK! Let&#039;s Get Divorced โอเค! เราหย่ากันเถอะ (2026)  G4 อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า"
+    ],
+    "duration": "12 ตอน (ซับไทย)",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/ok-lets-get-divorced/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/2010b76496a7ce4753d3dc4579d7d64f",
+      "2": "https://torbo007.com/embed/e89bb0b2bb912cf6eec99ee388fa598d",
+      "3": "https://torbo007.com/embed/62e5b8052b8e125db4fa6ec141967462",
+      "4": "https://torbo007.com/embed/1d92ba72f771c08eb6317bb20485adb8",
+      "5": "https://torbo007.com/embed/fb8e9bada237409b9b56f64516a6ea9e",
+      "6": "https://torbo007.com/embed/fb8f6e2dafe395521024e1c9415e32ce",
+      "7": "https://torbo007.com/embed/31551885cbb08e174c941f48ae46e1bb",
+      "8": "https://torbo007.com/embed/4acc012c5bbdc5baa0ce22b533a58db6",
+      "9": "https://torbo007.com/embed/6a40e92836b76014b9b28f3d89fc4e68",
+      "10": "https://torbo007.com/embed/bf7aca9f76e7ad9aa1e3601dda08f5d5",
+      "11": "https://torbo007.com/embed/2596784ee22238a09edca1f2485fb671",
+      "12": "https://torbo007.com/embed/1b53d0a6fd56633459adf48d233a0f7e"
+    },
+    "languages": [
+      "ซับไทย"
+    ],
+    "id": "g4-506"
+  },
+  {
+    "titleTh": "Love in Sync ใจเชื่อมรัก",
+    "titleEn": "Love in Sync ใจเชื่อมรัก",
+    "year": 2025,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/08/8.png",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/08/8.png",
+    "videoUrl": "https://torbo007.com/embed/518cb339d96b82a5a5aa190e981f9da4",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ Love in Sync ใจเชื่อมรัก อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า"
+    ],
+    "duration": "8 ตอน (พากย์ไทย)",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/love-in-sync/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/518cb339d96b82a5a5aa190e981f9da4",
+      "2": "https://torbo007.com/embed/f6ff5579c19f7c299cdc4910c4356ac0",
+      "3": "https://torbo007.com/embed/be446e785895f79f31eecc1208d65206",
+      "4": "https://torbo007.com/embed/0c1c5461ecbb0d6422eb48b3b037ed88",
+      "5": "https://torbo007.com/embed/7ee2e7dd2aa4ba8e04e98ab7b187fbb1",
+      "6": "https://torbo007.com/embed/e4d9d60f17a9e8a69c60a7cdd80bf39b",
+      "7": "https://torbo007.com/embed/43aeedd3b557269d3b307ea25ce00570",
+      "8": "https://torbo007.com/embed/e72ed5cc8ddd7c76e76e64402dd150cc"
+    },
+    "languages": [
+      "พากย์ไทย"
+    ],
+    "id": "g4-507"
+  },
+  {
+    "titleTh": "My name (2021) ตอนที่1-8",
+    "titleEn": "My name (2021) ตอนที่1-8",
+    "year": 2025,
+    "poster": "https://goseries4k.com/wp-content/uploads/2021/10/my-name.jpg",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2021/10/my-name.jpg",
+    "videoUrl": "https://torbo007.com/embed/bc93f7478292f0ed6a51cc8baf48e6d6",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ My name (2021) ตอนที่1-8 อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า"
+    ],
+    "duration": "8 ตอน (พากย์ไทย)",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/my-name-2021/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/bc93f7478292f0ed6a51cc8baf48e6d6",
+      "2": "https://torbo007.com/embed/cba0cb3052a149515e32292144ac5f12",
+      "3": "https://torbo007.com/embed/3e8e1334bd407235ae46500563a4d66a",
+      "4": "https://torbo007.com/embed/907fdbf3d51b3cd516918fefb6507a63",
+      "5": "https://torbo007.com/embed/745587d0b8d7f415986ba54be6849ce6",
+      "6": "https://torbo007.com/embed/65f5cfa5c46fa401eb0896d936eca260",
+      "7": "https://torbo007.com/embed/f07e3449f066f38f4e81bdfd791e5780",
+      "8": "https://torbo007.com/embed/65f32b15ab61974aa2a7d5d1dc530a86"
+    },
+    "languages": [
+      "พากย์ไทย"
+    ],
+    "id": "g4-508"
+  },
+  {
+    "titleTh": "Shadow Punisher เทพมือปราบเงาปีศาจ",
+    "titleEn": "Shadow Punisher เทพมือปราบเงาปีศาจ",
+    "year": 2025,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/09/8.png",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/09/8.png",
+    "videoUrl": "https://torbo007.com/embed/c162116968b4efe537b4f7c917050bd2",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ Shadow Punisher เทพมือปราบเงาปีศาจ อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า"
+    ],
+    "duration": "10 ตอน (พากย์ไทย)",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/shadow-punisher/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/c162116968b4efe537b4f7c917050bd2",
+      "2": "https://torbo007.com/embed/5153999f70e3585ac3389d49126c03b7",
+      "3": "https://torbo007.com/embed/3ec2adf444aa2e51ff82ceb77b2ec459",
+      "4": "https://torbo007.com/embed/110be1e74e4753264ee36fae9b00b10d",
+      "5": "https://torbo007.com/embed/4b1fa4176331184e02a410087e1bc2fd",
+      "6": "https://torbo007.com/embed/98e7de6539a75d8a4ff0d2b69b087515",
+      "7": "https://torbo007.com/embed/49521abdf0cd38d3f676a517821e34f3",
+      "8": "https://torbo007.com/embed/3a93368385f6b0214707bfeaace07e7c",
+      "9": "https://torbo007.com/embed/e9226d1d138802fb0052e5fa0be9f1f1",
+      "10": "https://torbo007.com/embed/4f70361cfb186dc40301bdf68723b08b"
+    },
+    "languages": [
+      "พากย์ไทย"
+    ],
+    "id": "g4-509"
+  },
+  {
+    "titleTh": "Live Forever สัญญาชั่วนิรันดร์ (2026)",
+    "titleEn": "Live Forever สัญญาชั่วนิรันดร์ (2026)",
+    "year": 2026,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/09/999-1.png",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/09/999-1.png",
+    "videoUrl": "https://torbo007.com/embed/2ca528e3e540d79d5af714fa5c362202",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ Live Forever สัญญาชั่วนิรันดร์ (2026) อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า"
+    ],
+    "duration": "16 ตอน (ซับไทย)",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/%e0%b8%94%e0%b8%b9%e0%b8%8b%e0%b8%b5%e0%b8%a3%e0%b8%b5%e0%b9%88%e0%b8%a2%e0%b9%8c-live-forever-%e0%b8%aa%e0%b8%b1%e0%b8%8d%e0%b8%8d%e0%b8%b2%e0%b8%8a%e0%b8%b1%e0%b9%88%e0%b8%a7%e0%b8%99%e0%b8%b4/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/2ca528e3e540d79d5af714fa5c362202",
+      "2": "https://torbo007.com/embed/6ba0dfa4a1d938a65ed6ef9dfcb40988",
+      "3": "https://torbo007.com/embed/23ddeaa7aadd342bb318f3eb17ebd5cf",
+      "4": "https://torbo007.com/embed/88461429bd202051336321882ee40bc4",
+      "5": "https://torbo007.com/embed/a52de808c7c0ade68f497db124d46263",
+      "6": "https://torbo007.com/embed/7726af7c808ebb8de49a3635bd29f570",
+      "7": "https://torbo007.com/embed/ee6a286ffc1c16e414fc09074ed742ff",
+      "8": "https://torbo007.com/embed/e3281ad0723e172fe1a745043b68636f",
+      "9": "https://torbo007.com/embed/b2cdc14d257e3c700bfab915614b4690",
+      "10": "https://torbo007.com/embed/3afead12ed2e936959e8920290a89885",
+      "11": "https://torbo007.com/embed/3a8b5dbfe104383acfdb535fccc7e844",
+      "12": "https://torbo007.com/embed/dcc5a6c5bc26596a2acb52e05c62584d",
+      "13": "https://torbo007.com/embed/8d4bb1effe05ae2b88677a2c2076f44e",
+      "14": "https://torbo007.com/embed/60d44e41084a4863be82f4bd7db27883",
+      "15": "https://torbo007.com/embed/6eb21a5ce2c85199be74013a46fadd1d",
+      "16": "https://torbo007.com/embed/e15924827011381c8322146f33e97c13"
+    },
+    "languages": [
+      "ซับไทย"
+    ],
+    "id": "g4-510"
+  },
+  {
+    "titleTh": "A Prophet แผนการผยากรณ์ (2026)",
+    "titleEn": "A Prophet แผนการผยากรณ์ (2026)",
+    "year": 2026,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/09/9-18.png",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/09/9-18.png",
+    "videoUrl": "https://torbo007.com/embed/53cff49af68ca8d726c6b992f1923236",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ A Prophet แผนการผยากรณ์ (2026) อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า"
+    ],
+    "duration": "24 ตอน (พากย์ไทย)",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/a-prophet/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16",
+      "ตอนที่ 17",
+      "ตอนที่ 18",
+      "ตอนที่ 19",
+      "ตอนที่ 20",
+      "ตอนที่ 21",
+      "ตอนที่ 22",
+      "ตอนที่ 23",
+      "ตอนที่ 24"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/53cff49af68ca8d726c6b992f1923236",
+      "2": "https://torbo007.com/embed/a1b7d546df73e09752caf05158910de7",
+      "3": "https://torbo007.com/embed/6c534c318a0eae63897dbb1285cab013",
+      "4": "https://torbo007.com/embed/d3247d8ae0e1da0d34f4b1319c360a49",
+      "5": "https://torbo007.com/embed/d7dfcc1e1ad7c4fa51247924639ea64f",
+      "6": "https://torbo007.com/embed/15c8a2b241ba9a85692d442f492e55fd",
+      "7": "https://torbo007.com/embed/6ff329c0f370838d2ee46edc2eb9ee56",
+      "8": "https://torbo007.com/embed/31ac316638c25768de235b6e9878ccdd",
+      "9": "https://torbo007.com/embed/98cba099c018fe08f75b814fbc8d1cb2",
+      "10": "https://torbo007.com/embed/3f7297daee437a95f55b48b702c1dd2c",
+      "11": "https://torbo007.com/embed/ac1c828766878c69c018d436d34bafad",
+      "12": "https://torbo007.com/embed/d2d58c7dd38a50a88f6c923772988b08",
+      "13": "https://torbo007.com/embed/68f9db42b70cf70b8fe0a992cc17b459",
+      "14": "https://torbo007.com/embed/f5849435423201a0c6e01b5e39154d2d",
+      "15": "https://torbo007.com/embed/985008c50dfdcf747b9522860ea1cee0",
+      "16": "https://torbo007.com/embed/4fb50089efed35771b84a99200fb300e",
+      "17": "https://torbo007.com/embed/8bb50821b249beeab00cf5a162833012",
+      "18": "https://torbo007.com/embed/c410ca92fa17334f70d67e299108d7d6",
+      "19": "https://torbo007.com/embed/118a0e61fc43c6d3c84c03c1ec863122",
+      "20": "https://torbo007.com/embed/9ea4c35814ab820f7a5864883ed5876c",
+      "21": "https://torbo007.com/embed/8d28b5db6a856d72e50c424f7c5716e4",
+      "22": "https://torbo007.com/embed/9c470d57ec4a89107759f44ea7c24877",
+      "23": "https://torbo007.com/embed/158c63bb3d5a9fb98f79b0bc7880d2d3",
+      "24": "https://torbo007.com/embed/ee24ff2ecf182a789ef01dae3b6f7d07"
+    },
+    "languages": [
+      "พากย์ไทย"
+    ],
+    "id": "g4-511"
+  },
+  {
+    "titleTh": "Flex X Cop 2 คุณชายสายสืบ ซีซั่น 2 (2026)",
+    "titleEn": "Flex X Cop 2 คุณชายสายสืบ ซีซั่น 2 (2026)",
+    "year": 2026,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/09/กรอบ.png",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/09/กรอบ.png",
+    "videoUrl": "https://torbo007.com/embed/8137130edc23c3794743cf6464dfec62",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ Flex X Cop 2 คุณชายสายสืบ ซีซั่น 2 (2026) อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า"
+    ],
+    "duration": "14 ตอน (พากย์ไทย)",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/flex-x-cop-2/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/8137130edc23c3794743cf6464dfec62",
+      "2": "https://torbo007.com/embed/2536e3d43d60e137bd95d8a08dbfc13b",
+      "3": "https://torbo007.com/embed/3d5398eb1109dcbca334a2fcc72cc3f4",
+      "4": "https://torbo007.com/embed/8c0154fb799f10090f990273e77443be",
+      "5": "https://torbo007.com/embed/e8f3748f3587a088f3029e192a0be593",
+      "6": "https://torbo007.com/embed/3b96e1d11ed9deb7361908a5767b8835",
+      "7": "https://torbo007.com/embed/7df6f285970928e99ca25d07a9943642",
+      "8": "https://torbo007.com/embed/03908d061ed031d8ca86d6cd98637cf3",
+      "9": "https://torbo007.com/embed/755ad80a7bfab59bdd25cc539a49cd90",
+      "10": "https://torbo007.com/embed/cd3bc41f2c22241a1a382d24daddd6ca",
+      "11": "https://torbo007.com/embed/a0896809bdc6c27a43786682a9e8c7bd",
+      "12": "https://torbo007.com/embed/2a425ce9fd9226e4426d88f62618f5fb",
+      "13": "https://torbo007.com/embed/384912239beb6e04f24df63b007b9a7a",
+      "14": "https://torbo007.com/embed/87bf7d90f64e63594f76e76fe48245d4"
+    },
+    "languages": [
+      "พากย์ไทย"
+    ],
+    "id": "g4-512"
+  },
+  {
+    "titleTh": "Royal Betrothal ฝ่าบาททรงพระเจริญหมื่นปี (2026)",
+    "titleEn": "Royal Betrothal ฝ่าบาททรงพระเจริญหมื่นปี (2026)",
+    "year": 2026,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/08/9-13-foxywebp.webp",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/08/9-13-foxywebp.webp",
+    "videoUrl": "https://torbo007.com/embed/7d049834bd166873f017e8c211731ec8",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ Royal Betrothal ฝ่าบาททรงพระเจริญหมื่นปี (2026)  G4 อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า"
+    ],
+    "duration": "25 ตอน (พากย์ไทย)",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/royal-betrothal/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16",
+      "ตอนที่ 17",
+      "ตอนที่ 18",
+      "ตอนที่ 19",
+      "ตอนที่ 20",
+      "ตอนที่ 21",
+      "ตอนที่ 22",
+      "ตอนที่ 23",
+      "ตอนที่ 24",
+      "ตอนที่ 25"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/7d049834bd166873f017e8c211731ec8",
+      "2": "https://torbo007.com/embed/23d620c29a242353c4a7ef7be337dc88",
+      "3": "https://torbo007.com/embed/33f07e8b48b037c2c216bb980844fe18",
+      "4": "https://torbo007.com/embed/9e6e458eb367fb6aa17530a26cf55cc4",
+      "5": "https://torbo007.com/embed/8c15812bd6097e1b9049ec7bf8156126",
+      "6": "https://torbo007.com/embed/a31f8877e3e5e86dc9b303cdf9665fcb",
+      "7": "https://torbo007.com/embed/2191bc434e2d68cb87e01d16069621d6",
+      "8": "https://torbo007.com/embed/67ddf916a1bf7508410c549e8f7dbc41",
+      "9": "https://torbo007.com/embed/5e03dde7925d751c1ce06eb53c4da40c",
+      "10": "https://torbo007.com/embed/ebaf9b4b6c3da6c749b7e6422963d36e",
+      "11": "https://torbo007.com/embed/40b684de6043b994463ce211ff372a07",
+      "12": "https://torbo007.com/embed/b9772cd6c3f6d76f9533efc2fadf4bc4",
+      "13": "https://torbo007.com/embed/0984a6fcaae1125411a85a448e782fe3",
+      "14": "https://torbo007.com/embed/40403e7004148b08b8e1a4c839e7a970",
+      "15": "https://torbo007.com/embed/4e4b470961afac6fa67eb5d90a7ebb8c",
+      "16": "https://torbo007.com/embed/ecd9d9411406c86643150d7c5a158d35",
+      "17": "https://torbo007.com/embed/5dc8cbc3f41145653199afa49497388b",
+      "18": "https://torbo007.com/embed/8b293a3a992fa63d757b42ec9d4894d9",
+      "19": "https://torbo007.com/embed/ad129ad34684173eb6438d6fb3b6b49b",
+      "20": "https://torbo007.com/embed/09569c3779fd54357d66bc6a59b198a4",
+      "21": "https://torbo007.com/embed/0460952c594ac163ed09316a0d80418b",
+      "22": "https://torbo007.com/embed/605b2701951c04365f81e199ea0f3014",
+      "23": "https://torbo007.com/embed/b50e5f4eb83f80c4b6fef48ca825d4e2",
+      "24": "https://torbo007.com/embed/5e010bb6fc9d00766a51e09232b2ad85",
+      "25": "https://torbo007.com/embed/a7e831b66fac589d56e6c129a608959b"
+    },
+    "languages": [
+      "พากย์ไทย"
+    ],
+    "id": "g4-513"
+  },
+  {
+    "titleTh": "Love Legend บัญชางามสง่า (2026)",
+    "titleEn": "Love Legend บัญชางามสง่า (2026)",
+    "year": 2026,
+    "poster": "https://goseries4k.com/wp-content/uploads/2026/09/99-9.png",
+    "backdrop": "https://goseries4k.com/wp-content/uploads/2026/09/99-9.png",
+    "videoUrl": "https://torbo007.com/embed/b96e0ef0956d2b59e378b212edba4833",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ Love Legend บัญชางามสง่า (2026) อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า"
+    ],
+    "duration": "16 ตอน (ซับไทย)",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/love-legend/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/b96e0ef0956d2b59e378b212edba4833",
+      "2": "https://torbo007.com/embed/95aa3b541d114dcc6cc7cfcd815874b7",
+      "3": "https://torbo007.com/embed/40cb46827162cfd2c62848bf358da939",
+      "4": "https://torbo007.com/embed/2980dba91a5efb0ba6fd2b6ce1090060",
+      "5": "https://torbo007.com/embed/196ec061265e827f772d94de903e4c2c",
+      "6": "https://torbo007.com/embed/084c237d2edc5a4fdc000338fb0c2284",
+      "7": "https://torbo007.com/embed/e10e25106eb13ae7361cace0b30bb504",
+      "8": "https://torbo007.com/embed/26903fba560e3544c9f6a970ae4ff99f",
+      "9": "https://torbo007.com/embed/9d2d257ade524c73550cfc6e4c02b4ba",
+      "10": "https://torbo007.com/embed/197382350a552202f6f683de79f35ff9",
+      "11": "https://torbo007.com/embed/69cb6356c129fc57e95cbba7825ef88a",
+      "12": "https://torbo007.com/embed/8d9a174cbe4b99d1f2de2b10926b6a34",
+      "13": "https://torbo007.com/embed/e7cd4edd7606f3a7d44728b26d23ffad",
+      "14": "https://torbo007.com/embed/09726adc28dbd734896e6f0220b919e3",
+      "15": "https://torbo007.com/embed/55c412109270389e4c2be4ac0dc39d1d",
+      "16": "https://torbo007.com/embed/61771227942c6e3da27cac6c4250e0c9"
+    },
+    "languages": [
+      "ซับไทย"
+    ],
+    "id": "g4-514"
+  },
+  {
     "titleTh": "F1 (2025) F1 เดอะ มูฟวี่",
     "titleEn": "F1",
     "year": 2025,
@@ -12010,7 +12966,10 @@ window.movies = [
     ],
     "id": "24hdx-40707",
     "postId": "40707",
-    "originalUrl": "https://www.24-hda.com/ghostfluencer/"
+    "originalUrl": "https://www.24-hda.com/ghostfluencer/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "All Wishes Come True! (2026) 8 เซียน ขอให้จึ้ง!",
@@ -12037,7 +12996,10 @@ window.movies = [
     ],
     "id": "24hdx-40701",
     "postId": "40701",
-    "originalUrl": "https://www.24-hda.com/all-wishes-come-true/"
+    "originalUrl": "https://www.24-hda.com/all-wishes-come-true/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Ghost in the Cell (2026) วัยหนุ่มคุกผี",
@@ -12068,7 +13030,10 @@ window.movies = [
     },
     "id": "24hdx-40078",
     "postId": "40078",
-    "originalUrl": "https://www.24-hda.com/ghost-in-the-cell/"
+    "originalUrl": "https://www.24-hda.com/ghost-in-the-cell/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "The Runner (2026) เดอะรันเนอร์",
@@ -12099,7 +13064,10 @@ window.movies = [
     },
     "id": "24hdx-40570",
     "postId": "40570",
-    "originalUrl": "https://www.24-hda.com/the-runner/"
+    "originalUrl": "https://www.24-hda.com/the-runner/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "War Machine (2026) สงครามจักรกลถล่มโลก",
@@ -12130,7 +13098,10 @@ window.movies = [
     },
     "id": "24hdx-38313",
     "postId": "38313",
-    "originalUrl": "https://www.24-hda.com/war-machine/"
+    "originalUrl": "https://www.24-hda.com/war-machine/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "The Monkey Hero (2026) เห้งเจียแจ๊ส",
@@ -12156,7 +13127,10 @@ window.movies = [
     "episodes": [
       "เต็มเรื่อง"
     ],
-    "id": "24hdx-40618"
+    "id": "24hdx-40618",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Overdo รักเกินแค้น-หากวินาทีนั้นไม่พบเธอ (2026) พากย์ไทย-ซับไทย EP1-33",
@@ -19103,8 +20077,8 @@ window.movies = [
     "originalUrl": "https://goseries4k.com/avatar-the-last-airbender/"
   },
   {
-    "titleTh": "Phantom Lawyer ทนายสื่อวิญญาณ  (2026) พากย์ไทย EP.1-16",
-    "titleEn": "Phantom Lawyer ทนายสื่อวิญญาณ  (2026) พากย์ไทย EP.1-16",
+    "titleTh": "Phantom Lawyer ทนายสื่อวิญญาณ",
+    "titleEn": "Phantom Lawyer ทนายสื่อวิญญาณ",
     "year": 2026,
     "poster": "https://goseries4k.com/wp-content/uploads/2026/03/2.jpg",
     "backdrop": "https://goseries4k.com/wp-content/uploads/2026/03/2.jpg",
@@ -21327,7 +22301,10 @@ window.movies = [
     },
     "id": "24hdx-37104",
     "postId": "37104",
-    "originalUrl": "https://www.24-hda.com/4-tigers/"
+    "originalUrl": "https://www.24-hda.com/4-tigers/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "The Dragon Trace Palace of Exquisite Wild Flowers (2023) พระราชวังรอยมังกรแห่งดอกไม้ป่า",
@@ -21356,7 +22333,10 @@ window.movies = [
     },
     "id": "24hdx-25184",
     "postId": "25184",
-    "originalUrl": "https://www.24-hda.com/the-dragon-trace-palace-of-exquisite-wild-flowers/"
+    "originalUrl": "https://www.24-hda.com/the-dragon-trace-palace-of-exquisite-wild-flowers/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Death Whisperer 3 (2025) ธี่หยด 3",
@@ -21385,7 +22365,10 @@ window.movies = [
     },
     "id": "24hdx-36746",
     "postId": "36746",
-    "originalUrl": "https://www.24-hda.com/death-whisperer-%e0%b8%a0%e0%b8%b2%e0%b8%84-3/"
+    "originalUrl": "https://www.24-hda.com/death-whisperer-%e0%b8%a0%e0%b8%b2%e0%b8%84-3/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Avatar Fire and Ash (2025) อวตาร อัคนีและธุลีดิน",
@@ -21414,7 +22397,10 @@ window.movies = [
     },
     "id": "24hdx-37435",
     "postId": "37435",
-    "originalUrl": "https://www.24-hda.com/avatar-fire-and-ash/"
+    "originalUrl": "https://www.24-hda.com/avatar-fire-and-ash/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Ip Man The Awakening (2021) ยิปมัน เจ้ากังฟูสู้ยิบตา ปรมาจารย์ตื่นแล้ว",
@@ -21443,7 +22429,10 @@ window.movies = [
     },
     "id": "24hdx-18707",
     "postId": "18707",
-    "originalUrl": "https://www.24-hda.com/ip-man-the-awakening/"
+    "originalUrl": "https://www.24-hda.com/ip-man-the-awakening/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Our House (2025) ข้างบ้าน",
@@ -21472,7 +22461,10 @@ window.movies = [
     },
     "id": "24hdx-38871",
     "postId": "38871",
-    "originalUrl": "https://www.24-hda.com/our-house/"
+    "originalUrl": "https://www.24-hda.com/our-house/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Game of Thrones Season 1 (2011) มหาศึกชิงบัลลังก์ ปี 1",
@@ -21519,7 +22511,10 @@ window.movies = [
     },
     "id": "24hdx-17722",
     "postId": "17722",
-    "originalUrl": "https://www.24-hda.com/game-of-thrones-season-1/"
+    "originalUrl": "https://www.24-hda.com/game-of-thrones-season-1/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Harry Potter 4 And The Goblet Of Fire (2005) แฮร์รี่ พอตเตอร์ 4 กับถ้วยอัคนี",
@@ -21548,7 +22543,10 @@ window.movies = [
     },
     "id": "24hdx-14966",
     "postId": "14966",
-    "originalUrl": "https://www.24-hda.com/harry-potter-4/"
+    "originalUrl": "https://www.24-hda.com/harry-potter-4/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "The Shadow’s Edge (2025) แผนระห่ำ ใหญ่ฟัดเดือด",
@@ -21577,7 +22575,10 @@ window.movies = [
     },
     "id": "24hdx-36554",
     "postId": "36554",
-    "originalUrl": "https://www.24-hda.com/the-shadows-edge/"
+    "originalUrl": "https://www.24-hda.com/the-shadows-edge/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "The Boys Season 3 (2022)",
@@ -21620,7 +22621,10 @@ window.movies = [
     },
     "id": "24hdx-19909",
     "postId": "19909",
-    "originalUrl": "https://www.24-hda.com/the-boys-season-3/"
+    "originalUrl": "https://www.24-hda.com/the-boys-season-3/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Harry Potter 1 And The Sorcerer’s Stone (2001) แฮร์รี่ พอตเตอร์ 1 กับศิลาอาถรรพ์",
@@ -21649,7 +22653,10 @@ window.movies = [
     },
     "id": "24hdx-14963",
     "postId": "14963",
-    "originalUrl": "https://www.24-hda.com/harry-potter/"
+    "originalUrl": "https://www.24-hda.com/harry-potter/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "In Youth We Trust (2024) วัยหนุ่ม 2544",
@@ -21678,7 +22685,10 @@ window.movies = [
     },
     "id": "24hdx-34749",
     "postId": "34749",
-    "originalUrl": "https://www.24-hda.com/in-youth-we-trust/"
+    "originalUrl": "https://www.24-hda.com/in-youth-we-trust/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Pirates of the Caribbean (2003) คืนชีพกองทัพโจรสลัดสยองโลก",
@@ -21707,7 +22717,10 @@ window.movies = [
     },
     "id": "24hdx-24360",
     "postId": "24360",
-    "originalUrl": "https://www.24-hda.com/pirates-of-the-caribbeans/"
+    "originalUrl": "https://www.24-hda.com/pirates-of-the-caribbeans/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Harry Potter 2 And The Chamber Of Secrets (2002) แฮร์รี่ พอตเตอร์ 2 กับห้องแห่งความลับ",
@@ -21736,7 +22749,10 @@ window.movies = [
     },
     "id": "24hdx-14964",
     "postId": "14964",
-    "originalUrl": "https://www.24-hda.com/harry-potter-2/"
+    "originalUrl": "https://www.24-hda.com/harry-potter-2/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Avengers 3 Infinity War (2018) อเวนเจอร์ส 3 มหาสงครามอัญมณีล้างจักรวาล",
@@ -21765,7 +22781,10 @@ window.movies = [
     },
     "id": "24hdx-15057",
     "postId": "15057",
-    "originalUrl": "https://www.24-hda.com/avengers-3-infinity-war/"
+    "originalUrl": "https://www.24-hda.com/avengers-3-infinity-war/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Oppenheimer (2023) ออพเพนไฮเมอร์",
@@ -21794,7 +22813,10 @@ window.movies = [
     },
     "id": "24hdx-25034",
     "postId": "25034",
-    "originalUrl": "https://www.24-hda.com/oppenheimer/"
+    "originalUrl": "https://www.24-hda.com/oppenheimer/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Zootopia 2 (2025) นครสัตว์มหาสนุก 2",
@@ -21823,7 +22845,10 @@ window.movies = [
     },
     "id": "24hdx-37346",
     "postId": "37346",
-    "originalUrl": "https://www.24-hda.com/zootopia-2/"
+    "originalUrl": "https://www.24-hda.com/zootopia-2/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Deadpool 2 (2018) เดดพูล 2",
@@ -21852,7 +22877,10 @@ window.movies = [
     },
     "id": "24hdx-29676",
     "postId": "29676",
-    "originalUrl": "https://www.24-hda.com/deadpool-2/"
+    "originalUrl": "https://www.24-hda.com/deadpool-2/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Spider-Man No Way Home (2021) สไปเดอร์แมน โน เวย์ โฮม",
@@ -21881,7 +22909,10 @@ window.movies = [
     },
     "id": "24hdx-17385",
     "postId": "17385",
-    "originalUrl": "https://www.24-hda.com/spider-man-no-way-home/"
+    "originalUrl": "https://www.24-hda.com/spider-man-no-way-home/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Top Gun 2 Maverick (2022) ท็อปกัน 2 มาเวอริค",
@@ -21910,7 +22941,10 @@ window.movies = [
     },
     "id": "24hdx-15111",
     "postId": "15111",
-    "originalUrl": "https://www.24-hda.com/top-gun-%e0%b8%a0%e0%b8%b2%e0%b8%84-2/"
+    "originalUrl": "https://www.24-hda.com/top-gun-%e0%b8%a0%e0%b8%b2%e0%b8%84-2/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Kung Fu Panda 3 (2016) กังฟูแพนด้า 3",
@@ -21939,7 +22973,10 @@ window.movies = [
     },
     "id": "24hdx-30248",
     "postId": "30248",
-    "originalUrl": "https://www.24-hda.com/kung-fu-panda-3/"
+    "originalUrl": "https://www.24-hda.com/kung-fu-panda-3/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "The Mandalorian Season 2 (2020)",
@@ -21982,7 +23019,10 @@ window.movies = [
     },
     "id": "24hdx-20911",
     "postId": "20911",
-    "originalUrl": "https://www.24-hda.com/the-mandalorian-season-2/"
+    "originalUrl": "https://www.24-hda.com/the-mandalorian-season-2/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Avatar 2 The Way of Water (2022) อวตาร วิถีแห่งสายน้ำ",
@@ -22011,7 +23051,10 @@ window.movies = [
     },
     "id": "24hdx-18800",
     "postId": "18800",
-    "originalUrl": "https://www.24-hda.com/avatar-2-the-way-of-water/"
+    "originalUrl": "https://www.24-hda.com/avatar-2-the-way-of-water/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Mechanic Resurrection (2016) โคตรเพชฌฆาต แค้นข้ามโลก",
@@ -22040,7 +23083,10 @@ window.movies = [
     },
     "id": "24hdx-29021",
     "postId": "29021",
-    "originalUrl": "https://www.24-hda.com/mechanic-resurrection/"
+    "originalUrl": "https://www.24-hda.com/mechanic-resurrection/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Venom 2 Let There Be Carnage (2021) เวน่อม 2 ศึกอสูรแดงเดือด",
@@ -22069,7 +23115,10 @@ window.movies = [
     },
     "id": "24hdx-15706",
     "postId": "15706",
-    "originalUrl": "https://www.24-hda.com/venom-2/"
+    "originalUrl": "https://www.24-hda.com/venom-2/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Speak No Evil (2022) พักร้อนซ่อนตาย",
@@ -22098,7 +23147,10 @@ window.movies = [
     },
     "id": "24hdx-27448",
     "postId": "27448",
-    "originalUrl": "https://www.24-hda.com/speak-no-evil/"
+    "originalUrl": "https://www.24-hda.com/speak-no-evil/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Malena (2000) มาเลน่า ผู้หญิงสะกดโลก",
@@ -22127,7 +23179,10 @@ window.movies = [
     },
     "id": "24hdx-40455",
     "postId": "40455",
-    "originalUrl": "https://www.24-hda.com/malena/"
+    "originalUrl": "https://www.24-hda.com/malena/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Rampant (2018) นครนรกซอมบี้คลั่ง",
@@ -22156,7 +23211,10 @@ window.movies = [
     },
     "id": "24hdx-17790",
     "postId": "17790",
-    "originalUrl": "https://www.24-hda.com/rampant/"
+    "originalUrl": "https://www.24-hda.com/rampant/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   },
   {
     "titleTh": "Police Story Lockdown (2013) วิ่งสู้ฟัด 6",
@@ -22185,7 +23243,10 @@ window.movies = [
     },
     "id": "24hdx-39035",
     "postId": "39035",
-    "originalUrl": "https://www.24-hda.com/police-story-lockdown/"
+    "originalUrl": "https://www.24-hda.com/police-story-lockdown/",
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ]
   }
 ];
 var movies = window.movies;
