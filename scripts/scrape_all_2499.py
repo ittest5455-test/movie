@@ -102,11 +102,27 @@ def parse_movie(url):
     if not player_url:
         return None
 
-    # Poster
-    poster_m = re.search(r'property=["\']og:image["\']\s+content=["\']([^"\']+)["\']', body)
-    if not poster_m:
-        poster_m = re.search(r'<img[^>]+src=["\']([^"\']+/wp-content/uploads/[^"\']+)["\']', body)
-    poster = poster_m.group(1) if poster_m else ""
+    # Poster (Prefer official TMDB poster embedded in gan-play player, reject ads)
+    poster = ""
+    if player_url:
+        try:
+            req_embed = urllib.request.Request(player_url, headers=HEADERS)
+            with urllib.request.urlopen(req_embed, timeout=5) as r_embed:
+                embed_body = r_embed.read().decode('utf-8', errors='ignore')
+                tmdb_m = re.search(r'poster=["\'](https://image\.tmdb\.org/t/p/[^"\']+)["\']', embed_body)
+                if tmdb_m:
+                    poster = tmdb_m.group(1)
+        except Exception:
+            pass
+
+    if not poster:
+        poster_m = re.search(r'property=["\']og:image["\']\s+content=["\']([^"\']+)["\']', body)
+        if poster_m and not any(bad in poster_m.group(1).lower() for bad in ['vip168', 'banner', '728x', 'cdend.com']):
+            poster = poster_m.group(1)
+        else:
+            img_m = re.search(r'<img[^>]+src=["\'](https?://[^"\']+/wp-content/uploads/[^"\']+)["\']', body)
+            if img_m and not any(bad in img_m.group(1).lower() for bad in ['vip168', 'banner', '728x', 'cdend.com']):
+                poster = img_m.group(1)
 
     # Rating
     rating_m = re.search(r'ratingValue["\']:\s*["\']?([0-9.]+)["\']?', body) or re.search(r'IMDB\s*([0-9.]+)', body)
