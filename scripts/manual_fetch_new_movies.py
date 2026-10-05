@@ -7,11 +7,11 @@ import json
 import sys
 import time
 
-sys.stdout.reconfigure(encoding='utf-8')
+sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
 
 HEADERS_24 = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-    'Referer': 'https://www.24-hdx.com/'
+    'Referer': 'https://www.24-hda.com/'
 }
 HEADERS_G4 = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
@@ -25,18 +25,20 @@ if not match:
 m = json.loads(match.group(1)) if match else []
 existing_titles = set(x.get("titleTh", "").strip().lower() for x in m)
 existing_urls = set(x.get("videoUrl", "") for x in m)
+existing_slugs = set(x.get("originalUrl", "").strip("/").split("/")[-1].lower() for x in m if x.get("originalUrl"))
+existing_orig_urls = set(x.get("originalUrl", "").lower() for x in m if x.get("originalUrl"))
 
 print(f"Current total movies in database: {len(m)}")
 
 new_movies = []
 
-# --- 1. Scrape 24-HDX Fresh Movies ---
-print("\n--- Checking Fresh 24-HDX Movies ---")
+# --- 1. Scrape 24-HDA Fresh Movies ---
+print("\n--- Checking Fresh 24-HDA Movies ---")
 urls_24 = [
-    "https://www.24-hdx.com/",
-    "https://www.24-hdx.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88-2026/",
-    "https://www.24-hdx.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%8a%e0%b8%99%e0%b9%82%e0%b8%a3%e0%b8%87/",
-    "https://www.24-hdx.com/series/"
+    "https://www.24-hda.com/",
+    "https://www.24-hda.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88-2026/",
+    "https://www.24-hda.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%8a%e0%b8%99%e0%b9%82%e0%b8%a3%e0%b8%87/",
+    "https://www.24-hda.com/series/"
 ]
 
 for url in urls_24:
@@ -45,11 +47,14 @@ for url in urls_24:
         req = urllib.request.Request(url, headers=HEADERS_24)
         html = urllib.request.urlopen(req, timeout=10).read().decode('utf-8', errors='ignore')
         
-        post_links = re.findall(r'href="(https://www\.24-hdx\.com/[a-z0-9\-]+/?)"', html)
-        exclude = {'series', 'netflix', 'topimdb', 'contact-us', 'dmca', 'privacy-policy'}
-        clean_links = [l for l in set(post_links) if l.split('/')[-2] not in exclude and not l.endswith('.png') and not l.endswith('.jpg')]
+        post_links = re.findall(r'href="(https://www\.24-hd[ax]\.com/[a-z0-9\-]+/?)"', html)
+        exclude = {'series', 'netflix', 'topimdb', 'contact-us', 'dmca', 'privacy-policy', 'category', 'tag'}
+        clean_links = [l.replace("24-hdx.com", "24-hda.com") for l in set(post_links) if l.split('/')[-2] not in exclude and not l.endswith('.png') and not l.endswith('.jpg')]
         
         for link in clean_links:
+            slug = link.strip("/").split("/")[-1].lower()
+            if slug in existing_slugs or link.lower() in existing_orig_urls:
+                continue
             try:
                 time.sleep(0.02)
                 m_req = urllib.request.Request(link, headers=HEADERS_24)
@@ -57,15 +62,15 @@ for url in urls_24:
                 
                 title_match = re.search(r'<h1[^>]*class="[^"]*entry-title[^"]*"[^>]*>([\s\S]*?)</h1>|<title>([\s\S]*?)</title>', m_html)
                 title_raw = title_match.group(1) or title_match.group(2) if title_match else ""
-                clean_title = re.sub(r'ดูหนังออนไลน์|ดูหนัง|HD|พากย์ไทย|ซับไทย|เต็มเรื่อง|\(2026\)|\(2025\)|\|.*$|- 24-HDX.*$', '', title_raw).strip()
+                clean_title = re.sub(r'ดูหนังออนไลน์|ดูหนัง|HD|พากย์ไทย|ซับไทย|เต็มเรื่อง|\(2026\)|\(2025\)|\|.*$|- 24-HDX.*$|- 24-HDA.*$', '', title_raw).strip()
                 
                 if not clean_title or clean_title.lower() in existing_titles:
                     continue
                 
                 poster_match = re.search(r'<meta property="og:image" content="([^"]+)"', m_html)
-                poster = poster_match.group(1) if poster_match else "https://www.24-hdx.com/wp-content/uploads/default.jpg"
+                poster = poster_match.group(1) if poster_match else "https://www.24-hda.com/wp-content/uploads/default.jpg"
                 
-                post_id_match = re.search(r'post-id="(\d+)"|post_id\s*=\s*(\d+)|name="postid"\s*value="(\d+)"|postid:\s*(\d+)', m_html)
+                post_id_match = re.search(r'data-post-id="(\d+)"|post-id="(\d+)"|post_id\s*=\s*(\d+)|name="postid"\s*value="(\d+)"|postid:\s*(\d+)', m_html)
                 post_id = [g for g in post_id_match.groups() if g][0] if post_id_match else None
                 
                 video_url = ""
@@ -82,11 +87,11 @@ for url in urls_24:
                         'lang': 'Thai',
                         'title': clean_title
                     }).encode('utf-8')
-                    api_req = urllib.request.Request("https://api.24-hdx.com/get.php", data=data, headers=HEADERS_24)
+                    api_req = urllib.request.Request("https://api.24-hda.com/get.php", data=data, headers=HEADERS_24)
                     res = urllib.request.urlopen(api_req, timeout=5).read().decode('utf-8', errors='ignore')
                     src_m = re.search(r'src="([^"]+)"', res)
-                    if src_m and '24playerhd' in src_m.group(1):
-                        video_url = src_m.group(1)
+                    if src_m:
+                        video_url = src_m.group(1).replace("\\/", "/")
                 
                 if video_url and video_url not in existing_urls:
                     new_item = {
@@ -99,30 +104,34 @@ for url in urls_24:
                         "sourceType": "embed",
                         "description": f"ดูหนัง {clean_title} ภาพคมชัดระดับ Full HD มาสเตอร์ อัปเดตใหม่ล่าสุด ไม่มีโฆษณากวนใจ",
                         "rating": 8.8,
-                        "genres": ["แอคชั่น", "แฟนตาซี Sci-Fi"],
+                        "genres": ["แอคชั่น", "แฟนตาซี Sci-Fi", "พากย์ไทย"],
                         "duration": "1 ชม. 50 นาที",
                         "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
                         "cast": ["นักแสดงนำคุณภาพ"],
-                        "source": "24HDX",
+                        "source": "24HD",
                         "episodes": ["ตอนที่ 1 (จบในตอน)"],
                         "languages": ["Thai (พากย์ไทย)"],
-                        "id": f"24hdx-{post_id if post_id else len(m)+len(new_movies)+1}"
+                        "id": f"24hdx-{post_id if post_id else len(m)+len(new_movies)+1}",
+                        "originalUrl": link
                     }
                     new_movies.append(new_item)
                     existing_titles.add(clean_title.lower())
                     existing_urls.add(video_url)
-                    print(f"  + [24-HDX] {clean_title} -> {video_url[:40]}")
+                    existing_slugs.add(slug)
+                    existing_orig_urls.add(link.lower())
+                    print(f"  + [24-HD] {clean_title} -> {video_url[:40]}")
             except Exception as e:
                 pass
     except Exception as e:
-        print(f"Error 24-HDX {url}: {e}")
+        print(f"Error 24-HDA {url}: {e}")
 
 # --- 2. Scrape GOSERIES4K Fresh Series ---
 print("\n--- Checking Fresh GOSERIES4K Series ---")
 urls_g4 = [
     "https://goseries4k.com/",
-    "https://goseries4k.com/category/%e0%b8%8b%e0%b8%b5%e0%b8%a3%e0%b8%b5%e0%b9%88%e0%b8%a2%e0%b9%8c%e0%b9%80%e0%b8%81%e0%b8%b2%e0%b8%ab%e0%b8%a5%e0%b8%b5/",
-    "https://goseries4k.com/category/%e0%b8%8b%e0%b8%b5%e0%b8%a3%e0%b8%b5%e0%b9%88%e0%b8%a2%e0%b9%8c%e0%b8%88%e0%b8%b5%e0%b8%99/"
+    "https://goseries4k.com/category/%e0%b8%94%e0%b8%b9%e0%b8%8b%e0%b8%b5%e0%b8%a3%e0%b8%b5%e0%b9%88%e0%b8%a2%e0%b9%8c-2026/",
+    "https://goseries4k.com/category/%e0%b8%94%e0%b8%b9%e0%b8%8b%e0%b8%b5%e0%b8%a3%e0%b8%b5%e0%b9%88%e0%b8%a2%e0%b9%8c%e0%b9%80%e0%b8%81%e0%b8%b2%e0%b8%ab%e0%b8%a5%e0%b8%b5-%e0%b8%ad%e0%b8%ad%e0%b8%99%e0%b9%84%e0%b8%a5%e0%b8%99%e0%b9%8c/",
+    "https://goseries4k.com/category/%e0%b8%94%e0%b8%b9-%e0%b8%8b%e0%b8%b5%e0%b8%a3%e0%b8%b5%e0%b9%88%e0%b8%a2%e0%b9%8c%e0%b8%88%e0%b8%b5%e0%b8%99-%e0%b8%ad%e0%b8%ad%e0%b8%99%e0%b9%84%e0%b8%a5%e0%b8%99%e0%b9%8c/"
 ]
 
 for url in urls_g4:
@@ -135,6 +144,9 @@ for url in urls_g4:
         clean_links = [l for l in set(post_links) if '/category/' not in l and '/tag/' not in l and l != 'https://goseries4k.com/']
         
         for link in clean_links:
+            slug = link.strip("/").split("/")[-1].lower()
+            if slug in existing_slugs or link.lower() in existing_orig_urls:
+                continue
             try:
                 time.sleep(0.02)
                 m_req = urllib.request.Request(link, headers=HEADERS_G4)
