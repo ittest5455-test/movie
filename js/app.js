@@ -74,6 +74,9 @@ function initMovieStreamApp() {
 
   const toastContainer = document.getElementById("toastContainer");
 
+  // URL Google Apps Script Web App (เชื่อมต่อ Google Sheet สำหรับ Sync รายการโปรดและประวัติข้ามเครื่อง)
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyKnLnnu7iJ3uPSV3tdpLO5HL6pZMGy5qzHSLu8Y4RoQq5MIYj1QVFXgZ3miynuNjPX/exec";
+
   // --- State Variables ---
   const movieList = window.movies || (typeof movies !== "undefined" ? movies : []);
   let watchlist = [];
@@ -91,6 +94,30 @@ function initMovieStreamApp() {
   const continueWatchingSection = document.getElementById("continueWatchingSection");
   const continueWatchingListEl = document.getElementById("continueWatchingList");
   const clearContinueWatchingBtn = document.getElementById("clearContinueWatchingBtn");
+
+  let cwSyncDebounce = null;
+  function syncContinueWatchingToCloud() {
+    clearTimeout(cwSyncDebounce);
+    cwSyncDebounce = setTimeout(() => {
+      try {
+        const savedUser = localStorage.getItem("moviestream_user");
+        if (savedUser && GOOGLE_SCRIPT_URL) {
+          const user = JSON.parse(savedUser);
+          if (user && user.phone) {
+            fetch(GOOGLE_SCRIPT_URL, {
+              method: "POST",
+              headers: { "Content-Type": "text/plain;charset=utf-8" },
+              body: JSON.stringify({
+                action: "sync_history",
+                phone: user.phone,
+                history: JSON.stringify(continueWatchingList)
+              })
+            }).catch(() => {});
+          }
+        }
+      } catch (e) {}
+    }, 1200);
+  }
 
   function getContinueWatchingStorageKey() {
     try {
@@ -523,6 +550,7 @@ function initMovieStreamApp() {
     } catch(e) {}
     showToast("ลบออกจากประวัติดูล่าสุดแล้ว", "info");
     renderContinueWatchingShelf();
+    syncContinueWatchingToCloud();
   }
 
   function clearAllContinueWatching() {
@@ -532,6 +560,7 @@ function initMovieStreamApp() {
     } catch(e) {}
     showToast("ล้างประวัติดูล่าสุดเรียบร้อยแล้ว", "info");
     renderContinueWatchingShelf();
+    syncContinueWatchingToCloud();
   }
 
   function recordContinueWatching(movie, episodeNum = 1, progress = null) {
@@ -567,6 +596,7 @@ function initMovieStreamApp() {
     } catch(e) {}
 
     renderContinueWatchingShelf();
+    syncContinueWatchingToCloud();
   }
 
   function displayContinueWatchingGridView() {
@@ -1888,7 +1918,8 @@ function initMovieStreamApp() {
                 action: "login",
                 phone: phone,
                 password: password,
-                watchlist: JSON.stringify(watchlist)
+                watchlist: JSON.stringify(watchlist),
+                history: JSON.stringify(continueWatchingList)
               })
             });
             const text = await res.text();
@@ -1919,6 +1950,30 @@ function initMovieStreamApp() {
                   }
                 } catch(e) {
                   console.warn("Error parsing user cloud watchlist:", e);
+                }
+              }
+
+              // โหลดประวัติการดู (Continue Watching) ของสมาชิกจาก Google Sheet มาใช้งานข้ามเครื่อง
+              if (result.user && result.user.history) {
+                try {
+                  const cloudHistory = typeof result.user.history === "string" ? JSON.parse(result.user.history) : result.user.history;
+                  if (Array.isArray(cloudHistory) && cloudHistory.length > 0) {
+                    const key = `moviestream_continue_watching_${result.user.phone}`;
+                    const map = new Map();
+                    // รวมข้อมูลจาก Cloud
+                    cloudHistory.forEach(item => { if (item && item.movieId) map.set(item.movieId, item); });
+                    // ผสานกับข้อมูลในเครื่อง
+                    continueWatchingList.forEach(item => {
+                      if (!map.has(item.movieId) || (item.updatedAt || 0) > (map.get(item.movieId).updatedAt || 0)) {
+                        map.set(item.movieId, item);
+                      }
+                    });
+                    continueWatchingList = Array.from(map.values()).sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0)).slice(0, 20);
+                    localStorage.setItem(key, JSON.stringify(continueWatchingList));
+                    renderContinueWatchingShelf();
+                  }
+                } catch(e) {
+                  console.warn("Error parsing user cloud history:", e);
                 }
               }
 
