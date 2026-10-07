@@ -642,6 +642,12 @@ function initMovieStreamApp() {
     showGridView("🎬 ภาพยนตร์ทั้งหมด (เรียงตามปีล่าสุด)", sortedAll);
   }
 
+  // --- High Performance Progressive Grid Rendering (Low-Spec & TV Optimized) ---
+  let currentGridMovies = [];
+  let currentRenderedCount = 0;
+  const GRID_BATCH_SIZE = 28; // Render 28 cards initially for 0ms lag
+  let gridObserver = null;
+
   function showGridView(title, filteredMovies) {
     if (continueWatchingSection) {
       if (title.includes("ทั้งหมด") && continueWatchingList.length > 0) {
@@ -665,8 +671,9 @@ function initMovieStreamApp() {
     gridTitle.textContent = title;
     
     gridMoviesList.innerHTML = "";
+    removeInfiniteScrollTrigger();
     
-    if (filteredMovies.length === 0) {
+    if (!filteredMovies || filteredMovies.length === 0) {
       gridMoviesList.innerHTML = `
         <div class="empty-state" style="grid-column: 1 / -1;">
           <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="12" x2="16" y2="12"></line></svg>
@@ -676,24 +683,126 @@ function initMovieStreamApp() {
       `;
       return;
     }
-    
-    gridMoviesList.innerHTML = filteredMovies.map(movie => createMovieCardMarkup(movie)).join("");
-    
-    // Add Click Listeners for grid movies to play directly
-    gridMoviesList.querySelectorAll(".movie-card").forEach(card => {
-      card.addEventListener("click", (e) => {
-        // If they clicked the fav button, handle it separately
-        if (e.target.closest(".movie-fav-btn")) {
-          e.stopPropagation();
+
+    currentGridMovies = filteredMovies;
+    currentRenderedCount = 0;
+
+    // 1. Render initial fast batch (Instant, 0ms lag)
+    appendNextMovieBatch();
+
+    // 2. Setup lazy-load for remaining items
+    setupInfiniteScrollTrigger();
+  }
+
+  function appendNextMovieBatch() {
+    if (!currentGridMovies || currentRenderedCount >= currentGridMovies.length) {
+      removeInfiniteScrollTrigger();
+      return;
+    }
+
+    const nextItems = currentGridMovies.slice(currentRenderedCount, currentRenderedCount + GRID_BATCH_SIZE);
+    currentRenderedCount += nextItems.length;
+
+    const frag = document.createRange().createContextualFragment(
+      nextItems.map(m => createMovieCardMarkup(m)).join("")
+    );
+    gridMoviesList.appendChild(frag);
+
+    if (currentRenderedCount >= currentGridMovies.length) {
+      removeInfiniteScrollTrigger();
+    }
+  }
+
+  function setupInfiniteScrollTrigger() {
+    removeInfiniteScrollTrigger();
+    if (!currentGridMovies || currentRenderedCount >= currentGridMovies.length) return;
+
+    const sentinel = document.createElement("div");
+    sentinel.id = "gridScrollSentinel";
+    sentinel.style.cssText = "grid-column: 1 / -1; display: flex; justify-content: center; padding: 1.5rem 0; width: 100%;";
+    const remain = currentGridMovies.length - currentRenderedCount;
+    sentinel.innerHTML = `
+      <button class="btn btn-secondary load-more-movies-btn" id="loadMoreMoviesBtn" style="padding: 0.65rem 1.8rem; border-radius: 24px; font-weight: 600; cursor: pointer; border: 1px solid rgba(255,255,255,0.18);">
+        📥 โหลดภาพยนตร์เพิ่มเติม (${remain} เรื่องที่เหลือ)
+      </button>
+    `;
+    gridMoviesList.appendChild(sentinel);
+
+    const btn = document.getElementById("loadMoreMoviesBtn");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        btn.remove();
+        appendNextMovieBatch();
+        setupInfiniteScrollTrigger();
+      });
+    }
+
+    if ("IntersectionObserver" in window) {
+      gridObserver = new IntersectionObserver((entries) => {
+        if (entries[0] && entries[0].isIntersecting) {
+          if (currentRenderedCount < currentGridMovies.length) {
+            appendNextMovieBatch();
+            const s = document.getElementById("gridScrollSentinel");
+            if (s && gridMoviesList.contains(s)) {
+              gridMoviesList.appendChild(s);
+              const b = document.getElementById("loadMoreMoviesBtn");
+              if (b) {
+                const rem = currentGridMovies.length - currentRenderedCount;
+                b.textContent = `📥 โหลดภาพยนตร์เพิ่มเติม (${rem} เรื่องที่เหลือ)`;
+              }
+            }
+          } else {
+            removeInfiniteScrollTrigger();
+          }
+        }
+      }, { rootMargin: "500px 0px" });
+
+      gridObserver.observe(sentinel);
+    }
+  }
+
+  function removeInfiniteScrollTrigger() {
+    if (gridObserver) {
+      try { gridObserver.disconnect(); } catch(e) {}
+      gridObserver = null;
+    }
+    const s = document.getElementById("gridScrollSentinel");
+    if (s) s.remove();
+  }
+
+  // Single Delegated Click & Remote Navigation Listener on gridMoviesList (Zero Memory Leak)
+  if (gridMoviesList) {
+    gridMoviesList.addEventListener("click", (e) => {
+      const favBtn = e.target.closest(".movie-fav-btn");
+      if (favBtn) {
+        e.stopPropagation();
+        const card = favBtn.closest(".movie-card");
+        if (card) {
           const movieId = card.getAttribute("data-id");
           toggleWatchlist(movieId);
-          return;
         }
-        
+        return;
+      }
+
+      const card = e.target.closest(".movie-card");
+      if (card) {
         const movieId = card.getAttribute("data-id");
         const found = movieList.find(m => m.id === movieId);
         if (found) playMovie(found);
-      });
+      }
+    });
+
+    gridMoviesList.addEventListener("keydown", (e) => {
+      const code = e.keyCode || e.which;
+      if (code === 13 || e.key === "Enter") {
+        const card = e.target.closest(".movie-card");
+        if (card) {
+          e.preventDefault();
+          const movieId = card.getAttribute("data-id");
+          const found = movieList.find(m => m.id === movieId);
+          if (found) playMovie(found);
+        }
+      }
     });
   }
 
@@ -850,14 +959,14 @@ function initMovieStreamApp() {
   let pendingPlayMovie = null;
 
   function playMovie(movie, startEpisode = 1) {
-    // ตรวจสอบสิทธิ์สมาชิกก่อนเปิดเล่นหนัง (ต้อง Login ถึงจะดูได้)
-    const savedUser = localStorage.getItem("moviestream_user");
-    if (!savedUser) {
-      pendingPlayMovie = { movie, startEpisode };
-      showToast("🔒 กรุณาเข้าสู่ระบบสมาชิกก่อนรับชมภาพยนตร์", "info");
-      openAuthModal();
-      return;
-    }
+    if (!movie) return;
+
+    // Update URL hash for direct bookmarking & TV deep linking
+    try {
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, null, `#play-${movie.id}`);
+      }
+    } catch(e) {}
 
     if (playingMovieTitle) {
       playingMovieTitle.textContent = movie.titleTh;
@@ -867,6 +976,12 @@ function initMovieStreamApp() {
     document.body.classList.add("player-is-active");
     document.body.style.overflow = "hidden";
     currentActiveMovie = movie;
+
+    // Auto-enter theater fullscreen on Smart TV devices for instant watching
+    const isTV = document.documentElement.classList.contains("is-tv-device");
+    if (isTV) {
+      playerModal.classList.add("theater-fullscreen-mode");
+    }
 
     const epInt = parseInt(startEpisode) || 1;
     currentActiveMovie.currentEpisode = epInt;
@@ -1246,6 +1361,13 @@ function initMovieStreamApp() {
     if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
     const pTimeline = document.getElementById("playerTimelineBar");
     if (pTimeline) pTimeline.style.display = "none";
+
+    // Clean hash
+    try {
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.pathname + window.location.search);
+      }
+    } catch(e) {}
   }
 
   // --- Custom Player Controls System ---
@@ -2930,6 +3052,21 @@ function initMovieStreamApp() {
         }
       }, 3500);
     }
+
+    // Direct Link & TV Instant Playback (#play-<movieId>)
+    function checkUrlHashForPlayback() {
+      const hash = window.location.hash;
+      if (hash && hash.startsWith("#play-")) {
+        const movieId = hash.replace("#play-", "");
+        const found = movieList.find(m => String(m.id) === String(movieId));
+        if (found) {
+          setTimeout(() => playMovie(found), 250);
+        }
+      }
+    }
+
+    checkUrlHashForPlayback();
+    window.addEventListener("hashchange", checkUrlHashForPlayback);
   }
 }
 
