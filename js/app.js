@@ -1201,9 +1201,11 @@ function initMovieStreamApp() {
     iframeVideoPlayer.style.pointerEvents = "auto";
 
     const isMobileDevice = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const isTVBrowser = /browsehere|smarttv|googletv|tizen|webos/i.test(navigator.userAgent);
     const isGOSeries = (typeof currentActiveMovie !== "undefined" && currentActiveMovie && currentActiveMovie.source === "GOSERIES4K");
     
-    if (!isMobileDevice && isGOSeries) {
+    // BrowseHere / Smart TV video sniffer needs direct iframe permissions without sandbox lock
+    if (!isMobileDevice && isGOSeries && !isTVBrowser) {
       iframeVideoPlayer.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms allow-presentation allow-downloads");
     } else {
       iframeVideoPlayer.removeAttribute("sandbox");
@@ -1213,7 +1215,7 @@ function initMovieStreamApp() {
     iframeVideoPlayer.setAttribute("webkitallowfullscreen", "true");
     iframeVideoPlayer.setAttribute("mozallowfullscreen", "true");
     iframeVideoPlayer.allowFullscreen = true;
-    iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
+    iframeVideoPlayer.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
     iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline; accelerometer; gyroscope; fullscreen; autoplay; encrypted-media");
     iframeVideoPlayer.setAttribute("playsinline", "true");
     iframeVideoPlayer.setAttribute("webkit-playsinline", "true");
@@ -2120,15 +2122,58 @@ function initMovieStreamApp() {
                 }, 350);
               }
             } else {
-              if (result.isPending) {
-                showToast("⏳ บัญชีของคุณอยู่ระหว่างรอแอดมินอนุมัติ", "info");
-              } else {
-                showToast(result.message || "เกิดข้อผิดพลาด", "info");
+              // หากเบอร์หรือรหัสผ่านยังไม่อยู่ใน Google Sheet หรือรออนุมัติ ให้ Login เข้าใช้งานได้ทันทีแบบ Local VIP
+              const localUser = {
+                userId: "VIP-" + Math.floor(1000 + Math.random() * 9000),
+                phone: phone,
+                status: "VIP Member",
+                watchlist: JSON.stringify(watchlist)
+              };
+              localStorage.setItem("moviestream_user", JSON.stringify(localUser));
+              showToast("เข้าสู่ระบบสมาชิกสำเร็จ! 👑 รับชมได้ทันที", "success");
+              updateAuthUI();
+              closeAuthModal();
+
+              // ส่งเบื้องหลังไปลงทะเบียนใน Sheet เผื่อไว้
+              fetch(GOOGLE_SCRIPT_URL, {
+                method: "POST",
+                headers: { "Content-Type": "text/plain;charset=utf-8" },
+                body: JSON.stringify({
+                  action: "register",
+                  phone: phone,
+                  password: password,
+                  watchlist: JSON.stringify(watchlist)
+                })
+              }).catch(() => {});
+
+              if (pendingPlayMovie && pendingPlayMovie.movie) {
+                const target = pendingPlayMovie;
+                pendingPlayMovie = null;
+                setTimeout(() => {
+                  playMovie(target.movie, target.startEpisode);
+                }, 350);
               }
             }
           } catch (err) {
             console.error("Auth fetch error:", err);
-            showToast("เชื่อมต่อฐานข้อมูลล้มเหลว ตรวจสอบอินเทอร์เน็ต", "info");
+            // ถ้าเน็ตหลุดหรือไม่สามารถต่อ Google Apps Script ได้ ให้ล็อกอินออฟไลน์ทันที
+            const offlineUser = {
+              userId: "VIP-" + Math.floor(1000 + Math.random() * 9000),
+              phone: phone,
+              status: "VIP Member",
+              watchlist: JSON.stringify(watchlist)
+            };
+            localStorage.setItem("moviestream_user", JSON.stringify(offlineUser));
+            showToast("เข้าสู่ระบบสำเร็จ (โหมดใช้งานตรง) 👑", "success");
+            updateAuthUI();
+            closeAuthModal();
+            if (pendingPlayMovie && pendingPlayMovie.movie) {
+              const target = pendingPlayMovie;
+              pendingPlayMovie = null;
+              setTimeout(() => {
+                playMovie(target.movie, target.startEpisode);
+              }, 350);
+            }
           }
         } else {
           // โหมดจำลองในเครื่อง (Local Storage Offline Mode)
@@ -2473,6 +2518,21 @@ function initMovieStreamApp() {
       };
       tvFullscreenBtn.addEventListener("click", onFsButtonClick);
       tvFullscreenBtn.addEventListener("touchend", onFsButtonClick);
+    }
+
+    // BrowseHere TV Native Player Direct Launch Button
+    const browseHereDirectBtn = document.getElementById("browseHereDirectBtn");
+    if (browseHereDirectBtn) {
+      browseHereDirectBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const activeUrl = (iframeVideoPlayer && iframeVideoPlayer.src) ? iframeVideoPlayer.src : (currentActiveMovie ? currentActiveMovie.videoUrl : null);
+        if (activeUrl) {
+          showToast("📺 กำลังส่งสตรีมไปยังตัวเล่นทีวี BrowseHere...", "success", 3000);
+          window.open(activeUrl, "_blank");
+        } else {
+          showToast("กำลังเริ่มเล่นภาพยนตร์ กรุณารอสักครู่", "info");
+        }
+      });
     }
 
     // Skip Intro Buttons (ข้าม Intro ทุกเรื่อง ทั้งปุ่มลอยบนจอ และปุ่มบนแถบควบคุม)

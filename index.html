@@ -21,10 +21,11 @@
           return;
         }
 
-        // Only true TV devices without touch (Mi Box, Mi TV Stick, Android TV, Smart TV)
+        // Only true TV devices without touch (Mi Box, Mi TV Stick, Android TV, Smart TV, BrowseHere)
         var isTV = ua.indexOf('googletv') > -1 || 
                    ua.indexOf('smarttv') > -1 || 
                    ua.indexOf('smart-tv') > -1 || 
+                   ua.indexOf('browsehere') > -1 || 
                    ua.indexOf('aft') > -1 || 
                    ua.indexOf('leanback') > -1 || 
                    ua.indexOf('crkey') > -1 || 
@@ -458,6 +459,10 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
           <span>เต็มจอ</span>
         </button>
+        <button class="player-select-btn player-browsehere-btn" id="browseHereDirectBtn" tabindex="0" title="เปิดด้วยตัวเล่นทีวี BrowseHere เพื่อควบคุมผ่านรีโมต">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><polyline points="17 2 12 7 7 2"></polyline></svg>
+          <span>📺 เล่นผ่านตัวเล่นทีวี</span>
+        </button>
       </div>
 
     </div>
@@ -626,8 +631,8 @@
   <!-- Toast Notification Container -->
   <div class="toast-container" id="toastContainer"></div>
 
-  <script src="js/movies.js?v=20261004_2105"></script>
-  <script src="js/app.js?v=20261004_2105"></script>
+  <script src="js/movies.js?v=20261007_1605"></script>
+  <script src="js/app.js?v=20261007_1605"></script>
   <script>
     // Bulletproof direct renderer & counter inline
     (function() {
