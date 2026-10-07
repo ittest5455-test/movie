@@ -2056,9 +2056,8 @@ function initMovieStreamApp() {
       });
     }
 
-    if (authSubmitBtn) {
-      authSubmitBtn.addEventListener("click", async (e) => {
-        e.preventDefault();
+      const handleAuthSubmit = async (e) => {
+        if (e) e.preventDefault();
         const phone = authPhone ? authPhone.value.trim() : "";
         const password = authPassword ? authPassword.value.trim() : "";
 
@@ -2097,8 +2096,11 @@ function initMovieStreamApp() {
             return;
           }
 
-          // ถ้าเป็นโหมด "เข้าสู่ระบบ" ให้เช็คสิทธิ์แบบปกติ
+          // ถ้าเป็นโหมด "เข้าสู่ระบบ" ให้เช็คสิทธิ์แบบมี Timeout ป้องกันค้าง
           try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 2800);
+
             const res = await fetch(GOOGLE_SCRIPT_URL, {
               method: "POST",
               headers: { "Content-Type": "text/plain;charset=utf-8" },
@@ -2108,22 +2110,20 @@ function initMovieStreamApp() {
                 password: password,
                 watchlist: JSON.stringify(watchlist),
                 history: JSON.stringify(continueWatchingList)
-              })
+              }),
+              signal: controller.signal
             });
+            clearTimeout(timeoutId);
+
             const text = await res.text();
             let result;
             try {
               result = JSON.parse(text);
             } catch(e) {
-              console.error("Response not JSON:", text);
-              showToast("ส่งข้อมูลสำเร็จ รอระบบบันทึกสักครู่", "info");
-              closeAuthModal();
-              authSubmitBtn.disabled = false;
-              setAuthMode(isRegisterMode);
-              return;
+              result = { success: false };
             }
 
-            if (result.success) {
+            if (result && result.success) {
               localStorage.setItem("moviestream_user", JSON.stringify(result.user));
               
               // โหลดรายการโปรดของสมาชิกจาก Google Sheet มาใช้งานทันที
@@ -2254,8 +2254,12 @@ function initMovieStreamApp() {
 
         authSubmitBtn.disabled = false;
         setAuthMode(isRegisterMode);
-      });
-    }
+      };
+
+      authSubmitBtn.addEventListener("click", handleAuthSubmit);
+      if (authForm) {
+        authForm.addEventListener("submit", handleAuthSubmit);
+      }
 
     function performLogout() {
       localStorage.removeItem("moviestream_user");
