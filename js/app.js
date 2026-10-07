@@ -80,6 +80,11 @@ function initMovieStreamApp() {
   const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyKnLnnu7iJ3uPSV3tdpLO5HL6pZMGy5qzHSLu8Y4RoQq5MIYj1QVFXgZ3miynuNjPX/exec";
 
   // --- State Variables ---
+  function getProxyUrl(url) {
+    if (!url || url.includes('image.tmdb.org') || url.startsWith('data:')) return url;
+    return `/img?url=${encodeURIComponent(url)}`;
+  }
+  
   const movieList = window.movies || (typeof movies !== "undefined" ? movies : []);
   let watchlist = [];
   try {
@@ -292,7 +297,7 @@ function initMovieStreamApp() {
       const movie = heroMovies[index];
       if (!movie) return;
 
-      const bgImg = movie.backdrop || movie.poster || "";
+      const bgImg = getProxyUrl(movie.backdrop || movie.poster) || "";
       if (heroBackdrop) {
         heroBackdrop.style.backgroundImage = `url('${bgImg}')`;
       }
@@ -409,7 +414,7 @@ function initMovieStreamApp() {
     const isSaved = watchlist.includes(movie.id);
     const isTopHot = movie.genres && (movie.genres.includes("ยอดนิยม 2026") || movie.genres.includes("ยอดนิยม") || (parseFloat(movie.rating) >= 7.8));
     const placeholderSvg = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22300%22%20height%3D%22450%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20300%20450%22%3E%3Crect%20fill%3D%22%230e1222%22%20width%3D%22300%22%20height%3D%22450%22%2F%3E%3Ctext%20fill%3D%22%2364748b%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20dy%3D%2210.5%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EMovieStream%3C%2Ftext%3E%3C%2Fsvg%3E";
-    const posterUrl = movie.poster || placeholderSvg;
+    const posterUrl = getProxyUrl(movie.poster) || placeholderSvg;
 
     const hotBadgeHtml = isTopHot ? `<div class="card-badge-hot">HOT</div>` : '';
     const ratingVal = movie.rating || "8.0";
@@ -502,7 +507,7 @@ function initMovieStreamApp() {
       }
 
       const cwPlaceholder = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22300%22%20height%3D%22450%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20300%20450%22%3E%3Crect%20fill%3D%22%231e293b%22%20width%3D%22300%22%20height%3D%22450%22%2F%3E%3Ctext%20fill%3D%22%2394a3b8%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20dy%3D%2210.5%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EMovieStream%20HD%3C%2Ftext%3E%3C%2Fsvg%3E";
-      const cwImgSrc = movie.backdrop || movie.poster || cwPlaceholder;
+      const cwImgSrc = getProxyUrl(movie.backdrop || movie.poster) || cwPlaceholder;
       card.innerHTML = `
         <div class="cw-poster-wrapper">
           <img src="${cwImgSrc}" alt="${movie.titleTh}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${cwPlaceholder}'">
@@ -896,9 +901,9 @@ function initMovieStreamApp() {
   function openDetailsModal(movie) {
     currentActiveMovie = movie;
     
-    if (modalHeroBanner) modalHeroBanner.style.backgroundImage = `url('${movie.backdrop || movie.poster}')`;
+    if (modalHeroBanner) modalHeroBanner.style.backgroundImage = `url('${getProxyUrl(movie.backdrop || movie.poster)}')`;
     if (modalPoster) {
-      modalPoster.src = movie.poster;
+      modalPoster.src = getProxyUrl(movie.poster);
       modalPoster.alt = `ปกหนัง ${movie.titleTh}`;
     }
     if (modalTitleTh) modalTitleTh.textContent = movie.titleTh;
