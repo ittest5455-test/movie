@@ -655,8 +655,8 @@
   <!-- Toast Notification Container -->
   <div class="toast-container" id="toastContainer"></div>
 
-  <script src="js/movies.js?v=20261007_1645"></script>
-  <script src="js/app.js?v=20261007_1645"></script>
+  <script src="js/movies.js?v=20261007_1658"></script>
+  <script src="js/app.js?v=20261007_1658"></script>
   <script>
     // Bulletproof direct renderer & counter inline
     (function() {
@@ -672,7 +672,8 @@
         var grid = document.getElementById("gridMoviesList");
         var list = window.movies || (typeof movies !== "undefined" ? movies : []);
         if (grid && (!grid.children || grid.children.length === 0) && list && list.length > 0) {
-          if (typeof initMovieStreamApp === "function") {
+          if (!window.hasAppInitialized && typeof initMovieStreamApp === "function") {
+            window.hasAppInitialized = true;
             initMovieStreamApp();
           }
         }

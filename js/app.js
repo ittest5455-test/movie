@@ -3,6 +3,8 @@
 // ----------------------------------------------------
 
 function initMovieStreamApp() {
+  if (window.hasAppInitialized) return;
+  window.hasAppInitialized = true;
   // --- DOM Selectors ---
   const headerNav = document.getElementById("headerNav");
   const logoLink = document.getElementById("logoLink");
