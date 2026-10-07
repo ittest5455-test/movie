@@ -961,6 +961,15 @@ function initMovieStreamApp() {
   function playMovie(movie, startEpisode = 1) {
     if (!movie) return;
 
+    // ตรวจสอบสิทธิ์สมาชิกก่อนเปิดเล่นหนัง (ต้อง Login ถึงจะดูได้)
+    const savedUser = localStorage.getItem("moviestream_user");
+    if (!savedUser) {
+      pendingPlayMovie = { movie, startEpisode };
+      showToast("🔒 กรุณาเข้าสู่ระบบสมาชิกก่อนรับชมภาพยนตร์", "info");
+      openAuthModal();
+      return;
+    }
+
     // Update URL hash for direct bookmarking & TV deep linking
     try {
       if (window.history && window.history.replaceState) {
