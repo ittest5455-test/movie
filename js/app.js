@@ -1884,6 +1884,61 @@ function initMovieStreamApp() {
       });
     }
 
+    // --- Mobile Bottom Nav Bar Events ---
+    const mobNavHome = document.getElementById("mobNavHome");
+    const mobNavPopular = document.getElementById("mobNavPopular");
+    const mobNavSeries = document.getElementById("mobNavSeries");
+    const mobNavWatchlist = document.getElementById("mobNavWatchlist");
+    const mobNavUser = document.getElementById("mobNavUser");
+
+    function setActiveMobileNav(activeEl) {
+      document.querySelectorAll(".mobile-nav-item").forEach(item => item.classList.remove("active"));
+      if (activeEl) activeEl.classList.add("active");
+    }
+
+    if (mobNavHome) {
+      mobNavHome.addEventListener("click", (e) => {
+        e.preventDefault();
+        setActiveMobileNav(mobNavHome);
+        showHomeView();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    if (mobNavPopular) {
+      mobNavPopular.addEventListener("click", (e) => {
+        e.preventDefault();
+        setActiveMobileNav(mobNavPopular);
+        if (navPopular) navPopular.click();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    if (mobNavSeries) {
+      mobNavSeries.addEventListener("click", (e) => {
+        e.preventDefault();
+        setActiveMobileNav(mobNavSeries);
+        if (navSeries) navSeries.click();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    if (mobNavWatchlist) {
+      mobNavWatchlist.addEventListener("click", (e) => {
+        e.preventDefault();
+        setActiveMobileNav(mobNavWatchlist);
+        displayWatchlistView();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    if (mobNavUser) {
+      mobNavUser.addEventListener("click", (e) => {
+        e.preventDefault();
+        openAuthModal();
+      });
+    }
+
     // --- Member Auth Modal Controller ---
     const authModal = document.getElementById("authModal");
     const navAuthBtn = document.getElementById("navAuthBtn");
