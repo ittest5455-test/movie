@@ -92,6 +92,19 @@ function initMovieStreamApp() {
   }
   let currentActiveMovie = null;
 
+  // --- Progressive Grid State (TV & Low-Spec Optimized) ---
+  let currentGridMovies = [];
+  let currentRenderedCount = 0;
+  const GRID_BATCH_SIZE = 28; // Render 28 cards initially for 0ms lag
+  let gridObserver = null;
+
+  // --- Video Player & Overlay States ---
+  let pendingPlayMovie = null;
+  let hlsInstance = null;
+  let playerControlsIdleTimer = null;
+  let skipIntroCountdownTimer = null;
+  let resumePopupTimeout = null;
+
   // --- Continue Watching System (ดูล่าสุด / กำลังรับชมต่อ - แยกประวัติตาม User 100%) ---
   const continueWatchingSection = document.getElementById("continueWatchingSection");
   const continueWatchingListEl = document.getElementById("continueWatchingList");
@@ -181,16 +194,6 @@ function initMovieStreamApp() {
 
   let continueWatchingList = loadContinueWatchingData();
 
-  try {
-    initVisitorCounter();
-    initHeroSpotlight();
-    showHomeView();
-    updateWatchlistUI();
-    renderContinueWatchingShelf();
-    setupEventListeners();
-  } catch (err) {
-    console.error("Initialization error:", err);
-  }
 
   // --- Functions ---
 
@@ -645,10 +648,6 @@ function initMovieStreamApp() {
   }
 
   // --- High Performance Progressive Grid Rendering (Low-Spec & TV Optimized) ---
-  let currentGridMovies = [];
-  let currentRenderedCount = 0;
-  const GRID_BATCH_SIZE = 28; // Render 28 cards initially for 0ms lag
-  let gridObserver = null;
 
   function showGridView(title, filteredMovies) {
     if (continueWatchingSection) {
@@ -958,7 +957,6 @@ function initMovieStreamApp() {
   }
 
   // --- Video Player Modal Actions ---
-  let pendingPlayMovie = null;
 
   function playMovie(movie, startEpisode = 1) {
     if (!movie) return;
@@ -1075,8 +1073,6 @@ function initMovieStreamApp() {
     showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}${epText}`, "success");
     triggerVideoOverlays(movie, epInt);
   }
-
-  let hlsInstance = null;
 
   function playNativeHls(streamUrl, movieTitle, originalEmbedUrl) {
     window._activeVideoDuration = 0;
@@ -1283,7 +1279,6 @@ function initMovieStreamApp() {
     });
   }
 
-  let playerControlsIdleTimer = null;
   function resetPlayerControlsIdleTimer() {
     if (playerModal) {
       playerModal.classList.remove("player-controls-idle");
@@ -1424,9 +1419,6 @@ function initMovieStreamApp() {
     html5VideoPlayer.currentTime = newTime;
     updateTimeAndProgress();
   }
-
-  let skipIntroCountdownTimer = null;
-  let resumePopupTimeout = null;
 
   // Video Overlay Popups (FastHD / Resume Playback)
   function triggerVideoOverlays(movie, episodeNum = 1) {
@@ -1822,8 +1814,8 @@ function initMovieStreamApp() {
     }, 3000);
   }
 
-  // --- Event Listeners Setup ---
-  function setupEventListeners() {
+  // --- Event Listeners & UI Controller Setup ---
+
     // Nav Home Click
     if (navHome) {
       navHome.addEventListener("click", (e) => {
@@ -1963,8 +1955,6 @@ function initMovieStreamApp() {
     const navLogoutTab = document.getElementById("navLogoutTab");
 
     let isRegisterMode = false;
-    // URL Google Apps Script Web App (เชื่อมต่อ Google Sheet เรียบร้อย)
-    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyKnLnnu7iJ3uPSV3tdpLO5HL6pZMGy5qzHSLu8Y4RoQq5MIYj1QVFXgZ3miynuNjPX/exec"; 
 
     function updateAuthUI() {
       const savedUser = localStorage.getItem("moviestream_user");
@@ -3197,8 +3187,19 @@ function initMovieStreamApp() {
 
     checkUrlHashForPlayback();
     window.addEventListener("hashchange", checkUrlHashForPlayback);
+
+    // --- Initial Launch & Render ---
+    try {
+      initVisitorCounter();
+      updateAuthUI();
+      initHeroSpotlight();
+      showHomeView();
+      updateWatchlistUI();
+      renderContinueWatchingShelf();
+    } catch (err) {
+      console.error("Initialization error:", err);
+    }
   }
-}
 
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initMovieStreamApp);
