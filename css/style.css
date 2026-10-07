@@ -55,6 +55,10 @@ a {
   text-decoration: none;
 }
 
+.mobile-bottom-nav {
+  display: none;
+}
+
 button {
   background: none;
   border: none;
