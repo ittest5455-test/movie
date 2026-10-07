@@ -1293,7 +1293,7 @@ function initMovieStreamApp() {
   let skipIntroCountdownTimer = null;
   let resumePopupTimeout = null;
 
-  // Video Overlay Popups (เด้งขึ้นในวีดีโอเหมือน 2499HD / FastHD)
+  // Video Overlay Popups (FastHD / Resume Playback)
   function triggerVideoOverlays(movie, episodeNum = 1) {
     if (!movie) return;
     const resumePopup = document.getElementById("resumePlaybackPopup");
@@ -1365,11 +1365,11 @@ function initMovieStreamApp() {
       return;
     }
 
-    // 2. IFrame Embed Mode (2499HD, GOSERIES, WOW-DRAMA, 24-HD, 24HDX)
+    // 2. IFrame Embed Mode (GOSERIES, WOW-DRAMA, 24-HD, 24HDX)
     if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
       let triggered = false;
 
-      // A. Try direct DOM click if accessible (e.g. 2499HD gan-play button)
+      // A. Try direct DOM click if accessible (e.g. skip button)
       try {
         const ifrDoc = iframeVideoPlayer.contentDocument || (iframeVideoPlayer.contentWindow && iframeVideoPlayer.contentWindow.document);
         if (ifrDoc) {
@@ -2377,7 +2377,7 @@ function initMovieStreamApp() {
       });
     }
 
-    // Resume Playback inside Video Handlers (เหมือน 2499HD)
+    // Resume Playback inside Video Handlers
     const resumeContinueBtn = document.getElementById("resumeContinueBtn");
     if (resumeContinueBtn) {
       resumeContinueBtn.addEventListener("click", (e) => {
@@ -2645,9 +2645,6 @@ function initMovieStreamApp() {
       } else if (genre === "WOW-DRAMA") {
         const wowMovies = movieList.filter(m => m.source === "WOW-DRAMA" || (m.genres && m.genres.includes("WOW-DRAMA")));
         showGridView(`📺 รวมละครไทยและซีรีส์จาก WOW-DRAMA (${wowMovies.length} เรื่อง)`, wowMovies);
-      } else if (genre === "2499HD") {
-        const m2499 = movieList.filter(m => m.source === "2499HD" || (m.genres && m.genres.includes("2499HD")));
-        showGridView(`🚀 รวมหนังปี 2026 จาก 2499HD (ตัวเล่น FastHD ข้าม Intro / ดูต่อได้) (${m2499.length} เรื่อง)`, m2499);
       } else {
         const filtered = movieList.filter(m => m.genres && (m.genres.includes(genre) || m.genres.some(g => g.includes(genre))));
         showGridView(`หมวดหมู่ภาพยนตร์: ${genre}`, filtered);
