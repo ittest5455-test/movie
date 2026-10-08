@@ -3697,3 +3697,70 @@ html.is-tv-device .movie-card:focus {
 }
 
 
+
+/* ====== Tablet & iPad Support for Bottom Nav Bar ====== */
+@media (max-width: 1200px) {
+  .mobile-bottom-nav {
+    display: flex !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: calc(58px + env(safe-area-inset-bottom, 0px)) !important;
+    padding-bottom: env(safe-area-inset-bottom, 0px) !important;
+    background: rgba(10, 12, 22, 0.96) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    z-index: 99999 !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  .mobile-nav-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #94a3b8 !important;
+    text-decoration: none !important;
+    font-size: 0.68rem !important;
+    font-weight: 500 !important;
+    gap: 3px !important;
+    flex: 1 !important;
+    min-height: 48px !important;
+    transition: color 0.18s ease, transform 0.18s ease !important;
+  }
+
+  .mobile-nav-item:active {
+    transform: scale(0.92) !important;
+  }
+
+  .mobile-nav-item.active {
+    color: #38bdf8 !important;
+    font-weight: 700 !important;
+  }
+
+  .mobile-nav-item.active svg {
+    stroke: #38bdf8 !important;
+    filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.6)) !important;
+  }
+
+  .floating-install-bar {
+    bottom: calc(64px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  /* Hide Desktop Nav */
+  .main-nav {
+    display: none !important;
+  }
+  
+  .nav-stat-pill, .nav-download-group {
+    display: none !important;
+  }
+  
+  body {
+    padding-bottom: calc(68px + env(safe-area-inset-bottom, 12px)) !important;
+  }
+}

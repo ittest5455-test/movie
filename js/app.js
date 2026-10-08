@@ -82,6 +82,9 @@ function initMovieStreamApp() {
   // --- State Variables ---
   function getProxyUrl(url) {
     if (!url || url.includes('image.tmdb.org') || url.startsWith('data:')) return url;
+    if (window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      return url;
+    }
     return `/img?url=${encodeURIComponent(url)}`;
   }
   
@@ -2050,6 +2053,14 @@ function initMovieStreamApp() {
       authToggleBtn.addEventListener("click", (e) => {
         e.preventDefault();
         setAuthMode(!isRegisterMode);
+      });
+    }
+
+    const forgotPwdBtn = document.getElementById("forgotPwdBtn");
+    if (forgotPwdBtn) {
+      forgotPwdBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        showToast("กรุณาติดต่อแอดมินผ่าน LINE เพื่อรีเซ็ตรหัสผ่าน 💬", "info");
       });
     }
 
