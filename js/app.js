@@ -1075,6 +1075,18 @@ function initMovieStreamApp() {
       return;
     } 
 
+    // 1.5. WOW-DRAMA (getplay-cdn) Native HLS Proxy Stream
+    if (initialVideoUrl && initialVideoUrl.includes("getplay-cdn.com")) {
+      const md5Match = initialVideoUrl.match(/\/embed\/([a-f0-9]{20,})/i) || initialVideoUrl.match(/[?&]v=([a-f0-9]{20,})/i);
+      if (md5Match && md5Match[1]) {
+        const epText = (movie.episodes && movie.episodes.length > 1) ? ` (ตอนที่ ${epInt})` : "";
+        showToast(`กำลังเปิดสตรีมภาพยนตร์: ${movie.titleTh}${epText}`, "success");
+        playNativeHls(`/api/wow?id=${md5Match[1]}`, movie.titleTh, initialVideoUrl);
+        triggerVideoOverlays(movie, epInt);
+        return;
+      }
+    }
+
     // 2. Embedded Video Player (Direct Hardware-accelerated CDN Streaming)
     fallbackToIframe(initialVideoUrl);
     const epText = (movie.episodes && movie.episodes.length > 1) ? ` (ตอนที่ ${epInt})` : "";
@@ -1248,6 +1260,15 @@ function initMovieStreamApp() {
       const epVideoUrl = currentActiveMovie.episodeUrls[epKey];
       currentActiveMovie.videoUrl = epVideoUrl;
       currentActiveMovie.currentEpisode = parseInt(episode) || 1;
+
+      if (epVideoUrl && epVideoUrl.includes("getplay-cdn.com")) {
+        const md5Match = epVideoUrl.match(/\/embed\/([a-f0-9]{20,})/i) || epVideoUrl.match(/[?&]v=([a-f0-9]{20,})/i);
+        if (md5Match && md5Match[1]) {
+          showToast(`▶ เริ่มเล่น ตอนที่ ${episode} แล้ว`, "success");
+          playNativeHls(`/api/wow?id=${md5Match[1]}`, currentActiveMovie.titleTh, epVideoUrl);
+          return;
+        }
+      }
 
       fallbackToIframe(epVideoUrl);
       showToast(`▶ เริ่มเล่น ตอนที่ ${episode} แล้ว`, "success");
