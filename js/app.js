@@ -1293,11 +1293,20 @@ function initMovieStreamApp() {
     .then(html => {
       const srcMatch = html.match(/src="([^"]+)"/);
       if (srcMatch && srcMatch[1]) {
+        const epSrc = srcMatch[1];
         if (currentActiveMovie) {
-          currentActiveMovie.videoUrl = srcMatch[1];
+          currentActiveMovie.videoUrl = epSrc;
           currentActiveMovie.currentEpisode = parseInt(episode) || 1;
         }
-        fallbackToIframe(srcMatch[1]);
+        if (epSrc.includes("getplay-cdn.com")) {
+          const md5Match = epSrc.match(/\/embed\/([a-f0-9]{20,})/i) || epSrc.match(/[?&]v=([a-f0-9]{20,})/i);
+          if (md5Match && md5Match[1]) {
+            showToast(`เปิดเล่น ตอนที่ ${episode} เรียบร้อย`, "success");
+            playNativeHls(`/api/wow?id=${md5Match[1]}`, currentActiveMovie ? currentActiveMovie.titleTh : "Video", epSrc);
+            return;
+          }
+        }
+        fallbackToIframe(epSrc);
         showToast(`เปิดเล่น ตอนที่ ${episode} เรียบร้อย`, "success");
       } else {
         showToast(`สลับเปิดเล่น ตอนที่ ${episode}`, "success");

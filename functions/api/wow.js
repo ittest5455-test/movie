@@ -68,20 +68,33 @@ export async function onRequest(context) {
     const masterText = await masterRes.text();
     let finalPlaylist = masterText;
 
-    // 3. If master playlist contains multiple streams, resolve the highest resolution variant
+    // 3. If master playlist contains multiple streams, resolve the highest resolution variant (1080p)
     if (masterText.includes("#EXT-X-STREAM-INF:")) {
       const lines = masterText.trim().split("\n");
-      let variantUrl = "";
-      for (let i = lines.length - 1; i >= 0; i--) {
-        const line = lines[i].trim();
-        if (line.startsWith("http://") || line.startsWith("https://")) {
-          variantUrl = line;
-          break;
+      const streams = [];
+      for (let i = 0; i < lines.length; i++) {
+        if (lines[i].includes("#EXT-X-STREAM-INF:")) {
+          const inf = lines[i];
+          const nextUrl = (lines[i + 1] || "").trim();
+          if (nextUrl.startsWith("http://") || nextUrl.startsWith("https://")) {
+            streams.push({ inf, url: nextUrl });
+          }
         }
       }
 
-      if (variantUrl) {
-        const variantRes = await fetch(variantUrl, {
+      let chosenUrl = "";
+      const requestedQuality = url.searchParams.get("quality");
+      if (requestedQuality) {
+        const match = streams.find(s => s.inf.includes(requestedQuality) || s.url.includes(requestedQuality));
+        if (match) chosenUrl = match.url;
+      }
+      if (!chosenUrl && streams.length > 0) {
+        // Pick top stream (1080p in getplay-cdn)
+        chosenUrl = streams[0].url;
+      }
+
+      if (chosenUrl) {
+        const variantRes = await fetch(chosenUrl, {
           headers: {
             "User-Agent": userAgent,
             "Referer": `${API_BASE}/embed/${id}`
