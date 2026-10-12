@@ -2011,6 +2011,7 @@ function initMovieStreamApp() {
         setAuthMode(false);
       }
       if (authModal) authModal.classList.add("active");
+      document.body.classList.add("auth-modal-is-active");
       document.body.style.overflow = "hidden";
       setTimeout(() => {
         if (authPhone && !savedUser) authPhone.focus();
@@ -2019,6 +2020,7 @@ function initMovieStreamApp() {
 
     function closeAuthModal() {
       if (authModal) authModal.classList.remove("active");
+      document.body.classList.remove("auth-modal-is-active");
       document.body.style.overflow = "";
       pendingPlayMovie = null;
     }
@@ -2587,14 +2589,20 @@ function initMovieStreamApp() {
       tvFullscreenBtn.addEventListener("touchend", onFsButtonClick);
     }
 
-    // BrowseHere TV Native Player Direct Launch Button
+    // BrowseHere TV / Mobile Direct Player Launch Button
     const browseHereDirectBtn = document.getElementById("browseHereDirectBtn");
     if (browseHereDirectBtn) {
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      if (isMobile) {
+        const span = browseHereDirectBtn.querySelector("span");
+        if (span) span.textContent = "🔗 เล่นเต็มจอ (แท็บใหม่)";
+        browseHereDirectBtn.title = "เปิดเล่นวิดีโอในแท็บใหม่เพื่อรับชมแบบเต็มจอ";
+      }
       browseHereDirectBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        const activeUrl = (iframeVideoPlayer && iframeVideoPlayer.src) ? iframeVideoPlayer.src : (currentActiveMovie ? currentActiveMovie.videoUrl : null);
+        const activeUrl = (iframeVideoPlayer && iframeVideoPlayer.src && iframeVideoPlayer.src !== "about:blank") ? iframeVideoPlayer.src : (currentActiveMovie ? currentActiveMovie.videoUrl : null);
         if (activeUrl) {
-          showToast("📺 กำลังส่งสตรีมไปยังตัวเล่นทีวี BrowseHere...", "success", 3000);
+          showToast(isMobile ? "📺 กำลังเปิดเล่นในแท็บใหม่..." : "📺 กำลังส่งสตรีมไปยังตัวเล่นทีวี BrowseHere...", "success", 3000);
           window.open(activeUrl, "_blank");
         } else {
           showToast("กำลังเริ่มเล่นภาพยนตร์ กรุณารอสักครู่", "info");

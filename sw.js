@@ -1,4 +1,4 @@
-const CACHE_NAME = 'moviestream-pwa-v5';
+const CACHE_NAME = 'moviestream-pwa-v6';
 const STATIC_ASSETS = [
   './',
   './index.html',
@@ -41,9 +41,10 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
 
-  // Skip video streams, m3u8, iframes, third-party CDNs
+  // Skip all cross-origin requests (video streams, iframes, third-party CDNs)
   if (
     event.request.method !== 'GET' ||
+    url.origin !== self.location.origin ||
     url.pathname.endsWith('.m3u8') ||
     url.pathname.endsWith('.ts') ||
     url.pathname.endsWith('.apk') ||

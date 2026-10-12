@@ -29,8 +29,8 @@
   --border-radius-lg: 22px;
   
   --z-index-nav: 100;
-  --z-index-modal: 1000;
-  --z-index-toast: 2000;
+  --z-index-modal: 100000;
+  --z-index-toast: 200000;
 }
 
 /* Base Styles & Reset */
@@ -2586,6 +2586,15 @@ html.is-tv-device body {
 body.player-is-active #headerNav,
 body.player-is-active .main-content,
 body.player-is-active footer {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+body.player-is-active .mobile-bottom-nav,
+body.player-is-active .floating-install-bar,
+body.auth-modal-is-active .mobile-bottom-nav,
+body.auth-modal-is-active .floating-install-bar {
+  display: none !important;
   visibility: hidden !important;
   pointer-events: none !important;
 }
