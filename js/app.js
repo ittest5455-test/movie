@@ -1221,7 +1221,7 @@ function initMovieStreamApp() {
     iframeVideoPlayer.setAttribute("webkitallowfullscreen", "true");
     iframeVideoPlayer.setAttribute("mozallowfullscreen", "true");
     iframeVideoPlayer.allowFullscreen = true;
-    iframeVideoPlayer.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+    iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
     iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline; accelerometer; gyroscope; fullscreen; autoplay; encrypted-media");
     iframeVideoPlayer.setAttribute("playsinline", "true");
     iframeVideoPlayer.setAttribute("webkit-playsinline", "true");
