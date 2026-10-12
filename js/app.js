@@ -1075,13 +1075,17 @@ function initMovieStreamApp() {
       return;
     } 
 
-    // 1.5. WOW-DRAMA (getplay-cdn) Native HLS Proxy Stream
+    // 1.5. WOW-DRAMA (getplay-cdn)
     if (initialVideoUrl && initialVideoUrl.includes("getplay-cdn.com")) {
+      const isIOSDevice = /iPhone|iPad|iPod/i.test(navigator.userAgent) || 
+        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
       const md5Match = initialVideoUrl.match(/\/embed\/([a-f0-9]{20,})/i) || initialVideoUrl.match(/[?&]v=([a-f0-9]{20,})/i);
-      if (md5Match && md5Match[1]) {
+      
+      // On iOS (iPhone/iPad), embed through player.html with original JWPlayer UI to bypass 403
+      if (isIOSDevice && md5Match && md5Match[1]) {
+        fallbackToIframe(`/player.html?id=${md5Match[1]}`);
         const epText = (movie.episodes && movie.episodes.length > 1) ? ` (ตอนที่ ${epInt})` : "";
-        showToast(`กำลังเปิดสตรีมภาพยนตร์: ${movie.titleTh}${epText}`, "success");
-        playNativeHls(`/api/wow?id=${md5Match[1]}`, movie.titleTh, initialVideoUrl);
+        showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}${epText}`, "success");
         triggerVideoOverlays(movie, epInt);
         return;
       }
@@ -1262,10 +1266,12 @@ function initMovieStreamApp() {
       currentActiveMovie.currentEpisode = parseInt(episode) || 1;
 
       if (epVideoUrl && epVideoUrl.includes("getplay-cdn.com")) {
+        const isIOSDevice = /iPhone|iPad|iPod/i.test(navigator.userAgent) || 
+          (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
         const md5Match = epVideoUrl.match(/\/embed\/([a-f0-9]{20,})/i) || epVideoUrl.match(/[?&]v=([a-f0-9]{20,})/i);
-        if (md5Match && md5Match[1]) {
+        if (isIOSDevice && md5Match && md5Match[1]) {
+          fallbackToIframe(`/player.html?id=${md5Match[1]}`);
           showToast(`▶ เริ่มเล่น ตอนที่ ${episode} แล้ว`, "success");
-          playNativeHls(`/api/wow?id=${md5Match[1]}`, currentActiveMovie.titleTh, epVideoUrl);
           return;
         }
       }
@@ -1299,10 +1305,12 @@ function initMovieStreamApp() {
           currentActiveMovie.currentEpisode = parseInt(episode) || 1;
         }
         if (epSrc.includes("getplay-cdn.com")) {
+          const isIOSDevice = /iPhone|iPad|iPod/i.test(navigator.userAgent) || 
+            (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
           const md5Match = epSrc.match(/\/embed\/([a-f0-9]{20,})/i) || epSrc.match(/[?&]v=([a-f0-9]{20,})/i);
-          if (md5Match && md5Match[1]) {
+          if (isIOSDevice && md5Match && md5Match[1]) {
             showToast(`เปิดเล่น ตอนที่ ${episode} เรียบร้อย`, "success");
-            playNativeHls(`/api/wow?id=${md5Match[1]}`, currentActiveMovie ? currentActiveMovie.titleTh : "Video", epSrc);
+            fallbackToIframe(`/player.html?id=${md5Match[1]}`);
             return;
           }
         }
