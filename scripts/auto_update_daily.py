@@ -18,13 +18,9 @@ print(f"🎬 เริ่มต้นการอัปเดตหนังใ�
 print("==================================================")
 
 try:
-    # 1. Fetch new movies
+    # 1. Fetch & update movies
     print("\n[Step 1/3] กำลังสแกนดึงหนังและซีรีส์ใหม่ล่าสุด...")
-    subprocess.run([sys.executable, "scripts/manual_fetch_new_movies.py"], check=True)
-    
-    # 2. Clean UTF-8
-    print("\n[Step 2/3] กำลังตรวจสอบความถูกต้องและคลีนไฟล์...")
-    subprocess.run([sys.executable, "scripts/clean_utf8_movies.py"], check=True)
+    subprocess.run([sys.executable, "update_movies.py"], check=True)
     
     # 2.5 Sitemap
     print("\n[Step 2.5] กำลังอัปเดต sitemap.xml...")
