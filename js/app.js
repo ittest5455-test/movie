@@ -655,12 +655,13 @@ function initMovieStreamApp() {
 
     renderContinueWatchingShelf();
 
-    const sortedAll = [...movieList].sort((a, b) => {
-      const yearA = parseInt(a.year) || 0;
-      const yearB = parseInt(b.year) || 0;
-      return yearB - yearA;
-    });
-    showGridView("⚡ ภาพยนตร์ & ซีรีส์อัปเดตล่าสุด", sortedAll);
+    // คัดกรองเฉพาะเรื่องที่มาใหม่ล่าสุด (ปี 2026 จำนวน 24 เรื่องล่าสุด) เพื่อไม่ให้เยอะเกินไปตามคำขอ
+    const latestNewMovies = movieList.filter(m => {
+      const y = parseInt(m.year) || 0;
+      return y >= 2026 && !m.titleTh.includes("(201") && !m.titleTh.includes("(2020");
+    }).slice(0, 24);
+
+    showGridView(`⚡ ภาพยนตร์ & ซีรีส์อัปเดตมาใหม่ (${latestNewMovies.length} เรื่อง)`, latestNewMovies);
   }
 
   // --- High Performance Progressive Grid Rendering (Low-Spec & TV Optimized) ---
@@ -680,7 +681,7 @@ function initMovieStreamApp() {
       // แนะนำหนังให้ขึ้นเฉพาะเมื่อเลือกหมวด "⚡ อัปเดตล่าสุด" เท่านั้น
       const activeTag = document.querySelector(".genre-tag.active");
       const isTodayActive = activeTag ? activeTag.getAttribute("data-genre") === "today" : false;
-      if (isTodayActive || title.includes("อัปเดต") || title.includes("today")) {
+      if (isTodayActive || title.includes("อัปเดต") || title.includes("today") || title.includes("มาใหม่")) {
         heroSection.style.display = "flex";
       } else {
         heroSection.style.display = "none";
@@ -729,6 +730,26 @@ function initMovieStreamApp() {
 
     if (currentRenderedCount >= currentGridMovies.length) {
       removeInfiniteScrollTrigger();
+      const activeTag = document.querySelector('.genre-tag.active');
+      if (activeTag && activeTag.getAttribute("data-genre") === "today") {
+        const moreBox = document.createElement("div");
+        moreBox.style.cssText = "grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; gap: 0.8rem;";
+        moreBox.innerHTML = `
+          <p style="color: #94a3b8; font-size: 0.95rem; margin: 0;">⚡ แสดงภาพยนตร์และซีรีส์มาใหม่ล่าสุดเรียบร้อยแล้ว</p>
+          <button id="viewAllFromHomeBtn" class="btn" style="padding: 0.75rem 2rem; border-radius: 25px; background: rgba(56, 189, 248, 0.15); border: 1px solid #38bdf8; color: #38bdf8; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; transition: 0.2s;">
+            <span>🎬 ดูภาพยนตร์และซีรีส์ทั้งหมด (${movieList.length} เรื่อง)</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        `;
+        gridMoviesList.appendChild(moreBox);
+        const btn = document.getElementById("viewAllFromHomeBtn");
+        if (btn) {
+          btn.addEventListener("click", () => {
+            const allBtn = document.querySelector('.genre-tag[data-genre="all"]');
+            if (allBtn) allBtn.click();
+          });
+        }
+      }
     }
   }
 
