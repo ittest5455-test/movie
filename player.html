@@ -47,7 +47,8 @@
       const id = urlParams.get('id') || urlParams.get('v');
       if (!id) return;
 
-      const streamUrl = '/api/wow?id=' + encodeURIComponent(id);
+      const src = urlParams.get('src') || '';
+      const streamUrl = '/api/wow?id=' + encodeURIComponent(id) + (src ? '&src=' + encodeURIComponent(src) : '');
       const color = '#e50914';
 
       function initJW() {

@@ -24,10 +24,15 @@ export async function onRequest(context) {
   }
 
   const userAgent = context.request.headers.get("User-Agent") || "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15";
-  const API_BASE = "https://getplay-cdn.com";
+  
+  // Support both WOW-DRAMA (getplay-cdn) and GOSERIES4K (torbo007)
+  const src = (url.searchParams.get("src") || "").toLowerCase();
+  const isGOSeries = src === "torbo007" || src === "goseries" || src === "goseries4k" || (targetUrl && targetUrl.includes("torbo007"));
+  const API_BASE = isGOSeries ? "https://torbo007.com" : "https://getplay-cdn.com";
+  const parentHost = isGOSeries ? "goseries4k.com" : "wow-drama.com";
 
   try {
-    // 1. Request Playback Token from getplay-cdn with parent=wow-drama.com
+    // 1. Request Playback Token from target CDN
     const tokenRes = await fetch(`${API_BASE}/api/tokenplay`, {
       method: "POST",
       headers: {
@@ -36,7 +41,7 @@ export async function onRequest(context) {
         "X-Requested-With": "XMLHttpRequest",
         "Referer": `${API_BASE}/embed/${id}`
       },
-      body: JSON.stringify({ md5: id, parent: "wow-drama.com" })
+      body: JSON.stringify({ md5: id, parent: parentHost })
     });
 
     if (!tokenRes.ok) {
@@ -52,7 +57,7 @@ export async function onRequest(context) {
     }
 
     // 2. Fetch Master m3u8 playlist
-    const masterM3u8Url = `${API_BASE}/api/stream/${tokenData.stream_id}/index.m3u8?token=${encodeURIComponent(tokenData.token)}&expires=${tokenData.expires}&parent=wow-drama.com&sid=${tokenData.session_id}`;
+    const masterM3u8Url = `${API_BASE}/api/stream/${tokenData.stream_id}/index.m3u8?token=${encodeURIComponent(tokenData.token)}&expires=${tokenData.expires}&parent=${encodeURIComponent(parentHost)}&sid=${tokenData.session_id}`;
     
     const masterRes = await fetch(masterM3u8Url, {
       headers: {

@@ -1075,6 +1075,18 @@ function initMovieStreamApp() {
       return;
     } 
 
+    // 1.4. GOSERIES4K (torbo007)
+    if (initialVideoUrl && initialVideoUrl.includes("torbo007.com")) {
+      const md5Match = initialVideoUrl.match(/\/embed\/([a-f0-9]{20,})/i) || initialVideoUrl.match(/[?&]v=([a-f0-9]{20,})/i);
+      if (md5Match && md5Match[1]) {
+        fallbackToIframe(`/player.html?id=${md5Match[1]}&src=torbo007`);
+        const epText = (movie.episodes && movie.episodes.length > 1) ? ` (ตอนที่ ${epInt})` : "";
+        showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}${epText}`, "success");
+        triggerVideoOverlays(movie, epInt);
+        return;
+      }
+    }
+
     // 1.5. WOW-DRAMA (getplay-cdn)
     if (initialVideoUrl && initialVideoUrl.includes("getplay-cdn.com")) {
       const isIOSDevice = /iPhone|iPad|iPod/i.test(navigator.userAgent) || 
@@ -1226,8 +1238,18 @@ function initMovieStreamApp() {
     const isTVBrowser = /browsehere|smarttv|googletv|tizen|webos/i.test(navigator.userAgent);
     const isGOSeries = (typeof currentActiveMovie !== "undefined" && currentActiveMovie && currentActiveMovie.source === "GOSERIES4K");
     
+    // GOSERIES4K / torbo007: Route through player.html with proxy to bypass 403 domain lock
+    if (url && url.includes("torbo007.com")) {
+      const md5Match = url.match(/\/embed\/([a-f0-9]{20,})/i) || url.match(/[?&]v=([a-f0-9]{20,})/i);
+      if (md5Match && md5Match[1]) {
+        url = `/player.html?id=${md5Match[1]}&src=torbo007`;
+      }
+    }
+
     // BrowseHere / Smart TV video sniffer needs direct iframe permissions without sandbox lock
-    if (!isMobileDevice && isGOSeries && !isTVBrowser) {
+    if (url && url.startsWith("/player.html")) {
+      iframeVideoPlayer.removeAttribute("sandbox");
+    } else if (!isMobileDevice && isGOSeries && !isTVBrowser) {
       iframeVideoPlayer.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms allow-presentation allow-downloads");
     } else {
       iframeVideoPlayer.removeAttribute("sandbox");

@@ -16,9 +16,12 @@ BRANCH = "main"
 
 FILES = [
     "index.html",
+    "player.html",
     "css/style.css",
     "js/app.js",
     "js/movies.js",
+    "functions/img.js",
+    "functions/api/wow.js",
     "sitemap.xml",
     "robots.txt"
 ]
@@ -32,10 +35,10 @@ def try_git_push():
             return False
             
         # Add files
-        subprocess.run(["git", "add", "js/movies.js", "js/app.js", "css/style.css", "sitemap.xml", "scripts/", "index.html"], check=True)
+        subprocess.run(["git", "add", "js/movies.js", "js/app.js", "css/style.css", "sitemap.xml", "scripts/", "index.html", "player.html", "functions/"], check=True)
         
         status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True).stdout
-        has_relevant_changes = any(f in status for f in ["js/movies.js", "js/app.js", "css/style.css", "sitemap.xml", "scripts/"])
+        has_relevant_changes = any(f in status for f in ["js/movies.js", "js/app.js", "css/style.css", "sitemap.xml", "scripts/", "player.html", "functions/"])
         
         if has_relevant_changes:
             subprocess.run(["git", "commit", "-m", "Auto update movies database & sitemap"], check=True)
