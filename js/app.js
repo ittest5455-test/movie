@@ -1997,7 +1997,15 @@ function initMovieStreamApp() {
       mobNavSeries.addEventListener("click", (e) => {
         e.preventDefault();
         setActiveMobileNav(mobNavSeries);
-        if (navSeries) navSeries.click();
+        if (navSeries) {
+          navSeries.click();
+        } else {
+          document.querySelectorAll(".nav-links a").forEach(a => a.classList.remove("active"));
+          document.querySelectorAll(".genre-tag").forEach(tag => tag.classList.remove("active"));
+          if (heroSection) heroSection.style.display = "none";
+          const seriesMovies = movieList.filter(m => (m.genres && (m.genres.includes("ซีรีส์") || m.genres.includes("ซีรีส์แนะนำใหม่ 2026") || m.genres.includes("ซีรีส์ใหม่ 2026"))) || m.source === "GOSERIES4K" || m.source === "SERIEDAYS" || (m.episodes && m.episodes.length > 1));
+          showGridView(`📺 รวมซีรีส์และละครชุด (${seriesMovies.length} เรื่อง)`, seriesMovies);
+        }
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     }
