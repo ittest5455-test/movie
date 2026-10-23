@@ -730,26 +730,6 @@ function initMovieStreamApp() {
 
     if (currentRenderedCount >= currentGridMovies.length) {
       removeInfiniteScrollTrigger();
-      const activeTag = document.querySelector('.genre-tag.active');
-      if (activeTag && activeTag.getAttribute("data-genre") === "today") {
-        const moreBox = document.createElement("div");
-        moreBox.style.cssText = "grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; gap: 0.8rem;";
-        moreBox.innerHTML = `
-          <p style="color: #94a3b8; font-size: 0.95rem; margin: 0;">⚡ แสดงภาพยนตร์และซีรีส์มาใหม่ล่าสุดเรียบร้อยแล้ว</p>
-          <button id="viewAllFromHomeBtn" class="btn" style="padding: 0.75rem 2rem; border-radius: 25px; background: rgba(56, 189, 248, 0.15); border: 1px solid #38bdf8; color: #38bdf8; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; transition: 0.2s;">
-            <span>🎬 ดูภาพยนตร์และซีรีส์ทั้งหมด (${movieList.length} เรื่อง)</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
-        `;
-        gridMoviesList.appendChild(moreBox);
-        const btn = document.getElementById("viewAllFromHomeBtn");
-        if (btn) {
-          btn.addEventListener("click", () => {
-            const allBtn = document.querySelector('.genre-tag[data-genre="all"]');
-            if (allBtn) allBtn.click();
-          });
-        }
-      }
     }
   }
 
