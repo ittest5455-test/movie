@@ -2102,7 +2102,7 @@ function initMovieStreamApp() {
       if (currentAuthMode === 'register') {
         if (authModalIcon) authModalIcon.textContent = "✨";
         if (authModalTitle) authModalTitle.textContent = "สมัครสมาชิกใหม่";
-        if (authModalDesc) authModalDesc.textContent = "กรอกเบอร์โทรและตั้งรหัสผ่าน เพื่อส่งขออนุมัติใน Google Sheet";
+        if (authModalDesc) authModalDesc.textContent = "กรอกเบอร์โทรและตั้งรหัสผ่าน";
         if (authPasswordLabel) authPasswordLabel.textContent = "🔑 ตั้งรหัสผ่าน (PIN 4-6 หลัก)";
         if (authPassword) {
           authPassword.placeholder = "ตั้งรหัสผ่านสำหรับเข้าใช้งาน";
@@ -2118,7 +2118,7 @@ function initMovieStreamApp() {
       } else if (currentAuthMode === 'forgot') {
         if (authModalIcon) authModalIcon.textContent = "🔐";
         if (authModalTitle) authModalTitle.textContent = "ขอเปลี่ยนรหัสผ่านใหม่";
-        if (authModalDesc) authModalDesc.textContent = "กรอกเบอร์โทรและรหัสผ่านใหม่ เพื่อส่งให้แอดมินอนุมัติใน Google Sheet";
+        if (authModalDesc) authModalDesc.textContent = "กรอกเบอร์โทรและรหัสผ่านใหม่";
         if (authPasswordLabel) authPasswordLabel.textContent = "🔑 ตั้งรหัสผ่านใหม่ (PIN 4-6 หลัก)";
         if (authPassword) {
           authPassword.placeholder = "ระบุรหัสผ่านใหม่ที่ต้องการ";
@@ -2200,7 +2200,7 @@ function initMovieStreamApp() {
       authSubmitBtn.disabled = true;
 
       if (!GOOGLE_SCRIPT_URL) {
-        showToast("❌ ไม่พบการเชื่อมต่อระบบสมาชิก Google Sheet", "error");
+        showToast("❌ ไม่พบการเชื่อมต่อระบบสมาชิก", "error");
         authSubmitBtn.disabled = false;
         return;
       }
@@ -2212,7 +2212,7 @@ function initMovieStreamApp() {
       const dateFormatted = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
       const generatedUserId = `VIP${thaiYear}${pad(now.getMonth() + 1)}${pad(now.getDate())}-${Math.floor(100 + Math.random() * 900)}`;
 
-      // 1. โหมดสมัครสมาชิกใหม่ (Register) - ส่งข้อมูลไปรออนุมัติที่ Google Sheet
+      // 1. โหมดสมัครสมาชิกใหม่ (Register) - ส่งข้อมูลไปรออนุมัติ
       if (currentAuthMode === 'register') {
         authSubmitBtn.textContent = "กำลังส่งข้อมูลสมัคร...";
         try {
@@ -2244,7 +2244,7 @@ function initMovieStreamApp() {
           try { result = JSON.parse(text); } catch(err) { result = { success: true }; }
 
           if (result && result.success !== false) {
-            showToast("✅ สมัครสมาชิกสำเร็จ! ข้อมูลถูกส่งไปที่ Google Sheet แล้ว กรุณารอแอดมินอนุมัติก่อนเข้าสู่ระบบ ⏳", "success");
+            showToast("✅ สมัครสมาชิกสำเร็จ! กรุณารอแอดมินอนุมัติก่อนเข้าสู่ระบบ ⏳", "success");
             if (authPassword) authPassword.value = "";
             setAuthMode('login');
           } else {
@@ -2252,7 +2252,7 @@ function initMovieStreamApp() {
           }
         } catch (err) {
           console.warn("Register fetch error:", err);
-          showToast("⚠️ ไม่สามารถเชื่อมต่อกับ Google Sheet ได้ในขณะนี้ กรุณาลองใหม่อีกครั้ง", "error");
+          showToast("⚠️ ไม่สามารถเชื่อมต่อได้ในขณะนี้ กรุณาลองใหม่อีกครั้ง", "error");
         } finally {
           authSubmitBtn.disabled = false;
           if (currentAuthMode === 'register') {
@@ -2262,7 +2262,7 @@ function initMovieStreamApp() {
         return;
       }
 
-      // 2. โหมดขอเปลี่ยนรหัสผ่านใหม่ (Forgot Password) - ส่งคำขอเปลี่ยนรหัสไปรออนุมัติที่ Google Sheet
+      // 2. โหมดขอเปลี่ยนรหัสผ่านใหม่ (Forgot Password) - ส่งคำขอเปลี่ยนรหัสไปรออนุมัติ
       if (currentAuthMode === 'forgot') {
         authSubmitBtn.textContent = "กำลังส่งคำขอเปลี่ยนรหัส...";
         try {
@@ -2294,7 +2294,7 @@ function initMovieStreamApp() {
           try { result = JSON.parse(text); } catch(err) { result = { success: true }; }
 
           if (result && result.success !== false) {
-            showToast("📩 ส่งคำขอเปลี่ยนรหัสผ่านแล้ว! ข้อมูลถูกส่งไปที่ Google Sheet กรุณารอแอดมินอนุมัติ ⏳", "success");
+            showToast("📩 ส่งคำขอเปลี่ยนรหัสผ่านแล้ว! ข้อมูลถูกส่ง กรุณารอแอดมินอนุมัติ ⏳", "success");
             if (authPassword) authPassword.value = "";
             setAuthMode('login');
           } else {
@@ -2302,7 +2302,7 @@ function initMovieStreamApp() {
           }
         } catch (err) {
           console.warn("Forgot password fetch error:", err);
-          showToast("⚠️ ไม่สามารถเชื่อมต่อกับ Google Sheet ได้ในขณะนี้ กรุณาลองใหม่อีกครั้ง", "error");
+          showToast("⚠️ ไม่สามารถเชื่อมต่อได้ในขณะนี้ กรุณาลองใหม่อีกครั้ง", "error");
         } finally {
           authSubmitBtn.disabled = false;
           if (currentAuthMode === 'forgot') {
@@ -2313,7 +2313,7 @@ function initMovieStreamApp() {
       }
 
       // 3. โหมดเข้าสู่ระบบ (Login) - ตรวจสอบกับ Google Sheet อย่างจริงจัง 100%
-      authSubmitBtn.textContent = "กำลังตรวจสอบกับ Google Sheet...";
+      authSubmitBtn.textContent = "กำลังตรวจสอบ";
       try {
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), 12000);
@@ -2395,12 +2395,12 @@ function initMovieStreamApp() {
           // ล็อกอินไม่สำเร็จ: เบอร์โทร/รหัสผ่านผิด หรือสถานะยังไม่อนุมัติใน Google Sheet
           // ห้ามเข้าสู่ระบบเด็ดขาด!
           if (authPassword) authPassword.value = "";
-          const msg = (result && result.message) ? `${result.message} หรือยังไม่ได้รับการอนุมัติใน Google Sheet` : "เบอร์โทรหรือรหัสผ่านไม่ถูกต้อง หรือยังไม่ได้รับการอนุมัติใน Google Sheet";
+          const msg = (result && result.message) ? `${result.message} หรือยังไม่ได้รับการอนุมัติ` : "เบอร์โทรหรือรหัสผ่านไม่ถูกต้อง หรือยังไม่ได้รับการอนุมัติ";
           showToast(`❌ ${msg}`, "error");
         }
       } catch (err) {
         console.error("Auth fetch error:", err);
-        showToast("⚠️ ไม่สามารถเชื่อมต่อกับ Google Sheet ได้ในขณะนี้ กรุณาตรวจสอบอินเทอร์เน็ตแล้วลองใหม่", "error");
+        showToast("⚠️ ไม่สามารถเชื่อมต่อได้ในขณะนี้ กรุณาตรวจสอบอินเทอร์เน็ตแล้วลองใหม่", "error");
       } finally {
         authSubmitBtn.disabled = false;
         if (currentAuthMode === 'login') {
