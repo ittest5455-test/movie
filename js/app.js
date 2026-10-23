@@ -237,7 +237,8 @@ function initMovieStreamApp() {
 
   // --- Hero Spotlight Carousel System (แบนเนอร์ภาพยนตร์แนะนำชนโรง) ---
   function initHeroSpotlight() {
-    if (!heroSection) return;
+    if (heroSection) heroSection.style.display = "none";
+    return;
 
     const heroBackdrop = document.getElementById("heroBackdrop");
     const heroTag = document.getElementById("heroTag");
@@ -640,7 +641,7 @@ function initMovieStreamApp() {
     if (navSeries) navSeries.classList.remove("active");
     if (navWatchlist) navWatchlist.classList.remove("active");
     if (searchInput) searchInput.value = "";
-    if (heroSection) heroSection.style.display = "flex";
+    if (heroSection) heroSection.style.display = "none";
     
     // Reset active genres tag - ให้ "⚡ อัปเดตล่าสุด" เป็นอันดับแรกและ Active เป็นค่าเริ่มต้น
     document.querySelectorAll(".genre-tag").forEach(tag => {
@@ -3011,7 +3012,7 @@ function initMovieStreamApp() {
           if (tag.getAttribute("data-genre") === "all") tag.classList.add("active");
           else tag.classList.remove("active");
         });
-        if (heroSection) heroSection.style.display = "flex";
+        if (heroSection) heroSection.style.display = "none";
         showGridView("🎬 รวมภาพยนตร์และซีรีส์ทั้งหมด", movieList);
       } else if (genre === "popular") {
         const popMovies = movieList.filter(m => (m.genres && (m.genres.includes("ยอดนิยม") || m.genres.includes("ยอดนิยม 2026"))) || (m.rating && m.rating >= 7.8));
