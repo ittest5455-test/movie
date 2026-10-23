@@ -510,7 +510,7 @@ def update_goseries4k():
                     "sourceType": "embed",
                     "description": desc,
                     "rating": 8.8,
-                    "genres": ["ซีรีส์แนะนำใหม่ 2026", "พากย์ไทย", "GOSERIES4K"],
+                    "genres": ["ซีรีส์แนะนำใหม่ 2026", "พากย์ไทย"],
                     "duration": f"ซีรีส์ {total_eps} ตอนจบ",
                     "trailerUrl": "",
                     "cast": [],
@@ -659,7 +659,7 @@ def update_wow_drama(max_pages=2):
                     total_eps = len(ep_urls)
                     first_video = ep_urls.get("1", "")
                     
-                    genres = ["พากย์ไทย", "WOW-DRAMA"]
+                    genres = ["พากย์ไทย"]
                     if cat_name == "ละครไทย":
                         genres.extend(["ละครไทย", "ละครไทย ย้อนหลัง"])
                     elif "จีน" in cat_name:

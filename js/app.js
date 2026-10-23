@@ -82,6 +82,12 @@ function initMovieStreamApp() {
   // --- State Variables ---
   function getProxyUrl(url) {
     if (!url || url.includes('image.tmdb.org') || url.startsWith('data:')) return url;
+    if (url.startsWith('images/') || url.startsWith('/images/')) {
+      if (window.location.protocol === 'file:') {
+        return url.startsWith('/') ? '.' + url : url;
+      }
+      return url.startsWith('/') ? url : '/' + url;
+    }
     if (window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
       return url;
     }
@@ -2956,21 +2962,33 @@ function initMovieStreamApp() {
       } else if (genre === "year-2024") {
         const y2024Movies = movieList.filter(m => String(m.year) === "2024" || m.titleTh.includes("2024"));
         showGridView(`📅 รวมภาพยนตร์ & ซีรีส์ปี 2024 (${y2024Movies.length} เรื่อง)`, y2024Movies);
-      } else if (genre === "SERIEDAYS") {
-        const sdMovies = movieList.filter(m => m.source === "SERIEDAYS" || (m.genres && (m.genres.includes("ซีรีส์ใหม่ 2026") || m.genres.includes("พากย์ไทย"))));
-        showGridView(`📌 รวมซีรีส์พากย์ไทยยอดนิยม (${sdMovies.length} เรื่อง)`, sdMovies);
-      } else if (genre === "24HDX" || genre === "GOSERIES4K") {
-        const sourceMovies = movieList.filter(m => m.source === genre);
-        showGridView(`📌 รวมภาพยนตร์ & ซีรีส์จาก ${genre} (${sourceMovies.length} เรื่อง)`, sourceMovies);
-      } else if (genre === "ละครไทย") {
+      } else if (genre === "action") {
+        const actionMovies = movieList.filter(m => m.genres && m.genres.some(g => g.includes("แอคชั่น") || g.toLowerCase().includes("action")));
+        showGridView(`💥 รวมภาพยนตร์ & ซีรีส์แอคชั่น (${actionMovies.length} เรื่อง)`, actionMovies);
+      } else if (genre === "scifi") {
+        const scifiMovies = movieList.filter(m => m.genres && m.genres.some(g => g.includes("แฟนตาซี") || g.includes("Sci-Fi") || g.includes("ไซไฟ")));
+        showGridView(`🚀 รวมภาพยนตร์ไซไฟ & แฟนตาซี (${scifiMovies.length} เรื่อง)`, scifiMovies);
+      } else if (genre === "drama" || genre === "ละครไทย") {
         const dramaMovies = movieList.filter(m => (m.genres && (m.genres.includes("ละครไทย") || m.genres.includes("ละครไทย ย้อนหลัง"))) || (m.titleTh && (m.titleTh.includes("ละคร") || m.titleTh.includes("EP"))));
         showGridView(`🎭 รวมดูละครไทย ย้อนหลัง (${dramaMovies.length} เรื่อง)`, dramaMovies);
+      } else if (genre === "korean-series") {
+        const krMovies = movieList.filter(m => (m.genres && m.genres.some(g => g.includes("เกาหลี"))) || (m.titleTh && m.titleTh.includes("เกาหลี")));
+        showGridView(`🥢 รวมซีรีส์เกาหลี ยอดนิยม (${krMovies.length} เรื่อง)`, krMovies);
+      } else if (genre === "chinese-series") {
+        const cnMovies = movieList.filter(m => (m.genres && m.genres.some(g => g.includes("จีน"))) || (m.titleTh && m.titleTh.includes("จีน")));
+        showGridView(`🏮 รวมซีรีส์จีน ยอดนิยม (${cnMovies.length} เรื่อง)`, cnMovies);
+      } else if (genre === "japanese-series") {
+        const jpMovies = movieList.filter(m => (m.genres && m.genres.some(g => g.includes("ญี่ปุ่น"))) || (m.titleTh && m.titleTh.includes("ญี่ปุ่น")));
+        showGridView(`🌸 รวมซีรีส์ญี่ปุ่น ยอดนิยม (${jpMovies.length} เรื่อง)`, jpMovies);
+      } else if (genre === "dramax") {
+        const dMovies = movieList.filter(m => m.genres && m.genres.some(g => g.includes("ดราม่า") || g.toLowerCase().includes("drama")));
+        showGridView(`💖 รวมภาพยนตร์ & ซีรีส์ดราม่า (${dMovies.length} เรื่อง)`, dMovies);
+      } else if (genre === "subthai") {
+        const subMovies = movieList.filter(m => (m.genres && m.genres.some(g => g.includes("ซับไทย"))) || (m.languages && m.languages.some(l => l.includes("ซับ"))) || (m.titleTh && m.titleTh.includes("ซับไทย")));
+        showGridView(`💬 รวมภาพยนตร์ & ซีรีส์ซับไทย (${subMovies.length} เรื่อง)`, subMovies);
       } else if (genre === "พากย์ไทย") {
         const thaiMovies = movieList.filter(m => (m.genres && m.genres.includes("พากย์ไทย")) || (m.languages && m.languages.some(l => l.includes("Thai"))));
         showGridView(`🔊 รวมภาพยนตร์ & ซีรีส์พากย์ไทย (${thaiMovies.length} เรื่อง)`, thaiMovies);
-      } else if (genre === "WOW-DRAMA") {
-        const wowMovies = movieList.filter(m => m.source === "WOW-DRAMA" || (m.genres && m.genres.includes("WOW-DRAMA")));
-        showGridView(`📺 รวมละครไทยและซีรีส์จาก WOW-DRAMA (${wowMovies.length} เรื่อง)`, wowMovies);
       } else {
         const filtered = movieList.filter(m => m.genres && (m.genres.includes(genre) || m.genres.some(g => g.includes(genre))));
         showGridView(`หมวดหมู่ภาพยนตร์: ${genre}`, filtered);
