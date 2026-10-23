@@ -660,7 +660,7 @@ function initMovieStreamApp() {
       const yearB = parseInt(b.year) || 0;
       return yearB - yearA;
     });
-    showGridView("🎬 ภาพยนตร์ทั้งหมด (เรียงตามปีล่าสุด)", sortedAll);
+    showGridView("⚡ ภาพยนตร์ & ซีรีส์อัปเดตล่าสุด", sortedAll);
   }
 
   // --- High Performance Progressive Grid Rendering (Low-Spec & TV Optimized) ---
@@ -677,8 +677,10 @@ function initMovieStreamApp() {
     }
 
     if (heroSection) {
-      // แนะนำหนังให้ขึ้นเฉพาะเมื่อเลือกหมวด "อัปเดตล่าสุด" เท่านั้น
-      if (title.includes("อัปเดต") || title.includes("today")) {
+      // แนะนำหนังให้ขึ้นเฉพาะเมื่อเลือกหมวด "⚡ อัปเดตล่าสุด" เท่านั้น
+      const activeTag = document.querySelector(".genre-tag.active");
+      const isTodayActive = activeTag ? activeTag.getAttribute("data-genre") === "today" : false;
+      if (isTodayActive || title.includes("อัปเดต") || title.includes("today")) {
         heroSection.style.display = "flex";
       } else {
         heroSection.style.display = "none";
@@ -1906,6 +1908,8 @@ function initMovieStreamApp() {
         e.preventDefault();
         document.querySelectorAll(".nav-links a").forEach(a => a.classList.remove("active"));
         navPopular.classList.add("active");
+        document.querySelectorAll(".genre-tag").forEach(tag => tag.classList.remove("active"));
+        if (heroSection) heroSection.style.display = "none";
         const popMovies = movieList.filter(m => (m.genres && (m.genres.includes("ยอดนิยม") || m.genres.includes("ยอดนิยม 2026"))) || (m.rating && parseFloat(m.rating) >= 7.8));
         popMovies.sort((a, b) => {
           const aTop = (a.genres && (a.genres.includes("ยอดนิยม 2026") || a.genres.includes("ยอดนิยม"))) ? 1 : 0;
@@ -1923,6 +1927,8 @@ function initMovieStreamApp() {
         e.preventDefault();
         document.querySelectorAll(".nav-links a").forEach(a => a.classList.remove("active"));
         navThaiDrama.classList.add("active");
+        document.querySelectorAll(".genre-tag").forEach(tag => tag.classList.remove("active"));
+        if (heroSection) heroSection.style.display = "none";
         const dramaMovies = movieList.filter(m => (m.genres && (m.genres.includes("ละครไทย") || m.genres.includes("ละครไทย ย้อนหลัง"))) || (m.titleTh && (m.titleTh.includes("ละคร") || m.titleTh.includes("EP"))));
         showGridView(`🎭 รวมดูละครไทย ย้อนหลัง (${dramaMovies.length} เรื่อง)`, dramaMovies);
       });
@@ -1934,6 +1940,8 @@ function initMovieStreamApp() {
         e.preventDefault();
         document.querySelectorAll(".nav-links a").forEach(a => a.classList.remove("active"));
         navSeries.classList.add("active");
+        document.querySelectorAll(".genre-tag").forEach(tag => tag.classList.remove("active"));
+        if (heroSection) heroSection.style.display = "none";
         const seriesMovies = movieList.filter(m => (m.genres && (m.genres.includes("ซีรีส์") || m.genres.includes("ซีรีส์แนะนำใหม่ 2026") || m.genres.includes("ซีรีส์ใหม่ 2026"))) || m.source === "GOSERIES4K" || m.source === "SERIEDAYS" || (m.episodes && m.episodes.length > 1));
         showGridView(`📺 รวมซีรีส์และละครชุด (${seriesMovies.length} เรื่อง)`, seriesMovies);
       });
