@@ -642,9 +642,10 @@ function initMovieStreamApp() {
     if (searchInput) searchInput.value = "";
     if (heroSection) heroSection.style.display = "flex";
     
-    // Reset active genres tag
+    // Reset active genres tag - ให้ "⚡ อัปเดตล่าสุด" เป็นอันดับแรกและ Active เป็นค่าเริ่มต้น
     document.querySelectorAll(".genre-tag").forEach(tag => {
-      if (tag.getAttribute("data-genre") === "all") {
+      const g = tag.getAttribute("data-genre");
+      if (g === "today") {
         tag.classList.add("active");
       } else {
         tag.classList.remove("active");
@@ -3002,8 +3003,16 @@ function initMovieStreamApp() {
       setTimeout(updateGenreScrollNav, 320);
 
       const genre = btn.getAttribute("data-genre");
-      if (genre === "all") {
+      if (genre === "today") {
+        // เมื่อกด "⚡ อัปเดตล่าสุด" ให้แสดงหน้าแรกพร้อม Hero Spotlight Banner เหมือนหน้าแรก
         showHomeView();
+      } else if (genre === "all") {
+        document.querySelectorAll(".genre-tag").forEach(tag => {
+          if (tag.getAttribute("data-genre") === "all") tag.classList.add("active");
+          else tag.classList.remove("active");
+        });
+        if (heroSection) heroSection.style.display = "flex";
+        showGridView("🎬 รวมภาพยนตร์และซีรีส์ทั้งหมด", movieList);
       } else if (genre === "popular") {
         const popMovies = movieList.filter(m => (m.genres && (m.genres.includes("ยอดนิยม") || m.genres.includes("ยอดนิยม 2026"))) || (m.rating && m.rating >= 7.8));
         popMovies.sort((a, b) => {
@@ -3024,9 +3033,6 @@ function initMovieStreamApp() {
         showGridView(`⭐ รวมภาพยนตร์ยอดนิยม 2026 (TOP & HOT) (${popMovies.length} เรื่อง)`, popMovies);
       } else if (genre === "continue-watching") {
         displayContinueWatchingGridView();
-      } else if (genre === "today") {
-        const todayMovies = movieList.slice(0, 48);
-        showGridView(`⚡ รวมภาพยนตร์ & ซีรีส์อัปเดตล่าสุด (${todayMovies.length} เรื่อง)`, todayMovies);
       } else if (genre === "recommended-series") {
         const recMovies = movieList.filter(m => (m.genres && (m.genres.includes("ซีรีส์แนะนำใหม่ 2026") || m.genres.includes("ซีรีส์ใหม่ 2026") || m.genres.includes("ซีรีส์แนะนำ"))) || m.source === "GOSERIES4K" || m.source === "SERIEDAYS");
         showGridView(`🔥 ซีรีส์แนะนำใหม่ 2026 (${recMovies.length} เรื่อง)`, recMovies);
