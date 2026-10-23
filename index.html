@@ -499,7 +499,7 @@
       <button class="modal-close-btn" id="authModalCloseBtn" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; color: #94a3b8; cursor: pointer;">&times;</button>
       
       <div style="text-align: center; margin-bottom: 1.5rem;">
-        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">👑</div>
+        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;" id="authModalIcon">👑</div>
         <h2 style="font-size: 1.4rem; color: #fff; font-weight: bold; margin-bottom: 0.3rem;" id="authModalTitle">เข้าสู่ระบบสมาชิก</h2>
         <p style="font-size: 0.85rem; color: #94a3b8;" id="authModalDesc">บันทึกรายการโปรดและประวัติการดูข้ามอุปกรณ์</p>
       </div>
@@ -513,7 +513,7 @@
 
         <div style="margin-bottom: 1.5rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
-            <label style="font-size: 0.85rem; color: #cbd5e1; margin: 0;">🔑 รหัสผ่าน (PIN 4-6 หลัก)</label>
+            <label style="font-size: 0.85rem; color: #cbd5e1; margin: 0;" id="authPasswordLabel">🔑 รหัสผ่าน (PIN 4-6 หลัก)</label>
             <a href="#" id="forgotPwdBtn" style="font-size: 0.8rem; color: #a855f7; text-decoration: underline;">ลืมรหัสผ่าน?</a>
           </div>
           <input type="password" id="authPassword" placeholder="ตั้งรหัสผ่านเข้าสู่ระบบ" required style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; background: #1e293b; border: 1px solid #334155; color: #fff; font-size: 1rem; outline: none;">
@@ -663,7 +663,7 @@
   <div class="toast-container" id="toastContainer"></div>
 
   <script src="js/movies.js?v=20261012_1350"></script>
-  <script src="js/app.js?v=20261012_1350"></script>
+  <script src="js/app.js?v=20261023_0955"></script>
   <script>
     // Bulletproof direct renderer & counter inline
     (function() {

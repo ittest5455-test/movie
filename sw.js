@@ -1,4 +1,4 @@
-const CACHE_NAME = 'moviestream-pwa-v10';
+const CACHE_NAME = 'moviestream-pwa-v11';
 const STATIC_ASSETS = [
   './',
   './index.html',

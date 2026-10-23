@@ -2028,7 +2028,10 @@ function initMovieStreamApp() {
     const navLogoutTabItem = document.getElementById("navLogoutTabItem");
     const navLogoutTab = document.getElementById("navLogoutTab");
 
-    let isRegisterMode = false;
+    let currentAuthMode = 'login'; // 'login' | 'register' | 'forgot'
+    const authModalIcon = document.getElementById("authModalIcon");
+    const authPasswordLabel = document.getElementById("authPasswordLabel");
+    const forgotPwdBtn = document.getElementById("forgotPwdBtn");
 
     function updateAuthUI() {
       const savedUser = localStorage.getItem("moviestream_user");
@@ -2074,7 +2077,7 @@ function initMovieStreamApp() {
       } else {
         if (authForm) authForm.style.display = "block";
         if (authProfileView) authProfileView.style.display = "none";
-        setAuthMode(false);
+        setAuthMode('login');
       }
       if (authModal) authModal.classList.add("active");
       document.body.classList.add("auth-modal-is-active");
@@ -2091,18 +2094,58 @@ function initMovieStreamApp() {
       pendingPlayMovie = null;
     }
 
-    function setAuthMode(register) {
-      isRegisterMode = register;
-      if (register) {
-        if (authModalTitle) authModalTitle.textContent = "สมัครสมาชิกใหม่ (ฟรี)";
-        if (authModalDesc) authModalDesc.textContent = "สมัครเพียงครั้งเดียว บันทึกรายการโปรดได้ตลอดไป";
-        if (authSubmitBtn) authSubmitBtn.textContent = "ยืนยันสมัครสมาชิก 🚀";
+    function setAuthMode(mode) {
+      if (mode === true) mode = 'register';
+      if (mode === false) mode = 'login';
+      currentAuthMode = mode || 'login';
+
+      if (currentAuthMode === 'register') {
+        if (authModalIcon) authModalIcon.textContent = "✨";
+        if (authModalTitle) authModalTitle.textContent = "สมัครสมาชิกใหม่";
+        if (authModalDesc) authModalDesc.textContent = "กรอกเบอร์โทรและตั้งรหัสผ่าน เพื่อส่งขออนุมัติใน Google Sheet";
+        if (authPasswordLabel) authPasswordLabel.textContent = "🔑 ตั้งรหัสผ่าน (PIN 4-6 หลัก)";
+        if (authPassword) {
+          authPassword.placeholder = "ตั้งรหัสผ่านสำหรับเข้าใช้งาน";
+          authPassword.value = "";
+        }
+        if (forgotPwdBtn) forgotPwdBtn.style.display = "none";
+        if (authSubmitBtn) {
+          authSubmitBtn.textContent = "ยืนยันสมัครสมาชิก 🚀";
+          authSubmitBtn.disabled = false;
+        }
         if (authToggleText) authToggleText.textContent = "มีบัญชีอยู่แล้ว?";
         if (authToggleBtn) authToggleBtn.textContent = "เข้าสู่ระบบที่นี่";
+      } else if (currentAuthMode === 'forgot') {
+        if (authModalIcon) authModalIcon.textContent = "🔐";
+        if (authModalTitle) authModalTitle.textContent = "ขอเปลี่ยนรหัสผ่านใหม่";
+        if (authModalDesc) authModalDesc.textContent = "กรอกเบอร์โทรและรหัสผ่านใหม่ เพื่อส่งให้แอดมินอนุมัติใน Google Sheet";
+        if (authPasswordLabel) authPasswordLabel.textContent = "🔑 ตั้งรหัสผ่านใหม่ (PIN 4-6 หลัก)";
+        if (authPassword) {
+          authPassword.placeholder = "ระบุรหัสผ่านใหม่ที่ต้องการ";
+          authPassword.value = "";
+        }
+        if (forgotPwdBtn) forgotPwdBtn.style.display = "none";
+        if (authSubmitBtn) {
+          authSubmitBtn.textContent = "ส่งคำขอเปลี่ยนรหัสผ่าน 📩";
+          authSubmitBtn.disabled = false;
+        }
+        if (authToggleText) authToggleText.textContent = "จำรหัสผ่านได้แล้ว?";
+        if (authToggleBtn) authToggleBtn.textContent = "กลับไปเข้าสู่ระบบ";
       } else {
+        currentAuthMode = 'login';
+        if (authModalIcon) authModalIcon.textContent = "👑";
         if (authModalTitle) authModalTitle.textContent = "เข้าสู่ระบบสมาชิก";
         if (authModalDesc) authModalDesc.textContent = "บันทึกรายการโปรดและประวัติการดูข้ามอุปกรณ์";
-        if (authSubmitBtn) authSubmitBtn.textContent = "เข้าสู่ระบบ 🎬";
+        if (authPasswordLabel) authPasswordLabel.textContent = "🔑 รหัสผ่าน (PIN 4-6 หลัก)";
+        if (authPassword) {
+          authPassword.placeholder = "รหัสผ่านเข้าสู่ระบบ";
+          authPassword.value = "";
+        }
+        if (forgotPwdBtn) forgotPwdBtn.style.display = "inline";
+        if (authSubmitBtn) {
+          authSubmitBtn.textContent = "เข้าสู่ระบบ 🎬";
+          authSubmitBtn.disabled = false;
+        }
         if (authToggleText) authToggleText.textContent = "ยังไม่มีบัญชีสมาชิก?";
         if (authToggleBtn) authToggleBtn.textContent = "สมัครสมาชิกฟรี";
       }
@@ -2120,202 +2163,205 @@ function initMovieStreamApp() {
     if (authToggleBtn) {
       authToggleBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        setAuthMode(!isRegisterMode);
+        if (currentAuthMode === 'login') {
+          setAuthMode('register');
+        } else {
+          setAuthMode('login');
+        }
       });
     }
 
-    const forgotPwdBtn = document.getElementById("forgotPwdBtn");
     if (forgotPwdBtn) {
       forgotPwdBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        showToast("กรุณาติดต่อแอดมินผ่าน LINE เพื่อรีเซ็ตรหัสผ่าน 💬", "info");
+        setAuthMode('forgot');
       });
     }
 
-      const handleAuthSubmit = async (e) => {
-        if (e) e.preventDefault();
-        const phone = authPhone ? authPhone.value.trim() : "";
-        const password = authPassword ? authPassword.value.trim() : "";
+    const handleAuthSubmit = async (e) => {
+      if (e) e.preventDefault();
+      const phone = authPhone ? authPhone.value.trim().replace(/[-\s]/g, "") : "";
+      const password = authPassword ? authPassword.value.trim() : "";
 
-        if (!phone || phone.length < 9) {
-          showToast("กรุณากรอกเบอร์โทรศัพท์ให้ถูกต้อง", "info");
-          return;
-        }
-        if (!password || password.length < 4) {
-          showToast("รหัสผ่านต้องมีอย่างน้อย 4 หลัก", "info");
-          return;
-        }
+      if (!phone || phone.length < 9 || !/^\d+$/.test(phone)) {
+        showToast("📱 กรุณากรอกเบอร์โทรศัพท์ตัวเลขให้ถูกต้อง (9-10 หลัก)", "error");
+        if (authPhone) authPhone.focus();
+        return;
+      }
+      if (!password || password.length < 4) {
+        showToast("🔑 รหัสผ่านต้องมีอย่างน้อย 4 หลัก", "error");
+        if (authPassword) authPassword.focus();
+        return;
+      }
 
-        authSubmitBtn.disabled = true;
-        authSubmitBtn.textContent = "กำลังดำเนินการ...";
+      authSubmitBtn.disabled = true;
 
-        // ถ้ามี Google Script URL ให้ยิง API
-        if (GOOGLE_SCRIPT_URL) {
-          // ถ้าเป็นโหมด "สมัครสมาชิก" ให้ตอบสนองหน้าเว็บทันที 0.1 วิ (Instant Feedback) แล้วส่งข้อมูลเบื้องหลัง
-          if (isRegisterMode) {
-            showToast("สมัครสมาชิกสำเร็จ! กรุณารอแอดมินอนุมัติ ⏳", "info");
-            closeAuthModal();
-            authSubmitBtn.disabled = false;
-            authSubmitBtn.textContent = "ยืนยันสมัครสมาชิก 🚀";
-            
-            // ส่งข้อมูลขึ้น Google Sheet เบื้องหลังแบบ Asynchronous
-            fetch(GOOGLE_SCRIPT_URL, {
-              method: "POST",
-              headers: { "Content-Type": "text/plain;charset=utf-8" },
-              body: JSON.stringify({
-                action: "register",
-                phone: phone,
-                password: password,
-                watchlist: JSON.stringify(watchlist)
-              })
-            }).catch(e => console.warn("Background register sync:", e));
-            return;
-          }
+      if (!GOOGLE_SCRIPT_URL) {
+        showToast("❌ ไม่พบการเชื่อมต่อระบบสมาชิก Google Sheet", "error");
+        authSubmitBtn.disabled = false;
+        return;
+      }
 
-          // ถ้าเป็นโหมด "เข้าสู่ระบบ" ให้เช็คสิทธิ์แบบมี Timeout ป้องกันค้าง
-          try {
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 2800);
+      // 1. โหมดสมัครสมาชิกใหม่ (Register) - ส่งข้อมูลไปรออนุมัติที่ Google Sheet
+      if (currentAuthMode === 'register') {
+        authSubmitBtn.textContent = "กำลังส่งข้อมูลสมัคร...";
+        try {
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 12000);
 
-            const res = await fetch(GOOGLE_SCRIPT_URL, {
-              method: "POST",
-              headers: { "Content-Type": "text/plain;charset=utf-8" },
-              body: JSON.stringify({
-                action: "login",
-                phone: phone,
-                password: password,
-                watchlist: JSON.stringify(watchlist),
-                history: JSON.stringify(continueWatchingList)
-              }),
-              signal: controller.signal
-            });
-            clearTimeout(timeoutId);
-
-            const text = await res.text();
-            let result;
-            try {
-              result = JSON.parse(text);
-            } catch(e) {
-              result = { success: false };
-            }
-
-            if (result && result.success) {
-              localStorage.setItem("moviestream_user", JSON.stringify(result.user));
-              
-              // โหลดรายการโปรดของสมาชิกจาก Google Sheet มาใช้งานทันที
-              if (result.user && result.user.watchlist) {
-                try {
-                  const cloudFavs = typeof result.user.watchlist === "string" ? JSON.parse(result.user.watchlist) : result.user.watchlist;
-                  if (Array.isArray(cloudFavs)) {
-                    // รวมรายการโปรดเดิมในเครื่องกับบนคลาวด์เข้าด้วยกัน
-                    watchlist = Array.from(new Set([...watchlist, ...cloudFavs]));
-                    updateWatchlistUI();
-                    showHomeView();
-                  }
-                } catch(e) {
-                  console.warn("Error parsing user cloud watchlist:", e);
-                }
-              }
-
-              // โหลดประวัติการดู (Continue Watching) ของสมาชิกจาก Google Sheet มาใช้งานข้ามเครื่อง
-              if (result.user && result.user.history) {
-                try {
-                  const cloudHistory = typeof result.user.history === "string" ? JSON.parse(result.user.history) : result.user.history;
-                  if (Array.isArray(cloudHistory) && cloudHistory.length > 0) {
-                    const key = `moviestream_continue_watching_${result.user.phone}`;
-                    const map = new Map();
-                    // รวมข้อมูลจาก Cloud
-                    cloudHistory.forEach(item => { if (item && item.movieId) map.set(item.movieId, item); });
-                    // ผสานกับข้อมูลในเครื่อง
-                    continueWatchingList.forEach(item => {
-                      if (!map.has(item.movieId) || (item.updatedAt || 0) > (map.get(item.movieId).updatedAt || 0)) {
-                        map.set(item.movieId, item);
-                      }
-                    });
-                    continueWatchingList = Array.from(map.values()).sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0)).slice(0, 20);
-                    localStorage.setItem(key, JSON.stringify(continueWatchingList));
-                    renderContinueWatchingShelf();
-                  }
-                } catch(e) {
-                  console.warn("Error parsing user cloud history:", e);
-                }
-              }
-
-              showToast(result.message || "เข้าสู่ระบบสำเร็จ! 👑", "success");
-              updateAuthUI();
-              closeAuthModal();
-
-              if (pendingPlayMovie && pendingPlayMovie.movie) {
-                const target = pendingPlayMovie;
-                pendingPlayMovie = null;
-                setTimeout(() => {
-                  playMovie(target.movie, target.startEpisode);
-                }, 350);
-              }
-            } else {
-              // หากเบอร์หรือรหัสผ่านยังไม่อยู่ใน Google Sheet หรือรออนุมัติ ให้ Login เข้าใช้งานได้ทันทีแบบ Local VIP
-              const localUser = {
-                userId: "VIP-" + Math.floor(1000 + Math.random() * 9000),
-                phone: phone,
-                status: "VIP Member",
-                watchlist: JSON.stringify(watchlist)
-              };
-              localStorage.setItem("moviestream_user", JSON.stringify(localUser));
-              showToast("เข้าสู่ระบบสมาชิกสำเร็จ! 👑 รับชมได้ทันที", "success");
-              updateAuthUI();
-              closeAuthModal();
-
-              // ส่งเบื้องหลังไปลงทะเบียนใน Sheet เผื่อไว้
-              fetch(GOOGLE_SCRIPT_URL, {
-                method: "POST",
-                headers: { "Content-Type": "text/plain;charset=utf-8" },
-                body: JSON.stringify({
-                  action: "register",
-                  phone: phone,
-                  password: password,
-                  watchlist: JSON.stringify(watchlist)
-                })
-              }).catch(() => {});
-
-              if (pendingPlayMovie && pendingPlayMovie.movie) {
-                const target = pendingPlayMovie;
-                pendingPlayMovie = null;
-                setTimeout(() => {
-                  playMovie(target.movie, target.startEpisode);
-                }, 350);
-              }
-            }
-          } catch (err) {
-            console.error("Auth fetch error:", err);
-            // ถ้าเน็ตหลุดหรือไม่สามารถต่อ Google Apps Script ได้ ให้ล็อกอินออฟไลน์ทันที
-            const offlineUser = {
-              userId: "VIP-" + Math.floor(1000 + Math.random() * 9000),
+          const res = await fetch(GOOGLE_SCRIPT_URL, {
+            method: "POST",
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
+            body: JSON.stringify({
+              action: "register",
               phone: phone,
-              status: "VIP Member",
+              password: password,
+              status: "รออนุมัติ",
+              type: "register",
+              note: "สมัครสมาชิกใหม่ รออนุมัติ",
               watchlist: JSON.stringify(watchlist)
-            };
-            localStorage.setItem("moviestream_user", JSON.stringify(offlineUser));
-            showToast("เข้าสู่ระบบสำเร็จ (โหมดใช้งานตรง) 👑", "success");
-            updateAuthUI();
-            closeAuthModal();
-            if (pendingPlayMovie && pendingPlayMovie.movie) {
-              const target = pendingPlayMovie;
-              pendingPlayMovie = null;
-              setTimeout(() => {
-                playMovie(target.movie, target.startEpisode);
-              }, 350);
+            }),
+            signal: controller.signal
+          });
+          clearTimeout(timeoutId);
+
+          const text = await res.text();
+          let result = {};
+          try { result = JSON.parse(text); } catch(err) { result = { success: true }; }
+
+          if (result && result.success !== false) {
+            showToast("✅ สมัครสมาชิกสำเร็จ! ข้อมูลถูกส่งไปที่ Google Sheet แล้ว กรุณารอแอดมินอนุมัติก่อนเข้าสู่ระบบ ⏳", "success");
+            if (authPassword) authPassword.value = "";
+            setAuthMode('login');
+          } else {
+            showToast((result && result.message) || "❌ ไม่สามารถสมัครสมาชิกได้ กรุณาลองใหม่อีกครั้ง", "error");
+          }
+        } catch (err) {
+          console.warn("Register fetch error:", err);
+          showToast("⚠️ ไม่สามารถเชื่อมต่อกับ Google Sheet ได้ในขณะนี้ กรุณาลองใหม่อีกครั้ง", "error");
+        } finally {
+          authSubmitBtn.disabled = false;
+          if (currentAuthMode === 'register') {
+            authSubmitBtn.textContent = "ยืนยันสมัครสมาชิก 🚀";
+          }
+        }
+        return;
+      }
+
+      // 2. โหมดขอเปลี่ยนรหัสผ่านใหม่ (Forgot Password) - ส่งคำขอเปลี่ยนรหัสไปรออนุมัติที่ Google Sheet
+      if (currentAuthMode === 'forgot') {
+        authSubmitBtn.textContent = "กำลังส่งคำขอเปลี่ยนรหัส...";
+        try {
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 12000);
+
+          const res = await fetch(GOOGLE_SCRIPT_URL, {
+            method: "POST",
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
+            body: JSON.stringify({
+              action: "register",
+              phone: phone,
+              password: password,
+              status: "รออนุมัติ",
+              type: "reset_password",
+              note: "ขอเปลี่ยนรหัสผ่านใหม่ รออนุมัติ"
+            }),
+            signal: controller.signal
+          });
+          clearTimeout(timeoutId);
+
+          const text = await res.text();
+          let result = {};
+          try { result = JSON.parse(text); } catch(err) { result = { success: true }; }
+
+          if (result && result.success !== false) {
+            showToast("📩 ส่งคำขอเปลี่ยนรหัสผ่านแล้ว! ข้อมูลถูกส่งไปที่ Google Sheet กรุณารอแอดมินอนุมัติ ⏳", "success");
+            if (authPassword) authPassword.value = "";
+            setAuthMode('login');
+          } else {
+            showToast((result && result.message) || "❌ ไม่สามารถส่งคำขอได้ กรุณาลองใหม่อีกครั้ง", "error");
+          }
+        } catch (err) {
+          console.warn("Forgot password fetch error:", err);
+          showToast("⚠️ ไม่สามารถเชื่อมต่อกับ Google Sheet ได้ในขณะนี้ กรุณาลองใหม่อีกครั้ง", "error");
+        } finally {
+          authSubmitBtn.disabled = false;
+          if (currentAuthMode === 'forgot') {
+            authSubmitBtn.textContent = "ส่งคำขอเปลี่ยนรหัสผ่าน 📩";
+          }
+        }
+        return;
+      }
+
+      // 3. โหมดเข้าสู่ระบบ (Login) - ตรวจสอบกับ Google Sheet อย่างจริงจัง 100%
+      authSubmitBtn.textContent = "กำลังตรวจสอบกับ Google Sheet...";
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 12000);
+
+        const res = await fetch(GOOGLE_SCRIPT_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify({
+            action: "login",
+            phone: phone,
+            password: password,
+            watchlist: JSON.stringify(watchlist),
+            history: JSON.stringify(continueWatchingList)
+          }),
+          signal: controller.signal
+        });
+        clearTimeout(timeoutId);
+
+        const text = await res.text();
+        let result;
+        try {
+          result = JSON.parse(text);
+        } catch(e) {
+          result = { success: false, message: "การตอบกลับจากเซิร์ฟเวอร์ไม่ถูกต้อง" };
+        }
+
+        if (result && result.success) {
+          // ผ่านการตรวจสอบและสถานะเป็น "อนุมัติ" ใน Google Sheet
+          localStorage.setItem("moviestream_user", JSON.stringify(result.user));
+
+          // Sync watchlist จาก Google Sheet
+          if (result.user && result.user.watchlist) {
+            try {
+              const cloudFavs = typeof result.user.watchlist === "string" ? JSON.parse(result.user.watchlist) : result.user.watchlist;
+              if (Array.isArray(cloudFavs)) {
+                watchlist = Array.from(new Set([...watchlist, ...cloudFavs]));
+                updateWatchlistUI();
+                showHomeView();
+              }
+            } catch(e) {
+              console.warn("Error parsing user cloud watchlist:", e);
             }
           }
-        } else {
-          // โหมดจำลองในเครื่อง (Local Storage Offline Mode)
-          const mockUser = {
-            userId: "VIP-" + Math.floor(1000 + Math.random() * 9000),
-            phone: phone,
-            status: "VIP Member",
-            watchlist: JSON.stringify(watchlist)
-          };
-          localStorage.setItem("moviestream_user", JSON.stringify(mockUser));
-          showToast(isRegisterMode ? "สมัครสมาชิกและเข้าสู่ระบบสำเร็จ! (โหมดทดสอบ)" : "เข้าสู่ระบบสำเร็จ! 👑", "success");
+
+          // Sync history จาก Google Sheet
+          if (result.user && result.user.history) {
+            try {
+              const cloudHistory = typeof result.user.history === "string" ? JSON.parse(result.user.history) : result.user.history;
+              if (Array.isArray(cloudHistory) && cloudHistory.length > 0) {
+                const key = `moviestream_continue_watching_${result.user.phone}`;
+                const map = new Map();
+                cloudHistory.forEach(item => { if (item && item.movieId) map.set(item.movieId, item); });
+                continueWatchingList.forEach(item => {
+                  if (!map.has(item.movieId) || (item.updatedAt || 0) > (map.get(item.movieId).updatedAt || 0)) {
+                    map.set(item.movieId, item);
+                  }
+                });
+                continueWatchingList = Array.from(map.values()).sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0)).slice(0, 20);
+                localStorage.setItem(key, JSON.stringify(continueWatchingList));
+                renderContinueWatchingShelf();
+              }
+            } catch(e) {
+              console.warn("Error parsing user cloud history:", e);
+            }
+          }
+
+          showToast(result.message || "เข้าสู่ระบบสำเร็จ! 👑", "success");
           updateAuthUI();
           closeAuthModal();
 
@@ -2326,16 +2372,28 @@ function initMovieStreamApp() {
               playMovie(target.movie, target.startEpisode);
             }, 350);
           }
+        } else {
+          // ล็อกอินไม่สำเร็จ: เบอร์โทร/รหัสผ่านผิด หรือสถานะยังไม่อนุมัติใน Google Sheet
+          // ห้ามเข้าสู่ระบบเด็ดขาด!
+          if (authPassword) authPassword.value = "";
+          const msg = (result && result.message) ? `${result.message} หรือยังไม่ได้รับการอนุมัติใน Google Sheet` : "เบอร์โทรหรือรหัสผ่านไม่ถูกต้อง หรือยังไม่ได้รับการอนุมัติใน Google Sheet";
+          showToast(`❌ ${msg}`, "error");
         }
-
+      } catch (err) {
+        console.error("Auth fetch error:", err);
+        showToast("⚠️ ไม่สามารถเชื่อมต่อกับ Google Sheet ได้ในขณะนี้ กรุณาตรวจสอบอินเทอร์เน็ตแล้วลองใหม่", "error");
+      } finally {
         authSubmitBtn.disabled = false;
-        setAuthMode(isRegisterMode);
-      };
-
-      authSubmitBtn.addEventListener("click", handleAuthSubmit);
-      if (authForm) {
-        authForm.addEventListener("submit", handleAuthSubmit);
+        if (currentAuthMode === 'login') {
+          authSubmitBtn.textContent = "เข้าสู่ระบบ 🎬";
+        }
       }
+    };
+
+    authSubmitBtn.addEventListener("click", handleAuthSubmit);
+    if (authForm) {
+      authForm.addEventListener("submit", handleAuthSubmit);
+    }
 
     function performLogout() {
       localStorage.removeItem("moviestream_user");
