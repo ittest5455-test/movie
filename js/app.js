@@ -3025,8 +3025,8 @@ function initMovieStreamApp() {
       } else if (genre === "continue-watching") {
         displayContinueWatchingGridView();
       } else if (genre === "today") {
-        const todayMovies = movieList.slice(0, 16);
-        showGridView("🔥 ภาพยนตร์ & ซีรีส์อัปเดตวันนี้", todayMovies);
+        const todayMovies = movieList.slice(0, 48);
+        showGridView(`⚡ รวมภาพยนตร์ & ซีรีส์อัปเดตล่าสุด (${todayMovies.length} เรื่อง)`, todayMovies);
       } else if (genre === "recommended-series") {
         const recMovies = movieList.filter(m => (m.genres && (m.genres.includes("ซีรีส์แนะนำใหม่ 2026") || m.genres.includes("ซีรีส์ใหม่ 2026") || m.genres.includes("ซีรีส์แนะนำ"))) || m.source === "GOSERIES4K" || m.source === "SERIEDAYS");
         showGridView(`🔥 ซีรีส์แนะนำใหม่ 2026 (${recMovies.length} เรื่อง)`, recMovies);
