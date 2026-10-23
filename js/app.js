@@ -2180,7 +2180,10 @@ function initMovieStreamApp() {
 
     const handleAuthSubmit = async (e) => {
       if (e) e.preventDefault();
-      const phone = authPhone ? authPhone.value.trim().replace(/[-\s]/g, "") : "";
+      let phone = authPhone ? authPhone.value.trim().replace(/[-\s]/g, "") : "";
+      if (phone.length === 9 && !phone.startsWith("0")) {
+        phone = "0" + phone;
+      }
       const password = authPassword ? authPassword.value.trim() : "";
 
       if (!phone || phone.length < 9 || !/^\d+$/.test(phone)) {
@@ -2202,6 +2205,13 @@ function initMovieStreamApp() {
         return;
       }
 
+      // สร้าง Metadata อัตโนมัติให้ตรง 8 คอลัมน์ (A-H) ของ Google Sheet
+      const now = new Date();
+      const thaiYear = (now.getFullYear() + 543).toString().slice(-2);
+      const pad = (n) => String(n).padStart(2, '0');
+      const dateFormatted = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+      const generatedUserId = `VIP${thaiYear}${pad(now.getMonth() + 1)}${pad(now.getDate())}-${Math.floor(100 + Math.random() * 900)}`;
+
       // 1. โหมดสมัครสมาชิกใหม่ (Register) - ส่งข้อมูลไปรออนุมัติที่ Google Sheet
       if (currentAuthMode === 'register') {
         authSubmitBtn.textContent = "กำลังส่งข้อมูลสมัคร...";
@@ -2214,12 +2224,16 @@ function initMovieStreamApp() {
             headers: { "Content-Type": "text/plain;charset=utf-8" },
             body: JSON.stringify({
               action: "register",
+              userId: generatedUserId,
               phone: phone,
               password: password,
+              registeredDate: dateFormatted,
               status: "รออนุมัติ",
+              expireDate: "-",
               type: "register",
               note: "สมัครสมาชิกใหม่ รออนุมัติ",
-              watchlist: JSON.stringify(watchlist)
+              watchlist: JSON.stringify(watchlist),
+              history: JSON.stringify(continueWatchingList)
             }),
             signal: controller.signal
           });
@@ -2260,11 +2274,16 @@ function initMovieStreamApp() {
             headers: { "Content-Type": "text/plain;charset=utf-8" },
             body: JSON.stringify({
               action: "register",
+              userId: generatedUserId,
               phone: phone,
               password: password,
+              registeredDate: dateFormatted,
               status: "รออนุมัติ",
+              expireDate: "-",
               type: "reset_password",
-              note: "ขอเปลี่ยนรหัสผ่านใหม่ รออนุมัติ"
+              note: "ขอเปลี่ยนรหัสผ่านใหม่ รออนุมัติ",
+              watchlist: JSON.stringify(watchlist),
+              history: JSON.stringify(continueWatchingList)
             }),
             signal: controller.signal
           });
