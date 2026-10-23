@@ -237,8 +237,7 @@ function initMovieStreamApp() {
 
   // --- Hero Spotlight Carousel System (แบนเนอร์ภาพยนตร์แนะนำชนโรง) ---
   function initHeroSpotlight() {
-    if (heroSection) heroSection.style.display = "none";
-    return;
+    if (!heroSection) return;
 
     const heroBackdrop = document.getElementById("heroBackdrop");
     const heroTag = document.getElementById("heroTag");
@@ -641,7 +640,8 @@ function initMovieStreamApp() {
     if (navSeries) navSeries.classList.remove("active");
     if (navWatchlist) navWatchlist.classList.remove("active");
     if (searchInput) searchInput.value = "";
-    if (heroSection) heroSection.style.display = "none";
+    // แสดงแบนเนอร์แนะนำหนังเมื่ออยู่ในหมวด "⚡ อัปเดตล่าสุด"
+    if (heroSection) heroSection.style.display = "flex";
     
     // Reset active genres tag - ให้ "⚡ อัปเดตล่าสุด" เป็นอันดับแรกและ Active เป็นค่าเริ่มต้น
     document.querySelectorAll(".genre-tag").forEach(tag => {
@@ -677,13 +677,13 @@ function initMovieStreamApp() {
     }
 
     if (heroSection) {
-      if (title.includes("ทั้งหมด")) {
+      // แนะนำหนังให้ขึ้นเฉพาะเมื่อเลือกหมวด "อัปเดตล่าสุด" เท่านั้น
+      if (title.includes("อัปเดต") || title.includes("today")) {
         heroSection.style.display = "flex";
       } else {
         heroSection.style.display = "none";
       }
     }
-
     gridView.style.display = "block";
     gridTitle.textContent = title;
     
