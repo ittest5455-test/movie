@@ -2072,8 +2072,8 @@ function initMovieStreamApp() {
           const shortPhone = user.phone ? user.phone.substring(0, 3) + '***' : 'VIP';
           const statusText = user.status || 'อนุมัติ';
           if (navAuthBtn) {
-            navAuthBtn.innerHTML = `👑 ${shortPhone} (${statusText})`;
-            navAuthBtn.title = "คลิกเพื่อดูข้อมูลสมาชิก";
+            navAuthBtn.innerHTML = `👑 <span class="nav-auth-user-text">${shortPhone} (${statusText})</span>`;
+            navAuthBtn.title = `ข้อมูลสมาชิก (${user.phone || 'VIP'})`;
           }
           if (headerAuthBtn) headerAuthBtn.innerHTML = `👑 VIP`;
           if (navHeaderLogoutBtn) navHeaderLogoutBtn.style.display = "inline-flex";
@@ -2081,7 +2081,7 @@ function initMovieStreamApp() {
         } catch (e) {}
       } else {
         if (navAuthBtn) {
-          navAuthBtn.innerHTML = `👑 <span class="vip-btn-text">เข้าสู่ระบบ</span>`;
+          navAuthBtn.innerHTML = `👑 <span class="nav-auth-user-text vip-btn-text">เข้าสู่ระบบ</span>`;
           navAuthBtn.title = "เข้าสู่ระบบสมาชิก VIP";
         }
         if (headerAuthBtn) headerAuthBtn.innerHTML = `👤 สมาชิก`;

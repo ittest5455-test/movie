@@ -2212,31 +2212,50 @@ footer {
     height: 32px;
   }
 
+  /* Mobile Compact Auth & Logout Icons (ย่อเป็นไอคอนเล็กๆ สวยงาม ไม่เบียดแถบค้นหา) */
+  .nav-auth-user-text,
+  .vip-btn-text,
+  .nav-logout-btn-text,
+  .nav-logout-btn span {
+    display: none !important;
+  }
+
   .nav-vip-btn {
-    padding: 4px 9px;
-    font-size: 0.74rem;
-    height: 32px;
-    border-radius: 16px;
-    white-space: nowrap;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    flex-shrink: 0;
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    max-width: 34px !important;
+    padding: 0 !important;
+    font-size: 1.1rem !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.45) !important;
+    line-height: 1 !important;
   }
 
   .nav-logout-btn {
-    padding: 4px 8px;
-    font-size: 0.74rem;
-    height: 32px;
-    border-radius: 16px;
-    white-space: nowrap;
-    display: inline-flex;
-    align-items: center;
-    gap: 3px;
-    flex-shrink: 0;
-    background: rgba(239, 68, 68, 0.16);
-    border: 1px solid rgba(239, 68, 68, 0.35);
-    color: #fca5a5;
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    max-width: 34px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    background: rgba(239, 68, 68, 0.22) !important;
+    border: 1px solid rgba(239, 68, 68, 0.5) !important;
+    color: #fca5a5 !important;
+  }
+
+  .nav-logout-btn svg {
+    margin: 0 !important;
+    width: 15px !important;
+    height: 15px !important;
   }
 
   /* Row 2: Top Category Tabs (Horizontally Scrollable) */
@@ -2385,17 +2404,27 @@ footer {
   }
 
   .nav-vip-btn {
-    padding: 3px 7px;
-    font-size: 0.71rem;
-    height: 30px;
-    border-radius: 15px;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    max-width: 32px !important;
+    padding: 0 !important;
+    font-size: 1rem !important;
+    border-radius: 50% !important;
   }
 
   .nav-logout-btn {
-    padding: 3px 6px;
-    font-size: 0.71rem;
-    height: 30px;
-    border-radius: 15px;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    max-width: 32px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+  }
+
+  .nav-logout-btn svg {
+    width: 14px !important;
+    height: 14px !important;
   }
 
   .nav-links {
