@@ -1,6 +1,33 @@
 // ฐานข้อมูลภาพยนตร์รวม 24-HD และ GOSERIES4K ปี 2026 พากย์ไทย
 window.movies = [
   {
+    "titleTh": "Surviving Hurricane Otis (2026) ฝ่าเฮอร์ริเคนคลั่ง กลางทะเล",
+    "titleEn": "Surviving Hurricane Otis (2026) ฝ่าเฮอร์ริเคนคลั่ง กลางทะเล",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/10/Surviving-Hurricane-Otis-2026-%E0%B8%9D%E0%B9%88%E0%B8%B2%E0%B9%80%E0%B8%AE%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A3%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%99%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%87.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/10/Surviving-Hurricane-Otis-2026-%E0%B8%9D%E0%B9%88%E0%B8%B2%E0%B9%80%E0%B8%AE%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A3%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%99%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%87.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=c62efb90b236e09f6cb7b027&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ Surviving Hurricane Otis (2026) ฝ่าเฮอร์ริเคนคลั่ง กลางทะเล (2026) พากย์ไทย ยอดนิยม เต็มเรื่อง HD",
+    "rating": 8.0,
+    "genres": [
+      "ยอดนิยม 2026",
+      "24-HD",
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/qC0HZLUXRXw",
+    "cast": [],
+    "source": "24-HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "id": "24hdx-41180",
+    "postId": "41180",
+    "originalUrl": "https://www.24-hda.com/surviving-hurricane-otis/"
+  },
+  {
     "titleTh": "Hot Wheels Let's Race Attack of the T-Rex (2026) ซิ่งสุดใจให้ถึงฝัน! ทีเร็กซ์บุก",
     "titleEn": "Hot Wheels Let's Race Attack of the T-Rex (2026) ซิ่งสุดใจให้ถึงฝัน! ทีเร็กซ์บุก",
     "year": 2026,
@@ -399,7 +426,7 @@ window.movies = [
       "ซีรีส์จีน พากย์ไทย",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 30 ตอนจบ",
+    "duration": "ซีรีส์ 32 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -433,7 +460,9 @@ window.movies = [
       "ตอนที่ 27",
       "ตอนที่ 28",
       "ตอนที่ 29",
-      "ตอนที่ 30"
+      "ตอนที่ 30",
+      "ตอนที่ 31",
+      "ตอนที่ 32"
     ],
     "episodeUrls": {
       "1": "https://getplay-cdn.com/embed/ce61f9ac7ff48c36eabfdfa19d290b86",
@@ -451,21 +480,23 @@ window.movies = [
       "13": "https://getplay-cdn.com/embed/0122a043a338d228cfbdc1e6da299a91",
       "14": "https://getplay-cdn.com/embed/741d0979d97e066588731eac779e50f9",
       "15": "https://getplay-cdn.com/embed/7cd1627cdaaed1dc35ddceaf6cd256f4",
-      "16": "https://getplay-cdn.com/embed/e5a1232e0273d7039c4fe2b00ccc4a3a",
-      "17": "https://getplay-cdn.com/embed/3185bfbd2130c2092857bc03a2782a4f",
-      "18": "https://getplay-cdn.com/embed/bd754969b8604447ef257fa17723034e",
-      "19": "https://getplay-cdn.com/embed/80d242ffaad76b891d4f3863741356b6",
-      "20": "https://getplay-cdn.com/embed/93fa0c6100bdc6595a402b2f5f61c76f",
-      "21": "https://getplay-cdn.com/embed/b9ae3e0471a5abbbcebfaefbc076571b",
-      "22": "https://getplay-cdn.com/embed/e75de7ca2550c3fa4c7319fef5ef2b8d",
-      "23": "https://getplay-cdn.com/embed/b196a658858ef66198dc0058a66214e4",
-      "24": "https://getplay-cdn.com/embed/c1822c7f7d8ee9a81136902084a6593d",
-      "25": "https://getplay-cdn.com/embed/8ffffa0d5e259904170dbc820fb6cf1a",
-      "26": "https://getplay-cdn.com/embed/34353c4efaae3ff67411e6dbfde5516a",
-      "27": "https://getplay-cdn.com/embed/9b7d975010392e73dcfa804adb810a61",
-      "28": "https://getplay-cdn.com/embed/424ff0db3c30a4bdd315069645f86994",
-      "29": "https://getplay-cdn.com/embed/0d8c0fc05e14c84c6596679be959ba30",
-      "30": "https://getplay-cdn.com/embed/f2688aa5f24254ca0f60753a70d8d3f5"
+      "16": "https://getplay-cdn.com/embed/cff6e1de7d57932317429999555d1b27",
+      "17": "https://getplay-cdn.com/embed/e5a1232e0273d7039c4fe2b00ccc4a3a",
+      "18": "https://getplay-cdn.com/embed/3185bfbd2130c2092857bc03a2782a4f",
+      "19": "https://getplay-cdn.com/embed/bd754969b8604447ef257fa17723034e",
+      "20": "https://getplay-cdn.com/embed/80d242ffaad76b891d4f3863741356b6",
+      "21": "https://getplay-cdn.com/embed/93fa0c6100bdc6595a402b2f5f61c76f",
+      "22": "https://getplay-cdn.com/embed/b9ae3e0471a5abbbcebfaefbc076571b",
+      "23": "https://getplay-cdn.com/embed/e75de7ca2550c3fa4c7319fef5ef2b8d",
+      "24": "https://getplay-cdn.com/embed/b196a658858ef66198dc0058a66214e4",
+      "25": "https://getplay-cdn.com/embed/c1822c7f7d8ee9a81136902084a6593d",
+      "26": "https://getplay-cdn.com/embed/8ffffa0d5e259904170dbc820fb6cf1a",
+      "27": "https://getplay-cdn.com/embed/34353c4efaae3ff67411e6dbfde5516a",
+      "28": "https://getplay-cdn.com/embed/9b7d975010392e73dcfa804adb810a61",
+      "29": "https://getplay-cdn.com/embed/424ff0db3c30a4bdd315069645f86994",
+      "30": "https://getplay-cdn.com/embed/0d8c0fc05e14c84c6596679be959ba30",
+      "31": "https://getplay-cdn.com/embed/f2688aa5f24254ca0f60753a70d8d3f5",
+      "32": "https://getplay-cdn.com/embed/32d80277735c89cf37cb81c769051a10"
     },
     "languages": [
       "Thai (พากย์ไทย)"
@@ -675,7 +706,7 @@ window.movies = [
       "ซีรีส์จีน พากย์ไทย",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 74 ตอนจบ",
+    "duration": "ซีรีส์ 76 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -753,7 +784,9 @@ window.movies = [
       "ตอนที่ 71",
       "ตอนที่ 72",
       "ตอนที่ 73",
-      "ตอนที่ 74"
+      "ตอนที่ 74",
+      "ตอนที่ 75",
+      "ตอนที่ 76"
     ],
     "episodeUrls": {
       "1": "https://getplay-cdn.com/embed/96dcfb33c4b7ef8d8470d49a39c67e00",
@@ -829,7 +862,9 @@ window.movies = [
       "71": "https://getplay-cdn.com/embed/d17b2cb5837001fdcb1a5b28c0865102",
       "72": "https://getplay-cdn.com/embed/eaf2470b70d756f0787ca70aa16240f0",
       "73": "https://getplay-cdn.com/embed/1dadfef33b640c28c7bacd19448ee7a8",
-      "74": "https://getplay-cdn.com/embed/4681444283c3236ca8fe151b3ca79d6b"
+      "74": "https://getplay-cdn.com/embed/4681444283c3236ca8fe151b3ca79d6b",
+      "75": "https://getplay-cdn.com/embed/e827ee971d7653eac21887af9db5cefc",
+      "76": "https://getplay-cdn.com/embed/bbeb007f707bb91774850d47c571cbf6"
     },
     "languages": [
       "Thai (พากย์ไทย)"
@@ -4811,7 +4846,7 @@ window.movies = [
       "ซีรีส์ญี่ปุ่น พากย์ไทย",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 4 ตอนจบ",
+    "duration": "ซีรีส์ 6 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -4819,13 +4854,17 @@ window.movies = [
       "ตอนที่ 1",
       "ตอนที่ 2",
       "ตอนที่ 3",
-      "ตอนที่ 4"
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6"
     ],
     "episodeUrls": {
       "1": "https://getplay-cdn.com/embed/c7190fd793ee9c1e941ebc20a99fac63",
       "2": "https://getplay-cdn.com/embed/4d594cf2dcb30b469415e71d19466215",
-      "3": "https://getplay-cdn.com/embed/5634fedcbc9e9e99d8a9abd5f3957a91",
-      "4": "https://getplay-cdn.com/embed/fc01ec6c0f3a6a18218d17b41c534d12"
+      "3": "https://getplay-cdn.com/embed/e51e05aa34c7da431c524163cb79f7fa",
+      "4": "https://getplay-cdn.com/embed/5634fedcbc9e9e99d8a9abd5f3957a91",
+      "5": "https://getplay-cdn.com/embed/fc01ec6c0f3a6a18218d17b41c534d12",
+      "6": "https://getplay-cdn.com/embed/b8b01ce5b32571b1c50d6dfed9ee2f1b"
     },
     "languages": [
       "Thai (พากย์ไทย)"
@@ -6444,7 +6483,7 @@ window.movies = [
       "ละครไทย ย้อนหลัง",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 5 ตอนจบ",
+    "duration": "ซีรีส์ 6 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -6453,14 +6492,16 @@ window.movies = [
       "ตอนที่ 2",
       "ตอนที่ 3",
       "ตอนที่ 4",
-      "ตอนที่ 5"
+      "ตอนที่ 5",
+      "ตอนที่ 6"
     ],
     "episodeUrls": {
       "1": "https://getplay-cdn.com/embed/eaaba4098805d3bc7ca81227471f0240",
       "2": "https://getplay-cdn.com/embed/c9b2d17e71cf9bab1615984498543b68",
       "3": "https://getplay-cdn.com/embed/af56fdae0f0abaed587e370f85f9c38e",
       "4": "https://getplay-cdn.com/embed/5724e140e0bdab15d3835885d6e1a30e",
-      "5": "https://getplay-cdn.com/embed/fd6c21d5a7e51a57fd4a8a3a93f513ef"
+      "5": "https://getplay-cdn.com/embed/fd6c21d5a7e51a57fd4a8a3a93f513ef",
+      "6": "https://getplay-cdn.com/embed/612bb5e06cc6857a7150f4bd9551e9a3"
     },
     "languages": [
       "Thai (พากย์ไทย)"
@@ -6526,7 +6567,7 @@ window.movies = [
       "ละครไทย ย้อนหลัง",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 5 ตอนจบ",
+    "duration": "ซีรีส์ 6 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -6535,14 +6576,16 @@ window.movies = [
       "ตอนที่ 2",
       "ตอนที่ 3",
       "ตอนที่ 4",
-      "ตอนที่ 5"
+      "ตอนที่ 5",
+      "ตอนที่ 6"
     ],
     "episodeUrls": {
       "1": "https://getplay-cdn.com/embed/47aeac59bc217f953038431a16ec84f0",
       "2": "https://getplay-cdn.com/embed/32ccd7e12ccf5e95f535ea3ac078133c",
       "3": "https://getplay-cdn.com/embed/4e2edb92fa6e0d6c0836995180845ab2",
       "4": "https://getplay-cdn.com/embed/d766973020b50f3438705bb1f8720ca1",
-      "5": "https://getplay-cdn.com/embed/d1a6e43761defb57f1e8805f1d431fbb"
+      "5": "https://getplay-cdn.com/embed/d1a6e43761defb57f1e8805f1d431fbb",
+      "6": "https://getplay-cdn.com/embed/56a7fabd5257c0b0f7101036a0f48374"
     },
     "languages": [
       "Thai (พากย์ไทย)"
@@ -12105,7 +12148,7 @@ window.movies = [
       "ละครไทย ย้อนหลัง",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 5 ตอนจบ",
+    "duration": "ซีรีส์ 6 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -12114,14 +12157,16 @@ window.movies = [
       "ตอนที่ 2",
       "ตอนที่ 3",
       "ตอนที่ 4",
-      "ตอนที่ 5"
+      "ตอนที่ 5",
+      "ตอนที่ 6"
     ],
     "episodeUrls": {
       "1": "https://getplay-cdn.com/embed/6a7b9500679f86789d0dea3176393e2f",
       "2": "https://getplay-cdn.com/embed/174619e1cdbee0a3f16b476e4e790e59",
       "3": "https://getplay-cdn.com/embed/56cbb46cfd5dfd2dcb5fbd25096328de",
       "4": "https://getplay-cdn.com/embed/8f3f37d7e8e7e64296205b3d7a70c3bb",
-      "5": "https://getplay-cdn.com/embed/c8956cc6af4ff041b7277b4d812d93b6"
+      "5": "https://getplay-cdn.com/embed/c8956cc6af4ff041b7277b4d812d93b6",
+      "6": "https://getplay-cdn.com/embed/d45b77844ae22643c273a573e8235b54"
     },
     "languages": [
       "Thai (พากย์ไทย)"
@@ -16013,7 +16058,7 @@ window.movies = [
       "ละครไทย ย้อนหลัง",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 6 ตอนจบ",
+    "duration": "ซีรีส์ 7 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -16023,7 +16068,8 @@ window.movies = [
       "ตอนที่ 3",
       "ตอนที่ 4",
       "ตอนที่ 5",
-      "ตอนที่ 6"
+      "ตอนที่ 6",
+      "ตอนที่ 7"
     ],
     "episodeUrls": {
       "1": "https://getplay-cdn.com/embed/e821939c591691fd1f45a08a34fb426b",
@@ -16031,7 +16077,8 @@ window.movies = [
       "3": "https://getplay-cdn.com/embed/1927ffb9f94c3536c2d34011cfc276ab",
       "4": "https://getplay-cdn.com/embed/86730fad32281fb3201995202f806cd9",
       "5": "https://getplay-cdn.com/embed/58e7b00cc5b46fb4ee56084107b6216a",
-      "6": "https://getplay-cdn.com/embed/0a37710de4169a00799b1210590282d0"
+      "6": "https://getplay-cdn.com/embed/0a37710de4169a00799b1210590282d0",
+      "7": "https://getplay-cdn.com/embed/dfe5e3a8df7f36ee75bcc9d43c5aaea5"
     },
     "languages": [
       "Thai (พากย์ไทย)"
@@ -16499,7 +16546,7 @@ window.movies = [
       "ละครไทย ย้อนหลัง",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 28 ตอนจบ",
+    "duration": "ซีรีส์ 30 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -16531,7 +16578,9 @@ window.movies = [
       "ตอนที่ 25",
       "ตอนที่ 26",
       "ตอนที่ 27",
-      "ตอนที่ 28"
+      "ตอนที่ 28",
+      "ตอนที่ 29",
+      "ตอนที่ 30"
     ],
     "episodeUrls": {
       "1": "https://getplay-cdn.com/embed/7cda61a8ce5bed1f0ac8ae511b065957",
@@ -16561,7 +16610,9 @@ window.movies = [
       "25": "https://getplay-cdn.com/embed/6a17a8c2505c820c04856d7e13971c66",
       "26": "https://getplay-cdn.com/embed/7c21b2f01408273f1b70fe16b55a0a89",
       "27": "https://getplay-cdn.com/embed/d3e6e8e4c3179ea83424a13952b161a1",
-      "28": "https://getplay-cdn.com/embed/7ee44551c42603313a55bd7d892c2ac8"
+      "28": "https://getplay-cdn.com/embed/7ee44551c42603313a55bd7d892c2ac8",
+      "29": "https://getplay-cdn.com/embed/bea258339034c6692bb65a3c8f027af9",
+      "30": "https://getplay-cdn.com/embed/15667fc90abad05ca8144b533d56746d"
     },
     "languages": [
       "Thai (พากย์ไทย)"
