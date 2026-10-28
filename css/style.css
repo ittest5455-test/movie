@@ -3924,8 +3924,8 @@ html.is-tv-device .movie-card:focus {
 }
 
 
-/* Mobile Hero Modern Web Master Optimization */
-@media (max-width: 600px) {
+/* Mobile Hero Modern Web Master Optimization (Screens <= 768px, iPhone, Android) */
+@media (max-width: 768px) {
   .logo-badge {
     display: inline-block !important;
     font-size: 0.62rem !important;
@@ -3935,43 +3935,105 @@ html.is-tv-device .movie-card:focus {
     vertical-align: middle !important;
   }
 
+  .hero-section {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-end !important;
+    min-height: auto !important;
+    max-height: none !important;
+    padding: 85px 16px 20px 16px !important;
+  }
+
+  .hero-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 0 !important;
+  }
+
+  .hero-badge-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .hero-badge-hot {
+    white-space: nowrap !important;
+    font-size: 0.72rem !important;
+    padding: 3px 10px !important;
+  }
+
+  .hero-title {
+    font-size: 1.45rem !important;
+    line-height: 1.28 !important;
+    margin-bottom: 0.35rem !important;
+    word-break: break-word !important;
+  }
+
+  .hero-title-sub {
+    font-size: 0.88rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 0.4rem !important;
+  }
+
+  .hero-meta {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-size: 0.82rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+
+  .hero-description {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    font-size: 0.84rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0.8rem !important;
+  }
+
   .hero-buttons {
     display: flex !important;
     flex-wrap: wrap !important;
     gap: 8px !important;
     width: 100% !important;
-    margin-top: 1rem !important;
+    margin-top: 0.5rem !important;
   }
-  
+
   .btn-hero-play {
     width: 100% !important;
-    flex: none !important;
-    min-height: 46px !important;
-    font-size: 1rem !important;
-    border-radius: 12px !important;
-    display: flex !important;
+    flex: 1 1 100% !important;
+    min-height: 44px !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    border-radius: 10px !important;
+    display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
   }
 
   .btn-hero-info {
     flex: 1 1 auto !important;
-    width: auto !important;
-    min-height: 44px !important;
-    border-radius: 12px !important;
-    font-size: 0.9rem !important;
-    display: flex !important;
+    min-height: 40px !important;
+    font-size: 0.85rem !important;
+    border-radius: 10px !important;
+    display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
   }
 
   .btn-hero-fav {
-    flex: 0 0 46px !important;
-    width: 46px !important;
-    height: 44px !important;
-    min-height: 44px !important;
-    border-radius: 12px !important;
-    display: flex !important;
+    flex: 0 0 44px !important;
+    width: 44px !important;
+    height: 40px !important;
+    min-height: 40px !important;
+    border-radius: 10px !important;
+    display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     padding: 0 !important;
@@ -3979,11 +4041,12 @@ html.is-tv-device .movie-card:focus {
 
   .hero-slider-nav {
     position: static !important;
-    margin-top: 10px !important;
-    margin-bottom: 4px !important;
+    width: 100% !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    width: 100% !important;
+    margin-top: 14px !important;
+    margin-bottom: 4px !important;
+    gap: 12px !important;
   }
 }
