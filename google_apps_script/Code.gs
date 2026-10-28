@@ -10,7 +10,12 @@
 // การตั้งค่า LINE Messaging API & Security
 // -------------------------------------------------------------
 const LINE_CHANNEL_ACCESS_TOKEN = "ySRHeoP3bVm3bUAOCXut7lzYBos4SqvTI9epuhCA4ANq2wttPBnlbRa8quRXdxc1Kxc++6NFURm7f9pjRrEEX79w1Zanjkkf3EmASHBNRbo/PYP5HkkeeEYCr/IYC4XgOAnvzO8ne89JOkS94pz3zAdB04t89/1O/w1cDnyilFU=";
-const ADMIN_LINE_USER_ID = "U82651d72dba0247279a27ab305152104";
+// รายชื่อ LINE User ID หรือ Group ID ของแอดมินที่มีสิทธิ์รับการแจ้งเตือนและกดอนุมัติ (สามารถใส่ได้หลายคน)
+const ADMIN_LINE_USER_IDS = [
+  "U82651d72dba0247279a27ab305152104" // Ton Nattapong (แอดมินหลัก)
+  // สามารถเพิ่ม ID แอดมินคนที่ 2, 3 ได้ตามต้องการ เช่น: "Uxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+];
+const ADMIN_LINE_USER_ID = ADMIN_LINE_USER_IDS[0];
 const SCRIPT_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbyKnLnnu7iJ3uPSV3tdpLO5HL6pZMGy5qzHSLu8Y4RoQq5MIYj1QVFXgZ3miynuNjPX/exec";
 const SECRET_KEY = "VIP_AUTH_MOVIE_LINE_APPROVAL_2026";
 
@@ -407,7 +412,10 @@ function doPost(e) {
  * -------------------------------------------------------------
  */
 function sendLineApprovalCard(userId, phone, dateFormatted, requestType) {
-  if (!LINE_CHANNEL_ACCESS_TOKEN || !ADMIN_LINE_USER_ID) return;
+  var targetAdmins = (typeof ADMIN_LINE_USER_IDS !== "undefined" && Array.isArray(ADMIN_LINE_USER_IDS) && ADMIN_LINE_USER_IDS.length > 0)
+    ? ADMIN_LINE_USER_IDS 
+    : (ADMIN_LINE_USER_ID ? [ADMIN_LINE_USER_ID] : []);
+  if (!LINE_CHANNEL_ACCESS_TOKEN || targetAdmins.length === 0) return;
 
   var isReset = (requestType === "reset_password");
   var title = isReset ? "🔑 ขอเปลี่ยนรหัสผ่านใหม่" : "🎬 มีสมาชิกใหม่รออนุมัติ";
@@ -417,119 +425,134 @@ function sendLineApprovalCard(userId, phone, dateFormatted, requestType) {
   var approve365Url = SCRIPT_WEBAPP_URL + "?action=approve&userId=" + encodeURIComponent(userId) + "&days=365&token=" + SECRET_KEY;
   var rejectUrl = SCRIPT_WEBAPP_URL + "?action=reject&userId=" + encodeURIComponent(userId) + "&token=" + SECRET_KEY;
 
-  var flexPayload = {
-    "to": ADMIN_LINE_USER_ID,
-    "messages": [
-      {
-        "type": "flex",
-        "altText": (isReset ? "🔑 ขอเปลี่ยนรหัสผ่าน: " : "🎬 สมาชิกใหม่รออนุมัติ: ") + phone,
-        "contents": {
-          "type": "bubble",
-          "header": {
-            "type": "box",
-            "layout": "vertical",
-            "backgroundColor": "#0f172a",
-            "contents": [
-              {
-                "type": "text",
-                "text": title,
-                "weight": "bold",
-                "color": headerColor,
-                "size": "md"
-              }
-            ]
-          },
-          "body": {
-            "type": "box",
-            "layout": "vertical",
-            "spacing": "md",
-            "contents": [
-              {
-                "type": "box",
-                "layout": "horizontal",
-                "contents": [
-                  { "type": "text", "text": "รหัสผู้ใช้", "color": "#94a3b8", "size": "sm", "flex": 3 },
-                  { "type": "text", "text": userId, "weight": "bold", "size": "sm", "color": "#1e293b", "flex": 5 }
-                ]
-              },
-              {
-                "type": "box",
-                "layout": "horizontal",
-                "contents": [
-                  { "type": "text", "text": "เบอร์โทร", "color": "#94a3b8", "size": "sm", "flex": 3 },
-                  { "type": "text", "text": phone, "weight": "bold", "size": "sm", "color": "#2563eb", "flex": 5 }
-                ]
-              },
-              {
-                "type": "box",
-                "layout": "horizontal",
-                "contents": [
-                  { "type": "text", "text": "เวลาที่ส่ง", "color": "#94a3b8", "size": "sm", "flex": 3 },
-                  { "type": "text", "text": dateFormatted, "size": "xs", "color": "#64748b", "flex": 5 }
-                ]
-              },
-              {
-                "type": "box",
-                "layout": "horizontal",
-                "contents": [
-                  { "type": "text", "text": "สถานะ", "color": "#94a3b8", "size": "sm", "flex": 3 },
-                  { "type": "text", "text": "รออนุมัติ ⏳", "weight": "bold", "size": "sm", "color": "#eab308", "flex": 5 }
-                ]
-              }
-            ]
-          },
-          "footer": {
-            "type": "box",
-            "layout": "vertical",
-            "spacing": "sm",
-            "contents": [
-              {
-                "type": "button",
-                "style": "primary",
-                "color": "#16a34a",
-                "height": "sm",
-                "action": {
-                  "type": "uri",
-                  "label": "✅ อนุมัติ 30 วัน",
-                  "uri": approve30Url
-                }
-              },
-              {
-                "type": "button",
-                "style": "primary",
-                "color": "#2563eb",
-                "height": "sm",
-                "action": {
-                  "type": "uri",
-                  "label": "⭐ อนุมัติ 1 ปี (VIP)",
-                  "uri": approve365Url
-                }
-              },
-              {
-                "type": "button",
-                "style": "secondary",
-                "height": "sm",
-                "action": {
-                  "type": "uri",
-                  "label": "❌ ปฏิเสธ / ระงับ",
-                  "uri": rejectUrl
-                }
-              }
-            ]
+  var bubbleContents = {
+    "type": "bubble",
+    "header": {
+      "type": "box",
+      "layout": "vertical",
+      "backgroundColor": "#0f172a",
+      "contents": [
+        {
+          "type": "text",
+          "text": title,
+          "weight": "bold",
+          "color": headerColor,
+          "size": "md"
+        }
+      ]
+    },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "backgroundColor": "#1e293b",
+      "contents": [
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "margin": "sm",
+          "contents": [
+            { "type": "text", "text": "รหัสผู้ใช้", "size": "sm", "color": "#94a3b8", "flex": 3 },
+            { "type": "text", "text": userId, "size": "sm", "color": "#f8fafc", "flex": 5, "weight": "bold" }
+          ]
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "margin": "sm",
+          "contents": [
+            { "type": "text", "text": "เบอร์โทร", "size": "sm", "color": "#94a3b8", "flex": 3 },
+            { "type": "text", "text": phone, "size": "sm", "color": "#38bdf8", "flex": 5, "weight": "bold" }
+          ]
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "margin": "sm",
+          "contents": [
+            { "type": "text", "text": "เวลาที่ส่ง", "size": "sm", "color": "#94a3b8", "flex": 3 },
+            { "type": "text", "text": dateFormatted, "size": "xs", "color": "#cbd5e1", "flex": 5 }
+          ]
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "margin": "sm",
+          "contents": [
+            { "type": "text", "text": "สถานะ", "size": "sm", "color": "#94a3b8", "flex": 3 },
+            { "type": "text", "text": "รออนุมัติ ⏳", "size": "sm", "color": "#eab308", "flex": 5, "weight": "bold" }
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "type": "box",
+      "layout": "vertical",
+      "spacing": "sm",
+      "backgroundColor": "#0f172a",
+      "contents": [
+        {
+          "type": "button",
+          "color": "#16a34a",
+          "style": "primary",
+          "height": "sm",
+          "action": {
+            "type": "uri",
+            "label": "✅ อนุมัติ 30 วัน",
+            "uri": approve30Url
+          }
+        },
+        {
+          "type": "button",
+          "color": "#2563eb",
+          "style": "primary",
+          "height": "sm",
+          "action": {
+            "type": "uri",
+            "label": "⭐ อนุมัติ 1 ปี (VIP)",
+            "uri": approve365Url
+          }
+        },
+        {
+          "type": "button",
+          "color": "#475569",
+          "style": "secondary",
+          "height": "sm",
+          "action": {
+            "type": "uri",
+            "label": "❌ ปฏิเสธ / ระงับ",
+            "uri": rejectUrl
           }
         }
-      }
-    ]
+      ]
+    }
   };
 
-  UrlFetchApp.fetch("https://api.line.me/v2/bot/message/push", {
-    "method": "post",
-    "headers": {
-      "Content-Type": "application/json",
-      "Authorization": "Bearer " + LINE_CHANNEL_ACCESS_TOKEN
-    },
-    "payload": JSON.stringify(flexPayload),
-    "muteHttpExceptions": true
+  targetAdmins.forEach(function(targetId) {
+    if (!targetId) return;
+    var payload = {
+      "to": String(targetId).trim(),
+      "messages": [
+        {
+          "type": "flex",
+          "altText": (isReset ? "🔑 ขอเปลี่ยนรหัสผ่าน: " : "🎬 สมาชิกใหม่รออนุมัติ: ") + phone,
+          "contents": bubbleContents
+        }
+      ]
+    };
+
+    try {
+      UrlFetchApp.fetch("https://api.line.me/v2/bot/message/push", {
+        "method": "post",
+        "headers": {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + LINE_CHANNEL_ACCESS_TOKEN
+        },
+        "payload": JSON.stringify(payload),
+        "muteHttpExceptions": true
+      });
+    } catch (err) {
+      console.error("ส่ง LINE หาแอดมิน " + targetId + " ล้มเหลว: " + err);
+    }
   });
 }
 

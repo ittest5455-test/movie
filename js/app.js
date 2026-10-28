@@ -78,6 +78,8 @@ function initMovieStreamApp() {
 
   // URL Google Apps Script Web App (เชื่อมต่อ Google Sheet สำหรับ Sync รายการโปรดและประวัติข้ามเครื่อง)
   const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyKnLnnu7iJ3uPSV3tdpLO5HL6pZMGy5qzHSLu8Y4RoQq5MIYj1QVFXgZ3miynuNjPX/exec";
+  const LINE_OA_ID = "@720jlmgp";
+  const LINE_OA_URL = "https://line.me/R/ti/p/@720jlmgp";
 
   // --- State Variables ---
   function getProxyUrl(url) {
@@ -2065,6 +2067,43 @@ function initMovieStreamApp() {
     const authModalIcon = document.getElementById("authModalIcon");
     const authPasswordLabel = document.getElementById("authPasswordLabel");
     const forgotPwdBtn = document.getElementById("forgotPwdBtn");
+    const authModalHeader = document.getElementById("authModalHeader");
+    const authPendingView = document.getElementById("authPendingView");
+    const pendingViewIcon = document.getElementById("pendingViewIcon");
+    const pendingViewTitle = document.getElementById("pendingViewTitle");
+    const pendingViewDesc = document.getElementById("pendingViewDesc");
+    const pendingPhoneDisplay = document.getElementById("pendingPhoneDisplay");
+    const pendingStatusDisplay = document.getElementById("pendingStatusDisplay");
+    const pendingLineBtn = document.getElementById("pendingLineBtn");
+    const pendingLineBtnText = document.getElementById("pendingLineBtnText");
+    const pendingBackBtn = document.getElementById("pendingBackBtn");
+
+    function showPendingApprovalView(phone, statusText, titleText, descHtml, lineBtnText) {
+      if (authModalHeader) authModalHeader.style.display = "none";
+      if (authForm) authForm.style.display = "none";
+      if (authProfileView) authProfileView.style.display = "none";
+      if (authPendingView) {
+        authPendingView.style.display = "block";
+        if (pendingViewTitle) pendingViewTitle.textContent = titleText || "ส่งข้อมูลสำเร็จแล้ว!";
+        if (pendingViewDesc) pendingViewDesc.innerHTML = descHtml || "ระบบได้ส่งข้อมูลคำขออนุมัติไปยังแอดมินแล้ว<br>กดปุ่มสีเขียวด้านล่างเพื่อทัก LINE แจ้งเบอร์โทรขอเปิดใช้งานทันที";
+        if (pendingPhoneDisplay) pendingPhoneDisplay.textContent = phone || "-";
+        if (pendingStatusDisplay) pendingStatusDisplay.textContent = statusText || "รออนุมัติเปิดใช้งาน ⏳";
+        if (pendingLineBtn) pendingLineBtn.href = LINE_OA_URL;
+        if (pendingLineBtnText) pendingLineBtnText.textContent = lineBtnText || "💬 ทัก LINE แจ้งแอดมินขออนุมัติ (@720jlmgp)";
+      }
+      if (authModalTitle) authModalTitle.textContent = "สถานะการลงทะเบียน";
+      if (authModalDesc) authModalDesc.textContent = "ติดต่อแอดมินทาง LINE เพื่อขอเปิดใช้งาน";
+      if (authModalIcon) authModalIcon.textContent = "⏳";
+    }
+
+    if (pendingBackBtn) {
+      pendingBackBtn.addEventListener("click", () => {
+        if (authModalHeader) authModalHeader.style.display = "block";
+        if (authPendingView) authPendingView.style.display = "none";
+        if (authForm) authForm.style.display = "block";
+        setAuthMode('login');
+      });
+    }
 
     function updateAuthUI() {
       const savedUser = localStorage.getItem("moviestream_user");
@@ -2098,6 +2137,8 @@ function initMovieStreamApp() {
     updateAuthUI();
 
     function openAuthModal() {
+      if (authModalHeader) authModalHeader.style.display = "block";
+      if (authPendingView) authPendingView.style.display = "none";
       const savedUser = localStorage.getItem("moviestream_user");
       if (savedUser) {
         const user = JSON.parse(savedUser);
@@ -2129,6 +2170,9 @@ function initMovieStreamApp() {
     }
 
     function setAuthMode(mode) {
+      if (authModalHeader) authModalHeader.style.display = "block";
+      if (authPendingView) authPendingView.style.display = "none";
+      if (authForm) authForm.style.display = "block";
       if (mode === true) mode = 'register';
       if (mode === false) mode = 'login';
       currentAuthMode = mode || 'login';
@@ -2197,7 +2241,7 @@ function initMovieStreamApp() {
           authToggleText.textContent = "";
         }
         if (authToggleBtn) {
-          authToggleBtn.textContent = "สมัครสมาชิกฟรี";
+          authToggleBtn.textContent = "สมัครสมาชิก";
           authToggleBtn.style.marginLeft = "";
         }
       }
@@ -2296,9 +2340,15 @@ function initMovieStreamApp() {
           try { result = JSON.parse(text); } catch(err) { result = { success: true }; }
 
           if (result && result.success !== false) {
-            showToast("✅ สมัครสมาชิกสำเร็จ! กรุณารอแอดมินอนุมัติก่อนเข้าสู่ระบบ ⏳", "success");
+            showToast("✅ สมัครสมาชิกสำเร็จ! ข้อมูลถูกส่งไปรออนุมัติแล้ว", "success");
             if (authPassword) authPassword.value = "";
-            setAuthMode('login');
+            showPendingApprovalView(
+              phone,
+              "รออนุมัติเปิดใช้งาน ⏳",
+              "สมัครสมาชิกใหม่เรียบร้อยแล้ว!",
+              "ระบบได้ส่งข้อมูลคำขออนุมัติไปยังแอดมินแล้ว<br>กดปุ่มสีเขียวด้านล่างเพื่อทัก LINE แจ้งเบอร์โทรขออนุมัติได้ทันที",
+              "💬 ทัก LINE แจ้งขออนุมัติ (@720jlmgp)"
+            );
           } else {
             showToast((result && result.message) || "❌ ไม่สามารถสมัครสมาชิกได้ กรุณาลองใหม่อีกครั้ง", "error");
           }
@@ -2346,9 +2396,15 @@ function initMovieStreamApp() {
           try { result = JSON.parse(text); } catch(err) { result = { success: true }; }
 
           if (result && result.success !== false) {
-            showToast("📩 ส่งคำขอเปลี่ยนรหัสผ่านแล้ว! ข้อมูลถูกส่ง กรุณารอแอดมินอนุมัติ ⏳", "success");
+            showToast("📩 ส่งคำขอเปลี่ยนรหัสผ่านแล้ว! ข้อมูลถูกส่งไปรออนุมัติ", "success");
             if (authPassword) authPassword.value = "";
-            setAuthMode('login');
+            showPendingApprovalView(
+              phone,
+              "รออนุมัติรหัสผ่านใหม่ ⏳",
+              "ส่งคำขอเปลี่ยนรหัสผ่านแล้ว!",
+              "ข้อมูลถูกส่งไปยังแอดมินเรียบร้อยแล้ว<br>กดปุ่มสีเขียวด้านล่างเพื่อทัก LINE แจ้งขออนุมัติรหัสใหม่ทันที",
+              "💬 ทัก LINE แจ้งขอรหัสใหม่ (@720jlmgp)"
+            );
           } else {
             showToast((result && result.message) || "❌ ไม่สามารถส่งคำขอได้ กรุณาลองใหม่อีกครั้ง", "error");
           }
@@ -2454,6 +2510,15 @@ function initMovieStreamApp() {
           if (authPassword) authPassword.value = "";
           const msg = (result && result.message) ? `${result.message} หรือยังไม่ได้รับการอนุมัติ` : "เบอร์โทรหรือรหัสผ่านไม่ถูกต้อง หรือยังไม่ได้รับการอนุมัติ";
           showToast(`❌ ${msg}`, "error");
+          if (result && result.message && (result.message.includes("อนุมัติ") || result.message.includes("รอ"))) {
+            showPendingApprovalView(
+              phone,
+              "ยังไม่ได้รับการอนุมัติ ⏳",
+              "บัญชีนี้ยังไม่ได้รับการอนุมัติ",
+              "บัญชีของคุณอยู่ในคิวรอการตรวจสอบและอนุมัติจากแอดมิน<br>สามารถทัก LINE แจ้งแอดมินเพื่อขอเปิดใช้งานได้ทันที",
+              "💬 ทัก LINE แจ้งแอดมินขอเปิดใช้งาน (@720jlmgp)"
+            );
+          }
         }
       } catch (err) {
         console.error("Auth fetch error:", err);
