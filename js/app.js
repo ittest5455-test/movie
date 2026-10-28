@@ -2026,6 +2026,23 @@ function initMovieStreamApp() {
       });
     }
 
+    // --- Guard ทีวีสด & กีฬา: ต้องเข้าสู่ระบบสมาชิก VIP ถึงจะดูได้ ---
+    const navLiveTv = document.getElementById("navLiveTv");
+    const mobNavLiveTv = document.getElementById("mobNavLiveTv");
+    [navLiveTv, mobNavLiveTv].forEach(link => {
+      if (link) {
+        link.addEventListener("click", (e) => {
+          const savedUser = localStorage.getItem("moviestream_user");
+          if (!savedUser) {
+            e.preventDefault();
+            showToast("🔒 กรุณาเข้าสู่ระบบก่อนรับชม ทีวีสด & กีฬา VIP", "info");
+            window.pendingLiveRedirect = true;
+            openAuthModal();
+          }
+        });
+      }
+    });
+
     // --- Member Auth Modal Controller ---
     const authModal = document.getElementById("authModal");
     const navAuthBtn = document.getElementById("navAuthBtn");
@@ -2111,6 +2128,7 @@ function initMovieStreamApp() {
       document.body.classList.remove("auth-modal-is-active");
       document.body.style.overflow = "";
       pendingPlayMovie = null;
+      window.pendingLiveRedirect = false;
     }
 
     function setAuthMode(mode) {
@@ -2408,6 +2426,11 @@ function initMovieStreamApp() {
             pendingPlayMovie = null;
             setTimeout(() => {
               playMovie(target.movie, target.startEpisode);
+            }, 350);
+          } else if (window.pendingLiveRedirect) {
+            window.pendingLiveRedirect = false;
+            setTimeout(() => {
+              window.location.href = "live.html";
             }, 350);
           }
         } else {

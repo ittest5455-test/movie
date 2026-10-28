@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ทีวีสด & กีฬาสดออนไลน์ (Thai Live TV & Sports 2026)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://live-us1.thaimomo.com" crossorigin>
+  <link rel="dns-prefetch" href="https://live-us1.thaimomo.com">
+  <link rel="preconnect" href="https://cdn-edge.iiptvcdn.com" crossorigin>
+  <link rel="preconnect" href="https://live.x2.co.th" crossorigin>
+  <link rel="preconnect" href="https://tv-live.tpchannel.org" crossorigin>
+  <link rel="preconnect" href="https://rbmn-live.akamaized.net" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <style>
+    :root {
+      --bg-dark: #0a1120;
+      --tv-grid-bg: #0284c7;
+      --card-white: #ffffff;
+      --card-shelf: #0369a1;
+      --accent-red: #ef4444;
+      --accent-gold: #f59e0b;
+      --accent-cyan: #06b6d4;
+      --text-main: #f8fafc;
+      --text-sub: #94a3b8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Kanit', -apple-system, sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Top Sticky Header */
+    header {
+      background: rgba(10, 17, 32, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #1e293b;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+      font-size: 1.65rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+      line-height: 1;
+    }
+    .logo-accent {
+      background: linear-gradient(135deg, #a855f7, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.45));
+    }
+    .logo-main {
+      color: #fff;
+    }
+    .logo-badge {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #000;
+      font-size: 0.68rem;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      margin-left: 6px;
+      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+    }
+    .live-badge {
+      background: #dc2626;
+      color: #fff;
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      animation: pulse 1.8s infinite;
+    }
+    .live-dot {
+      width: 7px;
+      height: 7px;
+      background: #fff;
+      border-radius: 50%;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.75; transform: scale(0.96); }
+    }
+    .btn-back {
+      background: #1e293b;
+      color: #cbd5e1;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s;
+      border: 1px solid #334155;
+    }
+    .btn-back:hover {
+      background: #334155;
+      color: #fff;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* ========================================================= */
+    /* 1. Cinema Video Player (ด้านบน) */
+    /* ========================================================= */
+    .player-card {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7);
+    }
+    .player-header {
+      background: #1e293b;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #334155;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .now-playing-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .active-ch-num {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #000;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 3px 12px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+    .active-ch-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .active-ch-tag {
+      font-size: 12px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      background: rgba(59, 130, 246, 0.15);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      font-weight: 500;
+    }
+    .player-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-fs {
+      background: #334155;
+      border: none;
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.2s;
+    }
+    .btn-fs:hover { background: #475569; }
+
+    .video-viewport {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #000;
+    }
+    .loader-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 15, 25, 0.85);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      z-index: 20;
+      transition: opacity 0.3s;
+    }
+    .spinner {
+      width: 46px;
+      height: 46px;
+      border: 4px solid rgba(255, 255, 255, 0.15);
+      border-top-color: var(--accent-gold);
+      border-radius: 50%;
+      animation: spin 0.85s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ========================================================= */
+    /* 2. กล่องผังช่องทีวีดิจิทัล & กีฬาสด (ดีไซน์ตามรูปต้นฉบับ) */
+    /* ========================================================= */
+    .tv-grid-panel {
+      background: linear-gradient(180deg, #0284c7 0%, #0369a1 100%);
+      border-radius: 20px;
+      padding: 24px 20px 28px 20px;
+      box-shadow: 0 16px 32px rgba(2, 132, 199, 0.35);
+      border: 2px solid #38bdf8;
+    }
+    .grid-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .grid-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .filter-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s;
+      backdrop-filter: blur(4px);
+    }
+    .filter-btn:hover {
+      background: rgba(255, 255, 255, 0.35);
+    }
+    .filter-btn.active {
+      background: #fff;
+      color: #0369a1;
+      font-weight: 700;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      border-color: #fff;
+    }
+
+    /* Grid Layout: 7 คอลัมน์ต่อแถวแบบในรูป */
+    .channels-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 1200px) {
+      .channels-grid { grid-template-columns: repeat(5, 1fr); }
+    }
+    @media (max-width: 850px) {
+      .channels-grid { grid-template-columns: repeat(4, 1fr); gap: 10px; }
+      .filter-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        width: 100%;
+        padding-bottom: 2px;
+      }
+      .filter-tabs::-webkit-scrollbar { display: none; }
+      .filter-btn { flex-shrink: 0; white-space: nowrap; }
+    }
+
+    /* Mobile Responsive Optimizations (ไม่มีตัวหนังสือตกบรรทัด) */
+    @media (max-width: 600px) {
+      header {
+        padding: 8px 12px;
+        gap: 8px;
+      }
+      .brand {
+        gap: 6px;
+        min-width: 0;
+      }
+      .logo {
+        font-size: 1.25rem;
+      }
+      .logo-badge {
+        font-size: 0.58rem;
+        padding: 2px 5px;
+        margin-left: 3px;
+      }
+      .live-badge {
+        font-size: 9px;
+        padding: 2px 6px;
+        gap: 4px;
+        margin-left: 2px;
+      }
+      .live-badge-text {
+        display: none; /* บนมือถือแสดงเฉพาะไฟแดงกะพริบ ป้องกันการตกบรรทัด */
+      }
+      .btn-back {
+        padding: 6px 10px;
+        font-size: 12px;
+        border-radius: 6px;
+        flex-shrink: 0;
+      }
+      .btn-back-text {
+        display: none; /* บนมือถือเปลี่ยนเป็นไอคอน 🎬 เพื่อประหยัดพื้นที่ */
+      }
+
+      .container {
+        padding: 10px 8px;
+        gap: 14px;
+      }
+
+      /* Cinema Header บนมือถือ: รวมในบรรทัดเดียว ไม่แตกแถว */
+      .player-header {
+        padding: 8px 10px;
+        flex-wrap: nowrap;
+        gap: 8px;
+      }
+      .now-playing-info {
+        gap: 6px;
+        min-width: 0;
+        flex: 1;
+        overflow: hidden;
+      }
+      .active-ch-num {
+        font-size: 11px;
+        padding: 2px 7px;
+        flex-shrink: 0;
+      }
+      .active-ch-name {
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .active-ch-tag {
+        display: none; /* ซ่อนป้ายแท็กบนมือถือ เพื่อให้ชื่อช่องเด่นและไม่ตกบรรทัด */
+      }
+      .btn-fs {
+        padding: 5px 9px;
+        font-size: 13px;
+        flex-shrink: 0;
+      }
+      .fs-text {
+        display: none; /* บนมือถือแสดงเป็นไอคอน ⛶ แทน */
+      }
+
+      /* ผังปุ่มกรองช่องแบบสไลด์แนวนอน Swipeable Chips */
+      .tv-grid-panel {
+        padding: 14px 10px 18px 10px;
+        border-radius: 16px;
+      }
+      .grid-header {
+        margin-bottom: 12px;
+        gap: 8px;
+      }
+      .grid-title {
+        font-size: 15px;
+      }
+      .filter-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        width: 100%;
+        padding-bottom: 4px;
+      }
+      .filter-tabs::-webkit-scrollbar { display: none; }
+      .filter-btn {
+        flex-shrink: 0;
+        white-space: nowrap;
+        font-size: 12px;
+        padding: 5px 12px;
+      }
+
+      /* ผังช่อง 3 แถว ขนาดกระชับ */
+      .channels-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+      }
+      .ch-card {
+        border-radius: 14px;
+        padding: 8px 6px;
+        box-shadow: 0 4px 0 #025987, 0 6px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      .ch-card.active::before {
+        font-size: 8px;
+        padding: 1px 5px;
+        top: 4px;
+        right: 4px;
+      }
+    }
+
+    /* ========================================================= */
+    /* การ์ดช่องแต่ละอัน (3D Rounded Bubble Card สไตล์รูปต้นฉบับ) */
+    /* ========================================================= */
+    .ch-card {
+      background: var(--card-white);
+      border-radius: 18px;
+      padding: 12px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+      box-shadow: 0 6px 0 #025987, 0 10px 16px rgba(0, 0, 0, 0.35);
+      transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+      user-select: none;
+      aspect-ratio: 1.25 / 1;
+      overflow: hidden;
+      border: 3px solid transparent;
+    }
+    .ch-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 11px 0 #025987, 0 18px 24px rgba(0, 0, 0, 0.45);
+      border-color: #38bdf8;
+    }
+    .ch-card:active {
+      transform: translateY(2px);
+      box-shadow: 0 3px 0 #025987, 0 6px 10px rgba(0, 0, 0, 0.35);
+    }
+
+    /* การ์ดช่องที่กำลังเล่นอยู่ */
+    .ch-card.active {
+      border-color: #facc15;
+      box-shadow: 0 6px 0 #b45309, 0 0 25px rgba(250, 204, 21, 0.85);
+      animation: cardPulse 2s infinite alternate;
+    }
+    @keyframes cardPulse {
+      0% { border-color: #facc15; }
+      100% { border-color: #f97316; }
+    }
+    .ch-card.active::before {
+      content: "🔴 กำลังดู";
+      position: absolute;
+      top: 6px;
+      right: 8px;
+      background: #ef4444;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 9999px;
+      letter-spacing: 0.3px;
+      box-shadow: 0 2px 6px rgba(239, 68, 68, 0.5);
+      z-index: 5;
+    }
+
+    /* โลโก้ตรงกลาง */
+    .ch-logo-wrap {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+    }
+    .ch-logo-wrap img {
+      max-width: 90%;
+      max-height: 82%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
+      transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1);
+    }
+    .ch-card:hover .ch-logo-wrap img {
+      transform: scale(1.08);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="brand">
+      <div class="logo">
+        <span class="logo-accent">Movie</span><span class="logo-main">Stream</span>
+        <span class="logo-badge">VIP HD</span>
+      </div>
+      <div class="live-badge">
+        <div class="live-dot"></div>
+        <span class="live-badge-text">ทีวีสด & กีฬา</span>
+      </div>
+    </a>
+    <a href="index.html" class="btn-back" title="กลับหน้าหลักดูหนัง">
+      <span class="btn-back-icon">🎬</span><span class="btn-back-text"> กลับหน้าหลัก</span>
+    </a>
+  </header>
+
+  <div class="container">
+
+    <!-- 1. Video Player Section -->
+    <div class="player-card" id="playerAnchor">
+      <div class="player-header">
+        <div class="now-playing-info">
+          <span class="active-ch-num" id="currentNum">CH 33</span>
+          <span class="active-ch-name" id="currentName">ช่อง 3 HD</span>
+          <span class="active-ch-tag" id="currentTag">ทีวีดิจิทัลไทย</span>
+        </div>
+        <div class="player-actions">
+          <button class="btn-fs" onclick="toggleFullscreen()" title="ขยายเต็มจอ">
+            <span class="fs-icon">⛶</span><span class="fs-text"> เต็มจอ</span>
+          </button>
+        </div>
+      </div>
+      <div class="video-viewport">
+        <video id="livePlayer" controls playsinline autoplay></video>
+        <div class="loader-overlay" id="playerLoader">
+          <div class="spinner"></div>
+          <div style="font-size:15px; font-weight:500; color:#e2e8f0;" id="loaderMsg">กำลังเชื่อมต่อสัญญาณสด...</div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- 2. ผังช่องทีวีดิจิทัล & กีฬาสด (ดีไซน์ตามรูปเป๊ะๆ) -->
+    <div class="tv-grid-panel">
+      <div class="grid-header">
+        <div class="grid-title">
+          📺 ผังช่องทีวีดิจิทัล & กีฬาสด
+        </div>
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+          <button class="filter-btn" data-filter="intl">🌐 ต่างประเทศ</button>
+          <button class="filter-btn" data-filter="sports">⚽ กีฬาสด</button>
+          <button class="filter-btn" data-filter="popular">🔥 ยอดนิยม</button>
+          <button class="filter-btn" data-filter="digital">📺 ดิจิทัลทีวีไทย</button>
+        </div>
+      </div>
+
+      <!-- Grid Cards -->
+      <div class="channels-grid" id="channelsGrid">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // -------------------------------------------------------------
+    // ข้อมูลช่องทีวีดิจิทัล & กีฬาสด (โลโก้ของแท้ 100% คมชัดระดับ HD โหลดไวจากในเครื่อง)
+    // -------------------------------------------------------------
+    const TV_CHANNELS = [
+      // แถวที่ 1
+      {
+        id: "ch5",
+        number: "1",
+        label: "HD",
+        name: "ช่อง 5 HD (ททบ.5)",
+        category: "digital",
+        url: "https://live-us1.thaimomo.com/live-as/ch5hd-2/playlist.m3u8",
+        logo: "images/tv_logos/ch5.png"
+      },
+      {
+        id: "nbt2",
+        number: "2",
+        label: "HD",
+        name: "สทท. NBT (ช่อง 2)",
+        category: "digital",
+        url: "https://cdn-edge.iiptvcdn.com/live_event/smil:f180-054a-38d7-ce66-f7cf.smil/playlist.m3u8",
+        logo: "images/tv_logos/nbt2.png"
+      },
+      {
+        id: "thaipbs",
+        number: "3",
+        label: "HD",
+        name: "ไทยพีบีเอส (Thai PBS)",
+        category: "digital",
+        url: "https://live-us1.thaimomo.com/live-as/chThaipbshd-2/playlist.m3u8",
+        logo: "images/tv_logos/thaipbs.png"
+      },
+      {
+        id: "altv",
+        number: "4",
+        label: "",
+        name: "ALTV ช่อง 4 ทีวีเรียนสนุก",
+        category: "digital",
+        url: "https://live.x2.co.th/live/13livetv-th.m3u8",
+        logo: "images/tv_logos/altv.png"
+      },
+      {
+        id: "tsports7",
+        number: "7",
+        label: "SPORTS",
+        name: "T Sports 7 (กีฬาสด กกท.)",
+        category: "sports",
+        popular: true,
+        url: "https://live-us1.thaimomo.com/live-as/chtsport-1/playlist.m3u8",
+        logo: "images/tv_logos/tsports7.png"
+      },
+      {
+        id: "tptv",
+        number: "10",
+        label: "",
+        name: "TPTV สถานีโทรทัศน์รัฐสภา",
+        category: "digital",
+        url: "https://tv-live.tpchannel.org/live/tv.m3u8",
+        logo: "images/tv_logos/tptv.png"
+      },
+      {
+        id: "tnn16",
+        number: "16",
+        label: "",
+        name: "TNN 16 สถานีข่าว",
+        category: "digital",
+        url: "https://live-us1.thaimomo.com/live-as/chtnn24-2/playlist.m3u8",
+        logo: "images/tv_logos/tnn16.png"
+      },
+
+      // แถวที่ 2
+      {
+        id: "jkn18",
+        number: "18",
+        label: "",
+        name: "JKN 18 / NEW 18",
+        category: "digital",
+        url: "https://live.x2.co.th/live/13livetv-th.m3u8",
+        logo: "images/tv_logos/jkn18.png"
+      },
+      {
+        id: "nation",
+        number: "22",
+        label: "",
+        name: "เนชั่นทีวี (Nation TV 22)",
+        category: "digital",
+        url: "https://live-us1.thaimomo.com/live-as/chNation-3/playlist.m3u8",
+        logo: "images/tv_logos/nation.png"
+      },
+      {
+        id: "workpoint",
+        number: "23",
+        label: "",
+        name: "เวิร์คพอยท์ 23",
+        category: "digital",
+        popular: true,
+        url: "https://live-us1.thaimomo.com/live-as/chworkpointt-3/playlist.m3u8",
+        logo: "images/tv_logos/workpoint.png"
+      },
+      {
+        id: "true4u",
+        number: "24",
+        label: "SPORTS",
+        name: "True4U (ฟุตบอล & กีฬาสด)",
+        category: "sports",
+        popular: true,
+        url: "https://live-us1.thaimomo.com/live-as/chTrue4u-2/playlist.m3u8",
+        logo: "images/tv_logos/true4u.png"
+      },
+      {
+        id: "gmm25",
+        number: "25",
+        label: "",
+        name: "GMM 25",
+        category: "digital",
+        popular: true,
+        url: "https://live-us1.thaimomo.com/live-as/chgmmchannel-3/playlist.m3u8",
+        logo: "images/tv_logos/gmm25.png"
+      },
+      {
+        id: "ch8",
+        number: "27",
+        label: "",
+        name: "ช่อง 8 (มวยสด & บันเทิง)",
+        category: "digital",
+        url: "https://live-us1.thaimomo.com/live-as/cheight-3/playlist.m3u8",
+        logo: "images/tv_logos/ch8.png"
+      },
+      {
+        id: "mono29",
+        number: "29",
+        label: "",
+        name: "โมโน 29 (MONO 29)",
+        category: "digital",
+        popular: true,
+        url: "https://live-us1.thaimomo.com/live-as/chmono29-1/playlist.m3u8",
+        logo: "images/tv_logos/mono29.png"
+      },
+
+      // แถวที่ 3 (ช่องหลักยอดนิยม)
+      {
+        id: "mcot",
+        number: "30",
+        label: "HD",
+        name: "ช่อง 9 MCOT HD",
+        category: "digital",
+        url: "https://live-us1.thaimomo.com/live-as/chmcothd-3/playlist.m3u8",
+        logo: "images/tv_logos/mcot.png"
+      },
+      {
+        id: "one31",
+        number: "31",
+        label: "HD",
+        name: "ช่องวัน 31 (One 31)",
+        category: "digital",
+        popular: true,
+        url: "https://live-us1.thaimomo.com/live-as/chone-3/playlist.m3u8",
+        logo: "images/tv_logos/one31.png"
+      },
+      {
+        id: "thairath",
+        number: "32",
+        label: "HD",
+        name: "ไทยรัฐทีวี 32 HD",
+        category: "digital",
+        popular: true,
+        url: "https://live-us1.thaimomo.com/live-as/chthairathhd-3/playlist.m3u8",
+        logo: "images/tv_logos/thairath.png"
+      },
+      {
+        id: "ch3",
+        number: "33",
+        label: "HD",
+        name: "ช่อง 3 HD",
+        category: "digital",
+        popular: true,
+        url: "https://live-us1.thaimomo.com/live-as/ch3hd-3/playlist.m3u8",
+        logo: "images/tv_logos/ch3.png"
+      },
+      {
+        id: "amarin",
+        number: "34",
+        label: "HD",
+        name: "อมรินทร์ทีวี 34 HD",
+        category: "digital",
+        popular: true,
+        url: "https://live-us1.thaimomo.com/live-as/chamarin-3/playlist.m3u8",
+        logo: "images/tv_logos/amarin.png"
+      },
+      {
+        id: "ch7",
+        number: "35",
+        label: "HD",
+        name: "ช่อง 7 HD",
+        category: "digital",
+        popular: true,
+        url: "https://live-us1.thaimomo.com/live-as/ch7hd-3/playlist.m3u8",
+        logo: "images/tv_logos/ch7.png"
+      },
+      {
+        id: "pptv",
+        number: "36",
+        label: "HD",
+        name: "พีพีทีวี 36 HD (ฟุตบอล & กีฬาสด)",
+        category: "sports",
+        popular: true,
+        url: "https://live-us1.thaimomo.com/live-as/chpptv-3/playlist.m3u8",
+        logo: "images/tv_logos/pptv.png"
+      },
+
+      // ช่องกีฬาเสริมระดับโลก
+      {
+        id: "redbull",
+        number: "RB",
+        label: "SPORTS",
+        name: "Red Bull TV (กีฬาสดระดับโลก/F1)",
+        category: "sports",
+        popular: true,
+        url: "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8",
+        logo: "images/tv_logos/redbull.png"
+      },
+
+      // =========================================================
+      // ช่องต่างประเทศดูฟรี (International Free-to-Air Channels)
+      // =========================================================
+      {
+        id: "abc_news",
+        number: "ABC",
+        label: "WORLD",
+        name: "ABC News Live HD (สหรัฐอเมริกา)",
+        category: "international",
+        popular: true,
+        url: "https://abc-news-dmd-streams-1.akamaized.net/out/v1/701126012d044971b3fa89406a440133/index.m3u8",
+        logo: "images/tv_logos/abc_news.png"
+      },
+      {
+        id: "nhk_world",
+        number: "NHK",
+        label: "WORLD",
+        name: "NHK World Japan HD (ญี่ปุ่น)",
+        category: "international",
+        popular: true,
+        url: "https://media-tyo.hls.nhkworld.jp/hls/wp/live/master.m3u8",
+        logo: "images/tv_logos/nhk_world.png"
+      },
+      {
+        id: "france24",
+        number: "F24",
+        label: "WORLD",
+        name: "France 24 English HD (ฝรั่งเศส/ยุโรป)",
+        category: "international",
+        popular: true,
+        url: "https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_5000.m3u8",
+        logo: "images/tv_logos/france24.png"
+      },
+      {
+        id: "dw_english",
+        number: "DW",
+        label: "WORLD",
+        name: "DW English HD (เยอรมนี)",
+        category: "international",
+        url: "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8",
+        logo: "images/tv_logos/dw_english.png"
+      },
+      {
+        id: "bloomberg",
+        number: "BLOOM",
+        label: "WORLD",
+        name: "Bloomberg Television HD (การเงิน/ธุรกิจ)",
+        category: "international",
+        popular: true,
+        url: "https://bloomberg.com/media-manifest/streams/us.m3u8",
+        logo: "images/tv_logos/bloomberg.png"
+      },
+      {
+        id: "skynews",
+        number: "SKY",
+        label: "WORLD",
+        name: "Sky News Live HD (ข่าวโลก 24 ชม.)",
+        category: "international",
+        popular: true,
+        url: "https://skynewsau-live.akamaized.net/hls/live/2002689/skynewsau-extra1/master.m3u8",
+        logo: "images/tv_logos/skynews.png"
+      },
+      {
+        id: "wildearth",
+        number: "WILD",
+        label: "WORLD",
+        name: "WildEarth HD (ซาฟารีสัตว์ป่าสด 24 ชม.)",
+        category: "international",
+        popular: true,
+        url: "https://dqga3jatxofgx.cloudfront.net/WildEarth.m3u8",
+        logo: "images/tv_logos/wildearth.png"
+      },
+      {
+        id: "arirang",
+        number: "ARIRANG",
+        label: "WORLD",
+        name: "Arirang TV HD (เกาหลีใต้/K-Pop)",
+        category: "international",
+        popular: true,
+        url: "http://amdlive-ch01.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8",
+        logo: "images/tv_logos/arirang.png"
+      }
+    ];
+
+    let activeChannelIndex = 17; // เริ่มต้นที่ ช่อง 3 HD (CH 33)
+    let hlsInstance = null;
+    const videoElem = document.getElementById("livePlayer");
+    const loaderElem = document.getElementById("playerLoader");
+    const loaderMsg = document.getElementById("loaderMsg");
+    const currentNumElem = document.getElementById("currentNum");
+    const currentNameElem = document.getElementById("currentName");
+    const currentTagElem = document.getElementById("currentTag");
+    const gridContainer = document.getElementById("channelsGrid");
+    const filterButtons = document.querySelectorAll(".filter-btn");
+
+    let activeFilter = "all";
+
+    // -------------------------------------------------------------
+    // ฟังก์ชันเรนเดอร์การ์ดผังช่อง (การ์ดมินิมอล เน้นโลโก้ใหญ่คมชัด ไม่มีแถบด้านล่าง)
+    // -------------------------------------------------------------
+    function renderGrid() {
+      gridContainer.innerHTML = "";
+
+      TV_CHANNELS.forEach((ch, idx) => {
+        // กรองหมวดหมู่
+        if (activeFilter === "intl" && ch.category !== "international") return;
+        if (activeFilter === "sports" && ch.category !== "sports") return;
+        if (activeFilter === "digital" && ch.category !== "digital") return;
+        if (activeFilter === "popular" && !ch.popular) return;
+
+        const isActive = (idx === activeChannelIndex);
+
+        const card = document.createElement("div");
+        card.className = `ch-card ${isActive ? "active" : ""}`;
+        card.setAttribute("title", `คลิกเพื่อรับชม ${ch.name} (ช่อง ${ch.number})`);
+
+        card.innerHTML = `
+          <div class="ch-logo-wrap">
+            <img src="${ch.logo}" alt="${ch.name}" loading="lazy" onerror="this.onerror=null; this.src='images/icon-192.png';">
+          </div>
+        `;
+
+        card.addEventListener("click", () => {
+          switchChannel(idx);
+          // เลื่อนขึ้นไปดูจอวิดีโออย่างนุ่มนวล
+          const playerAnchor = document.getElementById("playerAnchor");
+          if (playerAnchor && window.innerWidth < 900) {
+            playerAnchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+
+        gridContainer.appendChild(card);
+      });
+    }
+
+    // -------------------------------------------------------------
+    // ฟังก์ชันสลับช่องเร็วฟ้าผ่า (Fast Zap & Low Latency Streaming)
+    // -------------------------------------------------------------
+    function switchChannel(index) {
+      if (index < 0 || index >= TV_CHANNELS.length) return;
+      activeChannelIndex = index;
+      const ch = TV_CHANNELS[index];
+
+      // อัปเดตแถบข้อมูลผู้เล่น
+      currentNumElem.textContent = "CH " + ch.number;
+      currentNameElem.textContent = ch.name;
+      
+      let tagText = "📺 ดิจิทัลทีวีไทย";
+      if (ch.category === "sports") tagText = "⚽ กีฬาสด";
+      else if (ch.category === "international") tagText = "🌐 ต่างประเทศ (World TV)";
+      currentTagElem.textContent = tagText;
+
+      // แสดง Loader สลับช่อง
+      loaderElem.style.display = "flex";
+      loaderElem.style.opacity = "1";
+      loaderElem.style.pointerEvents = "auto";
+      loaderMsg.textContent = `กำลังสลับช่องไปยัง ${ch.name}...`;
+
+      // 1. ยกเลิกการดาวน์โหลดชิ้นส่วนวิดีโอช่องเดิมทันที (ตัดภาระเน็ต 100%)
+      if (hlsInstance) {
+        try {
+          hlsInstance.stopLoad();
+          hlsInstance.detachMedia();
+          hlsInstance.destroy();
+        } catch (e) {}
+        hlsInstance = null;
+      }
+
+      // 2. ล้างบัฟเฟอร์ตัวเล่นวิดีโอของเดิมออกทันที
+      videoElem.pause();
+      videoElem.removeAttribute("src");
+      videoElem.removeAttribute("controls");
+      videoElem.load();
+
+      // 3. เริ่มต้นโหลดช่องใหม่ด้วยโปรไฟล์ Fast Start
+      if (Hls.isSupported()) {
+        hlsInstance = new Hls({
+          enableWorker: true,
+          lowLatencyMode: true,
+          backBufferLength: 0,             // ไม่เก็บข้อมูลย้อนหลัง ประหยัด RAM
+          maxBufferLength: 8,              // บัฟเฟอร์ล่วงหน้าสั้นลง เพื่อให้เล่นได้ทันทีไม่ต้องรอนาน
+          maxMaxBufferLength: 15,
+          liveSyncDurationCount: 1,        // เริ่มเล่นทันทีที่ได้ Segment แรก (ลดเวลารอจาก 15 วิ เหลือ ~1-2 วิ)
+          liveMaxLatencyDurationCount: 3,  // คุม Latency ให้สดเสมอ
+          initialLiveManifestSize: 1,      // ไม่ต้องรอโหลดผังหลายรอบ
+          startFragPrefetch: true,         // ทันทีที่ Segment แรกเริ่มเล่น ให้ดึงอันถัดไปทันทีกันสะดุด
+          maxBufferHole: 0.5,
+          nudgeOffset: 0.1,
+          nudgeMaxRetry: 5,
+          manifestLoadingTimeOut: 6000,
+          fragLoadingTimeOut: 12000,
+          fragLoadingMaxRetry: 4
+        });
+
+        hlsInstance.loadSource(ch.url);
+        hlsInstance.attachMedia(videoElem);
+
+        // ทันทีที่ Manifest โหลดเสร็จ สั่งเล่นทันที
+        hlsInstance.on(Hls.Events.MANIFEST_PARSED, function() {
+          const playPromise = videoElem.play();
+          if (playPromise !== undefined) {
+            playPromise.catch(function() {
+              // กรณี Browser บล็อกเสียงอัตโนมัติ ให้ลองเล่นแบบปิดเสียงก่อน
+              videoElem.muted = true;
+              videoElem.play().catch(function() {});
+            });
+          }
+        });
+
+        // เมื่อ Segment แรกเข้า Buffer พร้อมเล่น ให้ปิด Loader ทันที
+        hlsInstance.on(Hls.Events.FRAG_BUFFERED, function() {
+          loaderElem.style.opacity = "0";
+          loaderElem.style.pointerEvents = "none";
+        });
+
+        hlsInstance.on(Hls.Events.ERROR, function(event, data) {
+          if (data.fatal) {
+            switch(data.type) {
+              case Hls.ErrorTypes.NETWORK_ERROR:
+                loaderMsg.textContent = "สัญญาณกระตุก กำลังเชื่อมต่อใหม่...";
+                hlsInstance.startLoad();
+                break;
+              case Hls.ErrorTypes.MEDIA_ERROR:
+                loaderMsg.textContent = "กำลังกู้คืนสัญญาณ...";
+                hlsInstance.recoverMediaError();
+                break;
+              default:
+                hlsInstance.destroy();
+                break;
+            }
+          }
+        });
+      } else if (videoElem.canPlayType("application/vnd.apple.mpegurl")) {
+        videoElem.src = ch.url;
+        videoElem.play().catch(function() {});
+      }
+
+      renderGrid();
+    }
+
+    function hideLoader() {
+      loaderElem.style.opacity = "0";
+      loaderElem.style.pointerEvents = "none";
+    }
+
+    videoElem.addEventListener("playing", hideLoader);
+    videoElem.addEventListener("canplay", hideLoader);
+    videoElem.addEventListener("loadeddata", hideLoader);
+    videoElem.addEventListener("timeupdate", function() {
+      if (videoElem.currentTime > 0) hideLoader();
+    });
+
+    videoElem.addEventListener("waiting", function() {
+      loaderElem.style.opacity = "1";
+      loaderMsg.textContent = "กำลังโหลดสัญญาณสด...";
+    });
+
+    // ฟิลเตอร์หมวดหมู่
+    filterButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        activeFilter = btn.dataset.filter;
+        renderGrid();
+      });
+    });
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        videoElem.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen().catch(() => {});
+      }
+    }
+
+    // คีย์ลัด F = เต็มจอ
+    window.addEventListener("keydown", (e) => {
+      if (e.key.toLowerCase() === "f") toggleFullscreen();
+    });
+
+    // เริ่มต้นทำงาน
+    document.addEventListener("DOMContentLoaded", () => {
+      renderGrid();
+      switchChannel(17); // เล่นช่อง 3 HD อัตโนมัติเป็นช่องแรก
+    });
+  </script>
+
+</body>
+</html>

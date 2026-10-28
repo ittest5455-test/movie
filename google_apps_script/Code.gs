@@ -1,18 +1,149 @@
 /**
  * =========================================================================
- * Google Apps Script สำหรับระบบสมาชิกและระบบอนุมัติเว็บดูหนัง
+ * Google Apps Script สำหรับระบบสมาชิกและระบบอนุมัติเว็บดูหนัง ผ่าน LINE
  * ตาราง 8 คอลัมน์ (A - H):
  * A: UserId | B: Phone | C: Password | D: RegisteredDate | E: Status | F: ExpireDate | G: Watchlist | H: history
  * =========================================================================
  */
 
+// -------------------------------------------------------------
+// การตั้งค่า LINE Messaging API & Security
+// -------------------------------------------------------------
+const LINE_CHANNEL_ACCESS_TOKEN = "ySRHeoP3bVm3bUAOCXut7lzYBos4SqvTI9epuhCA4ANq2wttPBnlbRa8quRXdxc1Kxc++6NFURm7f9pjRrEEX79w1Zanjkkf3EmASHBNRbo/PYP5HkkeeEYCr/IYC4XgOAnvzO8ne89JOkS94pz3zAdB04t89/1O/w1cDnyilFU=";
+const ADMIN_LINE_USER_ID = "U82651d72dba0247279a27ab305152104";
+const SCRIPT_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbyKnLnnu7iJ3uPSV3tdpLO5HL6pZMGy5qzHSLu8Y4RoQq5MIYj1QVFXgZ3miynuNjPX/exec";
+const SECRET_KEY = "VIP_AUTH_MOVIE_LINE_APPROVAL_2026";
+
+/**
+ * -------------------------------------------------------------
+ * 1. ฟังก์ชันรับคำสั่งอนุมัติผ่าน LINE (doGet)
+ * เมื่อแอดมินคลิกปุ่มใน LINE ระบบจะวิ่งมาทำงานที่นี่
+ * -------------------------------------------------------------
+ */
 function doGet(e) {
+  try {
+    if (e && e.parameter && e.parameter.action) {
+      var action = e.parameter.action;
+      var userId = e.parameter.userId;
+      var days = parseInt(e.parameter.days || "30", 10);
+      var token = e.parameter.token;
+
+      if (token !== SECRET_KEY) {
+        return HtmlService.createHtmlOutput("<h2 style='color:#ef4444;text-align:center;padding:40px;font-family:sans-serif;'>❌ รหัสความปลอดภัยไม่ถูกต้อง (Unauthorized)</h2>");
+      }
+
+      var ss = SpreadsheetApp.getActiveSpreadsheet();
+      var sheet = ss.getActiveSheet();
+      var rows = sheet.getDataRange().getValues();
+      var foundIndex = -1;
+      var currentPhone = "";
+
+      for (var i = 1; i < rows.length; i++) {
+        if (String(rows[i][0]).trim() === String(userId).trim()) {
+          foundIndex = i + 1; // 1-based index in Sheet
+          currentPhone = String(rows[i][1] || "").replace(/^'+/, "");
+          break;
+        }
+      }
+
+      if (foundIndex === -1) {
+        return HtmlService.createHtmlOutput("<h2 style='color:#ef4444;text-align:center;padding:40px;font-family:sans-serif;'>❌ ไม่พบข้อมูลสมาชิกนี้ในระบบ</h2>");
+      }
+
+      // 1.1 กรณีอนุมัติ (Approve)
+      if (action === "approve") {
+        var expDate = new Date();
+        expDate.setDate(expDate.getDate() + days);
+        var expDateFormatted = Utilities.formatDate(expDate, "Asia/Bangkok", "yyyy-MM-dd");
+
+        sheet.getRange(foundIndex, 5).setValue("อนุมัติ"); // Col E: Status
+        sheet.getRange(foundIndex, 6).setValue(expDateFormatted); // Col F: ExpireDate
+
+        var successHtml = `
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>อนุมัติสมาชิกสำเร็จ</title>
+            <style>
+              body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #f8fafc; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box; }
+              .card { background: #1e293b; border-radius: 16px; padding: 32px 24px; text-align: center; max-width: 400px; width: 100%; border: 1px solid #334155; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5); }
+              .icon { font-size: 54px; margin-bottom: 12px; }
+              h1 { font-size: 22px; color: #4ade80; margin: 0 0 12px 0; font-weight: 700; }
+              .info-box { background: #0f172a; border-radius: 10px; padding: 14px; margin: 16px 0; text-align: left; font-size: 14px; border: 1px solid #334155; }
+              .info-row { display: flex; justify-content: space-between; margin-bottom: 8px; }
+              .info-row:last-child { margin-bottom: 0; }
+              .label { color: #94a3b8; }
+              .val { color: #e2e8f0; font-weight: 600; }
+              p { color: #94a3b8; font-size: 13px; line-height: 1.5; margin: 16px 0 0 0; }
+            </style>
+          </head>
+          <body>
+            <div class="card">
+              <div class="icon">✅</div>
+              <h1>อนุมัติสมาชิกสำเร็จ!</h1>
+              <div class="info-box">
+                <div class="info-row"><span class="label">รหัสผู้ใช้:</span><span class="val">${userId}</span></div>
+                <div class="info-row"><span class="label">เบอร์โทร:</span><span class="val">${currentPhone}</span></div>
+                <div class="info-row"><span class="label">สถานะ:</span><span class="val" style="color:#4ade80;">อนุมัติแล้ว</span></div>
+                <div class="info-row"><span class="label">ระยะเวลา:</span><span class="val">${days} วัน</span></div>
+                <div class="info-row"><span class="label">หมดอายุ:</span><span class="val">${expDateFormatted}</span></div>
+              </div>
+              <p>สมาชิกสามารถล็อกอินเข้าสู่ระบบดูหนังได้ทันที<br>สามารถปิดหน้าต่างนี้ได้เลยครับ</p>
+            </div>
+          </body>
+          </html>
+        `;
+        return HtmlService.createHtmlOutput(successHtml).setTitle("อนุมัติสมาชิกสำเร็จ");
+      }
+
+      // 1.2 กรณีปฏิเสธ (Reject)
+      if (action === "reject") {
+        sheet.getRange(foundIndex, 5).setValue("ระงับ"); // Col E: Status
+        var rejectHtml = `
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>ปฏิเสธคำขอสมาชิก</title>
+            <style>
+              body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #f8fafc; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box; }
+              .card { background: #1e293b; border-radius: 16px; padding: 32px 24px; text-align: center; max-width: 400px; width: 100%; border: 1px solid #334155; }
+              .icon { font-size: 54px; margin-bottom: 12px; }
+              h1 { font-size: 22px; color: #f87171; margin: 0 0 12px 0; font-weight: 700; }
+              p { color: #94a3b8; font-size: 14px; margin: 12px 0 0 0; }
+            </style>
+          </head>
+          <body>
+            <div class="card">
+              <div class="icon">🚫</div>
+              <h1>ปฏิเสธคำขอเรียบร้อย</h1>
+              <p>รหัสผู้ใช้: <strong>${userId}</strong> ถูกปรับสถานะเป็น 'ระงับ' แล้ว<br>สามารถปิดหน้าต่างนี้ได้เลยครับ</p>
+            </div>
+          </body>
+          </html>
+        `;
+        return HtmlService.createHtmlOutput(rejectHtml).setTitle("ปฏิเสธคำขอเรียบร้อย");
+      }
+    }
+  } catch (err) {
+    return HtmlService.createHtmlOutput("<h3 style='color:red;'>Error: " + err.toString() + "</h3>");
+  }
+
   return ContentService.createTextOutput(JSON.stringify({
     status: "online",
     message: "Google Apps Script Movie Auth API is active 🚀"
   })).setMimeType(ContentService.MimeType.JSON);
 }
 
+/**
+ * -------------------------------------------------------------
+ * 2. รับคำขอจากหน้าเว็บ (doPost)
+ * สมัครสมาชิก, ล็อกอิน, ซิงค์รายการโปรด, ซิงค์ประวัติ
+ * -------------------------------------------------------------
+ */
 function doPost(e) {
   var lock = LockService.getScriptLock();
   lock.tryLock(10000);
@@ -36,7 +167,7 @@ function doPost(e) {
     var result = {};
 
     // -------------------------------------------------------------
-    // 1. สมัครสมาชิกใหม่ (register) หรือ ขอเปลี่ยนรหัสผ่าน (reset_password)
+    // 2.1 สมัครสมาชิกใหม่ (register) หรือ ขอเปลี่ยนรหัสผ่าน (forgot_password)
     // -------------------------------------------------------------
     if (action === "register" || action === "forgot_password") {
       var phone = String(data.phone || "").trim();
@@ -50,6 +181,7 @@ function doPost(e) {
 
       var rows = sheet.getDataRange().getValues();
       var existingRowIndex = -1;
+      var existingUserId = "";
 
       // ค้นหาเบอร์โทรศัพท์ในคอลัมน์ B (เริ่มเช็คจากแถวที่ 2)
       for (var i = 1; i < rows.length; i++) {
@@ -57,6 +189,7 @@ function doPost(e) {
         if (rowPhone.length === 9) rowPhone = "0" + rowPhone;
         if (rowPhone === cleanPhone) {
           existingRowIndex = i + 1; // 1-based index ใน Google Sheet
+          existingUserId = String(rows[i][0] || "");
           break;
         }
       }
@@ -71,11 +204,44 @@ function doPost(e) {
           success: true,
           message: "บันทึกรหัสผ่านใหม่เรียบร้อยแล้ว สถานะของคุณคือ 'รออนุมัติ' กรุณารอแอดมินอนุมัติ ⏳"
         };
+
+        // แจ้งเตือนแอดมินทาง LINE ทันที
+        try {
+          sendLineApprovalCard(existingUserId, cleanPhone, dateFormatted, "reset_password");
+        } catch (lineErr) {
+          console.error("ส่ง LINE แจ้งเตือนล้มเหลว: " + lineErr);
+        }
       } else {
-        // กรณีเบอร์ใหม่ -> สร้าง UserId แล้วเพิ่มแถวใหม่ลงในคอลัมน์ A ถึง H
+        // -------------------------------------------------------------
+        // กรณีเบอร์ใหม่ -> รันเลข UserId อัตโนมัติตามวัน (เช่น วันที่ 24/10/69 -> VIP691024-001, 002, ...)
+        // -------------------------------------------------------------
         var thaiYear = String(now.getFullYear() + 543).slice(-2);
-        var pad = function(n) { return (n < 10 ? "0" : "") + n; };
-        var genUserId = data.userId || ("VIP" + thaiYear + pad(now.getMonth() + 1) + pad(now.getDate()) + "-" + Math.floor(100 + Math.random() * 900));
+        var pad2 = function(n) { return (n < 10 ? "0" : "") + n; };
+        var todayPrefix = "VIP" + thaiYear + pad2(now.getMonth() + 1) + pad2(now.getDate()) + "-";
+
+        // ค้นหาลำดับสูงสุดของวันนี้ในคอลัมน์ A เพื่อรันต่อจากเบอร์ล่าสุด
+        var maxSeq = 0;
+        for (var r = 1; r < rows.length; r++) {
+          var cellVal = String(rows[r][0] || "").trim();
+          if (cellVal.indexOf(todayPrefix) === 0) {
+            var parts = cellVal.split("-");
+            if (parts.length > 1) {
+              var num = parseInt(parts[1], 10);
+              if (!isNaN(num) && num > maxSeq) {
+                maxSeq = num;
+              }
+            }
+          }
+        }
+
+        // ลำดับถัดไป (001, 002, 003, ...)
+        var nextSeq = maxSeq + 1;
+        var pad3 = function(n) {
+          if (n < 10) return "00" + n;
+          if (n < 100) return "0" + n;
+          return String(n);
+        };
+        var genUserId = todayPrefix + pad3(nextSeq);
 
         var watchlist = data.watchlist || "[]";
         var history = data.history || "[]";
@@ -103,11 +269,18 @@ function doPost(e) {
           userId: genUserId,
           message: "สมัครสมาชิกสำเร็จ! ข้อมูลถูกส่งเข้า Google Sheet แล้ว กรุณารอแอดมินอนุมัติ ⏳"
         };
+
+        // แจ้งเตือนแอดมินทาง LINE ทันที
+        try {
+          sendLineApprovalCard(genUserId, cleanPhone, dateFormatted, "register");
+        } catch (lineErr) {
+          console.error("ส่ง LINE แจ้งเตือนล้มเหลว: " + lineErr);
+        }
       }
     }
 
     // -------------------------------------------------------------
-    // 2. เข้าสู่ระบบ (login) - ตรวจสอบความถูกต้องและสถานะการอนุมัติ 100%
+    // 2.2 เข้าสู่ระบบ (login) - ตรวจสอบความถูกต้องและสถานะการอนุมัติ 100%
     // -------------------------------------------------------------
     else if (action === "login") {
       var phoneInput = String(data.phone || "").trim().replace(/\D/g, "");
@@ -178,7 +351,7 @@ function doPost(e) {
     }
 
     // -------------------------------------------------------------
-    // 3. ซิงค์รายการโปรด (sync_watchlist)
+    // 2.3 ซิงค์รายการโปรด (sync_watchlist)
     // -------------------------------------------------------------
     else if (action === "sync_watchlist") {
       var phone = String(data.phone || "").replace(/\D/g, "");
@@ -195,7 +368,7 @@ function doPost(e) {
     }
 
     // -------------------------------------------------------------
-    // 4. ซิงค์ประวัติการรับชม (sync_history)
+    // 2.4 ซิงค์ประวัติการรับชม (sync_history)
     // -------------------------------------------------------------
     else if (action === "sync_history") {
       var phone = String(data.phone || "").replace(/\D/g, "");
@@ -226,4 +399,146 @@ function doPost(e) {
   } finally {
     lock.releaseLock();
   }
+}
+
+/**
+ * -------------------------------------------------------------
+ * 3. ฟังก์ชันส่งการ์ด Flex Message เข้า LINE แอดมิน
+ * -------------------------------------------------------------
+ */
+function sendLineApprovalCard(userId, phone, dateFormatted, requestType) {
+  if (!LINE_CHANNEL_ACCESS_TOKEN || !ADMIN_LINE_USER_ID) return;
+
+  var isReset = (requestType === "reset_password");
+  var title = isReset ? "🔑 ขอเปลี่ยนรหัสผ่านใหม่" : "🎬 มีสมาชิกใหม่รออนุมัติ";
+  var headerColor = isReset ? "#0284c7" : "#d97706";
+
+  var approve30Url = SCRIPT_WEBAPP_URL + "?action=approve&userId=" + encodeURIComponent(userId) + "&days=30&token=" + SECRET_KEY;
+  var approve365Url = SCRIPT_WEBAPP_URL + "?action=approve&userId=" + encodeURIComponent(userId) + "&days=365&token=" + SECRET_KEY;
+  var rejectUrl = SCRIPT_WEBAPP_URL + "?action=reject&userId=" + encodeURIComponent(userId) + "&token=" + SECRET_KEY;
+
+  var flexPayload = {
+    "to": ADMIN_LINE_USER_ID,
+    "messages": [
+      {
+        "type": "flex",
+        "altText": (isReset ? "🔑 ขอเปลี่ยนรหัสผ่าน: " : "🎬 สมาชิกใหม่รออนุมัติ: ") + phone,
+        "contents": {
+          "type": "bubble",
+          "header": {
+            "type": "box",
+            "layout": "vertical",
+            "backgroundColor": "#0f172a",
+            "contents": [
+              {
+                "type": "text",
+                "text": title,
+                "weight": "bold",
+                "color": headerColor,
+                "size": "md"
+              }
+            ]
+          },
+          "body": {
+            "type": "box",
+            "layout": "vertical",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  { "type": "text", "text": "รหัสผู้ใช้", "color": "#94a3b8", "size": "sm", "flex": 3 },
+                  { "type": "text", "text": userId, "weight": "bold", "size": "sm", "color": "#1e293b", "flex": 5 }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  { "type": "text", "text": "เบอร์โทร", "color": "#94a3b8", "size": "sm", "flex": 3 },
+                  { "type": "text", "text": phone, "weight": "bold", "size": "sm", "color": "#2563eb", "flex": 5 }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  { "type": "text", "text": "เวลาที่ส่ง", "color": "#94a3b8", "size": "sm", "flex": 3 },
+                  { "type": "text", "text": dateFormatted, "size": "xs", "color": "#64748b", "flex": 5 }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  { "type": "text", "text": "สถานะ", "color": "#94a3b8", "size": "sm", "flex": 3 },
+                  { "type": "text", "text": "รออนุมัติ ⏳", "weight": "bold", "size": "sm", "color": "#eab308", "flex": 5 }
+                ]
+              }
+            ]
+          },
+          "footer": {
+            "type": "box",
+            "layout": "vertical",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "button",
+                "style": "primary",
+                "color": "#16a34a",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "✅ อนุมัติ 30 วัน",
+                  "uri": approve30Url
+                }
+              },
+              {
+                "type": "button",
+                "style": "primary",
+                "color": "#2563eb",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "⭐ อนุมัติ 1 ปี (VIP)",
+                  "uri": approve365Url
+                }
+              },
+              {
+                "type": "button",
+                "style": "secondary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "❌ ปฏิเสธ / ระงับ",
+                  "uri": rejectUrl
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  };
+
+  UrlFetchApp.fetch("https://api.line.me/v2/bot/message/push", {
+    "method": "post",
+    "headers": {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer " + LINE_CHANNEL_ACCESS_TOKEN
+    },
+    "payload": JSON.stringify(flexPayload),
+    "muteHttpExceptions": true
+  });
+}
+
+/**
+ * -------------------------------------------------------------
+ * 4. ฟังก์ชันทดสอบยิงข้อความเข้า LINE แอดมิน (กดทดสอบใน Apps Script ได้เลย)
+ * -------------------------------------------------------------
+ */
+function testSendLine() {
+  sendLineApprovalCard("VIP-TEST-001", "0812345678", "2026-10-24 10:00:00", "register");
+  Logger.log("✅ ส่งการ์ดทดสอบเข้า LINE แอดมินเรียบร้อยแล้ว!");
 }
