@@ -2740,19 +2740,14 @@ body.auth-modal-is-active .floating-install-bar {
    Continue Watching (ดูล่าสุด / กำลังรับชมต่อ - อันดับ 1 เด่นชัด)
    =================================================== */
 .continue-watching-section {
-  padding: 95px 5% 1.6rem 5%;
+  padding: 2.2rem 5% 2rem 5%;
   position: relative;
   width: 100%;
-  background: radial-gradient(ellipse at 15% 50%, rgba(168, 85, 247, 0.22) 0%, transparent 65%),
+  background: radial-gradient(ellipse at 15% 50%, rgba(168, 85, 247, 0.16) 0%, transparent 65%),
               linear-gradient(180deg, #090c19 0%, #05060f 100%);
-  border-bottom: 1px solid rgba(168, 85, 247, 0.25);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65);
-  margin-bottom: 0;
-}
-
-body.has-continue-watching .hero-section {
-  padding-top: 40px;
-  min-height: 500px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.5rem;
 }
 
 .cw-title-wrapper {
@@ -3061,10 +3056,7 @@ body.has-continue-watching .hero-section {
   .continue-watching-title {
     font-size: 1.2rem;
   }
-  body.has-continue-watching .hero-section {
-    padding-top: 30px;
-    min-height: 440px;
-  }
+
 }
 
 /* Center Play Button Overlay (Compact) */
@@ -3819,5 +3811,179 @@ html.is-tv-device .movie-card:focus {
   
   body {
     padding-bottom: calc(68px + env(safe-area-inset-bottom, 12px)) !important;
+  }
+}
+
+
+/* ==========================================================================
+   Modern Web Master Design System Enhancements (Local Edition)
+   ========================================================================== */
+
+/* 1. Header Glassmorphism & Elevation */
+.header-nav {
+  background: rgba(10, 15, 26, 0.88) !important;
+  backdrop-filter: blur(18px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* 2. Hero Section Cinematic Depth & Micro-interactions */
+.hero-section {
+  background: #05060f !important;
+  position: relative;
+}
+.hero-gradient-overlay {
+  background: 
+    linear-gradient(to right, rgba(5, 6, 15, 0.98) 22%, rgba(5, 6, 15, 0.75) 55%, rgba(5, 6, 15, 0.25) 100%),
+    linear-gradient(to top, #05060f 0%, rgba(5, 6, 15, 0.5) 40%, rgba(5, 6, 15, 0) 70%, rgba(5, 6, 15, 0.6) 100%) !important;
+}
+.btn-hero-play {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.45) !important;
+}
+.btn-hero-play:hover {
+  transform: translateY(-2px) scale(1.03) !important;
+  box-shadow: 0 10px 28px rgba(168, 85, 247, 0.65) !important;
+}
+.btn-hero-play:active {
+  transform: scale(0.97) !important;
+}
+
+.btn-hero-info, .btn-hero-fav {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.btn-hero-info:hover, .btn-hero-fav:hover {
+  background: rgba(255, 255, 255, 0.16) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* 3. Category Filter Tabs - Sleek Pill Design with Hidden Scrollbars */
+.genre-tags {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+  padding: 6px 2px !important;
+}
+.genre-tags::-webkit-scrollbar {
+  display: none !important;
+}
+.genre-tag {
+  border-radius: 9999px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.2px !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.genre-tag:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4) !important;
+}
+.genre-tag.active {
+  transform: translateY(-2px) scale(1.04) !important;
+  box-shadow: 0 6px 22px rgba(168, 85, 247, 0.5) !important;
+}
+
+/* 4. Movie Cards - 3D Hover & Image Smoothness */
+.movie-card {
+  border-radius: 16px !important;
+  background: #0f1322 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s !important;
+}
+.movie-card:hover {
+  transform: translateY(-8px) scale(1.025) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(168, 85, 247, 0.3) !important;
+  border-color: rgba(168, 85, 247, 0.5) !important;
+}
+.movie-poster-wrapper img {
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.movie-card:hover .movie-poster-wrapper img {
+  transform: scale(1.06) !important;
+}
+.movie-card-title {
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+}
+
+/* 5. Mobile Bottom App Bar Glass & Spacing */
+@media (max-width: 600px) {
+  .mobile-bottom-nav {
+    background: rgba(10, 15, 26, 0.92) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.6) !important;
+  }
+  .continue-watching-section {
+    padding: 1.4rem 4% 1.2rem 4% !important;
+  }
+}
+
+
+/* Mobile Hero Modern Web Master Optimization */
+@media (max-width: 600px) {
+  .logo-badge {
+    display: inline-block !important;
+    font-size: 0.62rem !important;
+    padding: 2px 6px !important;
+    border-radius: 6px !important;
+    margin-left: 4px !important;
+    vertical-align: middle !important;
+  }
+
+  .hero-buttons {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-top: 1rem !important;
+  }
+  
+  .btn-hero-play {
+    width: 100% !important;
+    flex: none !important;
+    min-height: 46px !important;
+    font-size: 1rem !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .btn-hero-info {
+    flex: 1 1 auto !important;
+    width: auto !important;
+    min-height: 44px !important;
+    border-radius: 12px !important;
+    font-size: 0.9rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .btn-hero-fav {
+    flex: 0 0 46px !important;
+    width: 46px !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+  }
+
+  .hero-slider-nav {
+    position: static !important;
+    margin-top: 10px !important;
+    margin-bottom: 4px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
   }
 }

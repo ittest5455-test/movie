@@ -88,10 +88,7 @@ function initMovieStreamApp() {
       }
       return url.startsWith('/') ? url : '/' + url;
     }
-    if (window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-      return url;
-    }
-    return `/img?url=${encodeURIComponent(url)}`;
+    return `https://wsrv.nl/?url=${encodeURIComponent(url)}&output=webp`;
   }
   
   const movieList = window.movies || (typeof movies !== "undefined" ? movies : []);
@@ -422,7 +419,7 @@ function initMovieStreamApp() {
   function createMovieCardMarkup(movie) {
     const isSaved = watchlist.includes(movie.id);
     const isTopHot = movie.genres && (movie.genres.includes("ยอดนิยม 2026") || movie.genres.includes("ยอดนิยม") || (parseFloat(movie.rating) >= 7.8));
-    const placeholderSvg = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22300%22%20height%3D%22450%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20300%20450%22%3E%3Crect%20fill%3D%22%230e1222%22%20width%3D%22300%22%20height%3D%22450%22%2F%3E%3Ctext%20fill%3D%22%2364748b%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20dy%3D%2210.5%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EMovieStream%3C%2Ftext%3E%3C%2Fsvg%3E";
+    const placeholderSvg = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22300%22%20height%3D%22450%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%231e1b4b%22%2F%3E%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%230f172a%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23020617%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20fill%3D%22url(%23g)%22%20width%3D%22300%22%20height%3D%22450%22%2F%3E%3Ccircle%20cx%3D%22150%22%20cy%3D%22190%22%20r%3D%2240%22%20fill%3D%22rgba(168%2C85%2C247%2C0.15)%22%20stroke%3D%22rgba(168%2C85%2C247%2C0.35)%22%20stroke-width%3D%222%22%2F%3E%3Cpolygon%20points%3D%22143%2C175%20165%2C190%20143%2C205%22%20fill%3D%22%23a855f7%22%2F%3E%3Ctext%20fill%3D%22%23ffffff%22%20font-family%3D%22sans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22bold%22%20x%3D%22150%22%20y%3D%22265%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%221%22%3EMOVIESTREAM%3C%2Ftext%3E%3Ctext%20fill%3D%22%23f59e0b%22%20font-family%3D%22sans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22bold%22%20x%3D%22150%22%20y%3D%22288%22%20text-anchor%3D%22middle%22%3EVIP%20CINEMA%3C%2Ftext%3E%3C%2Fsvg%3E";
     const posterUrl = getProxyUrl(movie.poster) || placeholderSvg;
 
     const hotBadgeHtml = isTopHot ? `<div class="card-badge-hot">HOT</div>` : '';
