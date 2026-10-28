@@ -2147,8 +2147,14 @@ function initMovieStreamApp() {
           authSubmitBtn.textContent = "ยืนยันสมัครสมาชิก 🚀";
           authSubmitBtn.disabled = false;
         }
-        if (authToggleText) authToggleText.textContent = "มีบัญชีอยู่แล้ว?";
-        if (authToggleBtn) authToggleBtn.textContent = "เข้าสู่ระบบที่นี่";
+        if (authToggleText) {
+          authToggleText.style.display = "inline";
+          authToggleText.textContent = "มีบัญชีอยู่แล้ว?";
+        }
+        if (authToggleBtn) {
+          authToggleBtn.textContent = "เข้าสู่ระบบที่นี่";
+          authToggleBtn.style.marginLeft = "";
+        }
       } else if (currentAuthMode === 'forgot') {
         if (authModalIcon) authModalIcon.textContent = "🔐";
         if (authModalTitle) authModalTitle.textContent = "ขอเปลี่ยนรหัสผ่านใหม่";
@@ -2163,8 +2169,14 @@ function initMovieStreamApp() {
           authSubmitBtn.textContent = "ส่งคำขอเปลี่ยนรหัสผ่าน 📩";
           authSubmitBtn.disabled = false;
         }
-        if (authToggleText) authToggleText.textContent = "จำรหัสผ่านได้แล้ว?";
-        if (authToggleBtn) authToggleBtn.textContent = "กลับไปเข้าสู่ระบบ";
+        if (authToggleText) {
+          authToggleText.style.display = "none";
+          authToggleText.textContent = "";
+        }
+        if (authToggleBtn) {
+          authToggleBtn.textContent = "กลับไปเข้าสู่ระบบ";
+          authToggleBtn.style.marginLeft = "auto";
+        }
       } else {
         currentAuthMode = 'login';
         if (authModalIcon) authModalIcon.textContent = "👑";
@@ -2180,8 +2192,14 @@ function initMovieStreamApp() {
           authSubmitBtn.textContent = "เข้าสู่ระบบ 🎬";
           authSubmitBtn.disabled = false;
         }
-        if (authToggleText) authToggleText.textContent = "ยังไม่มีบัญชีสมาชิก?";
-        if (authToggleBtn) authToggleBtn.textContent = "สมัครสมาชิกฟรี";
+        if (authToggleText) {
+          authToggleText.style.display = "none";
+          authToggleText.textContent = "";
+        }
+        if (authToggleBtn) {
+          authToggleBtn.textContent = "สมัครสมาชิกฟรี";
+          authToggleBtn.style.marginLeft = "";
+        }
       }
     }
 

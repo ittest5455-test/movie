@@ -470,10 +470,7 @@
         </div>
 
         <div style="margin-bottom: 1.5rem;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
-            <label style="font-size: 0.85rem; color: #cbd5e1; margin: 0;" id="authPasswordLabel">🔑 รหัสผ่าน (PIN 4-6 หลัก)</label>
-            <a href="#" id="forgotPwdBtn" style="font-size: 0.8rem; color: #a855f7; text-decoration: underline;">ลืมรหัสผ่าน?</a>
-          </div>
+          <label style="display: block; font-size: 0.85rem; color: #cbd5e1; margin-bottom: 0.4rem;" id="authPasswordLabel">🔑 รหัสผ่าน (PIN 4-6 หลัก)</label>
           <input type="password" id="authPassword" placeholder="ตั้งรหัสผ่านเข้าสู่ระบบ" required style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; background: #1e293b; border: 1px solid #334155; color: #fff; font-size: 1rem; outline: none;">
         </div>
 
@@ -482,8 +479,9 @@
         </button>
 
         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.2rem; font-size: 0.85rem;">
-          <span style="color: #94a3b8;" id="authToggleText">ยังไม่มีบัญชีสมาชิก?</span>
-          <a href="#" id="authToggleBtn" style="color: #38bdf8; text-decoration: underline; font-weight: bold;">สมัครสมาชิกฟรี</a>
+          <a href="#" id="forgotPwdBtn" style="color: #a855f7; text-decoration: underline; font-size: 0.85rem; cursor: pointer;">ลืมรหัสผ่าน?</a>
+          <span style="color: #94a3b8; display: none;" id="authToggleText"></span>
+          <a href="#" id="authToggleBtn" style="color: #38bdf8; text-decoration: underline; font-weight: bold; cursor: pointer;">สมัครสมาชิกฟรี</a>
         </div>
       </form>
 
