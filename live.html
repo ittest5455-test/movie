@@ -458,7 +458,19 @@
     /* ปุ่มขยายเต็มจอ */
     .btn-fs {
       background: #334155;
+      border: 1px solid #475569;
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: inherit;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.2s;
     }
+    .btn-fs:hover { background: #475569; }
 
     /* กล่องวิดีโอ & ป้ายลอยเปิดเสียง */
     .video-viewport {
@@ -719,25 +731,12 @@
       .active-ch-tag {
         display: none; /* ซ่อนป้ายแท็กบนมือถือ เพื่อให้ชื่อช่องเด่นและไม่ตกบรรทัด */
       }
-      .btn-player {
-        padding: 5px 8px;
+      .btn-fs {
+        padding: 5px 10px;
         font-size: 12px;
       }
-      .btn-label {
-        display: none; /* บนมือถือแสดงเฉพาะไอคอน */
-      }
-      .vol-slider-wrap {
-        display: none; /* บนมือถือซ่อนแถบเลื่อนบนบาร์ ให้กดเปิดจากเมนูเสียง */
-      }
-      .audio-dropdown {
-        position: fixed;
-        top: auto;
-        bottom: 16px;
-        left: 12px;
-        right: 12px;
-        width: auto;
-        border-radius: 16px;
-        box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.9);
+      .fs-text {
+        display: none; /* บนมือถือแสดงเฉพาะไอคอนเต็มจอ */
       }
       .unmute-banner {
         top: 10px;
@@ -906,65 +905,8 @@
           <span class="active-ch-tag" id="currentTag">ทีวีดิจิทัลไทย</span>
         </div>
         <div class="player-actions">
-          <!-- ปุ่มเปิด-ปิดเสียง & แถบเลื่อนปรับเสียงด่วน -->
-          <div class="vol-control-group" id="volControlGroup">
-            <button type="button" class="btn-player btn-mute" id="btnMute" onclick="toggleMute()" title="เปิด/ปิดเสียง (คีย์ลัด M)">
-              <span id="muteIcon">🔊</span>
-              <span class="btn-label" id="muteLabel">100%</span>
-            </button>
-            <div class="vol-slider-wrap">
-              <input type="range" id="volSlider" class="vol-slider" min="0" max="100" value="100" title="เลื่อนปรับระดับเสียง" oninput="onVolumeSliderChange(this.value)">
-            </div>
-          </div>
-
-          <!-- ปุ่มเมนูเสียง & ดรอปดาวน์สำหรับแท็บเล็ตและคอม -->
-          <div class="audio-menu-container" id="audioMenuContainer">
-            <button type="button" class="btn-player btn-audio-menu" id="btnAudioMenu" onclick="toggleAudioMenu(event)" title="เมนูเสียงและภาษา (Audio Menu)">
-              <span class="audio-menu-icon">🎧</span>
-              <span class="btn-label">เมนูเสียง</span>
-              <span class="dropdown-chevron">▾</span>
-            </button>
-
-            <!-- ดรอปดาวน์ตั้งค่าเสียง -->
-            <div class="audio-dropdown" id="audioDropdown" onclick="event.stopPropagation()">
-              <div class="audio-dropdown-header">
-                <span class="dropdown-title">🎧 การตั้งค่าเสียง (Audio Menu)</span>
-                <button type="button" class="dropdown-close" onclick="closeAudioMenu(event)">✕</button>
-              </div>
-
-              <!-- Section 1: ระดับเสียง & ปุ่มลัด -->
-              <div class="audio-dropdown-section">
-                <div class="section-label">🔊 ระดับเสียง (<span id="menuVolPercent">100%</span>)</div>
-                <div class="audio-slider-row">
-                  <span style="font-size: 14px;">🔈</span>
-                  <input type="range" id="menuVolSlider" class="vol-slider-modal" min="0" max="100" value="100" oninput="onVolumeSliderChange(this.value)">
-                  <span style="font-size: 14px;">🔊</span>
-                </div>
-                <div class="vol-presets">
-                  <button type="button" class="preset-btn" id="preset0" onclick="setVolumePreset(0)">🔇 ปิดเสียง</button>
-                  <button type="button" class="preset-btn" id="preset30" onclick="setVolumePreset(30)">30%</button>
-                  <button type="button" class="preset-btn" id="preset70" onclick="setVolumePreset(70)">70%</button>
-                  <button type="button" class="preset-btn active" id="preset100" onclick="setVolumePreset(100)">100%</button>
-                </div>
-              </div>
-
-              <!-- Section 2: เลือกภาษาเสียง (Audio Tracks) -->
-              <div class="audio-dropdown-section">
-                <div class="section-label">🌐 ภาษาเสียง / แทร็กเสียง (Audio Track)</div>
-                <div class="audio-track-list" id="audioTrackList">
-                  <!-- เรนเดอร์อัตโนมัติจากสัญญาณ HLS -->
-                </div>
-              </div>
-
-              <div class="audio-dropdown-footer">
-                💡 แท็บเล็ต iPad / Android และคอมพิวเตอร์ปรับเสียงและภาษาได้อิสระ
-              </div>
-            </div>
-          </div>
-
-          <!-- ปุ่มขยายเต็มจอ -->
-          <button type="button" class="btn-player btn-fs" onclick="toggleFullscreen()" title="ขยายเต็มจอ (คีย์ลัด F)">
-            <span class="fs-icon">⛶</span><span class="btn-label fs-text"> เต็มจอ</span>
+          <button type="button" class="btn-fs" onclick="toggleFullscreen()" title="ขยายเต็มจอ (คีย์ลัด F)">
+            <span class="fs-icon">⛶</span><span class="fs-text"> เต็มจอ</span>
           </button>
         </div>
       </div>
