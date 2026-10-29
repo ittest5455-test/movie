@@ -182,29 +182,367 @@
       border: 1px solid rgba(59, 130, 246, 0.3);
       font-weight: 500;
     }
+    /* ========================================================= */
+    /* Player Actions & Audio Controls (สำหรับคอมพิวเตอร์ & แท็บเล็ต) */
+    /* ========================================================= */
     .player-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+    }
+    .btn-player {
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: inherit;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+      white-space: nowrap;
+      user-select: none;
+    }
+    .btn-player:hover {
+      background: #334155;
+      border-color: #475569;
+    }
+    .btn-player:active {
+      transform: translateY(1px);
+    }
+
+    /* ปุ่มเปิด-ปิดเสียง & แถบเลื่อนปรับเสียงด่วน */
+    .vol-control-group {
+      display: flex;
+      align-items: center;
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 2px 8px 2px 4px;
+      gap: 6px;
+    }
+    .btn-mute {
+      background: transparent !important;
+      border: none !important;
+      padding: 4px 6px !important;
+      font-size: 13px;
+    }
+    .btn-mute:hover {
+      color: #38bdf8;
+    }
+    .vol-slider-wrap {
+      display: flex;
+      align-items: center;
+      width: 76px;
+    }
+    .vol-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      border-radius: 3px;
+      background: #334155;
+      outline: none;
+      cursor: pointer;
+    }
+    .vol-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #f59e0b;
+      box-shadow: 0 0 6px rgba(245, 158, 11, 0.6);
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+    .vol-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.25);
+    }
+    .vol-slider::-moz-range-thumb {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #f59e0b;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* ปุ่มเมนูเสียง & ดรอปดาวน์สำหรับแท็บเล็ตและคอม */
+    .audio-menu-container {
+      position: relative;
+    }
+    .btn-audio-menu {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(59, 130, 246, 0.15));
+      border: 1px solid rgba(6, 182, 212, 0.4);
+      color: #38bdf8;
+    }
+    .btn-audio-menu:hover {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.25), rgba(59, 130, 246, 0.25));
+      border-color: #38bdf8;
+      color: #fff;
+    }
+    .dropdown-chevron {
+      font-size: 10px;
+      transition: transform 0.2s;
+    }
+    .audio-menu-container.open .dropdown-chevron {
+      transform: rotate(180deg);
+    }
+
+    .audio-dropdown {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      width: 310px;
+      background: #0f172a;
+      border: 1px solid #334155;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+      padding: 16px;
+      z-index: 100;
+      display: none;
+      flex-direction: column;
+      gap: 14px;
+      animation: fadeInDown 0.18s ease-out;
+    }
+    .audio-dropdown.open {
+      display: flex;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .audio-dropdown-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #1e293b;
+      padding-bottom: 10px;
+    }
+    .dropdown-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+    .dropdown-close {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .dropdown-close:hover {
+      color: #fff;
+      background: #1e293b;
+    }
+    .audio-dropdown-section {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .section-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #94a3b8;
+      letter-spacing: 0.3px;
+    }
+    .audio-slider-row {
       display: flex;
       align-items: center;
       gap: 10px;
     }
-    .btn-fs {
-      background: #334155;
-      border: none;
-      color: #fff;
-      padding: 6px 14px;
+    .vol-slider-modal {
+      flex: 1;
+      height: 8px;
+      border-radius: 4px;
+      background: #1e293b;
+      -webkit-appearance: none;
+      appearance: none;
+      cursor: pointer;
+    }
+    .vol-slider-modal::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #38bdf8;
+      box-shadow: 0 0 8px rgba(56, 189, 248, 0.7);
+      cursor: pointer;
+    }
+    .vol-presets {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin-top: 4px;
+    }
+    .preset-btn {
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #cbd5e1;
+      padding: 6px 0;
       border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.15s;
+    }
+    .preset-btn:hover {
+      background: #334155;
+      color: #fff;
+    }
+    .preset-btn.active {
+      background: #0284c7;
+      border-color: #38bdf8;
+      color: #fff;
+      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.4);
+    }
+    .audio-track-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      max-height: 140px;
+      overflow-y: auto;
+    }
+    .track-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #1e293b;
+      border: 1px solid #334155;
+      padding: 8px 10px;
+      border-radius: 8px;
+      color: #cbd5e1;
       font-size: 12px;
       cursor: pointer;
+      text-align: left;
       font-family: inherit;
-      transition: background 0.2s;
+      transition: all 0.15s;
+      width: 100%;
     }
-    .btn-fs:hover { background: #475569; }
+    .track-item:hover {
+      background: #253349;
+      color: #fff;
+    }
+    .track-item.active {
+      background: rgba(56, 189, 248, 0.12);
+      border-color: #38bdf8;
+      color: #38bdf8;
+      font-weight: 600;
+    }
+    .track-item.single-track {
+      cursor: default;
+    }
+    .track-check {
+      font-weight: 800;
+      width: 14px;
+      color: #38bdf8;
+    }
+    .audio-dropdown-footer {
+      font-size: 11px;
+      color: #64748b;
+      text-align: center;
+      border-top: 1px solid #1e293b;
+      padding-top: 8px;
+    }
 
+    /* ปุ่มขยายเต็มจอ */
+    .btn-fs {
+      background: #334155;
+    }
+
+    /* กล่องวิดีโอ & ป้ายลอยเปิดเสียง */
     .video-viewport {
       position: relative;
       width: 100%;
       aspect-ratio: 16 / 9;
       background: #000;
+    }
+    .unmute-banner {
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-10px);
+      background: rgba(15, 23, 42, 0.94);
+      border: 2px solid #f59e0b;
+      box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.5), 0 0 25px rgba(0, 0, 0, 0.85);
+      border-radius: 9999px;
+      padding: 10px 20px 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      z-index: 25;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      backdrop-filter: blur(12px);
+      max-width: 90%;
+    }
+    .unmute-banner.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(0);
+      animation: floatBanner 2.5s ease-in-out infinite alternate;
+    }
+    @keyframes floatBanner {
+      0% { transform: translateX(-50%) translateY(0); box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.5); }
+      100% { transform: translateX(-50%) translateY(-4px); box-shadow: 0 14px 30px -3px rgba(245, 158, 11, 0.7); }
+    }
+    .unmute-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .unmute-icon {
+      font-size: 24px;
+      animation: shakeIcon 1.5s infinite;
+      display: inline-block;
+    }
+    @keyframes shakeIcon {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15) rotate(-6deg); }
+    }
+    .unmute-texts {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
+      text-align: left;
+    }
+    .unmute-main {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .unmute-sub {
+      font-size: 11px;
+      color: #cbd5e1;
+    }
+    .unmute-cta {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #000;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+      transition: transform 0.15s;
+      font-family: inherit;
+    }
+    .unmute-cta:hover {
+      transform: scale(1.05);
     }
     video {
       width: 100%;
@@ -381,14 +719,36 @@
       .active-ch-tag {
         display: none; /* ซ่อนป้ายแท็กบนมือถือ เพื่อให้ชื่อช่องเด่นและไม่ตกบรรทัด */
       }
-      .btn-fs {
-        padding: 5px 9px;
-        font-size: 13px;
-        flex-shrink: 0;
+      .btn-player {
+        padding: 5px 8px;
+        font-size: 12px;
       }
-      .fs-text {
-        display: none; /* บนมือถือแสดงเป็นไอคอน ⛶ แทน */
+      .btn-label {
+        display: none; /* บนมือถือแสดงเฉพาะไอคอน */
       }
+      .vol-slider-wrap {
+        display: none; /* บนมือถือซ่อนแถบเลื่อนบนบาร์ ให้กดเปิดจากเมนูเสียง */
+      }
+      .audio-dropdown {
+        position: fixed;
+        top: auto;
+        bottom: 16px;
+        left: 12px;
+        right: 12px;
+        width: auto;
+        border-radius: 16px;
+        box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.9);
+      }
+      .unmute-banner {
+        top: 10px;
+        padding: 8px 14px;
+        gap: 8px;
+        border-radius: 14px;
+      }
+      .unmute-icon { font-size: 18px; }
+      .unmute-main { font-size: 12px; }
+      .unmute-sub { display: none; }
+      .unmute-cta { font-size: 11px; padding: 5px 10px; }
 
       /* ผังปุ่มกรองช่องแบบสไลด์แนวนอน Swipeable Chips */
       .tv-grid-panel {
@@ -546,18 +906,88 @@
           <span class="active-ch-tag" id="currentTag">ทีวีดิจิทัลไทย</span>
         </div>
         <div class="player-actions">
-          <button class="btn-fs" onclick="toggleFullscreen()" title="ขยายเต็มจอ">
-            <span class="fs-icon">⛶</span><span class="fs-text"> เต็มจอ</span>
+          <!-- ปุ่มเปิด-ปิดเสียง & แถบเลื่อนปรับเสียงด่วน -->
+          <div class="vol-control-group" id="volControlGroup">
+            <button type="button" class="btn-player btn-mute" id="btnMute" onclick="toggleMute()" title="เปิด/ปิดเสียง (คีย์ลัด M)">
+              <span id="muteIcon">🔊</span>
+              <span class="btn-label" id="muteLabel">100%</span>
+            </button>
+            <div class="vol-slider-wrap">
+              <input type="range" id="volSlider" class="vol-slider" min="0" max="100" value="100" title="เลื่อนปรับระดับเสียง" oninput="onVolumeSliderChange(this.value)">
+            </div>
+          </div>
+
+          <!-- ปุ่มเมนูเสียง & ดรอปดาวน์สำหรับแท็บเล็ตและคอม -->
+          <div class="audio-menu-container" id="audioMenuContainer">
+            <button type="button" class="btn-player btn-audio-menu" id="btnAudioMenu" onclick="toggleAudioMenu(event)" title="เมนูเสียงและภาษา (Audio Menu)">
+              <span class="audio-menu-icon">🎧</span>
+              <span class="btn-label">เมนูเสียง</span>
+              <span class="dropdown-chevron">▾</span>
+            </button>
+
+            <!-- ดรอปดาวน์ตั้งค่าเสียง -->
+            <div class="audio-dropdown" id="audioDropdown" onclick="event.stopPropagation()">
+              <div class="audio-dropdown-header">
+                <span class="dropdown-title">🎧 การตั้งค่าเสียง (Audio Menu)</span>
+                <button type="button" class="dropdown-close" onclick="closeAudioMenu(event)">✕</button>
+              </div>
+
+              <!-- Section 1: ระดับเสียง & ปุ่มลัด -->
+              <div class="audio-dropdown-section">
+                <div class="section-label">🔊 ระดับเสียง (<span id="menuVolPercent">100%</span>)</div>
+                <div class="audio-slider-row">
+                  <span style="font-size: 14px;">🔈</span>
+                  <input type="range" id="menuVolSlider" class="vol-slider-modal" min="0" max="100" value="100" oninput="onVolumeSliderChange(this.value)">
+                  <span style="font-size: 14px;">🔊</span>
+                </div>
+                <div class="vol-presets">
+                  <button type="button" class="preset-btn" id="preset0" onclick="setVolumePreset(0)">🔇 ปิดเสียง</button>
+                  <button type="button" class="preset-btn" id="preset30" onclick="setVolumePreset(30)">30%</button>
+                  <button type="button" class="preset-btn" id="preset70" onclick="setVolumePreset(70)">70%</button>
+                  <button type="button" class="preset-btn active" id="preset100" onclick="setVolumePreset(100)">100%</button>
+                </div>
+              </div>
+
+              <!-- Section 2: เลือกภาษาเสียง (Audio Tracks) -->
+              <div class="audio-dropdown-section">
+                <div class="section-label">🌐 ภาษาเสียง / แทร็กเสียง (Audio Track)</div>
+                <div class="audio-track-list" id="audioTrackList">
+                  <!-- เรนเดอร์อัตโนมัติจากสัญญาณ HLS -->
+                </div>
+              </div>
+
+              <div class="audio-dropdown-footer">
+                💡 แท็บเล็ต iPad / Android และคอมพิวเตอร์ปรับเสียงและภาษาได้อิสระ
+              </div>
+            </div>
+          </div>
+
+          <!-- ปุ่มขยายเต็มจอ -->
+          <button type="button" class="btn-player btn-fs" onclick="toggleFullscreen()" title="ขยายเต็มจอ (คีย์ลัด F)">
+            <span class="fs-icon">⛶</span><span class="btn-label fs-text"> เต็มจอ</span>
           </button>
         </div>
       </div>
-      <div class="video-viewport">
+
+      <div class="video-viewport" id="videoViewport">
         <video id="livePlayer" controls playsinline autoplay></video>
+
+        <!-- ป้ายลอยเปิดเสียงเมื่อโดนเบราว์เซอร์ปิดเสียงอัตโนมัติ (แตะ 1 ครั้งเพื่อเปิดเสียง) -->
+        <div class="unmute-banner" id="unmuteBanner" onclick="unmuteAudio(true)">
+          <div class="unmute-badge">
+            <span class="unmute-icon">🔇</span>
+            <div class="unmute-texts">
+              <span class="unmute-main">แตะตรงนี้เพื่อเปิดเสียงทีวีสด</span>
+              <span class="unmute-sub">เบราว์เซอร์ปิดเสียงอัตโนมัติไว้ • แตะ 1 ครั้งเพื่อฟังเสียง 🔊</span>
+            </div>
+          </div>
+          <button type="button" class="unmute-cta">เปิดเสียงเลย 🔊</button>
+        </div>
+
         <div class="loader-overlay" id="playerLoader">
           <div class="spinner"></div>
           <div style="font-size:15px; font-weight:500; color:#e2e8f0;" id="loaderMsg">กำลังเชื่อมต่อสัญญาณสด...</div>
         </div>
-      </div>
       </div>
     </div>
 
@@ -930,7 +1360,7 @@
         `;
 
         card.addEventListener("click", () => {
-          switchChannel(idx);
+          switchChannel(idx, true);
           // เลื่อนขึ้นไปดูจอวิดีโออย่างนุ่มนวล
           const playerAnchor = document.getElementById("playerAnchor");
           if (playerAnchor && window.innerWidth < 900) {
@@ -945,7 +1375,296 @@
     // -------------------------------------------------------------
     // ฟังก์ชันสลับช่องเร็วฟ้าผ่า (Fast Zap & Low Latency Streaming)
     // -------------------------------------------------------------
-    function switchChannel(index) {
+    // -------------------------------------------------------------
+    // ระบบจัดการเสียงอัจฉริยะ (Audio Manager for Desktop, Tablet & Mobile)
+    // -------------------------------------------------------------
+    const unmuteBanner = document.getElementById("unmuteBanner");
+    const btnMute = document.getElementById("btnMute");
+    const muteIcon = document.getElementById("muteIcon");
+    const muteLabel = document.getElementById("muteLabel");
+    const volSlider = document.getElementById("volSlider");
+    const menuVolSlider = document.getElementById("menuVolSlider");
+    const menuVolPercent = document.getElementById("menuVolPercent");
+    const audioMenuContainer = document.getElementById("audioMenuContainer");
+    const audioDropdown = document.getElementById("audioDropdown");
+    const audioTrackList = document.getElementById("audioTrackList");
+
+    // โหลดระดับเสียงเดิมที่ผู้ใช้เคยตั้งไว้
+    function initAudio() {
+      const savedMuted = localStorage.getItem("tv_muted");
+      const savedVol = localStorage.getItem("tv_vol");
+
+      if (savedVol !== null) {
+        const v = parseFloat(savedVol);
+        if (!isNaN(v)) videoElem.volume = Math.max(0, Math.min(1, v));
+      } else {
+        videoElem.volume = 1.0;
+      }
+
+      if (savedMuted === "1") {
+        videoElem.muted = true;
+      }
+
+      updateAudioUI();
+    }
+
+    function updateAudioUI() {
+      const isMuted = videoElem.muted || videoElem.volume === 0;
+      const volPercent = Math.round(isMuted ? 0 : videoElem.volume * 100);
+
+      // อัปเดตไอคอนลำโพง
+      if (isMuted) {
+        muteIcon.textContent = "🔇";
+      } else if (volPercent < 45) {
+        muteIcon.textContent = "🔉";
+      } else {
+        muteIcon.textContent = "🔊";
+      }
+
+      // อัปเดตข้อความเปอร์เซ็นต์
+      if (muteLabel) muteLabel.textContent = isMuted ? "ปิดเสียง" : `${volPercent}%`;
+      if (menuVolPercent) menuVolPercent.textContent = `${volPercent}%`;
+
+      // อัปเดตแถบเลื่อนเสียงทั้งสองจุด
+      if (volSlider) volSlider.value = volPercent;
+      if (menuVolSlider) menuVolSlider.value = volPercent;
+
+      // อัปเดตปุ่ม Preset
+      document.querySelectorAll(".preset-btn").forEach(btn => btn.classList.remove("active"));
+      if (isMuted) {
+        const p0 = document.getElementById("preset0");
+        if (p0) p0.classList.add("active");
+      } else if (volPercent >= 90) {
+        const p100 = document.getElementById("preset100");
+        if (p100) p100.classList.add("active");
+      } else if (volPercent >= 60) {
+        const p70 = document.getElementById("preset70");
+        if (p70) p70.classList.add("active");
+      } else if (volPercent >= 20) {
+        const p30 = document.getElementById("preset30");
+        if (p30) p30.classList.add("active");
+      }
+
+      // ซ่อน/แสดงป้ายลอยเปิดเสียง
+      if (!isMuted && videoElem.volume > 0) {
+        hideUnmuteBanner();
+      } else if (videoElem.currentTime > 0 && !videoElem.paused) {
+        showUnmuteBanner();
+      }
+    }
+
+    function showUnmuteBanner() {
+      if (unmuteBanner) unmuteBanner.classList.add("visible");
+    }
+
+    function hideUnmuteBanner() {
+      if (unmuteBanner) unmuteBanner.classList.remove("visible");
+    }
+
+    // แตะเปิดเสียงด่วน (User gesture unlock)
+    function unmuteAudio(userExplicit = true) {
+      videoElem.muted = false;
+      if (videoElem.volume === 0) {
+        videoElem.volume = 1.0;
+      }
+      if (userExplicit) {
+        localStorage.setItem("tv_muted", "0");
+        localStorage.setItem("tv_vol", String(videoElem.volume));
+      }
+      hideUnmuteBanner();
+      updateAudioUI();
+      if (videoElem.paused) {
+        videoElem.play().catch(() => {});
+      }
+    }
+
+    // สลับเปิด/ปิดเสียง
+    function toggleMute() {
+      if (videoElem.muted || videoElem.volume === 0) {
+        unmuteAudio(true);
+      } else {
+        videoElem.muted = true;
+        localStorage.setItem("tv_muted", "1");
+        updateAudioUI();
+      }
+    }
+
+    // เมื่อผู้ใช้เลื่อนแถบเสียง
+    function onVolumeSliderChange(val) {
+      const num = parseInt(val, 10);
+      const frac = Math.max(0, Math.min(100, num)) / 100;
+      videoElem.volume = frac;
+      if (frac > 0) {
+        videoElem.muted = false;
+        localStorage.setItem("tv_muted", "0");
+        localStorage.setItem("tv_vol", String(frac));
+        hideUnmuteBanner();
+      } else {
+        videoElem.muted = true;
+        localStorage.setItem("tv_muted", "1");
+      }
+      updateAudioUI();
+    }
+
+    // ตั้งค่าระดับเสียงด่วนจากปุ่ม Preset
+    function setVolumePreset(percent) {
+      if (percent === 0) {
+        videoElem.muted = true;
+        localStorage.setItem("tv_muted", "1");
+      } else {
+        videoElem.muted = false;
+        videoElem.volume = percent / 100;
+        localStorage.setItem("tv_muted", "0");
+        localStorage.setItem("tv_vol", String(percent / 100));
+        hideUnmuteBanner();
+      }
+      updateAudioUI();
+    }
+
+    // เปิด/ปิดดรอปดาวน์เมนูเสียง
+    function toggleAudioMenu(e) {
+      if (e) e.stopPropagation();
+      if (audioDropdown) {
+        const isOpen = audioDropdown.classList.contains("open");
+        if (isOpen) {
+          closeAudioMenu();
+        } else {
+          audioDropdown.classList.add("open");
+          if (audioMenuContainer) audioMenuContainer.classList.add("open");
+          updateAudioTracksList();
+        }
+      }
+    }
+
+    function closeAudioMenu(e) {
+      if (e) e.stopPropagation();
+      if (audioDropdown) audioDropdown.classList.remove("open");
+      if (audioMenuContainer) audioMenuContainer.classList.remove("open");
+    }
+
+    // ดึงและแสดงรายการภาษาเสียง (Audio Tracks)
+    function updateAudioTracksList() {
+      if (!audioTrackList) return;
+      audioTrackList.innerHTML = "";
+
+      let tracks = [];
+      let currentTrackIdx = -1;
+
+      if (hlsInstance && hlsInstance.audioTracks && hlsInstance.audioTracks.length > 0) {
+        tracks = hlsInstance.audioTracks;
+        currentTrackIdx = hlsInstance.audioTrack;
+      } else if (videoElem.audioTracks && videoElem.audioTracks.length > 0) {
+        tracks = Array.from(videoElem.audioTracks);
+        currentTrackIdx = tracks.findIndex(t => t.enabled);
+      }
+
+      if (tracks.length > 1) {
+        tracks.forEach((t, idx) => {
+          const isSelected = (idx === currentTrackIdx || (currentTrackIdx === -1 && idx === 0));
+          const item = document.createElement("button");
+          item.type = "button";
+          item.className = `track-item ${isSelected ? "active" : ""}`;
+
+          let name = t.name || t.lang || `แทร็ก ${idx + 1}`;
+          const nLower = name.toLowerCase();
+          if (nLower.includes("th") || nLower.includes("thai")) {
+            name = "🇹🇭 ภาษาไทย (Thai)";
+          } else if (nLower.includes("en") || nLower.includes("eng")) {
+            name = "🇬🇧 เสียงต้นฉบับ / Soundtrack (EN)";
+          }
+
+          item.innerHTML = `
+            <span class="track-check">${isSelected ? "✓" : "○"}</span>
+            <span class="track-name">${name}</span>
+          `;
+
+          item.onclick = (e) => {
+            e.stopPropagation();
+            selectAudioTrack(idx);
+          };
+          audioTrackList.appendChild(item);
+        });
+      } else {
+        const item = document.createElement("div");
+        item.className = "track-item active single-track";
+        item.innerHTML = `
+          <span class="track-check">✓</span>
+          <div style="display:flex; flex-direction:column; gap:2px;">
+            <span class="track-name" style="color:#38bdf8; font-weight:600;">เสียงหลัก (สัญญาณตรงจากสถานี HD)</span>
+            <span style="font-size:11px; color:#94a3b8;">ระบบสเตอริโอมาตรฐาน สัญญาณเสียงสด</span>
+          </div>
+        `;
+        audioTrackList.appendChild(item);
+      }
+    }
+
+    function selectAudioTrack(idx) {
+      if (hlsInstance && hlsInstance.audioTracks && hlsInstance.audioTracks.length > idx) {
+        hlsInstance.audioTrack = idx;
+      } else if (videoElem.audioTracks && videoElem.audioTracks.length > idx) {
+        for (let i = 0; i < videoElem.audioTracks.length; i++) {
+          videoElem.audioTracks[i].enabled = (i === idx);
+        }
+      }
+      updateAudioTracksList();
+    }
+
+    // ปิดเมนูเมื่อคลิกด้านนอก
+    document.addEventListener("click", (e) => {
+      if (audioMenuContainer && !audioMenuContainer.contains(e.target)) {
+        closeAudioMenu();
+      }
+    });
+
+    // ตรวจจับเหตุการณ์ของวิดีโอ
+    videoElem.addEventListener("volumechange", () => {
+      updateAudioUI();
+    });
+
+    videoElem.addEventListener("click", () => {
+      if (videoElem.muted || videoElem.volume === 0) {
+        unmuteAudio(true);
+      }
+    });
+
+    // -------------------------------------------------------------
+    // ฟังก์ชันสั่งเล่นพร้อมจัดการ Autoplay Policy & Sound อย่างรอบคอบ
+    // -------------------------------------------------------------
+    function attemptPlay(fromUserGesture) {
+      const userPrefMuted = localStorage.getItem("tv_muted") === "1";
+
+      if (fromUserGesture) {
+        // เมื่อผู้ใช้กดคลิกเปลี่ยนช่อง ถือเป็น User Gesture ให้เปิดเสียงได้ทันทีถ้าผู้ใช้ไม่ได้สั่งปิดไว้
+        if (!userPrefMuted) {
+          videoElem.muted = false;
+        }
+      } else if (userPrefMuted) {
+        videoElem.muted = true;
+      }
+
+      const playPromise = videoElem.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          if (videoElem.muted || videoElem.volume === 0) {
+            showUnmuteBanner();
+          } else {
+            hideUnmuteBanner();
+          }
+          updateAudioUI();
+        }).catch(() => {
+          // หากเบราว์เซอร์ (โดยเฉพาะแท็บเล็ต / iPad / มือถือ) บล็อกเสียงในการเริ่มเล่นอัตโนมัติ
+          videoElem.muted = true;
+          showUnmuteBanner();
+          updateAudioUI();
+          videoElem.play().catch(() => {});
+        });
+      }
+    }
+
+    // -------------------------------------------------------------
+    // ฟังก์ชันสลับช่องเร็วฟ้าผ่า (Fast Zap & Low Latency Streaming)
+    // -------------------------------------------------------------
+    function switchChannel(index, fromUserGesture = false) {
       if (index < 0 || index >= TV_CHANNELS.length) return;
       activeChannelIndex = index;
       const ch = TV_CHANNELS[index];
@@ -965,7 +1684,7 @@
       loaderElem.style.pointerEvents = "auto";
       loaderMsg.textContent = `กำลังสลับช่องไปยัง ${ch.name}...`;
 
-      // 1. ยกเลิกการดาวน์โหลดชิ้นส่วนวิดีโอช่องเดิมทันที (ตัดภาระเน็ต 100%)
+      // 1. ยกเลิกการดาวน์โหลดชิ้นส่วนวิดีโอช่องเดิมทันที
       if (hlsInstance) {
         try {
           hlsInstance.stopLoad();
@@ -975,10 +1694,10 @@
         hlsInstance = null;
       }
 
-      // 2. ล้างบัฟเฟอร์ตัวเล่นวิดีโอของเดิมออกทันที
+      // 2. ล้างบัฟเฟอร์ตัวเล่นวิดีโอของเดิมออกทันที (คงปุ่มควบคุม controls ไว้เสมอ)
       videoElem.pause();
       videoElem.removeAttribute("src");
-      videoElem.removeAttribute("controls");
+      videoElem.controls = true;
       videoElem.load();
 
       // 3. เริ่มต้นโหลดช่องใหม่ด้วยโปรไฟล์ Fast Start
@@ -986,13 +1705,13 @@
         hlsInstance = new Hls({
           enableWorker: true,
           lowLatencyMode: true,
-          backBufferLength: 0,             // ไม่เก็บข้อมูลย้อนหลัง ประหยัด RAM
-          maxBufferLength: 8,              // บัฟเฟอร์ล่วงหน้าสั้นลง เพื่อให้เล่นได้ทันทีไม่ต้องรอนาน
+          backBufferLength: 0,
+          maxBufferLength: 8,
           maxMaxBufferLength: 15,
-          liveSyncDurationCount: 1,        // เริ่มเล่นทันทีที่ได้ Segment แรก (ลดเวลารอจาก 15 วิ เหลือ ~1-2 วิ)
-          liveMaxLatencyDurationCount: 3,  // คุม Latency ให้สดเสมอ
-          initialLiveManifestSize: 1,      // ไม่ต้องรอโหลดผังหลายรอบ
-          startFragPrefetch: true,         // ทันทีที่ Segment แรกเริ่มเล่น ให้ดึงอันถัดไปทันทีกันสะดุด
+          liveSyncDurationCount: 1,
+          liveMaxLatencyDurationCount: 3,
+          initialLiveManifestSize: 1,
+          startFragPrefetch: true,
           maxBufferHole: 0.5,
           nudgeOffset: 0.1,
           nudgeMaxRetry: 5,
@@ -1004,19 +1723,16 @@
         hlsInstance.loadSource(ch.url);
         hlsInstance.attachMedia(videoElem);
 
-        // ทันทีที่ Manifest โหลดเสร็จ สั่งเล่นทันที
-        hlsInstance.on(Hls.Events.MANIFEST_PARSED, function() {
-          const playPromise = videoElem.play();
-          if (playPromise !== undefined) {
-            playPromise.catch(function() {
-              // กรณี Browser บล็อกเสียงอัตโนมัติ ให้ลองเล่นแบบปิดเสียงก่อน
-              videoElem.muted = true;
-              videoElem.play().catch(function() {});
-            });
-          }
+        // ดักจับแทร็กเสียง
+        hlsInstance.on(Hls.Events.AUDIO_TRACKS_UPDATED, function() {
+          updateAudioTracksList();
         });
 
-        // เมื่อ Segment แรกเข้า Buffer พร้อมเล่น ให้ปิด Loader ทันที
+        hlsInstance.on(Hls.Events.MANIFEST_PARSED, function() {
+          updateAudioTracksList();
+          attemptPlay(fromUserGesture);
+        });
+
         hlsInstance.on(Hls.Events.FRAG_BUFFERED, function() {
           loaderElem.style.opacity = "0";
           loaderElem.style.pointerEvents = "none";
@@ -1041,7 +1757,11 @@
         });
       } else if (videoElem.canPlayType("application/vnd.apple.mpegurl")) {
         videoElem.src = ch.url;
-        videoElem.play().catch(function() {});
+        videoElem.addEventListener("loadedmetadata", function onMeta() {
+          videoElem.removeEventListener("loadedmetadata", onMeta);
+          updateAudioTracksList();
+        });
+        attemptPlay(fromUserGesture);
       }
 
       renderGrid();
@@ -1052,7 +1772,10 @@
       loaderElem.style.pointerEvents = "none";
     }
 
-    videoElem.addEventListener("playing", hideLoader);
+    videoElem.addEventListener("playing", function() {
+      hideLoader();
+      updateAudioUI();
+    });
     videoElem.addEventListener("canplay", hideLoader);
     videoElem.addEventListener("loadeddata", hideLoader);
     videoElem.addEventListener("timeupdate", function() {
@@ -1076,21 +1799,46 @@
 
     function toggleFullscreen() {
       if (!document.fullscreenElement) {
-        videoElem.requestFullscreen().catch(() => {});
+        const playerCard = document.getElementById("playerAnchor") || videoElem;
+        if (playerCard.requestFullscreen) {
+          playerCard.requestFullscreen().catch(() => videoElem.requestFullscreen().catch(() => {}));
+        } else if (videoElem.webkitRequestFullscreen) {
+          videoElem.webkitRequestFullscreen();
+        }
       } else {
-        document.exitFullscreen().catch(() => {});
+        if (document.exitFullscreen) {
+          document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        }
       }
     }
 
-    // คีย์ลัด F = เต็มจอ
+    // คีย์ลัดแป้นพิมพ์: F = เต็มจอ, M = เปิด/ปิดเสียง, ลูกศรขึ้น/ลง = ปรับเสียง
     window.addEventListener("keydown", (e) => {
-      if (e.key.toLowerCase() === "f") toggleFullscreen();
+      const tag = (e.target.tagName || "").toLowerCase();
+      if (tag === "input" || tag === "textarea") return;
+
+      if (e.key.toLowerCase() === "f") {
+        e.preventDefault();
+        toggleFullscreen();
+      } else if (e.key.toLowerCase() === "m") {
+        e.preventDefault();
+        toggleMute();
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        onVolumeSliderChange(Math.min(100, (videoElem.volume * 100) + 10));
+      } else if (e.key === "ArrowDown") {
+        e.preventDefault();
+        onVolumeSliderChange(Math.max(0, (videoElem.volume * 100) - 10));
+      }
     });
 
     // เริ่มต้นทำงาน
     document.addEventListener("DOMContentLoaded", () => {
+      initAudio();
       renderGrid();
-      switchChannel(17); // เล่นช่อง 3 HD อัตโนมัติเป็นช่องแรก
+      switchChannel(17, false); // เล่นช่อง 3 HD อัตโนมัติเป็นช่องแรก
     });
   </script>
 
