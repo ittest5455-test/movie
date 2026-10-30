@@ -409,124 +409,130 @@ def update_24hd_media():
 def update_goseries4k():
     print("\n--- กำลังตรวจสอบซีรีส์ใหม่และอัปเดตตอนล่าสุดจาก GOSERIES4K (พากย์ไทย) ---")
     new_series = []
-    base_cat = "https://goseries4k.com/category/%e0%b8%94%e0%b8%b9%e0%b8%8b%e0%b8%b5%e0%b8%a3%e0%b8%b5%e0%b9%88%e0%b8%a2%e0%b9%8c-2026/"
+    categories = [
+        "https://goseries4k.com/category/%e0%b8%94%e0%b8%b9%e0%b8%8b%e0%b8%b5%e0%b8%a3%e0%b8%b5%e0%b9%88%e0%b8%a2%e0%b9%8c-2026/",
+        "https://goseries4k.com/cat_category/%e0%b8%94%e0%b8%b9%e0%b8%8b%e0%b8%b5%e0%b8%a3%e0%b8%b5%e0%b9%88%e0%b8%a2%e0%b9%8c%e0%b8%88%e0%b8%b5%e0%b8%99%e0%b8%9e%e0%b8%b2%e0%b8%81%e0%b8%a2%e0%b9%8c%e0%b9%84%e0%b8%97%e0%b8%a2/",
+        "https://goseries4k.com/cat_category/%e0%b8%94%e0%b8%b9%e0%b8%8b%e0%b8%b5%e0%b8%a3%e0%b8%b5%e0%b9%88%e0%b8%a2%e0%b9%8c%e0%b9%80%e0%b8%81%e0%b8%b2%e0%b8%ab%e0%b8%a5%e0%b8%b5%e0%b8%9e%e0%b8%b2%e0%b8%81%e0%b8%a2%e0%b9%8c%e0%b9%84%e0%b8%97/"
+    ]
     
-    for page in range(1, 6):
-        p_url = base_cat if page == 1 else f"{base_cat}page/{page}/"
-        try:
-            req = urllib.request.Request(p_url, headers=HEADERS)
-            with urllib.request.urlopen(req, timeout=10) as resp:
-                html_txt = resp.read().decode('utf-8', errors='ignore')
-        except Exception as e:
-            print(f"  [-] ข้อผิดพลาดหน้า {page}: {e}")
-            break
-            
-        items = re.findall(r'<a[^>]+href=["\'](https://goseries4k\.com/[^"\'#]+/)["\'][^>]*>(.*?)</a>', html_txt, re.DOTALL)
-        
-        seen_on_page = set()
-        for link, inner in items:
-            if any(x in link for x in ['category', 'cat_category', 'tag', 'page', 'wp-']) or len(link) < 25 or link in seen_on_page:
-                continue
-            seen_on_page.add(link)
-            
-            title_m = re.search(r'alt=["\']([^"\']+)["\']', inner)
-            raw_card_title = title_m.group(1) if title_m else ""
-            
+    seen_all_links = set()
+    for base_cat in categories:
+        for page in range(1, 4):
+            p_url = base_cat if page == 1 else f"{base_cat}page/{page}/"
             try:
-                m_req = urllib.request.Request(link, headers=HEADERS)
-                with urllib.request.urlopen(m_req, timeout=8) as m_resp:
-                    m_html = m_resp.read().decode('utf-8', errors='ignore')
-                    
-                # Strict Thai Dubbed check: Must have "พากย์ไทย" in title or "-thai" in URL, and NOT sub-only
-                has_dub_keyword = ("พากย์ไทย" in raw_card_title or "-thai" in link)
-                is_sub_only = ("ซับไทย" in raw_card_title and "พากย์ไทย" not in raw_card_title)
-                is_thai = has_dub_keyword and not is_sub_only
-                if not is_thai: continue
+                req = urllib.request.Request(p_url, headers=HEADERS)
+                with urllib.request.urlopen(req, timeout=10) as resp:
+                    html_txt = resp.read().decode('utf-8', errors='ignore')
+            except Exception as e:
+                print(f"  [-] ข้อผิดพลาดหน้า {page}: {e}")
+                break
                 
-                og_title = re.search(r'<meta property="og:title" content="([^"]+)"', m_html)
-                title = og_title.group(1) if og_title else raw_card_title
-                title = html.unescape(title)
-                
-                # Strict filter: Block only if sub-only (no Thai dub)
-                if "ซับไทย" in title and "พากย์ไทย" not in title and "-thai" not in link:
-                    continue
-                  
-                title = re.sub(r'^(ฟรี|HD|Zoom|ดูซีรี่ย์|ดูซีรีส์|ซีรี่ย์|ซีรีส์|ออนไลน์)\s*', '', title).strip()
-                title = re.sub(r'\s*(จบ\s*G4|G4|HD|Full HD)\s*$', '', title, flags=re.IGNORECASE).strip()
-                
-                og_img = re.search(r'<meta property="og:image" content="([^"]+)"', m_html)
-                poster = og_img.group(1) if og_img else ""
-                
-                og_desc = re.search(r'<meta property="og:description" content="([^"]+)"', m_html)
-                desc = og_desc.group(1) if og_desc else f"ดูซีรีส์ {title} พากย์ไทย เต็มเรื่อง 2026"
-                
-                m_cache = re.search(r'window\.miru_ep_cache\s*=\s*(\{.*?\});', m_html, re.DOTALL) or re.search(r'miru_ep_cache\s*=\s*(\{.*?\});', m_html, re.DOTALL)
-                ep_cache = {}
-                if m_cache:
-                    try: ep_cache = json.loads(m_cache.group(1))
-                    except: pass
-                    
-                buttons = re.findall(r'<button[^>]+class="[^"]*mp-ep-btn[^"]*"[^>]+data-id=["\'](\d+)["\'][^>]*>(.*?)</button>', m_html, re.DOTALL) or re.findall(r'<button[^>]+data-id=["\'](\d+)["\'][^>]*>(.*?)</button>', m_html, re.DOTALL)
-                
-                ordered_ep_urls = {}
-                curr_ep = 1
-                for did, btxt in buttons:
-                    c_txt = re.sub(r'<[^>]+>', '', btxt).strip()
-                    ep_m = re.search(r'(?:EP\.?|ตอนที่|ตอน)\s*(\d+)', c_txt, re.IGNORECASE)
-                    if ep_m:
-                        ep_n = int(ep_m.group(1))
-                        curr_ep = ep_n
-                    elif any(x in c_txt.upper() for x in ["END", "จบ", "LAST", "ตอนจบ"]):
-                        ep_n = curr_ep + 1 if str(curr_ep) in ordered_ep_urls else curr_ep
-                    else:
-                        ep_n = curr_ep
-                        
-                    if str(ep_n) in ordered_ep_urls: continue
-                    ep_h = ep_cache.get(did, "")
-                    if ep_h:
-                        embed_m = re.search(r'https?:\\?/\\?/torbo007\.com\\?/embed\\?/[a-zA-Z0-9]+', ep_h) or re.search(r'(?:src|data-src)=["\'](https?://[^"\']+)["\']', ep_h)
-                        if embed_m:
-                            ordered_ep_urls[str(ep_n)] = embed_m.group(0).replace('\\/', '/')
-                            curr_ep = ep_n
-                            
-                if not ordered_ep_urls: continue
-                
-                # Normalize sequential keys
-                sorted_k = sorted(ordered_ep_urls.keys(), key=lambda x: int(x) if x.isdigit() else 999)
-                normalized_urls = {str(i): ordered_ep_urls[k] for i, k in enumerate(sorted_k, 1)}
-                total_eps = len(normalized_urls)
-                
-                post_id_m = re.search(r'data-post-id=["\'](\d+)["\']', m_html)
-                post_id = post_id_m.group(1) if post_id_m else "gs-" + str(abs(hash(link)))[:6]
-                
-                safe_poster = safe_url(poster)
-                series_obj = {
-                    "titleTh": title,
-                    "titleEn": title,
-                    "year": 2026,
-                    "poster": safe_poster,
-                    "backdrop": safe_poster,
-                    "videoUrl": normalized_urls.get("1", ""),
-                    "sourceType": "embed",
-                    "description": desc,
-                    "rating": 8.8,
-                    "genres": ["ซีรีส์แนะนำใหม่ 2026", "พากย์ไทย"],
-                    "duration": f"ซีรีส์ {total_eps} ตอนจบ",
-                    "trailerUrl": "",
-                    "cast": [],
-                    "source": "GOSERIES4K",
-                    "episodes": [f"ตอนที่ {i}" for i in range(1, total_eps + 1)],
-                    "episodeUrls": normalized_urls,
-                    "languages": ["Thai (พากย์ไทย)"],
-                    "id": f"gs-{post_id}",
-                    "postId": post_id,
-                    "originalUrl": link
-                }
-                new_series.append(series_obj)
-                print(f"  [+] GOSERIES4K: {title} ({total_eps} ตอน)")
-                time.sleep(0.1)
-            except Exception: pass
+            items = re.findall(r'<a[^>]+href=["\'](https://goseries4k\.com/[^"\'#]+/)["\'][^>]*>(.*?)</a>', html_txt, re.DOTALL)
             
+            seen_on_page = set()
+            for link, inner in items:
+                if any(x in link for x in ['category', 'cat_category', 'tag', 'page', 'wp-']) or len(link) < 25 or link in seen_on_page or link in seen_all_links:
+                    continue
+                seen_on_page.add(link)
+                seen_all_links.add(link)
+                
+                title_m = re.search(r'alt=["\']([^"\']+)["\']', inner)
+                raw_card_title = title_m.group(1) if title_m else ""
+                
+                try:
+                    m_req = urllib.request.Request(link, headers=HEADERS)
+                    with urllib.request.urlopen(m_req, timeout=8) as m_resp:
+                        m_html = m_resp.read().decode('utf-8', errors='ignore')
+                        
+                    og_title = re.search(r'<meta property="og:title" content="([^"]+)"', m_html)
+                    title = og_title.group(1) if og_title else raw_card_title
+                    title = html.unescape(title)
+                    
+                    # ตรวจสอบพากย์ไทย (ต้องมีคำว่า "พากย์ไทย" ในหัวข้อ หรือมี "-thai" ใน URL หรือมีป้าย "SUB | TH")
+                    has_thai_dub = ("พากย์ไทย" in title or "-thai" in link or "SUB | TH" in m_html)
+                    # บล็อกหากเป็นซับไทยล้วนโดยไม่มีพากย์ไทย
+                    if "ซับไทย" in title and "พากย์ไทย" not in title and "-thai" not in link and "SUB | TH" not in m_html:
+                        continue
+                    if not has_thai_dub:
+                        continue
+                      
+                    title = re.sub(r'^(ฟรี|HD|Zoom|ดูซีรี่ย์|ดูซีรีส์|ซีรี่ย์|ซีรีส์|ออนไลน์)\s*', '', title).strip()
+                    title = re.sub(r'\s*(จบ\s*G4|G4|HD|Full HD)\s*$', '', title, flags=re.IGNORECASE).strip()
+                    
+                    og_img = re.search(r'<meta property="og:image" content="([^"]+)"', m_html)
+                    poster = og_img.group(1) if og_img else ""
+                    
+                    og_desc = re.search(r'<meta property="og:description" content="([^"]+)"', m_html)
+                    desc = og_desc.group(1) if og_desc else f"ดูซีรีส์ {title} พากย์ไทย เต็มเรื่อง 2026"
+                    
+                    m_cache = re.search(r'window\.miru_ep_cache\s*=\s*(\{.*?\});', m_html, re.DOTALL) or re.search(r'miru_ep_cache\s*=\s*(\{.*?\});', m_html, re.DOTALL)
+                    ep_cache = {}
+                    if m_cache:
+                        try: ep_cache = json.loads(m_cache.group(1))
+                        except: pass
+                        
+                    buttons = re.findall(r'<button[^>]+class="[^"]*mp-ep-btn[^"]*"[^>]+data-id=["\'](\d+)["\'][^>]*>(.*?)</button>', m_html, re.DOTALL) or re.findall(r'<button[^>]+data-id=["\'](\d+)["\'][^>]*>(.*?)</button>', m_html, re.DOTALL)
+                    
+                    ordered_ep_urls = {}
+                    curr_ep = 1
+                    for did, btxt in buttons:
+                        c_txt = re.sub(r'<[^>]+>', '', btxt).strip()
+                        ep_m = re.search(r'(?:EP\.?|ตอนที่|ตอน)\s*(\d+)', c_txt, re.IGNORECASE)
+                        if ep_m:
+                            ep_n = int(ep_m.group(1))
+                            curr_ep = ep_n
+                        elif any(x in c_txt.upper() for x in ["END", "จบ", "LAST", "ตอนจบ"]):
+                            ep_n = curr_ep + 1 if str(curr_ep) in ordered_ep_urls else curr_ep
+                        else:
+                            ep_n = curr_ep
+                            
+                        if str(ep_n) in ordered_ep_urls: continue
+                        ep_h = ep_cache.get(did, "")
+                        if ep_h:
+                            embed_m = re.search(r'https?:\\?/\\?/torbo007\.com\\?/embed\\?/[a-zA-Z0-9]+', ep_h) or re.search(r'(?:src|data-src)=["\'](https?://[^"\']+)["\']', ep_h)
+                            if embed_m:
+                                ordered_ep_urls[str(ep_n)] = embed_m.group(0).replace('\\/', '/')
+                                curr_ep = ep_n
+                                
+                    if not ordered_ep_urls: continue
+                    
+                    # Normalize sequential keys
+                    sorted_k = sorted(ordered_ep_urls.keys(), key=lambda x: int(x) if x.isdigit() else 999)
+                    normalized_urls = {str(i): ordered_ep_urls[k] for i, k in enumerate(sorted_k, 1)}
+                    total_eps = len(normalized_urls)
+                    
+                    post_id_m = re.search(r'data-post-id=["\'](\d+)["\']', m_html)
+                    post_id = post_id_m.group(1) if post_id_m else "gs-" + str(abs(hash(link)))[:6]
+                    
+                    safe_poster = safe_url(poster)
+                    series_obj = {
+                        "titleTh": title,
+                        "titleEn": title,
+                        "year": 2026,
+                        "poster": safe_poster,
+                        "backdrop": safe_poster,
+                        "videoUrl": normalized_urls.get("1", ""),
+                        "sourceType": "embed",
+                        "description": desc,
+                        "rating": 8.8,
+                        "genres": ["ซีรีส์แนะนำใหม่ 2026", "พากย์ไทย"],
+                        "duration": f"ซีรีส์ {total_eps} ตอนจบ",
+                        "trailerUrl": "",
+                        "cast": [],
+                        "source": "GOSERIES4K",
+                        "episodes": [f"ตอนที่ {i}" for i in range(1, total_eps + 1)],
+                        "episodeUrls": normalized_urls,
+                        "languages": ["Thai (พากย์ไทย)"],
+                        "id": f"gs-{post_id}",
+                        "postId": post_id,
+                        "originalUrl": link
+                    }
+                    new_series.append(series_obj)
+                    print(f"  [+] GOSERIES4K: {title} ({total_eps} ตอน)")
+                    time.sleep(0.1)
+                except Exception as e:
+                    pass
+                
     return new_series
 
 def update_wow_drama(max_pages=2):
