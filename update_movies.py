@@ -515,7 +515,7 @@ def update_goseries4k():
                         "sourceType": "embed",
                         "description": desc,
                         "rating": 8.8,
-                        "genres": ["ซีรีส์แนะนำใหม่ 2026", "พากย์ไทย"],
+                        "genres": ["ดูซีรี่ย์พากย์ไทย", "ซีรีส์แนะนำใหม่ 2026", "พากย์ไทย"],
                         "duration": f"ซีรีส์ {total_eps} ตอนจบ",
                         "trailerUrl": "",
                         "cast": [],
@@ -712,6 +712,117 @@ def update_wow_drama(max_pages=2):
     print(f"\n[✓] รวมดึงได้ทั้งหมด: {len(new_items)} เรื่องจาก WOW-DRAMA")
     return new_items
 
+def update_24hd_today(min_rating=6.0, max_pages=3):
+    """
+    ดึงข้อมูลภาพยนตร์จาก 24HD.TODAY (https://www.24hd.today/)
+    เงื่อนไข:
+      - เฉพาะภาพยนตร์ที่มีเสียงพากย์ไทย
+      - คะแนน IMDb เรตติ้ง 6.0 ดาวขึ้นไป (>= 6.0⭐)
+    """
+    print(f"\n--- กำลังตรวจสอบภาพยนตร์ใหม่จาก 24HD.TODAY (เรตติ้ง >= {min_rating}⭐ พากย์ไทย) ---")
+    new_movies = []
+    
+    categories = [
+        "https://www.24hd.today/",
+        "https://www.24hd.today/category/thai-movie/",
+        "https://www.24hd.today/category/netflix/",
+        "https://www.24hd.today/category/inter-movie/",
+        "https://www.24hd.today/category/asia-movie/"
+    ]
+    
+    seen_links = set()
+    for cat_url in categories:
+        for page in range(1, max_pages + 1):
+            p_url = cat_url if page == 1 else f"{cat_url}page/{page}/"
+            try:
+                req = urllib.request.Request(p_url, headers=HEADERS)
+                with urllib.request.urlopen(req, timeout=10) as resp:
+                    page_html = resp.read().decode('utf-8', errors='ignore')
+            except Exception as e:
+                break
+                
+            links = re.findall(r'<a[^>]+href=["\'](https://www\.24hd\.today/[^"\'#/]+/?)["\'][^>]*>', page_html)
+            for link in links:
+                if any(x in link for x in ["category", "page", "wp-", "anime", "dmca", "contact", "request", "tag", "feed", "privacy", "about", "author"]):
+                    continue
+                if len(link) < 28 or link in seen_links:
+                    continue
+                seen_links.add(link)
+                
+                try:
+                    m_req = urllib.request.Request(link, headers=HEADERS)
+                    with urllib.request.urlopen(m_req, timeout=8) as m_resp:
+                        m_html = m_resp.read().decode('utf-8', errors='ignore')
+                        
+                    # 1. ตรวจสอบคะแนน IMDb (ต้อง >= min_rating ดาว)
+                    score_m = re.search(r'imdb_46x22.*?<h2[^>]*>([0-9.]+)(?:/10)?</h2>', m_html, re.DOTALL)
+                    if not score_m:
+                        score_m = re.search(r'<h2[^>]*class="elementor-heading-title[^"]*"[^>]*>([0-9.]+)/10</h2>', m_html)
+                    score = float(score_m.group(1)) if score_m else 0.0
+                    if score < min_rating:
+                        continue
+                        
+                    # 2. ตรวจสอบเสียงพากย์ไทย (ต้องมี "เสียง : พากย์ไทย" หรือ "พากย์ไทย" และไม่ใช่ซับไทยล้วน)
+                    sound_m = re.search(r'เสียง\s*:\s*([^<]+)', m_html)
+                    sound = sound_m.group(1).strip() if sound_m else ""
+                    if "พากย์ไทย" not in sound:
+                        continue
+                        
+                    # 3. ดึงลิงก์เครื่องเล่นวิดีโอ Iframe
+                    iframe_m = re.search(r'<iframe[^>]+data-src=["\'](https://[^\'"]+)["\']', m_html) or re.search(r'<iframe[^>]+src=["\'](https://[^\'"]+)["\']', m_html)
+                    if not iframe_m:
+                        continue
+                    video_url = iframe_m.group(1)
+                    
+                    # 4. ข้อมูลชื่อเรื่อง โปสเตอร์ รายละเอียด
+                    og_title = re.search(r'<meta property="og:title" content="([^"]+)"', m_html)
+                    raw_title = og_title.group(1) if og_title else link.strip("/").split("/")[-1]
+                    raw_title = html.unescape(raw_title)
+                    title = re.sub(r'^(ฟรี|HD|Zoom|ดูหนังออนไลน์|ดูหนัง)\s*', '', raw_title).strip()
+                    title = re.sub(r'\s*(ดูหนังฟรี|หนังHD|เต็มเรื่อง|พากย์ไทย|ซับไทย|มาสเตอร์|ชนโรง).*$', '', title).strip()
+                    
+                    og_img = re.search(r'<meta property="og:image" content="([^"]+)"', m_html)
+                    poster = og_img.group(1) if og_img else ""
+                    
+                    og_desc = re.search(r'<meta property="og:description" content="([^"]+)"', m_html)
+                    desc = og_desc.group(1) if og_desc else f"ดูหนังออนไลน์ {title} พากย์ไทย เต็มเรื่อง HD"
+                    
+                    year_m = re.search(r'\((\d{4})\)', raw_title) or re.search(r'/(\d{4})/?$', link)
+                    year = int(year_m.group(1)) if year_m else 2026
+                    
+                    post_id_m = re.search(r'data-post-id=["\'](\d+)["\']', m_html) or re.search(r'post-(\d+)', m_html)
+                    post_id = post_id_m.group(1) if post_id_m else str(abs(hash(link)))[:6]
+                    
+                    safe_poster = safe_url(poster)
+                    movie_obj = {
+                        "titleTh": title,
+                        "titleEn": title,
+                        "year": year,
+                        "poster": safe_poster,
+                        "backdrop": safe_poster,
+                        "videoUrl": video_url,
+                        "sourceType": "embed",
+                        "description": desc,
+                        "rating": score,
+                        "genres": ["24HD.TODAY", "พากย์ไทย", f"{score}⭐"],
+                        "duration": "ภาพยนตร์",
+                        "trailerUrl": "",
+                        "cast": [],
+                        "source": "24HD.TODAY",
+                        "episodes": ["เต็มเรื่อง"],
+                        "episodeUrls": {"1": video_url},
+                        "languages": ["Thai (พากย์ไทย)"],
+                        "id": f"24hdtoday-{post_id}",
+                        "postId": post_id,
+                        "originalUrl": link
+                    }
+                    new_movies.append(movie_obj)
+                    print(f"  [+] 24HD.TODAY ({score}⭐ พากย์ไทย): {title}")
+                    time.sleep(0.08)
+                except Exception:
+                    pass
+    return new_movies
+
 def main():
     print("=" * 60)
     print("🚀 เริ่มต้นระบบอัปเดตภาพยนตร์และซีรีส์ใหม่ล่าสุด...")
@@ -726,6 +837,7 @@ def main():
     scraped_media = update_24hd_media()
     scraped_gs = update_goseries4k()
     scraped_wow = update_wow_drama(max_pages=2)
+    scraped_today = update_24hd_today(min_rating=6.0, max_pages=3)
     
     # 2. Merge intelligently
     existing_map = {m.get("originalUrl", m.get("id", "")): m for m in existing}
@@ -736,7 +848,7 @@ def main():
     added_new = 0
     updated_eps = 0
     
-    all_new_items = scraped_top + scraped_media + scraped_24hda + scraped_gs + scraped_wow
+    all_new_items = scraped_top + scraped_media + scraped_24hda + scraped_today + scraped_gs + scraped_wow
     
     for item in all_new_items:
         key = item.get("originalUrl", item.get("id", ""))

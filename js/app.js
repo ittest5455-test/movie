@@ -3175,12 +3175,19 @@ function initMovieStreamApp() {
       } else if (genre === "drama" || genre === "ละครไทย") {
         const dramaMovies = movieList.filter(m => (m.genres && (m.genres.includes("ละครไทย") || m.genres.includes("ละครไทย ย้อนหลัง"))) || (m.titleTh && (m.titleTh.includes("ละคร") || m.titleTh.includes("EP"))));
         showGridView(`🎭 รวมดูละครไทย ย้อนหลัง (${dramaMovies.length} เรื่อง)`, dramaMovies);
-      } else if (genre === "korean-series") {
-        const krMovies = movieList.filter(m => (m.genres && m.genres.some(g => g.includes("เกาหลี"))) || (m.titleTh && m.titleTh.includes("เกาหลี")));
-        showGridView(`🥢 รวมซีรีส์เกาหลี ยอดนิยม (${krMovies.length} เรื่อง)`, krMovies);
-      } else if (genre === "chinese-series") {
-        const cnMovies = movieList.filter(m => (m.genres && m.genres.some(g => g.includes("จีน"))) || (m.titleTh && m.titleTh.includes("จีน")));
-        showGridView(`🏮 รวมซีรีส์จีน ยอดนิยม (${cnMovies.length} เรื่อง)`, cnMovies);
+      } else if (genre === "series-thai" || genre === "ดูซีรี่ย์พากย์ไทย" || genre === "korean-series" || genre === "chinese-series") {
+        const seriesMovies = movieList.filter(m => {
+          const isSeries = (m.episodes && m.episodes.length > 1) || 
+                           (m.duration && m.duration.includes("ตอน")) || 
+                           (m.genres && m.genres.some(g => g.includes("ซีรีส์") || g.includes("ซีรี่ย์") || g.includes("ละคร"))) ||
+                           (m.titleTh && (m.titleTh.includes("ซีรีส์") || m.titleTh.includes("ซีรี่ย์") || m.titleTh.includes("EP") || m.titleTh.includes("ตอน")));
+          const isThaiDub = (m.genres && m.genres.some(g => g.includes("พากย์ไทย"))) || 
+                            (m.languages && m.languages.some(l => l.includes("Thai") || l.includes("พากย์ไทย"))) ||
+                            (m.titleTh && m.titleTh.includes("พากย์ไทย"));
+          const isNotSubOnly = !(m.titleTh && m.titleTh.includes("ซับไทย") && !m.titleTh.includes("พากย์ไทย"));
+          return (isSeries || m.source === "GOSERIES4K" || m.source === "WOW-DRAMA") && (isThaiDub || isNotSubOnly);
+        });
+        showGridView(`🎬 รวมดูซีรี่ย์พากย์ไทย (${seriesMovies.length} เรื่อง)`, seriesMovies);
       } else if (genre === "japanese-series") {
         const jpMovies = movieList.filter(m => (m.genres && m.genres.some(g => g.includes("ญี่ปุ่น"))) || (m.titleTh && m.titleTh.includes("ญี่ปุ่น")));
         showGridView(`🌸 รวมซีรีส์ญี่ปุ่น ยอดนิยม (${jpMovies.length} เรื่อง)`, jpMovies);
