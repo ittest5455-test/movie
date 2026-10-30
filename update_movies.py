@@ -12,6 +12,9 @@ import json
 import time
 import os
 import sys
+import datetime
+import subprocess
+import base64
 
 # Set output encoding to UTF-8
 if sys.stdout.encoding != 'utf-8':
@@ -823,7 +826,111 @@ def update_24hd_today(min_rating=6.0, max_pages=3):
                     pass
     return new_movies
 
-def main():
+
+def generate_sitemap(movies):
+    """สร้าง sitemap.xml จากรายการภาพยนตร์ปัจจุบันอัตโนมัติ (รวมในไฟล์เดียว)"""
+    try:
+        today = datetime.datetime.now().strftime("%Y-%m-%d")
+        xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+        xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        xml += '  <url>\n'
+        xml += '    <loc>./</loc>\n'
+        xml += f'    <lastmod>{today}</lastmod>\n'
+        xml += '    <changefreq>daily</changefreq>\n'
+        xml += '    <priority>1.0</priority>\n'
+        xml += '  </url>\n'
+
+        for movie in movies:
+            m_id = movie.get("id", "")
+            if not m_id:
+                continue
+            xml += '  <url>\n'
+            xml += f'    <loc>./#play-{m_id}</loc>\n'
+            xml += f'    <lastmod>{today}</lastmod>\n'
+            xml += '    <changefreq>weekly</changefreq>\n'
+            xml += '    <priority>0.8</priority>\n'
+            xml += '  </url>\n'
+
+        xml += '</urlset>\n'
+
+        sitemap_path = os.path.join(BASE_DIR, "sitemap.xml")
+        with open(sitemap_path, "w", encoding="utf-8") as f:
+            f.write(xml)
+        print(f"[✓] สร้างและอัปเดต sitemap.xml สำเร็จ ({len(movies)} เรื่อง)")
+    except Exception as e:
+        print(f"[-] เกิดข้อผิดพลาดในการสร้าง sitemap.xml: {e}")
+
+def push_to_github():
+    """ส่งข้อมูลภาพยนตร์ที่อัปเดตขึ้น GitHub อัตโนมัติ (เฉพาะไฟล์ข้อมูลหนัง js/movies.js และ sitemap.xml)"""
+    print("\n--- กำลังส่งข้อมูลขึ้น GitHub (Cloudflare Pages จะอัปเดตให้อัตโนมัติ) ---")
+    repo_branch = "main"
+    try:
+        check_git = subprocess.run(["git", "status"], cwd=BASE_DIR, capture_output=True, text=True)
+        if check_git.returncode == 0:
+            # เพิ่มเฉพาะไฟล์ข้อมูลภาพยนตร์และ sitemap เท่านั้น เพื่อไม่ให้อัปเดตไฟล์อื่นปะปน
+            subprocess.run(["git", "add", "js/movies.js", "sitemap.xml"], cwd=BASE_DIR, check=True)
+            status = subprocess.run(["git", "status", "--porcelain", "js/movies.js", "sitemap.xml"], cwd=BASE_DIR, capture_output=True, text=True).stdout
+            
+            if status.strip():
+                now_str = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+                commit_msg = f"Auto update movies database & sitemap [{now_str}]"
+                subprocess.run(["git", "commit", "-m", commit_msg], cwd=BASE_DIR, check=True)
+                push_res = subprocess.run(["git", "push", "origin", repo_branch], cwd=BASE_DIR, capture_output=True, text=True)
+                if push_res.returncode == 0:
+                    print("✅ [Git] อัปโหลดข้อมูลภาพยนตร์ขึ้น GitHub สำเร็จเรียบร้อย!")
+                    return True
+                else:
+                    print(f"[-] [Git] ข้อผิดพลาดในการ push: {push_res.stderr.strip()}")
+            else:
+                print("ℹ️ [Git] ข้อมูลหนังเป็นเวอร์ชันล่าสุดแล้ว (ไม่มีไฟล์เปลี่ยนแปลง)")
+                return True
+    except Exception as e:
+        print(f"[-] [Git] ไม่สามารถใช้งานคำสั่ง git ได้: {e}")
+        
+    # GitHub API Fallback (หากรันบนระบบที่ไม่มี Git CLI แต่มี GITHUB_TOKEN)
+    token = os.environ.get("GITHUB_TOKEN", "")
+    if token:
+        print("กำลังอัปโหลดผ่าน GitHub API...")
+        for filepath in ["js/movies.js", "sitemap.xml"]:
+            p = os.path.join(BASE_DIR, filepath)
+            if not os.path.exists(p):
+                continue
+            with open(p, "rb") as f:
+                content_bytes = f.read()
+            b64_content = base64.b64encode(content_bytes).decode("utf-8")
+            url = f"https://api.github.com/repos/ittest5455-test/movie/contents/{filepath}"
+            headers = {
+                "Authorization": f"token {token}",
+                "Accept": "application/vnd.github.v3+json",
+                "Content-Type": "application/json",
+                "User-Agent": "Python-GitHub-Pusher"
+            }
+            sha = None
+            try:
+                req_get = urllib.request.Request(url, headers=headers)
+                with urllib.request.urlopen(req_get) as res:
+                    data = json.loads(res.read().decode("utf-8"))
+                    sha = data["sha"]
+            except Exception:
+                pass
+            payload = {
+                "message": f"Update {filepath} for auto daily deployment",
+                "content": b64_content,
+                "branch": repo_branch
+            }
+            if sha:
+                payload["sha"] = sha
+            try:
+                req_put = urllib.request.Request(url, headers=headers, method="PUT")
+                req_put.data = json.dumps(payload).encode("utf-8")
+                with urllib.request.urlopen(req_put) as res:
+                    print(f"✅ Successfully pushed {filepath} to GitHub via API!")
+            except Exception as e:
+                print(f"❌ Error pushing {filepath} via API: {e}")
+    return True
+
+
+def main(auto_push=True):
     print("=" * 60)
     print("🚀 เริ่มต้นระบบอัปเดตภาพยนตร์และซีรีส์ใหม่ล่าสุด...")
     print("=" * 60)
@@ -884,6 +991,13 @@ def main():
             
     save_movies(existing)
     
+    # 3. สร้างและอัปเดต sitemap.xml อัตโนมัติในไฟล์เดียว
+    generate_sitemap(existing)
+    
+    # 4. ส่งข้อมูลขึ้น GitHub อัตโนมัติ (เฉพาะไฟล์ฐานข้อมูลหนัง js/movies.js และ sitemap.xml)
+    if auto_push:
+        push_to_github()
+    
     print("\n" + "=" * 60)
     print(f"🎉 อัปเดตเสร็จสมบูรณ์!")
     print(f"  - เพิ่มเรื่องใหม่: {added_new} เรื่อง")
@@ -892,4 +1006,5 @@ def main():
     print("=" * 60)
 
 if __name__ == "__main__":
-    main()
+    auto_push = "--no-push" not in sys.argv
+    main(auto_push=auto_push)

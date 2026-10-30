@@ -1,29 +1,24 @@
 @echo off
 chcp 65001 > nul
-title ระบบอัปเดตหนังและซีรีส์ใหม่ MovieStream
+title ระบบอัปเดตหนังและซีรีส์ใหม่ MovieStream (All-in-One)
 
 echo ========================================================
-echo   🎬 MovieStream - เริ่มต้นระบบอัปเดตหนังและซีรีส์ใหม่
+echo   🎬 MovieStream - เริ่มต้นระบบอัปเดตหนังและซีรีส์ใหม่ (ไฟล์เดียวจบ)
+echo   • ดึงภาพยนตร์และซีรีส์ใหม่ล่าสุด (พากย์ไทย)
+echo   • บันทึกฐานข้อมูลลง js/movies.js
+echo   • สร้างและอัปเดต sitemap.xml
+echo   • ซิงค์ข้อมูลขึ้น GitHub -> Cloudflare Pages อัตโนมัติ
 echo ========================================================
 echo.
 cd /d "%~dp0"
 
-echo [1/3] กำลังดึงหนังและซีรีส์ใหม่ล่าสุด (พากย์ไทย)...
 python update_movies.py
 if errorlevel 1 (
     echo.
-    echo ❌ เกิดข้อผิดพลาดในการดึงข้อมูลหนังใหม่
+    echo ❌ เกิดข้อผิดพลาดในการรันอัปเดต
     pause
     exit /b %errorlevel%
 )
-
-echo.
-echo [2/3] กำลังสร้างและอัปเดต sitemap.xml...
-python scripts\generate_sitemap.py
-
-echo.
-echo [3/3] กำลังส่งข้อมูลขึ้น GitHub -> Cloudflare Pages...
-python scripts\push_to_github.py
 
 echo.
 echo ========================================================
