@@ -26,6 +26,15 @@ if sys.stdout.encoding != 'utf-8':
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MOVIES_FILE = os.path.join(BASE_DIR, "js", "movies.js")
+CLEAN_POSTERS_DIR = os.path.join(BASE_DIR, "images", "clean_posters")
+os.makedirs(CLEAN_POSTERS_DIR, exist_ok=True)
+
+try:
+    import cv2
+    import numpy as np
+    HAS_OPENCV = True
+except ImportError:
+    HAS_OPENCV = False
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
@@ -44,6 +53,109 @@ def safe_url(url):
         return urllib.parse.urlunsplit((p.scheme, p.netloc, quoted_path, p.query, p.fragment))
     except Exception:
         return url
+
+
+def clean_and_save_gs_poster(poster_url, post_id):
+    """ลบลายน้ำและโลโก้ GOSERIES 4K ออกจากภาพด้วย Inpainting อัตโนมัติแล้วบันทึกลง images/clean_posters/"""
+    if not HAS_OPENCV or not poster_url:
+        return safe_url(poster_url)
+    
+    safe_filename = f"gs-{post_id}.jpg"
+    local_path = os.path.join(CLEAN_POSTERS_DIR, safe_filename)
+    rel_path = f"images/clean_posters/{safe_filename}"
+    
+    if os.path.exists(local_path):
+        return rel_path
+        
+    try:
+        req = urllib.request.Request(poster_url, headers=HEADERS)
+        with urllib.request.urlopen(req, timeout=8) as resp:
+            data = resp.read()
+            
+        nparr = np.frombuffer(data, np.uint8)
+        img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+        if img is None:
+            return safe_url(poster_url)
+            
+        h, w = img.shape[:2]
+        mask = np.zeros((h, w), dtype=np.uint8)
+        
+        # ตรวจจับตัวอักษรสีส้ม GO และ 4K ของโลโก้
+        hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+        lower_orange = np.array([8, 100, 130])
+        upper_orange = np.array([25, 255, 255])
+        orange_mask = cv2.inRange(hsv, lower_orange, upper_orange)
+        
+        cnts, _ = cv2.findContours(orange_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        orange_boxes = []
+        for cnt in cnts:
+            area = cv2.contourArea(cnt)
+            if 12 < area < 3000:
+                bx, by, bw, bh = cv2.boundingRect(cnt)
+                if 8 <= bh <= 50 and 5 <= bw <= 50:
+                    orange_boxes.append((bx, by, bw, bh))
+                    
+        found_bands = []
+        for i in range(len(orange_boxes)):
+            for j in range(len(orange_boxes)):
+                if i == j: continue
+                b1 = orange_boxes[i]
+                b2 = orange_boxes[j]
+                if b2[0] > b1[0] and abs(b1[1] - b2[1]) <= 6:
+                    dx = b2[0] - b1[0]
+                    if 50 <= dx <= 260:
+                        line_boxes = [b for b in orange_boxes if b1[0]-6 <= b[0] <= b2[0]+b2[2]+6 and abs(b[1] - b1[1]) <= 7]
+                        if len(line_boxes) >= 2:
+                            min_x = min(b[0] for b in line_boxes)
+                            max_x = max(b[0] + b[2] for b in line_boxes)
+                            min_y = min(b[1] for b in line_boxes)
+                            max_y = max(b[1] + b[3] for b in line_boxes)
+                            found_bands.append((min_x, min_y, max_x, max_y))
+                            
+        merged_bands = []
+        for b in found_bands:
+            merged = False
+            for i, mb in enumerate(merged_bands):
+                if abs(b[1] - mb[1]) < 18:
+                    merged_bands[i] = (min(b[0], mb[0]), min(b[1], mb[1]), max(b[2], mb[2]), max(b[3], mb[3]))
+                    merged = True
+                    break
+            if not merged:
+                merged_bands.append(b)
+                
+        for bx1, by1, bx2, by2 in merged_bands:
+            x1 = max(0, bx1 - 15)
+            x2 = min(w, bx2 + 15)
+            y1 = max(0, by1 - 10)
+            y2 = min(h, by2 + 45)
+            mask[y1:y2, x1:x2] = 255
+
+        # ตรวจจับแถบป้ายเหลืองด้านล่าง
+        lower_yellow = np.array([12, 110, 140])
+        upper_yellow = np.array([36, 255, 255])
+        yellow_mask = cv2.inRange(hsv, lower_yellow, upper_yellow)
+        y_cnts, _ = cv2.findContours(yellow_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        for cnt in y_cnts:
+            area = cv2.contourArea(cnt)
+            if 250 < area < 20000:
+                bx, by, bw, bh = cv2.boundingRect(cnt)
+                if by > h * 0.35 and (bw / float(bh) > 1.2):
+                    mask[max(0, by-4):min(h, by+bh+15), max(0, bx-6):min(w, bx+bw+6)] = 255
+
+        if np.sum(mask > 0) > 40:
+            cleaned = cv2.inpaint(img, mask, inpaintRadius=5, flags=cv2.INPAINT_TELEA)
+        else:
+            cleaned = img
+            
+        if cleaned.shape[0] != 600 or cleaned.shape[1] != 400:
+            cleaned = cv2.resize(cleaned, (400, 600), interpolation=cv2.INTER_AREA)
+            
+        _, buf = cv2.imencode('.jpg', cleaned, [cv2.IMWRITE_JPEG_QUALITY, 88])
+        with open(local_path, 'wb') as f:
+            f.write(buf)
+        return rel_path
+    except Exception as e:
+        return safe_url(poster_url)
 
 def load_existing_movies():
     if not os.path.exists(MOVIES_FILE):
@@ -508,7 +620,7 @@ def update_goseries4k():
                     post_id_m = re.search(r'data-post-id=["\'](\d+)["\']', m_html)
                     post_id = post_id_m.group(1) if post_id_m else "gs-" + str(abs(hash(link)))[:6]
                     
-                    safe_poster = safe_url(poster)
+                    safe_poster = clean_and_save_gs_poster(poster, post_id)
                     series_obj = {
                         "titleTh": title,
                         "titleEn": title,
@@ -603,7 +715,7 @@ def update_wow_drama(max_pages=2):
                         
                     og_img = re.search(r'<meta property="og:image" content="([^"]+)"', m_html)
                     poster = og_img.group(1) if og_img else ""
-                    safe_poster = safe_url(poster)
+                    safe_poster = clean_and_save_gs_poster(poster, post_id)
                     
                     og_desc = re.search(r'<meta property="og:description" content="([^"]+)"', m_html)
                     desc = og_desc.group(1) if og_desc else f"ดู {title} พากย์ไทย ละครไทยย้อนหลัง เต็มเรื่อง HD"
