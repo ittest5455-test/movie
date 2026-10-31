@@ -479,83 +479,7 @@
       aspect-ratio: 16 / 9;
       background: #000;
     }
-    .unmute-banner {
-      position: absolute;
-      top: 16px;
-      left: 50%;
-      transform: translateX(-50%) translateY(-10px);
-      background: rgba(15, 23, 42, 0.94);
-      border: 2px solid #f59e0b;
-      box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.5), 0 0 25px rgba(0, 0, 0, 0.85);
-      border-radius: 9999px;
-      padding: 10px 20px 10px 16px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      z-index: 25;
-      cursor: pointer;
-      opacity: 0;
-      pointer-events: none;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      backdrop-filter: blur(12px);
-      max-width: 90%;
-    }
-    .unmute-banner.visible {
-      opacity: 1;
-      pointer-events: auto;
-      transform: translateX(-50%) translateY(0);
-      animation: floatBanner 2.5s ease-in-out infinite alternate;
-    }
-    @keyframes floatBanner {
-      0% { transform: translateX(-50%) translateY(0); box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.5); }
-      100% { transform: translateX(-50%) translateY(-4px); box-shadow: 0 14px 30px -3px rgba(245, 158, 11, 0.7); }
-    }
-    .unmute-badge {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .unmute-icon {
-      font-size: 24px;
-      animation: shakeIcon 1.5s infinite;
-      display: inline-block;
-    }
-    @keyframes shakeIcon {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.15) rotate(-6deg); }
-    }
-    .unmute-texts {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.25;
-      text-align: left;
-    }
-    .unmute-main {
-      font-size: 14px;
-      font-weight: 700;
-      color: #fff;
-    }
-    .unmute-sub {
-      font-size: 11px;
-      color: #cbd5e1;
-    }
-    .unmute-cta {
-      background: linear-gradient(135deg, #f59e0b, #d97706);
-      color: #000;
-      font-weight: 800;
-      font-size: 12px;
-      padding: 6px 14px;
-      border-radius: 9999px;
-      border: none;
-      cursor: pointer;
-      white-space: nowrap;
-      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
-      transition: transform 0.15s;
-      font-family: inherit;
-    }
-    .unmute-cta:hover {
-      transform: scale(1.05);
-    }
+    
     video {
       width: 100%;
       height: 100%;
@@ -738,16 +662,7 @@
       .fs-text {
         display: none; /* บนมือถือแสดงเฉพาะไอคอนเต็มจอ */
       }
-      .unmute-banner {
-        top: 10px;
-        padding: 8px 14px;
-        gap: 8px;
-        border-radius: 14px;
-      }
-      .unmute-icon { font-size: 18px; }
-      .unmute-main { font-size: 12px; }
-      .unmute-sub { display: none; }
-      .unmute-cta { font-size: 11px; padding: 5px 10px; }
+      
 
       /* ผังปุ่มกรองช่องแบบสไลด์แนวนอน Swipeable Chips */
       .tv-grid-panel {
@@ -914,17 +829,7 @@
       <div class="video-viewport" id="videoViewport">
         <video id="livePlayer" controls playsinline autoplay></video>
 
-        <!-- ป้ายลอยเปิดเสียงเมื่อโดนเบราว์เซอร์ปิดเสียงอัตโนมัติ (แตะ 1 ครั้งเพื่อเปิดเสียง) -->
-        <div class="unmute-banner" id="unmuteBanner" onclick="unmuteAudio(true)">
-          <div class="unmute-badge">
-            <span class="unmute-icon">🔇</span>
-            <div class="unmute-texts">
-              <span class="unmute-main">แตะตรงนี้เพื่อเปิดเสียงทีวีสด</span>
-              <span class="unmute-sub">เบราว์เซอร์ปิดเสียงอัตโนมัติไว้ • แตะ 1 ครั้งเพื่อฟังเสียง 🔊</span>
-            </div>
-          </div>
-          <button type="button" class="unmute-cta">เปิดเสียงเลย 🔊</button>
-        </div>
+
 
         <div class="loader-overlay" id="playerLoader">
           <div class="spinner"></div>
@@ -1297,7 +1202,7 @@
 
         card.innerHTML = `
           <div class="ch-logo-wrap">
-            <img src="${ch.logo}" alt="${ch.name}" loading="lazy" onerror="this.onerror=null; this.src='images/icon-192.png';">
+            <img src="${ch.logo}" alt="${ch.name}" loading="lazy" onerror="this.onerror=null; this.src='icon-192.png';">
           </div>
         `;
 
@@ -1313,6 +1218,9 @@
         gridContainer.appendChild(card);
       });
     }
+
+    // เรนเดอร์ผังช่องทั้งหมดทันทีเมื่อโค้ดทำงาน
+    renderGrid();
 
     // -------------------------------------------------------------
     // ฟังก์ชันสลับช่องเร็วฟ้าผ่า (Fast Zap & Low Latency Streaming)
@@ -1395,13 +1303,8 @@
       }
     }
 
-    function showUnmuteBanner() {
-      if (unmuteBanner) unmuteBanner.classList.add("visible");
-    }
-
-    function hideUnmuteBanner() {
-      if (unmuteBanner) unmuteBanner.classList.remove("visible");
-    }
+    function showUnmuteBanner() {}
+    function hideUnmuteBanner() {}
 
     // แตะเปิดเสียงด่วน (User gesture unlock)
     function unmuteAudio(userExplicit = true) {
@@ -1612,13 +1515,13 @@
       const ch = TV_CHANNELS[index];
 
       // อัปเดตแถบข้อมูลผู้เล่น
-      currentNumElem.textContent = "CH " + ch.number;
-      currentNameElem.textContent = ch.name;
+      if (currentNumElem) currentNumElem.textContent = "CH " + ch.number;
+      if (currentNameElem) currentNameElem.textContent = ch.name;
       
       let tagText = "📺 ดิจิทัลทีวีไทย";
       if (ch.category === "sports") tagText = "⚽ กีฬาสด";
       else if (ch.category === "international") tagText = "🌐 ต่างประเทศ (World TV)";
-      currentTagElem.textContent = tagText;
+      if (currentTagElem) currentTagElem.textContent = tagText;
 
       // แสดง Loader สลับช่อง
       loaderElem.style.display = "flex";
@@ -1643,7 +1546,7 @@
       videoElem.load();
 
       // 3. เริ่มต้นโหลดช่องใหม่ด้วยโปรไฟล์ Fast Start
-      if (Hls.isSupported()) {
+      if (typeof Hls !== 'undefined' && Hls.isSupported()) {
         hlsInstance = new Hls({
           enableWorker: true,
           lowLatencyMode: true,
@@ -1710,8 +1613,10 @@
     }
 
     function hideLoader() {
-      loaderElem.style.opacity = "0";
-      loaderElem.style.pointerEvents = "none";
+      if (loaderElem) {
+        loaderElem.style.opacity = "0";
+        loaderElem.style.pointerEvents = "none";
+      }
     }
 
     videoElem.addEventListener("playing", function() {
@@ -1776,12 +1681,18 @@
       }
     });
 
-    // เริ่มต้นทำงาน
-    document.addEventListener("DOMContentLoaded", () => {
-      initAudio();
-      renderGrid();
-      switchChannel(17, false); // เล่นช่อง 3 HD อัตโนมัติเป็นช่องแรก
-    });
+    // เริ่มต้นทำงานทันทีอย่างปลอดภัยทุกเบราว์เซอร์ (Desktop, Mobile, Tablet, Smart TV)
+    function initLiveTvPage() {
+      try { initAudio(); } catch (e) { console.warn("initAudio error:", e); }
+      try { renderGrid(); } catch (e) { console.error("renderGrid error:", e); }
+      try { switchChannel(17, false); } catch (e) { console.warn("switchChannel error:", e); }
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initLiveTvPage);
+    } else {
+      initLiveTvPage();
+    }
   </script>
 
 </body>
