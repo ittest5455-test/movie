@@ -832,7 +832,26 @@ def update_wow_drama(max_pages=2):
                         return str(idx), None
 
                     from concurrent.futures import ThreadPoolExecutor
-                    tasks = [(i, eid, einfo) for i, (eid, einfo) in enumerate(ep_json.items(), 1)]
+                    # ตรวจสอบแท็บ พากย์ไทย ในกรณีที่มีหลายแท็บ (เช่น ซับไทย และ พากย์ไทย)
+                    tabs = re.findall(r'<button class="miru-tab-btn[^"]*"[^>]*data-target="([^"]+)"[^>]*>(.*?)</button>', m_html)
+                    dub_target = None
+                    for target, name in tabs:
+                        if 'พากย์ไทย' in name:
+                            dub_target = target
+                            break
+                    
+                    if dub_target:
+                        group_m = re.search(r'<div[^>]+id=["']' + dub_target + r'["'][^>]*>(.*?)(?:<div class="miru-ep-grid|</div>\s*</div>)', m_html, re.DOTALL)
+                        if group_m:
+                            dub_ep_ids = re.findall(r'data-ep-id=["'](\d+)["']', group_m.group(1))
+                            if dub_ep_ids:
+                                tasks = [(i, eid, ep_json.get(eid, {})) for i, eid in enumerate(dub_ep_ids, 1)]
+                            else:
+                                tasks = [(i, eid, einfo) for i, (eid, einfo) in enumerate(ep_json.items(), 1)]
+                        else:
+                            tasks = [(i, eid, einfo) for i, (eid, einfo) in enumerate(ep_json.items(), 1)]
+                    else:
+                        tasks = [(i, eid, einfo) for i, (eid, einfo) in enumerate(ep_json.items(), 1)]
                     with ThreadPoolExecutor(max_workers=12) as executor:
                         ep_results = executor.map(fetch_single_ep, tasks)
                     
@@ -1061,7 +1080,7 @@ def update_myserieshd(max_pages=15):
         try:
             with urllib.request.urlopen(ep_req, timeout=8) as r:
                 d = json.loads(r.read().decode('utf-8'))
-                v_url = d.get('backup_video_url') or d.get('video_url', '')
+                v_url = d.get('video_url') or d.get('backup_video_url', '')
                 return ep_idx, v_url
         except Exception:
             return ep_idx, ''
