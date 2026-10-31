@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 ระบบอัปเดตหนังและซีรีส์ใหม่อัตโนมัติ (Auto-Updater)
-ดึงข้อมูลภาพยนตร์ใหม่จาก 24-HD (24-HDA / 24HD.MEDIA) และ ซีรีส์ใหม่จาก GOSERIES4K (เฉพาะพากย์ไทย)
+ดึงข้อมูลภาพยนตร์และซีรีส์ใหม่จาก 24-HD, GOSERIES4K, WOW-DRAMA และ MYSERIESHD (เฉพาะพากย์ไทย ปี 2026)
 """
 
 import urllib.request
@@ -55,6 +55,86 @@ def safe_url(url):
         return url
 
 
+def clean_sub_text(t):
+    """ลบข้อความ ซับไทย ทุกรูปแบบออกให้เหลือเฉพาะ พากย์ไทย 100%"""
+    if not t: return t
+    t = re.sub(r'\(?\s*พากย์ไทย\s*[/|]\s*ซับไทย\s*\)?', 'พากย์ไทย', t, flags=re.IGNORECASE)
+    t = re.sub(r'\(?\s*ซับไทย\s*[/|]\s*พากย์ไทย\s*\)?', 'พากย์ไทย', t, flags=re.IGNORECASE)
+    t = re.sub(r'\(?\s*พากย์ไทย\s*[-+]\s*ซับไทย\s*\)?', 'พากย์ไทย', t, flags=re.IGNORECASE)
+    t = re.sub(r'\(?\s*ซับไทย\s*[-+]\s*พากย์ไทย\s*\)?', 'พากย์ไทย', t, flags=re.IGNORECASE)
+    t = re.sub(r'\s*\|\s*ซับไทย\b', '', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bซับไทย\s*\|\s*', '', t, flags=re.IGNORECASE)
+    t = re.sub(r'\s*[/|-]?\s*ซับไทย\b', '', t, flags=re.IGNORECASE)
+    t = re.sub(r'\s*\(?\s*ซับไทย\s*\)?', '', t, flags=re.IGNORECASE)
+    t = re.sub(r'ซับไทย', '', t)
+    t = re.sub(r'\s{2,}', ' ', t).strip()
+    return t
+
+
+def detect_goseries_logo_y(img):
+    """ตรวจจับตำแหน่งแนวตั้ง (y) ของโลโก้ GOSERIES 4K อย่างแม่นยำ 100%"""
+    h, w = img.shape[:2]
+    if w != 400 or h != 600:
+        img = cv2.resize(img, (400, 600), interpolation=cv2.INTER_AREA)
+        
+    roi = img[260:560, :]
+    hsv = cv2.cvtColor(roi, cv2.COLOR_BGR2HSV)
+    mask_orange = cv2.inRange(hsv, np.array([8, 85, 100]), np.array([32, 255, 255]))
+    
+    cnts, _ = cv2.findContours(mask_orange, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    
+    cands_4 = []
+    cands_k = []
+    cands_g = []
+    cands_o = []
+    
+    for c in cnts:
+        area = cv2.contourArea(c)
+        if 80 < area < 900:
+            x, y, bw, bh = cv2.boundingRect(c)
+            abs_y = 260 + y
+            if 18 <= bh <= 34 and 12 <= bw <= 28:
+                if 245 <= x <= 276: cands_4.append((x, abs_y, bw, bh))
+                elif 270 <= x <= 302: cands_k.append((x, abs_y, bw, bh))
+                elif 95 <= x <= 126: cands_g.append((x, abs_y, bw, bh))
+                elif 118 <= x <= 150: cands_o.append((x, abs_y, bw, bh))
+                
+    # 1. ตรวจจับคู่ตัวอักษร 4 และ K
+    for c4 in cands_4:
+        for ck in cands_k:
+            if abs(c4[1] - ck[1]) <= 3 and 14 <= (ck[0] - c4[0]) <= 28:
+                y_logo = min(c4[1], ck[1])
+                white_roi = img[y_logo:min(600, y_logo+28), 135:255]
+                white_hsv = cv2.cvtColor(white_roi, cv2.COLOR_BGR2HSV)
+                mask_w = cv2.inRange(white_hsv, np.array([0, 0, 180]), np.array([180, 50, 255]))
+                if cv2.countNonZero(mask_w) > 60:
+                    return True, y_logo
+                    
+    # 2. ตรวจจับคู่ตัวอักษร G และ O
+    for cg in cands_g:
+        for co in cands_o:
+            if abs(cg[1] - co[1]) <= 3 and 14 <= (co[0] - cg[0]) <= 28:
+                y_logo = min(cg[1], co[1])
+                white_roi = img[y_logo:min(600, y_logo+28), 135:255]
+                white_hsv = cv2.cvtColor(white_roi, cv2.COLOR_BGR2HSV)
+                mask_w = cv2.inRange(white_hsv, np.array([0, 0, 180]), np.array([180, 50, 255]))
+                if cv2.countNonZero(mask_w) > 60:
+                    return True, y_logo
+
+    # 3. ตรวจจับคู่ด้านซ้าย-ขวา
+    for g in cands_g + cands_o:
+        for k in cands_4 + cands_k:
+            if abs(g[1] - k[1]) <= 3 and 130 <= (k[0] - g[0]) <= 200:
+                y_logo = min(g[1], k[1])
+                white_roi = img[y_logo:min(600, y_logo+28), 135:255]
+                white_hsv = cv2.cvtColor(white_roi, cv2.COLOR_BGR2HSV)
+                mask_w = cv2.inRange(white_hsv, np.array([0, 0, 180]), np.array([180, 50, 255]))
+                if cv2.countNonZero(mask_w) > 60:
+                    return True, y_logo
+
+    return False, None
+
+
 def clean_and_save_gs_poster(poster_url, post_id):
     """ลบลายน้ำและโลโก้ GOSERIES 4K ออกจากภาพด้วย Inpainting อัตโนมัติแล้วบันทึกลง images/clean_posters/"""
     if not HAS_OPENCV or not poster_url:
@@ -69,7 +149,7 @@ def clean_and_save_gs_poster(poster_url, post_id):
         
     try:
         req = urllib.request.Request(poster_url, headers=HEADERS)
-        with urllib.request.urlopen(req, timeout=8) as resp:
+        with urllib.request.urlopen(req, timeout=10) as resp:
             data = resp.read()
             
         nparr = np.frombuffer(data, np.uint8)
@@ -78,79 +158,62 @@ def clean_and_save_gs_poster(poster_url, post_id):
             return safe_url(poster_url)
             
         h, w = img.shape[:2]
-        mask = np.zeros((h, w), dtype=np.uint8)
-        
-        # ตรวจจับตัวอักษรสีส้ม GO และ 4K ของโลโก้
-        hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-        lower_orange = np.array([8, 100, 130])
-        upper_orange = np.array([25, 255, 255])
-        orange_mask = cv2.inRange(hsv, lower_orange, upper_orange)
-        
-        cnts, _ = cv2.findContours(orange_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-        orange_boxes = []
-        for cnt in cnts:
-            area = cv2.contourArea(cnt)
-            if 12 < area < 3000:
-                bx, by, bw, bh = cv2.boundingRect(cnt)
-                if 8 <= bh <= 50 and 5 <= bw <= 50:
-                    orange_boxes.append((bx, by, bw, bh))
-                    
-        found_bands = []
-        for i in range(len(orange_boxes)):
-            for j in range(len(orange_boxes)):
-                if i == j: continue
-                b1 = orange_boxes[i]
-                b2 = orange_boxes[j]
-                if b2[0] > b1[0] and abs(b1[1] - b2[1]) <= 6:
-                    dx = b2[0] - b1[0]
-                    if 50 <= dx <= 260:
-                        line_boxes = [b for b in orange_boxes if b1[0]-6 <= b[0] <= b2[0]+b2[2]+6 and abs(b[1] - b1[1]) <= 7]
-                        if len(line_boxes) >= 2:
-                            min_x = min(b[0] for b in line_boxes)
-                            max_x = max(b[0] + b[2] for b in line_boxes)
-                            min_y = min(b[1] for b in line_boxes)
-                            max_y = max(b[1] + b[3] for b in line_boxes)
-                            found_bands.append((min_x, min_y, max_x, max_y))
-                            
-        merged_bands = []
-        for b in found_bands:
-            merged = False
-            for i, mb in enumerate(merged_bands):
-                if abs(b[1] - mb[1]) < 18:
-                    merged_bands[i] = (min(b[0], mb[0]), min(b[1], mb[1]), max(b[2], mb[2]), max(b[3], mb[3]))
-                    merged = True
-                    break
-            if not merged:
-                merged_bands.append(b)
-                
-        for bx1, by1, bx2, by2 in merged_bands:
-            x1 = max(0, bx1 - 15)
-            x2 = min(w, bx2 + 15)
-            y1 = max(0, by1 - 10)
-            y2 = min(h, by2 + 45)
-            mask[y1:y2, x1:x2] = 255
-
-        # ตรวจจับแถบป้ายเหลืองด้านล่าง
-        lower_yellow = np.array([12, 110, 140])
-        upper_yellow = np.array([36, 255, 255])
-        yellow_mask = cv2.inRange(hsv, lower_yellow, upper_yellow)
-        y_cnts, _ = cv2.findContours(yellow_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-        for cnt in y_cnts:
-            area = cv2.contourArea(cnt)
-            if 250 < area < 20000:
-                bx, by, bw, bh = cv2.boundingRect(cnt)
-                if by > h * 0.35 and (bw / float(bh) > 1.2):
-                    mask[max(0, by-4):min(h, by+bh+15), max(0, bx-6):min(w, bx+bw+6)] = 255
-
-        if np.sum(mask > 0) > 40:
+        if w != 400 or h != 600:
+            img = cv2.resize(img, (400, 600), interpolation=cv2.INTER_AREA)
+            h, w = 600, 400
+            
+        found, y = detect_goseries_logo_y(img)
+        if found:
+            mask = np.zeros((h, w), dtype=np.uint8)
+            mask[max(0, y-8):min(h, y+68), 64:336] = 255
             cleaned = cv2.inpaint(img, mask, inpaintRadius=5, flags=cv2.INPAINT_TELEA)
         else:
             cleaned = img
             
-        if cleaned.shape[0] != 600 or cleaned.shape[1] != 400:
-            cleaned = cv2.resize(cleaned, (400, 600), interpolation=cv2.INTER_AREA)
+        _, buf = cv2.imencode('.jpg', cleaned, [cv2.IMWRITE_JPEG_QUALITY, 90])
+        with open(local_path, 'wb') as f:
+            f.write(buf)
+        return rel_path
+    except Exception as e:
+        return safe_url(poster_url)
+
+
+def clean_and_save_wow_poster(poster_url, post_id):
+    """ลบลายน้ำและโลโก้ WOW-DRAMA ออกจากภาพด้วย Inpainting อัตโนมัติแล้วบันทึกลง images/clean_posters/"""
+    if not HAS_OPENCV or not poster_url:
+        return safe_url(poster_url)
+        
+    safe_filename = f"wow-{post_id}.jpg"
+    local_path = os.path.join(CLEAN_POSTERS_DIR, safe_filename)
+    rel_path = f"images/clean_posters/{safe_filename}"
+    
+    if os.path.exists(local_path):
+        return rel_path
+        
+    try:
+        p_split = urllib.parse.urlsplit(poster_url)
+        quoted_path = urllib.parse.quote(urllib.parse.unquote(p_split.path))
+        safe_p_url = urllib.parse.urlunsplit((p_split.scheme, p_split.netloc, quoted_path, p_split.query, p_split.fragment))
+        
+        req = urllib.request.Request(safe_p_url, headers=HEADERS)
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = resp.read()
             
-        _, buf = cv2.imencode('.jpg', cleaned, [cv2.IMWRITE_JPEG_QUALITY, 88])
+        nparr = np.frombuffer(data, np.uint8)
+        img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+        if img is None:
+            return safe_url(poster_url)
+            
+        h, w = img.shape[:2]
+        if w != 400 or h != 600:
+            img = cv2.resize(img, (400, 600), interpolation=cv2.INTER_AREA)
+            h, w = 600, 400
+            
+        mask = np.zeros((h, w), dtype=np.uint8)
+        mask[558:598, 120:280] = 255
+        cleaned = cv2.inpaint(img, mask, inpaintRadius=4, flags=cv2.INPAINT_TELEA)
+        
+        _, buf = cv2.imencode('.jpg', cleaned, [cv2.IMWRITE_JPEG_QUALITY, 90])
         with open(local_path, 'wb') as f:
             f.write(buf)
         return rel_path
@@ -797,15 +860,19 @@ def update_wow_drama(max_pages=2):
                     duration_str = f"ซีรีส์ {total_eps} ตอนจบ" if total_eps > 1 else "ภาพยนตร์"
                     ep_list = [f"ตอนที่ {i}" for i in range(1, total_eps + 1)] if total_eps > 1 else ["เต็มเรื่อง"]
                     
+                    clean_title = clean_sub_text(title)
+                    clean_desc = clean_sub_text(desc)
+                    clean_poster = clean_and_save_wow_poster(safe_poster, post_id)
+                    
                     item_obj = {
-                        "titleTh": title,
-                        "titleEn": title,
+                        "titleTh": clean_title,
+                        "titleEn": clean_title,
                         "year": year,
-                        "poster": safe_poster,
-                        "backdrop": safe_poster,
+                        "poster": clean_poster,
+                        "backdrop": clean_poster,
                         "videoUrl": first_video,
                         "sourceType": "embed",
-                        "description": desc,
+                        "description": clean_desc,
                         "rating": 8.7,
                         "genres": genres,
                         "duration": duration_str,
@@ -820,7 +887,7 @@ def update_wow_drama(max_pages=2):
                         "originalUrl": link
                     }
                     new_items.append(item_obj)
-                    print(f"    [+] WOW-DRAMA: {title} ({total_eps} ตอน)")
+                    print(f"    [+] WOW-DRAMA: {clean_title} ({total_eps} ตอน)")
                     time.sleep(0.06)
                 except Exception:
                     pass
@@ -962,6 +1029,199 @@ def update_24hd_today(min_rating=6.0, max_pages=3):
     return new_movies
 
 
+def update_myserieshd(max_pages=15):
+    """
+    ดึงข้อมูลซีรีส์และภาพยนตร์ปี 2026 เฉพาะพากย์ไทยจาก MySeriesHD (https://myserieshd.com/)
+    ดึงผ่านระบบค้นหา '2026 พากย์ไทย' พร้อมระบบ Multithreading ดึงตอนครบทุกตอน
+    """
+    print(f"\n--- กำลังตรวจสอบซีรีส์ใหม่ปี 2026 (พากย์ไทย) จาก MYSERIESHD (สูงสุด {max_pages} หน้า) ---")
+    new_series = []
+    seen_links = set()
+    search_q = urllib.parse.quote("2026 พากย์ไทย")
+    
+    # ดึงรายชื่อที่มีอยู่แล้วเพื่อข้ามการดึงตอนซ้ำซ้อน
+    existing_items = load_existing_movies()
+    existing_dict = {}
+    for ex in existing_items:
+        t_key = ex.get("titleTh", "").strip().lower()
+        if t_key:
+            existing_dict[t_key] = len(ex.get("episodes", []))
+        orig = ex.get("originalUrl", "")
+        if orig:
+            existing_dict[orig] = len(ex.get("episodes", []))
+
+    def fetch_mshd_ep(p_id, ep_idx, ref_url):
+        ajax_u = "https://myserieshd.com/wp-content/themes/getplayer-2025/framework/get-video.php"
+        p_data = urllib.parse.urlencode({'post_id': str(p_id), 'ep_index': str(ep_idx)}).encode('utf-8')
+        ep_req = urllib.request.Request(ajax_u, data=p_data, headers={
+            'User-Agent': HEADERS['User-Agent'],
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+            'Referer': ref_url
+        })
+        try:
+            with urllib.request.urlopen(ep_req, timeout=8) as r:
+                d = json.loads(r.read().decode('utf-8'))
+                v_url = d.get('backup_video_url') or d.get('video_url', '')
+                return ep_idx, v_url
+        except Exception:
+            return ep_idx, ''
+
+    for page in range(1, max_pages + 1):
+        if page == 1:
+            page_url = f"https://myserieshd.com/?s={search_q}"
+        else:
+            page_url = f"https://myserieshd.com/page/{page}/?s={search_q}"
+            
+        print(f"[*] หน้า {page}/{max_pages}: {page_url}")
+        try:
+            req = urllib.request.Request(page_url, headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                html_text = resp.read().decode('utf-8', errors='replace')
+        except Exception as e:
+            print(f"[-] ไม่สามารถเปิดหน้า {page} ได้: {e}")
+            break
+            
+        cards = re.findall(r'<div class="movie-card">(.*?)</div>\s*</div>', html_text, re.DOTALL)
+        if not cards:
+            print(f"[*] ไม่พบการ์ดซีรีส์ในหน้า {page} (สิ้นสุดหน้า)")
+            break
+            
+        for c in cards:
+            link_m = re.search(r'href=["\'](https?://myserieshd\.com/[^"\']+)["\']', c)
+            if not link_m:
+                continue
+            link = link_m.group(1)
+            if link in seen_links:
+                continue
+            seen_links.add(link)
+            
+            title_m = re.search(r'alt=["\']([^"\']+)["\']', c)
+            raw_title = title_m.group(1) if title_m else ""
+            
+            # ต้องเป็นพากย์ไทย
+            if "พากย์ไทย" not in raw_title and "พากย์ไทย" not in c:
+                continue
+                
+            img_m = re.search(r'src=["\']([^"\']+)["\']', c)
+            raw_poster = img_m.group(1) if img_m else ""
+            
+            ep_info_m = re.search(r'class="m-epson">([^<]+)<', c)
+            ep_info = ep_info_m.group(1).strip() if ep_info_m else ""
+            
+            status_m = re.search(r'class="m-status">([^<]+)<', c)
+            status_text = status_m.group(1).strip() if status_m else ""
+            
+            card_ep_num = 1
+            cep_m = re.search(r'EP\.(\d+)', ep_info, re.IGNORECASE)
+            if cep_m:
+                card_ep_num = int(cep_m.group(1))
+                
+            # ทำความสะอาดชื่อเรื่อง
+            clean_title = re.sub(r'^(?:ดูซีรี่ย์|ดูซีรีส์|ซีรี่ย์|ซีรีส์|ดูหนัง|หนังจีน|หนังเกาหลี|หนังฝรั่ง|หนังอินเดีย|หนังไทย)\s*', '', raw_title, flags=re.IGNORECASE)
+            clean_title = re.sub(r'\s*(?:ครบทุกตอน|เต็มเรื่อง|จบเรื่อง|ซับไทย|พากย์ไทย/ซับไทย|พากย์ไทย|\(END\)|\(จบ\))\s*$', '', clean_title, flags=re.IGNORECASE).strip()
+            
+            # ตรวจสอบปี 2026
+            year = 2026
+            year_m = re.search(r'\((\d{4})\)', clean_title) or re.search(r'\((\d{4})\)', raw_title) or re.search(r'-(\d{4})/?$', link)
+            if year_m:
+                year = int(year_m.group(1))
+            if year != 2026:
+                continue
+                
+            t_low = clean_title.lower()
+            if (t_low in existing_dict and existing_dict[t_low] >= card_ep_num) or (link in existing_dict and existing_dict[link] >= card_ep_num):
+                continue
+
+            try:
+                s_req = urllib.request.Request(link, headers=HEADERS)
+                with urllib.request.urlopen(s_req, timeout=10) as s_resp:
+                    s_html = s_resp.read().decode('utf-8', errors='replace')
+                    
+                post_id_m = re.search(r'const\s+postID\s*=\s*(\d+);', s_html)
+                if not post_id_m:
+                    continue
+                post_id = post_id_m.group(1)
+                
+                ep_buttons = re.findall(r'<button[^>]*class=["\'][^"\']*ep-btn[^"\']*["\'][^>]*data-index=["\'](\d+)["\'][^>]*>(.*?)</button>', s_html)
+                if not ep_buttons:
+                    ep_indices = [1]
+                else:
+                    ep_indices = [int(x[0]) for x in ep_buttons]
+                    ep_indices = sorted(set(ep_indices))
+                    
+                total_eps = len(ep_indices)
+                
+                if t_low in existing_dict and existing_dict[t_low] >= total_eps:
+                    continue
+                
+                desc_m = re.search(r'<meta property="og:description" content="([^"]+)"', s_html)
+                desc = desc_m.group(1) if desc_m else clean_title
+                
+                genres = ["ดูซีรี่ย์พากย์ไทย", "ซีรีส์ใหม่ 2026", "พากย์ไทย"]
+                combined_check = (raw_title + " " + clean_title + " " + s_html).lower()
+                if any(x in combined_check for x in ["จีน", "chinese"]):
+                    genres.extend(["ซีรีส์จีน", "ซีรีส์จีน พากย์ไทย"])
+                elif any(x in combined_check for x in ["เกาหลี", "korea", "kr-series"]):
+                    genres.extend(["ซีรีส์เกาหลี", "ซีรีส์เกาหลี พากย์ไทย"])
+                elif any(x in combined_check for x in ["ละคร", "ละครไทย", "lakorn"]):
+                    genres.append("ละครไทย ย้อนหลัง")
+                elif any(x in combined_check for x in ["อินเดีย"]):
+                    genres.append("เอเชีย")
+                    
+                ordered_ep_urls = {}
+                with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
+                    futures = [executor.submit(fetch_mshd_ep, post_id, ep_idx, link) for ep_idx in ep_indices]
+                    for f in concurrent.futures.as_completed(futures):
+                        ep_i, v_url = f.result()
+                        if v_url:
+                            ordered_ep_urls[str(ep_i)] = v_url
+                            
+                if not ordered_ep_urls:
+                    continue
+                    
+                sorted_k = sorted(ordered_ep_urls.keys(), key=lambda x: int(x) if x.isdigit() else 999)
+                normalized_urls = {str(i): ordered_ep_urls[k] for i, k in enumerate(sorted_k, 1)}
+                actual_total = len(normalized_urls)
+                
+                is_ended = "จบ" in status_text or "จบ" in raw_title or "(END)" in raw_title
+                duration_str = f"ซีรีส์ {actual_total} ตอนจบ" if is_ended else f"ซีรีส์ {actual_total} ตอน (อัปเดต)"
+                if actual_total == 1 and ("หนัง" in raw_title or "movie" in link):
+                    duration_str = "ภาพยนตร์เต็มเรื่อง"
+                
+                safe_poster = safe_url(raw_poster)
+                
+                series_obj = {
+                    "titleTh": clean_title,
+                    "titleEn": clean_title,
+                    "year": 2026,
+                    "poster": safe_poster,
+                    "backdrop": safe_poster,
+                    "videoUrl": normalized_urls.get("1", ""),
+                    "sourceType": "embed",
+                    "description": desc,
+                    "rating": 8.8,
+                    "genres": list(dict.fromkeys(genres)),
+                    "duration": duration_str,
+                    "trailerUrl": "",
+                    "cast": [],
+                    "source": "MYSERIESHD",
+                    "episodes": [f"ตอนที่ {i}" for i in range(1, actual_total + 1)],
+                    "episodeUrls": normalized_urls,
+                    "languages": ["Thai (พากย์ไทย)"],
+                    "id": f"mshd-{post_id}",
+                    "postId": post_id,
+                    "originalUrl": link
+                }
+                new_series.append(series_obj)
+                print(f"  [+] MYSERIESHD: {clean_title} ({actual_total} ตอน)")
+                time.sleep(0.05)
+            except Exception as e:
+                print(f"  [-] ข้ามเรื่อง {clean_title}: {e}")
+                
+    print(f"[✓] รวมดึงได้ทั้งหมดจาก MYSERIESHD: {len(new_series)} เรื่อง")
+    return new_series
+
+
 def generate_sitemap(movies):
     """สร้าง sitemap.xml จากรายการภาพยนตร์ปัจจุบันอัตโนมัติ (รวมในไฟล์เดียว)"""
     try:
@@ -1080,6 +1340,7 @@ def main(auto_push=True):
     scraped_gs = update_goseries4k()
     scraped_wow = update_wow_drama(max_pages=2)
     scraped_today = update_24hd_today(min_rating=6.0, max_pages=3)
+    scraped_mshd = update_myserieshd(max_pages=15)
     
     # 2. Merge intelligently
     existing_map = {m.get("originalUrl", m.get("id", "")): m for m in existing}
@@ -1090,7 +1351,7 @@ def main(auto_push=True):
     added_new = 0
     updated_eps = 0
     
-    all_new_items = scraped_top + scraped_media + scraped_24hda + scraped_today + scraped_gs + scraped_wow
+    all_new_items = scraped_top + scraped_media + scraped_24hda + scraped_today + scraped_gs + scraped_wow + scraped_mshd
     
     for item in all_new_items:
         key = item.get("originalUrl", item.get("id", ""))
