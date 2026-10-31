@@ -83,7 +83,7 @@ function initMovieStreamApp() {
 
   // --- State Variables ---
   function getProxyUrl(url) {
-    if (!url || url.includes('image.tmdb.org') || url.startsWith('data:')) return url;
+    if (!url || url.includes('image.tmdb.org') || url.startsWith('data:') || url.includes('goseries4k.com')) return url;
     if (url.startsWith('images/') || url.startsWith('/images/')) {
       if (window.location.protocol === 'file:') {
         return url.startsWith('/') ? '.' + url : url;
@@ -438,7 +438,7 @@ function initMovieStreamApp() {
     return `
       <div class="movie-card" data-id="${movie.id}" tabindex="0" role="button" aria-label="${movie.titleTh}">
         <div class="movie-poster-wrapper">
-          <img src="${posterUrl}" alt="โปสเตอร์เรื่อง ${movie.titleTh}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${placeholderSvg}'">
+          <img src="${posterUrl}" data-raw="${movie.poster || ''}" alt="โปสเตอร์เรื่อง ${movie.titleTh}" loading="lazy" referrerpolicy="no-referrer" onerror="if(this.dataset.raw && this.src !== this.dataset.raw){ this.src = this.dataset.raw; } else { this.onerror=null; this.src='${placeholderSvg}'; }">
           ${hotBadgeHtml}
           <div class="card-badge-top-left">${qualityTag}</div>
           <div class="card-badge-top-right">
@@ -518,7 +518,7 @@ function initMovieStreamApp() {
       const cwImgSrc = getProxyUrl(movie.backdrop || movie.poster) || cwPlaceholder;
       card.innerHTML = `
         <div class="cw-poster-wrapper">
-          <img src="${cwImgSrc}" alt="${movie.titleTh}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${cwPlaceholder}'">
+          <img src="${cwImgSrc}" data-raw="${movie.backdrop || movie.poster || ''}" alt="${movie.titleTh}" loading="lazy" referrerpolicy="no-referrer" onerror="if(this.dataset.raw && this.src !== this.dataset.raw){ this.src = this.dataset.raw; } else { this.onerror=null; this.src='${cwPlaceholder}'; }">
           <div class="cw-badge-ep">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
             ${epLabel}
