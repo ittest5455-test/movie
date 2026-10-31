@@ -1,3522 +1,3561 @@
-// ----------------------------------------------------
-// MovieStream JavaScript Application Logic
-// ----------------------------------------------------
-
-function initMovieStreamApp() {
-  if (window.hasAppInitialized) return;
-  window.hasAppInitialized = true;
-  // --- DOM Selectors ---
-  const headerNav = document.getElementById("headerNav");
-  const logoLink = document.getElementById("logoLink");
-  const navHome = document.getElementById("navHome");
-  const navPopular = document.getElementById("navPopular");
-  const navThaiDrama = document.getElementById("navThaiDrama");
-  const navSeries = document.getElementById("navSeries");
-  const navWatchlist = document.getElementById("navWatchlist");
-  const watchlistCount = document.getElementById("watchlistCount");
-  const searchInput = document.getElementById("searchInput");
-  const heroSection = document.getElementById("heroSection");
-  
-  const gridView = document.getElementById("gridView");
-  const gridTitle = document.getElementById("gridTitle");
-  const gridMoviesList = document.getElementById("gridMoviesList");
-  
-
-  
-  // Genre Filter
-  const genreFilterContainer = document.getElementById("genreFilterContainer");
-  const movieShelvesContainer = document.getElementById("movieShelvesContainer");
-  
-  // Details Modal
-  const detailsModal = document.getElementById("detailsModal");
-  const modalCloseBtn = document.getElementById("modalCloseBtn");
-  const modalHeroBanner = document.getElementById("modalHeroBanner");
-  const modalPoster = document.getElementById("modalPoster");
-  const modalTitleTh = document.getElementById("modalTitleTh");
-  const modalTitleEn = document.getElementById("modalTitleEn");
-  const modalRatingVal = document.getElementById("modalRatingVal");
-  const modalYear = document.getElementById("modalYear");
-  const modalDuration = document.getElementById("modalDuration");
-  const modalGenres = document.getElementById("modalGenres");
-  const modalDescription = document.getElementById("modalDescription");
-  const modalCast = document.getElementById("modalCast");
-  const modalWatchNowBtn = document.getElementById("modalWatchNowBtn");
-  const modalTrailerBtn = document.getElementById("modalTrailerBtn");
-  const modalBookmarkBtn = document.getElementById("modalBookmarkBtn");
-  
-  // Video Player Modal
-  const playerModal = document.getElementById("playerModal");
-  const playerCloseBtn = document.getElementById("playerCloseBtn");
-  const playingMovieTitle = document.getElementById("playingMovieTitle");
-  const html5VideoPlayer = document.getElementById("html5VideoPlayer");
-  const iframeVideoPlayer = document.getElementById("iframeVideoPlayer");
-  const customPlayerControls = document.getElementById("customPlayerControls");
-  
-  // Player Bottom Bar Selectors
-  const audioSelectBtn = document.getElementById("audioSelectBtn");
-  const episodeSelectBtn = document.getElementById("episodeSelectBtn");
-
-  // Custom Controls Selectors
-  const playPauseBtn = document.getElementById("playPauseBtn");
-  const playIcon = document.getElementById("playIcon");
-  const currentTimeLabel = document.getElementById("currentTime");
-  const totalDurationLabel = document.getElementById("totalDuration");
-  const progressBarContainer = document.getElementById("progressBarContainer");
-  const progressBarFilled = document.getElementById("progressBarFilled");
-  const muteBtn = document.getElementById("muteBtn");
-  const volumeSlider = document.getElementById("volumeSlider");
-  const volumeFilled = document.getElementById("volumeFilled");
-  const fullscreenBtn = document.getElementById("fullscreenBtn");
-  const videoScreenWrapper = document.getElementById("videoScreenWrapper");
-  const centerPlayOverlay = document.getElementById("centerPlayOverlay");
-  const bottomProgressBarContainer = document.getElementById("bottomProgressBarContainer");
-  const bottomProgressBarFilled = document.getElementById("bottomProgressBarFilled");
-  const bottomCurrentTimeLabel = document.getElementById("bottomCurrentTime");
-  const bottomTotalDurationLabel = document.getElementById("bottomTotalDuration");
-
-  const toastContainer = document.getElementById("toastContainer");
-
-  // URL Google Apps Script Web App (เชื่อมต่อ Google Sheet สำหรับ Sync รายการโปรดและประวัติข้ามเครื่อง)
-  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyKnLnnu7iJ3uPSV3tdpLO5HL6pZMGy5qzHSLu8Y4RoQq5MIYj1QVFXgZ3miynuNjPX/exec";
-  const LINE_OA_ID = "@720jlmgp";
-  const LINE_OA_URL = "https://line.me/R/ti/p/@720jlmgp";
-
-  // --- State Variables ---
-  function getProxyUrl(url) {
-    if (!url || url.includes('image.tmdb.org') || url.startsWith('data:') || url.includes('goseries4k.com')) return url;
-    if (url.startsWith('images/') || url.startsWith('/images/')) {
-      if (window.location.protocol === 'file:') {
-        return url.startsWith('/') ? '.' + url : url;
-      }
-      return url.startsWith('/') ? url : '/' + url;
-    }
-    return `https://wsrv.nl/?url=${encodeURIComponent(url)}&output=webp`;
-  }
-  
-  const movieList = window.movies || (typeof movies !== "undefined" ? movies : []);
-  let watchlist = [];
-  try {
-    const stored = localStorage.getItem("moviestream_watchlist");
-    if (stored) watchlist = JSON.parse(stored);
-    if (!Array.isArray(watchlist)) watchlist = [];
-  } catch (e) {
-    console.warn("Watchlist parse error:", e);
-    watchlist = [];
-  }
-  let currentActiveMovie = null;
-
-  // --- Progressive Grid State (TV & Low-Spec Optimized) ---
-  let currentGridMovies = [];
-  let currentRenderedCount = 0;
-  const GRID_BATCH_SIZE = 28; // Render 28 cards initially for 0ms lag
-  let gridObserver = null;
-
-  // --- Video Player & Overlay States ---
-  let pendingPlayMovie = null;
-  let hlsInstance = null;
-  let playerControlsIdleTimer = null;
-  let skipIntroCountdownTimer = null;
-  let resumePopupTimeout = null;
-
-  // --- Continue Watching System (ดูล่าสุด / กำลังรับชมต่อ - แยกประวัติตาม User 100%) ---
-  const continueWatchingSection = document.getElementById("continueWatchingSection");
-  const continueWatchingListEl = document.getElementById("continueWatchingList");
-  const clearContinueWatchingBtn = document.getElementById("clearContinueWatchingBtn");
-
-  let cwSyncDebounce = null;
-  function syncContinueWatchingToCloud() {
-    clearTimeout(cwSyncDebounce);
-    cwSyncDebounce = setTimeout(() => {
-      try {
-        const savedUser = localStorage.getItem("moviestream_user");
-        if (savedUser && GOOGLE_SCRIPT_URL) {
-          const user = JSON.parse(savedUser);
-          if (user && user.phone) {
-            fetch(GOOGLE_SCRIPT_URL, {
-              method: "POST",
-              headers: { "Content-Type": "text/plain;charset=utf-8" },
-              body: JSON.stringify({
-                action: "sync_history",
-                phone: user.phone,
-                history: JSON.stringify(continueWatchingList)
-              })
-            }).catch(() => {});
-          }
-        }
-      } catch (e) {}
-    }, 1200);
-  }
-
-  function getContinueWatchingStorageKey() {
-    try {
-      const savedUser = localStorage.getItem("moviestream_user");
-      if (savedUser) {
-        const u = JSON.parse(savedUser);
-        if (u && u.phone) return `moviestream_continue_watching_${u.phone}`;
-      }
-    } catch (e) {}
-    return "moviestream_continue_watching_guest";
-  }
-
-  function loadContinueWatchingData() {
-    const key = getContinueWatchingStorageKey();
-    const storedCW = localStorage.getItem(key);
-
-    // หากเคยมีข้อมูลบันทึกไว้แล้ว (แม้จะเป็นรายการว่างเปล่า []) ให้ใช้ค่านั้น และห้ามสร้าง Mock ซ้ำ
-    if (storedCW !== null) {
-      try {
-        const parsed = JSON.parse(storedCW);
-        if (Array.isArray(parsed)) return parsed;
-      } catch (e) {
-        console.warn("Continue watching parse error:", e);
-      }
-      return [];
-    }
-
-    // หากเปิดระบบเป็นครั้งแรกจริงๆ (ยังไม่เคยมี key ใน storage) ให้ใส่ข้อมูลจำลอง 2 เรื่องไว้ทดสอบ
-    let list = [];
-    if (movieList.length > 0) {
-      const sampleSeries = movieList.find(m => m.episodes && m.episodes.length > 2) || movieList[0];
-      const sampleMovie = movieList.find(m => m.id !== (sampleSeries ? sampleSeries.id : '')) || movieList[1];
-
-      if (sampleSeries) {
-        list.push({
-          movieId: sampleSeries.id,
-          episode: 3,
-          episodeLabel: (sampleSeries.episodes && sampleSeries.episodes[2]) ? sampleSeries.episodes[2] : "ตอนที่ 3",
-          progressPercent: 68,
-          updatedAt: Date.now() - 1000 * 60 * 60 * 20 // ดูเมื่อวานนี้
-        });
-      }
-      if (sampleMovie) {
-        list.push({
-          movieId: sampleMovie.id,
-          episode: 1,
-          episodeLabel: "เต็มเรื่อง",
-          progressPercent: 45,
-          updatedAt: Date.now() - 1000 * 60 * 60 * 48 // 2 วันที่แล้ว
-        });
-      }
-      try {
-        localStorage.setItem(key, JSON.stringify(list));
-      } catch (e) {}
-    }
-
-    return list;
-  }
-
-  let continueWatchingList = loadContinueWatchingData();
-
-
-  // --- Functions ---
-
-  // --- Fail-safe Visitor Count Tracker ---
-  function initVisitorCounter() {
-    const visitorCountDisplay = document.getElementById("visitorCountDisplay");
-    if (!visitorCountDisplay) return;
-
-    let count = localStorage.getItem("moviestream_visitor_count");
-    if (!count) {
-      count = Math.floor(Math.random() * 80) + 168; // Base realistic starting visitors
-    } else {
-      count = parseInt(count, 10) + 1;
-    }
-    localStorage.setItem("moviestream_visitor_count", count);
-    visitorCountDisplay.textContent = Number(count).toLocaleString();
-  }
-
-  // Scroll Header Effect
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      headerNav.classList.add("scrolled");
-    } else {
-      headerNav.classList.remove("scrolled");
-    }
-  });
-
-  // --- Hero Spotlight Carousel System (แบนเนอร์ภาพยนตร์แนะนำชนโรง) ---
-  function initHeroSpotlight() {
-    if (!heroSection) return;
-
-    const heroBackdrop = document.getElementById("heroBackdrop");
-    const heroTag = document.getElementById("heroTag");
-    const heroSoundBadge = document.getElementById("heroSoundBadge");
-    const heroTitle = document.getElementById("heroTitle");
-    const heroTitleSub = document.getElementById("heroTitleSub");
-    const heroRatingVal = document.getElementById("heroRatingVal");
-    const heroYear = document.getElementById("heroYear");
-    const heroDuration = document.getElementById("heroDuration");
-    const heroGenres = document.getElementById("heroGenres");
-    const heroDesc = document.getElementById("heroDesc");
-    const heroPlayBtn = document.getElementById("heroPlayBtn");
-    const heroInfoBtn = document.getElementById("heroInfoBtn");
-    const heroFavBtn = document.getElementById("heroFavBtn");
-    const heroPrevBtn = document.getElementById("heroPrevBtn");
-    const heroNextBtn = document.getElementById("heroNextBtn");
-    const heroDots = document.getElementById("heroDots");
-
-    // Select featured movies: High rated or recent 2026/2025 movies with valid posters/backdrops
-    let heroMovies = movieList.filter(m => {
-      const hasImg = m.backdrop || m.poster;
-      const isRecent = m.year === 2026 || m.year === "2026" || m.year === 2025 || m.year === "2025";
-      const isHighRating = parseFloat(m.rating) >= 7.5;
-      return hasImg && (isRecent || isHighRating);
-    });
-
-    if (heroMovies.length < 5) {
-      heroMovies = movieList.slice(0, 6);
-    } else {
-      heroMovies = heroMovies.slice(0, 6);
-    }
-
-    if (heroMovies.length === 0) {
-      heroSection.style.display = "none";
-      return;
-    }
-
-    let currentIndex = 0;
-    let heroAutoTimer = null;
-
-    // Render Indicator Dots
-    if (heroDots) {
-      heroDots.innerHTML = heroMovies.map((_, i) => `<span class="hero-dot ${i === 0 ? 'active' : ''}" data-index="${i}"></span>`).join("");
-      heroDots.querySelectorAll(".hero-dot").forEach(dot => {
-        dot.addEventListener("click", () => {
-          const idx = parseInt(dot.getAttribute("data-index"), 10);
-          if (!isNaN(idx)) {
-            currentIndex = idx;
-            renderHero(currentIndex);
-            resetHeroTimer();
-          }
-        });
-      });
-    }
-
-    function updateHeroFavBtn(movieId) {
-      if (!heroFavBtn) return;
-      const isSaved = watchlist.includes(movieId);
-      heroFavBtn.innerHTML = `
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="${isSaved ? '#ef4444' : 'none'}" stroke="${isSaved ? '#ef4444' : 'currentColor'}" stroke-width="2.2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-      `;
-      heroFavBtn.title = isSaved ? "ลบออกจากรายการโปรด" : "เพิ่มลงในรายการโปรด";
-    }
-
-    function renderHero(index) {
-      const movie = heroMovies[index];
-      if (!movie) return;
-
-      const bgImg = getProxyUrl(movie.backdrop || movie.poster) || "";
-      if (heroBackdrop) {
-        heroBackdrop.style.backgroundImage = `url('${bgImg}')`;
-      }
-
-      if (heroTag) {
-        if (movie.year === 2026 || movie.year === "2026") {
-          heroTag.textContent = `🔥 แนะนำอันดับ ${index + 1} • ชนโรง 2026`;
-        } else {
-          heroTag.textContent = `⭐ ภาพยนตร์ยอดนิยม • แนะนำอันดับ ${index + 1}`;
-        }
-      }
-
-      if (heroSoundBadge) {
-        const hasThai = (movie.languages && movie.languages.some(l => l.includes("Thai"))) || (movie.genres && movie.genres.includes("พากย์ไทย"));
-        heroSoundBadge.textContent = hasThai ? "🔊 พากย์ไทย 5.1" : "🔊 เสียงไทย/ซับไทย";
-      }
-
-      if (heroTitle) heroTitle.textContent = movie.titleTh || "ภาพยนตร์แนะนำ";
-      if (heroTitleSub) heroTitleSub.textContent = movie.titleEn ? `${movie.titleEn} (${movie.year || '2026'})` : `${movie.year || '2026'}`;
-      if (heroRatingVal) heroRatingVal.textContent = movie.rating || "8.5";
-      if (heroYear) heroYear.textContent = movie.year || "2026";
-      if (heroDuration) heroDuration.textContent = movie.duration || (movie.episodes && movie.episodes.length > 1 ? `ซีรีส์ ${movie.episodes.length} ตอน` : "ภาพยนตร์เต็มเรื่อง");
-
-      if (heroGenres) {
-        if (movie.genres && Array.isArray(movie.genres)) {
-          heroGenres.textContent = movie.genres.filter(g => g !== "24-HD" && g !== "GOSERIES4K" && g !== "WOW-DRAMA").slice(0, 3).join(" • ") || "ภาพยนตร์คมชัด HD";
-        } else {
-          heroGenres.textContent = "ภาพยนตร์ยอดนิยม";
-        }
-      }
-
-      if (heroDesc) {
-        heroDesc.textContent = movie.description || "สัมผัสประสบการณ์รับชมภาพยนตร์ออนไลน์คุณภาพสูงระดับ 4K คมชัดทั้งภาพและเสียง พากย์ไทย ซับไทย เต็มเรื่อง ไม่มีโฆษณากวนใจ";
-      }
-
-      updateHeroFavBtn(movie.id);
-
-      if (heroDots) {
-        heroDots.querySelectorAll(".hero-dot").forEach((dot, i) => {
-          if (i === index) dot.classList.add("active");
-          else dot.classList.remove("active");
-        });
-      }
-    }
-
-    function nextHero() {
-      currentIndex = (currentIndex + 1) % heroMovies.length;
-      renderHero(currentIndex);
-    }
-
-    function prevHero() {
-      currentIndex = (currentIndex - 1 + heroMovies.length) % heroMovies.length;
-      renderHero(currentIndex);
-    }
-
-    function resetHeroTimer() {
-      if (heroAutoTimer) clearInterval(heroAutoTimer);
-      heroAutoTimer = setInterval(nextHero, 7000);
-    }
-
-    if (heroPrevBtn) {
-      heroPrevBtn.addEventListener("click", () => {
-        prevHero();
-        resetHeroTimer();
-      });
-    }
-
-    if (heroNextBtn) {
-      heroNextBtn.addEventListener("click", () => {
-        nextHero();
-        resetHeroTimer();
-      });
-    }
-
-    if (heroPlayBtn) {
-      heroPlayBtn.addEventListener("click", () => {
-        const m = heroMovies[currentIndex];
-        if (m) playMovie(m);
-      });
-    }
-
-    if (heroInfoBtn) {
-      heroInfoBtn.addEventListener("click", () => {
-        const m = heroMovies[currentIndex];
-        if (m) openDetailsModal(m);
-      });
-    }
-
-    if (heroFavBtn) {
-      heroFavBtn.addEventListener("click", () => {
-        const m = heroMovies[currentIndex];
-        if (m) {
-          toggleWatchlist(m.id);
-          updateHeroFavBtn(m.id);
-        }
-      });
-    }
-
-    heroSection.addEventListener("mouseenter", () => {
-      if (heroAutoTimer) clearInterval(heroAutoTimer);
-    });
-
-    heroSection.addEventListener("mouseleave", () => {
-      resetHeroTimer();
-    });
-
-    // Initial render
-    renderHero(0);
-    resetHeroTimer();
-  }
-
-  // Create single movie card structure
-  function createMovieCardMarkup(movie) {
-    const isSaved = watchlist.includes(movie.id);
-    const isTopHot = movie.genres && (movie.genres.includes("ยอดนิยม 2026") || movie.genres.includes("ยอดนิยม") || (parseFloat(movie.rating) >= 7.8));
-    const placeholderSvg = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22300%22%20height%3D%22450%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%231e1b4b%22%2F%3E%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%230f172a%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23020617%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20fill%3D%22url(%23g)%22%20width%3D%22300%22%20height%3D%22450%22%2F%3E%3Ccircle%20cx%3D%22150%22%20cy%3D%22190%22%20r%3D%2240%22%20fill%3D%22rgba(168%2C85%2C247%2C0.15)%22%20stroke%3D%22rgba(168%2C85%2C247%2C0.35)%22%20stroke-width%3D%222%22%2F%3E%3Cpolygon%20points%3D%22143%2C175%20165%2C190%20143%2C205%22%20fill%3D%22%23a855f7%22%2F%3E%3Ctext%20fill%3D%22%23ffffff%22%20font-family%3D%22sans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22bold%22%20x%3D%22150%22%20y%3D%22265%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%221%22%3EMOVIESTREAM%3C%2Ftext%3E%3Ctext%20fill%3D%22%23f59e0b%22%20font-family%3D%22sans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22bold%22%20x%3D%22150%22%20y%3D%22288%22%20text-anchor%3D%22middle%22%3EVIP%20CINEMA%3C%2Ftext%3E%3C%2Fsvg%3E";
-    const posterUrl = getProxyUrl(movie.poster) || placeholderSvg;
-
-    const hotBadgeHtml = isTopHot ? `<div class="card-badge-hot">HOT</div>` : '';
-    const ratingVal = movie.rating || "8.0";
-    const qualityTag = (movie.genres && movie.genres.includes("ละครไทย")) ? "HD ละคร" : "4K ULTRA";
-
-    let langText = "พากย์ไทย";
-    if (movie.languages && movie.languages.length > 0) {
-      langText = movie.languages[0].includes("Thai") ? "พากย์ไทย" : movie.languages[0];
-    } else if (movie.genres && movie.genres.includes("พากย์ไทย")) {
-      langText = "พากย์ไทย";
-    }
-
-    return `
-      <div class="movie-card" data-id="${movie.id}" tabindex="0" role="button" aria-label="${movie.titleTh}">
-        <div class="movie-poster-wrapper">
-          <img src="${posterUrl}" data-raw="${movie.poster || ''}" alt="โปสเตอร์เรื่อง ${movie.titleTh}" loading="lazy" referrerpolicy="no-referrer" onerror="if(this.dataset.raw && this.src !== this.dataset.raw){ this.src = this.dataset.raw; } else { this.onerror=null; this.src='${placeholderSvg}'; }">
-          ${hotBadgeHtml}
-          <div class="card-badge-top-left">${qualityTag}</div>
-          <div class="card-badge-top-right">
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-            ${ratingVal}
-          </div>
-
-          <button class="movie-fav-btn" aria-label="เพิ่มในรายการโปรด" title="บันทึกรายการโปรด">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="${isSaved ? '#ef4444' : 'none'}" stroke="${isSaved ? '#ef4444' : 'currentColor'}" stroke-width="2.2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-          </button>
-
-          <div class="movie-card-hover-overlay">
-            <div class="card-hover-play-btn" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-            </div>
-          </div>
-        </div>
-
-        <div class="movie-card-info">
-          <h3 class="movie-card-title" title="${movie.titleTh}">${movie.titleTh}</h3>
-          <div class="movie-card-meta">
-            <span class="movie-card-year">${movie.year}</span>
-            <span class="movie-card-lang-chip">${langText}</span>
-          </div>
-        </div>
-      </div>
-    `;
-  }
-
-  // --- Continue Watching Functions ---
-
-  function renderContinueWatchingShelf() {
-    if (!continueWatchingSection || !continueWatchingListEl) return;
-    
-    const cwCountBadge = document.getElementById("cwCountBadge");
-
-    if (!continueWatchingList || continueWatchingList.length === 0) {
-      continueWatchingSection.style.display = "none";
-      document.body.classList.remove("has-continue-watching");
-      if (cwCountBadge) cwCountBadge.textContent = "0";
-      return;
-    }
-
-    continueWatchingSection.style.display = "block";
-    document.body.classList.add("has-continue-watching");
-    if (cwCountBadge) {
-      cwCountBadge.textContent = continueWatchingList.length;
-    }
-    continueWatchingListEl.innerHTML = "";
-
-    continueWatchingList.forEach(item => {
-      const movie = movieList.find(m => m.id === item.movieId);
-      if (!movie) return;
-
-      const card = document.createElement("div");
-      card.className = "cw-card";
-      card.setAttribute("tabindex", "0");
-      card.setAttribute("role", "button");
-      card.setAttribute("aria-label", `รับชมต่อ ${movie.titleTh} ${item.episodeLabel || ''}`);
-
-      const percent = Math.min(Math.max(item.progressPercent || 50, 10), 98);
-      const epLabel = item.episodeLabel || (movie.episodes && movie.episodes.length > 1 ? `ตอนที่ ${item.episode}` : "เต็มเรื่อง");
-      
-      const timeDiff = Date.now() - (item.updatedAt || Date.now());
-      let timeText = "วันนี้";
-      if (timeDiff > 1000 * 60 * 60 * 24 * 2) {
-        timeText = `${Math.floor(timeDiff / (1000 * 60 * 60 * 24))} วันที่แล้ว`;
-      } else if (timeDiff > 1000 * 60 * 60 * 18) {
-        timeText = "เมื่อวานนี้";
-      } else if (timeDiff > 1000 * 60 * 60) {
-        timeText = `${Math.floor(timeDiff / (1000 * 60 * 60))} ชม. ที่แล้ว`;
-      } else {
-        timeText = "เมื่อสักครู่";
-      }
-
-      const cwPlaceholder = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22300%22%20height%3D%22450%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20300%20450%22%3E%3Crect%20fill%3D%22%231e293b%22%20width%3D%22300%22%20height%3D%22450%22%2F%3E%3Ctext%20fill%3D%22%2394a3b8%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20dy%3D%2210.5%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EMovieStream%20HD%3C%2Ftext%3E%3C%2Fsvg%3E";
-      const cwImgSrc = getProxyUrl(movie.backdrop || movie.poster) || cwPlaceholder;
-      card.innerHTML = `
-        <div class="cw-poster-wrapper">
-          <img src="${cwImgSrc}" data-raw="${movie.backdrop || movie.poster || ''}" alt="${movie.titleTh}" loading="lazy" referrerpolicy="no-referrer" onerror="if(this.dataset.raw && this.src !== this.dataset.raw){ this.src = this.dataset.raw; } else { this.onerror=null; this.src='${cwPlaceholder}'; }">
-          <div class="cw-badge-ep">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-            ${epLabel}
-          </div>
-          <div class="cw-play-overlay">
-            <div class="cw-play-btn-circle">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-            </div>
-            <span class="cw-play-label">กดรับชมต่อ</span>
-          </div>
-          <div class="cw-progress-track">
-            <div class="cw-progress-fill" style="width: ${percent}%;"></div>
-          </div>
-          <button class="cw-btn-delete" title="ลบออกจากประวัติ" data-delete-id="${movie.id}">✕</button>
-        </div>
-        <div class="cw-info">
-          <h4 class="cw-title" title="${movie.titleTh}">${movie.titleTh}</h4>
-          <div class="cw-meta-row">
-            <span class="cw-status-text">ดูค้างไว้ ${percent}%</span>
-            <span>${timeText}</span>
-          </div>
-        </div>
-      `;
-
-      const delBtn = card.querySelector(".cw-btn-delete");
-      if (delBtn) {
-        delBtn.addEventListener("click", (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          removeContinueWatching(movie.id);
-        });
-      }
-
-      card.addEventListener("click", (e) => {
-        if (e.target.closest(".cw-btn-delete")) return;
-        playMovie(movie, item.episode || 1);
-      });
-
-      continueWatchingListEl.appendChild(card);
-    });
-  }
-
-  function removeContinueWatching(movieId) {
-    continueWatchingList = continueWatchingList.filter(item => item.movieId !== movieId);
-    try {
-      localStorage.setItem(getContinueWatchingStorageKey(), JSON.stringify(continueWatchingList));
-    } catch(e) {}
-    showToast("ลบออกจากประวัติดูล่าสุดแล้ว", "info");
-    renderContinueWatchingShelf();
-    syncContinueWatchingToCloud();
-  }
-
-  function clearAllContinueWatching() {
-    continueWatchingList = [];
-    try {
-      localStorage.setItem(getContinueWatchingStorageKey(), JSON.stringify([]));
-    } catch(e) {}
-    showToast("ล้างประวัติดูล่าสุดเรียบร้อยแล้ว", "info");
-    renderContinueWatchingShelf();
-    syncContinueWatchingToCloud();
-  }
-
-  function recordContinueWatching(movie, episodeNum = 1, progress = null) {
-    if (!movie || !movie.id) return;
-
-    let ep = parseInt(episodeNum) || 1;
-    let epLabel = (movie.episodes && movie.episodes[ep - 1]) ? movie.episodes[ep - 1] : `ตอนที่ ${ep}`;
-    if (!movie.episodes || movie.episodes.length <= 1) {
-      epLabel = "เต็มเรื่อง";
-    }
-
-    let percent = progress;
-    if (percent === null) {
-      const existing = continueWatchingList.find(item => item.movieId === movie.id);
-      percent = existing ? existing.progressPercent : Math.floor(Math.random() * 30 + 35);
-    }
-
-    continueWatchingList = continueWatchingList.filter(item => item.movieId !== movie.id);
-    continueWatchingList.unshift({
-      movieId: movie.id,
-      episode: ep,
-      episodeLabel: epLabel,
-      progressPercent: Math.min(Math.max(percent, 5), 98),
-      updatedAt: Date.now()
-    });
-
-    if (continueWatchingList.length > 20) {
-      continueWatchingList = continueWatchingList.slice(0, 20);
-    }
-
-    try {
-      localStorage.setItem(getContinueWatchingStorageKey(), JSON.stringify(continueWatchingList));
-    } catch(e) {}
-
-    renderContinueWatchingShelf();
-    syncContinueWatchingToCloud();
-  }
-
-  function displayContinueWatchingGridView() {
-    navHome.classList.remove("active");
-    if (navWatchlist) navWatchlist.classList.remove("active");
-    
-    const cwMovies = [];
-    continueWatchingList.forEach(item => {
-      const found = movieList.find(m => m.id === item.movieId);
-      if (found) cwMovies.push(found);
-    });
-
-    showGridView(`🕒 กำลังรับชมต่อ (Continue Watching) (${cwMovies.length} เรื่อง)`, cwMovies);
-  }
-
-  // --- View Swappers ---
-
-  function showHomeView() {
-    if (navHome) navHome.classList.add("active");
-    if (navPopular) navPopular.classList.remove("active");
-    if (navThaiDrama) navThaiDrama.classList.remove("active");
-    if (navSeries) navSeries.classList.remove("active");
-    if (navWatchlist) navWatchlist.classList.remove("active");
-    if (searchInput) searchInput.value = "";
-    // แสดงแบนเนอร์แนะนำหนังเมื่ออยู่ในหมวด "⚡ อัปเดตล่าสุด"
-    if (heroSection) heroSection.style.display = "flex";
-    
-    // Reset active genres tag - ให้ "⚡ อัปเดตล่าสุด" เป็นอันดับแรกและ Active เป็นค่าเริ่มต้น
-    document.querySelectorAll(".genre-tag").forEach(tag => {
-      const g = tag.getAttribute("data-genre");
-      if (g === "today") {
-        tag.classList.add("active");
-      } else {
-        tag.classList.remove("active");
-      }
-    });
-
-    renderContinueWatchingShelf();
-
-    // คัดกรองเฉพาะเรื่องที่มาใหม่ล่าสุด (ปี 2026 จำนวน 24 เรื่องล่าสุด) เพื่อไม่ให้เยอะเกินไปตามคำขอ
-    const latestNewMovies = movieList.filter(m => {
-      const y = parseInt(m.year) || 0;
-      return y >= 2026 && !m.titleTh.includes("(201") && !m.titleTh.includes("(2020");
-    }).slice(0, 24);
-
-    showGridView(`⚡ ภาพยนตร์ & ซีรีส์อัปเดตมาใหม่ (${latestNewMovies.length} เรื่อง)`, latestNewMovies);
-  }
-
-  // --- High Performance Progressive Grid Rendering (Low-Spec & TV Optimized) ---
-
-  function showGridView(title, filteredMovies) {
-    if (continueWatchingSection) {
-      if (title.includes("ทั้งหมด") && continueWatchingList.length > 0) {
-        continueWatchingSection.style.display = "block";
-        document.body.classList.add("has-continue-watching");
-      } else {
-        continueWatchingSection.style.display = "none";
-        document.body.classList.remove("has-continue-watching");
-      }
-    }
-
-    if (heroSection) {
-      // แนะนำหนังให้ขึ้นเฉพาะเมื่อเลือกหมวด "⚡ อัปเดตล่าสุด" เท่านั้น
-      const activeTag = document.querySelector(".genre-tag.active");
-      const isTodayActive = activeTag ? activeTag.getAttribute("data-genre") === "today" : false;
-      if (isTodayActive || title.includes("อัปเดต") || title.includes("today") || title.includes("มาใหม่")) {
-        heroSection.style.display = "flex";
-      } else {
-        heroSection.style.display = "none";
-      }
-    }
-    gridView.style.display = "block";
-    gridTitle.textContent = title;
-    
-    gridMoviesList.innerHTML = "";
-    removeInfiniteScrollTrigger();
-    
-    if (!filteredMovies || filteredMovies.length === 0) {
-      gridMoviesList.innerHTML = `
-        <div class="empty-state" style="grid-column: 1 / -1;">
-          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="12" x2="16" y2="12"></line></svg>
-          <h3>ไม่พบภาพยนตร์</h3>
-          <p>ลองปรับค้นหาใหม่ หรือกลับไปที่หน้าหลัก</p>
-        </div>
-      `;
-      return;
-    }
-
-    currentGridMovies = filteredMovies;
-    currentRenderedCount = 0;
-
-    // 1. Render initial fast batch (Instant, 0ms lag)
-    appendNextMovieBatch();
-
-    // 2. Setup lazy-load for remaining items
-    setupInfiniteScrollTrigger();
-  }
-
-  function appendNextMovieBatch() {
-    if (!currentGridMovies || currentRenderedCount >= currentGridMovies.length) {
-      removeInfiniteScrollTrigger();
-      return;
-    }
-
-    const nextItems = currentGridMovies.slice(currentRenderedCount, currentRenderedCount + GRID_BATCH_SIZE);
-    currentRenderedCount += nextItems.length;
-
-    const frag = document.createRange().createContextualFragment(
-      nextItems.map(m => createMovieCardMarkup(m)).join("")
-    );
-    gridMoviesList.appendChild(frag);
-
-    if (currentRenderedCount >= currentGridMovies.length) {
-      removeInfiniteScrollTrigger();
-    }
-  }
-
-  function setupInfiniteScrollTrigger() {
-    removeInfiniteScrollTrigger();
-    if (!currentGridMovies || currentRenderedCount >= currentGridMovies.length) return;
-
-    const sentinel = document.createElement("div");
-    sentinel.id = "gridScrollSentinel";
-    sentinel.style.cssText = "grid-column: 1 / -1; display: flex; justify-content: center; padding: 1.5rem 0; width: 100%;";
-    const remain = currentGridMovies.length - currentRenderedCount;
-    sentinel.innerHTML = `
-      <button class="btn btn-secondary load-more-movies-btn" id="loadMoreMoviesBtn" style="padding: 0.65rem 1.8rem; border-radius: 24px; font-weight: 600; cursor: pointer; border: 1px solid rgba(255,255,255,0.18);">
-        📥 โหลดภาพยนตร์เพิ่มเติม (${remain} เรื่องที่เหลือ)
-      </button>
-    `;
-    gridMoviesList.appendChild(sentinel);
-
-    const btn = document.getElementById("loadMoreMoviesBtn");
-    if (btn) {
-      btn.addEventListener("click", () => {
-        btn.remove();
-        appendNextMovieBatch();
-        setupInfiniteScrollTrigger();
-      });
-    }
-
-    if ("IntersectionObserver" in window) {
-      gridObserver = new IntersectionObserver((entries) => {
-        if (entries[0] && entries[0].isIntersecting) {
-          if (currentRenderedCount < currentGridMovies.length) {
-            appendNextMovieBatch();
-            const s = document.getElementById("gridScrollSentinel");
-            if (s && gridMoviesList.contains(s)) {
-              gridMoviesList.appendChild(s);
-              const b = document.getElementById("loadMoreMoviesBtn");
-              if (b) {
-                const rem = currentGridMovies.length - currentRenderedCount;
-                b.textContent = `📥 โหลดภาพยนตร์เพิ่มเติม (${rem} เรื่องที่เหลือ)`;
-              }
-            }
-          } else {
-            removeInfiniteScrollTrigger();
-          }
-        }
-      }, { rootMargin: "500px 0px" });
-
-      gridObserver.observe(sentinel);
-    }
-  }
-
-  function removeInfiniteScrollTrigger() {
-    if (gridObserver) {
-      try { gridObserver.disconnect(); } catch(e) {}
-      gridObserver = null;
-    }
-    const s = document.getElementById("gridScrollSentinel");
-    if (s) s.remove();
-  }
-
-  // Single Delegated Click & Remote Navigation Listener on gridMoviesList (Zero Memory Leak)
-  if (gridMoviesList) {
-    gridMoviesList.addEventListener("click", (e) => {
-      const favBtn = e.target.closest(".movie-fav-btn");
-      if (favBtn) {
-        e.stopPropagation();
-        const card = favBtn.closest(".movie-card");
-        if (card) {
-          const movieId = card.getAttribute("data-id");
-          toggleWatchlist(movieId);
-        }
-        return;
-      }
-
-      const card = e.target.closest(".movie-card");
-      if (card) {
-        const movieId = card.getAttribute("data-id");
-        const found = movieList.find(m => m.id === movieId);
-        if (found) playMovie(found);
-      }
-    });
-
-    gridMoviesList.addEventListener("keydown", (e) => {
-      const code = e.keyCode || e.which;
-      if (code === 13 || e.key === "Enter") {
-        const card = e.target.closest(".movie-card");
-        if (card) {
-          e.preventDefault();
-          const movieId = card.getAttribute("data-id");
-          const found = movieList.find(m => m.id === movieId);
-          if (found) playMovie(found);
-        }
-      }
-    });
-  }
-
-  // --- Watchlist Handling ---
-
-  function updateWatchlistUI() {
-    watchlistCount.textContent = watchlist.length;
-    localStorage.setItem("moviestream_watchlist", JSON.stringify(watchlist));
-  }
-
-  function toggleWatchlist(movieId) {
-    const movie = movieList.find(m => m.id === movieId);
-    if (!movie) return;
-
-    const index = watchlist.indexOf(movieId);
-    if (index === -1) {
-      watchlist.push(movieId);
-      showToast(`เพิ่ม "${movie.titleTh}" ไปยังรายการโปรดแล้ว`, "success");
-    } else {
-      watchlist.splice(index, 1);
-      showToast(`ลบ "${movie.titleTh}" ออกจากรายการโปรดแล้ว`, "info");
-    }
-    
-    updateWatchlistUI();
-
-    // Update SVG in Grid View if present
-    const cardSvg = document.querySelector(`.movie-card[data-id="${movieId}"] .movie-fav-btn svg`);
-    if (cardSvg) {
-      const isNowSaved = watchlist.includes(movieId);
-      cardSvg.setAttribute("fill", isNowSaved ? "currentColor" : "none");
-      cardSvg.parentElement.style.color = isNowSaved ? "#22c55e" : "#ffffff";
-    }
-
-    // If currently on watchlist page, refresh grid view
-    if (navWatchlist.classList.contains("active")) {
-      displayWatchlistView();
-    }
-
-    // Auto-sync Watchlist to Google Sheet if logged in
-    const savedUser = localStorage.getItem("moviestream_user");
-    if (savedUser && GOOGLE_SCRIPT_URL) {
-      try {
-        const user = JSON.parse(savedUser);
-        fetch(GOOGLE_SCRIPT_URL, {
-          method: "POST",
-          headers: { "Content-Type": "text/plain;charset=utf-8" },
-          body: JSON.stringify({
-            action: "sync_watchlist",
-            phone: user.phone,
-            watchlist: JSON.stringify(watchlist)
-          })
-        }).catch(() => {});
-      } catch (e) {}
-    }
-    
-    // Update Modal Button State if modal is open
-    if (currentActiveMovie && currentActiveMovie.id === movieId) {
-      updateModalWatchlistBtnState(movieId);
-    }
-  }
-
-  function updateModalWatchlistBtnState(movieId) {
-    const isSaved = watchlist.includes(movieId);
-    if (modalBookmarkBtn) {
-      if (isSaved) {
-        modalBookmarkBtn.classList.add("btn-primary");
-        modalBookmarkBtn.classList.remove("btn-secondary");
-        modalBookmarkBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>`;
-      } else {
-        modalBookmarkBtn.classList.add("btn-secondary");
-        modalBookmarkBtn.classList.remove("btn-primary");
-        modalBookmarkBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>`;
-      }
-    }
-  }
-
-  function displayWatchlistView() {
-    if (navHome) navHome.classList.remove("active");
-    if (navPopular) navPopular.classList.remove("active");
-    if (navThaiDrama) navThaiDrama.classList.remove("active");
-    if (navSeries) navSeries.classList.remove("active");
-    if (navWatchlist) navWatchlist.classList.add("active");
-    if (heroSection) heroSection.style.display = "none";
-    const favs = movieList.filter(m => watchlist.includes(m.id));
-    showGridView("❤️ รายการโปรดของฉัน", favs);
-  }
-
-  // --- Details Modal Actions ---
-
-  function openDetailsModal(movie) {
-    currentActiveMovie = movie;
-    
-    if (modalHeroBanner) modalHeroBanner.style.backgroundImage = `url('${getProxyUrl(movie.backdrop || movie.poster)}')`;
-    if (modalPoster) {
-      modalPoster.src = getProxyUrl(movie.poster);
-      modalPoster.alt = `ปกหนัง ${movie.titleTh}`;
-    }
-    if (modalTitleTh) modalTitleTh.textContent = movie.titleTh;
-    if (modalTitleEn) modalTitleEn.textContent = `${movie.titleEn} (${movie.year})`;
-    if (modalRatingVal) modalRatingVal.textContent = movie.rating;
-    if (modalYear) modalYear.textContent = movie.year;
-    if (modalDuration) modalDuration.textContent = movie.duration;
-    if (modalDescription) modalDescription.textContent = movie.description;
-    if (modalCast) modalCast.textContent = movie.cast ? movie.cast.join(", ") : "-";
-    
-    if (modalGenres && movie.genres) {
-      modalGenres.innerHTML = movie.genres.map(g => `<span class="meta-tag">${g}</span>`).join("");
-    }
-    
-    updateModalWatchlistBtnState(movie.id);
-    
-    // Set Play Button Click
-    if (modalWatchNowBtn) {
-      modalWatchNowBtn.onclick = () => {
-        closeDetailsModal();
-        playMovie(movie);
-      };
-    }
-    
-    // Set Watchlist Button Click
-    if (modalBookmarkBtn) {
-      modalBookmarkBtn.onclick = () => {
-        toggleWatchlist(movie.id);
-      };
-    }
-    
-    if (modalTrailerBtn) {
-      modalTrailerBtn.onclick = () => {
-        if (movie.trailerUrl) {
-          window.open(movie.trailerUrl, "_blank");
-        } else {
-          showToast("ไม่พบตัวอย่างภาพยนตร์เรื่องนี้", "info");
-        }
-      };
-    }
-    
-    if (detailsModal) {
-      detailsModal.classList.add("active");
-      detailsModal.setAttribute("aria-hidden", "false");
-    }
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeDetailsModal() {
-    if (detailsModal) {
-      detailsModal.classList.remove("active");
-      detailsModal.setAttribute("aria-hidden", "true");
-    }
-    document.body.style.overflow = "";
-    currentActiveMovie = null;
-  }
-
-  // --- Video Player Modal Actions ---
-
-  function playMovie(movie, startEpisode = 1) {
-    if (!movie) return;
-
-    // ตรวจสอบสิทธิ์สมาชิกก่อนเปิดเล่นหนัง (ต้อง Login ถึงจะดูได้)
-    const savedUser = localStorage.getItem("moviestream_user");
-    if (!savedUser) {
-      pendingPlayMovie = { movie, startEpisode };
-      showToast("🔒 กรุณาเข้าสู่ระบบสมาชิกก่อนรับชมภาพยนตร์", "info");
-      openAuthModal();
-      return;
-    }
-
-    // Update URL hash for direct bookmarking & TV deep linking
-    try {
-      if (window.history && window.history.replaceState) {
-        window.history.replaceState(null, null, `#play-${movie.id}`);
-      }
-    } catch(e) {}
-
-    if (playingMovieTitle) {
-      playingMovieTitle.textContent = movie.titleTh;
-    }
-    
-    playerModal.classList.add("active");
-    document.body.classList.add("player-is-active");
-    document.body.style.overflow = "hidden";
-    currentActiveMovie = movie;
-
-    // Auto-enter theater fullscreen on Smart TV devices for instant watching
-    const isTV = document.documentElement.classList.contains("is-tv-device");
-    if (isTV) {
-      playerModal.classList.add("theater-fullscreen-mode");
-    }
-
-    const epInt = parseInt(startEpisode) || 1;
-    currentActiveMovie.currentEpisode = epInt;
-
-    // Populate Episodes Custom Button
-    // Populate Episodes Custom Button in Player Controls Bar
-    if (episodeSelectBtn) {
-      const span = document.getElementById("episodeBtnLabel") || episodeSelectBtn.querySelector("span") || episodeSelectBtn;
-      if (movie.episodes && movie.episodes.length > 1) {
-        span.textContent = `${movie.episodes[epInt - 1] || ("ตอนที่ " + epInt)} (เลือกตอน EP) ▾`;
-      } else if (movie.episodes && movie.episodes.length === 1) {
-        span.textContent = `${movie.episodes[0] || "เต็มเรื่อง"} (เลือกตอน EP) ▾`;
-      } else {
-        span.textContent = "เลือกตอน (EP) ▾";
-      }
-      episodeSelectBtn.style.display = "inline-flex";
-      episodeSelectBtn.dataset.value = String(epInt);
-    }
-
-    // Record continue watching immediately
-    recordContinueWatching(movie, epInt);
-
-    // Populate Languages Custom Button in Player Controls Bar
-    if (audioSelectBtn) {
-      const span = document.getElementById("audioBtnLabel") || audioSelectBtn.querySelector("span") || audioSelectBtn;
-      if (movie.languages && movie.languages.length > 0) {
-        span.textContent = `${movie.languages[0]} ▾`;
-        audioSelectBtn.dataset.value = movie.languages[0];
-      } else {
-        span.textContent = "พากย์ไทย ▾";
-        audioSelectBtn.dataset.value = "Thai";
-      }
-      audioSelectBtn.style.display = "inline-flex";
-    }
-    
-    // Resolve initial URL (if jumping directly to an episode from Continue Watching)
-    let initialVideoUrl = movie.videoUrl;
-    if (movie.episodeUrls) {
-      if (movie.episodeUrls[String(epInt)]) {
-        initialVideoUrl = movie.episodeUrls[String(epInt)];
-      } else if (movie.episodeUrls["1"]) {
-        initialVideoUrl = movie.episodeUrls["1"];
-      }
-    }
-    currentActiveMovie.videoUrl = initialVideoUrl;
-
-    // 1. Direct MP4 Streaming Player
-    if (movie.sourceType === "direct") {
-      if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
-      iframeVideoPlayer.style.display = "none";
-      iframeVideoPlayer.src = "";
-      
-      html5VideoPlayer.style.display = "block";
-      html5VideoPlayer.src = initialVideoUrl;
-      customPlayerControls.style.display = "flex";
-      if (typeof playerBlockerOverlay !== "undefined" && playerBlockerOverlay) {
-        playerBlockerOverlay.style.display = "none";
-      }
-      
-      html5VideoPlayer.volume = 0.8;
-      updateVolumeBarUI();
-      
-      html5VideoPlayer.play()
-        .then(() => updatePlayPauseUI(true))
-        .catch(() => updatePlayPauseUI(false));
-
-      setTimeout(() => {
-        const pBtn = document.getElementById("playVideoBtn");
-        if (pBtn && document.activeElement && document.activeElement.tagName !== 'SELECT') pBtn.focus();
-      }, 150);
-        
-      showToast(`กำลังโหลดเล่นวิดีโอ: ${movie.titleTh}`, "success");
-      triggerVideoOverlays(movie, epInt);
-      return;
-    } 
-
-    // 1.4. GOSERIES4K (torbo007)
-    if (initialVideoUrl && initialVideoUrl.includes("torbo007.com")) {
-      const md5Match = initialVideoUrl.match(/\/embed\/([a-f0-9]{20,})/i) || initialVideoUrl.match(/[?&]v=([a-f0-9]{20,})/i);
-      if (md5Match && md5Match[1]) {
-        fallbackToIframe(`/player.html?id=${md5Match[1]}&src=torbo007`);
-        const epText = (movie.episodes && movie.episodes.length > 1) ? ` (ตอนที่ ${epInt})` : "";
-        showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}${epText}`, "success");
-        triggerVideoOverlays(movie, epInt);
-        return;
-      }
-    }
-
-    // 1.5. WOW-DRAMA (getplay-cdn)
-    if (initialVideoUrl && initialVideoUrl.includes("getplay-cdn.com")) {
-      const isIOSDevice = /iPhone|iPad|iPod/i.test(navigator.userAgent) || 
-        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-      const md5Match = initialVideoUrl.match(/\/embed\/([a-f0-9]{20,})/i) || initialVideoUrl.match(/[?&]v=([a-f0-9]{20,})/i);
-      
-      // On iOS (iPhone/iPad), embed through player.html with original JWPlayer UI to bypass 403
-      if (isIOSDevice && md5Match && md5Match[1]) {
-        fallbackToIframe(`/player.html?id=${md5Match[1]}`);
-        const epText = (movie.episodes && movie.episodes.length > 1) ? ` (ตอนที่ ${epInt})` : "";
-        showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}${epText}`, "success");
-        triggerVideoOverlays(movie, epInt);
-        return;
-      }
-    }
-
-    // 2. Embedded Video Player (Direct Hardware-accelerated CDN Streaming)
-    fallbackToIframe(initialVideoUrl);
-    const epText = (movie.episodes && movie.episodes.length > 1) ? ` (ตอนที่ ${epInt})` : "";
-    showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}${epText}`, "success");
-    triggerVideoOverlays(movie, epInt);
-  }
-
-  function playNativeHls(streamUrl, movieTitle, originalEmbedUrl) {
-    window._activeVideoDuration = 0;
-    if (hlsInstance) {
-      try { hlsInstance.destroy(); } catch(e) {}
-      hlsInstance = null;
-    }
-
-    if (currentActiveMovie && originalEmbedUrl) {
-      currentActiveMovie.videoUrl = originalEmbedUrl;
-    }
-
-    // Reset iframe player
-    iframeVideoPlayer.style.display = "none";
-    iframeVideoPlayer.src = "about:blank";
-
-    // Reset html5VideoPlayer completely
-    html5VideoPlayer.pause();
-    html5VideoPlayer.removeAttribute('src');
-    html5VideoPlayer.load();
-
-    html5VideoPlayer.style.display = "block";
-    customPlayerControls.style.display = "flex";
-    const pTimeline = document.getElementById("playerTimelineBar");
-    if (pTimeline) pTimeline.style.display = "flex";
-
-    const pBtn = document.getElementById("playVideoBtn");
-    if (pBtn) {
-      const span = pBtn.querySelector("span");
-      if (span) span.textContent = "เล่น / หยุด";
-    }
-
-    if (window.Hls && Hls.isSupported()) {
-      hlsInstance = new Hls({
-        debug: false,
-        enableWorker: true,
-        lowLatencyMode: false
-      });
-
-      hlsInstance.loadSource(streamUrl);
-      hlsInstance.attachMedia(html5VideoPlayer);
-
-      hlsInstance.on(Hls.Events.LEVEL_LOADED, function (event, data) {
-        if (data.details && typeof data.details.totalduration === "number" && data.details.totalduration > 0) {
-          window._activeVideoDuration = data.details.totalduration;
-          updateTimeAndProgress();
-        }
-      });
-
-      hlsInstance.on(Hls.Events.MANIFEST_PARSED, function () {
-        html5VideoPlayer.play()
-          .then(() => {
-            updatePlayPauseUI(true);
-            showToast(`▶ กำลังเล่น: ${movieTitle}`, "success");
-          })
-          .catch((err) => {
-            console.warn("Autoplay notice:", err);
-            updatePlayPauseUI(false);
-          });
-      });
-
-      hlsInstance.on(Hls.Events.ERROR, function (event, data) {
-        if (data.fatal) {
-          switch (data.type) {
-            case Hls.ErrorTypes.NETWORK_ERROR:
-              console.warn("HLS network error, attempting to recover...");
-              hlsInstance.startLoad();
-              break;
-            case Hls.ErrorTypes.MEDIA_ERROR:
-              console.warn("HLS media error, attempting to recover...");
-              hlsInstance.recoverMediaError();
-              break;
-            default:
-              console.warn("HLS unrecoverable error, fallback to iframe:", data);
-              if (hlsInstance) {
-                try { hlsInstance.destroy(); } catch(e) {}
-                hlsInstance = null;
-              }
-              if (originalEmbedUrl) {
-                fallbackToIframe(originalEmbedUrl);
-              }
-              break;
-          }
-        }
-      });
-    } else if (html5VideoPlayer.canPlayType("application/vnd.apple.mpegurl")) {
-      html5VideoPlayer.src = streamUrl;
-      html5VideoPlayer.play()
-        .then(() => updatePlayPauseUI(true))
-        .catch(() => updatePlayPauseUI(false));
-    } else {
-      if (originalEmbedUrl) fallbackToIframe(originalEmbedUrl);
-    }
-
-    setTimeout(() => {
-      const pBtn = document.getElementById("playVideoBtn");
-      if (pBtn && document.activeElement && document.activeElement.tagName !== 'SELECT') pBtn.focus();
-    }, 150);
-  }
-
-  function fallbackToIframe(url) {
-    if (hlsInstance) {
-      try { hlsInstance.destroy(); } catch(e) {}
-      hlsInstance = null;
-    }
-    
-    // Completely pause and reset html5 player
-    html5VideoPlayer.style.display = "none";
-    html5VideoPlayer.pause();
-    html5VideoPlayer.removeAttribute('src');
-    html5VideoPlayer.load();
-
-    customPlayerControls.style.display = "none";
-    const pTimeline = document.getElementById("playerTimelineBar");
-    if (pTimeline) pTimeline.style.display = "none";
-
-    // CRITICAL: Hide center play overlay immediately so it doesn't block iframe touches!
-    if (centerPlayOverlay) {
-      centerPlayOverlay.style.display = "none";
-    }
-
-    iframeVideoPlayer.style.display = "block";
-    iframeVideoPlayer.style.zIndex = "10";
-    iframeVideoPlayer.style.pointerEvents = "auto";
-
-    const isMobileDevice = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    const isTVBrowser = /browsehere|smarttv|googletv|tizen|webos/i.test(navigator.userAgent);
-    const isGOSeries = (typeof currentActiveMovie !== "undefined" && currentActiveMovie && currentActiveMovie.source === "GOSERIES4K");
-    
-    // GOSERIES4K / torbo007: Route through player.html with proxy to bypass 403 domain lock
-    if (url && url.includes("torbo007.com")) {
-      const md5Match = url.match(/\/embed\/([a-f0-9]{20,})/i) || url.match(/[?&]v=([a-f0-9]{20,})/i);
-      if (md5Match && md5Match[1]) {
-        url = `/player.html?id=${md5Match[1]}&src=torbo007`;
-      }
-    }
-
-    // BrowseHere / Smart TV video sniffer needs direct iframe permissions without sandbox lock
-    if (url && url.startsWith("/player.html")) {
-      iframeVideoPlayer.removeAttribute("sandbox");
-    } else if (!isMobileDevice && isGOSeries && !isTVBrowser) {
-      iframeVideoPlayer.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms allow-presentation allow-downloads");
-    } else {
-      iframeVideoPlayer.removeAttribute("sandbox");
-    }
-    
-    iframeVideoPlayer.setAttribute("allowfullscreen", "true");
-    iframeVideoPlayer.setAttribute("webkitallowfullscreen", "true");
-    iframeVideoPlayer.setAttribute("mozallowfullscreen", "true");
-    iframeVideoPlayer.allowFullscreen = true;
-    iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer");
-    iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline; accelerometer; gyroscope; fullscreen; autoplay; encrypted-media");
-    iframeVideoPlayer.setAttribute("playsinline", "true");
-    iframeVideoPlayer.setAttribute("webkit-playsinline", "true");
-    iframeVideoPlayer.setAttribute("x5-playsinline", "true");
-    iframeVideoPlayer.src = url;
-
-    const pBtn = document.getElementById("playVideoBtn");
-    if (pBtn) {
-      const span = pBtn.querySelector("span");
-      if (span) span.textContent = "เล่น / หยุด";
-    }
-
-    setTimeout(() => {
-      if (pBtn && document.activeElement && document.activeElement.tagName !== 'SELECT') pBtn.focus();
-    }, 150);
-  }
-
-  // Load specific episode directly from pre-built episodeUrls pool
-  function loadEpisode(postId, episode, lang, title) {
-    showToast(`▶ กำลังเปิดเล่น ตอนที่ ${episode} อัตโนมัติ...`, "success");
-    const epKey = String(episode);
-    
-    if (currentActiveMovie && currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[epKey]) {
-      const epVideoUrl = currentActiveMovie.episodeUrls[epKey];
-      currentActiveMovie.videoUrl = epVideoUrl;
-      currentActiveMovie.currentEpisode = parseInt(episode) || 1;
-
-      if (epVideoUrl && epVideoUrl.includes("getplay-cdn.com")) {
-        const isIOSDevice = /iPhone|iPad|iPod/i.test(navigator.userAgent) || 
-          (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-        const md5Match = epVideoUrl.match(/\/embed\/([a-f0-9]{20,})/i) || epVideoUrl.match(/[?&]v=([a-f0-9]{20,})/i);
-        if (isIOSDevice && md5Match && md5Match[1]) {
-          fallbackToIframe(`/player.html?id=${md5Match[1]}`);
-          showToast(`▶ เริ่มเล่น ตอนที่ ${episode} แล้ว`, "success");
-          return;
-        }
-      }
-
-      fallbackToIframe(epVideoUrl);
-      showToast(`▶ เริ่มเล่น ตอนที่ ${episode} แล้ว`, "success");
-      return;
-    }
-
-    // Backup fetch via API
-    const formData = new FormData();
-    formData.append("action", "halim_ajax_player");
-    formData.append("nonce", "");
-    formData.append("episode", episode);
-    formData.append("server", "1");
-    formData.append("postid", postId);
-    formData.append("lang", lang || "Thai");
-    formData.append("title", title || "Movie");
-    
-    fetch("https://api.24-hdx.com/get.php", {
-      method: "POST",
-      body: formData
-    })
-    .then(res => res.text())
-    .then(html => {
-      const srcMatch = html.match(/src="([^"]+)"/);
-      if (srcMatch && srcMatch[1]) {
-        const epSrc = srcMatch[1];
-        if (currentActiveMovie) {
-          currentActiveMovie.videoUrl = epSrc;
-          currentActiveMovie.currentEpisode = parseInt(episode) || 1;
-        }
-        if (epSrc.includes("getplay-cdn.com")) {
-          const isIOSDevice = /iPhone|iPad|iPod/i.test(navigator.userAgent) || 
-            (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-          const md5Match = epSrc.match(/\/embed\/([a-f0-9]{20,})/i) || epSrc.match(/[?&]v=([a-f0-9]{20,})/i);
-          if (isIOSDevice && md5Match && md5Match[1]) {
-            showToast(`เปิดเล่น ตอนที่ ${episode} เรียบร้อย`, "success");
-            fallbackToIframe(`/player.html?id=${md5Match[1]}`);
-            return;
-          }
-        }
-        fallbackToIframe(epSrc);
-        showToast(`เปิดเล่น ตอนที่ ${episode} เรียบร้อย`, "success");
-      } else {
-        showToast(`สลับเปิดเล่น ตอนที่ ${episode}`, "success");
-      }
-    })
-    .catch(() => {
-      showToast(`สลับเปิดเล่น ตอนที่ ${episode}`, "success");
-    });
-  }
-
-  function resetPlayerControlsIdleTimer() {
-    if (playerModal) {
-      playerModal.classList.remove("player-controls-idle");
-    }
-    clearTimeout(playerControlsIdleTimer);
-    if (playerModal && playerModal.classList.contains("active")) {
-      const isHtml5Playing = html5VideoPlayer && !html5VideoPlayer.paused && html5VideoPlayer.style.display !== "none";
-      const isIframePlaying = iframeVideoPlayer && iframeVideoPlayer.style.display !== "none";
-      const isTV = document.documentElement.classList.contains("is-tv-device");
-      const isFs = playerModal.classList.contains("theater-fullscreen-mode") || !!(document.fullscreenElement || document.webkitFullscreenElement);
-
-      // Only auto-hide controls if currently in Fullscreen mode!
-      // In normal modal view (including TV windowed mode), controls stay permanently visible
-      if ((isHtml5Playing || isIframePlaying) && isFs) {
-        const hideDelay = 4000;
-        playerControlsIdleTimer = setTimeout(() => {
-          if (playerModal && playerModal.classList.contains("active")) {
-            playerModal.classList.add("player-controls-idle");
-          }
-        }, hideDelay);
-      }
-    }
-  }
-
-  ['keydown', 'click', 'touchstart', 'pointerdown'].forEach(evtName => {
-    document.addEventListener(evtName, () => {
-      if (playerModal && playerModal.classList.contains("active")) {
-        resetPlayerControlsIdleTimer();
-      }
-    }, { passive: true });
-  });
-
-  function closePlayer() {
-    window._activeVideoDuration = 0;
-    clearTimeout(playerControlsIdleTimer);
-    if (typeof skipIntroCountdownTimer !== "undefined" && skipIntroCountdownTimer) {
-      clearInterval(skipIntroCountdownTimer);
-      skipIntroCountdownTimer = null;
-    }
-    if (typeof resumePopupTimeout !== "undefined" && resumePopupTimeout) {
-      clearTimeout(resumePopupTimeout);
-      resumePopupTimeout = null;
-    }
-    const resumePopup = document.getElementById("resumePlaybackPopup");
-    if (resumePopup) resumePopup.style.display = "none";
-    const skipContainer = document.getElementById("skipIntroContainer");
-    if (skipContainer) skipContainer.style.display = "none";
-
-    if (playerModal) {
-      playerModal.classList.remove("active");
-      playerModal.classList.remove("player-controls-idle");
-      playerModal.classList.remove("theater-fullscreen-mode");
-    }
-    const epModal = document.getElementById("episodesModal");
-    const auModal = document.getElementById("audioModal");
-    if (epModal) epModal.style.display = "none";
-    if (auModal) auModal.style.display = "none";
-
-    document.body.classList.remove("player-is-active");
-    document.body.style.overflow = "";
-
-    // Exit fullscreen and orientation lock if active
-    try {
-      if (document.fullscreenElement || document.webkitFullscreenElement) {
-        if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
-        else if (document.webkitExitFullscreen) document.webkitExitFullscreen().catch(() => {});
-      }
-      if (screen.orientation && screen.orientation.unlock) {
-        try { screen.orientation.unlock(); } catch(e) {}
-      }
-    } catch(e) {}
-    if (typeof updateFullscreenBtnUI === "function") {
-      updateFullscreenBtnUI(false);
-    }
-    
-    if (hlsInstance) {
-      try { hlsInstance.destroy(); } catch(e) {}
-      hlsInstance = null;
-    }
-
-    // Stop all media playback
-    html5VideoPlayer.pause();
-    html5VideoPlayer.removeAttribute('src');
-    html5VideoPlayer.load();
-    
-    iframeVideoPlayer.src = "about:blank";
-    iframeVideoPlayer.style.display = "none";
-    if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
-    const pTimeline = document.getElementById("playerTimelineBar");
-    if (pTimeline) pTimeline.style.display = "none";
-
-    // Clean hash
-    try {
-      if (window.history && window.history.replaceState) {
-        window.history.replaceState(null, null, window.location.pathname + window.location.search);
-      }
-    } catch(e) {}
-  }
-
-  // --- Custom Player Controls System ---
-
-  // Play/Pause Action
-  function togglePlayPause() {
-    if (html5VideoPlayer.paused) {
-      html5VideoPlayer.play();
-      updatePlayPauseUI(true);
-    } else {
-      html5VideoPlayer.pause();
-      updatePlayPauseUI(false);
-    }
-    resetPlayerControlsIdleTimer();
-  }
-
-  function updatePlayPauseUI(isPlaying) {
-    if (isPlaying) {
-      if (playIcon) playIcon.innerHTML = `<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>`; // Pause icon
-      if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
-      resetPlayerControlsIdleTimer();
-    } else {
-      if (playIcon) playIcon.innerHTML = `<path d="M8 5v14l11-7z"></path>`; // Play icon
-      // Only show center play overlay if html5 video player is actively visible (not iframe mode)
-      if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
-        if (centerPlayOverlay) centerPlayOverlay.style.display = "flex";
-      } else {
-        if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
-      }
-      if (playerModal) playerModal.classList.remove("player-controls-idle");
-    }
-  }
-
-  // Skip time (seconds)
-  function skipTime(amount) {
-    if (!html5VideoPlayer) return;
-    const dur = isFinite(html5VideoPlayer.duration) && html5VideoPlayer.duration > 0
-      ? html5VideoPlayer.duration
-      : (window._activeVideoDuration || 0);
-    const newTime = Math.max(0, Math.min(dur || 999999, (html5VideoPlayer.currentTime || 0) + amount));
-    html5VideoPlayer.currentTime = newTime;
-    updateTimeAndProgress();
-  }
-
-  // Video Overlay Popups (FastHD / Resume Playback)
-  function triggerVideoOverlays(movie, episodeNum = 1) {
-    if (!movie) return;
-    const resumePopup = document.getElementById("resumePlaybackPopup");
-    const resumeTitle = document.getElementById("resumePopupTitle");
-    const skipContainer = document.getElementById("skipIntroContainer");
-    const skipBadge = document.getElementById("skipIntroTimerBadge");
-
-    // 1. Popup ดูต่อจากจุดเดิม (Resume Watching) ถ้ามีประวัติการดู
-    const existing = (continueWatchingList || []).find(item => item.movieId === movie.id);
-    if (existing && existing.progressPercent && existing.progressPercent > 5 && existing.progressPercent < 95) {
-      if (resumePopup && resumeTitle) {
-        clearTimeout(resumePopupTimeout);
-        const epLabel = existing.episodeLabel || `ตอนที่ ${existing.episode || episodeNum}`;
-        const pct = existing.progressPercent;
-        const estMin = Math.round((pct / 100) * 115);
-        const timeDisplay = `${formatTime(estMin * 60)} (${pct}%)`;
-
-        resumeTitle.textContent = `คุณรับชมค้างไว้ที่ ${epLabel} - ${timeDisplay}`;
-        resumePopup.style.display = "flex";
-
-        resumePopupTimeout = setTimeout(() => {
-          resumePopup.style.display = "none";
-        }, 12000);
-      }
-    } else {
-      if (resumePopup) resumePopup.style.display = "none";
-    }
-
-    // 2. Popup ข้าม Intro ลอยในจอวิดีโอ (Skip Intro)
-    if (skipContainer) {
-      clearInterval(skipIntroCountdownTimer);
-      setTimeout(() => {
-        if (!playerModal || !playerModal.classList.contains("active")) return;
-        skipContainer.style.display = "inline-flex";
-        let secondsLeft = 15;
-        if (skipBadge) skipBadge.textContent = `${secondsLeft}s`;
-
-        skipIntroCountdownTimer = setInterval(() => {
-          secondsLeft--;
-          if (skipBadge) skipBadge.textContent = `${secondsLeft}s`;
-          if (secondsLeft <= 0) {
-            clearInterval(skipIntroCountdownTimer);
-            skipContainer.style.display = "none";
-          }
-        }, 1000);
-      }, 700);
-    }
-  }
-
-  // Universal Skip Intro (ข้าม Intro ทุกเรื่อง - 90 วินาที)
-  function performSkipIntro(skipSec = 90) {
-    if (typeof clearInterval === "function" && skipIntroCountdownTimer) {
-      clearInterval(skipIntroCountdownTimer);
-      skipIntroCountdownTimer = null;
-    }
-    const skipContainer = document.getElementById("skipIntroContainer");
-    if (skipContainer) skipContainer.style.display = "none";
-    const skipIntroOverlayBtn = document.getElementById("skipIntroOverlayBtn");
-    if (skipIntroOverlayBtn) skipIntroOverlayBtn.style.display = "none";
-
-    // 1. Direct HTML5 / HLS Player Mode
-    if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
-      const cur = html5VideoPlayer.currentTime || 0;
-      const dur = html5VideoPlayer.duration || 0;
-      const target = cur < skipSec ? skipSec : Math.min(dur || 999999, cur + skipSec);
-      html5VideoPlayer.currentTime = target;
-      updateTimeAndProgress();
-      showToast(`⚡ ข้าม Intro ไปที่ ${formatTime(target)} เรียบร้อย`, "success");
-      return;
-    }
-
-    // 2. IFrame Embed Mode (GOSERIES, WOW-DRAMA, 24-HD, 24HDX)
-    if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
-      let triggered = false;
-
-      // A. Try direct DOM click if accessible (e.g. skip button)
-      try {
-        const ifrDoc = iframeVideoPlayer.contentDocument || (iframeVideoPlayer.contentWindow && iframeVideoPlayer.contentWindow.document);
-        if (ifrDoc) {
-          const btn = ifrDoc.getElementById('skip-intro') || ifrDoc.querySelector('.skip-intro, [id*="skip"]');
-          if (btn) {
-            btn.click();
-            triggered = true;
-          }
-        }
-      } catch(e) {}
-
-      // B. Dispatch postMessage protocols for all embedded video players
-      try {
-        if (iframeVideoPlayer.contentWindow) {
-          const msgs = [
-            { type: 'skipIntro' },
-            { type: 'seek', time: skipSec },
-            { event: 'command', func: 'seekTo', args: [skipSec, true] },
-            { method: 'setCurrentTime', value: skipSec },
-            JSON.stringify({ type: 'skipIntro' }),
-            JSON.stringify({ event: 'command', func: 'seekTo', args: [skipSec, true] }),
-            JSON.stringify({ method: 'setCurrentTime', value: skipSec })
-          ];
-          msgs.forEach(m => {
-            try { iframeVideoPlayer.contentWindow.postMessage(m, '*'); } catch(err) {}
-          });
-        }
-      } catch(e) {}
-
-      showToast(`⚡ ส่งคำสั่งข้าม Intro (${skipSec} วินาที) แล้ว`, "success");
-    }
-  }
-
-  // Format time (seconds -> hh:mm:ss / mm:ss)
-  function formatTime(seconds) {
-    if (!isFinite(seconds) || isNaN(seconds) || seconds < 0) return "00:00";
-    const hrs = Math.floor(seconds / 3600);
-    const mins = Math.floor((seconds % 3600) / 60);
-    const secs = Math.floor(seconds % 60);
-    
-    let result = "";
-    if (hrs > 0) {
-      result += (hrs < 10 ? "0" : "") + hrs + ":";
-    }
-    result += (mins < 10 ? "0" : "") + mins + ":";
-    result += (secs < 10 ? "0" : "") + secs;
-    return result;
-  }
-
-  // Unified Real-time Timeline & Progress Bar Updater
-  function updateTimeAndProgress() {
-    if (!html5VideoPlayer) return;
-    const curTime = html5VideoPlayer.currentTime || 0;
-    let durTime = html5VideoPlayer.duration;
-    if (!isFinite(durTime) || isNaN(durTime) || durTime <= 0) {
-      durTime = window._activeVideoDuration || 0;
-    }
-
-    if (durTime > 0) {
-      const percentage = Math.min(100, Math.max(0, (curTime / durTime) * 100));
-      if (progressBarFilled) progressBarFilled.style.width = `${percentage}%`;
-      if (bottomProgressBarFilled) bottomProgressBarFilled.style.width = `${percentage}%`;
-
-      // Save progress to Continue Watching periodically (every 5 seconds)
-      if (currentActiveMovie && (!window._lastCwSync || Date.now() - window._lastCwSync > 5000)) {
-        window._lastCwSync = Date.now();
-        const ep = parseInt(episodeSelectBtn ? (episodeSelectBtn.dataset.value || "1") : 1) || 1;
-        recordContinueWatching(currentActiveMovie, ep, Math.round(percentage));
-      }
-    }
-
-    // Auto-show Floating Skip Intro button during the first 120 seconds of video
-    const skipIntroOverlayBtn = document.getElementById("skipIntroOverlayBtn");
-    if (skipIntroOverlayBtn) {
-      if (curTime >= 3 && curTime <= 120) {
-        skipIntroOverlayBtn.style.display = "inline-flex";
-      } else {
-        skipIntroOverlayBtn.style.display = "none";
-      }
-    }
-
-    const curStr = formatTime(curTime);
-    if (currentTimeLabel) currentTimeLabel.textContent = curStr;
-    if (bottomCurrentTimeLabel) bottomCurrentTimeLabel.textContent = curStr;
-
-    if (durTime > 0) {
-      const durStr = formatTime(durTime);
-      if (totalDurationLabel) totalDurationLabel.textContent = durStr;
-      if (bottomTotalDurationLabel) bottomTotalDurationLabel.textContent = durStr;
-    }
-  }
-
-  // Update progress bar as video plays
-  if (html5VideoPlayer) {
-    html5VideoPlayer.addEventListener("timeupdate", updateTimeAndProgress);
-    html5VideoPlayer.addEventListener("durationchange", updateTimeAndProgress);
-    html5VideoPlayer.addEventListener("loadedmetadata", updateTimeAndProgress);
-    html5VideoPlayer.addEventListener("progress", updateTimeAndProgress);
-  }
-
-  // Seeking Helper
-  function seekVideoToPosition(posRatio) {
-    if (!html5VideoPlayer) return;
-    let dur = html5VideoPlayer.duration;
-    if (!isFinite(dur) || isNaN(dur) || dur <= 0) {
-      dur = window._activeVideoDuration || 0;
-    }
-    if (dur > 0) {
-      html5VideoPlayer.currentTime = Math.max(0, Math.min(dur, posRatio * dur));
-      updateTimeAndProgress();
-    }
-  }
-
-  // Seeking on Top Progress Bar Click
-  if (progressBarContainer) {
-    progressBarContainer.addEventListener("click", (e) => {
-      const rect = progressBarContainer.getBoundingClientRect();
-      seekVideoToPosition((e.clientX - rect.left) / rect.width);
-    });
-  }
-
-  // Seeking on Bottom Timeline Bar (คลิกหรือใช้รีโมททีวีเลื่อนเวลา)
-  if (bottomProgressBarContainer) {
-    bottomProgressBarContainer.addEventListener("click", (e) => {
-      const rect = bottomProgressBarContainer.getBoundingClientRect();
-      seekVideoToPosition((e.clientX - rect.left) / rect.width);
-    });
-
-    bottomProgressBarContainer.addEventListener("keydown", (e) => {
-      const code = e.keyCode || e.which;
-      if (e.key === "ArrowLeft" || code === 37 || e.key === "Left") {
-        e.preventDefault();
-        skipTime(-10);
-        showToast("⏪ กรอถอยหลัง 10 วินาที", "info");
-      } else if (e.key === "ArrowRight" || code === 39 || e.key === "Right") {
-        e.preventDefault();
-        skipTime(10);
-        showToast("⏩ กรอไปข้างหน้า 10 วินาที", "info");
-      } else if (e.key === "ArrowUp" || code === 38 || e.key === "Up") {
-        e.preventDefault();
-        if (centerPlayOverlay && centerPlayOverlay.style.display !== "none") {
-          centerPlayOverlay.focus();
-        } else if (html5VideoPlayer) {
-          html5VideoPlayer.focus();
-        }
-      } else if (e.key === "ArrowDown" || code === 40 || e.key === "Down") {
-        e.preventDefault();
-        const pBtn = document.getElementById("playVideoBtn");
-        if (pBtn) pBtn.focus();
-      } else if (e.key === "Enter" || code === 13 || e.key === " " || code === 32) {
-        e.preventDefault();
-        handlePlayRequest();
-      }
-    });
-  }
-
-  // Fullscreen UI State Updater
-  function updateFullscreenBtnUI(isFs) {
-    const expandIcon = '<path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>';
-    const compressIcon = '<path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path>';
-
-    const tvFsBtn = document.getElementById("tvFullscreenBtn");
-    if (tvFsBtn) {
-      const svg = tvFsBtn.querySelector("svg");
-      const span = tvFsBtn.querySelector("span");
-      if (svg) svg.innerHTML = isFs ? compressIcon : expandIcon;
-      if (span) span.textContent = isFs ? "ย่อจอ" : "เต็มจอ";
-      if (isFs) {
-        tvFsBtn.classList.add("is-fullscreen");
-      } else {
-        tvFsBtn.classList.remove("is-fullscreen");
-      }
-    }
-
-    if (fullscreenBtn) {
-      const svg = fullscreenBtn.querySelector("svg");
-      if (svg) svg.innerHTML = isFs ? compressIcon : expandIcon;
-      fullscreenBtn.setAttribute("aria-label", isFs ? "ออกจากเต็มหน้าจอ" : "เล่นเต็มหน้าจอ");
-    }
-  }
-
-  // Fullscreen Action (Toggle Theater Fullscreen & HTML5 Fullscreen with Tablet Landscape Support)
-  function toggleFullscreen() {
-    const isCurrentlyFs = !!(
-      document.fullscreenElement ||
-      document.webkitFullscreenElement ||
-      (playerModal && playerModal.classList.contains("theater-fullscreen-mode"))
-    );
-
-    if (isCurrentlyFs) {
-      // 1. Exit Fullscreen
-      if (playerModal) {
-        playerModal.classList.remove("theater-fullscreen-mode");
-      }
-      updateFullscreenBtnUI(false);
-      try {
-        if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
-        else if (document.webkitExitFullscreen) document.webkitExitFullscreen().catch(() => {});
-      } catch(e) {}
-      try {
-        if (screen.orientation && screen.orientation.unlock) {
-          screen.orientation.unlock();
-        }
-      } catch(e) {}
-      showToast("📺 ย่อหน้าจอปกติ", "info");
-    } else {
-      // 2. Enter Fullscreen
-      if (playerModal) {
-        playerModal.classList.add("theater-fullscreen-mode");
-      }
-      updateFullscreenBtnUI(true);
-
-      // In Android WebView / Tablets: Request fullscreen on playerModal or documentElement
-      try {
-        const targetElem = document.documentElement || playerModal || videoScreenWrapper;
-        if (targetElem.requestFullscreen) {
-          targetElem.requestFullscreen().catch(() => {
-            if (playerModal && playerModal.requestFullscreen) {
-              playerModal.requestFullscreen().catch(() => {});
-            }
-          });
-        } else if (targetElem.webkitRequestFullscreen) {
-          targetElem.webkitRequestFullscreen().catch(() => {});
-        }
-      } catch(e) {}
-
-      // Attempt orientation lock to landscape for mobile & tablet apps
-      try {
-        if (screen.orientation && screen.orientation.lock) {
-          screen.orientation.lock("landscape").catch(() => {
-            if (screen.orientation.lock) screen.orientation.lock("sensor-landscape").catch(() => {});
-          });
-        }
-      } catch(e) {}
-      showToast("🖥 สลับมุมมองเต็มหน้าจอ", "success");
-    }
-    resetPlayerControlsIdleTimer();
-  }
-
-  // Synchronize fullscreen events from browser or internal video player
-  ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'].forEach(evtName => {
-    document.addEventListener(evtName, () => {
-      const isFs = !!(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement);
-      if (playerModal) {
-        if (isFs) {
-          playerModal.classList.add("theater-fullscreen-mode");
-        } else {
-          playerModal.classList.remove("theater-fullscreen-mode");
-        }
-      }
-      updateFullscreenBtnUI(isFs);
-      if (!isFs && screen.orientation && screen.orientation.unlock) {
-        try { screen.orientation.unlock(); } catch(e) {}
-      }
-    }, { passive: true });
-  });
-
-  if (fullscreenBtn) {
-    fullscreenBtn.addEventListener("click", toggleFullscreen);
-  }
-
-  // Volume Slider Logic
-  function updateVolumeBarUI() {
-    if (!html5VideoPlayer) return;
-    const vol = html5VideoPlayer.volume;
-    if (volumeFilled) volumeFilled.style.width = `${vol * 100}%`;
-  }
-
-  if (muteBtn) {
-    muteBtn.addEventListener("click", () => {
-      html5VideoPlayer.muted = !html5VideoPlayer.muted;
-      updateVolumeBarUI();
-    });
-  }
-
-  if (volumeSlider) {
-    volumeSlider.addEventListener("click", (e) => {
-      const rect = volumeSlider.getBoundingClientRect();
-      let vol = (e.clientX - rect.left) / rect.width;
-      vol = Math.max(0, Math.min(1, vol));
-      html5VideoPlayer.volume = vol;
-      html5VideoPlayer.muted = false;
-      updateVolumeBarUI();
-    });
-  }
-
-  // Listeners for HTML5 Video playback triggers
-  if (playPauseBtn) playPauseBtn.addEventListener("click", togglePlayPause);
-  if (html5VideoPlayer) {
-    html5VideoPlayer.addEventListener("click", togglePlayPause);
-    html5VideoPlayer.addEventListener("ended", () => {
-      updatePlayPauseUI(false);
-    });
-  }
-
-  // --- Toast System ---
-  function showToast(message, type = "success") {
-    const toast = document.createElement("div");
-    toast.className = `toast`;
-    
-    const icon = type === "success" 
-      ? `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="toast-success-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>`
-      : `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--color-primary)"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>`;
-
-    toast.innerHTML = `${icon}<span>${message}</span>`;
-    toastContainer.appendChild(toast);
-    
-    // Trigger animation
-    setTimeout(() => toast.classList.add("show"), 50);
-    
-    // Dismiss toast
-    setTimeout(() => {
-      toast.classList.remove("show");
-      setTimeout(() => toast.remove(), 300);
-    }, 3000);
-  }
-
-  // --- Event Listeners & UI Controller Setup ---
-
-    // Nav Home Click
-    if (navHome) {
-      navHome.addEventListener("click", (e) => {
-        e.preventDefault();
-        showHomeView();
-      });
-    }
-
-    // Nav Popular Click
-    if (navPopular) {
-      navPopular.addEventListener("click", (e) => {
-        e.preventDefault();
-        document.querySelectorAll(".nav-links a").forEach(a => a.classList.remove("active"));
-        navPopular.classList.add("active");
-        document.querySelectorAll(".genre-tag").forEach(tag => tag.classList.remove("active"));
-        if (heroSection) heroSection.style.display = "none";
-        const popMovies = movieList.filter(m => (m.genres && (m.genres.includes("ยอดนิยม") || m.genres.includes("ยอดนิยม 2026"))) || (m.rating && parseFloat(m.rating) >= 7.8));
-        popMovies.sort((a, b) => {
-          const aTop = (a.genres && (a.genres.includes("ยอดนิยม 2026") || a.genres.includes("ยอดนิยม"))) ? 1 : 0;
-          const bTop = (b.genres && (b.genres.includes("ยอดนิยม 2026") || b.genres.includes("ยอดนิยม"))) ? 1 : 0;
-          if (bTop !== aTop) return bTop - aTop;
-          return (parseFloat(b.rating) || 0) - (parseFloat(a.rating) || 0);
-        });
-        showGridView(`⭐ รวมภาพยนตร์ยอดนิยมทั้งหมด (${popMovies.length} เรื่อง)`, popMovies);
-      });
-    }
-
-    // Nav Thai Drama Click
-    if (navThaiDrama) {
-      navThaiDrama.addEventListener("click", (e) => {
-        e.preventDefault();
-        document.querySelectorAll(".nav-links a").forEach(a => a.classList.remove("active"));
-        navThaiDrama.classList.add("active");
-        document.querySelectorAll(".genre-tag").forEach(tag => tag.classList.remove("active"));
-        if (heroSection) heroSection.style.display = "none";
-        const dramaMovies = movieList.filter(m => (m.genres && (m.genres.includes("ละครไทย") || m.genres.includes("ละครไทย ย้อนหลัง"))) || (m.titleTh && (m.titleTh.includes("ละคร") || m.titleTh.includes("EP"))));
-        showGridView(`🎭 รวมดูละครไทย ย้อนหลัง (${dramaMovies.length} เรื่อง)`, dramaMovies);
-      });
-    }
-
-    // Nav Series Click
-    if (navSeries) {
-      navSeries.addEventListener("click", (e) => {
-        e.preventDefault();
-        document.querySelectorAll(".nav-links a").forEach(a => a.classList.remove("active"));
-        navSeries.classList.add("active");
-        document.querySelectorAll(".genre-tag").forEach(tag => tag.classList.remove("active"));
-        if (heroSection) heroSection.style.display = "none";
-        const seriesMovies = movieList.filter(m => (m.genres && (m.genres.includes("ซีรีส์") || m.genres.includes("ซีรีส์แนะนำใหม่ 2026") || m.genres.includes("ซีรีส์ใหม่ 2026"))) || m.source === "GOSERIES4K" || m.source === "SERIEDAYS" || (m.episodes && m.episodes.length > 1));
-        showGridView(`📺 รวมซีรีส์และละครชุด (${seriesMovies.length} เรื่อง)`, seriesMovies);
-      });
-    }
-
-    if (logoLink) {
-      logoLink.addEventListener("click", (e) => {
-        e.preventDefault();
-        showHomeView();
-      });
-    }
-
-    // Nav Watchlist Click
-    if (navWatchlist) {
-      navWatchlist.addEventListener("click", (e) => {
-        e.preventDefault();
-        displayWatchlistView();
-      });
-    }
-
-    // --- Mobile Bottom Nav Bar Events ---
-    const mobNavHome = document.getElementById("mobNavHome");
-    const mobNavPopular = document.getElementById("mobNavPopular");
-    const mobNavSeries = document.getElementById("mobNavSeries");
-    const mobNavWatchlist = document.getElementById("mobNavWatchlist");
-    const mobNavUser = document.getElementById("mobNavUser");
-
-    function setActiveMobileNav(activeEl) {
-      document.querySelectorAll(".mobile-nav-item").forEach(item => item.classList.remove("active"));
-      if (activeEl) activeEl.classList.add("active");
-    }
-
-    if (mobNavHome) {
-      mobNavHome.addEventListener("click", (e) => {
-        e.preventDefault();
-        setActiveMobileNav(mobNavHome);
-        showHomeView();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-
-    if (mobNavPopular) {
-      mobNavPopular.addEventListener("click", (e) => {
-        e.preventDefault();
-        setActiveMobileNav(mobNavPopular);
-        if (navPopular) navPopular.click();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-
-    if (mobNavSeries) {
-      mobNavSeries.addEventListener("click", (e) => {
-        e.preventDefault();
-        setActiveMobileNav(mobNavSeries);
-        if (navSeries) {
-          navSeries.click();
-        } else {
-          document.querySelectorAll(".nav-links a").forEach(a => a.classList.remove("active"));
-          document.querySelectorAll(".genre-tag").forEach(tag => tag.classList.remove("active"));
-          if (heroSection) heroSection.style.display = "none";
-          const seriesMovies = movieList.filter(m => (m.genres && (m.genres.includes("ซีรีส์") || m.genres.includes("ซีรีส์แนะนำใหม่ 2026") || m.genres.includes("ซีรีส์ใหม่ 2026"))) || m.source === "GOSERIES4K" || m.source === "SERIEDAYS" || (m.episodes && m.episodes.length > 1));
-          showGridView(`📺 รวมซีรีส์และละครชุด (${seriesMovies.length} เรื่อง)`, seriesMovies);
-        }
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-
-    if (mobNavWatchlist) {
-      mobNavWatchlist.addEventListener("click", (e) => {
-        e.preventDefault();
-        setActiveMobileNav(mobNavWatchlist);
-        displayWatchlistView();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-
-    if (mobNavUser) {
-      mobNavUser.addEventListener("click", (e) => {
-        e.preventDefault();
-        openAuthModal();
-      });
-    }
-
-    // --- Guard ทีวีสด & กีฬา: ต้องเข้าสู่ระบบสมาชิก VIP ถึงจะดูได้ ---
-    const navLiveTv = document.getElementById("navLiveTv");
-    const mobNavLiveTv = document.getElementById("mobNavLiveTv");
-    [navLiveTv, mobNavLiveTv].forEach(link => {
-      if (link) {
-        link.addEventListener("click", (e) => {
-          const savedUser = localStorage.getItem("moviestream_user");
-          if (!savedUser) {
-            e.preventDefault();
-            showToast("🔒 กรุณาเข้าสู่ระบบก่อนรับชม ทีวีสด & กีฬา VIP", "info");
-            window.pendingLiveRedirect = true;
-            openAuthModal();
-          }
-        });
-      }
-    });
-
-    // --- Member Auth Modal Controller ---
-    const authModal = document.getElementById("authModal");
-    const navAuthBtn = document.getElementById("navAuthBtn");
-    const headerAuthBtn = document.getElementById("headerAuthBtn");
-    const authModalCloseBtn = document.getElementById("authModalCloseBtn");
-    const authForm = document.getElementById("authForm");
-    const authPhone = document.getElementById("authPhone");
-    const authPassword = document.getElementById("authPassword");
-    const authSubmitBtn = document.getElementById("authSubmitBtn");
-    const authModalTitle = document.getElementById("authModalTitle");
-    const authModalDesc = document.getElementById("authModalDesc");
-    const authToggleText = document.getElementById("authToggleText");
-    const authToggleBtn = document.getElementById("authToggleBtn");
-    const authProfileView = document.getElementById("authProfileView");
-    const profileStatus = document.getElementById("profileStatus");
-    const profilePhone = document.getElementById("profilePhone");
-    const authLogoutBtn = document.getElementById("authLogoutBtn");
-    const navHeaderLogoutBtn = document.getElementById("navHeaderLogoutBtn");
-    const navLogoutTabItem = document.getElementById("navLogoutTabItem");
-    const navLogoutTab = document.getElementById("navLogoutTab");
-
-    let currentAuthMode = 'login'; // 'login' | 'register' | 'forgot'
-    const authModalIcon = document.getElementById("authModalIcon");
-    const authPasswordLabel = document.getElementById("authPasswordLabel");
-    const forgotPwdBtn = document.getElementById("forgotPwdBtn");
-    const authModalHeader = document.getElementById("authModalHeader");
-    const authPendingView = document.getElementById("authPendingView");
-    const pendingViewIcon = document.getElementById("pendingViewIcon");
-    const pendingViewTitle = document.getElementById("pendingViewTitle");
-    const pendingViewDesc = document.getElementById("pendingViewDesc");
-    const pendingPhoneDisplay = document.getElementById("pendingPhoneDisplay");
-    const pendingStatusDisplay = document.getElementById("pendingStatusDisplay");
-    const pendingLineBtn = document.getElementById("pendingLineBtn");
-    const pendingLineBtnText = document.getElementById("pendingLineBtnText");
-    const pendingBackBtn = document.getElementById("pendingBackBtn");
-
-    function showPendingApprovalView(phone, statusText, titleText, descHtml, lineBtnText) {
-      if (authModalHeader) authModalHeader.style.display = "none";
-      if (authForm) authForm.style.display = "none";
-      if (authProfileView) authProfileView.style.display = "none";
-      if (authPendingView) {
-        authPendingView.style.display = "block";
-        if (pendingViewTitle) pendingViewTitle.textContent = titleText || "ส่งข้อมูลสำเร็จแล้ว!";
-        if (pendingViewDesc) pendingViewDesc.innerHTML = descHtml || "ระบบได้ส่งข้อมูลคำขออนุมัติไปยังแอดมินแล้ว<br>กดปุ่มสีเขียวด้านล่างเพื่อทัก LINE แจ้งเบอร์โทรขอเปิดใช้งานทันที";
-        if (pendingPhoneDisplay) pendingPhoneDisplay.textContent = phone || "-";
-        if (pendingStatusDisplay) pendingStatusDisplay.textContent = statusText || "รออนุมัติเปิดใช้งาน ⏳";
-        if (pendingLineBtn) pendingLineBtn.href = LINE_OA_URL;
-        if (pendingLineBtnText) pendingLineBtnText.textContent = lineBtnText || "💬 ทัก LINE แจ้งแอดมินขออนุมัติ (@720jlmgp)";
-      }
-      if (authModalTitle) authModalTitle.textContent = "สถานะการลงทะเบียน";
-      if (authModalDesc) authModalDesc.textContent = "ติดต่อแอดมินทาง LINE เพื่อขอเปิดใช้งาน";
-      if (authModalIcon) authModalIcon.textContent = "⏳";
-    }
-
-    if (pendingBackBtn) {
-      pendingBackBtn.addEventListener("click", () => {
-        if (authModalHeader) authModalHeader.style.display = "block";
-        if (authPendingView) authPendingView.style.display = "none";
-        if (authForm) authForm.style.display = "block";
-        setAuthMode('login');
-      });
-    }
-
-    function updateAuthUI() {
-      const savedUser = localStorage.getItem("moviestream_user");
-      if (savedUser) {
-        try {
-          const user = JSON.parse(savedUser);
-          const shortPhone = user.phone ? user.phone.substring(0, 3) + '***' : 'VIP';
-          const statusText = user.status || 'อนุมัติ';
-          if (navAuthBtn) {
-            navAuthBtn.innerHTML = `👑 <span class="nav-auth-user-text">${shortPhone} (${statusText})</span>`;
-            navAuthBtn.title = `ข้อมูลสมาชิก (${user.phone || 'VIP'})`;
-          }
-          if (headerAuthBtn) headerAuthBtn.innerHTML = `👑 VIP`;
-          if (navHeaderLogoutBtn) navHeaderLogoutBtn.style.display = "inline-flex";
-          if (navLogoutTabItem) navLogoutTabItem.style.display = "inline-block";
-        } catch (e) {}
-      } else {
-        if (navAuthBtn) {
-          navAuthBtn.innerHTML = `👑 <span class="nav-auth-user-text vip-btn-text">เข้าสู่ระบบ</span>`;
-          navAuthBtn.title = "เข้าสู่ระบบสมาชิก VIP";
-        }
-        if (headerAuthBtn) headerAuthBtn.innerHTML = `👤 สมาชิก`;
-        if (navHeaderLogoutBtn) navHeaderLogoutBtn.style.display = "none";
-        if (navLogoutTabItem) navLogoutTabItem.style.display = "none";
-      }
-
-      // โหลดประวัติ Continue Watching เฉพาะของ User ปัจจุบัน (user ใคร user มัน)
-      continueWatchingList = loadContinueWatchingData();
-      renderContinueWatchingShelf();
-    }
-    updateAuthUI();
-
-    function openAuthModal() {
-      if (authModalHeader) authModalHeader.style.display = "block";
-      if (authPendingView) authPendingView.style.display = "none";
-      const savedUser = localStorage.getItem("moviestream_user");
-      if (savedUser) {
-        const user = JSON.parse(savedUser);
-        if (authForm) authForm.style.display = "none";
-        if (authProfileView) authProfileView.style.display = "block";
-        if (profilePhone) profilePhone.textContent = `เบอร์: ${user.phone}`;
-        if (profileStatus) profileStatus.textContent = `${user.status || 'VIP Member'} 👑`;
-        if (authModalTitle) authModalTitle.textContent = "ข้อมูลสมาชิกของคุณ";
-        if (authModalDesc) authModalDesc.textContent = "บัญชีเชื่อมต่อเรียบร้อยแล้ว";
-      } else {
-        if (authForm) authForm.style.display = "block";
-        if (authProfileView) authProfileView.style.display = "none";
-        setAuthMode('login');
-      }
-      if (authModal) authModal.classList.add("active");
-      document.body.classList.add("auth-modal-is-active");
-      document.body.style.overflow = "hidden";
-      setTimeout(() => {
-        if (authPhone && !savedUser) authPhone.focus();
-      }, 200);
-    }
-
-    function closeAuthModal() {
-      if (authModal) authModal.classList.remove("active");
-      document.body.classList.remove("auth-modal-is-active");
-      document.body.style.overflow = "";
-      pendingPlayMovie = null;
-      window.pendingLiveRedirect = false;
-    }
-
-    function setAuthMode(mode) {
-      if (authModalHeader) authModalHeader.style.display = "block";
-      if (authPendingView) authPendingView.style.display = "none";
-      if (authForm) authForm.style.display = "block";
-      if (mode === true) mode = 'register';
-      if (mode === false) mode = 'login';
-      currentAuthMode = mode || 'login';
-
-      if (currentAuthMode === 'register') {
-        if (authModalIcon) authModalIcon.textContent = "✨";
-        if (authModalTitle) authModalTitle.textContent = "สมัครสมาชิกใหม่";
-        if (authModalDesc) authModalDesc.textContent = "กรอกเบอร์โทรและตั้งรหัสผ่าน";
-        if (authPasswordLabel) authPasswordLabel.textContent = "🔑 ตั้งรหัสผ่าน (PIN 4-6 หลัก)";
-        if (authPassword) {
-          authPassword.placeholder = "ตั้งรหัสผ่านสำหรับเข้าใช้งาน";
-          authPassword.value = "";
-        }
-        if (forgotPwdBtn) forgotPwdBtn.style.display = "none";
-        if (authSubmitBtn) {
-          authSubmitBtn.textContent = "ยืนยันสมัครสมาชิก 🚀";
-          authSubmitBtn.disabled = false;
-        }
-        if (authToggleText) {
-          authToggleText.style.display = "inline";
-          authToggleText.textContent = "มีบัญชีอยู่แล้ว?";
-        }
-        if (authToggleBtn) {
-          authToggleBtn.textContent = "เข้าสู่ระบบที่นี่";
-          authToggleBtn.style.marginLeft = "";
-        }
-      } else if (currentAuthMode === 'forgot') {
-        if (authModalIcon) authModalIcon.textContent = "🔐";
-        if (authModalTitle) authModalTitle.textContent = "ขอเปลี่ยนรหัสผ่านใหม่";
-        if (authModalDesc) authModalDesc.textContent = "กรอกเบอร์โทรและรหัสผ่านใหม่";
-        if (authPasswordLabel) authPasswordLabel.textContent = "🔑 ตั้งรหัสผ่านใหม่ (PIN 4-6 หลัก)";
-        if (authPassword) {
-          authPassword.placeholder = "ระบุรหัสผ่านใหม่ที่ต้องการ";
-          authPassword.value = "";
-        }
-        if (forgotPwdBtn) forgotPwdBtn.style.display = "none";
-        if (authSubmitBtn) {
-          authSubmitBtn.textContent = "ส่งคำขอเปลี่ยนรหัสผ่าน 📩";
-          authSubmitBtn.disabled = false;
-        }
-        if (authToggleText) {
-          authToggleText.style.display = "none";
-          authToggleText.textContent = "";
-        }
-        if (authToggleBtn) {
-          authToggleBtn.textContent = "กลับไปเข้าสู่ระบบ";
-          authToggleBtn.style.marginLeft = "auto";
-        }
-      } else {
-        currentAuthMode = 'login';
-        if (authModalIcon) authModalIcon.textContent = "👑";
-        if (authModalTitle) authModalTitle.textContent = "เข้าสู่ระบบสมาชิก";
-        if (authModalDesc) authModalDesc.textContent = "บันทึกรายการโปรดและประวัติการดูข้ามอุปกรณ์";
-        if (authPasswordLabel) authPasswordLabel.textContent = "🔑 รหัสผ่าน (PIN 4-6 หลัก)";
-        if (authPassword) {
-          authPassword.placeholder = "รหัสผ่านเข้าสู่ระบบ";
-          authPassword.value = "";
-        }
-        if (forgotPwdBtn) forgotPwdBtn.style.display = "inline";
-        if (authSubmitBtn) {
-          authSubmitBtn.textContent = "เข้าสู่ระบบ 🎬";
-          authSubmitBtn.disabled = false;
-        }
-        if (authToggleText) {
-          authToggleText.style.display = "none";
-          authToggleText.textContent = "";
-        }
-        if (authToggleBtn) {
-          authToggleBtn.textContent = "สมัครสมาชิก";
-          authToggleBtn.style.marginLeft = "";
-        }
-      }
-    }
-
-    if (navAuthBtn) navAuthBtn.addEventListener("click", (e) => { e.preventDefault(); openAuthModal(); });
-    if (headerAuthBtn) headerAuthBtn.addEventListener("click", (e) => { e.preventDefault(); openAuthModal(); });
-    if (authModalCloseBtn) authModalCloseBtn.addEventListener("click", closeAuthModal);
-    if (authModal) {
-      authModal.addEventListener("click", (e) => {
-        if (e.target === authModal) closeAuthModal();
-      });
-    }
-
-    if (authToggleBtn) {
-      authToggleBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        if (currentAuthMode === 'login') {
-          setAuthMode('register');
-        } else {
-          setAuthMode('login');
-        }
-      });
-    }
-
-    if (forgotPwdBtn) {
-      forgotPwdBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        setAuthMode('forgot');
-      });
-    }
-
-    const handleAuthSubmit = async (e) => {
-      if (e) e.preventDefault();
-      let phone = authPhone ? authPhone.value.trim().replace(/[-\s]/g, "") : "";
-      if (phone.length === 9 && !phone.startsWith("0")) {
-        phone = "0" + phone;
-      }
-      const password = authPassword ? authPassword.value.trim() : "";
-
-      if (!phone || phone.length < 9 || !/^\d+$/.test(phone)) {
-        showToast("📱 กรุณากรอกเบอร์โทรศัพท์ตัวเลขให้ถูกต้อง (9-10 หลัก)", "error");
-        if (authPhone) authPhone.focus();
-        return;
-      }
-      if (!password || password.length < 4) {
-        showToast("🔑 รหัสผ่านต้องมีอย่างน้อย 4 หลัก", "error");
-        if (authPassword) authPassword.focus();
-        return;
-      }
-
-      authSubmitBtn.disabled = true;
-
-      if (!GOOGLE_SCRIPT_URL) {
-        showToast("❌ ไม่พบการเชื่อมต่อระบบสมาชิก", "error");
-        authSubmitBtn.disabled = false;
-        return;
-      }
-
-      // สร้าง Metadata อัตโนมัติให้ตรง 8 คอลัมน์ (A-H) ของ Google Sheet
-      const now = new Date();
-      const thaiYear = (now.getFullYear() + 543).toString().slice(-2);
-      const pad = (n) => String(n).padStart(2, '0');
-      const dateFormatted = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
-      const generatedUserId = `VIP${thaiYear}${pad(now.getMonth() + 1)}${pad(now.getDate())}-${Math.floor(100 + Math.random() * 900)}`;
-
-      // 1. โหมดสมัครสมาชิกใหม่ (Register) - ส่งข้อมูลไปรออนุมัติ
-      if (currentAuthMode === 'register') {
-        authSubmitBtn.textContent = "กำลังส่งข้อมูลสมัคร...";
-        try {
-          const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 12000);
-
-          const res = await fetch(GOOGLE_SCRIPT_URL, {
-            method: "POST",
-            headers: { "Content-Type": "text/plain;charset=utf-8" },
-            body: JSON.stringify({
-              action: "register",
-              userId: generatedUserId,
-              phone: phone,
-              password: password,
-              registeredDate: dateFormatted,
-              status: "รออนุมัติ",
-              expireDate: "-",
-              type: "register",
-              note: "สมัครสมาชิกใหม่ รออนุมัติ",
-              watchlist: JSON.stringify(watchlist),
-              history: JSON.stringify(continueWatchingList)
-            }),
-            signal: controller.signal
-          });
-          clearTimeout(timeoutId);
-
-          const text = await res.text();
-          let result = {};
-          try { result = JSON.parse(text); } catch(err) { result = { success: true }; }
-
-          if (result && result.success !== false) {
-            showToast("✅ สมัครสมาชิกสำเร็จ! ข้อมูลถูกส่งไปรออนุมัติแล้ว", "success");
-            if (authPassword) authPassword.value = "";
-            showPendingApprovalView(
-              phone,
-              "รออนุมัติเปิดใช้งาน ⏳",
-              "สมัครสมาชิกใหม่เรียบร้อยแล้ว!",
-              "ระบบได้ส่งข้อมูลคำขออนุมัติไปยังแอดมินแล้ว<br>กดปุ่มสีเขียวด้านล่างเพื่อทัก LINE แจ้งเบอร์โทรขออนุมัติได้ทันที",
-              "💬 ทัก LINE แจ้งขออนุมัติ (@720jlmgp)"
-            );
-          } else {
-            showToast((result && result.message) || "❌ ไม่สามารถสมัครสมาชิกได้ กรุณาลองใหม่อีกครั้ง", "error");
-          }
-        } catch (err) {
-          console.warn("Register fetch error:", err);
-          showToast("⚠️ ไม่สามารถเชื่อมต่อได้ในขณะนี้ กรุณาลองใหม่อีกครั้ง", "error");
-        } finally {
-          authSubmitBtn.disabled = false;
-          if (currentAuthMode === 'register') {
-            authSubmitBtn.textContent = "ยืนยันสมัครสมาชิก 🚀";
-          }
-        }
-        return;
-      }
-
-      // 2. โหมดขอเปลี่ยนรหัสผ่านใหม่ (Forgot Password) - ส่งคำขอเปลี่ยนรหัสไปรออนุมัติ
-      if (currentAuthMode === 'forgot') {
-        authSubmitBtn.textContent = "กำลังส่งคำขอเปลี่ยนรหัส...";
-        try {
-          const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 12000);
-
-          const res = await fetch(GOOGLE_SCRIPT_URL, {
-            method: "POST",
-            headers: { "Content-Type": "text/plain;charset=utf-8" },
-            body: JSON.stringify({
-              action: "register",
-              userId: generatedUserId,
-              phone: phone,
-              password: password,
-              registeredDate: dateFormatted,
-              status: "รออนุมัติ",
-              expireDate: "-",
-              type: "reset_password",
-              note: "ขอเปลี่ยนรหัสผ่านใหม่ รออนุมัติ",
-              watchlist: JSON.stringify(watchlist),
-              history: JSON.stringify(continueWatchingList)
-            }),
-            signal: controller.signal
-          });
-          clearTimeout(timeoutId);
-
-          const text = await res.text();
-          let result = {};
-          try { result = JSON.parse(text); } catch(err) { result = { success: true }; }
-
-          if (result && result.success !== false) {
-            showToast("📩 ส่งคำขอเปลี่ยนรหัสผ่านแล้ว! ข้อมูลถูกส่งไปรออนุมัติ", "success");
-            if (authPassword) authPassword.value = "";
-            showPendingApprovalView(
-              phone,
-              "รออนุมัติรหัสผ่านใหม่ ⏳",
-              "ส่งคำขอเปลี่ยนรหัสผ่านแล้ว!",
-              "ข้อมูลถูกส่งไปยังแอดมินเรียบร้อยแล้ว<br>กดปุ่มสีเขียวด้านล่างเพื่อทัก LINE แจ้งขออนุมัติรหัสใหม่ทันที",
-              "💬 ทัก LINE แจ้งขอรหัสใหม่ (@720jlmgp)"
-            );
-          } else {
-            showToast((result && result.message) || "❌ ไม่สามารถส่งคำขอได้ กรุณาลองใหม่อีกครั้ง", "error");
-          }
-        } catch (err) {
-          console.warn("Forgot password fetch error:", err);
-          showToast("⚠️ ไม่สามารถเชื่อมต่อได้ในขณะนี้ กรุณาลองใหม่อีกครั้ง", "error");
-        } finally {
-          authSubmitBtn.disabled = false;
-          if (currentAuthMode === 'forgot') {
-            authSubmitBtn.textContent = "ส่งคำขอเปลี่ยนรหัสผ่าน 📩";
-          }
-        }
-        return;
-      }
-
-      // 3. โหมดเข้าสู่ระบบ (Login) - ตรวจสอบกับ Google Sheet อย่างจริงจัง 100%
-      authSubmitBtn.textContent = "กำลังตรวจสอบ";
-      try {
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 12000);
-
-        const res = await fetch(GOOGLE_SCRIPT_URL, {
-          method: "POST",
-          headers: { "Content-Type": "text/plain;charset=utf-8" },
-          body: JSON.stringify({
-            action: "login",
-            phone: phone,
-            password: password,
-            watchlist: JSON.stringify(watchlist),
-            history: JSON.stringify(continueWatchingList)
-          }),
-          signal: controller.signal
-        });
-        clearTimeout(timeoutId);
-
-        const text = await res.text();
-        let result;
-        try {
-          result = JSON.parse(text);
-        } catch(e) {
-          result = { success: false, message: "การตอบกลับจากเซิร์ฟเวอร์ไม่ถูกต้อง" };
-        }
-
-        if (result && result.success) {
-          // ผ่านการตรวจสอบและสถานะเป็น "อนุมัติ" ใน Google Sheet
-          localStorage.setItem("moviestream_user", JSON.stringify(result.user));
-
-          // Sync watchlist จาก Google Sheet
-          if (result.user && result.user.watchlist) {
-            try {
-              const cloudFavs = typeof result.user.watchlist === "string" ? JSON.parse(result.user.watchlist) : result.user.watchlist;
-              if (Array.isArray(cloudFavs)) {
-                watchlist = Array.from(new Set([...watchlist, ...cloudFavs]));
-                updateWatchlistUI();
-                showHomeView();
-              }
-            } catch(e) {
-              console.warn("Error parsing user cloud watchlist:", e);
-            }
-          }
-
-          // Sync history จาก Google Sheet
-          if (result.user && result.user.history) {
-            try {
-              const cloudHistory = typeof result.user.history === "string" ? JSON.parse(result.user.history) : result.user.history;
-              if (Array.isArray(cloudHistory) && cloudHistory.length > 0) {
-                const key = `moviestream_continue_watching_${result.user.phone}`;
-                const map = new Map();
-                cloudHistory.forEach(item => { if (item && item.movieId) map.set(item.movieId, item); });
-                continueWatchingList.forEach(item => {
-                  if (!map.has(item.movieId) || (item.updatedAt || 0) > (map.get(item.movieId).updatedAt || 0)) {
-                    map.set(item.movieId, item);
-                  }
-                });
-                continueWatchingList = Array.from(map.values()).sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0)).slice(0, 20);
-                localStorage.setItem(key, JSON.stringify(continueWatchingList));
-                renderContinueWatchingShelf();
-              }
-            } catch(e) {
-              console.warn("Error parsing user cloud history:", e);
-            }
-          }
-
-          showToast(result.message || "เข้าสู่ระบบสำเร็จ! 👑", "success");
-          updateAuthUI();
-          closeAuthModal();
-
-          if (pendingPlayMovie && pendingPlayMovie.movie) {
-            const target = pendingPlayMovie;
-            pendingPlayMovie = null;
-            setTimeout(() => {
-              playMovie(target.movie, target.startEpisode);
-            }, 350);
-          } else if (window.pendingLiveRedirect) {
-            window.pendingLiveRedirect = false;
-            setTimeout(() => {
-              window.location.href = "live.html";
-            }, 350);
-          }
-        } else {
-          // ล็อกอินไม่สำเร็จ: เบอร์โทร/รหัสผ่านผิด หรือสถานะยังไม่อนุมัติใน Google Sheet
-          // ห้ามเข้าสู่ระบบเด็ดขาด!
-          if (authPassword) authPassword.value = "";
-          const msg = (result && result.message) ? `${result.message} หรือยังไม่ได้รับการอนุมัติ` : "เบอร์โทรหรือรหัสผ่านไม่ถูกต้อง หรือยังไม่ได้รับการอนุมัติ";
-          showToast(`❌ ${msg}`, "error");
-          if (result && result.message && (result.message.includes("อนุมัติ") || result.message.includes("รอ"))) {
-            showPendingApprovalView(
-              phone,
-              "ยังไม่ได้รับการอนุมัติ ⏳",
-              "บัญชีนี้ยังไม่ได้รับการอนุมัติ",
-              "บัญชีของคุณอยู่ในคิวรอการตรวจสอบและอนุมัติจากแอดมิน<br>สามารถทัก LINE แจ้งแอดมินเพื่อขอเปิดใช้งานได้ทันที",
-              "💬 ทัก LINE แจ้งแอดมินขอเปิดใช้งาน (@720jlmgp)"
-            );
-          }
-        }
-      } catch (err) {
-        console.error("Auth fetch error:", err);
-        showToast("⚠️ ไม่สามารถเชื่อมต่อได้ในขณะนี้ กรุณาตรวจสอบอินเทอร์เน็ตแล้วลองใหม่", "error");
-      } finally {
-        authSubmitBtn.disabled = false;
-        if (currentAuthMode === 'login') {
-          authSubmitBtn.textContent = "เข้าสู่ระบบ 🎬";
-        }
-      }
-    };
-
-    authSubmitBtn.addEventListener("click", handleAuthSubmit);
-    if (authForm) {
-      authForm.addEventListener("submit", handleAuthSubmit);
-    }
-
-    function performLogout() {
-      localStorage.removeItem("moviestream_user");
-      showToast("ออกจากระบบเรียบร้อยแล้ว", "info");
-      updateAuthUI();
-      closeAuthModal();
-      showHomeView();
-    }
-
-    if (authLogoutBtn) {
-      authLogoutBtn.addEventListener("click", performLogout);
-    }
-    if (navHeaderLogoutBtn) {
-      navHeaderLogoutBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        performLogout();
-      });
-    }
-    if (navLogoutTab) {
-      navLogoutTab.addEventListener("click", (e) => {
-        e.preventDefault();
-        performLogout();
-      });
-    }
-
-    // Close Modals
-    if (modalCloseBtn) modalCloseBtn.addEventListener("click", closeDetailsModal);
-    if (detailsModal) {
-      detailsModal.addEventListener("click", (e) => {
-        if (e.target === detailsModal) closeDetailsModal();
-      });
-    }
-
-    // Custom Modals for TV Compatibility (Episodes & Audio)
-    const episodesModal = document.getElementById("episodesModal");
-    const audioModal = document.getElementById("audioModal");
-    const episodesGrid = document.getElementById("episodesGrid");
-    const audioGrid = document.getElementById("audioGrid");
-    
-    function closeAllPlayerModals() {
-      if (episodesModal) {
-        episodesModal.classList.remove("active");
-        episodesModal.style.display = "none";
-      }
-      if (audioModal) {
-        audioModal.classList.remove("active");
-        audioModal.style.display = "none";
-      }
-    }
-    
-    if (document.getElementById("episodesModalCloseBtn")) {
-      document.getElementById("episodesModalCloseBtn").addEventListener("click", closeAllPlayerModals);
-    }
-    if (document.getElementById("audioModalCloseBtn")) {
-      document.getElementById("audioModalCloseBtn").addEventListener("click", closeAllPlayerModals);
-    }
-    if (episodesModal) {
-      episodesModal.addEventListener("click", (e) => {
-        if (e.target === episodesModal) closeAllPlayerModals();
-      });
-    }
-    if (audioModal) {
-      audioModal.addEventListener("click", (e) => {
-        if (e.target === audioModal) closeAllPlayerModals();
-      });
-    }
-
-    if (audioSelectBtn) {
-      audioSelectBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-
-        let langs = [];
-        if (currentActiveMovie && Array.isArray(currentActiveMovie.languages) && currentActiveMovie.languages.length > 0) {
-          langs = currentActiveMovie.languages;
-        } else {
-          langs = ["Thai (พากย์ไทย)", "Sound Track (ซับไทย)"];
-        }
-
-        const currentVal = audioSelectBtn.dataset.value || "Thai";
-
-        if (audioGrid) {
-          audioGrid.innerHTML = "";
-          langs.forEach(lang => {
-            const btn = document.createElement("button");
-            btn.className = "player-select-btn";
-            btn.style.width = "100%";
-            btn.style.margin = "0";
-            btn.style.padding = "0.75rem 1rem";
-            btn.style.fontSize = "1rem";
-            btn.style.borderRadius = "8px";
-            btn.style.cursor = "pointer";
-
-            const isSelected = currentVal && lang.toLowerCase().includes(currentVal.toLowerCase());
-            if (isSelected) {
-              btn.style.background = "#22c55e";
-              btn.style.borderColor = "#86efac";
-              btn.style.boxShadow = "0 0 12px rgba(34, 197, 94, 0.6)";
-              btn.textContent = `✓ ${lang}`;
-            } else {
-              btn.style.background = "#1e293b";
-              btn.textContent = lang;
-            }
-
-            btn.addEventListener("click", () => {
-              closeAllPlayerModals();
-              audioSelectBtn.dataset.value = lang;
-              const span = audioSelectBtn.querySelector("span") || audioSelectBtn;
-              span.textContent = lang;
-              
-              const l = lang.toLowerCase().includes("thai") ? "Thai" : "Sound Track";
-              const epVal = episodeSelectBtn ? (episodeSelectBtn.dataset.value || "1") : "1";
-              if (currentActiveMovie && currentActiveMovie.postId) {
-                loadEpisode(currentActiveMovie.postId, epVal, l, currentActiveMovie.titleEn || "");
-              } else {
-                showToast(`เลือกระบบเสียง: ${lang}`, "success");
-              }
-            });
-            audioGrid.appendChild(btn);
-          });
-        }
-
-        if (audioModal) {
-          audioModal.style.display = "flex";
-          audioModal.classList.add("active");
-          setTimeout(() => {
-            const first = audioGrid ? audioGrid.querySelector("button") : null;
-            if (first) first.focus();
-          }, 100);
-        }
-      });
-    }
-
-    if (episodeSelectBtn) {
-      episodeSelectBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-
-        let eps = [];
-        if (currentActiveMovie && Array.isArray(currentActiveMovie.episodes) && currentActiveMovie.episodes.length > 0) {
-          eps = currentActiveMovie.episodes;
-        } else if (currentActiveMovie && currentActiveMovie.episodeUrls && typeof currentActiveMovie.episodeUrls === "object") {
-          const keys = Object.keys(currentActiveMovie.episodeUrls);
-          if (keys.length > 0) {
-            eps = keys.map(k => "ตอนที่ " + k);
-          }
-        }
-        if (eps.length === 0) {
-          eps = ["ตอนที่ 1 (เต็มเรื่อง)"];
-        }
-
-        const currentEpVal = String(episodeSelectBtn.dataset.value || (currentActiveMovie ? currentActiveMovie.currentEpisode : "1") || "1");
-
-        if (episodesGrid) {
-          episodesGrid.innerHTML = "";
-          eps.forEach((ep, idx) => {
-            const epNum = String(idx + 1);
-            const btn = document.createElement("button");
-            btn.className = "player-select-btn";
-            btn.style.margin = "0";
-            btn.style.padding = "0.75rem 0.5rem";
-            btn.style.fontSize = "0.95rem";
-            btn.style.borderRadius = "8px";
-            btn.style.cursor = "pointer";
-            btn.style.display = "flex";
-            btn.style.alignItems = "center";
-            btn.style.justifyContent = "center";
-            btn.style.textAlign = "center";
-
-            const isCurrent = (epNum === currentEpVal);
-            if (isCurrent) {
-              btn.style.background = "#22c55e";
-              btn.style.borderColor = "#86efac";
-              btn.style.boxShadow = "0 0 12px rgba(34, 197, 94, 0.6)";
-              btn.textContent = `▶ ${ep}`;
-            } else {
-              btn.style.background = "#1e293b";
-              btn.textContent = ep;
-            }
-
-            btn.addEventListener("click", () => {
-              closeAllPlayerModals();
-              episodeSelectBtn.dataset.value = epNum;
-              const span = episodeSelectBtn.querySelector("span") || episodeSelectBtn;
-              span.textContent = ep;
-              
-              const l = audioSelectBtn && (audioSelectBtn.dataset.value || "").toLowerCase().includes("thai") ? "Thai" : "Sound Track";
-              if (currentActiveMovie) {
-                loadEpisode(currentActiveMovie.postId || "", epNum, l, currentActiveMovie.titleEn || "");
-                recordContinueWatching(currentActiveMovie, parseInt(epNum) || 1);
-              }
-            });
-            episodesGrid.appendChild(btn);
-          });
-        }
-
-        if (episodesModal) {
-          episodesModal.style.display = "flex";
-          episodesModal.classList.add("active");
-          setTimeout(() => {
-            const activeBtn = episodesGrid ? (episodesGrid.querySelector("button[style*='22c55e']") || episodesGrid.querySelector("button")) : null;
-            if (activeBtn) activeBtn.focus();
-          }, 100);
-        }
-      });
-    }
-
-    // Unified Play/Pause Handler (รองรับทั้งกดปุ่มตรงกลางจอ และกดปุ่มด้านล่าง - กดได้ 2 ที่)
-    function handlePlayRequest() {
-      // 1. Direct HTML5 / HLS Video Mode
-      if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
-        if (html5VideoPlayer.paused) {
-          html5VideoPlayer.play()
-            .then(() => {
-              updatePlayPauseUI(true);
-              showToast("▶ กำลังเล่นภาพยนตร์", "success");
-            })
-            .catch((err) => {
-              console.warn("Play error:", err);
-              html5VideoPlayer.muted = false;
-              html5VideoPlayer.play()
-                .then(() => updatePlayPauseUI(true))
-                .catch(() => updatePlayPauseUI(false));
-            });
-        } else {
-          html5VideoPlayer.pause();
-          updatePlayPauseUI(false);
-          showToast("⏸ พักการเล่นภาพยนตร์", "info");
-        }
-        return;
-      }
-
-      // 2. IFrame Video Mode (Fallback / ซีรีส์ เช่น torbo007.com, wow-drama.com)
-      if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
-        if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
-        iframeVideoPlayer.focus();
-        try {
-          if (iframeVideoPlayer.contentWindow) {
-            iframeVideoPlayer.contentWindow.focus();
-            const playMsgs = [
-              '{"event":"command","func":"playVideo","args":""}',
-              '{"method":"play"}',
-              JSON.stringify({ type: 'play' }),
-              'play'
-            ];
-            playMsgs.forEach(msg => {
-              try { iframeVideoPlayer.contentWindow.postMessage(msg, '*'); } catch(err) {}
-            });
-          }
-        } catch(e) {}
-        showToast("▶ กำลังเชื่อมต่อและเริ่มเล่นภาพยนตร์...", "success", 2000);
-        return;
-      }
-
-      // 3. Fallback: Initialize playback for currently selected episode
-      const epNum = episodeSelectBtn ? (episodeSelectBtn.dataset.value || "1") : "1";
-      if (currentActiveMovie) {
-        const lang = audioSelectBtn && (audioSelectBtn.dataset.value || "").toLowerCase().includes("thai") ? "Thai" : "Sound Track";
-        loadEpisode(currentActiveMovie.postId || "", epNum, lang, currentActiveMovie.titleEn || "");
-      }
-    }
-
-    // Connect Bottom Play Button (ปุ่มเล่นด้านล่าง)
-    const playVideoBtn = document.getElementById("playVideoBtn");
-    if (playVideoBtn) {
-      playVideoBtn.addEventListener("click", handlePlayRequest);
-      playVideoBtn.addEventListener("keydown", (e) => {
-        const code = e.keyCode || e.which;
-        if (e.key === "ArrowUp" || code === 38 || e.key === "Up") {
-          e.preventDefault();
-          if (bottomProgressBarContainer) {
-            bottomProgressBarContainer.focus();
-          } else if (centerPlayOverlay && centerPlayOverlay.style.display !== "none") {
-            centerPlayOverlay.focus();
-          } else if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
-            html5VideoPlayer.focus();
-          } else if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
-            iframeVideoPlayer.focus();
-          }
-        }
-      });
-    }
-
-    // Connect Center Play Button (ปุ่มเล่นตรงกลางจอ)
-    if (centerPlayOverlay) {
-      centerPlayOverlay.addEventListener("click", handlePlayRequest);
-      centerPlayOverlay.addEventListener("keydown", (e) => {
-        const code = e.keyCode || e.which;
-        if (e.key === "Enter" || code === 13 || e.key === " " || code === 32) {
-          e.preventDefault();
-          handlePlayRequest();
-        } else if (e.key === "ArrowDown" || code === 40 || e.key === "Down") {
-          e.preventDefault();
-          if (bottomProgressBarContainer) {
-            bottomProgressBarContainer.focus();
-          } else if (playVideoBtn) {
-            playVideoBtn.focus();
-          }
-        }
-      });
-    }
-
-    // Fullscreen Button (ขยายเต็มจอ รองรับทั้ง HTML5, Iframe และ Touch บนแท็บเล็ต/มือถือ)
-    const tvFullscreenBtn = document.getElementById("tvFullscreenBtn");
-    if (tvFullscreenBtn) {
-      let lastFsClick = 0;
-      const onFsButtonClick = (e) => {
-        if (e && e.cancelable) {
-          e.preventDefault();
-        }
-        const now = Date.now();
-        if (now - lastFsClick < 350) return; // Prevent double-trigger from touch+click
-        lastFsClick = now;
-        toggleFullscreen();
-      };
-      tvFullscreenBtn.addEventListener("click", onFsButtonClick);
-      tvFullscreenBtn.addEventListener("touchend", onFsButtonClick);
-    }
-
-    // BrowseHere TV / Mobile Direct Player Launch Button
-    const browseHereDirectBtn = document.getElementById("browseHereDirectBtn");
-    if (browseHereDirectBtn) {
-      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      if (isMobile) {
-        const span = browseHereDirectBtn.querySelector("span");
-        if (span) span.textContent = "🔗 เล่นเต็มจอ (แท็บใหม่)";
-        browseHereDirectBtn.title = "เปิดเล่นวิดีโอในแท็บใหม่เพื่อรับชมแบบเต็มจอ";
-      }
-      browseHereDirectBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        const activeUrl = (iframeVideoPlayer && iframeVideoPlayer.src && iframeVideoPlayer.src !== "about:blank") ? iframeVideoPlayer.src : (currentActiveMovie ? currentActiveMovie.videoUrl : null);
-        if (activeUrl) {
-          showToast(isMobile ? "📺 กำลังเปิดเล่นในแท็บใหม่..." : "📺 กำลังส่งสตรีมไปยังตัวเล่นทีวี BrowseHere...", "success", 3000);
-          window.open(activeUrl, "_blank");
-        } else {
-          showToast("กำลังเริ่มเล่นภาพยนตร์ กรุณารอสักครู่", "info");
-        }
-      });
-    }
-
-    // Skip Intro Buttons (ข้าม Intro ทุกเรื่อง ทั้งปุ่มลอยบนจอ และปุ่มบนแถบควบคุม)
-    const skipIntroOverlayBtn = document.getElementById("skipIntroOverlayBtn");
-    if (skipIntroOverlayBtn) {
-      skipIntroOverlayBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        performSkipIntro(90);
-      });
-    }
-
-    const skipIntroDismissBtn = document.getElementById("skipIntroDismissBtn");
-    if (skipIntroDismissBtn) {
-      skipIntroDismissBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        if (typeof clearInterval === "function" && skipIntroCountdownTimer) {
-          clearInterval(skipIntroCountdownTimer);
-          skipIntroCountdownTimer = null;
-        }
-        const skipContainer = document.getElementById("skipIntroContainer");
-        if (skipContainer) skipContainer.style.display = "none";
-      });
-    }
-
-    const globalSkipIntroBtn = document.getElementById("globalSkipIntroBtn");
-    if (globalSkipIntroBtn) {
-      globalSkipIntroBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        performSkipIntro(90);
-      });
-    }
-
-    // Resume Playback inside Video Handlers
-    const resumeContinueBtn = document.getElementById("resumeContinueBtn");
-    if (resumeContinueBtn) {
-      resumeContinueBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        if (typeof clearTimeout === "function" && resumePopupTimeout) {
-          clearTimeout(resumePopupTimeout);
-          resumePopupTimeout = null;
-        }
-        const resumePopup = document.getElementById("resumePlaybackPopup");
-        if (resumePopup) resumePopup.style.display = "none";
-        
-        if (!currentActiveMovie) return;
-        const existing = (continueWatchingList || []).find(item => item.movieId === currentActiveMovie.id);
-        if (existing) {
-          if (existing.episode && existing.episode !== currentActiveMovie.currentEpisode) {
-            const l = audioSelectBtn && (audioSelectBtn.dataset.value || "").toLowerCase().includes("thai") ? "Thai" : "Sound Track";
-            loadEpisode(currentActiveMovie.postId || "", existing.episode, l, currentActiveMovie.titleEn || "");
-          }
-          if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
-            const dur = html5VideoPlayer.duration || window._activeVideoDuration || 7200;
-            const target = (existing.progressPercent / 100) * dur;
-            html5VideoPlayer.currentTime = target;
-            html5VideoPlayer.play().catch(() => {});
-            updateTimeAndProgress();
-            showToast(`▶ เล่นต่อจากเดิมที่ ${formatTime(target)}`, "success");
-          } else if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
-            const approxSec = Math.round((existing.progressPercent / 100) * 5400);
-            try {
-              if (iframeVideoPlayer.contentWindow) {
-                iframeVideoPlayer.contentWindow.postMessage({ type: 'seek', time: approxSec }, '*');
-                iframeVideoPlayer.contentWindow.postMessage({ event: 'command', func: 'seekTo', args: [approxSec, true] }, '*');
-              }
-            } catch(err) {}
-            showToast(`▶ รับชมต่อจากจุดเดิม (${existing.progressPercent}%)`, "success");
-          }
-        }
-      });
-    }
-
-    const resumeRestartBtn = document.getElementById("resumeRestartBtn");
-    if (resumeRestartBtn) {
-      resumeRestartBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        if (typeof clearTimeout === "function" && resumePopupTimeout) {
-          clearTimeout(resumePopupTimeout);
-          resumePopupTimeout = null;
-        }
-        const resumePopup = document.getElementById("resumePlaybackPopup");
-        if (resumePopup) resumePopup.style.display = "none";
-
-        if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
-          html5VideoPlayer.currentTime = 0;
-          html5VideoPlayer.play().catch(() => {});
-          updateTimeAndProgress();
-        } else if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
-          try {
-            if (iframeVideoPlayer.contentWindow) {
-              iframeVideoPlayer.contentWindow.postMessage({ type: 'seek', time: 0 }, '*');
-              iframeVideoPlayer.contentWindow.postMessage({ event: 'command', func: 'seekTo', args: [0, true] }, '*');
-            }
-          } catch(err) {}
-        }
-        showToast("🔄 เริ่มเล่นใหม่ตั้งแต่ต้น", "info");
-      });
-    }
-
-    const resumeCloseBtn = document.getElementById("resumeCloseBtn");
-    if (resumeCloseBtn) {
-      resumeCloseBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        if (typeof clearTimeout === "function" && resumePopupTimeout) {
-          clearTimeout(resumePopupTimeout);
-          resumePopupTimeout = null;
-        }
-        const resumePopup = document.getElementById("resumePlaybackPopup");
-        if (resumePopup) resumePopup.style.display = "none";
-      });
-    }
-
-    // Keyboard Shortcut 'S' for Skip Intro when player is active
-    document.addEventListener("keydown", (e) => {
-      if (document.activeElement && (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA')) return;
-      if (playerModal && playerModal.classList.contains("active")) {
-        if (e.key === "s" || e.key === "S" || e.key === "i" || e.key === "I") {
-          e.preventDefault();
-          performSkipIntro(90);
-        }
-      }
-    });
-
-    // D-Pad Navigation Helper for Player Modal (ArrowUp ไปที่แถบเวลา / ArrowDown ลงมาที่เมนูปุ่ม)
-    const playerBottomBar = document.querySelector(".player-bottom-bar");
-    if (playerBottomBar) {
-      playerBottomBar.addEventListener("keydown", (e) => {
-        if (document.activeElement && document.activeElement.tagName === 'SELECT') return;
-        
-        const code = e.keyCode || e.which;
-        if (e.key === "ArrowUp" || code === 38 || e.key === "Up") {
-          e.preventDefault();
-          if (bottomProgressBarContainer) {
-            bottomProgressBarContainer.focus();
-          } else if (centerPlayOverlay && centerPlayOverlay.style.display !== "none") {
-            centerPlayOverlay.focus();
-          } else if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
-            iframeVideoPlayer.focus();
-          } else if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
-            html5VideoPlayer.focus();
-          }
-        }
-      });
-    }
-
-    if (iframeVideoPlayer) {
-      iframeVideoPlayer.addEventListener("keydown", (e) => {
-        const code = e.keyCode || e.which;
-        if (e.key === "ArrowDown" || code === 40 || e.key === "Down") {
-          e.preventDefault();
-          if (bottomProgressBarContainer) {
-            bottomProgressBarContainer.focus();
-          } else if (playVideoBtn) {
-            playVideoBtn.focus();
-          }
-        }
-      });
-    }
-
-    if (clearContinueWatchingBtn) {
-      clearContinueWatchingBtn.addEventListener("click", clearAllContinueWatching);
-    }
-
-    if (playerCloseBtn) playerCloseBtn.addEventListener("click", closePlayer);
-    if (playerModal) {
-      playerModal.addEventListener("click", (e) => {
-        if (e.target === playerModal) closePlayer();
-      });
-    }
-
-    // Key Escape & TV Remote Back Key (keyCode 4, 27, GoBack, Back) to close active modals
-    document.addEventListener("keydown", (e) => {
-      const code = e.keyCode || e.which;
-      if (e.key === "Escape" || code === 27 || code === 4 || e.key === "GoBack" || e.key === "Back" || code === 10009) {
-        if (document.activeElement && document.activeElement.tagName === 'SELECT') {
-          document.activeElement.blur();
-          e.preventDefault();
-          return;
-        }
-        
-        if ((episodesModal && (episodesModal.classList.contains("active") || episodesModal.style.display === "flex")) || (audioModal && (audioModal.classList.contains("active") || audioModal.style.display === "flex"))) {
-          e.preventDefault();
-          closeAllPlayerModals();
-        } else if (playerModal && playerModal.classList.contains("active")) {
-          e.preventDefault();
-          closePlayer();
-        } else if (detailsModal && detailsModal.classList.contains("active")) {
-          e.preventDefault();
-          closeDetailsModal();
-        } else if (authModal && authModal.classList.contains("active")) {
-          e.preventDefault();
-          closeAuthModal();
-        }
-      }
-    });
-
-    // ---------------------------------------------------------
-    // Genre Tags Horizontal Scroll & Drag Navigation System
-    // ---------------------------------------------------------
-    const genreTagsWrapper = document.querySelector(".genre-tags-wrapper");
-    const genreScrollPrev = document.getElementById("genreScrollPrev");
-    const genreScrollNext = document.getElementById("genreScrollNext");
-
-    let isDraggingGenre = false;
-    let genreStartX = 0;
-    let genreScrollLeft = 0;
-    let hasDraggedGenre = false;
-
-    function updateGenreScrollNav() {
-      if (!genreFilterContainer) return;
-      const { scrollLeft, scrollWidth, clientWidth } = genreFilterContainer;
-      const maxScroll = scrollWidth - clientWidth;
-      
-      const canScrollLeft = scrollLeft > 8;
-      const canScrollRight = scrollLeft < maxScroll - 8;
-
-      if (genreScrollPrev) {
-        genreScrollPrev.classList.toggle("visible", canScrollLeft);
-      }
-      if (genreScrollNext) {
-        genreScrollNext.classList.toggle("visible", canScrollRight);
-      }
-      if (genreTagsWrapper) {
-        genreTagsWrapper.classList.toggle("can-scroll-left", canScrollLeft);
-        genreTagsWrapper.classList.toggle("can-scroll-right", canScrollRight);
-      }
-    }
-
-    // Genre Filters Buttons (Support Click, Drag, and Touch)
-    function handleGenreClick(e) {
-      if (hasDraggedGenre) return;
-      const btn = e.target.closest(".genre-tag");
-      if (!btn) return;
-      
-      // Update active tag class
-      document.querySelectorAll(".genre-tag").forEach(tag => tag.classList.remove("active"));
-      btn.classList.add("active");
-      
-      // Smoothly center the active tag in view
-      try {
-        btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-      } catch(err) {}
-      setTimeout(updateGenreScrollNav, 320);
-
-      const genre = btn.getAttribute("data-genre");
-      if (genre === "today") {
-        // เมื่อกด "⚡ อัปเดตล่าสุด" ให้แสดงหน้าแรกพร้อม Hero Spotlight Banner เหมือนหน้าแรก
-        showHomeView();
-      } else if (genre === "all") {
-        document.querySelectorAll(".genre-tag").forEach(tag => {
-          if (tag.getAttribute("data-genre") === "all") tag.classList.add("active");
-          else tag.classList.remove("active");
-        });
-        if (heroSection) heroSection.style.display = "none";
-        showGridView("🎬 รวมภาพยนตร์และซีรีส์ทั้งหมด", movieList);
-      } else if (genre === "popular") {
-        const popMovies = movieList.filter(m => (m.genres && (m.genres.includes("ยอดนิยม") || m.genres.includes("ยอดนิยม 2026"))) || (m.rating && m.rating >= 7.8));
-        popMovies.sort((a, b) => {
-          const aTop = (a.genres && (a.genres.includes("ยอดนิยม 2026") || a.genres.includes("ยอดนิยม"))) ? 1 : 0;
-          const bTop = (b.genres && (b.genres.includes("ยอดนิยม 2026") || b.genres.includes("ยอดนิยม"))) ? 1 : 0;
-          if (bTop !== aTop) return bTop - aTop;
-          return (b.rating || 0) - (a.rating || 0);
-        });
-        showGridView(`⭐ รวมภาพยนตร์ยอดนิยมทั้งหมด (${popMovies.length} เรื่อง)`, popMovies);
-      } else if (genre === "popular-2026") {
-        const popMovies = movieList.filter(m => (m.genres && m.genres.includes("ยอดนิยม 2026")) || (m.rating && m.rating >= 7.0 && (m.year === 2026 || String(m.year) === "2026")));
-        popMovies.sort((a, b) => {
-          const aTop = (a.genres && a.genres.includes("ยอดนิยม 2026")) ? 1 : 0;
-          const bTop = (b.genres && b.genres.includes("ยอดนิยม 2026")) ? 1 : 0;
-          if (bTop !== aTop) return bTop - aTop;
-          return (b.rating || 0) - (a.rating || 0);
-        });
-        showGridView(`⭐ รวมภาพยนตร์ยอดนิยม 2026 (TOP & HOT) (${popMovies.length} เรื่อง)`, popMovies);
-      } else if (genre === "continue-watching") {
-        displayContinueWatchingGridView();
-      } else if (genre === "recommended-series") {
-        const recMovies = movieList.filter(m => (m.genres && (m.genres.includes("ซีรีส์แนะนำใหม่ 2026") || m.genres.includes("ซีรีส์ใหม่ 2026") || m.genres.includes("ซีรีส์แนะนำ"))) || m.source === "GOSERIES4K" || m.source === "SERIEDAYS");
-        showGridView(`🔥 ซีรีส์แนะนำใหม่ 2026 (${recMovies.length} เรื่อง)`, recMovies);
-      } else if (genre === "year-2026") {
-        const y2026Movies = movieList.filter(m => String(m.year) === "2026" || m.titleTh.includes("2026"));
-        showGridView(`📅 รวมภาพยนตร์ & ซีรีส์ใหม่ปี 2026 (${y2026Movies.length} เรื่อง)`, y2026Movies);
-      } else if (genre === "year-2025") {
-        const y2025Movies = movieList.filter(m => String(m.year) === "2025" || m.titleTh.includes("2025"));
-        showGridView(`📅 รวมภาพยนตร์ & ซีรีส์ปี 2025 (${y2025Movies.length} เรื่อง)`, y2025Movies);
-      } else if (genre === "year-2024") {
-        const y2024Movies = movieList.filter(m => String(m.year) === "2024" || m.titleTh.includes("2024"));
-        showGridView(`📅 รวมภาพยนตร์ & ซีรีส์ปี 2024 (${y2024Movies.length} เรื่อง)`, y2024Movies);
-      } else if (genre === "action") {
-        const actionMovies = movieList.filter(m => m.genres && m.genres.some(g => g.includes("แอคชั่น") || g.toLowerCase().includes("action")));
-        showGridView(`💥 รวมภาพยนตร์ & ซีรีส์แอคชั่น (${actionMovies.length} เรื่อง)`, actionMovies);
-      } else if (genre === "scifi") {
-        const scifiMovies = movieList.filter(m => m.genres && m.genres.some(g => g.includes("แฟนตาซี") || g.includes("Sci-Fi") || g.includes("ไซไฟ")));
-        showGridView(`🚀 รวมภาพยนตร์ไซไฟ & แฟนตาซี (${scifiMovies.length} เรื่อง)`, scifiMovies);
-      } else if (genre === "drama" || genre === "ละครไทย") {
-        const dramaMovies = movieList.filter(m => (m.genres && (m.genres.includes("ละครไทย") || m.genres.includes("ละครไทย ย้อนหลัง"))) || (m.titleTh && (m.titleTh.includes("ละคร") || m.titleTh.includes("EP"))));
-        showGridView(`🎭 รวมดูละครไทย ย้อนหลัง (${dramaMovies.length} เรื่อง)`, dramaMovies);
-      } else if (genre === "series-thai" || genre === "ดูซีรี่ย์พากย์ไทย" || genre === "korean-series" || genre === "chinese-series") {
-        const seriesMovies = movieList.filter(m => {
-          const isSeries = (m.episodes && m.episodes.length > 1) || 
-                           (m.duration && m.duration.includes("ตอน")) || 
-                           (m.genres && m.genres.some(g => g.includes("ซีรีส์") || g.includes("ซีรี่ย์") || g.includes("ละคร"))) ||
-                           (m.titleTh && (m.titleTh.includes("ซีรีส์") || m.titleTh.includes("ซีรี่ย์") || m.titleTh.includes("EP") || m.titleTh.includes("ตอน")));
-          const isThaiDub = (m.genres && m.genres.some(g => g.includes("พากย์ไทย"))) || 
-                            (m.languages && m.languages.some(l => l.includes("Thai") || l.includes("พากย์ไทย"))) ||
-                            (m.titleTh && m.titleTh.includes("พากย์ไทย"));
-          const isNotSubOnly = !(m.titleTh && m.titleTh.includes("ซับไทย") && !m.titleTh.includes("พากย์ไทย"));
-          return (isSeries || m.source === "GOSERIES4K" || m.source === "WOW-DRAMA") && (isThaiDub || isNotSubOnly);
-        });
-        showGridView(`🎬 รวมดูซีรี่ย์พากย์ไทย (${seriesMovies.length} เรื่อง)`, seriesMovies);
-      } else if (genre === "japanese-series") {
-        const jpMovies = movieList.filter(m => (m.genres && m.genres.some(g => g.includes("ญี่ปุ่น"))) || (m.titleTh && m.titleTh.includes("ญี่ปุ่น")));
-        showGridView(`🌸 รวมซีรีส์ญี่ปุ่น ยอดนิยม (${jpMovies.length} เรื่อง)`, jpMovies);
-      } else if (genre === "dramax") {
-        const dMovies = movieList.filter(m => m.genres && m.genres.some(g => g.includes("ดราม่า") || g.toLowerCase().includes("drama")));
-        showGridView(`💖 รวมภาพยนตร์ & ซีรีส์ดราม่า (${dMovies.length} เรื่อง)`, dMovies);
-      } else if (genre === "subthai") {
-        const subMovies = movieList.filter(m => (m.genres && m.genres.some(g => g.includes("ซับไทย"))) || (m.languages && m.languages.some(l => l.includes("ซับ"))) || (m.titleTh && m.titleTh.includes("ซับไทย")));
-        showGridView(`💬 รวมภาพยนตร์ & ซีรีส์ซับไทย (${subMovies.length} เรื่อง)`, subMovies);
-      } else if (genre === "พากย์ไทย") {
-        const thaiMovies = movieList.filter(m => (m.genres && m.genres.includes("พากย์ไทย")) || (m.languages && m.languages.some(l => l.includes("Thai"))));
-        showGridView(`🔊 รวมภาพยนตร์ & ซีรีส์พากย์ไทย (${thaiMovies.length} เรื่อง)`, thaiMovies);
-      } else {
-        const filtered = movieList.filter(m => m.genres && (m.genres.includes(genre) || m.genres.some(g => g.includes(genre))));
-        showGridView(`หมวดหมู่ภาพยนตร์: ${genre}`, filtered);
-      }
-    }
-
-    if (genreFilterContainer) {
-      // 1. Mouse wheel horizontal scroll (เลื่อนล้อเมาส์ขึ้นลงจะเลื่อนแถบซ้ายขวาอย่างนุ่มนวล)
-      genreFilterContainer.addEventListener("wheel", (e) => {
-        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-          e.preventDefault();
-          genreFilterContainer.scrollLeft += e.deltaY * 0.95;
-          updateGenreScrollNav();
-        }
-      }, { passive: false });
-
-      // 2. Click & Drag to scroll (ลากด้วยเมาส์เพื่อเลื่อนแถบ)
-      genreFilterContainer.addEventListener("mousedown", (e) => {
-        if (e.button !== 0) return;
-        isDraggingGenre = true;
-        hasDraggedGenre = false;
-        genreFilterContainer.classList.add("is-dragging");
-        genreStartX = e.pageX - genreFilterContainer.offsetLeft;
-        genreScrollLeft = genreFilterContainer.scrollLeft;
-      });
-
-      window.addEventListener("mouseup", () => {
-        if (isDraggingGenre) {
-          isDraggingGenre = false;
-          genreFilterContainer.classList.remove("is-dragging");
-          setTimeout(() => {
-            hasDraggedGenre = false;
-          }, 120);
-        }
-      });
-
-      genreFilterContainer.addEventListener("mousemove", (e) => {
-        if (!isDraggingGenre) return;
-        e.preventDefault();
-        const x = e.pageX - genreFilterContainer.offsetLeft;
-        const walk = (x - genreStartX) * 1.5;
-        if (Math.abs(walk) > 5) {
-          hasDraggedGenre = true;
-        }
-        genreFilterContainer.scrollLeft = genreScrollLeft - walk;
-        updateGenreScrollNav();
-      });
-
-      // 3. Scroll event & window resize to update arrow visibility
-      genreFilterContainer.addEventListener("scroll", updateGenreScrollNav, { passive: true });
-      window.addEventListener("resize", updateGenreScrollNav);
-      setTimeout(updateGenreScrollNav, 350);
-
-      // 4. Click event for tags
-      genreFilterContainer.addEventListener("click", handleGenreClick);
-    }
-
-    // 5. Left/Right Navigation Arrow Buttons
-    if (genreScrollPrev) {
-      genreScrollPrev.addEventListener("click", () => {
-        genreFilterContainer.scrollBy({ left: -280, behavior: "smooth" });
-        setTimeout(updateGenreScrollNav, 300);
-      });
-    }
-
-    if (genreScrollNext) {
-      genreScrollNext.addEventListener("click", () => {
-        genreFilterContainer.scrollBy({ left: 280, behavior: "smooth" });
-        setTimeout(updateGenreScrollNav, 300);
-      });
-    }
-
-    // Live Search input filter
-    if (searchInput) {
-      searchInput.addEventListener("input", () => {
-        const query = searchInput.value.trim().toLowerCase();
-        if (query === "") {
-          showHomeView();
-        } else {
-          const results = movieList.filter(
-            m => (m.titleTh && m.titleTh.toLowerCase().includes(query)) || 
-                 (m.titleEn && m.titleEn.toLowerCase().includes(query)) ||
-                 (m.genres && m.genres.some(g => g.toLowerCase().includes(query)))
-          );
-          showGridView(`ผลการค้นหาสำหรับ: "${query}"`, results);
-        }
-      });
-    }
-
-    // Footer Genre Links
-    document.querySelectorAll(".footer-filter-link").forEach(link => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        const genre = link.getAttribute("data-genre");
-        
-        // Update Filter tags state
-        document.querySelectorAll(".genre-tag").forEach(tag => {
-          if (tag.getAttribute("data-genre") === genre) {
-            tag.classList.add("active");
-          } else {
-            tag.classList.remove("active");
-          }
-        });
-
-        const filtered = movieList.filter(m => m.genres && m.genres.includes(genre));
-        showGridView(`หมวดหมู่ภาพยนตร์: ${genre}`, filtered);
-      });
-    });
-
-    // Privacy & DMCA & Contact Modals/Alerts
-    const privacyBtn = document.getElementById("privacyPolicyBtn");
-    if (privacyBtn) {
-      privacyBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        showToast("นโยบายความเป็นส่วนตัว: เว็บไซต์ไม่มีการเก็บข้อมูลส่วนบุคคลของผู้ใช้", "info");
-      });
-    }
-    const dmcaBtn = document.getElementById("dmcaBtn");
-    if (dmcaBtn) {
-      dmcaBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        showToast("DMCA: เว็บไซต์นี้เป็นเพียงสื่อกลางในการรวบรวมลิงก์จากอินเทอร์เน็ต", "info");
-      });
-    }
-    const contactBtn = document.getElementById("contactBtn");
-    if (contactBtn) {
-      contactBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        showToast("ติดต่อผู้ดูแลระบบ: ผ่านช่องทางระบบ Cloudflare Stream", "info");
-      });
-    }
-
-    // ==========================================================
-    // PWA & Install App Controller (ระบบติดตั้งแอปพลิเคชัน)
-    // ==========================================================
-    let deferredInstallPrompt = null;
-    const installAppModal = document.getElementById("installAppModal");
-    const installAppHeaderBtn = document.getElementById("installAppHeaderBtn");
-    const installModalCloseBtn = document.getElementById("installModalCloseBtn");
-    const pwaModalInstallBtn = document.getElementById("pwaModalInstallBtn");
-    const iosInstallGuide = document.getElementById("iosInstallGuide");
-    const floatingInstallBanner = document.getElementById("floatingInstallBanner");
-    const floatingInstallBtn = document.getElementById("floatingInstallBtn");
-    const floatingDismissBtn = document.getElementById("floatingDismissBtn");
-
-    const isIOSDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    const isStandaloneMode = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
-
-    // 1. Register Service Worker for PWA
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js')
-          .then(reg => {
-            console.log('MovieStream PWA ServiceWorker registered with scope:', reg.scope);
-          })
-          .catch(err => {
-            console.log('PWA ServiceWorker registration skipped/failed:', err);
-          });
-      });
-    }
-
-    // 2. Capture PWA beforeinstallprompt event
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredInstallPrompt = e;
-
-      // Show floating install banner for mobile users if not dismissed
-      const dismissed = sessionStorage.getItem("moviestream_install_dismissed");
-      if (!isStandaloneMode && !dismissed && floatingInstallBanner && window.innerWidth <= 768) {
-        floatingInstallBanner.style.display = "flex";
-      }
-    });
-
-    window.addEventListener('appinstalled', () => {
-      deferredInstallPrompt = null;
-      if (floatingInstallBanner) floatingInstallBanner.style.display = "none";
-      closeInstallModal();
-      showToast("🎉 ติดตั้งแอปพลิเคชัน MovieStream สำเร็จแล้ว!", "success");
-    });
-
-    function openInstallModal() {
-      if (installAppModal) {
-        installAppModal.style.display = "flex";
-        requestAnimationFrame(() => installAppModal.classList.add("active"));
-        installAppModal.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-
-        // If iOS device, show the iOS guide by default
-        if (isIOSDevice && iosInstallGuide) {
-          iosInstallGuide.style.display = "block";
-          if (pwaModalInstallBtn) {
-            pwaModalInstallBtn.innerHTML = `<span>📱 ทำตามขั้นตอนด้านล่างบน Safari</span>`;
-          }
-        }
-      }
-    }
-
-    function closeInstallModal() {
-      if (installAppModal) {
-        installAppModal.classList.remove("active");
-        installAppModal.setAttribute("aria-hidden", "true");
-        setTimeout(() => {
-          if (!installAppModal.classList.contains("active")) {
-            installAppModal.style.display = "none";
-          }
-        }, 250);
-        document.body.style.overflow = "";
-      }
-    }
-
-    function triggerPwaInstall() {
-      if (isStandaloneMode) {
-        showToast("แอปพลิเคชัน MovieStream ติดตั้งบนเครื่องของคุณอยู่แล้ว", "info");
-        return;
-      }
-
-      if (deferredInstallPrompt) {
-        deferredInstallPrompt.prompt();
-        deferredInstallPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            showToast("กำลังติดตั้งแอปพลิเคชัน...", "success");
-            if (floatingInstallBanner) floatingInstallBanner.style.display = "none";
-          }
-          deferredInstallPrompt = null;
-          closeInstallModal();
-        });
-      } else if (isIOSDevice) {
-        if (iosInstallGuide) {
-          iosInstallGuide.style.display = "block";
-          iosInstallGuide.scrollIntoView({ behavior: 'smooth' });
-        }
-        showToast("แตะปุ่มแชร์ [↑] ใน Safari แล้วเลือก 'เพิ่มไปยังหน้าจอโฮม'", "info", 5000);
-      } else {
-        // Desktop or other browser
-        showToast("คลิกไอคอนติดตั้งแอปที่แถบ URL ของเบราว์เซอร์ หรือเพิ่มลงหน้าจอหลัก", "info", 4000);
-      }
-    }
-
-    if (installAppHeaderBtn) {
-      installAppHeaderBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        openInstallModal();
-      });
-    }
-
-    if (installModalCloseBtn) {
-      installModalCloseBtn.addEventListener("click", closeInstallModal);
-    }
-
-    if (installAppModal) {
-      installAppModal.addEventListener("click", (e) => {
-        if (e.target === installAppModal) closeInstallModal();
-      });
-    }
-
-    if (pwaModalInstallBtn) {
-      pwaModalInstallBtn.addEventListener("click", triggerPwaInstall);
-    }
-
-    if (floatingInstallBtn) {
-      floatingInstallBtn.addEventListener("click", () => {
-        if (deferredInstallPrompt) {
-          triggerPwaInstall();
-        } else {
-          openInstallModal();
-        }
-      });
-    }
-
-    if (floatingDismissBtn) {
-      floatingDismissBtn.addEventListener("click", () => {
-        if (floatingInstallBanner) floatingInstallBanner.style.display = "none";
-        sessionStorage.setItem("moviestream_install_dismissed", "true");
-      });
-    }
-
-    // Auto-show floating banner on mobile after 3.5 seconds if not standalone
-    if (!isStandaloneMode && window.innerWidth <= 768 && !sessionStorage.getItem("moviestream_install_dismissed")) {
-      setTimeout(() => {
-        if (floatingInstallBanner && !isStandaloneMode) {
-          floatingInstallBanner.style.display = "flex";
-        }
-      }, 3500);
-    }
-
-    // Direct Link & TV Instant Playback (#play-<movieId>)
-    function checkUrlHashForPlayback() {
-      const hash = window.location.hash;
-      if (hash && hash.startsWith("#play-")) {
-        const movieId = hash.replace("#play-", "");
-        const found = movieList.find(m => String(m.id) === String(movieId));
-        if (found) {
-          setTimeout(() => playMovie(found), 250);
-        }
-      }
-    }
-
-    checkUrlHashForPlayback();
-    window.addEventListener("hashchange", checkUrlHashForPlayback);
-
-    // --- Initial Launch & Render ---
-    try {
-      initVisitorCounter();
-      updateAuthUI();
-      initHeroSpotlight();
-      showHomeView();
-      updateWatchlistUI();
-      renderContinueWatchingShelf();
-    } catch (err) {
-      console.error("Initialization error:", err);
-    }
-  }
-
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initMovieStreamApp);
-} else {
-  initMovieStreamApp();
-}
-
+// ----------------------------------------------------
+// MovieStream JavaScript Application Logic
+// ----------------------------------------------------
+
+function initMovieStreamApp() {
+  if (window.hasAppInitialized) return;
+  window.hasAppInitialized = true;
+  // --- DOM Selectors ---
+  const headerNav = document.getElementById("headerNav");
+  const logoLink = document.getElementById("logoLink");
+  const navHome = document.getElementById("navHome");
+  const navPopular = document.getElementById("navPopular");
+  const navThaiDrama = document.getElementById("navThaiDrama");
+  const navSeries = document.getElementById("navSeries");
+  const navWatchlist = document.getElementById("navWatchlist");
+  const watchlistCount = document.getElementById("watchlistCount");
+  const searchInput = document.getElementById("searchInput");
+  const heroSection = document.getElementById("heroSection");
+  
+  const gridView = document.getElementById("gridView");
+  const gridTitle = document.getElementById("gridTitle");
+  const gridMoviesList = document.getElementById("gridMoviesList");
+  
+
+  
+  // Genre Filter
+  const genreFilterContainer = document.getElementById("genreFilterContainer");
+  const movieShelvesContainer = document.getElementById("movieShelvesContainer");
+  
+  // Details Modal
+  const detailsModal = document.getElementById("detailsModal");
+  const modalCloseBtn = document.getElementById("modalCloseBtn");
+  const modalHeroBanner = document.getElementById("modalHeroBanner");
+  const modalPoster = document.getElementById("modalPoster");
+  const modalTitleTh = document.getElementById("modalTitleTh");
+  const modalTitleEn = document.getElementById("modalTitleEn");
+  const modalRatingVal = document.getElementById("modalRatingVal");
+  const modalYear = document.getElementById("modalYear");
+  const modalDuration = document.getElementById("modalDuration");
+  const modalGenres = document.getElementById("modalGenres");
+  const modalDescription = document.getElementById("modalDescription");
+  const modalCast = document.getElementById("modalCast");
+  const modalWatchNowBtn = document.getElementById("modalWatchNowBtn");
+  const modalTrailerBtn = document.getElementById("modalTrailerBtn");
+  const modalBookmarkBtn = document.getElementById("modalBookmarkBtn");
+  
+  // Video Player Modal
+  const playerModal = document.getElementById("playerModal");
+  const playerCloseBtn = document.getElementById("playerCloseBtn");
+  const playingMovieTitle = document.getElementById("playingMovieTitle");
+  const html5VideoPlayer = document.getElementById("html5VideoPlayer");
+  const iframeVideoPlayer = document.getElementById("iframeVideoPlayer");
+  const customPlayerControls = document.getElementById("customPlayerControls");
+  
+  // Player Bottom Bar Selectors
+  const audioSelectBtn = document.getElementById("audioSelectBtn");
+  const episodeSelectBtn = document.getElementById("episodeSelectBtn");
+
+  // Custom Controls Selectors
+  const playPauseBtn = document.getElementById("playPauseBtn");
+  const playIcon = document.getElementById("playIcon");
+  const currentTimeLabel = document.getElementById("currentTime");
+  const totalDurationLabel = document.getElementById("totalDuration");
+  const progressBarContainer = document.getElementById("progressBarContainer");
+  const progressBarFilled = document.getElementById("progressBarFilled");
+  const muteBtn = document.getElementById("muteBtn");
+  const volumeSlider = document.getElementById("volumeSlider");
+  const volumeFilled = document.getElementById("volumeFilled");
+  const fullscreenBtn = document.getElementById("fullscreenBtn");
+  const videoScreenWrapper = document.getElementById("videoScreenWrapper");
+  const centerPlayOverlay = document.getElementById("centerPlayOverlay");
+  const bottomProgressBarContainer = document.getElementById("bottomProgressBarContainer");
+  const bottomProgressBarFilled = document.getElementById("bottomProgressBarFilled");
+  const bottomCurrentTimeLabel = document.getElementById("bottomCurrentTime");
+  const bottomTotalDurationLabel = document.getElementById("bottomTotalDuration");
+
+  const toastContainer = document.getElementById("toastContainer");
+
+  // URL Google Apps Script Web App (เชื่อมต่อ Google Sheet สำหรับ Sync รายการโปรดและประวัติข้ามเครื่อง)
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyKnLnnu7iJ3uPSV3tdpLO5HL6pZMGy5qzHSLu8Y4RoQq5MIYj1QVFXgZ3miynuNjPX/exec";
+  const LINE_OA_ID = "@720jlmgp";
+  const LINE_OA_URL = "https://line.me/R/ti/p/@720jlmgp";
+
+  // --- State Variables ---
+  function getProxyUrl(url) {
+    if (!url || url.includes('image.tmdb.org') || url.startsWith('data:') || url.includes('goseries4k.com')) return url;
+    if (url.startsWith('images/') || url.startsWith('/images/')) {
+      if (window.location.protocol === 'file:') {
+        return url.startsWith('/') ? '.' + url : url;
+      }
+      return url.startsWith('/') ? url : '/' + url;
+    }
+    return `https://wsrv.nl/?url=${encodeURIComponent(url)}&output=webp`;
+  }
+  
+  const movieList = window.movies || (typeof movies !== "undefined" ? movies : []);
+  let watchlist = [];
+  try {
+    const stored = localStorage.getItem("moviestream_watchlist");
+    if (stored) watchlist = JSON.parse(stored);
+    if (!Array.isArray(watchlist)) watchlist = [];
+  } catch (e) {
+    console.warn("Watchlist parse error:", e);
+    watchlist = [];
+  }
+  let currentActiveMovie = null;
+
+  // --- Progressive Grid State (TV & Low-Spec Optimized) ---
+  let currentGridMovies = [];
+  let currentRenderedCount = 0;
+  const GRID_BATCH_SIZE = 28; // Render 28 cards initially for 0ms lag
+  let gridObserver = null;
+
+  // --- Video Player & Overlay States ---
+  let pendingPlayMovie = null;
+  let hlsInstance = null;
+  let playerControlsIdleTimer = null;
+  let skipIntroCountdownTimer = null;
+  let resumePopupTimeout = null;
+
+  // --- Continue Watching System (ดูล่าสุด / กำลังรับชมต่อ - แยกประวัติตาม User 100%) ---
+  const continueWatchingSection = document.getElementById("continueWatchingSection");
+  const continueWatchingListEl = document.getElementById("continueWatchingList");
+  const clearContinueWatchingBtn = document.getElementById("clearContinueWatchingBtn");
+
+  let cwSyncDebounce = null;
+  function syncContinueWatchingToCloud() {
+    clearTimeout(cwSyncDebounce);
+    cwSyncDebounce = setTimeout(() => {
+      try {
+        const savedUser = localStorage.getItem("moviestream_user");
+        if (savedUser && GOOGLE_SCRIPT_URL) {
+          const user = JSON.parse(savedUser);
+          if (user && user.phone) {
+            fetch(GOOGLE_SCRIPT_URL, {
+              method: "POST",
+              headers: { "Content-Type": "text/plain;charset=utf-8" },
+              body: JSON.stringify({
+                action: "sync_history",
+                phone: user.phone,
+                history: JSON.stringify(continueWatchingList)
+              })
+            }).catch(() => {});
+          }
+        }
+      } catch (e) {}
+    }, 1200);
+  }
+
+  function getContinueWatchingStorageKey() {
+    try {
+      const savedUser = localStorage.getItem("moviestream_user");
+      if (savedUser) {
+        const u = JSON.parse(savedUser);
+        if (u && u.phone) return `moviestream_continue_watching_${u.phone}`;
+      }
+    } catch (e) {}
+    return "moviestream_continue_watching_guest";
+  }
+
+  function loadContinueWatchingData() {
+    const key = getContinueWatchingStorageKey();
+    const storedCW = localStorage.getItem(key);
+
+    // หากเคยมีข้อมูลบันทึกไว้แล้ว (แม้จะเป็นรายการว่างเปล่า []) ให้ใช้ค่านั้น และห้ามสร้าง Mock ซ้ำ
+    if (storedCW !== null) {
+      try {
+        const parsed = JSON.parse(storedCW);
+        if (Array.isArray(parsed)) return parsed;
+      } catch (e) {
+        console.warn("Continue watching parse error:", e);
+      }
+      return [];
+    }
+
+    // หากเปิดระบบเป็นครั้งแรกจริงๆ (ยังไม่เคยมี key ใน storage) ให้ใส่ข้อมูลจำลอง 2 เรื่องไว้ทดสอบ
+    let list = [];
+    if (movieList.length > 0) {
+      const sampleSeries = movieList.find(m => m.episodes && m.episodes.length > 2) || movieList[0];
+      const sampleMovie = movieList.find(m => m.id !== (sampleSeries ? sampleSeries.id : '')) || movieList[1];
+
+      if (sampleSeries) {
+        list.push({
+          movieId: sampleSeries.id,
+          episode: 3,
+          episodeLabel: (sampleSeries.episodes && sampleSeries.episodes[2]) ? sampleSeries.episodes[2] : "ตอนที่ 3",
+          progressPercent: 68,
+          updatedAt: Date.now() - 1000 * 60 * 60 * 20 // ดูเมื่อวานนี้
+        });
+      }
+      if (sampleMovie) {
+        list.push({
+          movieId: sampleMovie.id,
+          episode: 1,
+          episodeLabel: "เต็มเรื่อง",
+          progressPercent: 45,
+          updatedAt: Date.now() - 1000 * 60 * 60 * 48 // 2 วันที่แล้ว
+        });
+      }
+      try {
+        localStorage.setItem(key, JSON.stringify(list));
+      } catch (e) {}
+    }
+
+    return list;
+  }
+
+  let continueWatchingList = loadContinueWatchingData();
+
+
+  // --- Functions ---
+
+  // --- Fail-safe Visitor Count Tracker ---
+  function initVisitorCounter() {
+    const visitorCountDisplay = document.getElementById("visitorCountDisplay");
+    if (!visitorCountDisplay) return;
+
+    let count = localStorage.getItem("moviestream_visitor_count");
+    if (!count) {
+      count = Math.floor(Math.random() * 80) + 168; // Base realistic starting visitors
+    } else {
+      count = parseInt(count, 10) + 1;
+    }
+    localStorage.setItem("moviestream_visitor_count", count);
+    visitorCountDisplay.textContent = Number(count).toLocaleString();
+  }
+
+  // Scroll Header Effect
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      headerNav.classList.add("scrolled");
+    } else {
+      headerNav.classList.remove("scrolled");
+    }
+  });
+
+  // --- Hero Spotlight Carousel System (แบนเนอร์ภาพยนตร์แนะนำชนโรง) ---
+  function initHeroSpotlight() {
+    if (!heroSection) return;
+
+    const heroBackdrop = document.getElementById("heroBackdrop");
+    const heroTag = document.getElementById("heroTag");
+    const heroSoundBadge = document.getElementById("heroSoundBadge");
+    const heroTitle = document.getElementById("heroTitle");
+    const heroTitleSub = document.getElementById("heroTitleSub");
+    const heroRatingVal = document.getElementById("heroRatingVal");
+    const heroYear = document.getElementById("heroYear");
+    const heroDuration = document.getElementById("heroDuration");
+    const heroGenres = document.getElementById("heroGenres");
+    const heroDesc = document.getElementById("heroDesc");
+    const heroPlayBtn = document.getElementById("heroPlayBtn");
+    const heroInfoBtn = document.getElementById("heroInfoBtn");
+    const heroFavBtn = document.getElementById("heroFavBtn");
+    const heroPrevBtn = document.getElementById("heroPrevBtn");
+    const heroNextBtn = document.getElementById("heroNextBtn");
+    const heroDots = document.getElementById("heroDots");
+
+    // Select featured movies: High rated or recent 2026/2025 movies with valid posters/backdrops
+    let heroMovies = movieList.filter(m => {
+      const hasImg = m.backdrop || m.poster;
+      const isRecent = m.year === 2026 || m.year === "2026" || m.year === 2025 || m.year === "2025";
+      const isHighRating = parseFloat(m.rating) >= 7.5;
+      return hasImg && (isRecent || isHighRating);
+    });
+
+    if (heroMovies.length < 5) {
+      heroMovies = movieList.slice(0, 6);
+    } else {
+      heroMovies = heroMovies.slice(0, 6);
+    }
+
+    if (heroMovies.length === 0) {
+      heroSection.style.display = "none";
+      return;
+    }
+
+    let currentIndex = 0;
+    let heroAutoTimer = null;
+
+    // Render Indicator Dots
+    if (heroDots) {
+      heroDots.innerHTML = heroMovies.map((_, i) => `<span class="hero-dot ${i === 0 ? 'active' : ''}" data-index="${i}"></span>`).join("");
+      heroDots.querySelectorAll(".hero-dot").forEach(dot => {
+        dot.addEventListener("click", () => {
+          const idx = parseInt(dot.getAttribute("data-index"), 10);
+          if (!isNaN(idx)) {
+            currentIndex = idx;
+            renderHero(currentIndex);
+            resetHeroTimer();
+          }
+        });
+      });
+    }
+
+    function updateHeroFavBtn(movieId) {
+      if (!heroFavBtn) return;
+      const isSaved = watchlist.includes(movieId);
+      heroFavBtn.innerHTML = `
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="${isSaved ? '#ef4444' : 'none'}" stroke="${isSaved ? '#ef4444' : 'currentColor'}" stroke-width="2.2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      `;
+      heroFavBtn.title = isSaved ? "ลบออกจากรายการโปรด" : "เพิ่มลงในรายการโปรด";
+    }
+
+    function renderHero(index) {
+      const movie = heroMovies[index];
+      if (!movie) return;
+
+      const bgImg = getProxyUrl(movie.backdrop || movie.poster) || "";
+      if (heroBackdrop) {
+        heroBackdrop.style.backgroundImage = `url('${bgImg}')`;
+      }
+
+      if (heroTag) {
+        if (movie.year === 2026 || movie.year === "2026") {
+          heroTag.textContent = `🔥 แนะนำอันดับ ${index + 1} • ชนโรง 2026`;
+        } else {
+          heroTag.textContent = `⭐ ภาพยนตร์ยอดนิยม • แนะนำอันดับ ${index + 1}`;
+        }
+      }
+
+      if (heroSoundBadge) {
+        const hasThai = (movie.languages && movie.languages.some(l => l.includes("Thai"))) || (movie.genres && movie.genres.includes("พากย์ไทย"));
+        heroSoundBadge.textContent = hasThai ? "🔊 พากย์ไทย 5.1" : "🔊 เสียงไทย/ซับไทย";
+      }
+
+      if (heroTitle) heroTitle.textContent = movie.titleTh || "ภาพยนตร์แนะนำ";
+      if (heroTitleSub) heroTitleSub.textContent = movie.titleEn ? `${movie.titleEn} (${movie.year || '2026'})` : `${movie.year || '2026'}`;
+      if (heroRatingVal) heroRatingVal.textContent = movie.rating || "8.5";
+      if (heroYear) heroYear.textContent = movie.year || "2026";
+      if (heroDuration) heroDuration.textContent = movie.duration || (movie.episodes && movie.episodes.length > 1 ? `ซีรีส์ ${movie.episodes.length} ตอน` : "ภาพยนตร์เต็มเรื่อง");
+
+      if (heroGenres) {
+        if (movie.genres && Array.isArray(movie.genres)) {
+          heroGenres.textContent = movie.genres.filter(g => g !== "24-HD" && g !== "GOSERIES4K" && g !== "WOW-DRAMA").slice(0, 3).join(" • ") || "ภาพยนตร์คมชัด HD";
+        } else {
+          heroGenres.textContent = "ภาพยนตร์ยอดนิยม";
+        }
+      }
+
+      if (heroDesc) {
+        heroDesc.textContent = movie.description || "สัมผัสประสบการณ์รับชมภาพยนตร์ออนไลน์คุณภาพสูงระดับ 4K คมชัดทั้งภาพและเสียง พากย์ไทย ซับไทย เต็มเรื่อง ไม่มีโฆษณากวนใจ";
+      }
+
+      updateHeroFavBtn(movie.id);
+
+      if (heroDots) {
+        heroDots.querySelectorAll(".hero-dot").forEach((dot, i) => {
+          if (i === index) dot.classList.add("active");
+          else dot.classList.remove("active");
+        });
+      }
+    }
+
+    function nextHero() {
+      currentIndex = (currentIndex + 1) % heroMovies.length;
+      renderHero(currentIndex);
+    }
+
+    function prevHero() {
+      currentIndex = (currentIndex - 1 + heroMovies.length) % heroMovies.length;
+      renderHero(currentIndex);
+    }
+
+    function resetHeroTimer() {
+      if (heroAutoTimer) clearInterval(heroAutoTimer);
+      heroAutoTimer = setInterval(nextHero, 7000);
+    }
+
+    if (heroPrevBtn) {
+      heroPrevBtn.addEventListener("click", () => {
+        prevHero();
+        resetHeroTimer();
+      });
+    }
+
+    if (heroNextBtn) {
+      heroNextBtn.addEventListener("click", () => {
+        nextHero();
+        resetHeroTimer();
+      });
+    }
+
+    if (heroPlayBtn) {
+      heroPlayBtn.addEventListener("click", () => {
+        const m = heroMovies[currentIndex];
+        if (m) playMovie(m);
+      });
+    }
+
+    if (heroInfoBtn) {
+      heroInfoBtn.addEventListener("click", () => {
+        const m = heroMovies[currentIndex];
+        if (m) openDetailsModal(m);
+      });
+    }
+
+    if (heroFavBtn) {
+      heroFavBtn.addEventListener("click", () => {
+        const m = heroMovies[currentIndex];
+        if (m) {
+          toggleWatchlist(m.id);
+          updateHeroFavBtn(m.id);
+        }
+      });
+    }
+
+    heroSection.addEventListener("mouseenter", () => {
+      if (heroAutoTimer) clearInterval(heroAutoTimer);
+    });
+
+    heroSection.addEventListener("mouseleave", () => {
+      resetHeroTimer();
+    });
+
+    // Initial render
+    renderHero(0);
+    resetHeroTimer();
+  }
+
+  // Create single movie card structure
+  function createMovieCardMarkup(movie) {
+    const isSaved = watchlist.includes(movie.id);
+    const isTopHot = movie.genres && (movie.genres.includes("ยอดนิยม 2026") || movie.genres.includes("ยอดนิยม") || (parseFloat(movie.rating) >= 7.8));
+    const placeholderSvg = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22300%22%20height%3D%22450%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%231e1b4b%22%2F%3E%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%230f172a%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23020617%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20fill%3D%22url(%23g)%22%20width%3D%22300%22%20height%3D%22450%22%2F%3E%3Ccircle%20cx%3D%22150%22%20cy%3D%22190%22%20r%3D%2240%22%20fill%3D%22rgba(168%2C85%2C247%2C0.15)%22%20stroke%3D%22rgba(168%2C85%2C247%2C0.35)%22%20stroke-width%3D%222%22%2F%3E%3Cpolygon%20points%3D%22143%2C175%20165%2C190%20143%2C205%22%20fill%3D%22%23a855f7%22%2F%3E%3Ctext%20fill%3D%22%23ffffff%22%20font-family%3D%22sans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22bold%22%20x%3D%22150%22%20y%3D%22265%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%221%22%3EMOVIESTREAM%3C%2Ftext%3E%3Ctext%20fill%3D%22%23f59e0b%22%20font-family%3D%22sans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22bold%22%20x%3D%22150%22%20y%3D%22288%22%20text-anchor%3D%22middle%22%3EVIP%20CINEMA%3C%2Ftext%3E%3C%2Fsvg%3E";
+    const posterUrl = getProxyUrl(movie.poster) || placeholderSvg;
+
+    const hotBadgeHtml = isTopHot ? `<div class="card-badge-hot">HOT</div>` : '';
+    const ratingVal = movie.rating || "8.0";
+    const qualityTag = (movie.genres && movie.genres.includes("ละครไทย")) ? "HD ละคร" : "4K ULTRA";
+
+    let langText = "พากย์ไทย";
+    if (movie.languages && movie.languages.length > 0) {
+      langText = movie.languages[0].includes("Thai") ? "พากย์ไทย" : movie.languages[0];
+    } else if (movie.genres && movie.genres.includes("พากย์ไทย")) {
+      langText = "พากย์ไทย";
+    }
+
+    return `
+      <div class="movie-card" data-id="${movie.id}" tabindex="0" role="button" aria-label="${movie.titleTh}">
+        <div class="movie-poster-wrapper">
+          <img src="${posterUrl}" data-raw="${movie.poster || ''}" alt="โปสเตอร์เรื่อง ${movie.titleTh}" loading="lazy" referrerpolicy="no-referrer" onerror="if(this.dataset.raw && this.src !== this.dataset.raw){ this.src = this.dataset.raw; } else { this.onerror=null; this.src='${placeholderSvg}'; }">
+          ${hotBadgeHtml}
+          <div class="card-badge-top-left">${qualityTag}</div>
+          <div class="card-badge-top-right">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+            ${ratingVal}
+          </div>
+
+          <button class="movie-fav-btn" aria-label="เพิ่มในรายการโปรด" title="บันทึกรายการโปรด">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="${isSaved ? '#ef4444' : 'none'}" stroke="${isSaved ? '#ef4444' : 'currentColor'}" stroke-width="2.2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </button>
+
+          <div class="movie-card-hover-overlay">
+            <div class="card-hover-play-btn" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-card-info">
+          <h3 class="movie-card-title" title="${movie.titleTh}">${movie.titleTh}</h3>
+          <div class="movie-card-meta">
+            <span class="movie-card-year">${movie.year}</span>
+            <span class="movie-card-lang-chip">${langText}</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // --- Continue Watching Functions ---
+
+  function renderContinueWatchingShelf() {
+    if (!continueWatchingSection || !continueWatchingListEl) return;
+    
+    const cwCountBadge = document.getElementById("cwCountBadge");
+
+    if (!continueWatchingList || continueWatchingList.length === 0) {
+      continueWatchingSection.style.display = "none";
+      document.body.classList.remove("has-continue-watching");
+      if (cwCountBadge) cwCountBadge.textContent = "0";
+      return;
+    }
+
+    continueWatchingSection.style.display = "block";
+    document.body.classList.add("has-continue-watching");
+    if (cwCountBadge) {
+      cwCountBadge.textContent = continueWatchingList.length;
+    }
+    continueWatchingListEl.innerHTML = "";
+
+    continueWatchingList.forEach(item => {
+      const movie = movieList.find(m => m.id === item.movieId);
+      if (!movie) return;
+
+      const card = document.createElement("div");
+      card.className = "cw-card";
+      card.setAttribute("tabindex", "0");
+      card.setAttribute("role", "button");
+      card.setAttribute("aria-label", `รับชมต่อ ${movie.titleTh} ${item.episodeLabel || ''}`);
+
+      const percent = Math.min(Math.max(item.progressPercent || 50, 10), 98);
+      const epLabel = item.episodeLabel || (movie.episodes && movie.episodes.length > 1 ? `ตอนที่ ${item.episode}` : "เต็มเรื่อง");
+      
+      const timeDiff = Date.now() - (item.updatedAt || Date.now());
+      let timeText = "วันนี้";
+      if (timeDiff > 1000 * 60 * 60 * 24 * 2) {
+        timeText = `${Math.floor(timeDiff / (1000 * 60 * 60 * 24))} วันที่แล้ว`;
+      } else if (timeDiff > 1000 * 60 * 60 * 18) {
+        timeText = "เมื่อวานนี้";
+      } else if (timeDiff > 1000 * 60 * 60) {
+        timeText = `${Math.floor(timeDiff / (1000 * 60 * 60))} ชม. ที่แล้ว`;
+      } else {
+        timeText = "เมื่อสักครู่";
+      }
+
+      const cwPlaceholder = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22300%22%20height%3D%22450%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20300%20450%22%3E%3Crect%20fill%3D%22%231e293b%22%20width%3D%22300%22%20height%3D%22450%22%2F%3E%3Ctext%20fill%3D%22%2394a3b8%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20dy%3D%2210.5%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EMovieStream%20HD%3C%2Ftext%3E%3C%2Fsvg%3E";
+      const cwImgSrc = getProxyUrl(movie.backdrop || movie.poster) || cwPlaceholder;
+      card.innerHTML = `
+        <div class="cw-poster-wrapper">
+          <img src="${cwImgSrc}" data-raw="${movie.backdrop || movie.poster || ''}" alt="${movie.titleTh}" loading="lazy" referrerpolicy="no-referrer" onerror="if(this.dataset.raw && this.src !== this.dataset.raw){ this.src = this.dataset.raw; } else { this.onerror=null; this.src='${cwPlaceholder}'; }">
+          <div class="cw-badge-ep">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            ${epLabel}
+          </div>
+          <div class="cw-play-overlay">
+            <div class="cw-play-btn-circle">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+            <span class="cw-play-label">กดรับชมต่อ</span>
+          </div>
+          <div class="cw-progress-track">
+            <div class="cw-progress-fill" style="width: ${percent}%;"></div>
+          </div>
+          <button class="cw-btn-delete" title="ลบออกจากประวัติ" data-delete-id="${movie.id}">✕</button>
+        </div>
+        <div class="cw-info">
+          <h4 class="cw-title" title="${movie.titleTh}">${movie.titleTh}</h4>
+          <div class="cw-meta-row">
+            <span class="cw-status-text">ดูค้างไว้ ${percent}%</span>
+            <span>${timeText}</span>
+          </div>
+        </div>
+      `;
+
+      const delBtn = card.querySelector(".cw-btn-delete");
+      if (delBtn) {
+        delBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          removeContinueWatching(movie.id);
+        });
+      }
+
+      card.addEventListener("click", (e) => {
+        if (e.target.closest(".cw-btn-delete")) return;
+        playMovie(movie, item.episode || 1);
+      });
+
+      continueWatchingListEl.appendChild(card);
+    });
+  }
+
+  function removeContinueWatching(movieId) {
+    continueWatchingList = continueWatchingList.filter(item => item.movieId !== movieId);
+    try {
+      localStorage.setItem(getContinueWatchingStorageKey(), JSON.stringify(continueWatchingList));
+    } catch(e) {}
+    showToast("ลบออกจากประวัติดูล่าสุดแล้ว", "info");
+    renderContinueWatchingShelf();
+    syncContinueWatchingToCloud();
+  }
+
+  function clearAllContinueWatching() {
+    continueWatchingList = [];
+    try {
+      localStorage.setItem(getContinueWatchingStorageKey(), JSON.stringify([]));
+    } catch(e) {}
+    showToast("ล้างประวัติดูล่าสุดเรียบร้อยแล้ว", "info");
+    renderContinueWatchingShelf();
+    syncContinueWatchingToCloud();
+  }
+
+  function recordContinueWatching(movie, episodeNum = 1, progress = null) {
+    if (!movie || !movie.id) return;
+
+    let ep = parseInt(episodeNum) || 1;
+    let epLabel = (movie.episodes && movie.episodes[ep - 1]) ? movie.episodes[ep - 1] : `ตอนที่ ${ep}`;
+    if (!movie.episodes || movie.episodes.length <= 1) {
+      epLabel = "เต็มเรื่อง";
+    }
+
+    let percent = progress;
+    if (percent === null) {
+      const existing = continueWatchingList.find(item => item.movieId === movie.id);
+      percent = existing ? existing.progressPercent : Math.floor(Math.random() * 30 + 35);
+    }
+
+    continueWatchingList = continueWatchingList.filter(item => item.movieId !== movie.id);
+    continueWatchingList.unshift({
+      movieId: movie.id,
+      episode: ep,
+      episodeLabel: epLabel,
+      progressPercent: Math.min(Math.max(percent, 5), 98),
+      updatedAt: Date.now()
+    });
+
+    if (continueWatchingList.length > 20) {
+      continueWatchingList = continueWatchingList.slice(0, 20);
+    }
+
+    try {
+      localStorage.setItem(getContinueWatchingStorageKey(), JSON.stringify(continueWatchingList));
+    } catch(e) {}
+
+    renderContinueWatchingShelf();
+    syncContinueWatchingToCloud();
+  }
+
+  function displayContinueWatchingGridView() {
+    navHome.classList.remove("active");
+    if (navWatchlist) navWatchlist.classList.remove("active");
+    
+    const cwMovies = [];
+    continueWatchingList.forEach(item => {
+      const found = movieList.find(m => m.id === item.movieId);
+      if (found) cwMovies.push(found);
+    });
+
+    showGridView(`🕒 กำลังรับชมต่อ (Continue Watching) (${cwMovies.length} เรื่อง)`, cwMovies);
+  }
+
+  // --- View Swappers ---
+
+  function showHomeView() {
+    if (navHome) navHome.classList.add("active");
+    if (navPopular) navPopular.classList.remove("active");
+    if (navThaiDrama) navThaiDrama.classList.remove("active");
+    if (navSeries) navSeries.classList.remove("active");
+    if (navWatchlist) navWatchlist.classList.remove("active");
+    if (searchInput) searchInput.value = "";
+    // แสดงแบนเนอร์แนะนำหนังเมื่ออยู่ในหมวด "⚡ อัปเดตล่าสุด"
+    if (heroSection) heroSection.style.display = "flex";
+    
+    // Reset active genres tag - ให้ "⚡ อัปเดตล่าสุด" เป็นอันดับแรกและ Active เป็นค่าเริ่มต้น
+    document.querySelectorAll(".genre-tag").forEach(tag => {
+      const g = tag.getAttribute("data-genre");
+      if (g === "today") {
+        tag.classList.add("active");
+      } else {
+        tag.classList.remove("active");
+      }
+    });
+
+    renderContinueWatchingShelf();
+
+    // คัดกรองเฉพาะเรื่องที่มาใหม่ล่าสุด (ปี 2026 จำนวน 24 เรื่องล่าสุด) เพื่อไม่ให้เยอะเกินไปตามคำขอ
+    const latestNewMovies = movieList.filter(m => {
+      const y = parseInt(m.year) || 0;
+      return y >= 2026 && !m.titleTh.includes("(201") && !m.titleTh.includes("(2020");
+    }).slice(0, 24);
+
+    showGridView(`⚡ ภาพยนตร์ & ซีรีส์อัปเดตมาใหม่ (${latestNewMovies.length} เรื่อง)`, latestNewMovies);
+  }
+
+  // --- High Performance Progressive Grid Rendering (Low-Spec & TV Optimized) ---
+
+  function showGridView(title, filteredMovies) {
+    if (continueWatchingSection) {
+      if (title.includes("ทั้งหมด") && continueWatchingList.length > 0) {
+        continueWatchingSection.style.display = "block";
+        document.body.classList.add("has-continue-watching");
+      } else {
+        continueWatchingSection.style.display = "none";
+        document.body.classList.remove("has-continue-watching");
+      }
+    }
+
+    if (heroSection) {
+      // แนะนำหนังให้ขึ้นเฉพาะเมื่อเลือกหมวด "⚡ อัปเดตล่าสุด" เท่านั้น
+      const activeTag = document.querySelector(".genre-tag.active");
+      const isTodayActive = activeTag ? activeTag.getAttribute("data-genre") === "today" : false;
+      if (isTodayActive || title.includes("อัปเดต") || title.includes("today") || title.includes("มาใหม่")) {
+        heroSection.style.display = "flex";
+      } else {
+        heroSection.style.display = "none";
+      }
+    }
+    gridView.style.display = "block";
+    gridTitle.textContent = title;
+    
+    gridMoviesList.innerHTML = "";
+    removeInfiniteScrollTrigger();
+    
+    if (!filteredMovies || filteredMovies.length === 0) {
+      gridMoviesList.innerHTML = `
+        <div class="empty-state" style="grid-column: 1 / -1;">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+          <h3>ไม่พบภาพยนตร์</h3>
+          <p>ลองปรับค้นหาใหม่ หรือกลับไปที่หน้าหลัก</p>
+        </div>
+      `;
+      return;
+    }
+
+    currentGridMovies = filteredMovies;
+    currentRenderedCount = 0;
+
+    // 1. Render initial fast batch (Instant, 0ms lag)
+    appendNextMovieBatch();
+
+    // 2. Setup lazy-load for remaining items
+    setupInfiniteScrollTrigger();
+  }
+
+  function appendNextMovieBatch() {
+    if (!currentGridMovies || currentRenderedCount >= currentGridMovies.length) {
+      removeInfiniteScrollTrigger();
+      return;
+    }
+
+    const nextItems = currentGridMovies.slice(currentRenderedCount, currentRenderedCount + GRID_BATCH_SIZE);
+    currentRenderedCount += nextItems.length;
+
+    const frag = document.createRange().createContextualFragment(
+      nextItems.map(m => createMovieCardMarkup(m)).join("")
+    );
+    gridMoviesList.appendChild(frag);
+
+    if (currentRenderedCount >= currentGridMovies.length) {
+      removeInfiniteScrollTrigger();
+    }
+  }
+
+  function setupInfiniteScrollTrigger() {
+    removeInfiniteScrollTrigger();
+    if (!currentGridMovies || currentRenderedCount >= currentGridMovies.length) return;
+
+    const sentinel = document.createElement("div");
+    sentinel.id = "gridScrollSentinel";
+    sentinel.style.cssText = "grid-column: 1 / -1; display: flex; justify-content: center; padding: 1.5rem 0; width: 100%;";
+    const remain = currentGridMovies.length - currentRenderedCount;
+    sentinel.innerHTML = `
+      <button class="btn btn-secondary load-more-movies-btn" id="loadMoreMoviesBtn" style="padding: 0.65rem 1.8rem; border-radius: 24px; font-weight: 600; cursor: pointer; border: 1px solid rgba(255,255,255,0.18);">
+        📥 โหลดภาพยนตร์เพิ่มเติม (${remain} เรื่องที่เหลือ)
+      </button>
+    `;
+    gridMoviesList.appendChild(sentinel);
+
+    const btn = document.getElementById("loadMoreMoviesBtn");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        btn.remove();
+        appendNextMovieBatch();
+        setupInfiniteScrollTrigger();
+      });
+    }
+
+    if ("IntersectionObserver" in window) {
+      gridObserver = new IntersectionObserver((entries) => {
+        if (entries[0] && entries[0].isIntersecting) {
+          if (currentRenderedCount < currentGridMovies.length) {
+            appendNextMovieBatch();
+            const s = document.getElementById("gridScrollSentinel");
+            if (s && gridMoviesList.contains(s)) {
+              gridMoviesList.appendChild(s);
+              const b = document.getElementById("loadMoreMoviesBtn");
+              if (b) {
+                const rem = currentGridMovies.length - currentRenderedCount;
+                b.textContent = `📥 โหลดภาพยนตร์เพิ่มเติม (${rem} เรื่องที่เหลือ)`;
+              }
+            }
+          } else {
+            removeInfiniteScrollTrigger();
+          }
+        }
+      }, { rootMargin: "500px 0px" });
+
+      gridObserver.observe(sentinel);
+    }
+  }
+
+  function removeInfiniteScrollTrigger() {
+    if (gridObserver) {
+      try { gridObserver.disconnect(); } catch(e) {}
+      gridObserver = null;
+    }
+    const s = document.getElementById("gridScrollSentinel");
+    if (s) s.remove();
+  }
+
+  // Single Delegated Click & Remote Navigation Listener on gridMoviesList (Zero Memory Leak)
+  if (gridMoviesList) {
+    gridMoviesList.addEventListener("click", (e) => {
+      const favBtn = e.target.closest(".movie-fav-btn");
+      if (favBtn) {
+        e.stopPropagation();
+        const card = favBtn.closest(".movie-card");
+        if (card) {
+          const movieId = card.getAttribute("data-id");
+          toggleWatchlist(movieId);
+        }
+        return;
+      }
+
+      const card = e.target.closest(".movie-card");
+      if (card) {
+        const movieId = card.getAttribute("data-id");
+        const found = movieList.find(m => m.id === movieId);
+        if (found) playMovie(found);
+      }
+    });
+
+    gridMoviesList.addEventListener("keydown", (e) => {
+      const code = e.keyCode || e.which;
+      if (code === 13 || e.key === "Enter") {
+        const card = e.target.closest(".movie-card");
+        if (card) {
+          e.preventDefault();
+          const movieId = card.getAttribute("data-id");
+          const found = movieList.find(m => m.id === movieId);
+          if (found) playMovie(found);
+        }
+      }
+    });
+  }
+
+  // --- Watchlist Handling ---
+
+  function updateWatchlistUI() {
+    watchlistCount.textContent = watchlist.length;
+    localStorage.setItem("moviestream_watchlist", JSON.stringify(watchlist));
+  }
+
+  function toggleWatchlist(movieId) {
+    const movie = movieList.find(m => m.id === movieId);
+    if (!movie) return;
+
+    const index = watchlist.indexOf(movieId);
+    if (index === -1) {
+      watchlist.push(movieId);
+      showToast(`เพิ่ม "${movie.titleTh}" ไปยังรายการโปรดแล้ว`, "success");
+    } else {
+      watchlist.splice(index, 1);
+      showToast(`ลบ "${movie.titleTh}" ออกจากรายการโปรดแล้ว`, "info");
+    }
+    
+    updateWatchlistUI();
+
+    // Update SVG in Grid View if present
+    const cardSvg = document.querySelector(`.movie-card[data-id="${movieId}"] .movie-fav-btn svg`);
+    if (cardSvg) {
+      const isNowSaved = watchlist.includes(movieId);
+      cardSvg.setAttribute("fill", isNowSaved ? "currentColor" : "none");
+      cardSvg.parentElement.style.color = isNowSaved ? "#22c55e" : "#ffffff";
+    }
+
+    // If currently on watchlist page, refresh grid view
+    if (navWatchlist.classList.contains("active")) {
+      displayWatchlistView();
+    }
+
+    // Auto-sync Watchlist to Google Sheet if logged in
+    const savedUser = localStorage.getItem("moviestream_user");
+    if (savedUser && GOOGLE_SCRIPT_URL) {
+      try {
+        const user = JSON.parse(savedUser);
+        fetch(GOOGLE_SCRIPT_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify({
+            action: "sync_watchlist",
+            phone: user.phone,
+            watchlist: JSON.stringify(watchlist)
+          })
+        }).catch(() => {});
+      } catch (e) {}
+    }
+    
+    // Update Modal Button State if modal is open
+    if (currentActiveMovie && currentActiveMovie.id === movieId) {
+      updateModalWatchlistBtnState(movieId);
+    }
+  }
+
+  function updateModalWatchlistBtnState(movieId) {
+    const isSaved = watchlist.includes(movieId);
+    if (modalBookmarkBtn) {
+      if (isSaved) {
+        modalBookmarkBtn.classList.add("btn-primary");
+        modalBookmarkBtn.classList.remove("btn-secondary");
+        modalBookmarkBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>`;
+      } else {
+        modalBookmarkBtn.classList.add("btn-secondary");
+        modalBookmarkBtn.classList.remove("btn-primary");
+        modalBookmarkBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>`;
+      }
+    }
+  }
+
+  function displayWatchlistView() {
+    if (navHome) navHome.classList.remove("active");
+    if (navPopular) navPopular.classList.remove("active");
+    if (navThaiDrama) navThaiDrama.classList.remove("active");
+    if (navSeries) navSeries.classList.remove("active");
+    if (navWatchlist) navWatchlist.classList.add("active");
+    if (heroSection) heroSection.style.display = "none";
+    const favs = movieList.filter(m => watchlist.includes(m.id));
+    showGridView("❤️ รายการโปรดของฉัน", favs);
+  }
+
+  // --- Details Modal Actions ---
+
+  function openDetailsModal(movie) {
+    currentActiveMovie = movie;
+    
+    if (modalHeroBanner) modalHeroBanner.style.backgroundImage = `url('${getProxyUrl(movie.backdrop || movie.poster)}')`;
+    if (modalPoster) {
+      modalPoster.src = getProxyUrl(movie.poster);
+      modalPoster.alt = `ปกหนัง ${movie.titleTh}`;
+    }
+    if (modalTitleTh) modalTitleTh.textContent = movie.titleTh;
+    if (modalTitleEn) modalTitleEn.textContent = `${movie.titleEn} (${movie.year})`;
+    if (modalRatingVal) modalRatingVal.textContent = movie.rating;
+    if (modalYear) modalYear.textContent = movie.year;
+    if (modalDuration) modalDuration.textContent = movie.duration;
+    if (modalDescription) modalDescription.textContent = movie.description;
+    if (modalCast) modalCast.textContent = movie.cast ? movie.cast.join(", ") : "-";
+    
+    if (modalGenres && movie.genres) {
+      modalGenres.innerHTML = movie.genres.map(g => `<span class="meta-tag">${g}</span>`).join("");
+    }
+    
+    updateModalWatchlistBtnState(movie.id);
+    
+    // Set Play Button Click
+    if (modalWatchNowBtn) {
+      modalWatchNowBtn.onclick = () => {
+        closeDetailsModal();
+        playMovie(movie);
+      };
+    }
+    
+    // Set Watchlist Button Click
+    if (modalBookmarkBtn) {
+      modalBookmarkBtn.onclick = () => {
+        toggleWatchlist(movie.id);
+      };
+    }
+    
+    if (modalTrailerBtn) {
+      modalTrailerBtn.onclick = () => {
+        if (movie.trailerUrl) {
+          window.open(movie.trailerUrl, "_blank");
+        } else {
+          showToast("ไม่พบตัวอย่างภาพยนตร์เรื่องนี้", "info");
+        }
+      };
+    }
+    
+    if (detailsModal) {
+      detailsModal.classList.add("active");
+      detailsModal.setAttribute("aria-hidden", "false");
+    }
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeDetailsModal() {
+    if (detailsModal) {
+      detailsModal.classList.remove("active");
+      detailsModal.setAttribute("aria-hidden", "true");
+    }
+    document.body.style.overflow = "";
+    currentActiveMovie = null;
+  }
+
+  // --- Video Player Modal Actions ---
+
+  function playMovie(movie, startEpisode = 1) {
+    if (!movie) return;
+
+    // ตรวจสอบสิทธิ์สมาชิกก่อนเปิดเล่นหนัง (ต้อง Login ถึงจะดูได้)
+    const savedUser = localStorage.getItem("moviestream_user");
+    if (!savedUser) {
+      pendingPlayMovie = { movie, startEpisode };
+      showToast("🔒 กรุณาเข้าสู่ระบบสมาชิกก่อนรับชมภาพยนตร์", "info");
+      openAuthModal();
+      return;
+    }
+
+    // Update URL hash for direct bookmarking & TV deep linking
+    try {
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, null, `#play-${movie.id}`);
+      }
+    } catch(e) {}
+
+    if (playingMovieTitle) {
+      playingMovieTitle.textContent = movie.titleTh;
+    }
+    
+    playerModal.classList.add("active");
+    document.body.classList.add("player-is-active");
+    document.body.style.overflow = "hidden";
+    currentActiveMovie = movie;
+
+    // Auto-enter theater fullscreen on Smart TV devices for instant watching
+    const isTV = document.documentElement.classList.contains("is-tv-device");
+    if (isTV) {
+      playerModal.classList.add("theater-fullscreen-mode");
+    }
+
+    const epInt = parseInt(startEpisode) || 1;
+    currentActiveMovie.currentEpisode = epInt;
+
+    // Populate Episodes Custom Button
+    // Populate Episodes Custom Button in Player Controls Bar
+    if (episodeSelectBtn) {
+      const span = document.getElementById("episodeBtnLabel") || episodeSelectBtn.querySelector("span") || episodeSelectBtn;
+      if (movie.episodes && movie.episodes.length > 1) {
+        span.textContent = `${movie.episodes[epInt - 1] || ("ตอนที่ " + epInt)} (เลือกตอน EP) ▾`;
+      } else if (movie.episodes && movie.episodes.length === 1) {
+        span.textContent = `${movie.episodes[0] || "เต็มเรื่อง"} (เลือกตอน EP) ▾`;
+      } else {
+        span.textContent = "เลือกตอน (EP) ▾";
+      }
+      episodeSelectBtn.style.display = "inline-flex";
+      episodeSelectBtn.dataset.value = String(epInt);
+    }
+
+    // Record continue watching immediately
+    recordContinueWatching(movie, epInt);
+
+    // Populate Languages Custom Button in Player Controls Bar
+    if (audioSelectBtn) {
+      const span = document.getElementById("audioBtnLabel") || audioSelectBtn.querySelector("span") || audioSelectBtn;
+      if (movie.languages && movie.languages.length > 0) {
+        span.textContent = `${movie.languages[0]} ▾`;
+        audioSelectBtn.dataset.value = movie.languages[0];
+      } else {
+        span.textContent = "พากย์ไทย ▾";
+        audioSelectBtn.dataset.value = "Thai";
+      }
+      audioSelectBtn.style.display = "inline-flex";
+    }
+    
+    // Resolve initial URL (if jumping directly to an episode from Continue Watching)
+    let initialVideoUrl = movie.videoUrl;
+    if (movie.episodeUrls) {
+      if (movie.episodeUrls[String(epInt)]) {
+        initialVideoUrl = movie.episodeUrls[String(epInt)];
+      } else if (movie.episodeUrls["1"]) {
+        initialVideoUrl = movie.episodeUrls["1"];
+      }
+    }
+    currentActiveMovie.videoUrl = initialVideoUrl;
+
+    // 1. Direct MP4 Streaming Player
+    if (movie.sourceType === "direct") {
+      if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
+      iframeVideoPlayer.style.display = "none";
+      iframeVideoPlayer.src = "";
+      
+      html5VideoPlayer.style.display = "block";
+      html5VideoPlayer.src = initialVideoUrl;
+      customPlayerControls.style.display = "flex";
+      if (typeof playerBlockerOverlay !== "undefined" && playerBlockerOverlay) {
+        playerBlockerOverlay.style.display = "none";
+      }
+      
+      html5VideoPlayer.volume = 0.8;
+      updateVolumeBarUI();
+      
+      html5VideoPlayer.play()
+        .then(() => updatePlayPauseUI(true))
+        .catch(() => updatePlayPauseUI(false));
+
+      setTimeout(() => {
+        const pBtn = document.getElementById("playVideoBtn");
+        if (pBtn && document.activeElement && document.activeElement.tagName !== 'SELECT') pBtn.focus();
+      }, 150);
+        
+      showToast(`กำลังโหลดเล่นวิดีโอ: ${movie.titleTh}`, "success");
+      triggerVideoOverlays(movie, epInt);
+      return;
+    } 
+
+    // 1.4. GOSERIES4K (torbo007)
+    if (initialVideoUrl && initialVideoUrl.includes("torbo007.com")) {
+      const md5Match = initialVideoUrl.match(/\/embed\/([a-f0-9]{20,})/i) || initialVideoUrl.match(/[?&]v=([a-f0-9]{20,})/i);
+      if (md5Match && md5Match[1]) {
+        fallbackToIframe(`/player.html?id=${md5Match[1]}&src=torbo007`);
+        const epText = (movie.episodes && movie.episodes.length > 1) ? ` (ตอนที่ ${epInt})` : "";
+        showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}${epText}`, "success");
+        triggerVideoOverlays(movie, epInt);
+        return;
+      }
+    }
+
+    // 1.5. WOW-DRAMA (getplay-cdn)
+    if (initialVideoUrl && initialVideoUrl.includes("getplay-cdn.com")) {
+      const isIOSDevice = /iPhone|iPad|iPod/i.test(navigator.userAgent) || 
+        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      const md5Match = initialVideoUrl.match(/\/embed\/([a-f0-9]{20,})/i) || initialVideoUrl.match(/[?&]v=([a-f0-9]{20,})/i);
+      
+      // On iOS (iPhone/iPad), embed through player.html with original JWPlayer UI to bypass 403
+      if (isIOSDevice && md5Match && md5Match[1]) {
+        fallbackToIframe(`/player.html?id=${md5Match[1]}`);
+        const epText = (movie.episodes && movie.episodes.length > 1) ? ` (ตอนที่ ${epInt})` : "";
+        showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}${epText}`, "success");
+        triggerVideoOverlays(movie, epInt);
+        return;
+      }
+    }
+
+    // 1.6. MYSERIESHD (ok-hd.com)
+    if (initialVideoUrl && initialVideoUrl.includes("ok-hd.com")) {
+      const isIOSDevice = /iPhone|iPad|iPod/i.test(navigator.userAgent) || 
+        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      const md5Match = initialVideoUrl.match(/\/(?:play|embed)\/([a-f0-9]{20,})/i) || initialVideoUrl.match(/[?&]v=([a-f0-9]{20,})/i);
+      
+      // On iOS (iPhone/iPad), embed through player.html with proxy to bypass "Missing referer header" 403
+      if (isIOSDevice && md5Match && md5Match[1]) {
+        fallbackToIframe(`/player.html?id=${md5Match[1]}&src=ok-hd`);
+        const epText = (movie.episodes && movie.episodes.length > 1) ? ` (ตอนที่ ${epInt})` : "";
+        showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}${epText}`, "success");
+        triggerVideoOverlays(movie, epInt);
+        return;
+      }
+    }
+
+    // 2. Embedded Video Player (Direct Hardware-accelerated CDN Streaming)
+    fallbackToIframe(initialVideoUrl);
+    const epText = (movie.episodes && movie.episodes.length > 1) ? ` (ตอนที่ ${epInt})` : "";
+    showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}${epText}`, "success");
+    triggerVideoOverlays(movie, epInt);
+  }
+
+  function playNativeHls(streamUrl, movieTitle, originalEmbedUrl) {
+    window._activeVideoDuration = 0;
+    if (hlsInstance) {
+      try { hlsInstance.destroy(); } catch(e) {}
+      hlsInstance = null;
+    }
+
+    if (currentActiveMovie && originalEmbedUrl) {
+      currentActiveMovie.videoUrl = originalEmbedUrl;
+    }
+
+    // Reset iframe player
+    iframeVideoPlayer.style.display = "none";
+    iframeVideoPlayer.src = "about:blank";
+
+    // Reset html5VideoPlayer completely
+    html5VideoPlayer.pause();
+    html5VideoPlayer.removeAttribute('src');
+    html5VideoPlayer.load();
+
+    html5VideoPlayer.style.display = "block";
+    customPlayerControls.style.display = "flex";
+    const pTimeline = document.getElementById("playerTimelineBar");
+    if (pTimeline) pTimeline.style.display = "flex";
+
+    const pBtn = document.getElementById("playVideoBtn");
+    if (pBtn) {
+      const span = pBtn.querySelector("span");
+      if (span) span.textContent = "เล่น / หยุด";
+    }
+
+    if (window.Hls && Hls.isSupported()) {
+      hlsInstance = new Hls({
+        debug: false,
+        enableWorker: true,
+        lowLatencyMode: false
+      });
+
+      hlsInstance.loadSource(streamUrl);
+      hlsInstance.attachMedia(html5VideoPlayer);
+
+      hlsInstance.on(Hls.Events.LEVEL_LOADED, function (event, data) {
+        if (data.details && typeof data.details.totalduration === "number" && data.details.totalduration > 0) {
+          window._activeVideoDuration = data.details.totalduration;
+          updateTimeAndProgress();
+        }
+      });
+
+      hlsInstance.on(Hls.Events.MANIFEST_PARSED, function () {
+        html5VideoPlayer.play()
+          .then(() => {
+            updatePlayPauseUI(true);
+            showToast(`▶ กำลังเล่น: ${movieTitle}`, "success");
+          })
+          .catch((err) => {
+            console.warn("Autoplay notice:", err);
+            updatePlayPauseUI(false);
+          });
+      });
+
+      hlsInstance.on(Hls.Events.ERROR, function (event, data) {
+        if (data.fatal) {
+          switch (data.type) {
+            case Hls.ErrorTypes.NETWORK_ERROR:
+              console.warn("HLS network error, attempting to recover...");
+              hlsInstance.startLoad();
+              break;
+            case Hls.ErrorTypes.MEDIA_ERROR:
+              console.warn("HLS media error, attempting to recover...");
+              hlsInstance.recoverMediaError();
+              break;
+            default:
+              console.warn("HLS unrecoverable error, fallback to iframe:", data);
+              if (hlsInstance) {
+                try { hlsInstance.destroy(); } catch(e) {}
+                hlsInstance = null;
+              }
+              if (originalEmbedUrl) {
+                fallbackToIframe(originalEmbedUrl);
+              }
+              break;
+          }
+        }
+      });
+    } else if (html5VideoPlayer.canPlayType("application/vnd.apple.mpegurl")) {
+      html5VideoPlayer.src = streamUrl;
+      html5VideoPlayer.play()
+        .then(() => updatePlayPauseUI(true))
+        .catch(() => updatePlayPauseUI(false));
+    } else {
+      if (originalEmbedUrl) fallbackToIframe(originalEmbedUrl);
+    }
+
+    setTimeout(() => {
+      const pBtn = document.getElementById("playVideoBtn");
+      if (pBtn && document.activeElement && document.activeElement.tagName !== 'SELECT') pBtn.focus();
+    }, 150);
+  }
+
+  function fallbackToIframe(url) {
+    if (hlsInstance) {
+      try { hlsInstance.destroy(); } catch(e) {}
+      hlsInstance = null;
+    }
+    
+    // Completely pause and reset html5 player
+    html5VideoPlayer.style.display = "none";
+    html5VideoPlayer.pause();
+    html5VideoPlayer.removeAttribute('src');
+    html5VideoPlayer.load();
+
+    customPlayerControls.style.display = "none";
+    const pTimeline = document.getElementById("playerTimelineBar");
+    if (pTimeline) pTimeline.style.display = "none";
+
+    // CRITICAL: Hide center play overlay immediately so it doesn't block iframe touches!
+    if (centerPlayOverlay) {
+      centerPlayOverlay.style.display = "none";
+    }
+
+    iframeVideoPlayer.style.display = "block";
+    iframeVideoPlayer.style.zIndex = "10";
+    iframeVideoPlayer.style.pointerEvents = "auto";
+
+    const isMobileDevice = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const isTVBrowser = /browsehere|smarttv|googletv|tizen|webos/i.test(navigator.userAgent);
+    const isGOSeries = (typeof currentActiveMovie !== "undefined" && currentActiveMovie && currentActiveMovie.source === "GOSERIES4K");
+    
+    // GOSERIES4K / torbo007: Route through player.html with proxy to bypass 403 domain lock
+    if (url && url.includes("torbo007.com")) {
+      const md5Match = url.match(/\/embed\/([a-f0-9]{20,})/i) || url.match(/[?&]v=([a-f0-9]{20,})/i);
+      if (md5Match && md5Match[1]) {
+        url = `/player.html?id=${md5Match[1]}&src=torbo007`;
+      }
+    }
+
+    // On iOS/Mobile, route ok-hd through player.html with proxy to bypass "Missing referer header"
+    if (isMobileDevice && url && url.includes("ok-hd.com")) {
+      const md5Match = url.match(/\/(?:play|embed)\/([a-f0-9]{20,})/i) || url.match(/[?&]v=([a-f0-9]{20,})/i);
+      if (md5Match && md5Match[1]) {
+        url = `/player.html?id=${md5Match[1]}&src=ok-hd`;
+      }
+    }
+
+    // BrowseHere / Smart TV video sniffer needs direct iframe permissions without sandbox lock
+    if (url && url.startsWith("/player.html")) {
+      iframeVideoPlayer.removeAttribute("sandbox");
+    } else if (!isMobileDevice && isGOSeries && !isTVBrowser) {
+      iframeVideoPlayer.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms allow-presentation allow-downloads");
+    } else {
+      iframeVideoPlayer.removeAttribute("sandbox");
+    }
+    
+    iframeVideoPlayer.setAttribute("allowfullscreen", "true");
+    iframeVideoPlayer.setAttribute("webkitallowfullscreen", "true");
+    iframeVideoPlayer.setAttribute("mozallowfullscreen", "true");
+    iframeVideoPlayer.allowFullscreen = true;
+    if (url && url.startsWith("/player.html")) {
+      iframeVideoPlayer.removeAttribute("referrerpolicy");
+    } else {
+      iframeVideoPlayer.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
+    }
+    iframeVideoPlayer.setAttribute("allow", "autoplay *; fullscreen *; picture-in-picture *; encrypted-media *; media-src *; webkit-playsinline; playsinline; accelerometer; gyroscope; fullscreen; autoplay; encrypted-media");
+    iframeVideoPlayer.setAttribute("playsinline", "true");
+    iframeVideoPlayer.setAttribute("webkit-playsinline", "true");
+    iframeVideoPlayer.setAttribute("x5-playsinline", "true");
+    iframeVideoPlayer.src = url;
+
+    const pBtn = document.getElementById("playVideoBtn");
+    if (pBtn) {
+      const span = pBtn.querySelector("span");
+      if (span) span.textContent = "เล่น / หยุด";
+    }
+
+    setTimeout(() => {
+      if (pBtn && document.activeElement && document.activeElement.tagName !== 'SELECT') pBtn.focus();
+    }, 150);
+  }
+
+  // Load specific episode directly from pre-built episodeUrls pool
+  function loadEpisode(postId, episode, lang, title) {
+    showToast(`▶ กำลังเปิดเล่น ตอนที่ ${episode} อัตโนมัติ...`, "success");
+    const epKey = String(episode);
+    
+    if (currentActiveMovie && currentActiveMovie.episodeUrls && currentActiveMovie.episodeUrls[epKey]) {
+      const epVideoUrl = currentActiveMovie.episodeUrls[epKey];
+      currentActiveMovie.videoUrl = epVideoUrl;
+      currentActiveMovie.currentEpisode = parseInt(episode) || 1;
+
+      if (epVideoUrl && epVideoUrl.includes("getplay-cdn.com")) {
+        const isIOSDevice = /iPhone|iPad|iPod/i.test(navigator.userAgent) || 
+          (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        const md5Match = epVideoUrl.match(/\/embed\/([a-f0-9]{20,})/i) || epVideoUrl.match(/[?&]v=([a-f0-9]{20,})/i);
+        if (isIOSDevice && md5Match && md5Match[1]) {
+          fallbackToIframe(`/player.html?id=${md5Match[1]}`);
+          showToast(`▶ เริ่มเล่น ตอนที่ ${episode} แล้ว`, "success");
+          return;
+        }
+      }
+
+      if (epVideoUrl && epVideoUrl.includes("ok-hd.com")) {
+        const isIOSDevice = /iPhone|iPad|iPod/i.test(navigator.userAgent) || 
+          (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        const md5Match = epVideoUrl.match(/\/(?:play|embed)\/([a-f0-9]{20,})/i) || epVideoUrl.match(/[?&]v=([a-f0-9]{20,})/i);
+        if (isIOSDevice && md5Match && md5Match[1]) {
+          fallbackToIframe(`/player.html?id=${md5Match[1]}&src=ok-hd`);
+          showToast(`▶ เริ่มเล่น ตอนที่ ${episode} แล้ว`, "success");
+          return;
+        }
+      }
+
+      fallbackToIframe(epVideoUrl);
+      showToast(`▶ เริ่มเล่น ตอนที่ ${episode} แล้ว`, "success");
+      return;
+    }
+
+    // Backup fetch via API
+    const formData = new FormData();
+    formData.append("action", "halim_ajax_player");
+    formData.append("nonce", "");
+    formData.append("episode", episode);
+    formData.append("server", "1");
+    formData.append("postid", postId);
+    formData.append("lang", lang || "Thai");
+    formData.append("title", title || "Movie");
+    
+    fetch("https://api.24-hdx.com/get.php", {
+      method: "POST",
+      body: formData
+    })
+    .then(res => res.text())
+    .then(html => {
+      const srcMatch = html.match(/src="([^"]+)"/);
+      if (srcMatch && srcMatch[1]) {
+        const epSrc = srcMatch[1];
+        if (currentActiveMovie) {
+          currentActiveMovie.videoUrl = epSrc;
+          currentActiveMovie.currentEpisode = parseInt(episode) || 1;
+        }
+        if (epSrc.includes("getplay-cdn.com")) {
+          const isIOSDevice = /iPhone|iPad|iPod/i.test(navigator.userAgent) || 
+            (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+          const md5Match = epSrc.match(/\/embed\/([a-f0-9]{20,})/i) || epSrc.match(/[?&]v=([a-f0-9]{20,})/i);
+          if (isIOSDevice && md5Match && md5Match[1]) {
+            showToast(`เปิดเล่น ตอนที่ ${episode} เรียบร้อย`, "success");
+            fallbackToIframe(`/player.html?id=${md5Match[1]}`);
+            return;
+          }
+        }
+        fallbackToIframe(epSrc);
+        showToast(`เปิดเล่น ตอนที่ ${episode} เรียบร้อย`, "success");
+      } else {
+        showToast(`สลับเปิดเล่น ตอนที่ ${episode}`, "success");
+      }
+    })
+    .catch(() => {
+      showToast(`สลับเปิดเล่น ตอนที่ ${episode}`, "success");
+    });
+  }
+
+  function resetPlayerControlsIdleTimer() {
+    if (playerModal) {
+      playerModal.classList.remove("player-controls-idle");
+    }
+    clearTimeout(playerControlsIdleTimer);
+    if (playerModal && playerModal.classList.contains("active")) {
+      const isHtml5Playing = html5VideoPlayer && !html5VideoPlayer.paused && html5VideoPlayer.style.display !== "none";
+      const isIframePlaying = iframeVideoPlayer && iframeVideoPlayer.style.display !== "none";
+      const isTV = document.documentElement.classList.contains("is-tv-device");
+      const isFs = playerModal.classList.contains("theater-fullscreen-mode") || !!(document.fullscreenElement || document.webkitFullscreenElement);
+
+      // Only auto-hide controls if currently in Fullscreen mode!
+      // In normal modal view (including TV windowed mode), controls stay permanently visible
+      if ((isHtml5Playing || isIframePlaying) && isFs) {
+        const hideDelay = 4000;
+        playerControlsIdleTimer = setTimeout(() => {
+          if (playerModal && playerModal.classList.contains("active")) {
+            playerModal.classList.add("player-controls-idle");
+          }
+        }, hideDelay);
+      }
+    }
+  }
+
+  ['keydown', 'click', 'touchstart', 'pointerdown'].forEach(evtName => {
+    document.addEventListener(evtName, () => {
+      if (playerModal && playerModal.classList.contains("active")) {
+        resetPlayerControlsIdleTimer();
+      }
+    }, { passive: true });
+  });
+
+  function closePlayer() {
+    window._activeVideoDuration = 0;
+    clearTimeout(playerControlsIdleTimer);
+    if (typeof skipIntroCountdownTimer !== "undefined" && skipIntroCountdownTimer) {
+      clearInterval(skipIntroCountdownTimer);
+      skipIntroCountdownTimer = null;
+    }
+    if (typeof resumePopupTimeout !== "undefined" && resumePopupTimeout) {
+      clearTimeout(resumePopupTimeout);
+      resumePopupTimeout = null;
+    }
+    const resumePopup = document.getElementById("resumePlaybackPopup");
+    if (resumePopup) resumePopup.style.display = "none";
+    const skipContainer = document.getElementById("skipIntroContainer");
+    if (skipContainer) skipContainer.style.display = "none";
+
+    if (playerModal) {
+      playerModal.classList.remove("active");
+      playerModal.classList.remove("player-controls-idle");
+      playerModal.classList.remove("theater-fullscreen-mode");
+    }
+    const epModal = document.getElementById("episodesModal");
+    const auModal = document.getElementById("audioModal");
+    if (epModal) epModal.style.display = "none";
+    if (auModal) auModal.style.display = "none";
+
+    document.body.classList.remove("player-is-active");
+    document.body.style.overflow = "";
+
+    // Exit fullscreen and orientation lock if active
+    try {
+      if (document.fullscreenElement || document.webkitFullscreenElement) {
+        if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen().catch(() => {});
+      }
+      if (screen.orientation && screen.orientation.unlock) {
+        try { screen.orientation.unlock(); } catch(e) {}
+      }
+    } catch(e) {}
+    if (typeof updateFullscreenBtnUI === "function") {
+      updateFullscreenBtnUI(false);
+    }
+    
+    if (hlsInstance) {
+      try { hlsInstance.destroy(); } catch(e) {}
+      hlsInstance = null;
+    }
+
+    // Stop all media playback
+    html5VideoPlayer.pause();
+    html5VideoPlayer.removeAttribute('src');
+    html5VideoPlayer.load();
+    
+    iframeVideoPlayer.src = "about:blank";
+    iframeVideoPlayer.style.display = "none";
+    if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
+    const pTimeline = document.getElementById("playerTimelineBar");
+    if (pTimeline) pTimeline.style.display = "none";
+
+    // Clean hash
+    try {
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.pathname + window.location.search);
+      }
+    } catch(e) {}
+  }
+
+  // --- Custom Player Controls System ---
+
+  // Play/Pause Action
+  function togglePlayPause() {
+    if (html5VideoPlayer.paused) {
+      html5VideoPlayer.play();
+      updatePlayPauseUI(true);
+    } else {
+      html5VideoPlayer.pause();
+      updatePlayPauseUI(false);
+    }
+    resetPlayerControlsIdleTimer();
+  }
+
+  function updatePlayPauseUI(isPlaying) {
+    if (isPlaying) {
+      if (playIcon) playIcon.innerHTML = `<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>`; // Pause icon
+      if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
+      resetPlayerControlsIdleTimer();
+    } else {
+      if (playIcon) playIcon.innerHTML = `<path d="M8 5v14l11-7z"></path>`; // Play icon
+      // Only show center play overlay if html5 video player is actively visible (not iframe mode)
+      if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
+        if (centerPlayOverlay) centerPlayOverlay.style.display = "flex";
+      } else {
+        if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
+      }
+      if (playerModal) playerModal.classList.remove("player-controls-idle");
+    }
+  }
+
+  // Skip time (seconds)
+  function skipTime(amount) {
+    if (!html5VideoPlayer) return;
+    const dur = isFinite(html5VideoPlayer.duration) && html5VideoPlayer.duration > 0
+      ? html5VideoPlayer.duration
+      : (window._activeVideoDuration || 0);
+    const newTime = Math.max(0, Math.min(dur || 999999, (html5VideoPlayer.currentTime || 0) + amount));
+    html5VideoPlayer.currentTime = newTime;
+    updateTimeAndProgress();
+  }
+
+  // Video Overlay Popups (FastHD / Resume Playback)
+  function triggerVideoOverlays(movie, episodeNum = 1) {
+    if (!movie) return;
+    const resumePopup = document.getElementById("resumePlaybackPopup");
+    const resumeTitle = document.getElementById("resumePopupTitle");
+    const skipContainer = document.getElementById("skipIntroContainer");
+    const skipBadge = document.getElementById("skipIntroTimerBadge");
+
+    // 1. Popup ดูต่อจากจุดเดิม (Resume Watching) ถ้ามีประวัติการดู
+    const existing = (continueWatchingList || []).find(item => item.movieId === movie.id);
+    if (existing && existing.progressPercent && existing.progressPercent > 5 && existing.progressPercent < 95) {
+      if (resumePopup && resumeTitle) {
+        clearTimeout(resumePopupTimeout);
+        const epLabel = existing.episodeLabel || `ตอนที่ ${existing.episode || episodeNum}`;
+        const pct = existing.progressPercent;
+        const estMin = Math.round((pct / 100) * 115);
+        const timeDisplay = `${formatTime(estMin * 60)} (${pct}%)`;
+
+        resumeTitle.textContent = `คุณรับชมค้างไว้ที่ ${epLabel} - ${timeDisplay}`;
+        resumePopup.style.display = "flex";
+
+        resumePopupTimeout = setTimeout(() => {
+          resumePopup.style.display = "none";
+        }, 12000);
+      }
+    } else {
+      if (resumePopup) resumePopup.style.display = "none";
+    }
+
+    // 2. Popup ข้าม Intro ลอยในจอวิดีโอ (Skip Intro)
+    if (skipContainer) {
+      clearInterval(skipIntroCountdownTimer);
+      setTimeout(() => {
+        if (!playerModal || !playerModal.classList.contains("active")) return;
+        skipContainer.style.display = "inline-flex";
+        let secondsLeft = 15;
+        if (skipBadge) skipBadge.textContent = `${secondsLeft}s`;
+
+        skipIntroCountdownTimer = setInterval(() => {
+          secondsLeft--;
+          if (skipBadge) skipBadge.textContent = `${secondsLeft}s`;
+          if (secondsLeft <= 0) {
+            clearInterval(skipIntroCountdownTimer);
+            skipContainer.style.display = "none";
+          }
+        }, 1000);
+      }, 700);
+    }
+  }
+
+  // Universal Skip Intro (ข้าม Intro ทุกเรื่อง - 90 วินาที)
+  function performSkipIntro(skipSec = 90) {
+    if (typeof clearInterval === "function" && skipIntroCountdownTimer) {
+      clearInterval(skipIntroCountdownTimer);
+      skipIntroCountdownTimer = null;
+    }
+    const skipContainer = document.getElementById("skipIntroContainer");
+    if (skipContainer) skipContainer.style.display = "none";
+    const skipIntroOverlayBtn = document.getElementById("skipIntroOverlayBtn");
+    if (skipIntroOverlayBtn) skipIntroOverlayBtn.style.display = "none";
+
+    // 1. Direct HTML5 / HLS Player Mode
+    if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
+      const cur = html5VideoPlayer.currentTime || 0;
+      const dur = html5VideoPlayer.duration || 0;
+      const target = cur < skipSec ? skipSec : Math.min(dur || 999999, cur + skipSec);
+      html5VideoPlayer.currentTime = target;
+      updateTimeAndProgress();
+      showToast(`⚡ ข้าม Intro ไปที่ ${formatTime(target)} เรียบร้อย`, "success");
+      return;
+    }
+
+    // 2. IFrame Embed Mode (GOSERIES, WOW-DRAMA, 24-HD, 24HDX)
+    if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
+      let triggered = false;
+
+      // A. Try direct DOM click if accessible (e.g. skip button)
+      try {
+        const ifrDoc = iframeVideoPlayer.contentDocument || (iframeVideoPlayer.contentWindow && iframeVideoPlayer.contentWindow.document);
+        if (ifrDoc) {
+          const btn = ifrDoc.getElementById('skip-intro') || ifrDoc.querySelector('.skip-intro, [id*="skip"]');
+          if (btn) {
+            btn.click();
+            triggered = true;
+          }
+        }
+      } catch(e) {}
+
+      // B. Dispatch postMessage protocols for all embedded video players
+      try {
+        if (iframeVideoPlayer.contentWindow) {
+          const msgs = [
+            { type: 'skipIntro' },
+            { type: 'seek', time: skipSec },
+            { event: 'command', func: 'seekTo', args: [skipSec, true] },
+            { method: 'setCurrentTime', value: skipSec },
+            JSON.stringify({ type: 'skipIntro' }),
+            JSON.stringify({ event: 'command', func: 'seekTo', args: [skipSec, true] }),
+            JSON.stringify({ method: 'setCurrentTime', value: skipSec })
+          ];
+          msgs.forEach(m => {
+            try { iframeVideoPlayer.contentWindow.postMessage(m, '*'); } catch(err) {}
+          });
+        }
+      } catch(e) {}
+
+      showToast(`⚡ ส่งคำสั่งข้าม Intro (${skipSec} วินาที) แล้ว`, "success");
+    }
+  }
+
+  // Format time (seconds -> hh:mm:ss / mm:ss)
+  function formatTime(seconds) {
+    if (!isFinite(seconds) || isNaN(seconds) || seconds < 0) return "00:00";
+    const hrs = Math.floor(seconds / 3600);
+    const mins = Math.floor((seconds % 3600) / 60);
+    const secs = Math.floor(seconds % 60);
+    
+    let result = "";
+    if (hrs > 0) {
+      result += (hrs < 10 ? "0" : "") + hrs + ":";
+    }
+    result += (mins < 10 ? "0" : "") + mins + ":";
+    result += (secs < 10 ? "0" : "") + secs;
+    return result;
+  }
+
+  // Unified Real-time Timeline & Progress Bar Updater
+  function updateTimeAndProgress() {
+    if (!html5VideoPlayer) return;
+    const curTime = html5VideoPlayer.currentTime || 0;
+    let durTime = html5VideoPlayer.duration;
+    if (!isFinite(durTime) || isNaN(durTime) || durTime <= 0) {
+      durTime = window._activeVideoDuration || 0;
+    }
+
+    if (durTime > 0) {
+      const percentage = Math.min(100, Math.max(0, (curTime / durTime) * 100));
+      if (progressBarFilled) progressBarFilled.style.width = `${percentage}%`;
+      if (bottomProgressBarFilled) bottomProgressBarFilled.style.width = `${percentage}%`;
+
+      // Save progress to Continue Watching periodically (every 5 seconds)
+      if (currentActiveMovie && (!window._lastCwSync || Date.now() - window._lastCwSync > 5000)) {
+        window._lastCwSync = Date.now();
+        const ep = parseInt(episodeSelectBtn ? (episodeSelectBtn.dataset.value || "1") : 1) || 1;
+        recordContinueWatching(currentActiveMovie, ep, Math.round(percentage));
+      }
+    }
+
+    // Auto-show Floating Skip Intro button during the first 120 seconds of video
+    const skipIntroOverlayBtn = document.getElementById("skipIntroOverlayBtn");
+    if (skipIntroOverlayBtn) {
+      if (curTime >= 3 && curTime <= 120) {
+        skipIntroOverlayBtn.style.display = "inline-flex";
+      } else {
+        skipIntroOverlayBtn.style.display = "none";
+      }
+    }
+
+    const curStr = formatTime(curTime);
+    if (currentTimeLabel) currentTimeLabel.textContent = curStr;
+    if (bottomCurrentTimeLabel) bottomCurrentTimeLabel.textContent = curStr;
+
+    if (durTime > 0) {
+      const durStr = formatTime(durTime);
+      if (totalDurationLabel) totalDurationLabel.textContent = durStr;
+      if (bottomTotalDurationLabel) bottomTotalDurationLabel.textContent = durStr;
+    }
+  }
+
+  // Update progress bar as video plays
+  if (html5VideoPlayer) {
+    html5VideoPlayer.addEventListener("timeupdate", updateTimeAndProgress);
+    html5VideoPlayer.addEventListener("durationchange", updateTimeAndProgress);
+    html5VideoPlayer.addEventListener("loadedmetadata", updateTimeAndProgress);
+    html5VideoPlayer.addEventListener("progress", updateTimeAndProgress);
+  }
+
+  // Seeking Helper
+  function seekVideoToPosition(posRatio) {
+    if (!html5VideoPlayer) return;
+    let dur = html5VideoPlayer.duration;
+    if (!isFinite(dur) || isNaN(dur) || dur <= 0) {
+      dur = window._activeVideoDuration || 0;
+    }
+    if (dur > 0) {
+      html5VideoPlayer.currentTime = Math.max(0, Math.min(dur, posRatio * dur));
+      updateTimeAndProgress();
+    }
+  }
+
+  // Seeking on Top Progress Bar Click
+  if (progressBarContainer) {
+    progressBarContainer.addEventListener("click", (e) => {
+      const rect = progressBarContainer.getBoundingClientRect();
+      seekVideoToPosition((e.clientX - rect.left) / rect.width);
+    });
+  }
+
+  // Seeking on Bottom Timeline Bar (คลิกหรือใช้รีโมททีวีเลื่อนเวลา)
+  if (bottomProgressBarContainer) {
+    bottomProgressBarContainer.addEventListener("click", (e) => {
+      const rect = bottomProgressBarContainer.getBoundingClientRect();
+      seekVideoToPosition((e.clientX - rect.left) / rect.width);
+    });
+
+    bottomProgressBarContainer.addEventListener("keydown", (e) => {
+      const code = e.keyCode || e.which;
+      if (e.key === "ArrowLeft" || code === 37 || e.key === "Left") {
+        e.preventDefault();
+        skipTime(-10);
+        showToast("⏪ กรอถอยหลัง 10 วินาที", "info");
+      } else if (e.key === "ArrowRight" || code === 39 || e.key === "Right") {
+        e.preventDefault();
+        skipTime(10);
+        showToast("⏩ กรอไปข้างหน้า 10 วินาที", "info");
+      } else if (e.key === "ArrowUp" || code === 38 || e.key === "Up") {
+        e.preventDefault();
+        if (centerPlayOverlay && centerPlayOverlay.style.display !== "none") {
+          centerPlayOverlay.focus();
+        } else if (html5VideoPlayer) {
+          html5VideoPlayer.focus();
+        }
+      } else if (e.key === "ArrowDown" || code === 40 || e.key === "Down") {
+        e.preventDefault();
+        const pBtn = document.getElementById("playVideoBtn");
+        if (pBtn) pBtn.focus();
+      } else if (e.key === "Enter" || code === 13 || e.key === " " || code === 32) {
+        e.preventDefault();
+        handlePlayRequest();
+      }
+    });
+  }
+
+  // Fullscreen UI State Updater
+  function updateFullscreenBtnUI(isFs) {
+    const expandIcon = '<path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>';
+    const compressIcon = '<path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path>';
+
+    const tvFsBtn = document.getElementById("tvFullscreenBtn");
+    if (tvFsBtn) {
+      const svg = tvFsBtn.querySelector("svg");
+      const span = tvFsBtn.querySelector("span");
+      if (svg) svg.innerHTML = isFs ? compressIcon : expandIcon;
+      if (span) span.textContent = isFs ? "ย่อจอ" : "เต็มจอ";
+      if (isFs) {
+        tvFsBtn.classList.add("is-fullscreen");
+      } else {
+        tvFsBtn.classList.remove("is-fullscreen");
+      }
+    }
+
+    if (fullscreenBtn) {
+      const svg = fullscreenBtn.querySelector("svg");
+      if (svg) svg.innerHTML = isFs ? compressIcon : expandIcon;
+      fullscreenBtn.setAttribute("aria-label", isFs ? "ออกจากเต็มหน้าจอ" : "เล่นเต็มหน้าจอ");
+    }
+  }
+
+  // Fullscreen Action (Toggle Theater Fullscreen & HTML5 Fullscreen with Tablet Landscape Support)
+  function toggleFullscreen() {
+    const isCurrentlyFs = !!(
+      document.fullscreenElement ||
+      document.webkitFullscreenElement ||
+      (playerModal && playerModal.classList.contains("theater-fullscreen-mode"))
+    );
+
+    if (isCurrentlyFs) {
+      // 1. Exit Fullscreen
+      if (playerModal) {
+        playerModal.classList.remove("theater-fullscreen-mode");
+      }
+      updateFullscreenBtnUI(false);
+      try {
+        if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen().catch(() => {});
+      } catch(e) {}
+      try {
+        if (screen.orientation && screen.orientation.unlock) {
+          screen.orientation.unlock();
+        }
+      } catch(e) {}
+      showToast("📺 ย่อหน้าจอปกติ", "info");
+    } else {
+      // 2. Enter Fullscreen
+      if (playerModal) {
+        playerModal.classList.add("theater-fullscreen-mode");
+      }
+      updateFullscreenBtnUI(true);
+
+      // In Android WebView / Tablets: Request fullscreen on playerModal or documentElement
+      try {
+        const targetElem = document.documentElement || playerModal || videoScreenWrapper;
+        if (targetElem.requestFullscreen) {
+          targetElem.requestFullscreen().catch(() => {
+            if (playerModal && playerModal.requestFullscreen) {
+              playerModal.requestFullscreen().catch(() => {});
+            }
+          });
+        } else if (targetElem.webkitRequestFullscreen) {
+          targetElem.webkitRequestFullscreen().catch(() => {});
+        }
+      } catch(e) {}
+
+      // Attempt orientation lock to landscape for mobile & tablet apps
+      try {
+        if (screen.orientation && screen.orientation.lock) {
+          screen.orientation.lock("landscape").catch(() => {
+            if (screen.orientation.lock) screen.orientation.lock("sensor-landscape").catch(() => {});
+          });
+        }
+      } catch(e) {}
+      showToast("🖥 สลับมุมมองเต็มหน้าจอ", "success");
+    }
+    resetPlayerControlsIdleTimer();
+  }
+
+  // Synchronize fullscreen events from browser or internal video player
+  ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'].forEach(evtName => {
+    document.addEventListener(evtName, () => {
+      const isFs = !!(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement);
+      if (playerModal) {
+        if (isFs) {
+          playerModal.classList.add("theater-fullscreen-mode");
+        } else {
+          playerModal.classList.remove("theater-fullscreen-mode");
+        }
+      }
+      updateFullscreenBtnUI(isFs);
+      if (!isFs && screen.orientation && screen.orientation.unlock) {
+        try { screen.orientation.unlock(); } catch(e) {}
+      }
+    }, { passive: true });
+  });
+
+  if (fullscreenBtn) {
+    fullscreenBtn.addEventListener("click", toggleFullscreen);
+  }
+
+  // Volume Slider Logic
+  function updateVolumeBarUI() {
+    if (!html5VideoPlayer) return;
+    const vol = html5VideoPlayer.volume;
+    if (volumeFilled) volumeFilled.style.width = `${vol * 100}%`;
+  }
+
+  if (muteBtn) {
+    muteBtn.addEventListener("click", () => {
+      html5VideoPlayer.muted = !html5VideoPlayer.muted;
+      updateVolumeBarUI();
+    });
+  }
+
+  if (volumeSlider) {
+    volumeSlider.addEventListener("click", (e) => {
+      const rect = volumeSlider.getBoundingClientRect();
+      let vol = (e.clientX - rect.left) / rect.width;
+      vol = Math.max(0, Math.min(1, vol));
+      html5VideoPlayer.volume = vol;
+      html5VideoPlayer.muted = false;
+      updateVolumeBarUI();
+    });
+  }
+
+  // Listeners for HTML5 Video playback triggers
+  if (playPauseBtn) playPauseBtn.addEventListener("click", togglePlayPause);
+  if (html5VideoPlayer) {
+    html5VideoPlayer.addEventListener("click", togglePlayPause);
+    html5VideoPlayer.addEventListener("ended", () => {
+      updatePlayPauseUI(false);
+    });
+  }
+
+  // --- Toast System ---
+  function showToast(message, type = "success") {
+    const toast = document.createElement("div");
+    toast.className = `toast`;
+    
+    const icon = type === "success" 
+      ? `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="toast-success-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>`
+      : `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--color-primary)"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>`;
+
+    toast.innerHTML = `${icon}<span>${message}</span>`;
+    toastContainer.appendChild(toast);
+    
+    // Trigger animation
+    setTimeout(() => toast.classList.add("show"), 50);
+    
+    // Dismiss toast
+    setTimeout(() => {
+      toast.classList.remove("show");
+      setTimeout(() => toast.remove(), 300);
+    }, 3000);
+  }
+
+  // --- Event Listeners & UI Controller Setup ---
+
+    // Nav Home Click
+    if (navHome) {
+      navHome.addEventListener("click", (e) => {
+        e.preventDefault();
+        showHomeView();
+      });
+    }
+
+    // Nav Popular Click
+    if (navPopular) {
+      navPopular.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelectorAll(".nav-links a").forEach(a => a.classList.remove("active"));
+        navPopular.classList.add("active");
+        document.querySelectorAll(".genre-tag").forEach(tag => tag.classList.remove("active"));
+        if (heroSection) heroSection.style.display = "none";
+        const popMovies = movieList.filter(m => (m.genres && (m.genres.includes("ยอดนิยม") || m.genres.includes("ยอดนิยม 2026"))) || (m.rating && parseFloat(m.rating) >= 7.8));
+        popMovies.sort((a, b) => {
+          const aTop = (a.genres && (a.genres.includes("ยอดนิยม 2026") || a.genres.includes("ยอดนิยม"))) ? 1 : 0;
+          const bTop = (b.genres && (b.genres.includes("ยอดนิยม 2026") || b.genres.includes("ยอดนิยม"))) ? 1 : 0;
+          if (bTop !== aTop) return bTop - aTop;
+          return (parseFloat(b.rating) || 0) - (parseFloat(a.rating) || 0);
+        });
+        showGridView(`⭐ รวมภาพยนตร์ยอดนิยมทั้งหมด (${popMovies.length} เรื่อง)`, popMovies);
+      });
+    }
+
+    // Nav Thai Drama Click
+    if (navThaiDrama) {
+      navThaiDrama.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelectorAll(".nav-links a").forEach(a => a.classList.remove("active"));
+        navThaiDrama.classList.add("active");
+        document.querySelectorAll(".genre-tag").forEach(tag => tag.classList.remove("active"));
+        if (heroSection) heroSection.style.display = "none";
+        const dramaMovies = movieList.filter(m => (m.genres && (m.genres.includes("ละครไทย") || m.genres.includes("ละครไทย ย้อนหลัง"))) || (m.titleTh && (m.titleTh.includes("ละคร") || m.titleTh.includes("EP"))));
+        showGridView(`🎭 รวมดูละครไทย ย้อนหลัง (${dramaMovies.length} เรื่อง)`, dramaMovies);
+      });
+    }
+
+    // Nav Series Click
+    if (navSeries) {
+      navSeries.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelectorAll(".nav-links a").forEach(a => a.classList.remove("active"));
+        navSeries.classList.add("active");
+        document.querySelectorAll(".genre-tag").forEach(tag => tag.classList.remove("active"));
+        if (heroSection) heroSection.style.display = "none";
+        const seriesMovies = movieList.filter(m => (m.genres && (m.genres.includes("ซีรีส์") || m.genres.includes("ซีรีส์แนะนำใหม่ 2026") || m.genres.includes("ซีรีส์ใหม่ 2026"))) || m.source === "GOSERIES4K" || m.source === "SERIEDAYS" || (m.episodes && m.episodes.length > 1));
+        showGridView(`📺 รวมซีรีส์และละครชุด (${seriesMovies.length} เรื่อง)`, seriesMovies);
+      });
+    }
+
+    if (logoLink) {
+      logoLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        showHomeView();
+      });
+    }
+
+    // Nav Watchlist Click
+    if (navWatchlist) {
+      navWatchlist.addEventListener("click", (e) => {
+        e.preventDefault();
+        displayWatchlistView();
+      });
+    }
+
+    // --- Mobile Bottom Nav Bar Events ---
+    const mobNavHome = document.getElementById("mobNavHome");
+    const mobNavPopular = document.getElementById("mobNavPopular");
+    const mobNavSeries = document.getElementById("mobNavSeries");
+    const mobNavWatchlist = document.getElementById("mobNavWatchlist");
+    const mobNavUser = document.getElementById("mobNavUser");
+
+    function setActiveMobileNav(activeEl) {
+      document.querySelectorAll(".mobile-nav-item").forEach(item => item.classList.remove("active"));
+      if (activeEl) activeEl.classList.add("active");
+    }
+
+    if (mobNavHome) {
+      mobNavHome.addEventListener("click", (e) => {
+        e.preventDefault();
+        setActiveMobileNav(mobNavHome);
+        showHomeView();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    if (mobNavPopular) {
+      mobNavPopular.addEventListener("click", (e) => {
+        e.preventDefault();
+        setActiveMobileNav(mobNavPopular);
+        if (navPopular) navPopular.click();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    if (mobNavSeries) {
+      mobNavSeries.addEventListener("click", (e) => {
+        e.preventDefault();
+        setActiveMobileNav(mobNavSeries);
+        if (navSeries) {
+          navSeries.click();
+        } else {
+          document.querySelectorAll(".nav-links a").forEach(a => a.classList.remove("active"));
+          document.querySelectorAll(".genre-tag").forEach(tag => tag.classList.remove("active"));
+          if (heroSection) heroSection.style.display = "none";
+          const seriesMovies = movieList.filter(m => (m.genres && (m.genres.includes("ซีรีส์") || m.genres.includes("ซีรีส์แนะนำใหม่ 2026") || m.genres.includes("ซีรีส์ใหม่ 2026"))) || m.source === "GOSERIES4K" || m.source === "SERIEDAYS" || (m.episodes && m.episodes.length > 1));
+          showGridView(`📺 รวมซีรีส์และละครชุด (${seriesMovies.length} เรื่อง)`, seriesMovies);
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    if (mobNavWatchlist) {
+      mobNavWatchlist.addEventListener("click", (e) => {
+        e.preventDefault();
+        setActiveMobileNav(mobNavWatchlist);
+        displayWatchlistView();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    if (mobNavUser) {
+      mobNavUser.addEventListener("click", (e) => {
+        e.preventDefault();
+        openAuthModal();
+      });
+    }
+
+    // --- Guard ทีวีสด & กีฬา: ต้องเข้าสู่ระบบสมาชิก VIP ถึงจะดูได้ ---
+    const navLiveTv = document.getElementById("navLiveTv");
+    const mobNavLiveTv = document.getElementById("mobNavLiveTv");
+    [navLiveTv, mobNavLiveTv].forEach(link => {
+      if (link) {
+        link.addEventListener("click", (e) => {
+          const savedUser = localStorage.getItem("moviestream_user");
+          if (!savedUser) {
+            e.preventDefault();
+            showToast("🔒 กรุณาเข้าสู่ระบบก่อนรับชม ทีวีสด & กีฬา VIP", "info");
+            window.pendingLiveRedirect = true;
+            openAuthModal();
+          }
+        });
+      }
+    });
+
+    // --- Member Auth Modal Controller ---
+    const authModal = document.getElementById("authModal");
+    const navAuthBtn = document.getElementById("navAuthBtn");
+    const headerAuthBtn = document.getElementById("headerAuthBtn");
+    const authModalCloseBtn = document.getElementById("authModalCloseBtn");
+    const authForm = document.getElementById("authForm");
+    const authPhone = document.getElementById("authPhone");
+    const authPassword = document.getElementById("authPassword");
+    const authSubmitBtn = document.getElementById("authSubmitBtn");
+    const authModalTitle = document.getElementById("authModalTitle");
+    const authModalDesc = document.getElementById("authModalDesc");
+    const authToggleText = document.getElementById("authToggleText");
+    const authToggleBtn = document.getElementById("authToggleBtn");
+    const authProfileView = document.getElementById("authProfileView");
+    const profileStatus = document.getElementById("profileStatus");
+    const profilePhone = document.getElementById("profilePhone");
+    const authLogoutBtn = document.getElementById("authLogoutBtn");
+    const navHeaderLogoutBtn = document.getElementById("navHeaderLogoutBtn");
+    const navLogoutTabItem = document.getElementById("navLogoutTabItem");
+    const navLogoutTab = document.getElementById("navLogoutTab");
+
+    let currentAuthMode = 'login'; // 'login' | 'register' | 'forgot'
+    const authModalIcon = document.getElementById("authModalIcon");
+    const authPasswordLabel = document.getElementById("authPasswordLabel");
+    const forgotPwdBtn = document.getElementById("forgotPwdBtn");
+    const authModalHeader = document.getElementById("authModalHeader");
+    const authPendingView = document.getElementById("authPendingView");
+    const pendingViewIcon = document.getElementById("pendingViewIcon");
+    const pendingViewTitle = document.getElementById("pendingViewTitle");
+    const pendingViewDesc = document.getElementById("pendingViewDesc");
+    const pendingPhoneDisplay = document.getElementById("pendingPhoneDisplay");
+    const pendingStatusDisplay = document.getElementById("pendingStatusDisplay");
+    const pendingLineBtn = document.getElementById("pendingLineBtn");
+    const pendingLineBtnText = document.getElementById("pendingLineBtnText");
+    const pendingBackBtn = document.getElementById("pendingBackBtn");
+
+    function showPendingApprovalView(phone, statusText, titleText, descHtml, lineBtnText) {
+      if (authModalHeader) authModalHeader.style.display = "none";
+      if (authForm) authForm.style.display = "none";
+      if (authProfileView) authProfileView.style.display = "none";
+      if (authPendingView) {
+        authPendingView.style.display = "block";
+        if (pendingViewTitle) pendingViewTitle.textContent = titleText || "ส่งข้อมูลสำเร็จแล้ว!";
+        if (pendingViewDesc) pendingViewDesc.innerHTML = descHtml || "ระบบได้ส่งข้อมูลคำขออนุมัติไปยังแอดมินแล้ว<br>กดปุ่มสีเขียวด้านล่างเพื่อทัก LINE แจ้งเบอร์โทรขอเปิดใช้งานทันที";
+        if (pendingPhoneDisplay) pendingPhoneDisplay.textContent = phone || "-";
+        if (pendingStatusDisplay) pendingStatusDisplay.textContent = statusText || "รออนุมัติเปิดใช้งาน ⏳";
+        if (pendingLineBtn) pendingLineBtn.href = LINE_OA_URL;
+        if (pendingLineBtnText) pendingLineBtnText.textContent = lineBtnText || "💬 ทัก LINE แจ้งแอดมินขออนุมัติ (@720jlmgp)";
+      }
+      if (authModalTitle) authModalTitle.textContent = "สถานะการลงทะเบียน";
+      if (authModalDesc) authModalDesc.textContent = "ติดต่อแอดมินทาง LINE เพื่อขอเปิดใช้งาน";
+      if (authModalIcon) authModalIcon.textContent = "⏳";
+    }
+
+    if (pendingBackBtn) {
+      pendingBackBtn.addEventListener("click", () => {
+        if (authModalHeader) authModalHeader.style.display = "block";
+        if (authPendingView) authPendingView.style.display = "none";
+        if (authForm) authForm.style.display = "block";
+        setAuthMode('login');
+      });
+    }
+
+    function updateAuthUI() {
+      const savedUser = localStorage.getItem("moviestream_user");
+      if (savedUser) {
+        try {
+          const user = JSON.parse(savedUser);
+          const shortPhone = user.phone ? user.phone.substring(0, 3) + '***' : 'VIP';
+          const statusText = user.status || 'อนุมัติ';
+          if (navAuthBtn) {
+            navAuthBtn.innerHTML = `👑 <span class="nav-auth-user-text">${shortPhone} (${statusText})</span>`;
+            navAuthBtn.title = `ข้อมูลสมาชิก (${user.phone || 'VIP'})`;
+          }
+          if (headerAuthBtn) headerAuthBtn.innerHTML = `👑 VIP`;
+          if (navHeaderLogoutBtn) navHeaderLogoutBtn.style.display = "inline-flex";
+          if (navLogoutTabItem) navLogoutTabItem.style.display = "inline-block";
+        } catch (e) {}
+      } else {
+        if (navAuthBtn) {
+          navAuthBtn.innerHTML = `👑 <span class="nav-auth-user-text vip-btn-text">เข้าสู่ระบบ</span>`;
+          navAuthBtn.title = "เข้าสู่ระบบสมาชิก VIP";
+        }
+        if (headerAuthBtn) headerAuthBtn.innerHTML = `👤 สมาชิก`;
+        if (navHeaderLogoutBtn) navHeaderLogoutBtn.style.display = "none";
+        if (navLogoutTabItem) navLogoutTabItem.style.display = "none";
+      }
+
+      // โหลดประวัติ Continue Watching เฉพาะของ User ปัจจุบัน (user ใคร user มัน)
+      continueWatchingList = loadContinueWatchingData();
+      renderContinueWatchingShelf();
+    }
+    updateAuthUI();
+
+    function openAuthModal() {
+      if (authModalHeader) authModalHeader.style.display = "block";
+      if (authPendingView) authPendingView.style.display = "none";
+      const savedUser = localStorage.getItem("moviestream_user");
+      if (savedUser) {
+        const user = JSON.parse(savedUser);
+        if (authForm) authForm.style.display = "none";
+        if (authProfileView) authProfileView.style.display = "block";
+        if (profilePhone) profilePhone.textContent = `เบอร์: ${user.phone}`;
+        if (profileStatus) profileStatus.textContent = `${user.status || 'VIP Member'} 👑`;
+        if (authModalTitle) authModalTitle.textContent = "ข้อมูลสมาชิกของคุณ";
+        if (authModalDesc) authModalDesc.textContent = "บัญชีเชื่อมต่อเรียบร้อยแล้ว";
+      } else {
+        if (authForm) authForm.style.display = "block";
+        if (authProfileView) authProfileView.style.display = "none";
+        setAuthMode('login');
+      }
+      if (authModal) authModal.classList.add("active");
+      document.body.classList.add("auth-modal-is-active");
+      document.body.style.overflow = "hidden";
+      setTimeout(() => {
+        if (authPhone && !savedUser) authPhone.focus();
+      }, 200);
+    }
+
+    function closeAuthModal() {
+      if (authModal) authModal.classList.remove("active");
+      document.body.classList.remove("auth-modal-is-active");
+      document.body.style.overflow = "";
+      pendingPlayMovie = null;
+      window.pendingLiveRedirect = false;
+    }
+
+    function setAuthMode(mode) {
+      if (authModalHeader) authModalHeader.style.display = "block";
+      if (authPendingView) authPendingView.style.display = "none";
+      if (authForm) authForm.style.display = "block";
+      if (mode === true) mode = 'register';
+      if (mode === false) mode = 'login';
+      currentAuthMode = mode || 'login';
+
+      if (currentAuthMode === 'register') {
+        if (authModalIcon) authModalIcon.textContent = "✨";
+        if (authModalTitle) authModalTitle.textContent = "สมัครสมาชิกใหม่";
+        if (authModalDesc) authModalDesc.textContent = "กรอกเบอร์โทรและตั้งรหัสผ่าน";
+        if (authPasswordLabel) authPasswordLabel.textContent = "🔑 ตั้งรหัสผ่าน (PIN 4-6 หลัก)";
+        if (authPassword) {
+          authPassword.placeholder = "ตั้งรหัสผ่านสำหรับเข้าใช้งาน";
+          authPassword.value = "";
+        }
+        if (forgotPwdBtn) forgotPwdBtn.style.display = "none";
+        if (authSubmitBtn) {
+          authSubmitBtn.textContent = "ยืนยันสมัครสมาชิก 🚀";
+          authSubmitBtn.disabled = false;
+        }
+        if (authToggleText) {
+          authToggleText.style.display = "inline";
+          authToggleText.textContent = "มีบัญชีอยู่แล้ว?";
+        }
+        if (authToggleBtn) {
+          authToggleBtn.textContent = "เข้าสู่ระบบที่นี่";
+          authToggleBtn.style.marginLeft = "";
+        }
+      } else if (currentAuthMode === 'forgot') {
+        if (authModalIcon) authModalIcon.textContent = "🔐";
+        if (authModalTitle) authModalTitle.textContent = "ขอเปลี่ยนรหัสผ่านใหม่";
+        if (authModalDesc) authModalDesc.textContent = "กรอกเบอร์โทรและรหัสผ่านใหม่";
+        if (authPasswordLabel) authPasswordLabel.textContent = "🔑 ตั้งรหัสผ่านใหม่ (PIN 4-6 หลัก)";
+        if (authPassword) {
+          authPassword.placeholder = "ระบุรหัสผ่านใหม่ที่ต้องการ";
+          authPassword.value = "";
+        }
+        if (forgotPwdBtn) forgotPwdBtn.style.display = "none";
+        if (authSubmitBtn) {
+          authSubmitBtn.textContent = "ส่งคำขอเปลี่ยนรหัสผ่าน 📩";
+          authSubmitBtn.disabled = false;
+        }
+        if (authToggleText) {
+          authToggleText.style.display = "none";
+          authToggleText.textContent = "";
+        }
+        if (authToggleBtn) {
+          authToggleBtn.textContent = "กลับไปเข้าสู่ระบบ";
+          authToggleBtn.style.marginLeft = "auto";
+        }
+      } else {
+        currentAuthMode = 'login';
+        if (authModalIcon) authModalIcon.textContent = "👑";
+        if (authModalTitle) authModalTitle.textContent = "เข้าสู่ระบบสมาชิก";
+        if (authModalDesc) authModalDesc.textContent = "บันทึกรายการโปรดและประวัติการดูข้ามอุปกรณ์";
+        if (authPasswordLabel) authPasswordLabel.textContent = "🔑 รหัสผ่าน (PIN 4-6 หลัก)";
+        if (authPassword) {
+          authPassword.placeholder = "รหัสผ่านเข้าสู่ระบบ";
+          authPassword.value = "";
+        }
+        if (forgotPwdBtn) forgotPwdBtn.style.display = "inline";
+        if (authSubmitBtn) {
+          authSubmitBtn.textContent = "เข้าสู่ระบบ 🎬";
+          authSubmitBtn.disabled = false;
+        }
+        if (authToggleText) {
+          authToggleText.style.display = "none";
+          authToggleText.textContent = "";
+        }
+        if (authToggleBtn) {
+          authToggleBtn.textContent = "สมัครสมาชิก";
+          authToggleBtn.style.marginLeft = "";
+        }
+      }
+    }
+
+    if (navAuthBtn) navAuthBtn.addEventListener("click", (e) => { e.preventDefault(); openAuthModal(); });
+    if (headerAuthBtn) headerAuthBtn.addEventListener("click", (e) => { e.preventDefault(); openAuthModal(); });
+    if (authModalCloseBtn) authModalCloseBtn.addEventListener("click", closeAuthModal);
+    if (authModal) {
+      authModal.addEventListener("click", (e) => {
+        if (e.target === authModal) closeAuthModal();
+      });
+    }
+
+    if (authToggleBtn) {
+      authToggleBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (currentAuthMode === 'login') {
+          setAuthMode('register');
+        } else {
+          setAuthMode('login');
+        }
+      });
+    }
+
+    if (forgotPwdBtn) {
+      forgotPwdBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        setAuthMode('forgot');
+      });
+    }
+
+    const handleAuthSubmit = async (e) => {
+      if (e) e.preventDefault();
+      let phone = authPhone ? authPhone.value.trim().replace(/[-\s]/g, "") : "";
+      if (phone.length === 9 && !phone.startsWith("0")) {
+        phone = "0" + phone;
+      }
+      const password = authPassword ? authPassword.value.trim() : "";
+
+      if (!phone || phone.length < 9 || !/^\d+$/.test(phone)) {
+        showToast("📱 กรุณากรอกเบอร์โทรศัพท์ตัวเลขให้ถูกต้อง (9-10 หลัก)", "error");
+        if (authPhone) authPhone.focus();
+        return;
+      }
+      if (!password || password.length < 4) {
+        showToast("🔑 รหัสผ่านต้องมีอย่างน้อย 4 หลัก", "error");
+        if (authPassword) authPassword.focus();
+        return;
+      }
+
+      authSubmitBtn.disabled = true;
+
+      if (!GOOGLE_SCRIPT_URL) {
+        showToast("❌ ไม่พบการเชื่อมต่อระบบสมาชิก", "error");
+        authSubmitBtn.disabled = false;
+        return;
+      }
+
+      // สร้าง Metadata อัตโนมัติให้ตรง 8 คอลัมน์ (A-H) ของ Google Sheet
+      const now = new Date();
+      const thaiYear = (now.getFullYear() + 543).toString().slice(-2);
+      const pad = (n) => String(n).padStart(2, '0');
+      const dateFormatted = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+      const generatedUserId = `VIP${thaiYear}${pad(now.getMonth() + 1)}${pad(now.getDate())}-${Math.floor(100 + Math.random() * 900)}`;
+
+      // 1. โหมดสมัครสมาชิกใหม่ (Register) - ส่งข้อมูลไปรออนุมัติ
+      if (currentAuthMode === 'register') {
+        authSubmitBtn.textContent = "กำลังส่งข้อมูลสมัคร...";
+        try {
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 12000);
+
+          const res = await fetch(GOOGLE_SCRIPT_URL, {
+            method: "POST",
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
+            body: JSON.stringify({
+              action: "register",
+              userId: generatedUserId,
+              phone: phone,
+              password: password,
+              registeredDate: dateFormatted,
+              status: "รออนุมัติ",
+              expireDate: "-",
+              type: "register",
+              note: "สมัครสมาชิกใหม่ รออนุมัติ",
+              watchlist: JSON.stringify(watchlist),
+              history: JSON.stringify(continueWatchingList)
+            }),
+            signal: controller.signal
+          });
+          clearTimeout(timeoutId);
+
+          const text = await res.text();
+          let result = {};
+          try { result = JSON.parse(text); } catch(err) { result = { success: true }; }
+
+          if (result && result.success !== false) {
+            showToast("✅ สมัครสมาชิกสำเร็จ! ข้อมูลถูกส่งไปรออนุมัติแล้ว", "success");
+            if (authPassword) authPassword.value = "";
+            showPendingApprovalView(
+              phone,
+              "รออนุมัติเปิดใช้งาน ⏳",
+              "สมัครสมาชิกใหม่เรียบร้อยแล้ว!",
+              "ระบบได้ส่งข้อมูลคำขออนุมัติไปยังแอดมินแล้ว<br>กดปุ่มสีเขียวด้านล่างเพื่อทัก LINE แจ้งเบอร์โทรขออนุมัติได้ทันที",
+              "💬 ทัก LINE แจ้งขออนุมัติ (@720jlmgp)"
+            );
+          } else {
+            showToast((result && result.message) || "❌ ไม่สามารถสมัครสมาชิกได้ กรุณาลองใหม่อีกครั้ง", "error");
+          }
+        } catch (err) {
+          console.warn("Register fetch error:", err);
+          showToast("⚠️ ไม่สามารถเชื่อมต่อได้ในขณะนี้ กรุณาลองใหม่อีกครั้ง", "error");
+        } finally {
+          authSubmitBtn.disabled = false;
+          if (currentAuthMode === 'register') {
+            authSubmitBtn.textContent = "ยืนยันสมัครสมาชิก 🚀";
+          }
+        }
+        return;
+      }
+
+      // 2. โหมดขอเปลี่ยนรหัสผ่านใหม่ (Forgot Password) - ส่งคำขอเปลี่ยนรหัสไปรออนุมัติ
+      if (currentAuthMode === 'forgot') {
+        authSubmitBtn.textContent = "กำลังส่งคำขอเปลี่ยนรหัส...";
+        try {
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 12000);
+
+          const res = await fetch(GOOGLE_SCRIPT_URL, {
+            method: "POST",
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
+            body: JSON.stringify({
+              action: "register",
+              userId: generatedUserId,
+              phone: phone,
+              password: password,
+              registeredDate: dateFormatted,
+              status: "รออนุมัติ",
+              expireDate: "-",
+              type: "reset_password",
+              note: "ขอเปลี่ยนรหัสผ่านใหม่ รออนุมัติ",
+              watchlist: JSON.stringify(watchlist),
+              history: JSON.stringify(continueWatchingList)
+            }),
+            signal: controller.signal
+          });
+          clearTimeout(timeoutId);
+
+          const text = await res.text();
+          let result = {};
+          try { result = JSON.parse(text); } catch(err) { result = { success: true }; }
+
+          if (result && result.success !== false) {
+            showToast("📩 ส่งคำขอเปลี่ยนรหัสผ่านแล้ว! ข้อมูลถูกส่งไปรออนุมัติ", "success");
+            if (authPassword) authPassword.value = "";
+            showPendingApprovalView(
+              phone,
+              "รออนุมัติรหัสผ่านใหม่ ⏳",
+              "ส่งคำขอเปลี่ยนรหัสผ่านแล้ว!",
+              "ข้อมูลถูกส่งไปยังแอดมินเรียบร้อยแล้ว<br>กดปุ่มสีเขียวด้านล่างเพื่อทัก LINE แจ้งขออนุมัติรหัสใหม่ทันที",
+              "💬 ทัก LINE แจ้งขอรหัสใหม่ (@720jlmgp)"
+            );
+          } else {
+            showToast((result && result.message) || "❌ ไม่สามารถส่งคำขอได้ กรุณาลองใหม่อีกครั้ง", "error");
+          }
+        } catch (err) {
+          console.warn("Forgot password fetch error:", err);
+          showToast("⚠️ ไม่สามารถเชื่อมต่อได้ในขณะนี้ กรุณาลองใหม่อีกครั้ง", "error");
+        } finally {
+          authSubmitBtn.disabled = false;
+          if (currentAuthMode === 'forgot') {
+            authSubmitBtn.textContent = "ส่งคำขอเปลี่ยนรหัสผ่าน 📩";
+          }
+        }
+        return;
+      }
+
+      // 3. โหมดเข้าสู่ระบบ (Login) - ตรวจสอบกับ Google Sheet อย่างจริงจัง 100%
+      authSubmitBtn.textContent = "กำลังตรวจสอบ";
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 12000);
+
+        const res = await fetch(GOOGLE_SCRIPT_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify({
+            action: "login",
+            phone: phone,
+            password: password,
+            watchlist: JSON.stringify(watchlist),
+            history: JSON.stringify(continueWatchingList)
+          }),
+          signal: controller.signal
+        });
+        clearTimeout(timeoutId);
+
+        const text = await res.text();
+        let result;
+        try {
+          result = JSON.parse(text);
+        } catch(e) {
+          result = { success: false, message: "การตอบกลับจากเซิร์ฟเวอร์ไม่ถูกต้อง" };
+        }
+
+        if (result && result.success) {
+          // ผ่านการตรวจสอบและสถานะเป็น "อนุมัติ" ใน Google Sheet
+          localStorage.setItem("moviestream_user", JSON.stringify(result.user));
+
+          // Sync watchlist จาก Google Sheet
+          if (result.user && result.user.watchlist) {
+            try {
+              const cloudFavs = typeof result.user.watchlist === "string" ? JSON.parse(result.user.watchlist) : result.user.watchlist;
+              if (Array.isArray(cloudFavs)) {
+                watchlist = Array.from(new Set([...watchlist, ...cloudFavs]));
+                updateWatchlistUI();
+                showHomeView();
+              }
+            } catch(e) {
+              console.warn("Error parsing user cloud watchlist:", e);
+            }
+          }
+
+          // Sync history จาก Google Sheet
+          if (result.user && result.user.history) {
+            try {
+              const cloudHistory = typeof result.user.history === "string" ? JSON.parse(result.user.history) : result.user.history;
+              if (Array.isArray(cloudHistory) && cloudHistory.length > 0) {
+                const key = `moviestream_continue_watching_${result.user.phone}`;
+                const map = new Map();
+                cloudHistory.forEach(item => { if (item && item.movieId) map.set(item.movieId, item); });
+                continueWatchingList.forEach(item => {
+                  if (!map.has(item.movieId) || (item.updatedAt || 0) > (map.get(item.movieId).updatedAt || 0)) {
+                    map.set(item.movieId, item);
+                  }
+                });
+                continueWatchingList = Array.from(map.values()).sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0)).slice(0, 20);
+                localStorage.setItem(key, JSON.stringify(continueWatchingList));
+                renderContinueWatchingShelf();
+              }
+            } catch(e) {
+              console.warn("Error parsing user cloud history:", e);
+            }
+          }
+
+          showToast(result.message || "เข้าสู่ระบบสำเร็จ! 👑", "success");
+          updateAuthUI();
+          closeAuthModal();
+
+          if (pendingPlayMovie && pendingPlayMovie.movie) {
+            const target = pendingPlayMovie;
+            pendingPlayMovie = null;
+            setTimeout(() => {
+              playMovie(target.movie, target.startEpisode);
+            }, 350);
+          } else if (window.pendingLiveRedirect) {
+            window.pendingLiveRedirect = false;
+            setTimeout(() => {
+              window.location.href = "live.html";
+            }, 350);
+          }
+        } else {
+          // ล็อกอินไม่สำเร็จ: เบอร์โทร/รหัสผ่านผิด หรือสถานะยังไม่อนุมัติใน Google Sheet
+          // ห้ามเข้าสู่ระบบเด็ดขาด!
+          if (authPassword) authPassword.value = "";
+          const msg = (result && result.message) ? `${result.message} หรือยังไม่ได้รับการอนุมัติ` : "เบอร์โทรหรือรหัสผ่านไม่ถูกต้อง หรือยังไม่ได้รับการอนุมัติ";
+          showToast(`❌ ${msg}`, "error");
+          if (result && result.message && (result.message.includes("อนุมัติ") || result.message.includes("รอ"))) {
+            showPendingApprovalView(
+              phone,
+              "ยังไม่ได้รับการอนุมัติ ⏳",
+              "บัญชีนี้ยังไม่ได้รับการอนุมัติ",
+              "บัญชีของคุณอยู่ในคิวรอการตรวจสอบและอนุมัติจากแอดมิน<br>สามารถทัก LINE แจ้งแอดมินเพื่อขอเปิดใช้งานได้ทันที",
+              "💬 ทัก LINE แจ้งแอดมินขอเปิดใช้งาน (@720jlmgp)"
+            );
+          }
+        }
+      } catch (err) {
+        console.error("Auth fetch error:", err);
+        showToast("⚠️ ไม่สามารถเชื่อมต่อได้ในขณะนี้ กรุณาตรวจสอบอินเทอร์เน็ตแล้วลองใหม่", "error");
+      } finally {
+        authSubmitBtn.disabled = false;
+        if (currentAuthMode === 'login') {
+          authSubmitBtn.textContent = "เข้าสู่ระบบ 🎬";
+        }
+      }
+    };
+
+    authSubmitBtn.addEventListener("click", handleAuthSubmit);
+    if (authForm) {
+      authForm.addEventListener("submit", handleAuthSubmit);
+    }
+
+    function performLogout() {
+      localStorage.removeItem("moviestream_user");
+      showToast("ออกจากระบบเรียบร้อยแล้ว", "info");
+      updateAuthUI();
+      closeAuthModal();
+      showHomeView();
+    }
+
+    if (authLogoutBtn) {
+      authLogoutBtn.addEventListener("click", performLogout);
+    }
+    if (navHeaderLogoutBtn) {
+      navHeaderLogoutBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        performLogout();
+      });
+    }
+    if (navLogoutTab) {
+      navLogoutTab.addEventListener("click", (e) => {
+        e.preventDefault();
+        performLogout();
+      });
+    }
+
+    // Close Modals
+    if (modalCloseBtn) modalCloseBtn.addEventListener("click", closeDetailsModal);
+    if (detailsModal) {
+      detailsModal.addEventListener("click", (e) => {
+        if (e.target === detailsModal) closeDetailsModal();
+      });
+    }
+
+    // Custom Modals for TV Compatibility (Episodes & Audio)
+    const episodesModal = document.getElementById("episodesModal");
+    const audioModal = document.getElementById("audioModal");
+    const episodesGrid = document.getElementById("episodesGrid");
+    const audioGrid = document.getElementById("audioGrid");
+    
+    function closeAllPlayerModals() {
+      if (episodesModal) {
+        episodesModal.classList.remove("active");
+        episodesModal.style.display = "none";
+      }
+      if (audioModal) {
+        audioModal.classList.remove("active");
+        audioModal.style.display = "none";
+      }
+    }
+    
+    if (document.getElementById("episodesModalCloseBtn")) {
+      document.getElementById("episodesModalCloseBtn").addEventListener("click", closeAllPlayerModals);
+    }
+    if (document.getElementById("audioModalCloseBtn")) {
+      document.getElementById("audioModalCloseBtn").addEventListener("click", closeAllPlayerModals);
+    }
+    if (episodesModal) {
+      episodesModal.addEventListener("click", (e) => {
+        if (e.target === episodesModal) closeAllPlayerModals();
+      });
+    }
+    if (audioModal) {
+      audioModal.addEventListener("click", (e) => {
+        if (e.target === audioModal) closeAllPlayerModals();
+      });
+    }
+
+    if (audioSelectBtn) {
+      audioSelectBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        let langs = [];
+        if (currentActiveMovie && Array.isArray(currentActiveMovie.languages) && currentActiveMovie.languages.length > 0) {
+          langs = currentActiveMovie.languages;
+        } else {
+          langs = ["Thai (พากย์ไทย)", "Sound Track (ซับไทย)"];
+        }
+
+        const currentVal = audioSelectBtn.dataset.value || "Thai";
+
+        if (audioGrid) {
+          audioGrid.innerHTML = "";
+          langs.forEach(lang => {
+            const btn = document.createElement("button");
+            btn.className = "player-select-btn";
+            btn.style.width = "100%";
+            btn.style.margin = "0";
+            btn.style.padding = "0.75rem 1rem";
+            btn.style.fontSize = "1rem";
+            btn.style.borderRadius = "8px";
+            btn.style.cursor = "pointer";
+
+            const isSelected = currentVal && lang.toLowerCase().includes(currentVal.toLowerCase());
+            if (isSelected) {
+              btn.style.background = "#22c55e";
+              btn.style.borderColor = "#86efac";
+              btn.style.boxShadow = "0 0 12px rgba(34, 197, 94, 0.6)";
+              btn.textContent = `✓ ${lang}`;
+            } else {
+              btn.style.background = "#1e293b";
+              btn.textContent = lang;
+            }
+
+            btn.addEventListener("click", () => {
+              closeAllPlayerModals();
+              audioSelectBtn.dataset.value = lang;
+              const span = audioSelectBtn.querySelector("span") || audioSelectBtn;
+              span.textContent = lang;
+              
+              const l = lang.toLowerCase().includes("thai") ? "Thai" : "Sound Track";
+              const epVal = episodeSelectBtn ? (episodeSelectBtn.dataset.value || "1") : "1";
+              if (currentActiveMovie && currentActiveMovie.postId) {
+                loadEpisode(currentActiveMovie.postId, epVal, l, currentActiveMovie.titleEn || "");
+              } else {
+                showToast(`เลือกระบบเสียง: ${lang}`, "success");
+              }
+            });
+            audioGrid.appendChild(btn);
+          });
+        }
+
+        if (audioModal) {
+          audioModal.style.display = "flex";
+          audioModal.classList.add("active");
+          setTimeout(() => {
+            const first = audioGrid ? audioGrid.querySelector("button") : null;
+            if (first) first.focus();
+          }, 100);
+        }
+      });
+    }
+
+    if (episodeSelectBtn) {
+      episodeSelectBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        let eps = [];
+        if (currentActiveMovie && Array.isArray(currentActiveMovie.episodes) && currentActiveMovie.episodes.length > 0) {
+          eps = currentActiveMovie.episodes;
+        } else if (currentActiveMovie && currentActiveMovie.episodeUrls && typeof currentActiveMovie.episodeUrls === "object") {
+          const keys = Object.keys(currentActiveMovie.episodeUrls);
+          if (keys.length > 0) {
+            eps = keys.map(k => "ตอนที่ " + k);
+          }
+        }
+        if (eps.length === 0) {
+          eps = ["ตอนที่ 1 (เต็มเรื่อง)"];
+        }
+
+        const currentEpVal = String(episodeSelectBtn.dataset.value || (currentActiveMovie ? currentActiveMovie.currentEpisode : "1") || "1");
+
+        if (episodesGrid) {
+          episodesGrid.innerHTML = "";
+          eps.forEach((ep, idx) => {
+            const epNum = String(idx + 1);
+            const btn = document.createElement("button");
+            btn.className = "player-select-btn";
+            btn.style.margin = "0";
+            btn.style.padding = "0.75rem 0.5rem";
+            btn.style.fontSize = "0.95rem";
+            btn.style.borderRadius = "8px";
+            btn.style.cursor = "pointer";
+            btn.style.display = "flex";
+            btn.style.alignItems = "center";
+            btn.style.justifyContent = "center";
+            btn.style.textAlign = "center";
+
+            const isCurrent = (epNum === currentEpVal);
+            if (isCurrent) {
+              btn.style.background = "#22c55e";
+              btn.style.borderColor = "#86efac";
+              btn.style.boxShadow = "0 0 12px rgba(34, 197, 94, 0.6)";
+              btn.textContent = `▶ ${ep}`;
+            } else {
+              btn.style.background = "#1e293b";
+              btn.textContent = ep;
+            }
+
+            btn.addEventListener("click", () => {
+              closeAllPlayerModals();
+              episodeSelectBtn.dataset.value = epNum;
+              const span = episodeSelectBtn.querySelector("span") || episodeSelectBtn;
+              span.textContent = ep;
+              
+              const l = audioSelectBtn && (audioSelectBtn.dataset.value || "").toLowerCase().includes("thai") ? "Thai" : "Sound Track";
+              if (currentActiveMovie) {
+                loadEpisode(currentActiveMovie.postId || "", epNum, l, currentActiveMovie.titleEn || "");
+                recordContinueWatching(currentActiveMovie, parseInt(epNum) || 1);
+              }
+            });
+            episodesGrid.appendChild(btn);
+          });
+        }
+
+        if (episodesModal) {
+          episodesModal.style.display = "flex";
+          episodesModal.classList.add("active");
+          setTimeout(() => {
+            const activeBtn = episodesGrid ? (episodesGrid.querySelector("button[style*='22c55e']") || episodesGrid.querySelector("button")) : null;
+            if (activeBtn) activeBtn.focus();
+          }, 100);
+        }
+      });
+    }
+
+    // Unified Play/Pause Handler (รองรับทั้งกดปุ่มตรงกลางจอ และกดปุ่มด้านล่าง - กดได้ 2 ที่)
+    function handlePlayRequest() {
+      // 1. Direct HTML5 / HLS Video Mode
+      if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
+        if (html5VideoPlayer.paused) {
+          html5VideoPlayer.play()
+            .then(() => {
+              updatePlayPauseUI(true);
+              showToast("▶ กำลังเล่นภาพยนตร์", "success");
+            })
+            .catch((err) => {
+              console.warn("Play error:", err);
+              html5VideoPlayer.muted = false;
+              html5VideoPlayer.play()
+                .then(() => updatePlayPauseUI(true))
+                .catch(() => updatePlayPauseUI(false));
+            });
+        } else {
+          html5VideoPlayer.pause();
+          updatePlayPauseUI(false);
+          showToast("⏸ พักการเล่นภาพยนตร์", "info");
+        }
+        return;
+      }
+
+      // 2. IFrame Video Mode (Fallback / ซีรีส์ เช่น torbo007.com, wow-drama.com)
+      if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
+        if (centerPlayOverlay) centerPlayOverlay.style.display = "none";
+        iframeVideoPlayer.focus();
+        try {
+          if (iframeVideoPlayer.contentWindow) {
+            iframeVideoPlayer.contentWindow.focus();
+            const playMsgs = [
+              '{"event":"command","func":"playVideo","args":""}',
+              '{"method":"play"}',
+              JSON.stringify({ type: 'play' }),
+              'play'
+            ];
+            playMsgs.forEach(msg => {
+              try { iframeVideoPlayer.contentWindow.postMessage(msg, '*'); } catch(err) {}
+            });
+          }
+        } catch(e) {}
+        showToast("▶ กำลังเชื่อมต่อและเริ่มเล่นภาพยนตร์...", "success", 2000);
+        return;
+      }
+
+      // 3. Fallback: Initialize playback for currently selected episode
+      const epNum = episodeSelectBtn ? (episodeSelectBtn.dataset.value || "1") : "1";
+      if (currentActiveMovie) {
+        const lang = audioSelectBtn && (audioSelectBtn.dataset.value || "").toLowerCase().includes("thai") ? "Thai" : "Sound Track";
+        loadEpisode(currentActiveMovie.postId || "", epNum, lang, currentActiveMovie.titleEn || "");
+      }
+    }
+
+    // Connect Bottom Play Button (ปุ่มเล่นด้านล่าง)
+    const playVideoBtn = document.getElementById("playVideoBtn");
+    if (playVideoBtn) {
+      playVideoBtn.addEventListener("click", handlePlayRequest);
+      playVideoBtn.addEventListener("keydown", (e) => {
+        const code = e.keyCode || e.which;
+        if (e.key === "ArrowUp" || code === 38 || e.key === "Up") {
+          e.preventDefault();
+          if (bottomProgressBarContainer) {
+            bottomProgressBarContainer.focus();
+          } else if (centerPlayOverlay && centerPlayOverlay.style.display !== "none") {
+            centerPlayOverlay.focus();
+          } else if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
+            html5VideoPlayer.focus();
+          } else if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
+            iframeVideoPlayer.focus();
+          }
+        }
+      });
+    }
+
+    // Connect Center Play Button (ปุ่มเล่นตรงกลางจอ)
+    if (centerPlayOverlay) {
+      centerPlayOverlay.addEventListener("click", handlePlayRequest);
+      centerPlayOverlay.addEventListener("keydown", (e) => {
+        const code = e.keyCode || e.which;
+        if (e.key === "Enter" || code === 13 || e.key === " " || code === 32) {
+          e.preventDefault();
+          handlePlayRequest();
+        } else if (e.key === "ArrowDown" || code === 40 || e.key === "Down") {
+          e.preventDefault();
+          if (bottomProgressBarContainer) {
+            bottomProgressBarContainer.focus();
+          } else if (playVideoBtn) {
+            playVideoBtn.focus();
+          }
+        }
+      });
+    }
+
+    // Fullscreen Button (ขยายเต็มจอ รองรับทั้ง HTML5, Iframe และ Touch บนแท็บเล็ต/มือถือ)
+    const tvFullscreenBtn = document.getElementById("tvFullscreenBtn");
+    if (tvFullscreenBtn) {
+      let lastFsClick = 0;
+      const onFsButtonClick = (e) => {
+        if (e && e.cancelable) {
+          e.preventDefault();
+        }
+        const now = Date.now();
+        if (now - lastFsClick < 350) return; // Prevent double-trigger from touch+click
+        lastFsClick = now;
+        toggleFullscreen();
+      };
+      tvFullscreenBtn.addEventListener("click", onFsButtonClick);
+      tvFullscreenBtn.addEventListener("touchend", onFsButtonClick);
+    }
+
+    // BrowseHere TV / Mobile Direct Player Launch Button
+    const browseHereDirectBtn = document.getElementById("browseHereDirectBtn");
+    if (browseHereDirectBtn) {
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      if (isMobile) {
+        const span = browseHereDirectBtn.querySelector("span");
+        if (span) span.textContent = "🔗 เล่นเต็มจอ (แท็บใหม่)";
+        browseHereDirectBtn.title = "เปิดเล่นวิดีโอในแท็บใหม่เพื่อรับชมแบบเต็มจอ";
+      }
+      browseHereDirectBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const activeUrl = (iframeVideoPlayer && iframeVideoPlayer.src && iframeVideoPlayer.src !== "about:blank") ? iframeVideoPlayer.src : (currentActiveMovie ? currentActiveMovie.videoUrl : null);
+        if (activeUrl) {
+          showToast(isMobile ? "📺 กำลังเปิดเล่นในแท็บใหม่..." : "📺 กำลังส่งสตรีมไปยังตัวเล่นทีวี BrowseHere...", "success", 3000);
+          window.open(activeUrl, "_blank");
+        } else {
+          showToast("กำลังเริ่มเล่นภาพยนตร์ กรุณารอสักครู่", "info");
+        }
+      });
+    }
+
+    // Skip Intro Buttons (ข้าม Intro ทุกเรื่อง ทั้งปุ่มลอยบนจอ และปุ่มบนแถบควบคุม)
+    const skipIntroOverlayBtn = document.getElementById("skipIntroOverlayBtn");
+    if (skipIntroOverlayBtn) {
+      skipIntroOverlayBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        performSkipIntro(90);
+      });
+    }
+
+    const skipIntroDismissBtn = document.getElementById("skipIntroDismissBtn");
+    if (skipIntroDismissBtn) {
+      skipIntroDismissBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (typeof clearInterval === "function" && skipIntroCountdownTimer) {
+          clearInterval(skipIntroCountdownTimer);
+          skipIntroCountdownTimer = null;
+        }
+        const skipContainer = document.getElementById("skipIntroContainer");
+        if (skipContainer) skipContainer.style.display = "none";
+      });
+    }
+
+    const globalSkipIntroBtn = document.getElementById("globalSkipIntroBtn");
+    if (globalSkipIntroBtn) {
+      globalSkipIntroBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        performSkipIntro(90);
+      });
+    }
+
+    // Resume Playback inside Video Handlers
+    const resumeContinueBtn = document.getElementById("resumeContinueBtn");
+    if (resumeContinueBtn) {
+      resumeContinueBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (typeof clearTimeout === "function" && resumePopupTimeout) {
+          clearTimeout(resumePopupTimeout);
+          resumePopupTimeout = null;
+        }
+        const resumePopup = document.getElementById("resumePlaybackPopup");
+        if (resumePopup) resumePopup.style.display = "none";
+        
+        if (!currentActiveMovie) return;
+        const existing = (continueWatchingList || []).find(item => item.movieId === currentActiveMovie.id);
+        if (existing) {
+          if (existing.episode && existing.episode !== currentActiveMovie.currentEpisode) {
+            const l = audioSelectBtn && (audioSelectBtn.dataset.value || "").toLowerCase().includes("thai") ? "Thai" : "Sound Track";
+            loadEpisode(currentActiveMovie.postId || "", existing.episode, l, currentActiveMovie.titleEn || "");
+          }
+          if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
+            const dur = html5VideoPlayer.duration || window._activeVideoDuration || 7200;
+            const target = (existing.progressPercent / 100) * dur;
+            html5VideoPlayer.currentTime = target;
+            html5VideoPlayer.play().catch(() => {});
+            updateTimeAndProgress();
+            showToast(`▶ เล่นต่อจากเดิมที่ ${formatTime(target)}`, "success");
+          } else if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
+            const approxSec = Math.round((existing.progressPercent / 100) * 5400);
+            try {
+              if (iframeVideoPlayer.contentWindow) {
+                iframeVideoPlayer.contentWindow.postMessage({ type: 'seek', time: approxSec }, '*');
+                iframeVideoPlayer.contentWindow.postMessage({ event: 'command', func: 'seekTo', args: [approxSec, true] }, '*');
+              }
+            } catch(err) {}
+            showToast(`▶ รับชมต่อจากจุดเดิม (${existing.progressPercent}%)`, "success");
+          }
+        }
+      });
+    }
+
+    const resumeRestartBtn = document.getElementById("resumeRestartBtn");
+    if (resumeRestartBtn) {
+      resumeRestartBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (typeof clearTimeout === "function" && resumePopupTimeout) {
+          clearTimeout(resumePopupTimeout);
+          resumePopupTimeout = null;
+        }
+        const resumePopup = document.getElementById("resumePlaybackPopup");
+        if (resumePopup) resumePopup.style.display = "none";
+
+        if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
+          html5VideoPlayer.currentTime = 0;
+          html5VideoPlayer.play().catch(() => {});
+          updateTimeAndProgress();
+        } else if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
+          try {
+            if (iframeVideoPlayer.contentWindow) {
+              iframeVideoPlayer.contentWindow.postMessage({ type: 'seek', time: 0 }, '*');
+              iframeVideoPlayer.contentWindow.postMessage({ event: 'command', func: 'seekTo', args: [0, true] }, '*');
+            }
+          } catch(err) {}
+        }
+        showToast("🔄 เริ่มเล่นใหม่ตั้งแต่ต้น", "info");
+      });
+    }
+
+    const resumeCloseBtn = document.getElementById("resumeCloseBtn");
+    if (resumeCloseBtn) {
+      resumeCloseBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (typeof clearTimeout === "function" && resumePopupTimeout) {
+          clearTimeout(resumePopupTimeout);
+          resumePopupTimeout = null;
+        }
+        const resumePopup = document.getElementById("resumePlaybackPopup");
+        if (resumePopup) resumePopup.style.display = "none";
+      });
+    }
+
+    // Keyboard Shortcut 'S' for Skip Intro when player is active
+    document.addEventListener("keydown", (e) => {
+      if (document.activeElement && (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA')) return;
+      if (playerModal && playerModal.classList.contains("active")) {
+        if (e.key === "s" || e.key === "S" || e.key === "i" || e.key === "I") {
+          e.preventDefault();
+          performSkipIntro(90);
+        }
+      }
+    });
+
+    // D-Pad Navigation Helper for Player Modal (ArrowUp ไปที่แถบเวลา / ArrowDown ลงมาที่เมนูปุ่ม)
+    const playerBottomBar = document.querySelector(".player-bottom-bar");
+    if (playerBottomBar) {
+      playerBottomBar.addEventListener("keydown", (e) => {
+        if (document.activeElement && document.activeElement.tagName === 'SELECT') return;
+        
+        const code = e.keyCode || e.which;
+        if (e.key === "ArrowUp" || code === 38 || e.key === "Up") {
+          e.preventDefault();
+          if (bottomProgressBarContainer) {
+            bottomProgressBarContainer.focus();
+          } else if (centerPlayOverlay && centerPlayOverlay.style.display !== "none") {
+            centerPlayOverlay.focus();
+          } else if (iframeVideoPlayer && iframeVideoPlayer.style.display !== "none") {
+            iframeVideoPlayer.focus();
+          } else if (html5VideoPlayer && html5VideoPlayer.style.display !== "none") {
+            html5VideoPlayer.focus();
+          }
+        }
+      });
+    }
+
+    if (iframeVideoPlayer) {
+      iframeVideoPlayer.addEventListener("keydown", (e) => {
+        const code = e.keyCode || e.which;
+        if (e.key === "ArrowDown" || code === 40 || e.key === "Down") {
+          e.preventDefault();
+          if (bottomProgressBarContainer) {
+            bottomProgressBarContainer.focus();
+          } else if (playVideoBtn) {
+            playVideoBtn.focus();
+          }
+        }
+      });
+    }
+
+    if (clearContinueWatchingBtn) {
+      clearContinueWatchingBtn.addEventListener("click", clearAllContinueWatching);
+    }
+
+    if (playerCloseBtn) playerCloseBtn.addEventListener("click", closePlayer);
+    if (playerModal) {
+      playerModal.addEventListener("click", (e) => {
+        if (e.target === playerModal) closePlayer();
+      });
+    }
+
+    // Key Escape & TV Remote Back Key (keyCode 4, 27, GoBack, Back) to close active modals
+    document.addEventListener("keydown", (e) => {
+      const code = e.keyCode || e.which;
+      if (e.key === "Escape" || code === 27 || code === 4 || e.key === "GoBack" || e.key === "Back" || code === 10009) {
+        if (document.activeElement && document.activeElement.tagName === 'SELECT') {
+          document.activeElement.blur();
+          e.preventDefault();
+          return;
+        }
+        
+        if ((episodesModal && (episodesModal.classList.contains("active") || episodesModal.style.display === "flex")) || (audioModal && (audioModal.classList.contains("active") || audioModal.style.display === "flex"))) {
+          e.preventDefault();
+          closeAllPlayerModals();
+        } else if (playerModal && playerModal.classList.contains("active")) {
+          e.preventDefault();
+          closePlayer();
+        } else if (detailsModal && detailsModal.classList.contains("active")) {
+          e.preventDefault();
+          closeDetailsModal();
+        } else if (authModal && authModal.classList.contains("active")) {
+          e.preventDefault();
+          closeAuthModal();
+        }
+      }
+    });
+
+    // ---------------------------------------------------------
+    // Genre Tags Horizontal Scroll & Drag Navigation System
+    // ---------------------------------------------------------
+    const genreTagsWrapper = document.querySelector(".genre-tags-wrapper");
+    const genreScrollPrev = document.getElementById("genreScrollPrev");
+    const genreScrollNext = document.getElementById("genreScrollNext");
+
+    let isDraggingGenre = false;
+    let genreStartX = 0;
+    let genreScrollLeft = 0;
+    let hasDraggedGenre = false;
+
+    function updateGenreScrollNav() {
+      if (!genreFilterContainer) return;
+      const { scrollLeft, scrollWidth, clientWidth } = genreFilterContainer;
+      const maxScroll = scrollWidth - clientWidth;
+      
+      const canScrollLeft = scrollLeft > 8;
+      const canScrollRight = scrollLeft < maxScroll - 8;
+
+      if (genreScrollPrev) {
+        genreScrollPrev.classList.toggle("visible", canScrollLeft);
+      }
+      if (genreScrollNext) {
+        genreScrollNext.classList.toggle("visible", canScrollRight);
+      }
+      if (genreTagsWrapper) {
+        genreTagsWrapper.classList.toggle("can-scroll-left", canScrollLeft);
+        genreTagsWrapper.classList.toggle("can-scroll-right", canScrollRight);
+      }
+    }
+
+    // Genre Filters Buttons (Support Click, Drag, and Touch)
+    function handleGenreClick(e) {
+      if (hasDraggedGenre) return;
+      const btn = e.target.closest(".genre-tag");
+      if (!btn) return;
+      
+      // Update active tag class
+      document.querySelectorAll(".genre-tag").forEach(tag => tag.classList.remove("active"));
+      btn.classList.add("active");
+      
+      // Smoothly center the active tag in view
+      try {
+        btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      } catch(err) {}
+      setTimeout(updateGenreScrollNav, 320);
+
+      const genre = btn.getAttribute("data-genre");
+      if (genre === "today") {
+        // เมื่อกด "⚡ อัปเดตล่าสุด" ให้แสดงหน้าแรกพร้อม Hero Spotlight Banner เหมือนหน้าแรก
+        showHomeView();
+      } else if (genre === "all") {
+        document.querySelectorAll(".genre-tag").forEach(tag => {
+          if (tag.getAttribute("data-genre") === "all") tag.classList.add("active");
+          else tag.classList.remove("active");
+        });
+        if (heroSection) heroSection.style.display = "none";
+        showGridView("🎬 รวมภาพยนตร์และซีรีส์ทั้งหมด", movieList);
+      } else if (genre === "popular") {
+        const popMovies = movieList.filter(m => (m.genres && (m.genres.includes("ยอดนิยม") || m.genres.includes("ยอดนิยม 2026"))) || (m.rating && m.rating >= 7.8));
+        popMovies.sort((a, b) => {
+          const aTop = (a.genres && (a.genres.includes("ยอดนิยม 2026") || a.genres.includes("ยอดนิยม"))) ? 1 : 0;
+          const bTop = (b.genres && (b.genres.includes("ยอดนิยม 2026") || b.genres.includes("ยอดนิยม"))) ? 1 : 0;
+          if (bTop !== aTop) return bTop - aTop;
+          return (b.rating || 0) - (a.rating || 0);
+        });
+        showGridView(`⭐ รวมภาพยนตร์ยอดนิยมทั้งหมด (${popMovies.length} เรื่อง)`, popMovies);
+      } else if (genre === "popular-2026") {
+        const popMovies = movieList.filter(m => (m.genres && m.genres.includes("ยอดนิยม 2026")) || (m.rating && m.rating >= 7.0 && (m.year === 2026 || String(m.year) === "2026")));
+        popMovies.sort((a, b) => {
+          const aTop = (a.genres && a.genres.includes("ยอดนิยม 2026")) ? 1 : 0;
+          const bTop = (b.genres && b.genres.includes("ยอดนิยม 2026")) ? 1 : 0;
+          if (bTop !== aTop) return bTop - aTop;
+          return (b.rating || 0) - (a.rating || 0);
+        });
+        showGridView(`⭐ รวมภาพยนตร์ยอดนิยม 2026 (TOP & HOT) (${popMovies.length} เรื่อง)`, popMovies);
+      } else if (genre === "continue-watching") {
+        displayContinueWatchingGridView();
+      } else if (genre === "recommended-series") {
+        const recMovies = movieList.filter(m => (m.genres && (m.genres.includes("ซีรีส์แนะนำใหม่ 2026") || m.genres.includes("ซีรีส์ใหม่ 2026") || m.genres.includes("ซีรีส์แนะนำ"))) || m.source === "GOSERIES4K" || m.source === "SERIEDAYS");
+        showGridView(`🔥 ซีรีส์แนะนำใหม่ 2026 (${recMovies.length} เรื่อง)`, recMovies);
+      } else if (genre === "year-2026") {
+        const y2026Movies = movieList.filter(m => String(m.year) === "2026" || m.titleTh.includes("2026"));
+        showGridView(`📅 รวมภาพยนตร์ & ซีรีส์ใหม่ปี 2026 (${y2026Movies.length} เรื่อง)`, y2026Movies);
+      } else if (genre === "year-2025") {
+        const y2025Movies = movieList.filter(m => String(m.year) === "2025" || m.titleTh.includes("2025"));
+        showGridView(`📅 รวมภาพยนตร์ & ซีรีส์ปี 2025 (${y2025Movies.length} เรื่อง)`, y2025Movies);
+      } else if (genre === "year-2024") {
+        const y2024Movies = movieList.filter(m => String(m.year) === "2024" || m.titleTh.includes("2024"));
+        showGridView(`📅 รวมภาพยนตร์ & ซีรีส์ปี 2024 (${y2024Movies.length} เรื่อง)`, y2024Movies);
+      } else if (genre === "action") {
+        const actionMovies = movieList.filter(m => m.genres && m.genres.some(g => g.includes("แอคชั่น") || g.toLowerCase().includes("action")));
+        showGridView(`💥 รวมภาพยนตร์ & ซีรีส์แอคชั่น (${actionMovies.length} เรื่อง)`, actionMovies);
+      } else if (genre === "scifi") {
+        const scifiMovies = movieList.filter(m => m.genres && m.genres.some(g => g.includes("แฟนตาซี") || g.includes("Sci-Fi") || g.includes("ไซไฟ")));
+        showGridView(`🚀 รวมภาพยนตร์ไซไฟ & แฟนตาซี (${scifiMovies.length} เรื่อง)`, scifiMovies);
+      } else if (genre === "drama" || genre === "ละครไทย") {
+        const dramaMovies = movieList.filter(m => (m.genres && (m.genres.includes("ละครไทย") || m.genres.includes("ละครไทย ย้อนหลัง"))) || (m.titleTh && (m.titleTh.includes("ละคร") || m.titleTh.includes("EP"))));
+        showGridView(`🎭 รวมดูละครไทย ย้อนหลัง (${dramaMovies.length} เรื่อง)`, dramaMovies);
+      } else if (genre === "series-thai" || genre === "ดูซีรี่ย์พากย์ไทย" || genre === "korean-series" || genre === "chinese-series") {
+        const seriesMovies = movieList.filter(m => {
+          const isSeries = (m.episodes && m.episodes.length > 1) || 
+                           (m.duration && m.duration.includes("ตอน")) || 
+                           (m.genres && m.genres.some(g => g.includes("ซีรีส์") || g.includes("ซีรี่ย์") || g.includes("ละคร"))) ||
+                           (m.titleTh && (m.titleTh.includes("ซีรีส์") || m.titleTh.includes("ซีรี่ย์") || m.titleTh.includes("EP") || m.titleTh.includes("ตอน")));
+          const isThaiDub = (m.genres && m.genres.some(g => g.includes("พากย์ไทย"))) || 
+                            (m.languages && m.languages.some(l => l.includes("Thai") || l.includes("พากย์ไทย"))) ||
+                            (m.titleTh && m.titleTh.includes("พากย์ไทย"));
+          const isNotSubOnly = !(m.titleTh && m.titleTh.includes("ซับไทย") && !m.titleTh.includes("พากย์ไทย"));
+          return (isSeries || m.source === "GOSERIES4K" || m.source === "WOW-DRAMA") && (isThaiDub || isNotSubOnly);
+        });
+        showGridView(`🎬 รวมดูซีรี่ย์พากย์ไทย (${seriesMovies.length} เรื่อง)`, seriesMovies);
+      } else if (genre === "japanese-series") {
+        const jpMovies = movieList.filter(m => (m.genres && m.genres.some(g => g.includes("ญี่ปุ่น"))) || (m.titleTh && m.titleTh.includes("ญี่ปุ่น")));
+        showGridView(`🌸 รวมซีรีส์ญี่ปุ่น ยอดนิยม (${jpMovies.length} เรื่อง)`, jpMovies);
+      } else if (genre === "dramax") {
+        const dMovies = movieList.filter(m => m.genres && m.genres.some(g => g.includes("ดราม่า") || g.toLowerCase().includes("drama")));
+        showGridView(`💖 รวมภาพยนตร์ & ซีรีส์ดราม่า (${dMovies.length} เรื่อง)`, dMovies);
+      } else if (genre === "subthai") {
+        const subMovies = movieList.filter(m => (m.genres && m.genres.some(g => g.includes("ซับไทย"))) || (m.languages && m.languages.some(l => l.includes("ซับ"))) || (m.titleTh && m.titleTh.includes("ซับไทย")));
+        showGridView(`💬 รวมภาพยนตร์ & ซีรีส์ซับไทย (${subMovies.length} เรื่อง)`, subMovies);
+      } else if (genre === "พากย์ไทย") {
+        const thaiMovies = movieList.filter(m => (m.genres && m.genres.includes("พากย์ไทย")) || (m.languages && m.languages.some(l => l.includes("Thai"))));
+        showGridView(`🔊 รวมภาพยนตร์ & ซีรีส์พากย์ไทย (${thaiMovies.length} เรื่อง)`, thaiMovies);
+      } else {
+        const filtered = movieList.filter(m => m.genres && (m.genres.includes(genre) || m.genres.some(g => g.includes(genre))));
+        showGridView(`หมวดหมู่ภาพยนตร์: ${genre}`, filtered);
+      }
+    }
+
+    if (genreFilterContainer) {
+      // 1. Mouse wheel horizontal scroll (เลื่อนล้อเมาส์ขึ้นลงจะเลื่อนแถบซ้ายขวาอย่างนุ่มนวล)
+      genreFilterContainer.addEventListener("wheel", (e) => {
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+          e.preventDefault();
+          genreFilterContainer.scrollLeft += e.deltaY * 0.95;
+          updateGenreScrollNav();
+        }
+      }, { passive: false });
+
+      // 2. Click & Drag to scroll (ลากด้วยเมาส์เพื่อเลื่อนแถบ)
+      genreFilterContainer.addEventListener("mousedown", (e) => {
+        if (e.button !== 0) return;
+        isDraggingGenre = true;
+        hasDraggedGenre = false;
+        genreFilterContainer.classList.add("is-dragging");
+        genreStartX = e.pageX - genreFilterContainer.offsetLeft;
+        genreScrollLeft = genreFilterContainer.scrollLeft;
+      });
+
+      window.addEventListener("mouseup", () => {
+        if (isDraggingGenre) {
+          isDraggingGenre = false;
+          genreFilterContainer.classList.remove("is-dragging");
+          setTimeout(() => {
+            hasDraggedGenre = false;
+          }, 120);
+        }
+      });
+
+      genreFilterContainer.addEventListener("mousemove", (e) => {
+        if (!isDraggingGenre) return;
+        e.preventDefault();
+        const x = e.pageX - genreFilterContainer.offsetLeft;
+        const walk = (x - genreStartX) * 1.5;
+        if (Math.abs(walk) > 5) {
+          hasDraggedGenre = true;
+        }
+        genreFilterContainer.scrollLeft = genreScrollLeft - walk;
+        updateGenreScrollNav();
+      });
+
+      // 3. Scroll event & window resize to update arrow visibility
+      genreFilterContainer.addEventListener("scroll", updateGenreScrollNav, { passive: true });
+      window.addEventListener("resize", updateGenreScrollNav);
+      setTimeout(updateGenreScrollNav, 350);
+
+      // 4. Click event for tags
+      genreFilterContainer.addEventListener("click", handleGenreClick);
+    }
+
+    // 5. Left/Right Navigation Arrow Buttons
+    if (genreScrollPrev) {
+      genreScrollPrev.addEventListener("click", () => {
+        genreFilterContainer.scrollBy({ left: -280, behavior: "smooth" });
+        setTimeout(updateGenreScrollNav, 300);
+      });
+    }
+
+    if (genreScrollNext) {
+      genreScrollNext.addEventListener("click", () => {
+        genreFilterContainer.scrollBy({ left: 280, behavior: "smooth" });
+        setTimeout(updateGenreScrollNav, 300);
+      });
+    }
+
+    // Live Search input filter
+    if (searchInput) {
+      searchInput.addEventListener("input", () => {
+        const query = searchInput.value.trim().toLowerCase();
+        if (query === "") {
+          showHomeView();
+        } else {
+          const results = movieList.filter(
+            m => (m.titleTh && m.titleTh.toLowerCase().includes(query)) || 
+                 (m.titleEn && m.titleEn.toLowerCase().includes(query)) ||
+                 (m.genres && m.genres.some(g => g.toLowerCase().includes(query)))
+          );
+          showGridView(`ผลการค้นหาสำหรับ: "${query}"`, results);
+        }
+      });
+    }
+
+    // Footer Genre Links
+    document.querySelectorAll(".footer-filter-link").forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const genre = link.getAttribute("data-genre");
+        
+        // Update Filter tags state
+        document.querySelectorAll(".genre-tag").forEach(tag => {
+          if (tag.getAttribute("data-genre") === genre) {
+            tag.classList.add("active");
+          } else {
+            tag.classList.remove("active");
+          }
+        });
+
+        const filtered = movieList.filter(m => m.genres && m.genres.includes(genre));
+        showGridView(`หมวดหมู่ภาพยนตร์: ${genre}`, filtered);
+      });
+    });
+
+    // Privacy & DMCA & Contact Modals/Alerts
+    const privacyBtn = document.getElementById("privacyPolicyBtn");
+    if (privacyBtn) {
+      privacyBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        showToast("นโยบายความเป็นส่วนตัว: เว็บไซต์ไม่มีการเก็บข้อมูลส่วนบุคคลของผู้ใช้", "info");
+      });
+    }
+    const dmcaBtn = document.getElementById("dmcaBtn");
+    if (dmcaBtn) {
+      dmcaBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        showToast("DMCA: เว็บไซต์นี้เป็นเพียงสื่อกลางในการรวบรวมลิงก์จากอินเทอร์เน็ต", "info");
+      });
+    }
+    const contactBtn = document.getElementById("contactBtn");
+    if (contactBtn) {
+      contactBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        showToast("ติดต่อผู้ดูแลระบบ: ผ่านช่องทางระบบ Cloudflare Stream", "info");
+      });
+    }
+
+    // ==========================================================
+    // PWA & Install App Controller (ระบบติดตั้งแอปพลิเคชัน)
+    // ==========================================================
+    let deferredInstallPrompt = null;
+    const installAppModal = document.getElementById("installAppModal");
+    const installAppHeaderBtn = document.getElementById("installAppHeaderBtn");
+    const installModalCloseBtn = document.getElementById("installModalCloseBtn");
+    const pwaModalInstallBtn = document.getElementById("pwaModalInstallBtn");
+    const iosInstallGuide = document.getElementById("iosInstallGuide");
+    const floatingInstallBanner = document.getElementById("floatingInstallBanner");
+    const floatingInstallBtn = document.getElementById("floatingInstallBtn");
+    const floatingDismissBtn = document.getElementById("floatingDismissBtn");
+
+    const isIOSDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    const isStandaloneMode = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+
+    // 1. Register Service Worker for PWA
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => {
+            console.log('MovieStream PWA ServiceWorker registered with scope:', reg.scope);
+          })
+          .catch(err => {
+            console.log('PWA ServiceWorker registration skipped/failed:', err);
+          });
+      });
+    }
+
+    // 2. Capture PWA beforeinstallprompt event
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredInstallPrompt = e;
+
+      // Show floating install banner for mobile users if not dismissed
+      const dismissed = sessionStorage.getItem("moviestream_install_dismissed");
+      if (!isStandaloneMode && !dismissed && floatingInstallBanner && window.innerWidth <= 768) {
+        floatingInstallBanner.style.display = "flex";
+      }
+    });
+
+    window.addEventListener('appinstalled', () => {
+      deferredInstallPrompt = null;
+      if (floatingInstallBanner) floatingInstallBanner.style.display = "none";
+      closeInstallModal();
+      showToast("🎉 ติดตั้งแอปพลิเคชัน MovieStream สำเร็จแล้ว!", "success");
+    });
+
+    function openInstallModal() {
+      if (installAppModal) {
+        installAppModal.style.display = "flex";
+        requestAnimationFrame(() => installAppModal.classList.add("active"));
+        installAppModal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+
+        // If iOS device, show the iOS guide by default
+        if (isIOSDevice && iosInstallGuide) {
+          iosInstallGuide.style.display = "block";
+          if (pwaModalInstallBtn) {
+            pwaModalInstallBtn.innerHTML = `<span>📱 ทำตามขั้นตอนด้านล่างบน Safari</span>`;
+          }
+        }
+      }
+    }
+
+    function closeInstallModal() {
+      if (installAppModal) {
+        installAppModal.classList.remove("active");
+        installAppModal.setAttribute("aria-hidden", "true");
+        setTimeout(() => {
+          if (!installAppModal.classList.contains("active")) {
+            installAppModal.style.display = "none";
+          }
+        }, 250);
+        document.body.style.overflow = "";
+      }
+    }
+
+    function triggerPwaInstall() {
+      if (isStandaloneMode) {
+        showToast("แอปพลิเคชัน MovieStream ติดตั้งบนเครื่องของคุณอยู่แล้ว", "info");
+        return;
+      }
+
+      if (deferredInstallPrompt) {
+        deferredInstallPrompt.prompt();
+        deferredInstallPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            showToast("กำลังติดตั้งแอปพลิเคชัน...", "success");
+            if (floatingInstallBanner) floatingInstallBanner.style.display = "none";
+          }
+          deferredInstallPrompt = null;
+          closeInstallModal();
+        });
+      } else if (isIOSDevice) {
+        if (iosInstallGuide) {
+          iosInstallGuide.style.display = "block";
+          iosInstallGuide.scrollIntoView({ behavior: 'smooth' });
+        }
+        showToast("แตะปุ่มแชร์ [↑] ใน Safari แล้วเลือก 'เพิ่มไปยังหน้าจอโฮม'", "info", 5000);
+      } else {
+        // Desktop or other browser
+        showToast("คลิกไอคอนติดตั้งแอปที่แถบ URL ของเบราว์เซอร์ หรือเพิ่มลงหน้าจอหลัก", "info", 4000);
+      }
+    }
+
+    if (installAppHeaderBtn) {
+      installAppHeaderBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        openInstallModal();
+      });
+    }
+
+    if (installModalCloseBtn) {
+      installModalCloseBtn.addEventListener("click", closeInstallModal);
+    }
+
+    if (installAppModal) {
+      installAppModal.addEventListener("click", (e) => {
+        if (e.target === installAppModal) closeInstallModal();
+      });
+    }
+
+    if (pwaModalInstallBtn) {
+      pwaModalInstallBtn.addEventListener("click", triggerPwaInstall);
+    }
+
+    if (floatingInstallBtn) {
+      floatingInstallBtn.addEventListener("click", () => {
+        if (deferredInstallPrompt) {
+          triggerPwaInstall();
+        } else {
+          openInstallModal();
+        }
+      });
+    }
+
+    if (floatingDismissBtn) {
+      floatingDismissBtn.addEventListener("click", () => {
+        if (floatingInstallBanner) floatingInstallBanner.style.display = "none";
+        sessionStorage.setItem("moviestream_install_dismissed", "true");
+      });
+    }
+
+    // Auto-show floating banner on mobile after 3.5 seconds if not standalone
+    if (!isStandaloneMode && window.innerWidth <= 768 && !sessionStorage.getItem("moviestream_install_dismissed")) {
+      setTimeout(() => {
+        if (floatingInstallBanner && !isStandaloneMode) {
+          floatingInstallBanner.style.display = "flex";
+        }
+      }, 3500);
+    }
+
+    // Direct Link & TV Instant Playback (#play-<movieId>)
+    function checkUrlHashForPlayback() {
+      const hash = window.location.hash;
+      if (hash && hash.startsWith("#play-")) {
+        const movieId = hash.replace("#play-", "");
+        const found = movieList.find(m => String(m.id) === String(movieId));
+        if (found) {
+          setTimeout(() => playMovie(found), 250);
+        }
+      }
+    }
+
+    checkUrlHashForPlayback();
+    window.addEventListener("hashchange", checkUrlHashForPlayback);
+
+    // --- Initial Launch & Render ---
+    try {
+      initVisitorCounter();
+      updateAuthUI();
+      initHeroSpotlight();
+      showHomeView();
+      updateWatchlistUI();
+      renderContinueWatchingShelf();
+    } catch (err) {
+      console.error("Initialization error:", err);
+    }
+  }
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initMovieStreamApp);
+} else {
+  initMovieStreamApp();
+}
+

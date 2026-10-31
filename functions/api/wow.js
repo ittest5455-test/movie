@@ -25,11 +25,30 @@ export async function onRequest(context) {
 
   const userAgent = context.request.headers.get("User-Agent") || "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15";
   
-  // Support both WOW-DRAMA (getplay-cdn) and GOSERIES4K (torbo007)
+  // Support MYSERIESHD (ok-hd), WOW-DRAMA (getplay-cdn) and GOSERIES4K (torbo007)
   const src = (url.searchParams.get("src") || "").toLowerCase();
+  const isOKHD = src === "ok-hd" || src === "okhd" || src === "myserieshd" || (targetUrl && targetUrl.includes("ok-hd.com"));
   const isGOSeries = src === "torbo007" || src === "goseries" || src === "goseries4k" || (targetUrl && targetUrl.includes("torbo007"));
-  const API_BASE = isGOSeries ? "https://torbo007.com" : "https://getplay-cdn.com";
-  const parentHost = isGOSeries ? "goseries4k.com" : "wow-drama.com";
+  
+  let API_BASE = "https://getplay-cdn.com";
+  let parentHost = "wow-drama.com";
+  let embedUrl = `https://getplay-cdn.com/embed/${id}`;
+  let streamDomain = "https://getplay-cdn.com";
+  let m3u8Path = "index.m3u8";
+
+  if (isOKHD) {
+    API_BASE = "https://ok-hd.com";
+    parentHost = "myserieshd.com";
+    embedUrl = `https://ok-hd.com/play/${id}`;
+    streamDomain = "https://test1.ok-720.com";
+    m3u8Path = "playerlist.m3u8";
+  } else if (isGOSeries) {
+    API_BASE = "https://torbo007.com";
+    parentHost = "goseries4k.com";
+    embedUrl = `https://torbo007.com/embed/${id}`;
+    streamDomain = "https://torbo007.com";
+    m3u8Path = "index.m3u8";
+  }
 
   try {
     // 1. Request Playback Token from target CDN
@@ -39,7 +58,8 @@ export async function onRequest(context) {
         "User-Agent": userAgent,
         "Content-Type": "application/json",
         "X-Requested-With": "XMLHttpRequest",
-        "Referer": `${API_BASE}/embed/${id}`
+        "Referer": embedUrl,
+        "Origin": API_BASE
       },
       body: JSON.stringify({ md5: id, parent: parentHost })
     });
@@ -57,12 +77,13 @@ export async function onRequest(context) {
     }
 
     // 2. Fetch Master m3u8 playlist
-    const masterM3u8Url = `${API_BASE}/api/stream/${tokenData.stream_id}/index.m3u8?token=${encodeURIComponent(tokenData.token)}&expires=${tokenData.expires}&parent=${encodeURIComponent(parentHost)}&sid=${tokenData.session_id}`;
+    const masterM3u8Url = `${streamDomain}/api/stream/${tokenData.stream_id}/${m3u8Path}?token=${encodeURIComponent(tokenData.token)}&expires=${tokenData.expires}&parent=${encodeURIComponent(parentHost)}&sid=${tokenData.session_id}`;
     
     const masterRes = await fetch(masterM3u8Url, {
       headers: {
         "User-Agent": userAgent,
-        "Referer": `${API_BASE}/embed/${id}`
+        "Referer": embedUrl,
+        "Origin": API_BASE
       }
     });
 
@@ -102,7 +123,8 @@ export async function onRequest(context) {
         const variantRes = await fetch(chosenUrl, {
           headers: {
             "User-Agent": userAgent,
-            "Referer": `${API_BASE}/embed/${id}`
+            "Referer": embedUrl,
+            "Origin": API_BASE
           }
         });
 
