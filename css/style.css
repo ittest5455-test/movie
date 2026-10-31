@@ -987,7 +987,7 @@ input:focus {
 
 .movie-poster-wrapper img {
   width: 100%;
-  height: 107.5%;
+  height: 122%;
   object-fit: cover;
   object-position: top center;
   transform-origin: top center;
@@ -1000,15 +1000,15 @@ input:focus {
   transform-origin: top center;
 }
 
-/* ลบและบดบังโลโก้/ลายน้ำของเว็บอื่นที่ติดมากับรูปโปสเตอร์ด้านล่าง (เช่น WOW-DRAMA, DramaBox) */
+/* ลบและบดบังโลโก้/ลายน้ำของเว็บอื่นที่ติดมากับรูปโปสเตอร์ด้านล่าง (เช่น GOSERIES4K, WOW-DRAMA, DramaBox, 24-HD) */
 .movie-poster-wrapper::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 40px;
-  background: linear-gradient(to top, rgba(9, 12, 26, 0.98) 0%, rgba(9, 12, 26, 0.7) 50%, transparent 100%);
+  height: 75px;
+  background: linear-gradient(to top, #0f172a 0%, #0f172a 35%, rgba(15, 23, 42, 0.85) 65%, transparent 100%);
   pointer-events: none;
   z-index: 2;
 }
@@ -1441,7 +1441,7 @@ footer {
 .modal-poster-wrapper img,
 .modal-poster {
   width: 100%;
-  height: 107.5%;
+  height: 122%;
   object-fit: cover;
   object-position: top center;
   transform-origin: top center;
@@ -1454,8 +1454,8 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 42px;
-  background: linear-gradient(to top, rgba(9, 12, 26, 0.98) 0%, rgba(9, 12, 26, 0.7) 50%, transparent 100%);
+  height: 75px;
+  background: linear-gradient(to top, #0f172a 0%, #0f172a 35%, rgba(15, 23, 42, 0.85) 65%, transparent 100%);
   pointer-events: none;
   z-index: 3;
 }
