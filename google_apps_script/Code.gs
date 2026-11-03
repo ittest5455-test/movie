@@ -186,7 +186,14 @@ function doPost(e) {
 
           if (ADMIN_LINE_USER_IDS.indexOf(senderId) !== -1) {
             var lowerText = userText.toLowerCase();
-            if (userText === "อัพหนังใหม่" || userText === "อัปเดตหนัง" || lowerText === "update" || lowerText === "#update") {
+            var isUpdateCmd = false;
+            if (lowerText.indexOf("update") !== -1) isUpdateCmd = true;
+            if ((userText.indexOf("อัพ") !== -1 || userText.indexOf("อัป") !== -1) && 
+                (userText.indexOf("หนัง") !== -1 || userText.indexOf("เดต") !== -1 || userText.indexOf("เดจ") !== -1 || userText.indexOf("เดท") !== -1)) {
+              isUpdateCmd = true;
+            }
+
+            if (isUpdateCmd) {
               PropertiesService.getScriptProperties().setProperty("PENDING_UPDATE_TRIGGER", "true");
               PropertiesService.getScriptProperties().setProperty("PENDING_UPDATE_TIME", new Date().toISOString());
 
