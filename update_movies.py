@@ -16,6 +16,7 @@ import datetime
 import subprocess
 import concurrent.futures
 import base64
+from collections import defaultdict
 
 # Set output encoding to UTF-8
 if hasattr(sys.stdout, 'reconfigure'):
