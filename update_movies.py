@@ -18,9 +18,9 @@ import concurrent.futures
 import base64
 
 # Set output encoding to UTF-8
-if sys.stdout.encoding != 'utf-8':
+if hasattr(sys.stdout, 'reconfigure'):
     try:
-        sys.stdout.reconfigure(encoding='utf-8')
+        sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
     except:
         pass
 
@@ -410,7 +410,7 @@ def update_24hda_topmovies():
     
     top_items = []
     for t in ['day', 'week']:
-        url = f'https://stat.24-hdx.com/topmovie?type={t}&web_id=1&max=10'
+        url = f'https://api.24-hda.com/topmovie?type={t}&web_id=1&max=10'
         req = urllib.request.Request(url, headers=headers)
         try:
             with urllib.request.urlopen(req, timeout=8) as r:
@@ -778,7 +778,7 @@ def update_wow_drama(max_pages=2):
                         
                     og_img = re.search(r'<meta property="og:image" content="([^"]+)"', m_html)
                     poster = og_img.group(1) if og_img else ""
-                    safe_poster = clean_and_save_gs_poster(poster, post_id)
+                    safe_poster = safe_url(poster)
                     
                     og_desc = re.search(r'<meta property="og:description" content="([^"]+)"', m_html)
                     desc = og_desc.group(1) if og_desc else f"ดู {title} พากย์ไทย ละครไทยย้อนหลัง เต็มเรื่อง HD"
@@ -841,9 +841,9 @@ def update_wow_drama(max_pages=2):
                             break
                     
                     if dub_target:
-                        group_m = re.search(r'<div[^>]+id=["']' + dub_target + r'["'][^>]*>(.*?)(?:<div class="miru-ep-grid|</div>\s*</div>)', m_html, re.DOTALL)
+                        group_m = re.search(r'<div[^>]+id=["\']' + re.escape(dub_target) + r'["\'][^>]*>(.*?)(?:<div class="miru-ep-grid|</div>\s*</div>)', m_html, re.DOTALL)
                         if group_m:
-                            dub_ep_ids = re.findall(r'data-ep-id=["'](\d+)["']', group_m.group(1))
+                            dub_ep_ids = re.findall(r'data-ep-id=["\'](\d+)["\']', group_m.group(1))
                             if dub_ep_ids:
                                 tasks = [(i, eid, ep_json.get(eid, {})) for i, eid in enumerate(dub_ep_ids, 1)]
                             else:
@@ -1281,9 +1281,12 @@ def push_to_github():
     try:
         check_git = subprocess.run(["git", "status"], cwd=BASE_DIR, capture_output=True, text=True)
         if check_git.returncode == 0:
-            # เพิ่มเฉพาะไฟล์ข้อมูลภาพยนตร์และ sitemap เท่านั้น เพื่อไม่ให้อัปเดตไฟล์อื่นปะปน
-            subprocess.run(["git", "add", "js/movies.js", "sitemap.xml"], cwd=BASE_DIR, check=True)
-            status = subprocess.run(["git", "status", "--porcelain", "js/movies.js", "sitemap.xml"], cwd=BASE_DIR, capture_output=True, text=True).stdout
+            # เพิ่มเฉพาะไฟล์ข้อมูลภาพยนตร์, sitemap และภาพโปสเตอร์คลีน เพื่อไม่ให้อัปเดตไฟล์อื่นปะปน
+            git_targets = ["js/movies.js", "sitemap.xml"]
+            if os.path.exists(os.path.join(BASE_DIR, "images", "clean_posters")):
+                git_targets.append("images/clean_posters")
+            subprocess.run(["git", "add"] + git_targets, cwd=BASE_DIR, check=True)
+            status = subprocess.run(["git", "status", "--porcelain"] + git_targets, cwd=BASE_DIR, capture_output=True, text=True).stdout
             
             if status.strip():
                 now_str = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
@@ -1352,14 +1355,21 @@ def main(auto_push=True):
     existing = load_existing_movies()
     print(f"[*] ฐานข้อมูลปัจจุบันมี: {len(existing)} เรื่อง")
     
-    # 1. Fetch updates from sources
-    scraped_top = update_24hda_topmovies()
-    scraped_24hda = update_24hda()
-    scraped_media = update_24hd_media()
-    scraped_gs = update_goseries4k()
-    scraped_wow = update_wow_drama(max_pages=2)
-    scraped_today = update_24hd_today(min_rating=6.0, max_pages=3)
-    scraped_mshd = update_myserieshd(max_pages=15)
+    # 1. Fetch updates from sources (พร้อมระบบป้องกันข้อผิดพลาดแยกแต่ละแหล่ง)
+    def safe_run(func, name, *args, **kwargs):
+        try:
+            return func(*args, **kwargs)
+        except Exception as e:
+            print(f"[-] ข้อผิดพลาด {name}: {e}")
+            return []
+
+    scraped_top = safe_run(update_24hda_topmovies, "24-HD Top Movies")
+    scraped_24hda = safe_run(update_24hda, "24-HDA")
+    scraped_media = safe_run(update_24hd_media, "24HD.MEDIA")
+    scraped_gs = safe_run(update_goseries4k, "GOSERIES4K")
+    scraped_wow = safe_run(update_wow_drama, "WOW-DRAMA", max_pages=2)
+    scraped_today = safe_run(update_24hd_today, "24HD.TODAY", min_rating=6.0, max_pages=3)
+    scraped_mshd = safe_run(update_myserieshd, "MYSERIESHD", max_pages=15)
     
     # 2. Merge intelligently
     existing_map = {m.get("originalUrl", m.get("id", "")): m for m in existing}
