@@ -1347,6 +1347,66 @@ def push_to_github():
     return True
 
 
+def notify_line_oa(added_new, updated_eps, total_movies, new_titles=None, updated_titles=None):
+    """ส่งข้อความแจ้งเตือนสรุปผลการอัปเดตหนังเข้า LINE OA ของแอดมินอัตโนมัติ"""
+    token = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN", "ySRHeoP3bVm3bUAOCXut7lzYBos4SqvTI9epuhCA4ANq2wttPBnlbRa8quRXdxc1Kxc++6NFURm7f9pjRrEEX79w1Zanjkkf3EmASHBNRbo/PYP5HkkeeEYCr/IYC4XgOAnvzO8ne89JOkS94pz3zAdB04t89/1O/w1cDnyilFU=")
+    admin_id = os.environ.get("ADMIN_LINE_USER_ID", "U82651d72dba0247279a27ab305152104")
+    
+    if not token or not admin_id:
+        return False
+        
+    now_str = datetime.datetime.now().strftime("%d/%m/%Y %H:%M น.")
+    
+    lines = [
+        "🎬 [MovieStream] อัปเดตหนังและซีรีส์ใหม่เรียบร้อยแล้ว!",
+        "=============================",
+        f"✨ เพิ่มเรื่องใหม่: {added_new} เรื่อง",
+        f"📺 อัปเดตตอนเพิ่ม: {updated_eps} เรื่อง",
+        f"📚 หนังทั้งหมดในเว็บรวม: {total_movies} เรื่อง"
+    ]
+    
+    if new_titles:
+        lines.append("\n🍿 ตัวอย่างหนัง/ซีรีส์ที่เพิ่มใหม่:")
+        for t in new_titles[:5]:
+            lines.append(f"• {t}")
+    elif updated_titles:
+        lines.append("\n📺 ซีรีส์ที่มีตอนใหม่:")
+        for t in updated_titles[:5]:
+            lines.append(f"• {t}")
+            
+    lines.append("\n=============================")
+    lines.append(f"⏰ อัปเดตเมื่อ: {now_str}")
+    lines.append("🌐 เว็บไซต์ Cloudflare Pages อัปเดตพร้อมดูแล้วครับ")
+    
+    message_text = "\n".join(lines)
+    payload = {
+        "to": admin_id,
+        "messages": [
+            {
+                "type": "text",
+                "text": message_text
+            }
+        ]
+    }
+    
+    try:
+        req = urllib.request.Request(
+            "https://api.line.me/v2/bot/message/push",
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Content-Type": "application/json"
+            },
+            data=json.dumps(payload).encode("utf-8")
+        )
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            if resp.status == 200:
+                print("📲 [LINE OA] ส่งการแจ้งเตือนผลการอัปเดตเข้า LINE สำเร็จเรียบร้อย!")
+                return True
+    except Exception as e:
+        print(f"[-] [LINE OA] ส่งแจ้งเตือนล้มเหลว: {e}")
+        return False
+
+
 def main(auto_push=True):
     print("=" * 60)
     print("🚀 เริ่มต้นระบบอัปเดตภาพยนตร์และซีรีส์ใหม่ล่าสุด...")
@@ -1379,6 +1439,8 @@ def main(auto_push=True):
     
     added_new = 0
     updated_eps = 0
+    added_titles = []
+    updated_titles = []
     
     all_new_items = scraped_top + scraped_media + scraped_24hda + scraped_today + scraped_gs + scraped_wow + scraped_mshd
     
@@ -1400,6 +1462,7 @@ def main(auto_push=True):
                 match["episodeUrls"] = item["episodeUrls"]
                 match["duration"] = item["duration"]
                 updated_eps += 1
+                updated_titles.append(item.get("titleTh", ""))
                 print(f"  [*] อัปเดตตอนเพิ่ม: {item['titleTh']} ({old_eps} -> {new_eps} ตอน)")
             # Update poster if older was invalid/empty
             if not match.get("poster") and item.get("poster"):
@@ -1412,6 +1475,7 @@ def main(auto_push=True):
             if title_key:
                 title_map[title_key] = item
             added_new += 1
+            added_titles.append(item.get("titleTh", ""))
             print(f"  [+] เพิ่มเรื่องใหม่: {item['titleTh']}")
             
     save_movies(existing)
@@ -1422,6 +1486,9 @@ def main(auto_push=True):
     # 4. ส่งข้อมูลขึ้น GitHub อัตโนมัติ (เฉพาะไฟล์ฐานข้อมูลหนัง js/movies.js และ sitemap.xml)
     if auto_push:
         push_to_github()
+
+    # 5. ส่งการแจ้งเตือนสรุปผลไปยัง LINE OA แอดมิน
+    notify_line_oa(added_new, updated_eps, len(existing), added_titles, updated_titles)
     
     print("\n" + "=" * 60)
     print(f"🎉 อัปเดตเสร็จสมบูรณ์!")
