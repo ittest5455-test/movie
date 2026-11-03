@@ -89,7 +89,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/genius-girlfriend-2026/"
   },
   {
-    "titleTh": "ฝรั่ง Apocalypse Z New World อะโพคาลิปซิส เซต้า โลกใหม่ (2026)",
+    "titleTh": "Apocalypse Z New World อะโพคาลิปซิส เซต้า โลกใหม่ (2026)",
     "titleEn": "ฝรั่ง Apocalypse Z: New World อะโพคาลิปซิส เซต้า: โลกใหม่ (2026)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/11/%E0%B8%AD%E0%B8%B0%E0%B9%82%E0%B8%9E%E0%B8%84%E0%B8%B2%E0%B8%A5%E0%B8%B4%E0%B8%9B%E0%B8%8B%E0%B8%B4%E0%B8%AA-%E0%B9%80%E0%B8%8B%E0%B8%95%E0%B9%89%E0%B8%B2-%E0%B9%82%E0%B8%A5%E0%B8%81%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-11.jpg",
@@ -4986,7 +4986,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/singles-inferno-s5-2026/"
   },
   {
-    "titleTh": "สั้น พลิกชะตานางเอกเป็นรักต้องห้าม",
+    "titleTh": "พลิกชะตานางเอกเป็นรักต้องห้าม",
     "titleEn": "ดูละครจีนสั้น พลิกชะตานางเอกเป็นรักต้องห้าม (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B8%81%E0%B8%8A%E0%B8%B0%E0%B8%95%E0%B8%B2%E0%B8%99%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2%E0%B8%A1-1.webp",
@@ -5020,7 +5020,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%9e%e0%b8%a5%e0%b8%b4%e0%b8%81%e0%b8%8a%e0%b8%b0%e0%b8%95%e0%b8%b2%e0%b8%99%e0%b8%b2%e0%b8%87%e0%b9%80%e0%b8%ad%e0%b8%81%e0%b9%80%e0%b8%9b%e0%b9%87%e0%b8%99%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b8%95%e0%b9%89%e0%b8%ad%e0%b8%87%e0%b8%ab%e0%b9%89%e0%b8%b2%e0%b8%a1-2026/"
   },
   {
-    "titleTh": "สั้น ไปยั่วดวงใจท่านอ๋องทำไม",
+    "titleTh": "ไปยั่วดวงใจท่านอ๋องทำไม",
     "titleEn": "ดูละครจีนสั้น ไปยั่วดวงใจท่านอ๋องทำไม (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B9%84%E0%B8%9B%E0%B8%A2%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%94%E0%B8%A7%E0%B8%87%E0%B9%83%E0%B8%88%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B9%8B%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B3%E0%B9%84%E0%B8%A1-1.webp",
@@ -5054,7 +5054,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b9%84%e0%b8%9b%e0%b8%a2%e0%b8%b1%e0%b9%88%e0%b8%a7%e0%b8%94%e0%b8%a7%e0%b8%87%e0%b9%83%e0%b8%88%e0%b8%97%e0%b9%88%e0%b8%b2%e0%b8%99%e0%b8%ad%e0%b9%8b%e0%b8%ad%e0%b8%87%e0%b8%97%e0%b8%b3%e0%b9%84%e0%b8%a1-2026/"
   },
   {
-    "titleTh": "สั้น พี่ข้างบ้านอยากเป็นผัวฉัน",
+    "titleTh": "พี่ข้างบ้านอยากเป็นผัวฉัน",
     "titleEn": "ดูละครจีนสั้น พี่ข้างบ้านอยากเป็นผัวฉัน (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B8%9E%E0%B8%B5%E0%B9%88%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B8%A2%E0%B8%B2%E0%B8%81%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%9C%E0%B8%B1%E0%B8%A7%E0%B8%89%E0%B8%B1%E0%B8%99-11.webp",
@@ -5088,7 +5088,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%9e%e0%b8%b5%e0%b9%88%e0%b8%82%e0%b9%89%e0%b8%b2%e0%b8%87%e0%b8%9a%e0%b9%89%e0%b8%b2%e0%b8%99%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%81%e0%b9%80%e0%b8%9b%e0%b9%87%e0%b8%99%e0%b8%9c%e0%b8%b1%e0%b8%a7%e0%b8%89%e0%b8%b1%e0%b8%99-2026/"
   },
   {
-    "titleTh": "สั้น เสเพลนักข้าจะจัดการให้",
+    "titleTh": "เสเพลนักข้าจะจัดการให้",
     "titleEn": "ดูละครจีนสั้น เสเพลนักข้าจะจัดการให้ (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B9%80%E0%B8%AA%E0%B9%80%E0%B8%9E%E0%B8%A5%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%88%E0%B8%B0%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%AB%E0%B9%89-1.webp",
@@ -5122,7 +5122,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b9%80%e0%b8%aa%e0%b9%80%e0%b8%9e%e0%b8%a5%e0%b8%99%e0%b8%b1%e0%b8%81%e0%b8%82%e0%b9%89%e0%b8%b2%e0%b8%88%e0%b8%b0%e0%b8%88%e0%b8%b1%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b9%83%e0%b8%ab%e0%b9%89-2026/"
   },
   {
-    "titleTh": "สั้น สาวไทยข้ามภพป่วนใจแม่ทัพ",
+    "titleTh": "สาวไทยข้ามภพป่วนใจแม่ทัพ",
     "titleEn": "ดูละครจีนสั้น สาวไทยข้ามภพป่วนใจแม่ทัพ (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B8%AA%E0%B8%B2%E0%B8%A7%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A1%E0%B8%A0%E0%B8%9E%E0%B8%9B%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B9%83%E0%B8%88%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%97%E0%B8%B1%E0%B8%9E-1.webp",
@@ -5256,7 +5256,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/unveil-jadewind-2026/"
   },
   {
-    "titleTh": "สั้น เริ่มจากความบังเอิญ ลงเอยด้วยการถูกรัก",
+    "titleTh": "เริ่มจากความบังเอิญ ลงเอยด้วยการถูกรัก",
     "titleEn": "ดูละครจีนสั้น เริ่มจากความบังเอิญ ลงเอยด้วยการถูกรัก (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%9A%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%AD%E0%B8%B4%E0%B8%8D-%E0%B8%A5%E0%B8%87%E0%B9%80%E0%B8%AD%E0%B8%A2%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%96%E0%B8%B9%E0%B8%81%E0%B8%A3%E0%B8%B1%E0%B8%81-1.webp",
@@ -5290,7 +5290,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b9%80%e0%b8%a3%e0%b8%b4%e0%b9%88%e0%b8%a1%e0%b8%88%e0%b8%b2%e0%b8%81%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1%e0%b8%9a%e0%b8%b1%e0%b8%87%e0%b9%80%e0%b8%ad%e0%b8%b4%e0%b8%8d-%e0%b8%a5%e0%b8%87%e0%b9%80%e0%b8%ad%e0%b8%a2%e0%b8%94%e0%b9%89%e0%b8%a7%e0%b8%a2%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%96%e0%b8%b9%e0%b8%81%e0%b8%a3%e0%b8%b1%e0%b8%81-2026/"
   },
   {
-    "titleTh": "สั้น อภิเษกสมรสกับท่านอ๋องสายแบด",
+    "titleTh": "อภิเษกสมรสกับท่านอ๋องสายแบด",
     "titleEn": "ดูละครจีนสั้น อภิเษกสมรสกับท่านอ๋องสายแบด (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%AD%E0%B8%A0%E0%B8%B4%E0%B9%80%E0%B8%A9%E0%B8%81%E0%B8%AA%E0%B8%A1%E0%B8%A3%E0%B8%AA%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B9%8B%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B9%81%E0%B8%9A%E0%B8%94-11.webp",
@@ -5324,7 +5324,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%ad%e0%b8%a0%e0%b8%b4%e0%b9%80%e0%b8%a9%e0%b8%81%e0%b8%aa%e0%b8%a1%e0%b8%a3%e0%b8%aa%e0%b8%81%e0%b8%b1%e0%b8%9a%e0%b8%97%e0%b9%88%e0%b8%b2%e0%b8%99%e0%b8%ad%e0%b9%8b%e0%b8%ad%e0%b8%87%e0%b8%aa%e0%b8%b2%e0%b8%a2%e0%b9%81%e0%b8%9a%e0%b8%94-2026/"
   },
   {
-    "titleTh": "สั้น เบบี๋ตัวตึงพลิกชะตาตระกูลแม่",
+    "titleTh": "เบบี๋ตัวตึงพลิกชะตาตระกูลแม่",
     "titleEn": "ดูละครจีนสั้น เบบี๋ตัวตึงพลิกชะตาตระกูลแม่ (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B9%80%E0%B8%9A%E0%B8%9A%E0%B8%B5%E0%B9%8B%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%95%E0%B8%B6%E0%B8%87%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B8%81%E0%B8%8A%E0%B8%B0%E0%B8%95%E0%B8%B2%E0%B8%95%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B9%E0%B8%A5%E0%B9%81%E0%B8%A1%E0%B9%88-11.webp",
@@ -5358,7 +5358,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b9%80%e0%b8%9a%e0%b8%9a%e0%b8%b5%e0%b9%8b%e0%b8%95%e0%b8%b1%e0%b8%a7%e0%b8%95%e0%b8%b6%e0%b8%87%e0%b8%9e%e0%b8%a5%e0%b8%b4%e0%b8%81%e0%b8%8a%e0%b8%b0%e0%b8%95%e0%b8%b2%e0%b8%95%e0%b8%a3%e0%b8%b0%e0%b8%81%e0%b8%b9%e0%b8%a5%e0%b9%81%e0%b8%a1%e0%b9%88-2026/"
   },
   {
-    "titleTh": "สั้น ถูกถอนหมั้นแล้วช่วยชีวิตซีอีโอสาว",
+    "titleTh": "ถูกถอนหมั้นแล้วช่วยชีวิตซีอีโอสาว",
     "titleEn": "ดูละครจีนสั้น ถูกถอนหมั้นแล้วช่วยชีวิตซีอีโอสาว (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%96%E0%B8%B9%E0%B8%81%E0%B8%96%E0%B8%AD%E0%B8%99%E0%B8%AB%E0%B8%A1%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B9%81%E0%B8%A5%E0%B9%89%E0%B8%A7%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95%E0%B8%8B%E0%B8%B5%E0%B8%AD%E0%B8%B5%E0%B9%82%E0%B8%AD%E0%B8%AA%E0%B8%B2%E0%B8%A7-11.webp",
@@ -5392,7 +5392,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%96%e0%b8%b9%e0%b8%81%e0%b8%96%e0%b8%ad%e0%b8%99%e0%b8%ab%e0%b8%a1%e0%b8%b1%e0%b9%89%e0%b8%99%e0%b9%81%e0%b8%a5%e0%b9%89%e0%b8%a7%e0%b8%8a%e0%b9%88%e0%b8%a7%e0%b8%a2%e0%b8%8a%e0%b8%b5%e0%b8%a7%e0%b8%b4%e0%b8%95%e0%b8%8b%e0%b8%b5%e0%b8%ad%e0%b8%b5%e0%b9%82%e0%b8%ad%e0%b8%aa%e0%b8%b2%e0%b8%a7-2026/"
   },
   {
-    "titleTh": "สั้น อ้อมกอดอาทิตย์อุ่นหัวใจเธอผู้ไร้เสียง",
+    "titleTh": "อ้อมกอดอาทิตย์อุ่นหัวใจเธอผู้ไร้เสียง",
     "titleEn": "ดูละครจีนสั้น อ้อมกอดอาทิตย์อุ่นหัวใจเธอผู้ไร้เสียง (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%AD%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%81%E0%B8%AD%E0%B8%94%E0%B8%AD%E0%B8%B2%E0%B8%97%E0%B8%B4%E0%B8%95%E0%B8%A2%E0%B9%8C%E0%B8%AD%E0%B8%B8%E0%B9%88%E0%B8%99%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B9%83%E0%B8%88%E0%B9%80%E0%B8%98%E0%B8%AD%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B9%84%E0%B8%A3%E0%B9%89%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2%E0%B8%87-11.webp",
@@ -5426,7 +5426,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%ad%e0%b9%89%e0%b8%ad%e0%b8%a1%e0%b8%81%e0%b8%ad%e0%b8%94%e0%b8%ad%e0%b8%b2%e0%b8%97%e0%b8%b4%e0%b8%95%e0%b8%a2%e0%b9%8c%e0%b8%ad%e0%b8%b8%e0%b9%88%e0%b8%99%e0%b8%ab%e0%b8%b1%e0%b8%a7%e0%b9%83%e0%b8%88%e0%b9%80%e0%b8%98%e0%b8%ad%e0%b8%9c%e0%b8%b9%e0%b9%89%e0%b9%84%e0%b8%a3%e0%b9%89%e0%b9%80%e0%b8%aa%e0%b8%b5%e0%b8%a2%e0%b8%87-2026/"
   },
   {
-    "titleTh": "สั้น ไม่เป็นแล้วฮูหยิน!ปล่อยสามีโฉดรอวันตาย",
+    "titleTh": "ไม่เป็นแล้วฮูหยิน!ปล่อยสามีโฉดรอวันตาย",
     "titleEn": "ดูละครจีนสั้น ไม่เป็นแล้วฮูหยิน!ปล่อยสามีโฉดรอวันตาย (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/05/%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%81%E0%B8%A5%E0%B9%89%E0%B8%A7%E0%B8%AE%E0%B8%B9%E0%B8%AB%E0%B8%A2%E0%B8%B4%E0%B8%99%E0%B8%9B%E0%B8%A5%E0%B9%88%E0%B8%AD%E0%B8%A2%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%B5%E0%B9%82%E0%B8%89%E0%B8%94%E0%B8%A3%E0%B8%AD%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%95%E0%B8%B2%E0%B8%A2-11.webp",
@@ -5959,7 +5959,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/the-blood-of-youth-quest-of-heroic-hearts-2026/"
   },
   {
-    "titleTh": "สั้น หงส์ไฟบรรลัยกัลป์ (2026)",
+    "titleTh": "หงส์ไฟบรรลัยกัลป์ (2026)",
     "titleEn": "ดูซีรี่ส์จีนสั้น หงส์ไฟบรรลัยกัลป์ (2026) พากย์ไทย",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B8%AB%E0%B8%87%E0%B8%AA%E0%B9%8C%E0%B9%84%E0%B8%9F%E0%B8%9A%E0%B8%A3%E0%B8%A3%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%81%E0%B8%B1%E0%B8%A5%E0%B8%9B%E0%B9%8C-11.webp",
@@ -6129,7 +6129,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%a1%e0%b8%b1%e0%b8%87%e0%b8%81%e0%b8%a3%e0%b8%8b%e0%b9%88%e0%b8%ad%e0%b8%99%e0%b8%84%e0%b8%a1-2026/"
   },
   {
-    "titleTh": "สั้น คืนชีวาพลิกชะตาทวงแค้น (2026)",
+    "titleTh": "คืนชีวาพลิกชะตาทวงแค้น (2026)",
     "titleEn": "ดูละครจีนสั้น คืนชีวาพลิกชะตาทวงแค้น (2026) พากย์ไทย",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B8%84%E0%B8%B7%E0%B8%99%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B2%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B8%81%E0%B8%8A%E0%B8%B0%E0%B8%95%E0%B8%B2%E0%B8%97%E0%B8%A7%E0%B8%87%E0%B9%81%E0%B8%84%E0%B9%89%E0%B8%99-11.webp",
@@ -6163,7 +6163,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%84%e0%b8%b7%e0%b8%99%e0%b8%8a%e0%b8%b5%e0%b8%a7%e0%b8%b2%e0%b8%9e%e0%b8%a5%e0%b8%b4%e0%b8%81%e0%b8%8a%e0%b8%b0%e0%b8%95%e0%b8%b2%e0%b8%97%e0%b8%a7%e0%b8%87%e0%b9%81%e0%b8%84%e0%b9%89%e0%b8%99-2026/"
   },
   {
-    "titleTh": "สั้น สาวน้อยร้อยเล่ห์ (2026)",
+    "titleTh": "สาวน้อยร้อยเล่ห์ (2026)",
     "titleEn": "ดูละครจีนสั้น สาวน้อยร้อยเล่ห์ (2026) พากย์ไทย",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B8%AA%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A2%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%AB%E0%B9%8C-1.webp",
@@ -6197,7 +6197,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%aa%e0%b8%b2%e0%b8%a7%e0%b8%99%e0%b9%89%e0%b8%ad%e0%b8%a2%e0%b8%a3%e0%b9%89%e0%b8%ad%e0%b8%a2%e0%b9%80%e0%b8%a5%e0%b9%88%e0%b8%ab%e0%b9%8c-2026/"
   },
   {
-    "titleTh": "สั้น ลูกในความลับพ่อมหาเศรษฐี (2026)",
+    "titleTh": "ลูกในความลับพ่อมหาเศรษฐี (2026)",
     "titleEn": "ดูละครจีนสั้น ลูกในความลับพ่อมหาเศรษฐี (2026) พากย์ไทย",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B9%83%E0%B8%99%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A5%E0%B8%B1%E0%B8%9A%E0%B8%9E%E0%B9%88%E0%B8%AD%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B8%A9%E0%B8%90%E0%B8%B5-1.webp",
@@ -6231,7 +6231,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%a5%e0%b8%b9%e0%b8%81%e0%b9%83%e0%b8%99%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1%e0%b8%a5%e0%b8%b1%e0%b8%9a%e0%b8%9e%e0%b9%88%e0%b8%ad%e0%b8%a1%e0%b8%ab%e0%b8%b2%e0%b9%80%e0%b8%a8%e0%b8%a3%e0%b8%a9%e0%b8%90%e0%b8%b5-2026/"
   },
   {
-    "titleTh": "สั้น วันนี้ที่รอคอย (2026)",
+    "titleTh": "วันนี้ที่รอคอย (2026)",
     "titleEn": "ดูละครจีนสั้น วันนี้ที่รอคอย (2026) พากย์ไทย",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%99%E0%B8%B5%E0%B9%89%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A3%E0%B8%AD%E0%B8%84%E0%B8%AD%E0%B8%A2-1.webp",
@@ -6403,7 +6403,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/million-follower-detective-2026/"
   },
   {
-    "titleTh": "สั้น ดุจจันทราเคียงวิมาน 2026",
+    "titleTh": "ดุจจันทราเคียงวิมาน 2026",
     "titleEn": "ดูละครจีนสั้น ดุจจันทราเคียงวิมาน 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B8%94%E0%B8%B8%E0%B8%88%E0%B8%88%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B2%E0%B9%80%E0%B8%84%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B8%A7%E0%B8%B4%E0%B8%A1%E0%B8%B2%E0%B8%99-11.webp",
@@ -6437,7 +6437,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%94%e0%b8%b8%e0%b8%88%e0%b8%88%e0%b8%b1%e0%b8%99%e0%b8%97%e0%b8%a3%e0%b8%b2%e0%b9%80%e0%b8%84%e0%b8%b5%e0%b8%a2%e0%b8%87%e0%b8%a7%e0%b8%b4%e0%b8%a1%e0%b8%b2%e0%b8%99-2026/"
   },
   {
-    "titleTh": "สั้น ความรักที่ลุกโชน 2026",
+    "titleTh": "ความรักที่ลุกโชน 2026",
     "titleEn": "ดูละครจีนสั้น ความรักที่ลุกโชน 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A5%E0%B8%B8%E0%B8%81%E0%B9%82%E0%B8%8A%E0%B8%99-1.webp",
@@ -6471,7 +6471,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b8%a5%e0%b8%b8%e0%b8%81%e0%b9%82%e0%b8%8a%e0%b8%99-2026/"
   },
   {
-    "titleTh": "สั้น หัวใจที่ได้เริ่มใหม่ 2026",
+    "titleTh": "หัวใจที่ได้เริ่มใหม่ 2026",
     "titleEn": "ดูละครจีนสั้น หัวใจที่ได้เริ่มใหม่ 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B9%83%E0%B8%88%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%84%E0%B8%94%E0%B9%89%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-1.webp",
@@ -6505,7 +6505,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%ab%e0%b8%b1%e0%b8%a7%e0%b9%83%e0%b8%88%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b9%84%e0%b8%94%e0%b9%89%e0%b9%80%e0%b8%a3%e0%b8%b4%e0%b9%88%e0%b8%a1%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88-%e0%b8%9e%e0%b8%b2%e0%b8%81%e0%b8%a2%e0%b9%8c%e0%b9%84%e0%b8%97%e0%b8%a2/"
   },
   {
-    "titleTh": "สั้น เลห์รักทวงแค้น 2026",
+    "titleTh": "เลห์รักทวงแค้น 2026",
     "titleEn": "ดูละครจีนสั้น เลห์รักทวงแค้น 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B9%80%E0%B8%A5%E0%B8%AB%E0%B9%8C%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%97%E0%B8%A7%E0%B8%87%E0%B9%81%E0%B8%84%E0%B9%89%E0%B8%99-1.webp",
@@ -6539,7 +6539,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b9%80%e0%b8%a5%e0%b8%ab%e0%b9%8c%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b8%97%e0%b8%a7%e0%b8%87%e0%b9%81%e0%b8%84%e0%b9%89%e0%b8%99-2026/"
   },
   {
-    "titleTh": "สั้น แฟนเก่าที่รัก 2026",
+    "titleTh": "แฟนเก่าที่รัก 2026",
     "titleEn": "ดูละครจีนสั้น แฟนเก่าที่รัก 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B9%81%E0%B8%9F%E0%B8%99%E0%B9%80%E0%B8%81%E0%B9%88%E0%B8%B2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A3%E0%B8%B1%E0%B8%81-1.webp",
@@ -6573,7 +6573,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b9%81%e0%b8%9f%e0%b8%99%e0%b9%80%e0%b8%81%e0%b9%88%e0%b8%b2%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b8%a3%e0%b8%b1%e0%b8%81-2026/"
   },
   {
-    "titleTh": "สั้น พระชายาสุดบ็อง 2026",
+    "titleTh": "พระชายาสุดบ็อง 2026",
     "titleEn": "ดูละครจีนสั้น พระชายาสุดบ็อง 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%8A%E0%B8%B2%E0%B8%A2%E0%B8%B2%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%9A%E0%B9%87%E0%B8%AD%E0%B8%87-1.webp",
@@ -6607,7 +6607,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%9e%e0%b8%a3%e0%b8%b0%e0%b8%8a%e0%b8%b2%e0%b8%a2%e0%b8%b2%e0%b8%aa%e0%b8%b8%e0%b8%94%e0%b8%9a%e0%b9%87%e0%b8%ad%e0%b8%87-2026/"
   },
   {
-    "titleTh": "สั้น แพทย์หญิงเหนือชะตา 2026",
+    "titleTh": "แพทย์หญิงเหนือชะตา 2026",
     "titleEn": "ดูละครจีนสั้น แพทย์หญิงเหนือชะตา 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B9%81%E0%B8%9E%E0%B8%97%E0%B8%A2%E0%B9%8C%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD%E0%B8%8A%E0%B8%B0%E0%B8%95%E0%B8%B2-1.webp",
@@ -7149,7 +7149,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/my-page-in-the-90s-2026/"
   },
   {
-    "titleTh": "สั้น เกิดใหม่แพ้ไม่เป็น 2026",
+    "titleTh": "เกิดใหม่แพ้ไม่เป็น 2026",
     "titleEn": "ดูละครจีนสั้น เกิดใหม่แพ้ไม่เป็น 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B9%80%E0%B8%81%E0%B8%B4%E0%B8%94%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88%E0%B9%81%E0%B8%9E%E0%B9%89%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99-1.webp",
@@ -7183,7 +7183,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b9%80%e0%b8%81%e0%b8%b4%e0%b8%94%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88%e0%b9%81%e0%b8%9e%e0%b9%89%e0%b9%84%e0%b8%a1%e0%b9%88%e0%b9%80%e0%b8%9b%e0%b9%87%e0%b8%99-2026/"
   },
   {
-    "titleTh": "สั้น วิวาห์เพิ่มพลัง 2026",
+    "titleTh": "วิวาห์เพิ่มพลัง 2026",
     "titleEn": "ดูละครจีนสั้น วิวาห์เพิ่มพลัง 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B8%A7%E0%B8%B4%E0%B8%A7%E0%B8%B2%E0%B8%AB%E0%B9%8C%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%87-1.webp",
@@ -7217,7 +7217,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%a7%e0%b8%b4%e0%b8%a7%e0%b8%b2%e0%b8%ab%e0%b9%8c%e0%b9%80%e0%b8%9e%e0%b8%b4%e0%b9%88%e0%b8%a1%e0%b8%9e%e0%b8%a5%e0%b8%b1%e0%b8%87-2026/"
   },
   {
-    "titleTh": "สั้น บุปผาสลับบัลลังก์ 2026",
+    "titleTh": "บุปผาสลับบัลลังก์ 2026",
     "titleEn": "ดูละครจีนสั้น บุปผาสลับบัลลังก์ 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B8%9A%E0%B8%B8%E0%B8%9B%E0%B8%9C%E0%B8%B2%E0%B8%AA%E0%B8%A5%E0%B8%B1%E0%B8%9A%E0%B8%9A%E0%B8%B1%E0%B8%A5%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B9%8C-1.webp",
@@ -7345,7 +7345,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/follow-my-dear-general-2026/"
   },
   {
-    "titleTh": "สั้น ซ่อนดาว 2026",
+    "titleTh": "ซ่อนดาว 2026",
     "titleEn": "ดูละครจีนสั้น ซ่อนดาว 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B8%8B%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%94%E0%B8%B2%E0%B8%A7-1.webp",
@@ -7379,7 +7379,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%8b%e0%b9%88%e0%b8%ad%e0%b8%99%e0%b8%94%e0%b8%b2%e0%b8%a7-2026/"
   },
   {
-    "titleTh": "สั้น บุพเพอลเวง 2026",
+    "titleTh": "บุพเพอลเวง 2026",
     "titleEn": "ดูละครจีนสั้น บุพเพอลเวง 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B8%9A%E0%B8%B8%E0%B8%9E%E0%B9%80%E0%B8%9E%E0%B8%AD%E0%B8%A5%E0%B9%80%E0%B8%A7%E0%B8%87-1.webp",
@@ -7413,7 +7413,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%9a%e0%b8%b8%e0%b8%9e%e0%b9%80%e0%b8%9e%e0%b8%ad%e0%b8%a5%e0%b9%80%e0%b8%a7%e0%b8%87-2026/"
   },
   {
-    "titleTh": "สั้น อภินิหารมาเฟียข้ามภพ 2026",
+    "titleTh": "อภินิหารมาเฟียข้ามภพ 2026",
     "titleEn": "ดูละครจีนสั้น อภินิหารมาเฟียข้ามภพ 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B8%AD%E0%B8%A0%E0%B8%B4%E0%B8%99%E0%B8%B4%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B8%B5%E0%B8%A2%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A1%E0%B8%A0%E0%B8%9E-1.webp",
@@ -7447,7 +7447,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%ad%e0%b8%a0%e0%b8%b4%e0%b8%99%e0%b8%b4%e0%b8%ab%e0%b8%b2%e0%b8%a3%e0%b8%a1%e0%b8%b2%e0%b9%80%e0%b8%9f%e0%b8%b5%e0%b8%a2%e0%b8%82%e0%b9%89%e0%b8%b2%e0%b8%a1%e0%b8%a0%e0%b8%9e-2026/"
   },
   {
-    "titleTh": "สั้น พันธนาการแห่งรัก 2026",
+    "titleTh": "พันธนาการแห่งรัก 2026",
     "titleEn": "ดูละครจีนสั้น พันธนาการแห่งรัก 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/02/%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%99%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%A3%E0%B8%B1%E0%B8%81-1.webp",
@@ -7481,7 +7481,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%9e%e0%b8%b1%e0%b8%99%e0%b8%98%e0%b8%99%e0%b8%b2%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b9%81%e0%b8%ab%e0%b9%88%e0%b8%87%e0%b8%a3%e0%b8%b1%e0%b8%81-2026/"
   },
   {
-    "titleTh": "สั้น รักโดยที่เขาไม่รู้ 2026",
+    "titleTh": "รักโดยที่เขาไม่รู้ 2026",
     "titleEn": "ดูละครจีนสั้น รักโดยที่เขาไม่รู้ 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B9%82%E0%B8%94%E0%B8%A2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%A3%E0%B8%B9%E0%B9%89-1.webp",
@@ -7515,7 +7515,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b9%82%e0%b8%94%e0%b8%a2%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b9%80%e0%b8%82%e0%b8%b2%e0%b9%84%e0%b8%a1%e0%b9%88%e0%b8%a3%e0%b8%b9%e0%b9%89-2026/"
   },
   {
-    "titleTh": "สั้น คู่รักชั่วข้ามคืน 2026",
+    "titleTh": "คู่รักชั่วข้ามคืน 2026",
     "titleEn": "ดูละครจีนสั้น คู่รักชั่วข้ามคืน 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A1%E0%B8%84%E0%B8%B7%E0%B8%99-1.webp",
@@ -7549,7 +7549,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%84%e0%b8%b9%e0%b9%88%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b8%8a%e0%b8%b1%e0%b9%88%e0%b8%a7%e0%b8%82%e0%b9%89%e0%b8%b2%e0%b8%a1%e0%b8%84%e0%b8%b7%e0%b8%99-2026/"
   },
   {
-    "titleTh": "สั้น ผู้ชายแย่งกันแต่ฉันเลือกอิสระ 2026",
+    "titleTh": "ผู้ชายแย่งกันแต่ฉันเลือกอิสระ 2026",
     "titleEn": "ดูละครจีนสั้น ผู้ชายแย่งกันแต่ฉันเลือกอิสระ 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%8A%E0%B8%B2%E0%B8%A2%E0%B9%81%E0%B8%A2%E0%B9%88%E0%B8%87%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%81%E0%B8%95%E0%B9%88%E0%B8%89%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%81%E0%B8%AD%E0%B8%B4%E0%B8%AA%E0%B8%A3%E0%B8%B0-1.webp",
@@ -7583,7 +7583,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%9c%e0%b8%b9%e0%b9%89%e0%b8%8a%e0%b8%b2%e0%b8%a2%e0%b9%81%e0%b8%a2%e0%b9%88%e0%b8%87%e0%b8%81%e0%b8%b1%e0%b8%99%e0%b9%81%e0%b8%95%e0%b9%88%e0%b8%89%e0%b8%b1%e0%b8%99%e0%b9%80%e0%b8%a5%e0%b8%b7%e0%b8%ad%e0%b8%81%e0%b8%ad%e0%b8%b4%e0%b8%aa%e0%b8%a3%e0%b8%b0-2026/"
   },
   {
-    "titleTh": "สั้น ย้อนเวลามาเปลี่ยนชีวิต 2026",
+    "titleTh": "ย้อนเวลามาเปลี่ยนชีวิต 2026",
     "titleEn": "ดูละครจีนสั้น ย้อนเวลามาเปลี่ยนชีวิต 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%A2%E0%B9%89%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95-1.webp",
@@ -7617,7 +7617,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%a2%e0%b9%89%e0%b8%ad%e0%b8%99%e0%b9%80%e0%b8%a7%e0%b8%a5%e0%b8%b2%e0%b8%a1%e0%b8%b2%e0%b9%80%e0%b8%9b%e0%b8%a5%e0%b8%b5%e0%b9%88%e0%b8%a2%e0%b8%99%e0%b8%8a%e0%b8%b5%e0%b8%a7%e0%b8%b4%e0%b8%95-2026/"
   },
   {
-    "titleTh": "สั้น วิวาห์ด่วนคุณสี่ผู้คลั่งรัก 2026",
+    "titleTh": "วิวาห์ด่วนคุณสี่ผู้คลั่งรัก 2026",
     "titleEn": "ดูละครจีนสั้น วิวาห์ด่วนคุณสี่ผู้คลั่งรัก 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%A7%E0%B8%B4%E0%B8%A7%E0%B8%B2%E0%B8%AB%E0%B9%8C%E0%B8%94%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%AA%E0%B8%B5%E0%B9%88%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%87%E0%B8%A3%E0%B8%B1%E0%B8%81-1.webp",
@@ -7651,7 +7651,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%a7%e0%b8%b4%e0%b8%a7%e0%b8%b2%e0%b8%ab%e0%b9%8c%e0%b8%94%e0%b9%88%e0%b8%a7%e0%b8%99%e0%b8%84%e0%b8%b8%e0%b8%93%e0%b8%aa%e0%b8%b5%e0%b9%88%e0%b8%9c%e0%b8%b9%e0%b9%89%e0%b8%84%e0%b8%a5%e0%b8%b1%e0%b9%88%e0%b8%87%e0%b8%a3%e0%b8%b1%e0%b8%81-2026/"
   },
   {
-    "titleTh": "สั้น ตะวันฉายปลายราตรีกาล 2026",
+    "titleTh": "ตะวันฉายปลายราตรีกาล 2026",
     "titleEn": "ดูละครจีนสั้น ตะวันฉายปลายราตรีกาล 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%95%E0%B8%B0%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%89%E0%B8%B2%E0%B8%A2%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%A3%E0%B8%B2%E0%B8%95%E0%B8%A3%E0%B8%B5%E0%B8%81%E0%B8%B2%E0%B8%A5-1.webp",
@@ -7777,7 +7777,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/our-dazzling-days-2026/"
   },
   {
-    "titleTh": "สั้น สวรรค์บัญชาการ 2026",
+    "titleTh": "สวรรค์บัญชาการ 2026",
     "titleEn": "ดูละครจีนสั้น สวรรค์บัญชาการ 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%AA%E0%B8%A7%E0%B8%A3%E0%B8%A3%E0%B8%84%E0%B9%8C%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%8A%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3-1.webp",
@@ -7911,7 +7911,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/boyfriend-on-demand-2026/"
   },
   {
-    "titleTh": "สั้น 2002อีกครั้ง 2026",
+    "titleTh": "2002อีกครั้ง 2026",
     "titleEn": "ดูละครจีนสั้น 2002อีกครั้ง 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/2002%E0%B8%AD%E0%B8%B5%E0%B8%81%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%87-1.webp",
@@ -7945,7 +7945,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/2002%e0%b8%ad%e0%b8%b5%e0%b8%81%e0%b8%84%e0%b8%a3%e0%b8%b1%e0%b9%89%e0%b8%87-2026/"
   },
   {
-    "titleTh": "สั้น แต่งผิดตัวแต่รักถูกองค์ 2026",
+    "titleTh": "แต่งผิดตัวแต่รักถูกองค์ 2026",
     "titleEn": "ดูละครจีนสั้น แต่งผิดตัวแต่รักถูกองค์ 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B9%81%E0%B8%95%E0%B9%88%E0%B8%87%E0%B8%9C%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B9%81%E0%B8%95%E0%B9%88%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%96%E0%B8%B9%E0%B8%81%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B9%8C-1.webp",
@@ -7979,7 +7979,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b9%81%e0%b8%95%e0%b9%88%e0%b8%87%e0%b8%9c%e0%b8%b4%e0%b8%94%e0%b8%95%e0%b8%b1%e0%b8%a7%e0%b9%81%e0%b8%95%e0%b9%88%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b8%96%e0%b8%b9%e0%b8%81%e0%b8%ad%e0%b8%87%e0%b8%84%e0%b9%8c-2026/"
   },
   {
-    "titleTh": "สั้น ทางเลือกใหม่ของเจ้าสาว 2026",
+    "titleTh": "ทางเลือกใหม่ของเจ้าสาว 2026",
     "titleEn": "ดูละครจีนสั้น ทางเลือกใหม่ของเจ้าสาว 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%81%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%A7-1.webp",
@@ -8013,7 +8013,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%97%e0%b8%b2%e0%b8%87%e0%b9%80%e0%b8%a5%e0%b8%b7%e0%b8%ad%e0%b8%81%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88%e0%b8%82%e0%b8%ad%e0%b8%87%e0%b9%80%e0%b8%88%e0%b9%89%e0%b8%b2%e0%b8%aa%e0%b8%b2%e0%b8%a7-2026/"
   },
   {
-    "titleTh": "สั้น ลิขิตรักหมอเทวดา 2026",
+    "titleTh": "ลิขิตรักหมอเทวดา 2026",
     "titleEn": "ดูละครจีนสั้น ลิขิตรักหมอเทวดา 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%A5%E0%B8%B4%E0%B8%82%E0%B8%B4%E0%B8%95%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%AB%E0%B8%A1%E0%B8%AD%E0%B9%80%E0%B8%97%E0%B8%A7%E0%B8%94%E0%B8%B2-1.webp",
@@ -8047,7 +8047,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%a5%e0%b8%b4%e0%b8%82%e0%b8%b4%e0%b8%95%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b8%ab%e0%b8%a1%e0%b8%ad%e0%b9%80%e0%b8%97%e0%b8%a7%e0%b8%94%e0%b8%b2-2026/"
   },
   {
-    "titleTh": "สั้น ผีเสื้อพ้นคราบ 2026",
+    "titleTh": "ผีเสื้อพ้นคราบ 2026",
     "titleEn": "ดูละครจีนสั้น ผีเสื้อพ้นคราบ 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%9C%E0%B8%B5%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%9E%E0%B9%89%E0%B8%99%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%9A-1.webp",
@@ -8267,7 +8267,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/love-me-2026/"
   },
   {
-    "titleTh": "สั้น วิวาห์ลวงกลับกลายเป็นรัก 2026",
+    "titleTh": "วิวาห์ลวงกลับกลายเป็นรัก 2026",
     "titleEn": "ดูละครจีนสั้น วิวาห์ลวงกลับกลายเป็นรัก 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%A7%E0%B8%B4%E0%B8%A7%E0%B8%B2%E0%B8%AB%E0%B9%8C%E0%B8%A5%E0%B8%A7%E0%B8%87%E0%B8%81%E0%B8%A5%E0%B8%B1%E0%B8%9A%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%A3%E0%B8%B1%E0%B8%81-1.webp",
@@ -8301,7 +8301,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%a7%e0%b8%b4%e0%b8%a7%e0%b8%b2%e0%b8%ab%e0%b9%8c%e0%b8%a5%e0%b8%a7%e0%b8%87%e0%b8%81%e0%b8%a5%e0%b8%b1%e0%b8%9a%e0%b8%81%e0%b8%a5%e0%b8%b2%e0%b8%a2%e0%b9%80%e0%b8%9b%e0%b9%87%e0%b8%99%e0%b8%a3%e0%b8%b1%e0%b8%81-2026/"
   },
   {
-    "titleTh": "สั้น ความลับของคืนนั้น 2026",
+    "titleTh": "ความลับของคืนนั้น 2026",
     "titleEn": "ดูละครจีนสั้น ความลับของคืนนั้น 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A5%E0%B8%B1%E0%B8%9A%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B7%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B9%89%E0%B8%99-1.webp",
@@ -8335,7 +8335,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1%e0%b8%a5%e0%b8%b1%e0%b8%9a%e0%b8%82%e0%b8%ad%e0%b8%87%e0%b8%84%e0%b8%b7%e0%b8%99%e0%b8%99%e0%b8%b1%e0%b9%89%e0%b8%99-2026/"
   },
   {
-    "titleTh": "สั้น รักในวันที่สายไป 2026",
+    "titleTh": "รักในวันที่สายไป 2026",
     "titleEn": "ดูละครจีนสั้น รักในวันที่สายไป 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B9%83%E0%B8%99%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B9%84%E0%B8%9B-1.webp",
@@ -8369,7 +8369,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b9%83%e0%b8%99%e0%b8%a7%e0%b8%b1%e0%b8%99%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b8%aa%e0%b8%b2%e0%b8%a2%e0%b9%84%e0%b8%9b-2026/"
   },
   {
-    "titleTh": "สั้น วิวาห์ปลอมป่วนใจ (2026)",
+    "titleTh": "วิวาห์ปลอมป่วนใจ (2026)",
     "titleEn": "ดูละครจีนสั้น วิวาห์ปลอมป่วนใจ (2026) พากย์ไทย",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%A7%E0%B8%B4%E0%B8%A7%E0%B8%B2%E0%B8%AB%E0%B9%8C%E0%B8%9B%E0%B8%A5%E0%B8%AD%E0%B8%A1%E0%B8%9B%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B9%83%E0%B8%88-1.webp",
@@ -8403,7 +8403,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%a7%e0%b8%b4%e0%b8%a7%e0%b8%b2%e0%b8%ab%e0%b9%8c%e0%b8%9b%e0%b8%a5%e0%b8%ad%e0%b8%a1%e0%b8%9b%e0%b9%88%e0%b8%a7%e0%b8%99%e0%b9%83%e0%b8%88-2026/"
   },
   {
-    "titleTh": "สั้น คุณหนูหกยอดดวงใจตระกูลเทวะ (2026)",
+    "titleTh": "คุณหนูหกยอดดวงใจตระกูลเทวะ (2026)",
     "titleEn": "ดูละครจีนสั้น คุณหนูหกยอดดวงใจตระกูลเทวะ (2026) พากย์ไทย",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%AB%E0%B8%99%E0%B8%B9%E0%B8%AB%E0%B8%81%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B8%94%E0%B8%A7%E0%B8%87%E0%B9%83%E0%B8%88%E0%B8%95%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B9%E0%B8%A5%E0%B9%80%E0%B8%97%E0%B8%A7%E0%B8%B0-1.webp",
@@ -8437,7 +8437,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%84%e0%b8%b8%e0%b8%93%e0%b8%ab%e0%b8%99%e0%b8%b9%e0%b8%ab%e0%b8%81%e0%b8%a2%e0%b8%ad%e0%b8%94%e0%b8%94%e0%b8%a7%e0%b8%87%e0%b9%83%e0%b8%88%e0%b8%95%e0%b8%a3%e0%b8%b0%e0%b8%81%e0%b8%b9%e0%b8%a5%e0%b9%80%e0%b8%97%e0%b8%a7%e0%b8%b0-2026/"
   },
   {
-    "titleTh": "สั้น รักเก่าข้างโต๊ะทำงาน 2026",
+    "titleTh": "รักเก่าข้างโต๊ะทำงาน 2026",
     "titleEn": "ดูละครจีนสั้น รักเก่าข้างโต๊ะทำงาน 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B9%80%E0%B8%81%E0%B9%88%E0%B8%B2%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B8%97%E0%B8%B3%E0%B8%87%E0%B8%B2%E0%B8%99-11.webp",
@@ -8471,7 +8471,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b9%80%e0%b8%81%e0%b9%88%e0%b8%b2%e0%b8%82%e0%b9%89%e0%b8%b2%e0%b8%87%e0%b9%82%e0%b8%95%e0%b9%8a%e0%b8%b0%e0%b8%97%e0%b8%b3%e0%b8%87%e0%b8%b2%e0%b8%99-2026/"
   },
   {
-    "titleTh": "สั้น ผู้ชายที่หัวใจไม่มีวันลืม 2026",
+    "titleTh": "ผู้ชายที่หัวใจไม่มีวันลืม 2026",
     "titleEn": "ดูละครจีนสั้น ผู้ชายที่หัวใจไม่มีวันลืม 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%8A%E0%B8%B2%E0%B8%A2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B9%83%E0%B8%88%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%A1%E0%B8%B5%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%A5%E0%B8%B7%E0%B8%A1-11.webp",
@@ -8505,7 +8505,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%9c%e0%b8%b9%e0%b9%89%e0%b8%8a%e0%b8%b2%e0%b8%a2%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b8%ab%e0%b8%b1%e0%b8%a7%e0%b9%83%e0%b8%88%e0%b9%84%e0%b8%a1%e0%b9%88%e0%b8%a1%e0%b8%b5%e0%b8%a7%e0%b8%b1%e0%b8%99%e0%b8%a5%e0%b8%b7%e0%b8%a1-2026/"
   },
   {
-    "titleTh": "สั้น สลับดวงรักท่านจอมพล 2026",
+    "titleTh": "สลับดวงรักท่านจอมพล 2026",
     "titleEn": "ดูละครจีนสั้น สลับดวงรักท่านจอมพล 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%AA%E0%B8%A5%E0%B8%B1%E0%B8%9A%E0%B8%94%E0%B8%A7%E0%B8%87%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B8%88%E0%B8%AD%E0%B8%A1%E0%B8%9E%E0%B8%A5-11.webp",
@@ -8539,7 +8539,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%aa%e0%b8%a5%e0%b8%b1%e0%b8%9a%e0%b8%94%e0%b8%a7%e0%b8%87%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b8%97%e0%b9%88%e0%b8%b2%e0%b8%99%e0%b8%88%e0%b8%ad%e0%b8%a1%e0%b8%9e%e0%b8%a5-2026/"
   },
   {
-    "titleTh": "สั้น หัวใจไม่เคยอยู่ในแผน 2026",
+    "titleTh": "หัวใจไม่เคยอยู่ในแผน 2026",
     "titleEn": "ดูละครจีนสั้น หัวใจไม่เคยอยู่ในแผน 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B9%83%E0%B8%88%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%80%E0%B8%84%E0%B8%A2%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B9%83%E0%B8%99%E0%B9%81%E0%B8%9C%E0%B8%99-11.webp",
@@ -8573,7 +8573,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%ab%e0%b8%b1%e0%b8%a7%e0%b9%83%e0%b8%88%e0%b9%84%e0%b8%a1%e0%b9%88%e0%b9%80%e0%b8%84%e0%b8%a2%e0%b8%ad%e0%b8%a2%e0%b8%b9%e0%b9%88%e0%b9%83%e0%b8%99%e0%b9%81%e0%b8%9c%e0%b8%99-2026/"
   },
   {
-    "titleTh": "สั้น สะไภ้สงครามเพลิง 2026",
+    "titleTh": "สะไภ้สงครามเพลิง 2026",
     "titleEn": "ดูละครจีนสั้น สะไภ้สงครามเพลิง 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%AA%E0%B8%B0%E0%B9%84%E0%B8%A0%E0%B9%89%E0%B8%AA%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B8%87-11.webp",
@@ -8607,7 +8607,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%aa%e0%b8%b0%e0%b9%84%e0%b8%a0%e0%b9%89%e0%b8%aa%e0%b8%87%e0%b8%84%e0%b8%a3%e0%b8%b2%e0%b8%a1%e0%b9%80%e0%b8%9e%e0%b8%a5%e0%b8%b4%e0%b8%87-2026/"
   },
   {
-    "titleTh": "จีน Pursuit of Jade (2026) ล่าหยก",
+    "titleTh": "Pursuit of Jade (2026) ล่าหยก",
     "titleEn": "จีน Pursuit of Jade (2026) ล่าหยก พากย์ไทย",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%AB%E0%B8%A2%E0%B8%81-111.webp",
@@ -8767,7 +8767,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/bloody-flower-2026/"
   },
   {
-    "titleTh": "สั้น จากนรกสู่สวรรค์ 2026",
+    "titleTh": "จากนรกสู่สวรรค์ 2026",
     "titleEn": "ดูละครจีนสั้น จากนรกสู่สวรรค์ 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%99%E0%B8%A3%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%AA%E0%B8%A7%E0%B8%A3%E0%B8%A3%E0%B8%84%E0%B9%8C-11.webp",
@@ -8801,7 +8801,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%88%e0%b8%b2%e0%b8%81%e0%b8%99%e0%b8%a3%e0%b8%81%e0%b8%aa%e0%b8%b9%e0%b9%88%e0%b8%aa%e0%b8%a7%e0%b8%a3%e0%b8%a3%e0%b8%84%e0%b9%8c-2026/"
   },
   {
-    "titleTh": "สั้น ที่รักเรามาคบกับเถอะ 2026",
+    "titleTh": "ที่รักเรามาคบกับเถอะ 2026",
     "titleEn": "ดูละครจีนสั้น ที่รักเรามาคบกับเถอะ 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%B2%E0%B8%84%E0%B8%9A%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-11.webp",
@@ -8835,7 +8835,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b9%80%e0%b8%a3%e0%b8%b2%e0%b8%a1%e0%b8%b2%e0%b8%84%e0%b8%9a%e0%b8%81%e0%b8%b1%e0%b8%9a%e0%b9%80%e0%b8%96%e0%b8%ad%e0%b8%b0-2026/"
   },
   {
-    "titleTh": "สั้น สัญญารักซ่อนแค้น 2026",
+    "titleTh": "สัญญารักซ่อนแค้น 2026",
     "titleEn": "ดูละครจีนสั้น สัญญารักซ่อนแค้น 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/03/%E0%B8%AA%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%8B%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B9%81%E0%B8%84%E0%B9%89%E0%B8%99-11.webp",
@@ -8917,7 +8917,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/agent-from-above-2026/"
   },
   {
-    "titleTh": "สั้น เมียอ้วนพลิกฟื้นในยุค80 2026",
+    "titleTh": "เมียอ้วนพลิกฟื้นในยุค80 2026",
     "titleEn": "ดูละครจีนสั้น เมียอ้วนพลิกฟื้นในยุค80 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B9%80%E0%B8%A1%E0%B8%B5%E0%B8%A2%E0%B8%AD%E0%B9%89%E0%B8%A7%E0%B8%99%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B8%81%E0%B8%9F%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B9%83%E0%B8%99%E0%B8%A2%E0%B8%B8%E0%B8%8480-11.webp",
@@ -8951,7 +8951,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b9%80%e0%b8%a1%e0%b8%b5%e0%b8%a2%e0%b8%ad%e0%b9%89%e0%b8%a7%e0%b8%99%e0%b8%9e%e0%b8%a5%e0%b8%b4%e0%b8%81%e0%b8%9f%e0%b8%b7%e0%b9%89%e0%b8%99%e0%b9%83%e0%b8%99%e0%b8%a2%e0%b8%b8%e0%b8%8480-2026/"
   },
   {
-    "titleTh": "สั้น คนบ้านข้าต้องได้กินดี 2026",
+    "titleTh": "คนบ้านข้าต้องได้กินดี 2026",
     "titleEn": "ดูละครจีนสั้น คนบ้านข้าต้องได้กินดี 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%84%E0%B8%99%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%81%E0%B8%B4%E0%B8%99%E0%B8%94%E0%B8%B5-11.webp",
@@ -8985,7 +8985,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%84%e0%b8%99%e0%b8%9a%e0%b9%89%e0%b8%b2%e0%b8%99%e0%b8%82%e0%b9%89%e0%b8%b2%e0%b8%95%e0%b9%89%e0%b8%ad%e0%b8%87%e0%b9%84%e0%b8%94%e0%b9%89%e0%b8%81%e0%b8%b4%e0%b8%99%e0%b8%94%e0%b8%b5-2026/"
   },
   {
-    "titleTh": "สั้น นางฟ้าของสามี 2026",
+    "titleTh": "นางฟ้าของสามี 2026",
     "titleEn": "ดูละครจีนสั้น นางฟ้าของสามี 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%99%E0%B8%B2%E0%B8%87%E0%B8%9F%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%B5-11.webp",
@@ -9176,7 +9176,7 @@ window.movies = [
     "originalUrl": "https://wow-drama.com/sins-of-kujo-%e0%b8%9e%e0%b8%b2%e0%b8%81%e0%b8%a2%e0%b9%8c%e0%b9%84%e0%b8%97%e0%b8%a2/"
   },
   {
-    "titleTh": "สั้น บอสแฟนเก่ากับแผนรักดอกไวโอเลต 2026",
+    "titleTh": "บอสแฟนเก่ากับแผนรักดอกไวโอเลต 2026",
     "titleEn": "ดูละครจีนสั้น บอสแฟนเก่ากับแผนรักดอกไวโอเลต 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%9A%E0%B8%AD%E0%B8%AA%E0%B9%81%E0%B8%9F%E0%B8%99%E0%B9%80%E0%B8%81%E0%B9%88%E0%B8%B2%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%AD%E0%B8%81%E0%B9%84%E0%B8%A7%E0%B9%82%E0%B8%AD%E0%B9%80%E0%B8%A5%E0%B8%95-11.webp",
@@ -9210,7 +9210,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%9a%e0%b8%ad%e0%b8%aa%e0%b9%81%e0%b8%9f%e0%b8%99%e0%b9%80%e0%b8%81%e0%b9%88%e0%b8%b2%e0%b8%81%e0%b8%b1%e0%b8%9a%e0%b9%81%e0%b8%9c%e0%b8%99%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b8%94%e0%b8%ad%e0%b8%81%e0%b9%84%e0%b8%a7%e0%b9%82%e0%b8%ad%e0%b9%80%e0%b8%a5%e0%b8%95-2026/"
   },
   {
-    "titleTh": "สั้น ก้าวเล็กๆสู่ดวงดาว 2026",
+    "titleTh": "ก้าวเล็กๆสู่ดวงดาว 2026",
     "titleEn": "ดูละครจีนสั้น ก้าวเล็กๆสู่ดวงดาว 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%81%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%81%E0%B9%86%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%94%E0%B8%A7%E0%B8%87%E0%B8%94%E0%B8%B2%E0%B8%A7-11.webp",
@@ -9404,7 +9404,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/dream-of-golden-years-2026/"
   },
   {
-    "titleTh": "สั้น คู่หมั้นทรยศจูงมือรัชทายาท 2026",
+    "titleTh": "คู่หมั้นทรยศจูงมือรัชทายาท 2026",
     "titleEn": "ดูละครจีนสั้น คู่หมั้นทรยศจูงมือรัชทายาท 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%AB%E0%B8%A1%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%A2%E0%B8%A8%E0%B8%88%E0%B8%B9%E0%B8%87%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%A3%E0%B8%B1%E0%B8%8A%E0%B8%97%E0%B8%B2%E0%B8%A2%E0%B8%B2%E0%B8%97-11.webp",
@@ -9438,7 +9438,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%84%e0%b8%b9%e0%b9%88%e0%b8%ab%e0%b8%a1%e0%b8%b1%e0%b9%89%e0%b8%99%e0%b8%97%e0%b8%a3%e0%b8%a2%e0%b8%a8%e0%b8%88%e0%b8%b9%e0%b8%87%e0%b8%a1%e0%b8%b7%e0%b8%ad%e0%b8%a3%e0%b8%b1%e0%b8%8a%e0%b8%97%e0%b8%b2%e0%b8%a2%e0%b8%b2%e0%b8%97-2026/"
   },
   {
-    "titleTh": "สั้น ดอกไห่ถังใต้บัลลังก์เลือด 2026",
+    "titleTh": "ดอกไห่ถังใต้บัลลังก์เลือด 2026",
     "titleEn": "ดูละครจีนสั้น ดอกไห่ถังใต้บัลลังก์เลือด 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%94%E0%B8%AD%E0%B8%81%E0%B9%84%E0%B8%AB%E0%B9%88%E0%B8%96%E0%B8%B1%E0%B8%87%E0%B9%83%E0%B8%95%E0%B9%89%E0%B8%9A%E0%B8%B1%E0%B8%A5%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B9%8C%E0%B9%80%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%94-1.webp",
@@ -9472,41 +9472,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%94%e0%b8%ad%e0%b8%81%e0%b9%84%e0%b8%ab%e0%b9%88%e0%b8%96%e0%b8%b1%e0%b8%87%e0%b9%83%e0%b8%95%e0%b9%89%e0%b8%9a%e0%b8%b1%e0%b8%a5%e0%b8%a5%e0%b8%b1%e0%b8%87%e0%b8%81%e0%b9%8c%e0%b9%80%e0%b8%a5%e0%b8%b7%e0%b8%ad%e0%b8%94-2026/"
   },
   {
-    "titleTh": "สั้น เกิดใหม่หนนี้คู่หมั้นแทบขาดใจ 2026",
-    "titleEn": "ดูละครจีนสั้น เกิดใหม่หนนี้คู่หมั้นแทบขาดใจ 2026 (พากย์ไทย)",
-    "year": 2026,
-    "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B9%80%E0%B8%81%E0%B8%B4%E0%B8%94%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88%E0%B8%AB%E0%B8%99%E0%B8%99%E0%B8%B5%E0%B9%89%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%AB%E0%B8%A1%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B9%81%E0%B8%97%E0%B8%9A%E0%B8%82%E0%B8%B2%E0%B8%94%E0%B9%83%E0%B8%88-11.webp",
-    "backdrop": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B9%80%E0%B8%81%E0%B8%B4%E0%B8%94%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88%E0%B8%AB%E0%B8%99%E0%B8%99%E0%B8%B5%E0%B9%89%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%AB%E0%B8%A1%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B9%81%E0%B8%97%E0%B8%9A%E0%B8%82%E0%B8%B2%E0%B8%94%E0%B9%83%E0%B8%88-11.webp",
-    "videoUrl": "https://ok-hd.com/play/20ac78c86a88be0d07c720613c7d85ac",
-    "sourceType": "embed",
-    "description": "ดูละครจีนสั้น เกิดใหม่หนนี้คู่หมั้นแทบขาดใจ 2026 (พากย์ไทย) พระเอกและนางเอกจำใจแต่งงานกันทั้งที่ไม่ได้รัก ทำให้ความสัมพันธ์อึดอัด จนเกิดเหตุร้าย นางเอกถูกช่วยไว้แต่ต้องสูญเสียคนสำคัญไป เธอเสียใจอย่างห...",
-    "rating": 8.8,
-    "genres": [
-      "ดูซีรี่ย์พากย์ไทย",
-      "ซีรีส์ใหม่ 2026",
-      "พากย์ไทย",
-      "ซีรีส์จีน",
-      "ซีรีส์จีน พากย์ไทย"
-    ],
-    "duration": "ซีรีส์ 1 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "MYSERIESHD",
-    "episodes": [
-      "ตอนที่ 1"
-    ],
-    "episodeUrls": {
-      "1": "https://ok-hd.com/play/20ac78c86a88be0d07c720613c7d85ac"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "mshd-16522",
-    "postId": "16522",
-    "originalUrl": "https://myserieshd.com/%e0%b9%80%e0%b8%81%e0%b8%b4%e0%b8%94%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88%e0%b8%ab%e0%b8%99%e0%b8%99%e0%b8%b5%e0%b9%89%e0%b8%84%e0%b8%b9%e0%b9%88%e0%b8%ab%e0%b8%a1%e0%b8%b1%e0%b9%89%e0%b8%99%e0%b9%81%e0%b8%97%e0%b8%9a%e0%b8%82%e0%b8%b2%e0%b8%94%e0%b9%83%e0%b8%88-2026/"
-  },
-  {
-    "titleTh": "สั้น คุณแม่ยมทูตสู้เพื่อลูก 2026",
+    "titleTh": "คุณแม่ยมทูตสู้เพื่อลูก 2026",
     "titleEn": "ดูละครจีนสั้น คุณแม่ยมทูตสู้เพื่อลูก 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%A2%E0%B8%A1%E0%B8%97%E0%B8%B9%E0%B8%95%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A5%E0%B8%B9%E0%B8%81-11.webp",
@@ -9540,7 +9506,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%84%e0%b8%b8%e0%b8%93%e0%b9%81%e0%b8%a1%e0%b9%88%e0%b8%a2%e0%b8%a1%e0%b8%97%e0%b8%b9%e0%b8%95%e0%b8%aa%e0%b8%b9%e0%b9%89%e0%b9%80%e0%b8%9e%e0%b8%b7%e0%b9%88%e0%b8%ad%e0%b8%a5%e0%b8%b9%e0%b8%81-2026/"
   },
   {
-    "titleTh": "สั้น ชีวิตที่พลิกผัน 2026",
+    "titleTh": "ชีวิตที่พลิกผัน 2026",
     "titleEn": "ดูละครจีนสั้น ชีวิตที่พลิกผัน 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B8%81%E0%B8%9C%E0%B8%B1%E0%B8%99-11.webp",
@@ -9574,7 +9540,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%8a%e0%b8%b5%e0%b8%a7%e0%b8%b4%e0%b8%95%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b8%9e%e0%b8%a5%e0%b8%b4%e0%b8%81%e0%b8%9c%e0%b8%b1%e0%b8%99-2026/"
   },
   {
-    "titleTh": "สั้น ชะตาใหม่ของมกุฏราชกุมารี 2026",
+    "titleTh": "ชะตาใหม่ของมกุฏราชกุมารี 2026",
     "titleEn": "ดูละครจีนสั้น ชะตาใหม่ของมกุฏราชกุมารี 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%8A%E0%B8%B0%E0%B8%95%E0%B8%B2%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%A1%E0%B8%81%E0%B8%B8%E0%B8%8F%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%81%E0%B8%B8%E0%B8%A1%E0%B8%B2%E0%B8%A3%E0%B8%B5-11.webp",
@@ -9608,7 +9574,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%8a%e0%b8%b0%e0%b8%95%e0%b8%b2%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88%e0%b8%82%e0%b8%ad%e0%b8%87%e0%b8%a1%e0%b8%81%e0%b8%b8%e0%b8%8f%e0%b8%a3%e0%b8%b2%e0%b8%8a%e0%b8%81%e0%b8%b8%e0%b8%a1%e0%b8%b2%e0%b8%a3%e0%b8%b5-2026/"
   },
   {
-    "titleTh": "สั้น ลูกรักถูกขโมยชีวิต 2026",
+    "titleTh": "ลูกรักถูกขโมยชีวิต 2026",
     "titleEn": "ดูละครจีนสั้น ลูกรักถูกขโมยชีวิต 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%96%E0%B8%B9%E0%B8%81%E0%B8%82%E0%B9%82%E0%B8%A1%E0%B8%A2%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95-11.webp",
@@ -9642,7 +9608,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%a5%e0%b8%b9%e0%b8%81%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b8%96%e0%b8%b9%e0%b8%81%e0%b8%82%e0%b9%82%e0%b8%a1%e0%b8%a2%e0%b8%8a%e0%b8%b5%e0%b8%a7%e0%b8%b4%e0%b8%95-2026/"
   },
   {
-    "titleTh": "สั้น ศึกป่วนใจท่านประธาน 2026",
+    "titleTh": "ศึกป่วนใจท่านประธาน 2026",
     "titleEn": "ดูละครจีนสั้น ศึกป่วนใจท่านประธาน 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%9B%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B9%83%E0%B8%88%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%99-11.webp",
@@ -9676,7 +9642,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%a8%e0%b8%b6%e0%b8%81%e0%b8%9b%e0%b9%88%e0%b8%a7%e0%b8%99%e0%b9%83%e0%b8%88%e0%b8%97%e0%b9%88%e0%b8%b2%e0%b8%99%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b8%98%e0%b8%b2%e0%b8%99-2026/"
   },
   {
-    "titleTh": "สั้น หมอเทวดาท่าจะดื้อ 2026",
+    "titleTh": "หมอเทวดาท่าจะดื้อ 2026",
     "titleEn": "ดูละครจีนสั้น หมอเทวดาท่าจะดื้อ 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%AB%E0%B8%A1%E0%B8%AD%E0%B9%80%E0%B8%97%E0%B8%A7%E0%B8%94%E0%B8%B2%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B8%88%E0%B8%B0%E0%B8%94%E0%B8%B7%E0%B9%89%E0%B8%AD-11.webp",
@@ -9710,7 +9676,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%ab%e0%b8%a1%e0%b8%ad%e0%b9%80%e0%b8%97%e0%b8%a7%e0%b8%94%e0%b8%b2%e0%b8%97%e0%b9%88%e0%b8%b2%e0%b8%88%e0%b8%b0%e0%b8%94%e0%b8%b7%e0%b9%89%e0%b8%ad-2026/"
   },
   {
-    "titleTh": "เกาหลี Honour (2026) ทนายสามสาวฉาว",
+    "titleTh": "Honour (2026) ทนายสามสาวฉาว",
     "titleEn": "เกาหลี Honour (2026) ทนายสามสาวฉาว พากย์ไทย",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%97%E0%B8%99%E0%B8%B2%E0%B8%A2%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B8%B2%E0%B8%A7%E0%B8%89%E0%B8%B2%E0%B8%A7-111.webp",
@@ -9944,7 +9910,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/sunsets-secrets-regrets-2026/"
   },
   {
-    "titleTh": "สั้น ลูกฉันคือเทพแห่งโชคลาภ 2026",
+    "titleTh": "ลูกฉันคือเทพแห่งโชคลาภ 2026",
     "titleEn": "ดูละครจีนสั้น ลูกฉันคือเทพแห่งโชคลาภ 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%89%E0%B8%B1%E0%B8%99%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B9%82%E0%B8%8A%E0%B8%84%E0%B8%A5%E0%B8%B2%E0%B8%A0-11.webp",
@@ -9978,7 +9944,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%a5%e0%b8%b9%e0%b8%81%e0%b8%89%e0%b8%b1%e0%b8%99%e0%b8%84%e0%b8%b7%e0%b8%ad%e0%b9%80%e0%b8%97%e0%b8%9e%e0%b9%81%e0%b8%ab%e0%b9%88%e0%b8%87%e0%b9%82%e0%b8%8a%e0%b8%84%e0%b8%a5%e0%b8%b2%e0%b8%a0-2026/"
   },
   {
-    "titleTh": "สั้น หมอสูติคุมวังหลัง 2026",
+    "titleTh": "หมอสูติคุมวังหลัง 2026",
     "titleEn": "ดูละครจีนสั้น หมอสูติคุมวังหลัง 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%AB%E0%B8%A1%E0%B8%AD%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%B4%E0%B8%84%E0%B8%B8%E0%B8%A1%E0%B8%A7%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%87-11.webp",
@@ -10012,7 +9978,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%ab%e0%b8%a1%e0%b8%ad%e0%b8%aa%e0%b8%b9%e0%b8%95%e0%b8%b4%e0%b8%84%e0%b8%b8%e0%b8%a1%e0%b8%a7%e0%b8%b1%e0%b8%87%e0%b8%ab%e0%b8%a5%e0%b8%b1%e0%b8%87-2026/"
   },
   {
-    "titleTh": "สั้น รับบทตัวแทนดันเจอรักแท้ 2026",
+    "titleTh": "รับบทตัวแทนดันเจอรักแท้ 2026",
     "titleEn": "ดูละครจีนสั้น รับบทตัวแทนดันเจอรักแท้ 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%9A%E0%B8%97%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B9%81%E0%B8%97%E0%B8%99%E0%B8%94%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%88%E0%B8%AD%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B9%81%E0%B8%97%E0%B9%89-11.webp",
@@ -10046,7 +10012,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b8%a3%e0%b8%b1%e0%b8%9a%e0%b8%9a%e0%b8%97%e0%b8%95%e0%b8%b1%e0%b8%a7%e0%b9%81%e0%b8%97%e0%b8%99%e0%b8%94%e0%b8%b1%e0%b8%99%e0%b9%80%e0%b8%88%e0%b8%ad%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b9%81%e0%b8%97%e0%b9%89-2026/"
   },
   {
-    "titleTh": "สั้น รปภ.พลังเทพฟาดเรียบพวกไฮโซ (2026)",
+    "titleTh": "รปภ.พลังเทพฟาดเรียบพวกไฮโซ (2026)",
     "titleEn": "ดูละครจีนสั้น รปภ.พลังเทพฟาดเรียบพวกไฮโซ (2026) พากย์ไทย",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%A3%E0%B8%9B%E0%B8%A0.%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%9F%E0%B8%B2%E0%B8%94%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%9E%E0%B8%A7%E0%B8%81%E0%B9%84%E0%B8%AE%E0%B9%82%E0%B8%8B-1.webp",
@@ -10170,7 +10136,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/love-story-in-the-1970s-2026/"
   },
   {
-    "titleTh": "สั้น ใกล้แค่นี้แต่ไปต่อไม่ได้ 2026",
+    "titleTh": "ใกล้แค่นี้แต่ไปต่อไม่ได้ 2026",
     "titleEn": "ดูละครจีนสั้น ใกล้แค่นี้แต่ไปต่อไม่ได้ 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B9%83%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B9%81%E0%B8%84%E0%B9%88%E0%B8%99%E0%B8%B5%E0%B9%89%E0%B9%81%E0%B8%95%E0%B9%88%E0%B9%84%E0%B8%9B%E0%B8%95%E0%B9%88%E0%B8%AD%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%84%E0%B8%94%E0%B9%89-11.webp",
@@ -10204,7 +10170,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/%e0%b9%83%e0%b8%81%e0%b8%a5%e0%b9%89%e0%b9%81%e0%b8%84%e0%b9%88%e0%b8%99%e0%b8%b5%e0%b9%89%e0%b9%81%e0%b8%95%e0%b9%88%e0%b9%84%e0%b8%9b%e0%b8%95%e0%b9%88%e0%b8%ad%e0%b9%84%e0%b8%a1%e0%b9%88%e0%b9%84%e0%b8%94%e0%b9%89-2026/"
   },
   {
-    "titleTh": "สั้น วิวาห์กำมะลอซ่อนแผนคลั่งรัก 2026",
+    "titleTh": "วิวาห์กำมะลอซ่อนแผนคลั่งรัก 2026",
     "titleEn": "ดูละครจีนสั้น วิวาห์กำมะลอซ่อนแผนคลั่งรัก 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/04/%E0%B8%A7%E0%B8%B4%E0%B8%A7%E0%B8%B2%E0%B8%AB%E0%B9%8C%E0%B8%81%E0%B8%B3%E0%B8%A1%E0%B8%B0%E0%B8%A5%E0%B8%AD%E0%B8%8B%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%87%E0%B8%A3%E0%B8%B1%E0%B8%81-11.webp",
@@ -10286,7 +10252,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/love-phobia-2026/"
   },
   {
-    "titleTh": "สั้น ไม่แย่งกันแต่ยืนข้างกัน 2026",
+    "titleTh": "ไม่แย่งกันแต่ยืนข้างกัน 2026",
     "titleEn": "ดูละครจีนสั้น ไม่แย่งกันแต่ยืนข้างกัน 2026 (พากย์ไทย)",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/05/%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%81%E0%B8%A2%E0%B9%88%E0%B8%87%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%81%E0%B8%95%E0%B9%88%E0%B8%A2%E0%B8%B7%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B1%E0%B8%99-11.webp",
@@ -10927,7 +10893,7 @@ window.movies = [
     "originalUrl": "https://wow-drama.com/soul-mate-%e0%b8%9e%e0%b8%b2%e0%b8%81%e0%b8%a2%e0%b9%8c%e0%b9%84%e0%b8%97%e0%b8%a2/"
   },
   {
-    "titleTh": "จีน Light to the Night (2026) คำสารภาพคืนราตรี",
+    "titleTh": "Light to the Night (2026) คำสารภาพคืนราตรี",
     "titleEn": "จีน Light to the Night (2026) คำสารภาพคืนราตรี พากย์ไทย จบ",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/05/%E0%B8%84%E0%B8%B3%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%84%E0%B8%B7%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%95%E0%B8%A3%E0%B8%B5-111.webp",
@@ -11280,7 +11246,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/rebirth-2-2026/"
   },
   {
-    "titleTh": "จีน The Heir (2026) กงสีสีหมึก",
+    "titleTh": "The Heir (2026) กงสีสีหมึก",
     "titleEn": "จีน The Heir (2026) กงสีสีหมึก พากย์ไทย",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/05/%E0%B8%81%E0%B8%87%E0%B8%AA%E0%B8%B5%E0%B8%AA%E0%B8%B5%E0%B8%AB%E0%B8%A1%E0%B8%B6%E0%B8%81-1.webp",
@@ -11680,7 +11646,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/husbands-in-action-2026/"
   },
   {
-    "titleTh": "จีน Daughter of Fortune (2026) พลิกชะตาวิวาห์กิ่งทอง",
+    "titleTh": "Daughter of Fortune (2026) พลิกชะตาวิวาห์กิ่งทอง",
     "titleEn": "จีน Daughter of Fortune (2026) พลิกชะตาวิวาห์กิ่งทอง พากย์ไทย",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/06/%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B8%81%E0%B8%8A%E0%B8%B0%E0%B8%95%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%A7%E0%B8%B2%E0%B8%AB%E0%B9%8C%E0%B8%81%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%AD%E0%B8%87-1.webp",
@@ -12610,7 +12576,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/blast-2026/"
   },
   {
-    "titleTh": "ฝรั่ง The Wrecking Crew (2026) คู่พยัคฆ์เดือด เชือดเจ้าพ่อฮาวาย",
+    "titleTh": "The Wrecking Crew (2026) คู่พยัคฆ์เดือด เชือดเจ้าพ่อฮาวาย",
     "titleEn": "ฝรั่ง The Wrecking Crew (2026) คู่พยัคฆ์เดือด เชือดเจ้าพ่อฮาวาย",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/08/%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%9E%E0%B8%A2%E0%B8%B1%E0%B8%84%E0%B8%86%E0%B9%8C%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD%E0%B8%94-%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B8%AD%E0%B8%94%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B9%88%E0%B8%AD%E0%B8%AE%E0%B8%B2%E0%B8%A7%E0%B8%B2%E0%B8%A2-11.webp",
@@ -12678,7 +12644,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/maa-behen-2026/"
   },
   {
-    "titleTh": "จีน Thief Female Hero (2026)",
+    "titleTh": "Thief Female Hero (2026)",
     "titleEn": "จีน Thief Female Hero (2026) พากย์ไทย",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/08/Thief-Female-Hero-11.webp",
@@ -12746,7 +12712,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/vadh-2-2026/"
   },
   {
-    "titleTh": "ฝรั่ง Supergirl (2026) ซูเปอร์เกิร์ล",
+    "titleTh": "Supergirl (2026) ซูเปอร์เกิร์ล",
     "titleEn": "ฝรั่ง Supergirl (2026) ซูเปอร์เกิร์ล พากย์ไทย",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/08/%E0%B8%8B%E0%B8%B9%E0%B9%80%E0%B8%9B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%81%E0%B8%B4%E0%B8%A3%E0%B9%8C%E0%B8%A5-11.webp",
@@ -12780,7 +12746,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/supergirl-2026/"
   },
   {
-    "titleTh": "จีน Blades of The Guardians (2026) ยอดยุทธดาบไร้พ่าย",
+    "titleTh": "Blades of The Guardians (2026) ยอดยุทธดาบไร้พ่าย",
     "titleEn": "จีน Blades of The Guardians (2026) ยอดยุทธดาบไร้พ่าย HD",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/08/%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B8%A2%E0%B8%B8%E0%B8%97%E0%B8%98%E0%B8%94%E0%B8%B2%E0%B8%9A%E0%B9%84%E0%B8%A3%E0%B9%89%E0%B8%9E%E0%B9%88%E0%B8%B2%E0%B8%A2-1.webp",
@@ -12814,7 +12780,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/blades-of-the-guardians-2026/"
   },
   {
-    "titleTh": "จีน Per Aspera Ad Astra (2026) ฝ่าห้วงฝันสู่ดวงดาว",
+    "titleTh": "Per Aspera Ad Astra (2026) ฝ่าห้วงฝันสู่ดวงดาว",
     "titleEn": "จีน Per Aspera Ad Astra (2026) ฝ่าห้วงฝันสู่ดวงดาว",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/08/%E0%B8%9D%E0%B9%88%E0%B8%B2%E0%B8%AB%E0%B9%89%E0%B8%A7%E0%B8%87%E0%B8%9D%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%94%E0%B8%A7%E0%B8%87%E0%B8%94%E0%B8%B2%E0%B8%A7-11.webp",
@@ -12848,7 +12814,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/per-aspera-ad-astra-2026/"
   },
   {
-    "titleTh": "จีน Double Happiness (2026) วิวาห์สุขสันต์คูณสอง",
+    "titleTh": "Double Happiness (2026) วิวาห์สุขสันต์คูณสอง",
     "titleEn": "จีน Double Happiness (2026) วิวาห์สุขสันต์คูณสอง",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/08/%E0%B8%A7%E0%B8%B4%E0%B8%A7%E0%B8%B2%E0%B8%AB%E0%B9%8C%E0%B8%AA%E0%B8%B8%E0%B8%82%E0%B8%AA%E0%B8%B1%E0%B8%99%E0%B8%95%E0%B9%8C%E0%B8%84%E0%B8%B9%E0%B8%93%E0%B8%AA%E0%B8%AD%E0%B8%87-11.webp",
@@ -13009,7 +12975,7 @@ window.movies = [
     "originalUrl": "https://wow-drama.com/sx-2026/"
   },
   {
-    "titleTh": "เกาหลี Number one (2026) นับหนึ่งถึงมื้อแม่",
+    "titleTh": "Number one (2026) นับหนึ่งถึงมื้อแม่",
     "titleEn": "เกาหลี Number one (2026) นับหนึ่งถึงมื้อแม่ พากย์ไทย",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/08/%E0%B8%99%E0%B8%B1%E0%B8%9A%E0%B8%AB%E0%B8%99%E0%B8%B6%E0%B9%88%E0%B8%87%E0%B8%96%E0%B8%B6%E0%B8%87%E0%B8%A1%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%81%E0%B8%A1%E0%B9%88-11.webp",
@@ -13078,7 +13044,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/ghost-in-the-cell-2026/"
   },
   {
-    "titleTh": "ฝรั่ง Facing El Chapo (2026) เผชิญหน้าเอล ชาโป",
+    "titleTh": "Facing El Chapo (2026) เผชิญหน้าเอล ชาโป",
     "titleEn": "ฝรั่ง Facing El Chapo (2026) เผชิญหน้าเอล ชาโป",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/08/%E0%B9%80%E0%B8%9C%E0%B8%8A%E0%B8%B4%E0%B8%8D%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%AD%E0%B8%A5-%E0%B8%8A%E0%B8%B2%E0%B9%82%E0%B8%9B-11.webp",
@@ -13251,7 +13217,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/gandhari-2026/"
   },
   {
-    "titleTh": "จีน Vanishing Point (2026) คดีลึกตึกลับ",
+    "titleTh": "Vanishing Point (2026) คดีลึกตึกลับ",
     "titleEn": "จีน Vanishing Point (2026) คดีลึกตึกลับ พากย์ไทย",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/09/%E0%B8%84%E0%B8%94%E0%B8%B5%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B8%95%E0%B8%B6%E0%B8%81%E0%B8%A5%E0%B8%B1%E0%B8%9A-11.webp",
@@ -13285,7 +13251,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/vanishing-point-2026/"
   },
   {
-    "titleTh": "เกาหลี Wild Sing (2026) ขาแดนซ์คืนเวทีขยี้ไมค์",
+    "titleTh": "Wild Sing (2026) ขาแดนซ์คืนเวทีขยี้ไมค์",
     "titleEn": "เกาหลี Wild Sing (2026) ขาแดนซ์คืนเวทีขยี้ไมค์ พากย์ไทย",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/09/%E0%B8%82%E0%B8%B2%E0%B9%81%E0%B8%94%E0%B8%99%E0%B8%8B%E0%B9%8C%E0%B8%84%E0%B8%B7%E0%B8%99%E0%B9%80%E0%B8%A7%E0%B8%97%E0%B8%B5%E0%B8%82%E0%B8%A2%E0%B8%B5%E0%B9%89%E0%B9%84%E0%B8%A1%E0%B8%84%E0%B9%8C-11.webp",
@@ -13460,7 +13426,7 @@ window.movies = [
     "originalUrl": "https://wow-drama.com/the-fixers-2026/"
   },
   {
-    "titleTh": "จีน Special Bodyguard (2026) บอดี้การ์ดพิเศษ",
+    "titleTh": "Special Bodyguard (2026) บอดี้การ์ดพิเศษ",
     "titleEn": "จีน Special Bodyguard (2026) บอดี้การ์ดพิเศษ พากย์ไทย",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/09/%E0%B8%9A%E0%B8%AD%E0%B8%94%E0%B8%B5%E0%B9%89%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%94%E0%B8%9E%E0%B8%B4%E0%B9%80%E0%B8%A8%E0%B8%A9-11.webp",
@@ -13747,7 +13713,7 @@ window.movies = [
     "originalUrl": "https://wow-drama.com/a-prophet-2026/"
   },
   {
-    "titleTh": "จีน Almost Human (2026) แฟนสาวมนุษย์กล",
+    "titleTh": "Almost Human (2026) แฟนสาวมนุษย์กล",
     "titleEn": "จีน Almost Human (2026) แฟนสาวมนุษย์กล พากย์ไทย",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/10/%E0%B9%81%E0%B8%9F%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%A7%E0%B8%A1%E0%B8%99%E0%B8%B8%E0%B8%A9%E0%B8%A2%E0%B9%8C%E0%B8%81%E0%B8%A5-11.jpg",
@@ -13781,7 +13747,7 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/almost-human-2026/"
   },
   {
-    "titleTh": "ฝรั่ง Spider Man Brand New Day (2026) สไปเดอร์แมน แบรนด์ นิว เดย์",
+    "titleTh": "Spider Man Brand New Day (2026) สไปเดอร์แมน แบรนด์ นิว เดย์",
     "titleEn": "ฝรั่ง Spider Man Brand New Day (2026) สไปเดอร์แมน แบรนด์ นิว เดย์",
     "year": 2026,
     "poster": "https://myserieshd.com/wp-content/uploads/2026/10/%E0%B8%AA%E0%B9%84%E0%B8%9B%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%81%E0%B8%A1%E0%B8%99-%E0%B9%81%E0%B8%9A%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C-%E0%B8%99%E0%B8%B4%E0%B8%A7-%E0%B9%80%E0%B8%94%E0%B8%A2%E0%B9%8C-11.jpg",
@@ -13816,26 +13782,25 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/spider-man-brand-new-day-2026/"
   },
   {
-    "titleTh": "จีน Ash (2026) เถ้าบุหรี่",
-    "titleEn": "จีน Ash (2026) เถ้าบุหรี่ พากย์ไทย",
+    "titleTh": "Ash (2026) เถ้าบุหรี่",
+    "titleEn": "Ash (2026) เถ้าบุหรี่ พากย์ไทย",
     "year": 2026,
-    "poster": "https://myserieshd.com/wp-content/uploads/2026/08/%E0%B9%80%E0%B8%96%E0%B9%89%E0%B8%B2%E0%B8%9A%E0%B8%B8%E0%B8%AB%E0%B8%A3%E0%B8%B5%E0%B9%88-1.webp",
-    "backdrop": "https://myserieshd.com/wp-content/uploads/2026/08/%E0%B9%80%E0%B8%96%E0%B9%89%E0%B8%B2%E0%B8%9A%E0%B8%B8%E0%B8%AB%E0%B8%A3%E0%B8%B5%E0%B9%88-1.webp",
-    "videoUrl": "https://ok-hd.com/play/b47e2144754477f753b4a2bc87036b29",
+    "poster": "images/clean_posters/wow-104551.jpg",
+    "backdrop": "images/clean_posters/wow-104551.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/7e45e57e45a022531dc4c1da27333293",
     "sourceType": "embed",
-    "description": "ดูซีรี่ย์จีน Ash (2026) เถ้าบุหรี่ พากย์ไทย พระเอกผู้มีอิทธิพลและไม่เคยจริงจังกับความสัมพันธ์ มักใช้คนแล้วทิ้ง แต่นายเอกกลับเป็นคนพิเศษที่ทำให้เขาตกหลุมรักโดยไม่รู้ตัว จนเมื่อสูญเสียไป เขากลับทนไม่ได้...",
-    "rating": 8.8,
+    "description": "ซีรี่ส์จีน Ash (2026) เถ้าบุหรี่ พากย์ไทย พระเอกในตอนนี้นั้นเริ่มรู้สึกว่าตัวเองนั้นไม่สามารถที่จะขาดนายเอกไปได้เลยจะเป็นอย่างไรต้องติดตามชม",
+    "rating": 8.6,
     "genres": [
-      "ดูซีรี่ย์พากย์ไทย",
-      "ซีรีส์ใหม่ 2026",
       "พากย์ไทย",
       "ซีรีส์จีน",
-      "ซีรีส์จีน พากย์ไทย"
+      "ซีรีส์จีน พากย์ไทย",
+      "ซีรีส์ใหม่ 2026"
     ],
     "duration": "ซีรีส์ 9 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
-    "source": "MYSERIESHD",
+    "source": "WOW-DRAMA",
     "episodes": [
       "ตอนที่ 1",
       "ตอนที่ 2",
@@ -13848,22 +13813,22 @@ window.movies = [
       "ตอนที่ 9"
     ],
     "episodeUrls": {
-      "1": "https://ok-hd.com/play/b47e2144754477f753b4a2bc87036b29",
-      "2": "https://ok-hd.com/play/31c65b7c74a3029b506aa4ca0e8d2a4f",
-      "3": "https://ok-hd.com/play/40742aa3505bc04148868069faa34627",
-      "4": "https://ok-hd.com/play/53585ff8bf2b45ae96274ec7657bcf40",
-      "5": "https://ok-hd.com/play/e95cd46c159613472c8bbd4ca0e9642f",
-      "6": "https://ok-hd.com/play/bd027d8a851c86cb40775cd7c05a2ab7",
-      "7": "https://ok-hd.com/play/85b00a07e3d8e354160d2e94452f698a",
-      "8": "https://ok-hd.com/play/942ff75475158bd3fc195830dad856cb",
-      "9": "https://ok-hd.com/play/3d538c8240f7d023d8ebf91b1854e5bb"
+      "1": "https://getplay-cdn.com/embed/7e45e57e45a022531dc4c1da27333293",
+      "2": "https://getplay-cdn.com/embed/10e14ad4a6daabbda34e72bc7c2ea709",
+      "3": "https://getplay-cdn.com/embed/8f6cff921337eae79af4fbc4cb79d26d",
+      "4": "https://getplay-cdn.com/embed/d98973aba705581aff2b465b5ef40838",
+      "5": "https://getplay-cdn.com/embed/8a33da5b6da246b2ff38cb2d4b9b78dd",
+      "6": "https://getplay-cdn.com/embed/f958a208f99e30d898c50a43dbc49dd9",
+      "7": "https://getplay-cdn.com/embed/49732232dc3963c29710ecd4d7345a03",
+      "8": "https://getplay-cdn.com/embed/bbfadc374e8e2022305a770bf88280c5",
+      "9": "https://getplay-cdn.com/embed/15e783415f1b915abff580ffde33ee0d"
     },
     "languages": [
       "Thai (พากย์ไทย)"
     ],
-    "id": "mshd-18596",
-    "postId": "18596",
-    "originalUrl": "https://myserieshd.com/ash-2026/"
+    "id": "wow-104551",
+    "postId": "104551",
+    "originalUrl": "https://wow-drama.com/ash-2026/"
   },
   {
     "titleTh": "อินเดีย Reporting Live (2026) รายงานสด",
@@ -15787,48 +15752,6 @@ window.movies = [
     "originalUrl": "https://goseries4k.com/dear-x/"
   },
   {
-    "titleTh": "Made in Korea 2 (2026)",
-    "titleEn": "Made in Korea 2 (2026)พากย์ไทยEP.1-6",
-    "year": 2026,
-    "poster": "images/clean_posters/gs-131697.jpg",
-    "backdrop": "images/clean_posters/gs-131697.jpg",
-    "videoUrl": "https://torbo007.com/embed/2cceb92f227f4423687b34e4c170c9d2",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ:Made in Korea 2💥❔ Made in Korea 2 พร้อมเปิดตัวครั้งใหม่อย่างเป็นทางการ จากซีซั่นที่ทำออกมาได้ดีเกิดคาด กับเกมการเมือง-อาชญกรรม ที่ได้กลับมาอีกครั้งพร้อมเกมอำนาจแห่งการแย้งชิงอย่างดุเดือด ที่มีให้เห็นในซีซั่นที่2 แบคกีแท ชายหนุ่มที่พยายามขับเคลื่อนชีวิตและการเป็นอยู่มาด้วยความแค้น แต่กลับเชื่อถืออำนาจความมั่นคง ในครั้งนี้เขากลับก้าวเข้ามาอยูาบนจุดสูงสุด ของเกมการเมืองอย่างแท้จริง จากภาพลักษณ์ที่น่าเชื่อถือ นิ่ง เฉียบ และยากที่จะเข้าใกล้ ในขณะเดียวกันนั้น จางกอนยอง อัยการผู้เคยใช้ชีวิตในการเดิมพันทุกอย่างเพื่อการโค้นล้ม พร้อมการกลับมาในเวอรืชั่นที่ดีที่สุด ไม่ต่างจากการเดินหมากเกมและการโต้กลับเหล่าผู้มีอำนาจ และการแปรผันของน้องชาย แบคกีแท ที่เลือกเส้นทางอำนาจในแบบของตนเอง พร้อมจึงกลายเป็นผู้ที่สามารถยืนอยุ่ในระหว่างสองขั้วอำนาจมืด และเป็นเพียงหนึ่งเดียวในการปลดล็อกกุญแจสำคัญของเหตุการณ์ครั้งนี้ สุดท้ายแล้วเรื่องราวทุกอย่างจะจบลงอย่างไรเราไปรับชมกันต่อได้ที่ ดูซีรี่ย์ออนไลน์G4",
-    "rating": 8.8,
-    "genres": [
-      "ดูซีรี่ย์พากย์ไทย",
-      "ซีรีส์แนะนำใหม่ 2026",
-      "พากย์ไทย"
-    ],
-    "duration": "ซีรีส์ 6 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "GOSERIES4K",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6"
-    ],
-    "episodeUrls": {
-      "1": "https://torbo007.com/embed/2cceb92f227f4423687b34e4c170c9d2",
-      "2": "https://torbo007.com/embed/899cc0b31263e108e71d594a994e5f62",
-      "3": "https://torbo007.com/embed/7ab52db4946e0da0755f2c58a3df07f6",
-      "4": "https://torbo007.com/embed/67422260f1b462ab78b3e70897f2ad57",
-      "5": "https://torbo007.com/embed/bd393d00bcf23ad40761b8c1c4ba0527",
-      "6": "https://torbo007.com/embed/111ca663db598ec4b76876775dd23b3f"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "gs-131697",
-    "postId": "131697",
-    "originalUrl": "https://goseries4k.com/made-in-korea-2/"
-  },
-  {
     "titleTh": "Four Hands, Two Sonatas (2026)",
     "titleEn": "Four Hands, Two Sonatas (2026) EP.1-12",
     "year": 2026,
@@ -16297,7 +16220,7 @@ window.movies = [
     "originalUrl": "https://goseries4k.com/%e0%b8%aa%e0%b8%b0%e0%b8%81%e0%b8%94%e0%b9%83%e0%b8%88%e0%b9%83%e0%b8%ab%e0%b9%89%e0%b9%80%e0%b8%88%e0%b8%ad%e0%b9%80%e0%b8%98%e0%b8%ad/"
   },
   {
-    "titleTh": "จีน เมื่อหัวใจห่างไกลรัก Love in the Edge of Divorce (2025) .",
+    "titleTh": "เมื่อหัวใจห่างไกลรัก Love in the Edge of Divorce (2025) .",
     "titleEn": "จีน เมื่อหัวใจห่างไกลรัก | Love in the Edge of Divorce (2025)พากย์ไทยEP.1-31 End.",
     "year": 2026,
     "poster": "images/clean_posters/gs-129827.jpg",
@@ -16491,7 +16414,7 @@ window.movies = [
     "originalUrl": "https://goseries4k.com/%e0%b8%94%e0%b8%b9%e0%b8%8b%e0%b8%b5%e0%b8%a3%e0%b8%b5%e0%b9%88%e0%b8%a2%e0%b9%8c-the-princesss-gambit/"
   },
   {
-    "titleTh": "จีน Kill My Sins (2025) ล้างบ่วงบาป",
+    "titleTh": "Kill My Sins (2025) ล้างบ่วงบาป",
     "titleEn": "จีน Kill My Sins (2025) ล้างบ่วงบาปพากย์ไทยEP1-30 (End)",
     "year": 2026,
     "poster": "images/clean_posters/gs-94931.jpg",
@@ -17242,7 +17165,7 @@ window.movies = [
     "originalUrl": "https://goseries4k.com/back-from-the-brink-2023-%e0%b8%a5%e0%b9%88%e0%b8%b2%e0%b8%ab%e0%b8%b1%e0%b8%a7%e0%b9%83%e0%b8%88%e0%b8%a1%e0%b8%b1%e0%b8%87%e0%b8%81%e0%b8%a3-2/"
   },
   {
-    "titleTh": "จีน เธอคือเพลงรักฤดูหนาว (2024) Love Song in Winter",
+    "titleTh": "เธอคือเพลงรักฤดูหนาว (2024) Love Song in Winter",
     "titleEn": "จีน เธอคือเพลงรักฤดูหนาว (2024) Love Song in Winter พากย์ไทย EP.1-36 (END)",
     "year": 2026,
     "poster": "images/clean_posters/gs-93319.jpg",
@@ -17700,7 +17623,7 @@ window.movies = [
     "originalUrl": "https://wow-drama.com/stolen-love-%e0%b8%9e%e0%b8%b2%e0%b8%81%e0%b8%a2%e0%b9%8c%e0%b9%84%e0%b8%97%e0%b8%a2/"
   },
   {
-    "titleTh": "จีน Abyss เหวลึกไร้จุดจบ (2026)",
+    "titleTh": "Abyss เหวลึกไร้จุดจบ (2026)",
     "titleEn": "จีน Abyss เหวลึกไร้จุดจบ (2026)พากย์ไทยEP.1-16",
     "year": 2026,
     "poster": "images/clean_posters/gs-131698.jpg",
@@ -18605,24 +18528,27 @@ window.movies = [
     "originalUrl": "https://goseries4k.com/reunion-across-time/"
   },
   {
-    "titleTh": "MobLand ม็อบแลนด์ ซีซั่น 2 (2026)",
-    "titleEn": "MobLand ม็อบแลนด์ ซีซั่น 2 (2026) พากย์ไทย EP.1-10",
+    "titleTh": "MobLand ม็อบแลนด์ (2026)",
+    "titleEn": "MobLand ม็อบแลนด์ (2026)",
     "year": 2026,
-    "poster": "images/clean_posters/gs-132252.jpg",
-    "backdrop": "images/clean_posters/gs-132252.jpg",
+    "poster": "images/clean_posters/mobland____________2026.jpg",
+    "backdrop": "images/clean_posters/mobland____________2026.jpg",
     "videoUrl": "https://torbo007.com/embed/bced97b63f9f325611752b80e88e8acb",
     "sourceType": "embed",
-    "description": "เรื่องย่อ-ม็อบแลนด์ซีซัน2 เรื่องราวจากตระกูลแฮร์ริแกนที่ผ่านเรื่องราวร้ายๆมาได้ทั้งการผ่ากระสุนและคุกตารางมาได้...แต่การเอาชีวิตรอดจากสายเลือดเดียวกันเอง อาจจะเป็นเรื่องราวที่ยากที่สุด เป็นอีกหนึ่งการเล่าเรื่องต่อจากซีซันแรกของ เควิน แฮร์ริแกน ที่สถาปนาตัวเองขึ้นเป็นบุคคลใหม่จากตระกูล พร้อมพ่อและแม่ของเขาที่พยายามหลุดพ้นโทษออกคุกมาทวงคืนความยุติธรรมและอำนาจคืน แต่แล้วเมื่อความขัดแย้งปะทุขึ้นทันที ในตอนแรกที่ติดอยู่สนามแข่งสุนัก เควิน ต่างพยายามข้ามหน้าข้ามตาพ่อตัวเองไปด้วย เจรจาดีลเฮโรอีนมูลค่ามหาศาลกับมาเฟียตุรกี ต่างโกรธแค้นและตอบโต้อย่างโหดเหี้ยมด้วยการฆ่าล้างแค้น ของเหล่าบางกลุ่มที่เกี่ยวข้องกับพันธมิตรตุรกี ทั้งหมดเพื่อการสั่งสอนลูกชาย นอกจาก เควิน ได้ดึงตัวของ แฟรงกี้ นักจัดการปัญหาคนใหม่เข้ามาร่วมแก้ไขปัญหาความวุ่นวายของเรื่องราวเหล่านี้ ต่างพยายามเริ่มวางแผนตั้งต้นแผนการครั้งใหม่ขึ้นมาอีกครั้ง เพื่อผลประโยชน์ของตัวเองเท่านั้น สุดท้ายแล้วจุดจบของซีรี่ย์เรื่องนี้จะจบลงอย่างไรเราไปรับชมกันต่อได้ที่ ดูซีรี่ย์ออนไลน์G4",
-    "rating": 8.8,
+    "description": "ดูซีรีส์ MobLand ม็อบแลนด์ (2026) อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
     "genres": [
-      "ดูซีรี่ย์พากย์ไทย",
-      "ซีรีส์แนะนำใหม่ 2026",
+      "ซีรีส์",
+      "ดราม่า",
       "พากย์ไทย"
     ],
     "duration": "ซีรีส์ 7 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
     "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/mobland/",
     "episodes": [
       "ตอนที่ 1",
       "ตอนที่ 2",
@@ -18644,9 +18570,7 @@ window.movies = [
     "languages": [
       "Thai (พากย์ไทย)"
     ],
-    "id": "gs-132252",
-    "postId": "132252",
-    "originalUrl": "https://goseries4k.com/mobland/"
+    "id": "g4-548"
   },
   {
     "titleTh": "100 Days of Deception 100 วันปฏิบัติการลวง (2026)",
@@ -26115,43 +26039,6 @@ window.movies = [
     ]
   },
   {
-    "titleTh": "MobLand ม็อบแลนด์ (2026)",
-    "titleEn": "MobLand ม็อบแลนด์ (2026)",
-    "year": 2026,
-    "poster": "images/clean_posters/mobland____________2026.jpg",
-    "backdrop": "images/clean_posters/mobland____________2026.jpg",
-    "videoUrl": "https://torbo007.com/embed/bced97b63f9f325611752b80e88e8acb",
-    "sourceType": "embed",
-    "description": "ดูซีรีส์ MobLand ม็อบแลนด์ (2026) อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
-    "rating": 8.9,
-    "genres": [
-      "ซีรีส์",
-      "ดราม่า",
-      "พากย์ไทย"
-    ],
-    "duration": "3 ตอน (พากย์ไทย)",
-    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    "cast": [
-      "นักแสดงนำคุณภาพ"
-    ],
-    "source": "GOSERIES4K",
-    "sourcePageUrl": "https://goseries4k.com/mobland/",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3"
-    ],
-    "episodeUrls": {
-      "1": "https://torbo007.com/embed/bced97b63f9f325611752b80e88e8acb",
-      "2": "https://torbo007.com/embed/3b1440d6a5e8640ac80b1ec080af934b",
-      "3": "https://torbo007.com/embed/e5b4f97fcd901606db7cb0b24a10cf22"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "g4-548"
-  },
-  {
     "titleTh": "กับดักอันตรายผู้ชาย 3B The 3Bs You Shouldn't Date",
     "titleEn": "กับดักอันตรายผู้ชาย 3B The 3Bs You Shouldn't Date",
     "year": 2026,
@@ -28684,55 +28571,6 @@ window.movies = [
     "originalUrl": "https://wow-drama.com/legend-of-zu-mountain-2015/"
   },
   {
-    "titleTh": "Ash (2026) เถ้าบุหรี่",
-    "titleEn": "Ash (2026) เถ้าบุหรี่ พากย์ไทย",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-104551.jpg",
-    "backdrop": "images/clean_posters/wow-104551.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/7e45e57e45a022531dc4c1da27333293",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์จีน Ash (2026) เถ้าบุหรี่ พากย์ไทย พระเอกในตอนนี้นั้นเริ่มรู้สึกว่าตัวเองนั้นไม่สามารถที่จะขาดนายเอกไปได้เลยจะเป็นอย่างไรต้องติดตามชม",
-    "rating": 8.6,
-    "genres": [
-      "พากย์ไทย",
-      "ซีรีส์จีน",
-      "ซีรีส์จีน พากย์ไทย",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 9 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/7e45e57e45a022531dc4c1da27333293",
-      "2": "https://getplay-cdn.com/embed/10e14ad4a6daabbda34e72bc7c2ea709",
-      "3": "https://getplay-cdn.com/embed/8f6cff921337eae79af4fbc4cb79d26d",
-      "4": "https://getplay-cdn.com/embed/d98973aba705581aff2b465b5ef40838",
-      "5": "https://getplay-cdn.com/embed/8a33da5b6da246b2ff38cb2d4b9b78dd",
-      "6": "https://getplay-cdn.com/embed/f958a208f99e30d898c50a43dbc49dd9",
-      "7": "https://getplay-cdn.com/embed/49732232dc3963c29710ecd4d7345a03",
-      "8": "https://getplay-cdn.com/embed/bbfadc374e8e2022305a770bf88280c5",
-      "9": "https://getplay-cdn.com/embed/15e783415f1b915abff580ffde33ee0d"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-104551",
-    "postId": "104551",
-    "originalUrl": "https://wow-drama.com/ash-2026/"
-  },
-  {
     "titleTh": "บินสู่กลางใจฉัน",
     "titleEn": "บินสู่กลางใจฉัน พากย์ไทย HD",
     "year": 2026,
@@ -29526,7 +29364,7 @@ window.movies = [
     "originalUrl": "https://wow-drama.com/khom-khlang-2026/"
   },
   {
-    "titleTh": "ไทย หัวใจกาฝาก A Parasite s Heart (TV Series 2026)",
+    "titleTh": "หัวใจกาฝาก A Parasite s Heart (TV Series 2026)",
     "titleEn": "ไทย หัวใจกาฝาก : A Parasite s Heart (TV Series 2026)",
     "year": 2026,
     "poster": "images/clean_posters/wow-106535.jpg",
@@ -33952,7 +33790,7 @@ window.movies = [
     "originalUrl": "https://goseries4k.com/yuezhou-phantom-tales/"
   },
   {
-    "titleTh": "จีน Cage of Shadows กรงขังแห่งเงา (2026)",
+    "titleTh": "Cage of Shadows กรงขังแห่งเงา (2026)",
     "titleEn": "จีน Cage of Shadows กรงขังแห่งเงา (2026) พากย์ไทย EP.1-23",
     "year": 2026,
     "poster": "images/clean_posters/gs-125642.jpg",
@@ -34115,7 +33953,7 @@ window.movies = [
     "originalUrl": "https://goseries4k.com/man-on-fire/"
   },
   {
-    "titleTh": "จีน Fall in Love พิสูจน์รักข้ามเวล (2026)",
+    "titleTh": "Fall in Love พิสูจน์รักข้ามเวล (2026)",
     "titleEn": "จีน Fall in Love พิสูจน์รักข้ามเวล (2026) พากย์ไทย EP.1-23",
     "year": 2026,
     "poster": "images/clean_posters/gs-122297.jpg",

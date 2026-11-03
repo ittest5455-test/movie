@@ -991,12 +991,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>./#play-mshd-16522</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>./#play-mshd-16544</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -1459,7 +1453,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>./#play-mshd-18596</loc>
+    <loc>./#play-wow-104551</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1646,12 +1640,6 @@
   </url>
   <url>
     <loc>./#play-gs-121194</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>./#play-gs-131697</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1849,7 +1837,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>./#play-gs-132252</loc>
+    <loc>./#play-g4-548</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -3073,12 +3061,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>./#play-g4-548</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>./#play-wow-51129</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -3350,12 +3332,6 @@
   </url>
   <url>
     <loc>./#play-wow-105198</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>./#play-wow-104551</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

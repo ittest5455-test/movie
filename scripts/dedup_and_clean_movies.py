@@ -32,6 +32,7 @@ def clean_title_for_display(title):
     t = title
     # ตัดคำนำหน้า
     t = re.sub(r'^(?:ฟรี|HD|Zoom|ดูซีรี่[ยส]์?|ดูซีรีส์|ซีรี่[ยส]์?|ซีรีส์|ดูละคร|ละคร|ดูหนัง|หนัง)\s*(?:ไทย|จีน|เกาหลี|ญี่ปุ่น|ฝรั่ง|เอเชีย)?\s*[:|]?\s*', '', t, flags=re.IGNORECASE)
+    t = re.sub(r'^(?:จีน|เกาหลี|ญี่ปุ่น|ฝรั่ง|ไทย|สั้น)\s+', '', t, flags=re.IGNORECASE)
     # ตัดแท็กเสียงพากย์ ทุกจุด
     t = re.sub(r'\(?\s*(?:พากย์ไทย\s*[/|+-]\s*ซับไทย|ซับไทย\s*[/|+-]\s*พากย์ไทย|พากย์ไทย\+ซับ|ซับไทย\s*\|\s*พากย์ไทย|ซับไทย|พากย์ไทย)\s*\)?', ' ', t, flags=re.IGNORECASE)
     # ตัดคำว่า จบ, ตอนจบ, เต็มเรื่อง, EP ทุกจุด
@@ -48,11 +49,12 @@ def extract_match_tokens(title):
         return [], ""
     cleaned = clean_title_for_display(title)
     
-    # ตรวจจับ Season
-    season_m = re.search(r'(?:ซีซั่น|ซีซัน|season|ภาค|ss|s)\s*(\d+)', title, re.IGNORECASE)
+    # ตรวจจับ Season (ทั้งแบบ Season 2, ซีซั่น 2 และเลขท้ายชื่อเรื่อง เช่น Korea 2)
+    name_only = re.sub(r'\(?\s*20\d{2}\s*\)?', '', cleaned).strip()
+    season_m = re.search(r'(?:ซีซั่น|ซีซัน|season|ภาค|ss|s)\s*(\d+)', name_only, re.IGNORECASE) or re.search(r'(?:ซีซั่น|ซีซัน|season|ภาค|ss|s)?\s*(\d+)\s*$', name_only, re.IGNORECASE)
     season_tag = f"_s{season_m.group(1)}" if season_m else ""
     
-    name_only = re.sub(r'\(?\s*20\d{2}\s*\)?', '', cleaned)
+    name_only = re.sub(r'(?:ซีซั่น|ซีซัน|season|ภาค|ss|s)?\s*\d+\s*$', '', name_only, flags=re.IGNORECASE)
     name_only = re.sub(r'(?:ซีซั่น|ซีซัน|season|ภาค|ss|s)\s*\d+', '', name_only, flags=re.IGNORECASE)
     
     en_parts = re.findall(r'[a-zA-Z]+', name_only)
@@ -180,6 +182,7 @@ def deduplicate_movie_list(movies):
             parent[pi] = pj
             
     token_to_idx = {}
+    video_to_idx = {}
     for i, m in enumerate(movies):
         tokens, _ = extract_match_tokens(m.get('titleTh') or m.get('titleEn'))
         for tok in tokens:
@@ -187,6 +190,12 @@ def deduplicate_movie_list(movies):
                 union(i, token_to_idx[tok])
             else:
                 token_to_idx[tok] = i
+        v_url = m.get('videoUrl', '').strip()
+        if v_url and len(v_url) > 25:
+            if v_url in video_to_idx:
+                union(i, video_to_idx[v_url])
+            else:
+                video_to_idx[v_url] = i
                 
     clusters = defaultdict(list)
     for i in range(n):
