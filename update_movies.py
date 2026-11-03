@@ -993,7 +993,7 @@ def fetch_single_24today(link, min_rating=6.0):
     except Exception:
         return None
 
-def update_24hd_today(min_rating=6.0, max_pages=3):
+def update_24hd_today(min_rating=6.0, max_pages=2):
     """
     ดึงข้อมูลภาพยนตร์จาก 24HD.TODAY (https://www.24hd.today/)
     เงื่อนไข:
@@ -1049,7 +1049,7 @@ def update_24hd_today(min_rating=6.0, max_pages=3):
     return new_movies
 
 
-def update_myserieshd(max_pages=15):
+def update_myserieshd(max_pages=5):
     """
     ดึงข้อมูลซีรีส์และภาพยนตร์ปี 2026 เฉพาะพากย์ไทยจาก MySeriesHD (https://myserieshd.com/)
     ดึงผ่านระบบค้นหา '2026 พากย์ไทย' พร้อมระบบ Multithreading ดึงตอนครบทุกตอน
@@ -1610,8 +1610,8 @@ def main(auto_push=True):
     scraped_media = safe_run(update_24hd_media, "24HD.MEDIA")
     scraped_gs = safe_run(update_goseries4k, "GOSERIES4K")
     scraped_wow = safe_run(update_wow_drama, "WOW-DRAMA", max_pages=2)
-    scraped_today = safe_run(update_24hd_today, "24HD.TODAY", min_rating=6.0, max_pages=3)
-    scraped_mshd = safe_run(update_myserieshd, "MYSERIESHD", max_pages=15)
+    scraped_today = safe_run(update_24hd_today, "24HD.TODAY", min_rating=6.0, max_pages=2)
+    scraped_mshd = safe_run(update_myserieshd, "MYSERIESHD", max_pages=5)
     
     # 2. คัดกรอง ลบหนังซ้ำ และเลือกเฉพาะอันที่ดีที่สุด (Best Version Deduplication)
     print("\n--- กำลังคัดกรอง ลบหนังซ้ำ และเลือกเฉพาะเวอร์ชันที่ดีที่สุด ---")
