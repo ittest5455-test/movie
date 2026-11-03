@@ -37,6 +37,22 @@ function doGet(e) {
         return HtmlService.createHtmlOutput("<h2 style='color:#ef4444;text-align:center;padding:40px;font-family:sans-serif;'>❌ รหัสความปลอดภัยไม่ถูกต้อง (Unauthorized)</h2>");
       }
 
+      // ตรวจสอบคำสั่งอัปเดตหนังจากคอมพิวเตอร์
+      if (action === "check_update_command") {
+        var props = PropertiesService.getScriptProperties();
+        var pending = props.getProperty("PENDING_UPDATE_TRIGGER");
+        if (pending === "true") {
+          props.deleteProperty("PENDING_UPDATE_TRIGGER");
+          return ContentService.createTextOutput(JSON.stringify({
+            has_command: true,
+            requested_at: props.getProperty("PENDING_UPDATE_TIME") || ""
+          })).setMimeType(ContentService.MimeType.JSON);
+        }
+        return ContentService.createTextOutput(JSON.stringify({
+          has_command: false
+        })).setMimeType(ContentService.MimeType.JSON);
+      }
+
       var ss = SpreadsheetApp.getActiveSpreadsheet();
       var sheet = ss.getActiveSheet();
       var rows = sheet.getDataRange().getValues();
@@ -156,6 +172,33 @@ function doPost(e) {
   try {
     var rawData = e.postData.contents;
     var data = JSON.parse(rawData);
+
+    // -------------------------------------------------------------
+    // ตรวจจับคำสั่งจาก LINE Webhook (เช่น แอดมินพิมพ์ "อัพหนังใหม่")
+    // -------------------------------------------------------------
+    if (data && data.events && Array.isArray(data.events)) {
+      for (var i = 0; i < data.events.length; i++) {
+        var ev = data.events[i];
+        if (ev.type === "message" && ev.message && ev.message.type === "text") {
+          var userText = String(ev.message.text || "").trim();
+          var senderId = ev.source ? ev.source.userId : "";
+          var replyToken = ev.replyToken;
+
+          if (ADMIN_LINE_USER_IDS.indexOf(senderId) !== -1) {
+            var lowerText = userText.toLowerCase();
+            if (userText === "อัพหนังใหม่" || userText === "อัปเดตหนัง" || lowerText === "update" || lowerText === "#update") {
+              PropertiesService.getScriptProperties().setProperty("PENDING_UPDATE_TRIGGER", "true");
+              PropertiesService.getScriptProperties().setProperty("PENDING_UPDATE_TIME", new Date().toISOString());
+
+              replyLineTextMessage(replyToken, "🎬 [MovieStream] ได้รับคำสั่งอัปเดตหนังจากแอดมินแล้วครับ!\n\n🚀 ระบบในคอมพิวเตอร์กำลังเริ่มสแกนดึงหนังและซีรีส์ใหม่ทันที\nเมื่ออัปเดตเสร็จแล้ว ระบบจะแจ้งเตือนจำนวนเรื่องให้ทราบโดยอัตโนมัติครับ ⏳");
+              return ContentService.createTextOutput("OK").setMimeType(ContentService.MimeType.TEXT);
+            }
+          }
+        }
+      }
+      return ContentService.createTextOutput("OK").setMimeType(ContentService.MimeType.TEXT);
+    }
+
     var action = data.action;
 
     var ss = SpreadsheetApp.getActiveSpreadsheet();
@@ -564,4 +607,35 @@ function sendLineApprovalCard(userId, phone, dateFormatted, requestType) {
 function testSendLine() {
   sendLineApprovalCard("VIP-TEST-001", "0812345678", "2026-10-24 10:00:00", "register");
   Logger.log("✅ ส่งการ์ดทดสอบเข้า LINE แอดมินเรียบร้อยแล้ว!");
+}
+
+/**
+ * -------------------------------------------------------------
+ * ฟังก์ชันตอบกลับข้อความใน LINE (Reply Message)
+ * -------------------------------------------------------------
+ */
+function replyLineTextMessage(replyToken, text) {
+  if (!replyToken || !text) return;
+  var payload = {
+    "replyToken": replyToken,
+    "messages": [
+      {
+        "type": "text",
+        "text": text
+      }
+    ]
+  };
+  try {
+    UrlFetchApp.fetch("https://api.line.me/v2/bot/message/reply", {
+      "method": "post",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer " + LINE_CHANNEL_ACCESS_TOKEN
+      },
+      "payload": JSON.stringify(payload),
+      "muteHttpExceptions": true
+    });
+  } catch (err) {
+    console.error("Reply error: " + err);
+  }
 }
