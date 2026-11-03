@@ -1347,6 +1347,178 @@ def push_to_github():
     return True
 
 
+def clean_title_for_display(title):
+    """ทำความสะอาดชื่อเรื่องให้สวยงาม สำหรับแสดงผลบนเว็บ"""
+    if not title:
+        return ""
+    t = title
+    # ตัดคำนำหน้า
+    t = re.sub(r'^(?:ฟรี|HD|Zoom|ดูซีรี่[ยส]์?|ดูซีรีส์|ซีรี่[ยส]์?|ซีรีส์|ดูละคร|ละคร|ดูหนัง|หนัง)\s*(?:ไทย|จีน|เกาหลี|ญี่ปุ่น|ฝรั่ง|เอเชีย)?\s*[:|]?\s*', '', t, flags=re.IGNORECASE)
+    # ตัดแท็กเสียงพากย์ ทุกจุด
+    t = re.sub(r'\(?\s*(?:พากย์ไทย\s*[/|+-]\s*ซับไทย|ซับไทย\s*[/|+-]\s*พากย์ไทย|พากย์ไทย\+ซับ|ซับไทย\s*\|\s*พากย์ไทย|ซับไทย|พากย์ไทย)\s*\)?', ' ', t, flags=re.IGNORECASE)
+    # ตัดคำว่า จบ, ตอนจบ, เต็มเรื่อง, EP ทุกจุด
+    t = re.sub(r'(?:EP[\s\.\d\-]+|ตอนที่[\s\.\d\-]+|ตอนจบ|\(ตอนจบ\)|\(จบ\)|\(END\)|จบเรื่อง|เต็มเรื่อง|ครบทุกตอน|จบ\s*G4|G4|จบ|END)', ' ', t, flags=re.IGNORECASE)
+    t = re.sub(r'(?:HD|Full HD|4K|4K ULTRA|Zoom)', ' ', t, flags=re.IGNORECASE)
+    t = re.sub(r'[:|/\-]+', ' ', t)
+    t = re.sub(r'\s{2,}', ' ', t).strip()
+    return t
+
+
+def extract_match_tokens(title):
+    """สกัด Token ภาษาอังกฤษและไทยสำหรับจับคู่หนังเรื่องเดียวกัน"""
+    if not title:
+        return [], ""
+    cleaned = clean_title_for_display(title)
+    
+    # ตรวจจับ Season
+    season_m = re.search(r'(?:ซีซั่น|ซีซัน|season|ภาค|ss|s)\s*(\d+)', title, re.IGNORECASE)
+    season_tag = f"_s{season_m.group(1)}" if season_m else ""
+    
+    name_only = re.sub(r'\(?\s*20\d{2}\s*\)?', '', cleaned)
+    name_only = re.sub(r'(?:ซีซั่น|ซีซัน|season|ภาค|ss|s)\s*\d+', '', name_only, flags=re.IGNORECASE)
+    
+    en_parts = re.findall(r'[a-zA-Z]+', name_only)
+    en_token = "".join(en_parts).lower()
+    
+    th_parts = re.findall(r'[฀-๿]+', name_only)
+    th_token = "".join(th_parts)
+    
+    tokens = []
+    if en_token and th_token:
+        tokens.append(f"both:{en_token}_{th_token}{season_tag}")
+    if en_token and len(en_token) >= 4:
+        tokens.append(f"en:{en_token}{season_tag}")
+    if th_token and len(th_token) >= 4:
+        tokens.append(f"th:{th_token}{season_tag}")
+        
+    return tokens, cleaned
+
+
+def score_movie_quality(m):
+    """ให้คะแนนเพื่อคัดเลือกเวอร์ชันที่ดีที่สุด"""
+    score = 0
+    source = m.get("source", "")
+    poster = m.get("poster", "")
+    title = m.get("titleTh", "")
+    video = m.get("videoUrl", "")
+    eps = len(m.get("episodes", []))
+    
+    # 1. แหล่งที่มา
+    if source == "WOW-DRAMA":
+        score += 60
+    elif source == "MYSERIESHD":
+        score += 40
+    elif source == "GOSERIES4K":
+        score += 20
+    elif "24HD" in source:
+        score += 5
+        
+    # 2. คุณภาพโปสเตอร์
+    if "images/clean_posters/wow-" in poster:
+        score += 50
+    elif "images/clean_posters/" in poster and "gs-" not in poster:
+        score += 35
+    elif "images/clean_posters/gs-" in poster:
+        score += 15
+    elif "24hd" in poster:
+        score -= 20
+        
+    # 3. จำนวนตอน
+    score += min(eps * 2, 60)
+    
+    # 4. สตรีมเซิร์ฟเวอร์
+    if "getplay-cdn" in video:
+        score += 35
+    elif "ok-hd" in video:
+        score += 30
+    elif "torbo007" in video:
+        score += 20
+    elif "player77" in video:
+        score -= 30
+        
+    # 5. หักคะแนนหากมีคำว่าซับไทย
+    if "ซับไทย" in title:
+        score -= 50
+        
+    return score
+
+
+def merge_cluster(cluster):
+    """รวมข้อมูลใน Cluster เดียวกัน ให้ได้อันที่ดีที่สุด 1 อัน"""
+    if len(cluster) == 1:
+        best = cluster[0]
+        best["titleTh"] = clean_title_for_display(best.get("titleTh", ""))
+        return best
+        
+    sorted_cluster = sorted(cluster, key=score_movie_quality, reverse=True)
+    best = sorted_cluster[0]
+    
+    # ค้นหาตอนที่มากที่สุด
+    max_eps_item = max(cluster, key=lambda x: len(x.get("episodes", [])))
+    if len(max_eps_item.get("episodes", [])) > len(best.get("episodes", [])):
+        best["episodes"] = max_eps_item["episodes"]
+        best["episodeUrls"] = max_eps_item["episodeUrls"]
+        best["duration"] = max_eps_item["duration"]
+        
+    # ค้นหาโปสเตอร์ที่สะอาดที่สุด
+    if "images/clean_posters/wow-" not in best.get("poster", ""):
+        for other in sorted_cluster:
+            if "images/clean_posters/wow-" in other.get("poster", ""):
+                best["poster"] = other["poster"]
+                best["backdrop"] = other["backdrop"]
+                break
+
+    all_genres = best.get("genres", [])
+    for other in cluster:
+        if "ยอดนิยม 2026" in other.get("genres", []) and "ยอดนิยม 2026" not in all_genres:
+            all_genres.insert(0, "ยอดนิยม 2026")
+    best["genres"] = all_genres
+    
+    best["titleTh"] = clean_title_for_display(best.get("titleTh", ""))
+    return best
+
+
+def deduplicate_movie_list(movies):
+    """ทำการ Deduplicate หนังทั้งรายการ"""
+    n = len(movies)
+    parent = list(range(n))
+    
+    def find(i):
+        if parent[i] != i:
+            parent[i] = find(parent[i])
+        return parent[i]
+        
+    def union(i, j):
+        pi, pj = find(i), find(j)
+        if pi != pj:
+            parent[pi] = pj
+            
+    token_to_idx = {}
+    for i, m in enumerate(movies):
+        tokens, _ = extract_match_tokens(m.get('titleTh') or m.get('titleEn'))
+        for tok in tokens:
+            if tok in token_to_idx:
+                union(i, token_to_idx[tok])
+            else:
+                token_to_idx[tok] = i
+                
+    clusters = defaultdict(list)
+    for i in range(n):
+        root = find(i)
+        clusters[root].append(movies[i])
+        
+    merged_list = []
+    visited_roots = set()
+    for i in range(n):
+        root = find(i)
+        if root not in visited_roots:
+            visited_roots.add(root)
+            merged_item = merge_cluster(clusters[root])
+            merged_list.append(merged_item)
+            
+    return merged_list
+
+
 def notify_line_oa(added_new, updated_eps, total_movies, new_titles=None, updated_titles=None):
     """ส่งข้อความแจ้งเตือนสรุปผลการอัปเดตหนังเข้า LINE OA ของแอดมินอัตโนมัติ"""
     token = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN", "ySRHeoP3bVm3bUAOCXut7lzYBos4SqvTI9epuhCA4ANq2wttPBnlbRa8quRXdxc1Kxc++6NFURm7f9pjRrEEX79w1Zanjkkf3EmASHBNRbo/PYP5HkkeeEYCr/IYC4XgOAnvzO8ne89JOkS94pz3zAdB04t89/1O/w1cDnyilFU=")
@@ -1431,53 +1603,23 @@ def main(auto_push=True):
     scraped_today = safe_run(update_24hd_today, "24HD.TODAY", min_rating=6.0, max_pages=3)
     scraped_mshd = safe_run(update_myserieshd, "MYSERIESHD", max_pages=15)
     
-    # 2. Merge intelligently
-    existing_map = {m.get("originalUrl", m.get("id", "")): m for m in existing}
-    
-    # Also index by titleTh for cross-domain matching
-    title_map = {m.get("titleTh", "").strip().lower(): m for m in existing if m.get("titleTh")}
-    
-    added_new = 0
-    updated_eps = 0
-    added_titles = []
-    updated_titles = []
-    
+    # 2. คัดกรอง ลบหนังซ้ำ และเลือกเฉพาะอันที่ดีที่สุด (Best Version Deduplication)
+    print("\n--- กำลังคัดกรอง ลบหนังซ้ำ และเลือกเฉพาะเวอร์ชันที่ดีที่สุด ---")
     all_new_items = scraped_top + scraped_media + scraped_24hda + scraped_today + scraped_gs + scraped_wow + scraped_mshd
     
-    for item in all_new_items:
-        key = item.get("originalUrl", item.get("id", ""))
-        title_key = item.get("titleTh", "").strip().lower()
-        
-        match = existing_map.get(key) or title_map.get(title_key)
-        
-        if match:
-            # Tag popular if present
-            if "ยอดนิยม 2026" in item.get("genres", []) and "ยอดนิยม 2026" not in match.get("genres", []):
-                match["genres"].insert(0, "ยอดนิยม 2026")
-            # Check if new episodes were added
-            old_eps = len(match.get("episodes", []))
-            new_eps = len(item.get("episodes", []))
-            if new_eps > old_eps:
-                match["episodes"] = item["episodes"]
-                match["episodeUrls"] = item["episodeUrls"]
-                match["duration"] = item["duration"]
-                updated_eps += 1
-                updated_titles.append(item.get("titleTh", ""))
-                print(f"  [*] อัปเดตตอนเพิ่ม: {item['titleTh']} ({old_eps} -> {new_eps} ตอน)")
-            # Update poster if older was invalid/empty
-            if not match.get("poster") and item.get("poster"):
-                match["poster"] = item["poster"]
-                match["backdrop"] = item["backdrop"]
-        else:
-            # Prepend new item to front
-            existing.insert(0, item)
-            existing_map[key] = item
-            if title_key:
-                title_map[title_key] = item
-            added_new += 1
-            added_titles.append(item.get("titleTh", ""))
-            print(f"  [+] เพิ่มเรื่องใหม่: {item['titleTh']}")
-            
+    old_id_set = {m.get("id") for m in existing}
+    old_len = len(existing)
+    
+    combined = all_new_items + existing
+    deduped = deduplicate_movie_list(combined)
+    
+    added_new = sum(1 for m in deduped if m.get("id") not in old_id_set)
+    updated_eps = 0
+    added_titles = [m.get("titleTh") for m in deduped if m.get("id") not in old_id_set][:5]
+    updated_titles = []
+    
+    existing = deduped
+    print(f"[*] คัดเลือกเวอร์ชันที่ดีที่สุดสำเร็จ! รวมทั้งหมด: {len(existing)} เรื่อง (ไม่มีเรื่องซ้ำ)")
     save_movies(existing)
     
     # 3. สร้างและอัปเดต sitemap.xml อัตโนมัติในไฟล์เดียว
