@@ -3405,7 +3405,7 @@ window.movies = [
     "year": 2026,
     "poster": "images/clean_posters/gs-134637.jpg",
     "backdrop": "images/clean_posters/gs-134637.jpg",
-    "videoUrl": "src=\"https://goseries4k.com/wp-content/uploads/2026/10/PGW44.gif\"",
+    "videoUrl": "",
     "sourceType": "embed",
     "description": "เรื่องย่อ-ขุนนางหางแถว🎭\r\n สำหรับใครที่กำลังมองหาซีรี่ย์ที่มาในแนว คอมเมดี้ | ดราม่า | เกมหลอกลวง พร้อมการบอกเล่าเรื่องราวของชายหนุ่มผู้เคยล่ำซำที่กำลังถังแตก แต่แล้วเขากลับต้องจำยอมขายคฤหาสน์หรูของตระกูล เพียงเพราะการรักษาทรัพย์สินและศักดอ์ศรีที่หลงเหลือในช่วงเวลานี้ จากมหาเศรษฐีลึกลับคนหนึ่ง ที่ปรากฎตัวขึ้นมาพร้อมข้อเสนอสุดเย้ายวนใจ (เงิน) ที่สามารถทำได้แม้กระทั่งทุกอย่าง เพื่อการเป็นอยู่อย่างสมบูรณ์แบบ จากคนซื้อที่ต้องพยายามเก็บความลับ พร้อมคนวางแผนให้กับคนขาย และหากใครที่ชื่นชอบความสนุกของซีรี่ย์เรื่องนี้ บอกได้เลยว่าต้อง📌รอกันเลย สำหรับความสนุกของเรื่อง ที่พร้อมเสิร์ฟให้แฟนๆได้รับชมกันแล้วบนช่องทางซีรี่ย์ออนไลน์G4 \r\n",
     "rating": 8.8,
@@ -3427,12 +3427,12 @@ window.movies = [
       "ตอนที่ 6"
     ],
     "episodeUrls": {
-      "1": "src=\"https://goseries4k.com/wp-content/uploads/2026/10/PGW44.gif\"",
-      "2": "src=\"https://goseries4k.com/wp-content/uploads/2026/10/PGW44.gif\"",
-      "3": "src=\"https://goseries4k.com/wp-content/uploads/2026/10/PGW44.gif\"",
-      "4": "src=\"https://goseries4k.com/wp-content/uploads/2026/10/PGW44.gif\"",
-      "5": "src=\"https://goseries4k.com/wp-content/uploads/2026/10/PGW44.gif\"",
-      "6": "src=\"https://goseries4k.com/wp-content/uploads/2026/10/PGW44.gif\""
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": ""
     },
     "languages": [
       "Thai (พากย์ไทย)"
@@ -9928,7 +9928,7 @@ window.movies = [
       "5": "https://torbo007.com/embed/bfc2ff806cb6cb5efe6861cbb8c5e1c8",
       "6": "https://torbo007.com/embed/5bb6bb58e2ce259b45277d524ae7ff3b",
       "7": "https://torbo007.com/embed/2b159ba8324b319080f1db1a4ef29768",
-      "8": "src=\"https://goseries4k.com/wp-content/uploads/2026/10/PGW44.gif\""
+      "8": ""
     },
     "languages": [
       "Thai (พากย์ไทย)"
@@ -17005,7 +17005,7 @@ window.movies = [
       "13": "https://torbo007.com/embed/8ab96815d610eda09395c8684ad49c0c",
       "14": "https://torbo007.com/embed/6b1be8989f6e6450d6eecdd21f6a149f",
       "15": "https://torbo007.com/embed/1bbdd3f157491c1107a3fc68af596e92",
-      "16": "src=\"https://goseries4k.com/wp-content/uploads/2026/10/PGW44.gif\"",
+      "16": "",
       "17": "https://torbo007.com/embed/d3e0f30db67df271410261a607f9a600",
       "18": "https://torbo007.com/embed/254eea20b444b7e7561e37403dc2915c",
       "19": "https://torbo007.com/embed/aef4e6134ff57353e1124532cf675577",
@@ -20581,7 +20581,7 @@ window.movies = [
       "46": "https://ok-hd.com/play/fb6707e47988de9cee06cc5ce674f052",
       "47": "https://ok-hd.com/play/b975592c0e11415e5e0a952cbbb665a0",
       "48": "https://ok-hd.com/play/1def22304dcb1315e9a2167af9a0699e",
-      "49": "src=\"https://goseries4k.com/wp-content/uploads/2026/08/LST-V7_600x320-foxywebp.webp\""
+      "49": ""
     },
     "languages": [
       "Thai (พากย์ไทย)"

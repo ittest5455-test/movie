@@ -3,6 +3,7 @@ export async function onRequest(context) {
   const id = url.searchParams.get("id");
   const sub = url.searchParams.get("sub");
   const ts = url.searchParams.get("ts");
+  const src = (url.searchParams.get("src") || "").toLowerCase();
 
   const corsHeaders = {
     "Access-Control-Allow-Origin": "*",
@@ -18,12 +19,19 @@ export async function onRequest(context) {
   const origin = url.origin;
 
   try {
-    // 1. Proxy TS / JPEG video segment if requested
+    // 1. Proxy TS / JPEG / WEBP video segment if requested
     if (ts) {
+      let referer = "https://player77hdfree.xyz/";
+      let originHeader = "https://player77hdfree.xyz";
+      if (ts.includes("prothaifix.com") || ts.includes("24playerhd.com")) {
+        referer = "https://main.24playerhd.com/";
+        originHeader = "https://main.24playerhd.com";
+      }
+
       const fetchHeaders = {
         "User-Agent": userAgent,
-        "Referer": "https://player77hdfree.xyz/",
-        "Origin": "https://player77hdfree.xyz",
+        "Referer": referer,
+        "Origin": originHeader,
       };
       const range = context.request.headers.get("Range");
       if (range) fetchHeaders["Range"] = range;
@@ -53,17 +61,24 @@ export async function onRequest(context) {
       });
     }
 
-    // 2. Proxy Sub-playlist (video.m3u8 or audio.m3u8)
+    // 2. Proxy Sub-playlist (video.m3u8 or audio.m3u8 or quality m3u8)
     if (sub) {
       let subUrl = sub;
       if (subUrl.startsWith("//")) subUrl = "https:" + subUrl;
       else if (!subUrl.startsWith("http")) subUrl = "https://vdohls.com" + (subUrl.startsWith("/") ? "" : "/") + subUrl;
 
+      let referer = "https://player77hdfree.xyz/";
+      let originHeader = "https://player77hdfree.xyz";
+      if (subUrl.includes("24playerhd.com")) {
+        referer = "https://main.24playerhd.com/";
+        originHeader = "https://main.24playerhd.com";
+      }
+
       const subRes = await fetch(subUrl, {
         headers: {
           "User-Agent": userAgent,
-          "Referer": "https://player77hdfree.xyz/",
-          "Origin": "https://player77hdfree.xyz",
+          "Referer": referer,
+          "Origin": originHeader,
         },
       });
 
@@ -82,7 +97,7 @@ export async function onRequest(context) {
         return `#EXT-X-KEY:${prefix}${origin}/api/vdohls?ts=${encodeURIComponent(keyUrl)}${suffix}`;
       });
 
-      const lines = text.split("\n");
+      const lines = text.split(/\r?\n/);
       const rewrittenLines = lines.map(line => {
         const trimmed = line.trim();
         if (!trimmed || trimmed.startsWith("#")) return line;
@@ -108,6 +123,41 @@ export async function onRequest(context) {
 
     // 3. Proxy Master Playlist (id parameter)
     if (id) {
+      if (src === "24player" || (id.length === 24 && /^[a-f0-9]{24}$/i.test(id))) {
+        const masterUrl = `https://main.24playerhd.com/newplaylist/${id}/${id}.m3u8`;
+        const masterRes = await fetch(masterUrl, {
+          headers: {
+            "User-Agent": userAgent,
+            "Referer": "https://main.24playerhd.com/",
+            "Origin": "https://main.24playerhd.com",
+          },
+        });
+
+        if (!masterRes.ok) {
+          return new Response("Failed to fetch 24player master playlist", { status: masterRes.status, headers: corsHeaders });
+        }
+
+        let text = await masterRes.text();
+        const masterLines = text.split(/\r?\n/);
+        const rewrittenMaster = masterLines.map(line => {
+          const trimmed = line.trim();
+          if (!trimmed || trimmed.startsWith("#")) return line;
+          let subUrl = trimmed;
+          if (subUrl.startsWith("/")) subUrl = "https://main.24playerhd.com" + subUrl;
+          return `${origin}/api/vdohls?sub=${encodeURIComponent(subUrl)}`;
+        });
+        text = rewrittenMaster.join("\n");
+
+        const responseHeaders = new Headers(corsHeaders);
+        responseHeaders.set("Content-Type", "application/vnd.apple.mpegurl");
+        responseHeaders.set("Cache-Control", "public, max-age=3600");
+
+        return new Response(text, {
+          status: 200,
+          headers: responseHeaders,
+        });
+      }
+
       let vdoId = id;
       const m = id.match(/\/embed\/([a-zA-Z0-9_\-]+)/i) || id.match(/([a-zA-Z0-9_\-]{6,})/);
       if (m && m[1]) vdoId = m[1];
@@ -136,7 +186,7 @@ export async function onRequest(context) {
       });
 
       // Rewrite stream URLs (video streams)
-      const masterLines = text.split("\n");
+      const masterLines = text.split(/\r?\n/);
       const rewrittenMaster = masterLines.map(line => {
         const trimmed = line.trim();
         if (!trimmed || trimmed.startsWith("#")) return line;
