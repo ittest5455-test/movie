@@ -1085,6 +1085,18 @@ function initMovieStreamApp() {
       return;
     } 
 
+    // 1.3. 24HD.TODAY / 24HD.MEDIA (player77hdfree / vdohide)
+    if (initialVideoUrl && (initialVideoUrl.includes("player77hdfree.xyz") || initialVideoUrl.includes("vdohide.com"))) {
+      const vdoMatch = initialVideoUrl.match(/\/embed\/([a-zA-Z0-9_\-]+)/i) || initialVideoUrl.match(/[?&]v=([a-zA-Z0-9_\-]+)/i);
+      if (vdoMatch && vdoMatch[1]) {
+        fallbackToIframe(`/player.html?id=${vdoMatch[1]}&src=player77`);
+        const epText = (movie.episodes && movie.episodes.length > 1) ? ` (ตอนที่ ${epInt})` : "";
+        showToast(`กำลังเปิดเครื่องเล่นวิดีโอ: ${movie.titleTh}${epText}`, "success");
+        triggerVideoOverlays(movie, epInt);
+        return;
+      }
+    }
+
     // 1.4. GOSERIES4K (torbo007)
     if (initialVideoUrl && initialVideoUrl.includes("torbo007.com")) {
       const md5Match = initialVideoUrl.match(/\/embed\/([a-f0-9]{20,})/i) || initialVideoUrl.match(/[?&]v=([a-f0-9]{20,})/i);
@@ -1264,6 +1276,14 @@ function initMovieStreamApp() {
     const isTVBrowser = /browsehere|smarttv|googletv|tizen|webos/i.test(navigator.userAgent);
     const isGOSeries = (typeof currentActiveMovie !== "undefined" && currentActiveMovie && currentActiveMovie.source === "GOSERIES4K");
     
+    // 24HD.TODAY / player77hdfree: Route through player.html with vdohls proxy to remove all ads
+    if (url && (url.includes("player77hdfree.xyz") || url.includes("vdohide.com"))) {
+      const vdoMatch = url.match(/\/embed\/([a-zA-Z0-9_\-]+)/i) || url.match(/[?&]v=([a-zA-Z0-9_\-]+)/i);
+      if (vdoMatch && vdoMatch[1]) {
+        url = `/player.html?id=${vdoMatch[1]}&src=player77`;
+      }
+    }
+
     // GOSERIES4K / torbo007: Route through player.html with proxy to bypass 403 domain lock
     if (url && url.includes("torbo007.com")) {
       const md5Match = url.match(/\/embed\/([a-f0-9]{20,})/i) || url.match(/[?&]v=([a-f0-9]{20,})/i);

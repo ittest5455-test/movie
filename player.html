@@ -48,7 +48,12 @@
       if (!id) return;
 
       const src = urlParams.get('src') || '';
-      const streamUrl = '/api/wow?id=' + encodeURIComponent(id) + (src ? '&src=' + encodeURIComponent(src) : '');
+      const apiOrigin = (window.location.origin.includes('localhost') || window.location.origin.includes('127.0.0.1') || window.location.protocol === 'file:')
+        ? 'https://free-moviesnew.pages.dev'
+        : '';
+      const streamUrl = (src === 'player77' || src === 'vdohls')
+        ? apiOrigin + '/api/vdohls?id=' + encodeURIComponent(id)
+        : apiOrigin + '/api/wow?id=' + encodeURIComponent(id) + (src ? '&src=' + encodeURIComponent(src) : '');
       const color = '#e50914';
 
       function setupNativeVideo(v) {

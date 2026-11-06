@@ -651,7 +651,23 @@ def update_goseries4k():
                         try: ep_cache = json.loads(m_cache.group(1))
                         except: pass
                         
-                    buttons = re.findall(r'<button[^>]+class="[^"]*mp-ep-btn[^"]*"[^>]+data-id=["\'](\d+)["\'][^>]*>(.*?)</button>', m_html, re.DOTALL) or re.findall(r'<button[^>]+data-id=["\'](\d+)["\'][^>]*>(.*?)</button>', m_html, re.DOTALL)
+                    # ตรวจสอบกลุ่มตอน: ดึงเฉพาะกลุ่มพากย์ไทย ตัดกลุ่มซับไทยทิ้ง
+                    ep_groups = re.findall(r'<div[^>]+class=["\'][^"\']*mp-epg-title[^"\']*["\'][^>]*>([^<]+)</div>\s*<div[^>]+class=["\'][^"\']*mp-epg-list[^"\']*["\'][^>]*>(.*?)</div>\s*</div>', m_html, re.DOTALL)
+                    target_btn_html = ""
+                    if ep_groups:
+                        thai_group = None
+                        for g_title, g_content in ep_groups:
+                            if "พากย์ไทย" in g_title:
+                                thai_group = g_content
+                                break
+                        if thai_group:
+                            target_btn_html = thai_group
+                        else:
+                            continue
+                    else:
+                        target_btn_html = m_html
+
+                    buttons = re.findall(r'<button[^>]+class="[^"]*mp-ep-btn[^"]*"[^>]+data-id=["\'](\d+)["\'][^>]*>(.*?)</button>', target_btn_html, re.DOTALL) or re.findall(r'<button[^>]+data-id=["\'](\d+)["\'][^>]*>(.*?)</button>', target_btn_html, re.DOTALL)
                     
                     ordered_ep_urls = {}
                     curr_ep = 1
