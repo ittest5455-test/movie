@@ -150,6 +150,26 @@
             }
           });
 
+          player.on('error', function(err) {
+            console.warn('[JWPlayer Error Event]', err);
+            if ((src === 'player77' || src === 'vdohls') && id) {
+              const p = document.getElementById("player");
+              if (p) {
+                p.innerHTML = `<iframe src="https://player77hdfree.xyz/embed/${encodeURIComponent(id)}" width="100%" height="100%" frameborder="0" allowfullscreen allow="autoplay *; fullscreen *; encrypted-media *"></iframe>`;
+              }
+            }
+          });
+
+          player.on('setupError', function(err) {
+            console.warn('[JWPlayer setupError Event]', err);
+            if ((src === 'player77' || src === 'vdohls') && id) {
+              const p = document.getElementById("player");
+              if (p) {
+                p.innerHTML = `<iframe src="https://player77hdfree.xyz/embed/${encodeURIComponent(id)}" width="100%" height="100%" frameborder="0" allowfullscreen allow="autoplay *; fullscreen *; encrypted-media *"></iframe>`;
+              }
+            }
+          });
+
           player.on('ready', function() {
             try {
               const rewindContainer = document.querySelector('.jw-display-icon-rewind');

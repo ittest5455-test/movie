@@ -27,9 +27,16 @@ export async function onRequest(context) {
       const range = context.request.headers.get("Range");
       if (range) fetchHeaders["Range"] = range;
 
-      const chunkRes = await fetch(ts, { headers: fetchHeaders });
+      const chunkRes = await fetch(ts, {
+        headers: fetchHeaders,
+        cf: {
+          cacheEverything: true,
+          cacheTtl: 86400,
+        }
+      });
       const responseHeaders = new Headers(corsHeaders);
       responseHeaders.set("Content-Type", "video/mp2t");
+      responseHeaders.set("Cache-Control", "public, max-age=86400");
       const len = chunkRes.headers.get("Content-Length");
       if (len) responseHeaders.set("Content-Length", len);
       if (chunkRes.headers.get("Content-Range")) {
@@ -68,13 +75,13 @@ export async function onRequest(context) {
       const rewrittenLines = lines.map(line => {
         const trimmed = line.trim();
         if (!trimmed || trimmed.startsWith("#")) return line;
-        if (trimmed.startsWith("http://") || trimmed.startsWith("https://")) {
-          return trimmed;
+        let segUrl = trimmed;
+        if (segUrl.startsWith("//")) {
+          segUrl = "https:" + segUrl;
+        } else if (!segUrl.startsWith("http")) {
+          segUrl = baseUrl + segUrl;
         }
-        if (trimmed.startsWith("//")) {
-          return "https:" + trimmed;
-        }
-        return baseUrl + trimmed;
+        return `${origin}/api/vdohls?ts=${encodeURIComponent(segUrl)}`;
       });
       text = rewrittenLines.join("\n");
 
