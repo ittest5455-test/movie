@@ -235,7 +235,14 @@ def load_existing_movies():
     return []
 
 def save_movies(movies):
-    # ปรับแต่ง URL รูปภาพทุกเรื่องให้ปลอดภัยก่อนบันทึก
+    def clean_stream_url(u):
+        if not u or not isinstance(u, str):
+            return ""
+        if any(ext in u.lower() for ext in ['.gif', '.png', '.jpg', '.jpeg', '.webp', 'uploads', 'banner']):
+            return ""
+        return u.strip()
+
+    # ปรับแต่ง URL รูปภาพทุกเรื่องให้ปลอดภัยก่อนบันทึก และล้างลิงก์โฆษณา
     for m in movies:
         if "poster" in m:
             m["poster"] = safe_url(m["poster"])
@@ -243,7 +250,12 @@ def save_movies(movies):
             m["backdrop"] = safe_url(m["backdrop"])
         if "originalUrl" in m:
             m["originalUrl"] = m["originalUrl"].replace("www.24-hdx.com", "www.24-hda.com")
-
+        if "videoUrl" in m:
+            m["videoUrl"] = clean_stream_url(m["videoUrl"])
+        if "episodeUrls" in m and isinstance(m["episodeUrls"], dict):
+            m["episodeUrls"] = {k: clean_stream_url(v) for k, v in m["episodeUrls"].items() if clean_stream_url(v)}
+            if not m.get("videoUrl") and "1" in m["episodeUrls"]:
+                m["videoUrl"] = m["episodeUrls"]["1"]
     with open(MOVIES_FILE, "w", encoding="utf-8") as f:
         f.write("// ฐานข้อมูลภาพยนตร์รวม 24-HD และ GOSERIES4K ปี 2026 พากย์ไทย\n")
         f.write("window.movies = ")
@@ -687,8 +699,10 @@ def update_goseries4k():
                         if ep_h:
                             embed_m = re.search(r'https?:\\?/\\?/torbo007\.com\\?/embed\\?/[a-zA-Z0-9]+', ep_h) or re.search(r'(?:src|data-src)=["\'](https?://[^"\']+)["\']', ep_h)
                             if embed_m:
-                                ordered_ep_urls[str(ep_n)] = embed_m.group(0).replace('\\/', '/')
-                                curr_ep = ep_n
+                                matched_url = (embed_m.group(1) if embed_m.lastindex else embed_m.group(0)).replace('\\/', '/')
+                                if not any(ext in matched_url.lower() for ext in ['.gif', '.png', '.jpg', '.jpeg', '.webp', 'uploads', 'banner']):
+                                    ordered_ep_urls[str(ep_n)] = matched_url
+                                    curr_ep = ep_n
                                 
                     if not ordered_ep_urls: continue
                     
