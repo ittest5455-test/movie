@@ -110,63 +110,78 @@
               windowOpacity: 0
             },
             // =========================================================
-            // การตั้งค่า Buffer ระดับสูง: ดูดข้อมูลตุนล่วงหน้า ไม่ให้หมุนสะดุด
+            // การตั้งค่า Buffer ระดับสูง: เริ่มเล่นทันทีใน 1 วิ ไม่มีหมุนสะดุด
             // และไม่ข้ามเนื้อเรื่อง (Zero Skip / Seamless Buffer)
             // =========================================================
             hlsjsConfig: {
-              maxBufferLength: 120,             // โหลดวิดีโอตุนล่วงหน้า 120 วินาที (2 นาทีเต็ม)
-              maxMaxBufferLength: 300,         // ตุนล่วงหน้าได้สูงสุด 5 นาที
-              maxBufferSize: 120 * 1024 * 1024, // ขยายหน่วยความจำ Buffer 120MB ป้องกันเน็ตสะดุด
-              maxBufferHole: 0.8,              // สมานรอยต่อไฟล์อัตโนมัติ ไม่ให้สะดุด
-              nudgeOffset: 0.04,               // ปรับเฟรมระดับ 40 มิลลิวินาที (เนียนตา ไม่ข้ามบทพูด)
-              nudgeMaxRetry: 10,
+              maxBufferLength: 30,             // โหลดวิดีโอตุนล่วงหน้า 30 วินาที เล่นได้ไวทันที
+              maxMaxBufferLength: 60,          // ตุนล่วงหน้าสูงสุด 60 วินาที
+              maxBufferSize: 30 * 1024 * 1024, // ขยายหน่วยความจำ Buffer 30MB พอเหมาะกับเครื่อง
+              maxBufferHole: 0.5,              // สมานรอยต่อไฟล์อัตโนมัติ ไม่ให้สะดุด
+              nudgeOffset: 0.1,                // ปรับข้ามเฟรมกระตุกอัตโนมัติ
+              nudgeMaxRetry: 30,
+              manifestLoadingTimeOut: 15000,
+              manifestLoadingMaxRetry: 5,
+              levelLoadingTimeOut: 15000,
+              levelLoadingMaxRetry: 5,
+              fragLoadingTimeOut: 20000,
+              fragLoadingMaxRetry: 6,
               enableWorker: true,
               lowLatencyMode: false
             }
           });
 
-          // กระตุ้นให้เล่นต่อทันทีที่บัฟเฟอร์พร้อม โดยไม่ข้ามเวลาเนื้อเรื่อง
-          let resumeTimer = null;
-          player.on('buffer', function() {
-            if (resumeTimer) clearTimeout(resumeTimer);
-            resumeTimer = setTimeout(function() {
-              if (typeof player.getState === "function" && player.getState() === "buffering") {
-                player.play();
-              }
-            }, 3000);
-          });
-
-          player.on('play', function() {
-            if (resumeTimer) {
-              clearTimeout(resumeTimer);
-              resumeTimer = null;
-            }
-          });
-
-          player.on('time', function() {
-            if (resumeTimer) {
-              clearTimeout(resumeTimer);
-              resumeTimer = null;
-            }
-          });
-
+          // ป้องกันข้อผิดพลาดและเล่นต่อเนื่องอัตโนมัติแบบ 100% ไม่มีโฆษณา
+          let retryCount = 0;
           player.on('error', function(err) {
             console.warn('[JWPlayer Error Event]', err);
-            if ((src === 'player77' || src === 'vdohls') && id) {
+            if (retryCount < 3) {
+              retryCount++;
+              console.log('[Auto-Recovery] Retrying stream reload (' + retryCount + '/3)...');
+              setTimeout(function() {
+                try {
+                  const currentPos = typeof player.getPosition === "function" ? player.getPosition() : 0;
+                  player.load([{ file: streamUrl, type: "hls" }]);
+                  player.play();
+                  if (currentPos > 5) {
+                    player.seek(currentPos);
+                  }
+                } catch(e) {}
+              }, 1000);
+            } else {
+              // ถ้า JWPlayer ขัดข้อง ให้ใช้ Native Video แทน โดยไม่เปิดหน้าเว็บที่มีโฆษณาเด็ดขาด
               const p = document.getElementById("player");
               if (p) {
-                p.innerHTML = `<iframe src="https://player77hdfree.xyz/embed/${encodeURIComponent(id)}" width="100%" height="100%" frameborder="0" allowfullscreen allow="autoplay *; fullscreen *; encrypted-media *"></iframe>`;
+                p.innerHTML = "";
+                const v = document.createElement("video");
+                v.controls = true;
+                v.playsInline = true;
+                v.autoplay = true;
+                v.style.width = "100%";
+                v.style.height = "100%";
+                v.src = streamUrl;
+                setupNativeVideo(v);
+                p.appendChild(v);
+                v.play().catch(function() {});
               }
             }
           });
 
           player.on('setupError', function(err) {
             console.warn('[JWPlayer setupError Event]', err);
-            if ((src === 'player77' || src === 'vdohls') && id) {
-              const p = document.getElementById("player");
-              if (p) {
-                p.innerHTML = `<iframe src="https://player77hdfree.xyz/embed/${encodeURIComponent(id)}" width="100%" height="100%" frameborder="0" allowfullscreen allow="autoplay *; fullscreen *; encrypted-media *"></iframe>`;
-              }
+            const p = document.getElementById("player");
+            if (p) {
+              p.innerHTML = "";
+              const v = document.createElement("video");
+              v.controls = true;
+              v.playsInline = true;
+              v.autoplay = true;
+              v.style.width = "100%";
+              v.style.height = "100%";
+              v.src = streamUrl;
+              setupNativeVideo(v);
+              p.appendChild(v);
+              v.play().catch(function() {});
             }
           });
 

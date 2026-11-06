@@ -23,6 +23,7 @@ export async function onRequest(context) {
       const fetchHeaders = {
         "User-Agent": userAgent,
         "Referer": "https://player77hdfree.xyz/",
+        "Origin": "https://player77hdfree.xyz",
       };
       const range = context.request.headers.get("Range");
       if (range) fetchHeaders["Range"] = range;
@@ -62,6 +63,7 @@ export async function onRequest(context) {
         headers: {
           "User-Agent": userAgent,
           "Referer": "https://player77hdfree.xyz/",
+          "Origin": "https://player77hdfree.xyz",
         },
       });
 
@@ -71,6 +73,15 @@ export async function onRequest(context) {
 
       let text = await subRes.text();
       const baseUrl = subUrl.substring(0, subUrl.lastIndexOf("/") + 1);
+
+      // Rewrite #EXT-X-KEY if present
+      text = text.replace(/#EXT-X-KEY:([^,\n]*URI=")([^"\n]+)(")/g, (match, prefix, keyUri, suffix) => {
+        let keyUrl = keyUri;
+        if (keyUrl.startsWith("//")) keyUrl = "https:" + keyUrl;
+        else if (!keyUrl.startsWith("http")) keyUrl = baseUrl + keyUrl;
+        return `#EXT-X-KEY:${prefix}${origin}/api/vdohls?ts=${encodeURIComponent(keyUrl)}${suffix}`;
+      });
+
       const lines = text.split("\n");
       const rewrittenLines = lines.map(line => {
         const trimmed = line.trim();
@@ -106,6 +117,7 @@ export async function onRequest(context) {
         headers: {
           "User-Agent": userAgent,
           "Referer": "https://player77hdfree.xyz/",
+          "Origin": "https://player77hdfree.xyz",
         },
       });
 
@@ -115,16 +127,25 @@ export async function onRequest(context) {
 
       let text = await masterRes.text();
 
-      // Rewrite sub-playlists (URI="..." and stream URLs) to route through /api/vdohls?sub=...
-      text = text.replace(/URI="(?:https:)?\/\/vdohls\.com\/([^"]+)"/g, (match, path) => {
-        const fullSub = `https://vdohls.com/${path}`;
+      // Rewrite URI="..." (audio/subtitles) to route through /api/vdohls?sub=...
+      text = text.replace(/URI="([^"]+)"/g, (match, subUri) => {
+        let fullSub = subUri;
+        if (fullSub.startsWith("//")) fullSub = "https:" + fullSub;
+        else if (!fullSub.startsWith("http")) fullSub = `https://vdohls.com/${fullSub.replace(/^\//, '')}`;
         return `URI="${origin}/api/vdohls?sub=${encodeURIComponent(fullSub)}"`;
       });
 
-      text = text.replace(/^(?:https:)?\/\/vdohls\.com\/([^\s\r\n]+)/gm, (match, path) => {
-        const fullSub = `https://vdohls.com/${path}`;
+      // Rewrite stream URLs (video streams)
+      const masterLines = text.split("\n");
+      const rewrittenMaster = masterLines.map(line => {
+        const trimmed = line.trim();
+        if (!trimmed || trimmed.startsWith("#")) return line;
+        let fullSub = trimmed;
+        if (fullSub.startsWith("//")) fullSub = "https:" + fullSub;
+        else if (!fullSub.startsWith("http")) fullSub = `https://vdohls.com/${fullSub.replace(/^\//, '')}`;
         return `${origin}/api/vdohls?sub=${encodeURIComponent(fullSub)}`;
       });
+      text = rewrittenMaster.join("\n");
 
       const responseHeaders = new Headers(corsHeaders);
       responseHeaders.set("Content-Type", "application/vnd.apple.mpegurl");
