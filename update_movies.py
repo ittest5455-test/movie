@@ -598,6 +598,145 @@ def update_24hd_media():
             
     return new_movies
 
+def update_24hdx_net(max_pages=3):
+    print("\n--- กำลังตรวจสอบภาพยนตร์ใหม่จาก 24-HDX (24-hdx.net) (ปี 2026 พากย์ไทย) ---")
+    new_movies = []
+    seen_links = set()
+
+    pages_to_check = ["https://24-hdx.net/"]
+    for p in range(1, max_pages + 1):
+        cat_url = "https://24-hdx.net/category/newmovie-2026/" if p == 1 else f"https://24-hdx.net/category/newmovie-2026/page/{p}/"
+        pages_to_check.append(cat_url)
+
+    cards_to_process = []
+    for page_url in pages_to_check:
+        try:
+            req = urllib.request.Request(page_url, headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                page_html = resp.read().decode('utf-8', errors='ignore')
+        except Exception as e:
+            print(f"  [-] ไม่สามารถโหลดหน้า {page_url}: {e}")
+            continue
+
+        articles = re.findall(r'<article[^>]*class=["\']movie-poster nf4-card["\'][^>]*>(.*?)</article>', page_html, re.DOTALL)
+        for art in articles:
+            link_m = re.search(r'href=["\'](https://24-hdx\.net/[^"\'#/]+/?)["\']', art)
+            if not link_m:
+                continue
+            link = link_m.group(1)
+            if link in seen_links:
+                continue
+            seen_links.add(link)
+
+            title_m = re.search(r'title=["\']([^"\']+)["\']', art)
+            raw_title = title_m.group(1).strip() if title_m else ""
+            if not raw_title:
+                t_inner = re.search(r'class="movie-title[^"]*"><a[^>]*>([^<]+)</a>', art)
+                raw_title = t_inner.group(1).strip() if t_inner else link.strip("/").split("/")[-1].replace("-", " ").title()
+
+            sound_m = re.search(r'class="movie-sound[^"]*">\s*<i[^>]*></i>\s*([^<\n]+)', art)
+            sound_txt = sound_m.group(1).strip() if sound_m else ""
+            if "ซับไทย" in raw_title and "พากย์ไทย" not in raw_title and "พากย์ไทย" not in sound_txt:
+                continue
+
+            rating_m = re.search(r'fa-star"></i>\s*([0-9.]+)', art)
+            rating = 7.0
+            if rating_m:
+                try:
+                    r = float(rating_m.group(1))
+                    if 1.0 <= r <= 10.0: rating = r
+                except:
+                    pass
+
+            img_m = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', art)
+            poster = img_m.group(1) if img_m else ""
+
+            cards_to_process.append((link, raw_title, poster, rating))
+
+    print(f"  [*] พบภาพยนตร์จาก 24-HDX.NET รวม {len(cards_to_process)} เรื่อง กำลังดึงข้อมูลสตรีม...")
+
+    for link, raw_title, poster, rating in cards_to_process:
+        try:
+            m_req = urllib.request.Request(link, headers=HEADERS)
+            with urllib.request.urlopen(m_req, timeout=8) as m_resp:
+                m_html = m_resp.read().decode('utf-8', errors='ignore')
+
+            iframes = re.findall(r'<iframe[^>]+src=["\']([^"\']+)["\']', m_html)
+            video_url = ""
+            trailer_url = ""
+            for ifr in iframes:
+                if any(h in ifr for h in ["weplayhls.xyz", "24playerhd.com", "player77hdfree.xyz", "vdohide.com", "prothaifix.com"]):
+                    video_url = ifr
+                elif "youtube.com" in ifr:
+                    trailer_url = ifr if ifr.startswith("http") else f"https:{ifr}"
+
+            if not video_url and iframes:
+                for ifr in iframes:
+                    if "youtube.com" not in ifr:
+                        video_url = ifr
+                        break
+
+            if not video_url:
+                continue
+
+            shortlink = re.search(r'rel=["\']shortlink["\']\s*href=["\'][^?]+\?p=(\d+)["\']', m_html)
+            body_post = re.search(r'postid-(\d+)', m_html)
+            post_id = shortlink.group(1) if shortlink else (body_post.group(1) if body_post else '')
+            slug = link.strip("/").split("/")[-1]
+            if not post_id:
+                post_id = slug
+
+            clean_title = re.sub(r'^(ดูหนัง|ดูซีรี่ย์|ฟรี|HD|Zoom)\s*', '', raw_title).strip()
+            clean_title = re.sub(r'\s*-\s*24-HDX.*$', '', clean_title).strip()
+            clean_title = clean_sub_text(clean_title)
+
+            if not poster:
+                og_img = re.search(r'<meta property="og:image" content="([^"]+)"', m_html)
+                poster = og_img.group(1) if og_img else ""
+
+            og_desc = re.search(r'<meta property="og:description" content="([^"]+)"', m_html)
+            desc = og_desc.group(1) if og_desc else f"ดูหนังออนไลน์ {clean_title} (2026) พากย์ไทย เต็มเรื่อง HD"
+
+            year_m = re.search(r'202\d', clean_title) or re.search(r'<span class="movie-year">(\d{4})</span>', m_html)
+            year = int(year_m.group(0)) if year_m else 2026
+
+            ep_urls = {"1": video_url}
+            total_eps = len(ep_urls)
+            ep_list = [f"ตอนที่ {i}" for i in range(1, total_eps + 1)] if total_eps > 1 else ["เต็มเรื่อง"]
+            duration_str = f"ซีรีส์ {total_eps} ตอนจบ" if total_eps > 1 else "ภาพยนตร์"
+
+            safe_poster = safe_url(poster)
+            movie_obj = {
+                "titleTh": clean_title,
+                "titleEn": clean_title,
+                "year": year,
+                "poster": safe_poster,
+                "backdrop": safe_poster,
+                "videoUrl": video_url,
+                "sourceType": "embed",
+                "description": desc,
+                "rating": rating,
+                "genres": ["24HDX", "พากย์ไทย", f"{rating}⭐", f"หนังปี {year}"],
+                "duration": duration_str,
+                "trailerUrl": trailer_url,
+                "cast": [],
+                "source": "24HDX",
+                "episodes": ep_list,
+                "episodeUrls": ep_urls,
+                "languages": ["Thai (พากย์ไทย)"],
+                "id": f"24hdx-{post_id}",
+                "postId": str(post_id),
+                "originalUrl": link
+            }
+            new_movies.append(movie_obj)
+            print(f"  [+] 24-HDX.NET: {clean_title} ({rating}⭐) -> {video_url}")
+            if "gangover" in link:
+                print("  ==> GANGOVER CAPTURED SUCCESSFULLY!")
+        except Exception as e:
+            continue
+
+    return new_movies
+
 def update_goseries4k():
     print("\n--- กำลังตรวจสอบซีรีส์ใหม่และอัปเดตตอนล่าสุดจาก GOSERIES4K (พากย์ไทย) ---")
     new_series = []
@@ -1635,6 +1774,7 @@ def main(auto_push=True):
             print(f"[-] ข้อผิดพลาด {name}: {e}")
             return []
 
+    scraped_24hdx_net = safe_run(update_24hdx_net, "24-HDX.NET", max_pages=3)
     scraped_top = safe_run(update_24hda_topmovies, "24-HD Top Movies")
     scraped_24hda = safe_run(update_24hda, "24-HDA")
     scraped_media = safe_run(update_24hd_media, "24HD.MEDIA")
@@ -1645,7 +1785,7 @@ def main(auto_push=True):
     
     # 2. คัดกรอง ลบหนังซ้ำ และเลือกเฉพาะอันที่ดีที่สุด (Best Version Deduplication)
     print("\n--- กำลังคัดกรอง ลบหนังซ้ำ และเลือกเฉพาะเวอร์ชันที่ดีที่สุด ---")
-    all_new_items = scraped_top + scraped_media + scraped_24hda + scraped_today + scraped_gs + scraped_wow + scraped_mshd
+    all_new_items = scraped_24hdx_net + scraped_top + scraped_media + scraped_24hda + scraped_today + scraped_gs + scraped_wow + scraped_mshd
     
     old_id_set = {m.get("id") for m in existing}
     old_len = len(existing)
