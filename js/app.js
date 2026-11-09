@@ -2113,7 +2113,7 @@ function initMovieStreamApp() {
     }
 
     // 1. 24HD.TODAY / 24HD.MEDIA (player77hdfree / vdohide / playermhd)
-    if (url.includes("player77hdfree.xyz") || url.includes("vdohide.com") || url.includes("playermhd.p2phls.xyz")) {
+    if (url.includes("player77hdfree.xyz") || url.includes("vdohide.com") || url.includes("playermhd.p2phls.xyz") || url.includes("weplayhls.xyz")) {
       const vdoMatch = url.match(/\/embed\/([a-zA-Z0-9_\-]+)/i) || url.match(/[?&]v=([a-zA-Z0-9_\-]+)/i);
       if (vdoMatch && vdoMatch[1]) {
         return `/player.html?id=${encodeURIComponent(vdoMatch[1])}&src=player77`;
