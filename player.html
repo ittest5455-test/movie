@@ -56,7 +56,86 @@
         : apiOrigin + '/api/wow?id=' + encodeURIComponent(id) + (src ? '&src=' + encodeURIComponent(src) : '');
       const color = '#e50914';
 
+      // =========================================================
+      // ระบบ Auto-Sync & Anti-Freeze Watcher
+      // แก้ปัญหาไฟล์ต้นทางตัดต่อภาพหาย (PTS gap / Video Frame Stall)
+      // ที่ทำให้ภาพค้างแต่เสียงยังเล่นต่อ: ตรวจจับและดีดข้ามจุดสะดุดอัตโนมัติ
+      // =========================================================
+      function attachAntiFreezeWatcher(v) {
+        if (!v || v._hasAntiFreeze) return;
+        v._hasAntiFreeze = true;
+
+        let lastFrameTime = performance.now();
+        let lastDecodedFrames = 0;
+        let lastCurrentTime = 0;
+
+        function onFrame() {
+          lastFrameTime = performance.now();
+          if (v && v.requestVideoFrameCallback) {
+            v.requestVideoFrameCallback(onFrame);
+          }
+        }
+        if (v.requestVideoFrameCallback) {
+          v.requestVideoFrameCallback(onFrame);
+        }
+
+        setInterval(function() {
+          if (!v || v.paused || v.seeking || v.ended || v.currentTime < 1) {
+            lastFrameTime = performance.now();
+            lastCurrentTime = v ? v.currentTime : 0;
+            return;
+          }
+
+          const now = performance.now();
+          const timeAdvanced = Math.abs(v.currentTime - lastCurrentTime);
+          let isStalled = false;
+
+          if (v.requestVideoFrameCallback) {
+            // ถ้าเสียง/เวลาวิ่งไปต่อเนื่อง แต่ภาพไม่ขยับเลยเกิน 1.2 วินาที
+            if (now - lastFrameTime > 1200 && timeAdvanced > 0.4) {
+              isStalled = true;
+            }
+          } else if (typeof v.getVideoPlaybackQuality === 'function') {
+            const q = v.getVideoPlaybackQuality();
+            if (q && q.totalVideoFrames !== undefined) {
+              if (q.totalVideoFrames === lastDecodedFrames && timeAdvanced > 0.8) {
+                isStalled = true;
+              } else {
+                lastDecodedFrames = q.totalVideoFrames;
+                lastFrameTime = now;
+              }
+            }
+          } else if (v.webkitDecodedFrameCount !== undefined) {
+            if (v.webkitDecodedFrameCount === lastDecodedFrames && timeAdvanced > 0.8) {
+              isStalled = true;
+            } else {
+              lastDecodedFrames = v.webkitDecodedFrameCount;
+              lastFrameTime = now;
+            }
+          }
+
+          lastCurrentTime = v.currentTime;
+
+          if (isStalled) {
+            console.warn('[Anti-Freeze Auto-Sync] Video frame stall detected at ' + v.currentTime.toFixed(2) + 's! Nudging +0.3s...');
+            try {
+              v.currentTime += 0.3;
+            } catch(e) {}
+            lastFrameTime = performance.now();
+          }
+        }, 500);
+      }
+
+      // คอยตรวจจับแท็ก video ทั้งใน JWPlayer และ Native Video ตลอดเวลา
+      setInterval(function() {
+        const videos = document.querySelectorAll('video');
+        videos.forEach(function(v) {
+          attachAntiFreezeWatcher(v);
+        });
+      }, 1000);
+
       function setupNativeVideo(v) {
+        attachAntiFreezeWatcher(v);
         let vTimer = null;
         v.addEventListener('waiting', function() {
           if (vTimer) clearTimeout(vTimer);
@@ -186,6 +265,10 @@
           });
 
           player.on('ready', function() {
+            try {
+              const v = document.querySelector('#player video, video');
+              if (v) attachAntiFreezeWatcher(v);
+            } catch(e) {}
             try {
               const rewindContainer = document.querySelector('.jw-display-icon-rewind');
               if (rewindContainer) {
