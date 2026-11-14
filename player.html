@@ -141,11 +141,11 @@
           if (vTimer) clearTimeout(vTimer);
           vTimer = setTimeout(function() {
             if (!v.paused && v.readyState < 3) {
-              console.warn('[Auto-Recovery] Native video stall -> skip 3s');
-              v.currentTime += 3;
+              console.warn('[Auto-Recovery] Native video stall -> nudge 0.5s');
+              v.currentTime += 0.5;
               v.play().catch(function() {});
             }
-          }, 2800);
+          }, 2500);
         });
         v.addEventListener('playing', function() { if (vTimer) clearTimeout(vTimer); });
         v.addEventListener('timeupdate', function() { if (vTimer) clearTimeout(vTimer); });
@@ -190,24 +190,48 @@
             },
             // =========================================================
             // การตั้งค่า Buffer ระดับสูง: เริ่มเล่นทันทีใน 1 วิ ไม่มีหมุนสะดุด
-            // และไม่ข้ามเนื้อเรื่อง (Zero Skip / Seamless Buffer)
+            // และคืนหน่วยความจำสม่ำเสมอ ป้องกันเครื่องค้างเมื่อดูนานๆ
             // =========================================================
             hlsjsConfig: {
-              maxBufferLength: 30,             // โหลดวิดีโอตุนล่วงหน้า 30 วินาที เล่นได้ไวทันที
-              maxMaxBufferLength: 60,          // ตุนล่วงหน้าสูงสุด 60 วินาที
-              maxBufferSize: 30 * 1024 * 1024, // ขยายหน่วยความจำ Buffer 30MB พอเหมาะกับเครื่อง
+              maxBufferLength: 30,             // ตุนล่วงหน้า 30 วินาที พอเหมาะ ไม่กินแรม
+              maxMaxBufferLength: 60,          // ตุนล่วงหน้าสูงสุดไม่เกิน 60 วินาที
+              backBufferLength: 30,            // คืนแรม/ล้างวิดีโอส่วนที่ดูผ่านไปแล้วทิ้ง ป้องกันแรมบวม ค้างเมื่อดูนานๆ
+              maxBufferSize: 60 * 1024 * 1024, // ขยายเพดาน buffer เป็น 60MB รองรับ 1080p บิตเรตสูง
               maxBufferHole: 0.5,              // สมานรอยต่อไฟล์อัตโนมัติ ไม่ให้สะดุด
-              nudgeOffset: 0.1,                // ปรับข้ามเฟรมกระตุกอัตโนมัติ
+              nudgeOffset: 0.2,                // ปรับข้ามเฟรมกระตุกอัตโนมัติ
               nudgeMaxRetry: 30,
-              manifestLoadingTimeOut: 15000,
-              manifestLoadingMaxRetry: 5,
-              levelLoadingTimeOut: 15000,
-              levelLoadingMaxRetry: 5,
-              fragLoadingTimeOut: 20000,
-              fragLoadingMaxRetry: 6,
+              manifestLoadingTimeOut: 20000,
+              manifestLoadingMaxRetry: 6,
+              levelLoadingTimeOut: 20000,
+              levelLoadingMaxRetry: 6,
+              fragLoadingTimeOut: 30000,       // ยืดเวลาโหลดชิ้นส่วนป้องกัน timeout ช่วงเน็ตแกว่ง
+              fragLoadingMaxRetry: 8,
               enableWorker: true,
               lowLatencyMode: false
             }
+          });
+
+          // ตรวจจับและกู้คืนสถานะค้างหมุน (Stall Buffer Recovery) เมื่อดูไปนานๆ
+          let bufferStallTimer = null;
+          player.on('buffer', function() {
+            if (bufferStallTimer) clearTimeout(bufferStallTimer);
+            bufferStallTimer = setTimeout(function() {
+              const state = typeof player.getState === 'function' ? player.getState() : '';
+              if (state === 'buffering' || state === 'loading') {
+                console.warn('[Auto-Recovery] Playback buffer stalled for >3.5s -> Auto-nudging +0.3s...');
+                try {
+                  const pos = player.getPosition();
+                  player.seek(pos + 0.3);
+                  player.play();
+                } catch(e) {}
+              }
+            }, 3500);
+          });
+          player.on('play', function() {
+            if (bufferStallTimer) { clearTimeout(bufferStallTimer); bufferStallTimer = null; }
+          });
+          player.on('time', function() {
+            if (bufferStallTimer) { clearTimeout(bufferStallTimer); bufferStallTimer = null; }
           });
 
           // ป้องกันข้อผิดพลาดและเล่นต่อเนื่องอัตโนมัติแบบ 100% ไม่มีโฆษณา
