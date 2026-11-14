@@ -56,6 +56,8 @@
         : apiOrigin + '/api/wow?id=' + encodeURIComponent(id) + (src ? '&src=' + encodeURIComponent(src) : '');
       const color = '#e50914';
 
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
       // =========================================================
       // ระบบ Auto-Sync & Anti-Freeze Watcher
       // แก้ปัญหาไฟล์ต้นทางตัดต่อภาพหาย (PTS gap / Video Frame Stall)
@@ -65,11 +67,21 @@
         if (!v || v._hasAntiFreeze) return;
         v._hasAntiFreeze = true;
 
+        v.setAttribute('playsinline', '');
+        v.setAttribute('webkit-playsinline', '');
+
+        // บน iOS Safari / iPhone ใช้ Hardware AVPlayer ของ Apple โดยตรง
+        // เนื่องจาก WebKit ไม่มี requestVideoFrameCallback และ webkitDecodedFrameCount เป็น 0 เสมอ
+        // การดีด currentTime จะทำให้ iPhone กระตุกทุกวินาที จึงให้ Apple Media Engine จัดการเอง
+        if (isIOS) return;
+
+        let hasReceivedFrame = false;
         let lastFrameTime = performance.now();
         let lastDecodedFrames = 0;
         let lastCurrentTime = 0;
 
         function onFrame() {
+          hasReceivedFrame = true;
           lastFrameTime = performance.now();
           if (v && v.requestVideoFrameCallback) {
             v.requestVideoFrameCallback(onFrame);
@@ -90,27 +102,20 @@
           const timeAdvanced = Math.abs(v.currentTime - lastCurrentTime);
           let isStalled = false;
 
-          if (v.requestVideoFrameCallback) {
-            // ถ้าเสียง/เวลาวิ่งไปต่อเนื่อง แต่ภาพไม่ขยับเลยเกิน 1.2 วินาที
-            if (now - lastFrameTime > 1200 && timeAdvanced > 0.4) {
+          if (v.requestVideoFrameCallback && hasReceivedFrame) {
+            // ถ้าเสียง/เวลาวิ่งไปต่อเนื่อง แต่ภาพไม่ขยับเลยเกิน 1.5 วินาที
+            if (now - lastFrameTime > 1500 && timeAdvanced > 0.5) {
               isStalled = true;
             }
           } else if (typeof v.getVideoPlaybackQuality === 'function') {
             const q = v.getVideoPlaybackQuality();
-            if (q && q.totalVideoFrames !== undefined) {
-              if (q.totalVideoFrames === lastDecodedFrames && timeAdvanced > 0.8) {
+            if (q && q.totalVideoFrames !== undefined && q.totalVideoFrames > 0) {
+              if (q.totalVideoFrames === lastDecodedFrames && timeAdvanced > 1.0) {
                 isStalled = true;
               } else {
                 lastDecodedFrames = q.totalVideoFrames;
                 lastFrameTime = now;
               }
-            }
-          } else if (v.webkitDecodedFrameCount !== undefined) {
-            if (v.webkitDecodedFrameCount === lastDecodedFrames && timeAdvanced > 0.8) {
-              isStalled = true;
-            } else {
-              lastDecodedFrames = v.webkitDecodedFrameCount;
-              lastFrameTime = now;
             }
           }
 
@@ -135,6 +140,8 @@
       }, 1000);
 
       function setupNativeVideo(v) {
+        v.setAttribute('playsinline', '');
+        v.setAttribute('webkit-playsinline', '');
         attachAntiFreezeWatcher(v);
         let vTimer = null;
         v.addEventListener('waiting', function() {
@@ -156,6 +163,8 @@
           const v = document.createElement("video");
           v.controls = true;
           v.playsInline = true;
+          v.setAttribute('playsinline', '');
+          v.setAttribute('webkit-playsinline', '');
           v.autoplay = true;
           v.style.width = "100%";
           v.style.height = "100%";
@@ -173,7 +182,8 @@
             width: "100%",
             height: "100%",
             preload: "auto",
-            hlshtml: true,
+            hlshtml: !isIOS,       // บน iOS / iPhone ให้ใช้ Native HLS ของ Apple แทน Hls.js เพื่อเปิดใช้ Apple Video Toolbox และ ProMotion 120Hz แบบไม่กระตุก
+            playsinline: true,
             autostart: true,
             sources: [{ file: streamUrl, type: "hls" }],
             skin: {

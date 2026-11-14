@@ -51,9 +51,7 @@ export async function onRequest(context) {
       if (chunkRes.headers.get("Content-Range")) {
         responseHeaders.set("Content-Range", chunkRes.headers.get("Content-Range"));
       }
-      if (chunkRes.headers.get("Accept-Ranges")) {
-        responseHeaders.set("Accept-Ranges", chunkRes.headers.get("Accept-Ranges"));
-      }
+      responseHeaders.set("Accept-Ranges", "bytes");
 
       return new Response(chunkRes.body, {
         status: chunkRes.status,
