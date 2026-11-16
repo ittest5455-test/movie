@@ -33,6 +33,11 @@
       background-color: transparent !important;
       text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 2px 4px rgba(0,0,0,0.7) !important;
     }
+    video {
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+      will-change: transform;
+    }
     video::-webkit-media-text-track-display {
       transform: translateY(-8%) !important;
     }
@@ -57,11 +62,12 @@
       const color = '#e50914';
 
       const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      const isAndroid = /Android/i.test(navigator.userAgent);
 
       // =========================================================
-      // ระบบ Auto-Sync & Anti-Freeze Watcher
+      // ระบบ Auto-Sync & Anti-Freeze Watcher (แบบประหยัด CPU)
       // แก้ปัญหาไฟล์ต้นทางตัดต่อภาพหาย (PTS gap / Video Frame Stall)
-      // ที่ทำให้ภาพค้างแต่เสียงยังเล่นต่อ: ตรวจจับและดีดข้ามจุดสะดุดอัตโนมัติ
+      // ใช้การตรวจจับแบบช่วงเวลา 2 วินาที เพื่อไม่ให้รบกวน CPU บนแท็บเล็ต/มือถือ
       // =========================================================
       function attachAntiFreezeWatcher(v) {
         if (!v || v._hasAntiFreeze) return;
@@ -71,64 +77,43 @@
         v.setAttribute('webkit-playsinline', '');
 
         // บน iOS Safari / iPhone ใช้ Hardware AVPlayer ของ Apple โดยตรง
-        // เนื่องจาก WebKit ไม่มี requestVideoFrameCallback และ webkitDecodedFrameCount เป็น 0 เสมอ
-        // การดีด currentTime จะทำให้ iPhone กระตุกทุกวินาที จึงให้ Apple Media Engine จัดการเอง
         if (isIOS) return;
 
-        let hasReceivedFrame = false;
-        let lastFrameTime = performance.now();
         let lastDecodedFrames = 0;
         let lastCurrentTime = 0;
-
-        function onFrame() {
-          hasReceivedFrame = true;
-          lastFrameTime = performance.now();
-          if (v && v.requestVideoFrameCallback) {
-            v.requestVideoFrameCallback(onFrame);
-          }
-        }
-        if (v.requestVideoFrameCallback) {
-          v.requestVideoFrameCallback(onFrame);
-        }
+        let consecutiveStalls = 0;
 
         setInterval(function() {
-          if (!v || v.paused || v.seeking || v.ended || v.currentTime < 1) {
-            lastFrameTime = performance.now();
+          if (!v || v.paused || v.seeking || v.ended || v.currentTime < 2) {
             lastCurrentTime = v ? v.currentTime : 0;
+            consecutiveStalls = 0;
             return;
           }
 
-          const now = performance.now();
           const timeAdvanced = Math.abs(v.currentTime - lastCurrentTime);
-          let isStalled = false;
+          lastCurrentTime = v.currentTime;
 
-          if (v.requestVideoFrameCallback && hasReceivedFrame) {
-            // ถ้าเสียง/เวลาวิ่งไปต่อเนื่อง แต่ภาพไม่ขยับเลยเกิน 1.5 วินาที
-            if (now - lastFrameTime > 1500 && timeAdvanced > 0.5) {
-              isStalled = true;
-            }
-          } else if (typeof v.getVideoPlaybackQuality === 'function') {
+          if (typeof v.getVideoPlaybackQuality === 'function') {
             const q = v.getVideoPlaybackQuality();
             if (q && q.totalVideoFrames !== undefined && q.totalVideoFrames > 0) {
-              if (q.totalVideoFrames === lastDecodedFrames && timeAdvanced > 1.0) {
-                isStalled = true;
+              if (q.totalVideoFrames === lastDecodedFrames && timeAdvanced > 1.2) {
+                consecutiveStalls++;
+                // ต้องค้างสนิทต่อเนื่อง 2 รอบ (~4 วินาที) ขณะที่เสียงยังเดินหน้า จึงค่อยดีดข้าม
+                // ป้องกันการดีดข้ามผิดพลาดบน Android Tablet (เช่น Redmi Pad) ที่อาจทำให้กระตุก
+                if (consecutiveStalls >= 2) {
+                  console.warn('[Anti-Freeze Auto-Sync] Video frozen for ~4s at ' + v.currentTime.toFixed(2) + 's! Nudging +0.3s...');
+                  try {
+                    v.currentTime += 0.3;
+                  } catch(e) {}
+                  consecutiveStalls = 0;
+                }
               } else {
                 lastDecodedFrames = q.totalVideoFrames;
-                lastFrameTime = now;
+                consecutiveStalls = 0;
               }
             }
           }
-
-          lastCurrentTime = v.currentTime;
-
-          if (isStalled) {
-            console.warn('[Anti-Freeze Auto-Sync] Video frame stall detected at ' + v.currentTime.toFixed(2) + 's! Nudging +0.3s...');
-            try {
-              v.currentTime += 0.3;
-            } catch(e) {}
-            lastFrameTime = performance.now();
-          }
-        }, 500);
+        }, 2000);
       }
 
       // คอยตรวจจับแท็ก video ทั้งใน JWPlayer และ Native Video ตลอดเวลา
@@ -199,22 +184,24 @@
               windowOpacity: 0
             },
             // =========================================================
-            // การตั้งค่า Buffer ระดับสูง: เริ่มเล่นทันทีใน 1 วิ ไม่มีหมุนสะดุด
-            // และคืนหน่วยความจำสม่ำเสมอ ป้องกันเครื่องค้างเมื่อดูนานๆ
+            // การตั้งค่า Buffer แยกตามอุปกรณ์:
+            // Android / Tablet (เช่น Redmi Pad) ใช้ Buffer ขนาดพอดีโควตา MSE เพื่อป้องกันการบีบแรมและกระตุก
             // =========================================================
             hlsjsConfig: {
-              maxBufferLength: 30,             // ตุนล่วงหน้า 30 วินาที พอเหมาะ ไม่กินแรม
-              maxMaxBufferLength: 60,          // ตุนล่วงหน้าสูงสุดไม่เกิน 60 วินาที
-              backBufferLength: 30,            // คืนแรม/ล้างวิดีโอส่วนที่ดูผ่านไปแล้วทิ้ง ป้องกันแรมบวม ค้างเมื่อดูนานๆ
-              maxBufferSize: 60 * 1024 * 1024, // ขยายเพดาน buffer เป็น 60MB รองรับ 1080p บิตเรตสูง
-              maxBufferHole: 0.5,              // สมานรอยต่อไฟล์อัตโนมัติ ไม่ให้สะดุด
-              nudgeOffset: 0.2,                // ปรับข้ามเฟรมกระตุกอัตโนมัติ
+              maxBufferLength: isAndroid ? 20 : 30,
+              maxMaxBufferLength: isAndroid ? 40 : 60,
+              backBufferLength: isAndroid ? 15 : 30,
+              maxBufferSize: isAndroid ? (30 * 1024 * 1024) : (60 * 1024 * 1024),
+              maxBufferHole: 0.5,
+              nudgeOffset: 0.1,
               nudgeMaxRetry: 30,
+              stretchShortVideoTrack: true,
+              forceKeyFrameOnDiscontinuity: true,
               manifestLoadingTimeOut: 20000,
               manifestLoadingMaxRetry: 6,
               levelLoadingTimeOut: 20000,
               levelLoadingMaxRetry: 6,
-              fragLoadingTimeOut: 30000,       // ยืดเวลาโหลดชิ้นส่วนป้องกัน timeout ช่วงเน็ตแกว่ง
+              fragLoadingTimeOut: 30000,
               fragLoadingMaxRetry: 8,
               enableWorker: true,
               lowLatencyMode: false
@@ -228,14 +215,14 @@
             bufferStallTimer = setTimeout(function() {
               const state = typeof player.getState === 'function' ? player.getState() : '';
               if (state === 'buffering' || state === 'loading') {
-                console.warn('[Auto-Recovery] Playback buffer stalled for >3.5s -> Auto-nudging +0.3s...');
+                console.warn('[Auto-Recovery] Playback buffer stalled for >4.5s -> Auto-nudging +0.3s...');
                 try {
                   const pos = player.getPosition();
                   player.seek(pos + 0.3);
                   player.play();
                 } catch(e) {}
               }
-            }, 3500);
+            }, 4500);
           });
           player.on('play', function() {
             if (bufferStallTimer) { clearTimeout(bufferStallTimer); bufferStallTimer = null; }
