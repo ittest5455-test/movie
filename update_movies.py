@@ -78,7 +78,7 @@ def detect_goseries_logo_y(img):
     if w != 400 or h != 600:
         img = cv2.resize(img, (400, 600), interpolation=cv2.INTER_AREA)
         
-    roi = img[260:560, :]
+    roi = img[240:595, :]
     hsv = cv2.cvtColor(roi, cv2.COLOR_BGR2HSV)
     mask_orange = cv2.inRange(hsv, np.array([8, 85, 100]), np.array([32, 255, 255]))
     
@@ -93,7 +93,7 @@ def detect_goseries_logo_y(img):
         area = cv2.contourArea(c)
         if 80 < area < 900:
             x, y, bw, bh = cv2.boundingRect(c)
-            abs_y = 260 + y
+            abs_y = 240 + y
             if 18 <= bh <= 34 and 12 <= bw <= 28:
                 if 245 <= x <= 276: cands_4.append((x, abs_y, bw, bh))
                 elif 270 <= x <= 302: cands_k.append((x, abs_y, bw, bh))
@@ -779,11 +779,10 @@ def update_goseries4k():
                     title = og_title.group(1) if og_title else raw_card_title
                     title = html.unescape(title)
                     
-                    # ตรวจสอบพากย์ไทย (ต้องมีคำว่า "พากย์ไทย" ในหัวข้อ หรือมี "-thai" ใน URL หรือมีป้าย "SUB | TH")
-                    has_thai_dub = ("พากย์ไทย" in title or "-thai" in link or "SUB | TH" in m_html)
-                    # บล็อกหากเป็นซับไทยล้วนโดยไม่มีพากย์ไทย
-                    if "ซับไทย" in title and "พากย์ไทย" not in title and "-thai" not in link and "SUB | TH" not in m_html:
+                    # ตรวจสอบพากย์ไทยอย่างเข้มงวด: บล็อกซับไทยล้วน 100%
+                    if "ซับไทย" in title and "พากย์ไทย" not in title:
                         continue
+                    has_thai_dub = ("พากย์ไทย" in title or "พากย์ไทย" in m_html)
                     if not has_thai_dub:
                         continue
                       
@@ -1775,9 +1774,6 @@ def main(auto_push=True):
             return []
 
     scraped_24hdx_net = safe_run(update_24hdx_net, "24-HDX.NET", max_pages=3)
-    scraped_top = safe_run(update_24hda_topmovies, "24-HD Top Movies")
-    scraped_24hda = safe_run(update_24hda, "24-HDA")
-    scraped_media = safe_run(update_24hd_media, "24HD.MEDIA")
     scraped_gs = safe_run(update_goseries4k, "GOSERIES4K")
     scraped_wow = safe_run(update_wow_drama, "WOW-DRAMA", max_pages=2)
     scraped_today = safe_run(update_24hd_today, "24HD.TODAY", min_rating=6.0, max_pages=2)
@@ -1785,7 +1781,7 @@ def main(auto_push=True):
     
     # 2. คัดกรอง ลบหนังซ้ำ และเลือกเฉพาะอันที่ดีที่สุด (Best Version Deduplication)
     print("\n--- กำลังคัดกรอง ลบหนังซ้ำ และเลือกเฉพาะเวอร์ชันที่ดีที่สุด ---")
-    all_new_items = scraped_24hdx_net + scraped_top + scraped_media + scraped_24hda + scraped_today + scraped_gs + scraped_wow + scraped_mshd
+    all_new_items = scraped_24hdx_net + scraped_today + scraped_gs + scraped_wow + scraped_mshd
     
     old_id_set = {m.get("id") for m in existing}
     old_len = len(existing)
