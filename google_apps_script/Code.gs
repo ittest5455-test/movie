@@ -414,6 +414,7 @@ function doPost(e) {
       var rows = sheet.getDataRange().getValues();
       for (var i = 1; i < rows.length; i++) {
         var rPhone = String(rows[i][1] || "").replace(/\D/g, "");
+        if (rPhone.length === 9) rPhone = "0" + rPhone;
         if (rPhone === phone) {
           sheet.getRange(i + 1, 7).setValue(data.watchlist || "[]"); // Col G
           break;
@@ -431,12 +432,39 @@ function doPost(e) {
       var rows = sheet.getDataRange().getValues();
       for (var i = 1; i < rows.length; i++) {
         var rPhone = String(rows[i][1] || "").replace(/\D/g, "");
+        if (rPhone.length === 9) rPhone = "0" + rPhone;
         if (rPhone === phone) {
           sheet.getRange(i + 1, 8).setValue(data.history || "[]"); // Col H
           break;
         }
       }
       result = { success: true };
+    }
+
+    // -------------------------------------------------------------
+    // 2.5 ดึงข้อมูลประวัติและรายการโปรดล่าสุดข้ามเครื่อง (get_user_data)
+    // -------------------------------------------------------------
+    else if (action === "get_user_data") {
+      var phone = String(data.phone || "").replace(/\D/g, "");
+      if (phone.length === 9) phone = "0" + phone;
+      var rows = sheet.getDataRange().getValues();
+      var foundData = null;
+      for (var i = 1; i < rows.length; i++) {
+        var rPhone = String(rows[i][1] || "").replace(/\D/g, "");
+        if (rPhone.length === 9) rPhone = "0" + rPhone;
+        if (rPhone === phone) {
+          foundData = {
+            watchlist: rows[i][6] || "[]",
+            history: rows[i][7] || "[]"
+          };
+          break;
+        }
+      }
+      if (foundData) {
+        result = { success: true, watchlist: foundData.watchlist, history: foundData.history };
+      } else {
+        result = { success: false, message: "User not found" };
+      }
     }
 
     else {

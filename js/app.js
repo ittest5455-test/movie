@@ -274,6 +274,79 @@ function initMovieStreamApp() {
 
   }
 
+  let lastCloudPullTime = 0;
+
+  async function pullCloudDataForCurrentUser(force = false) {
+    try {
+      const now = Date.now();
+      if (!force && now - lastCloudPullTime < 25000) return;
+      const savedUser = localStorage.getItem("moviestream_user");
+      if (!savedUser || !GOOGLE_SCRIPT_URL) return;
+      const user = JSON.parse(savedUser);
+      if (!user || !user.phone) return;
+      lastCloudPullTime = now;
+
+      const res = await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({
+          action: "get_user_data",
+          phone: user.phone
+        })
+      });
+      if (!res.ok) return;
+      const data = await res.json();
+      if (!data || !data.success) return;
+
+      // 1. Merge Cloud Continue Watching History
+      if (data.history) {
+        try {
+          const cloudHistory = typeof data.history === "string" ? JSON.parse(data.history) : data.history;
+          if (Array.isArray(cloudHistory) && cloudHistory.length > 0) {
+            const key = `moviestream_continue_watching_${user.phone}`;
+            const map = new Map();
+            cloudHistory.forEach(item => {
+              if (item && item.movieId) map.set(item.movieId, item);
+            });
+            (continueWatchingList || []).forEach(item => {
+              if (item && item.movieId) {
+                const prev = map.get(item.movieId);
+                if (!prev || (item.updatedAt || 0) > (prev.updatedAt || 0)) {
+                  map.set(item.movieId, item);
+                }
+              }
+            });
+            continueWatchingList = Array.from(map.values())
+              .sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0))
+              .slice(0, 20);
+            localStorage.setItem(key, JSON.stringify(continueWatchingList));
+            if (typeof renderContinueWatchingShelf === "function") {
+              renderContinueWatchingShelf();
+            }
+          }
+        } catch (e) {}
+      }
+
+      // 2. Merge Cloud Watchlist
+      if (data.watchlist) {
+        try {
+          const cloudFavs = typeof data.watchlist === "string" ? JSON.parse(data.watchlist) : data.watchlist;
+          if (Array.isArray(cloudFavs) && cloudFavs.length > 0) {
+            watchlist = Array.from(new Set([...(watchlist || []), ...cloudFavs]));
+            localStorage.setItem("moviestream_watchlist", JSON.stringify(watchlist));
+            if (typeof updateWatchlistBadge === "function") updateWatchlistBadge();
+          }
+        } catch (e) {}
+      }
+    } catch (e) {}
+  }
+
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) {
+      pullCloudDataForCurrentUser(false);
+    }
+  });
+
   function getContinueWatchingStorageKey() {
 
     try {
@@ -3777,6 +3850,9 @@ function initMovieStreamApp() {
       continueWatchingList = loadContinueWatchingData();
 
       renderContinueWatchingShelf();
+
+      // ดึงประวัติล่าสุดและรายการโปรดจาก Google Sheet อัตโนมัติ (ซิงค์ข้ามเครื่อง คอม <-> มือถือ/แท็บเล็ต)
+      pullCloudDataForCurrentUser(true);
 
     }
 
