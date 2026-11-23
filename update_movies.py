@@ -78,60 +78,67 @@ def detect_goseries_logo_y(img):
     if w != 400 or h != 600:
         img = cv2.resize(img, (400, 600), interpolation=cv2.INTER_AREA)
         
-    roi = img[240:595, :]
+    roi = img[15:595, :]
     hsv = cv2.cvtColor(roi, cv2.COLOR_BGR2HSV)
-    mask_orange = cv2.inRange(hsv, np.array([8, 85, 100]), np.array([32, 255, 255]))
-    
-    cnts, _ = cv2.findContours(mask_orange, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    
-    cands_4 = []
-    cands_k = []
-    cands_g = []
-    cands_o = []
-    
-    for c in cnts:
-        area = cv2.contourArea(c)
-        if 80 < area < 900:
-            x, y, bw, bh = cv2.boundingRect(c)
-            abs_y = 240 + y
-            if 18 <= bh <= 34 and 12 <= bw <= 28:
-                if 245 <= x <= 276: cands_4.append((x, abs_y, bw, bh))
-                elif 270 <= x <= 302: cands_k.append((x, abs_y, bw, bh))
-                elif 95 <= x <= 126: cands_g.append((x, abs_y, bw, bh))
-                elif 118 <= x <= 150: cands_o.append((x, abs_y, bw, bh))
-                
-    # 1. ตรวจจับคู่ตัวอักษร 4 และ K
-    for c4 in cands_4:
-        for ck in cands_k:
-            if abs(c4[1] - ck[1]) <= 3 and 14 <= (ck[0] - c4[0]) <= 28:
-                y_logo = min(c4[1], ck[1])
-                white_roi = img[y_logo:min(600, y_logo+28), 135:255]
-                white_hsv = cv2.cvtColor(white_roi, cv2.COLOR_BGR2HSV)
-                mask_w = cv2.inRange(white_hsv, np.array([0, 0, 180]), np.array([180, 50, 255]))
-                if cv2.countNonZero(mask_w) > 60:
-                    return True, y_logo
-                    
-    # 2. ตรวจจับคู่ตัวอักษร G และ O
-    for cg in cands_g:
-        for co in cands_o:
-            if abs(cg[1] - co[1]) <= 3 and 14 <= (co[0] - cg[0]) <= 28:
-                y_logo = min(cg[1], co[1])
-                white_roi = img[y_logo:min(600, y_logo+28), 135:255]
-                white_hsv = cv2.cvtColor(white_roi, cv2.COLOR_BGR2HSV)
-                mask_w = cv2.inRange(white_hsv, np.array([0, 0, 180]), np.array([180, 50, 255]))
-                if cv2.countNonZero(mask_w) > 60:
-                    return True, y_logo
 
-    # 3. ตรวจจับคู่ด้านซ้าย-ขวา
-    for g in cands_g + cands_o:
-        for k in cands_4 + cands_k:
-            if abs(g[1] - k[1]) <= 3 and 130 <= (k[0] - g[0]) <= 200:
-                y_logo = min(g[1], k[1])
-                white_roi = img[y_logo:min(600, y_logo+28), 135:255]
-                white_hsv = cv2.cvtColor(white_roi, cv2.COLOR_BGR2HSV)
-                mask_w = cv2.inRange(white_hsv, np.array([0, 0, 180]), np.array([180, 50, 255]))
-                if cv2.countNonZero(mask_w) > 60:
-                    return True, y_logo
+    # ลอง 2 ระดับ: 1) ส้มสด (แยกจากพื้นหลังสีเหลือง/ทอง) 2) ส้มทั่วไป
+    hsv_ranges = [
+        (np.array([8, 150, 165]), np.array([25, 255, 255])),
+        (np.array([8, 85, 100]), np.array([32, 255, 255])),
+    ]
+
+    for lo, hi in hsv_ranges:
+        mask_orange = cv2.inRange(hsv, lo, hi)
+        cnts, _ = cv2.findContours(mask_orange, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        
+        cands_4 = []
+        cands_k = []
+        cands_g = []
+        cands_o = []
+        
+        for c in cnts:
+            area = cv2.contourArea(c)
+            if 80 < area < 900:
+                x, y, bw, bh = cv2.boundingRect(c)
+                abs_y = 15 + y
+                if 18 <= bh <= 34 and 12 <= bw <= 28:
+                    if 245 <= x <= 276: cands_4.append((x, abs_y, bw, bh))
+                    elif 270 <= x <= 302: cands_k.append((x, abs_y, bw, bh))
+                    elif 95 <= x <= 126: cands_g.append((x, abs_y, bw, bh))
+                    elif 118 <= x <= 150: cands_o.append((x, abs_y, bw, bh))
+                    
+        # 1. ตรวจจับคู่ตัวอักษร 4 และ K
+        for c4 in cands_4:
+            for ck in cands_k:
+                if abs(c4[1] - ck[1]) <= 3 and 14 <= (ck[0] - c4[0]) <= 28:
+                    y_logo = min(c4[1], ck[1])
+                    white_roi = img[y_logo:min(600, y_logo+28), 135:255]
+                    white_hsv = cv2.cvtColor(white_roi, cv2.COLOR_BGR2HSV)
+                    mask_w = cv2.inRange(white_hsv, np.array([0, 0, 180]), np.array([180, 50, 255]))
+                    if cv2.countNonZero(mask_w) > 60:
+                        return True, y_logo
+                        
+        # 2. ตรวจจับคู่ตัวอักษร G และ O
+        for cg in cands_g:
+            for co in cands_o:
+                if abs(cg[1] - co[1]) <= 3 and 14 <= (co[0] - cg[0]) <= 28:
+                    y_logo = min(cg[1], co[1])
+                    white_roi = img[y_logo:min(600, y_logo+28), 135:255]
+                    white_hsv = cv2.cvtColor(white_roi, cv2.COLOR_BGR2HSV)
+                    mask_w = cv2.inRange(white_hsv, np.array([0, 0, 180]), np.array([180, 50, 255]))
+                    if cv2.countNonZero(mask_w) > 60:
+                        return True, y_logo
+
+        # 3. ตรวจจับคู่ด้านซ้าย-ขวา
+        for g in cands_g + cands_o:
+            for k in cands_4 + cands_k:
+                if abs(g[1] - k[1]) <= 3 and 130 <= (k[0] - g[0]) <= 200:
+                    y_logo = min(g[1], k[1])
+                    white_roi = img[y_logo:min(600, y_logo+28), 135:255]
+                    white_hsv = cv2.cvtColor(white_roi, cv2.COLOR_BGR2HSV)
+                    mask_w = cv2.inRange(white_hsv, np.array([0, 0, 180]), np.array([180, 50, 255]))
+                    if cv2.countNonZero(mask_w) > 60:
+                        return True, y_logo
 
     return False, None
 
@@ -636,7 +643,8 @@ def update_24hdx_net(max_pages=3):
 
             sound_m = re.search(r'class="movie-sound[^"]*">\s*<i[^>]*></i>\s*([^<\n]+)', art)
             sound_txt = sound_m.group(1).strip() if sound_m else ""
-            if "ซับไทย" in raw_title and "พากย์ไทย" not in raw_title and "พากย์ไทย" not in sound_txt:
+            check_sub_str = f"{raw_title} {sound_txt}".lower()
+            if any(k in check_sub_str for k in ["ซับไทย", "บรรยายไทย", "ซาวด์แทร็ก", "soundtrack"]) and "พากย์ไทย" not in check_sub_str:
                 continue
 
             rating_m = re.search(r'fa-star"></i>\s*([0-9.]+)', art)
@@ -815,6 +823,8 @@ def update_goseries4k():
                         else:
                             continue
                     else:
+                        if "พากย์ไทย" not in title:
+                            continue
                         target_btn_html = m_html
 
                     buttons = re.findall(r'<button[^>]+class="[^"]*mp-ep-btn[^"]*"[^>]+data-id=["\'](\d+)["\'][^>]*>(.*?)</button>', target_btn_html, re.DOTALL) or re.findall(r'<button[^>]+data-id=["\'](\d+)["\'][^>]*>(.*?)</button>', target_btn_html, re.DOTALL)
@@ -1783,10 +1793,31 @@ def main(auto_push=True):
     print("\n--- กำลังคัดกรอง ลบหนังซ้ำ และเลือกเฉพาะเวอร์ชันที่ดีที่สุด ---")
     all_new_items = scraped_24hdx_net + scraped_today + scraped_gs + scraped_wow + scraped_mshd
     
-    old_id_set = {m.get("id") for m in existing}
-    old_len = len(existing)
+    # รายการที่เว็บต้นทางติดป้ายผิด (แจ้งว่าพากย์ไทยแต่เนื้อในเป็นซับไทยล้วน)
+    BLACKLIST_IDS = {"24hdx-103569", "24hdx-102703"}  # สวิง Threesome (2026), Matchbox the Movie (2026)
+
+    def _is_clean_thai_dub(item):
+        if item.get("id") in BLACKLIST_IDS:
+            return False
+        t_check = f"{item.get('titleTh', '')} {item.get('titleEn', '')}".lower()
+        if any(k in t_check for k in ["ซับไทย", "บรรยายไทย", "ซาวด์แทร็ก", "soundtrack"]) and "พากย์ไทย" not in t_check:
+            return False
+        if "ซับไทย" in item.get("titleEn", ""):
+            item["titleEn"] = clean_sub_text(item["titleEn"])
+        return True
+
+    all_new_items = [m for m in all_new_items if _is_clean_thai_dub(m)]
+
+    # คัดกรองและลบรายการที่เป็นซับไทยล้วน (ไม่มีพากย์ไทย) ออกจากฐานข้อมูลเดิมด้วย
+    cleaned_existing = [item for item in existing if _is_clean_thai_dub(item)]
+    removed_subs = len(existing) - len(cleaned_existing)
+    if removed_subs > 0:
+        print(f"  [-] ลบเรื่องซับไทยล้วน/ติดป้ายผิดที่ตกค้างออก {removed_subs} เรื่อง")
+
+    old_id_set = {m.get("id") for m in cleaned_existing}
+    old_len = len(cleaned_existing)
     
-    combined = all_new_items + existing
+    combined = all_new_items + cleaned_existing
     deduped = deduplicate_movie_list(combined)
     
     added_new = sum(1 for m in deduped if m.get("id") not in old_id_set)
