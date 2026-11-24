@@ -1343,39 +1343,6 @@ window.movies = [
     "originalUrl": "https://24-hdx.net/gajab-raat-2026/"
   },
   {
-    "titleTh": "ผู้หลบหนีตัวจิ๋ว Tiny Fugitives (2026)",
-    "titleEn": "ผู้หลบหนีตัวจิ๋ว Tiny Fugitives (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AB%E0%B8%A5%E0%B8%9A%E0%B8%AB%E0%B8%99%E0%B8%B5%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%88%E0%B8%B4%E0%B9%8B%E0%B8%A7-Tiny-Fugitives-2026-e1792967798442.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AB%E0%B8%A5%E0%B8%9A%E0%B8%AB%E0%B8%99%E0%B8%B5%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%88%E0%B8%B4%E0%B9%8B%E0%B8%A7-Tiny-Fugitives-2026-e1792967798442.png",
-    "videoUrl": "https://weplayhls.xyz/embed/B_MMQTyp-ILwg",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ ผู้หลบหนีตัวจิ๋ว Tiny Fugitives กลุ่มเด็กอายุสิบสองขวบสุดบ้าบิ่นออกเดินทางไปเข้าค่ายพักแรมเพื่อใช้ชีวิตที่เหลืออยู่ พวกเขาจะต้องเอาชนะบ็อบ",
-    "rating": 5.4,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "5.4⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/QICrtSs26c0",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/B_MMQTyp-ILwg"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-103323",
-    "postId": "103323",
-    "originalUrl": "https://24-hdx.net/tiny-fugitives-2026/"
-  },
-  {
     "titleTh": "ไฟล์พลังจิต The Psychic Files (2026)",
     "titleEn": "ไฟล์พลังจิต The Psychic Files (2026)",
     "year": 2026,
@@ -1720,6 +1687,746 @@ window.movies = [
     "originalUrl": "https://24-hdx.net/time-traveling-stylist-2026/"
   },
   {
+    "titleTh": "เดอะ เวท The Weight (2026)",
+    "titleEn": "เดอะ เวท The Weight (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B9%80%E0%B8%A7%E0%B8%97-The-Weight-2026-e1792595613493.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B9%80%E0%B8%A7%E0%B8%97-The-Weight-2026-e1792595613493.png",
+    "videoUrl": "https://weplayhls.xyz/embed/yhoT1-9i2_qTX",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ เดอะ เวท The Weight",
+    "rating": 6.9,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "6.9⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/7YpuMymmiJ8",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/yhoT1-9i2_qTX"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-103115",
+    "postId": "103115",
+    "originalUrl": "https://24-hdx.net/the-weight-2026/"
+  },
+  {
+    "titleTh": "Norm The Tale of Norm MacDonald (2026) นอร์ม เรื่องเล่าของนอร์ม แม็คโดนัลด์",
+    "titleEn": "Norm The Tale of Norm MacDonald (2026) นอร์ม เรื่องเล่าของนอร์ม แม็คโดนัลด์",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Norm-The-Tale-of-Norm-MacDonald-2026-%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1-%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1-%E0%B9%81%E0%B8%A1%E0%B9%87%E0%B8%84%E0%B9%82%E0%B8%94%E0%B8%99%E0%B8%B1%E0%B8%A5%E0%B8%94%E0%B9%8C-e1792512652124.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Norm-The-Tale-of-Norm-MacDonald-2026-%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1-%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1-%E0%B9%81%E0%B8%A1%E0%B9%87%E0%B8%84%E0%B9%82%E0%B8%94%E0%B8%99%E0%B8%B1%E0%B8%A5%E0%B8%94%E0%B9%8C-e1792512652124.png",
+    "videoUrl": "https://weplayhls.xyz/embed/mV3_vvG0n-Ixj",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Norm The Tale of Norm MacDonald (2026) นอร์ม เรื่องเล่าของนอร์ม แม็คโดนัลด์ สารคดีของ Judd Apatow เกี่ยวกับ Norm Macdonald ใช้ฟุตเทจจากคลังภาพ",
+    "rating": 8.0,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "8.0⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/dIBNCBAzBos",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/mV3_vvG0n-Ixj"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-103042",
+    "postId": "103042",
+    "originalUrl": "https://24-hdx.net/norm-the-tale-of-norm-macdonald-2026/"
+  },
+  {
+    "titleTh": "ดัท ดอท Dutdot (2026)",
+    "titleEn": "ดัท ดอท Dutdot (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%94%E0%B8%B1%E0%B8%97-%E0%B8%94%E0%B8%AD%E0%B8%97-Dutdot-2026-e1792512617308.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%94%E0%B8%B1%E0%B8%97-%E0%B8%94%E0%B8%AD%E0%B8%97-Dutdot-2026-e1792512617308.png",
+    "videoUrl": "https://weplayhls.xyz/embed/6y-CygJ1_3dtX",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Dutdot รักแรกพบและความหลงใหล: เธอตกหลุมรักช่างสักของเธออย่างรวดเร็ว นำพาเธอไปสู่การเดินทางอันน่าตื่นเต้นของความรักครั้งแรก ความใกล้ชิด",
+    "rating": 4.0,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "4.0⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/v6feiF3iEZA",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/6y-CygJ1_3dtX"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-103043",
+    "postId": "103043",
+    "originalUrl": "https://24-hdx.net/dutdot-2026/"
+  },
+  {
+    "titleTh": "I Am the Hidden Boss (2026) นักสู้กู้สังเวียน",
+    "titleEn": "I Am the Hidden Boss (2026) นักสู้กู้สังเวียน",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/I-Am-the-Hidden-Boss-2026-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%81%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%99-e1792418738755.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/I-Am-the-Hidden-Boss-2026-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%81%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%99-e1792418738755.png",
+    "videoUrl": "https://weplayhls.xyz/embed/B-B84sC_cUT7i",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ I Am the Hidden Boss (2026) นักสู้กู้สังเวียน การเปิดเผยและการแก้แค้น: เพ็กกี้ปล่อยให้ตัวร้ายเผยความโหดร้ายและความเย่อหยิ่งของตนเองออกมาอย่างเงียบๆ",
+    "rating": 7.2,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "7.2⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/OtGOXyqh4L4",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/B-B84sC_cUT7i"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102971",
+    "postId": "102971",
+    "originalUrl": "https://24-hdx.net/i-am-the-hidden-boss-2026/"
+  },
+  {
+    "titleTh": "Our Linked Senses (2026) สัมผัสเชื่อมสองเรา",
+    "titleEn": "Our Linked Senses (2026) สัมผัสเชื่อมสองเรา",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Our-Linked-Senses-2026-%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9C%E0%B8%B1%E0%B8%AA%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A1%E0%B8%AA%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B2-e1792418812219.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Our-Linked-Senses-2026-%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9C%E0%B8%B1%E0%B8%AA%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A1%E0%B8%AA%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B2-e1792418812219.png",
+    "videoUrl": "https://weplayhls.xyz/embed/jOmUlZ_P-JUyi",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Our Linked Senses (2026) สัมผัสเชื่อมสองเรา จาก Focus Features และ Working Title สู่ภาพยนตร์ที่น่าหลงใหลซึ่งดัดแปลงมาจากนวนิยายเรื่อง Sense and",
+    "rating": 7.1,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "7.1⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/e3VCRfsbjDM",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/jOmUlZ_P-JUyi"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102975",
+    "postId": "102975",
+    "originalUrl": "https://24-hdx.net/our-linked-senses-2026/"
+  },
+  {
+    "titleTh": "The Zero Talent Nanny Raised Beast Kings (2026) สู้สุดใจเพื่ออสูรน้อยทั้งห้า",
+    "titleEn": "The Zero Talent Nanny Raised Beast Kings (2026) สู้สุดใจเพื่ออสูรน้อยทั้งห้า",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/The-Zero-Talent-Nanny-Raised-Beast-Kings-2026-%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B9%83%E0%B8%88%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%AD%E0%B8%AA%E0%B8%B9%E0%B8%A3%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2%E0%B8%97%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2-e1792170831863.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/The-Zero-Talent-Nanny-Raised-Beast-Kings-2026-%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B9%83%E0%B8%88%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%AD%E0%B8%AA%E0%B8%B9%E0%B8%A3%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2%E0%B8%97%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2-e1792170831863.png",
+    "videoUrl": "https://weplayhls.xyz/embed/D-g_aT3NhIF7n",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ The Zero Talent Nanny Raised Beast Kings สู้สุดใจเพื่ออสูรน้อยทั้งห้า เรื่องย่อ: เรื่องราวติดตามชีวิตของมีอา ฮาร์เปอร์",
+    "rating": 7.5,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "7.5⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/dNw0owVJOcI",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/D-g_aT3NhIF7n"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102925",
+    "postId": "102925",
+    "originalUrl": "https://24-hdx.net/the-zero-talent-nanny-raised-beast-kings/"
+  },
+  {
+    "titleTh": "Khlung (2026) คลึง ( )",
+    "titleEn": "Khlung (2026) คลึง ตอนที่ 1-8 (เต็มเรื่อง)",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-107718.jpg",
+    "backdrop": "images/clean_posters/wow-107718.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/1d531eb762dee09ce7afd8f29b787c28",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ไทย Khlung (2026) คลึง นางเอกหญิงสาวที่พยายามใช้ชีวิตต่อหลังสูญเสียครอบครัวต้องกลับมาเผชิญหน้ากับตงหยางชายผู้เชื่อมโยงกับเหตุการณ์ใน",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ละครไทย",
+      "ละครไทย ย้อนหลัง",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 8 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/1d531eb762dee09ce7afd8f29b787c28",
+      "2": "https://getplay-cdn.com/embed/b428d6f61bcf78075d6fca14731536ac",
+      "3": "https://getplay-cdn.com/embed/7fc8eb73ea2ec1e5eb52e889a9a3d225",
+      "4": "https://getplay-cdn.com/embed/8afa5b015e911bbc50e557b02a0a8221",
+      "5": "https://getplay-cdn.com/embed/783da2aef0303687ac66a0934810d17b",
+      "6": "https://getplay-cdn.com/embed/d45732288b9e1f0d62c21d2feb697d7b",
+      "7": "https://getplay-cdn.com/embed/cb451a1cdbda0944f006e087ea82d69f",
+      "8": "https://getplay-cdn.com/embed/9eccbe4288281fce9fc5dd0f81acbc85"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-107718",
+    "postId": "107718",
+    "originalUrl": "https://wow-drama.com/khlung-2026/"
+  },
+  {
+    "titleTh": "Onslaught แม่คลั่ง ล้างหน่วยนรก (2026)",
+    "titleEn": "Onslaught แม่คลั่ง ล้างหน่วยนรก (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Onslaught-%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%87-%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%99%E0%B8%A3%E0%B8%81-2026-e1792091985902.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Onslaught-%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%87-%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%99%E0%B8%A3%E0%B8%81-2026-e1792091985902.png",
+    "videoUrl": "https://weplayhls.xyz/embed/Zi-8kTnX8J_h3",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Onslaught แม่คลั่ง ล้างหน่วยนรก เมื่อหน่วยทหารสุดยอดที่ได้รับการดัดแปลงพันธุกรรมหลุดออกมาอาละวาดในทะเลทราย",
+    "rating": 5.4,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "5.4⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/L24CYVpQ-LI",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/Zi-8kTnX8J_h3"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102871",
+    "postId": "102871",
+    "originalUrl": "https://24-hdx.net/onslaught-2026/"
+  },
+  {
+    "titleTh": "Renegade Immortal Slaying the Blood Progenitor (2026) ฝืนลิขิตฟ้าข้าขอเป็นเซียน เดอะมูฟวี่ ศึกสังหารเซียน",
+    "titleEn": "Renegade Immortal Slaying the Blood Progenitor (2026) ฝืนลิขิตฟ้าข้าขอเป็นเซียน เดอะมูฟวี่ ศึกสังหารเซียน",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Renegade-Immortal-Slaying-the-Blood-Progenitor-2026-%E0%B8%9D%E0%B8%B7%E0%B8%99%E0%B8%A5%E0%B8%B4%E0%B8%82%E0%B8%B4%E0%B8%95%E0%B8%9F%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%99-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88-%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%99-e1792092140212.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Renegade-Immortal-Slaying-the-Blood-Progenitor-2026-%E0%B8%9D%E0%B8%B7%E0%B8%99%E0%B8%A5%E0%B8%B4%E0%B8%82%E0%B8%B4%E0%B8%95%E0%B8%9F%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%99-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88-%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%99-e1792092140212.png",
+    "videoUrl": "https://weplayhls.xyz/embed/FXqs-4jy_xO8F",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Renegade Immortal Slaying the Blood Progenitor (2026) ฝืนลิขิตฟ้าข้าขอเป็นเซียน เดอะมูฟวี่ ศึกสังหารเซียน ความขัดแย้ง: หวังหลิน ตัวเอกของเรื่อง",
+    "rating": 7.2,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "7.2⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/HM2gbOnFNfw",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/FXqs-4jy_xO8F"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102839",
+    "postId": "102839",
+    "originalUrl": "https://24-hdx.net/renegade-immortal-slaying-the-blood-progenitor-2026/"
+  },
+  {
+    "titleTh": "Infinite Mana The Peerless Rank F (2026) แรงก์เอฟไร้เทียมทาน",
+    "titleEn": "Infinite Mana The Peerless Rank F (2026) แรงก์เอฟไร้เทียมทาน",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Infinite-Mana-The-Peerless-Rank-F-2026-%E0%B9%81%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B9%8C%E0%B9%80%E0%B8%AD%E0%B8%9F%E0%B9%84%E0%B8%A3%E0%B9%89%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%A1%E0%B8%97%E0%B8%B2%E0%B8%99-e1792092107841.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Infinite-Mana-The-Peerless-Rank-F-2026-%E0%B9%81%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B9%8C%E0%B9%80%E0%B8%AD%E0%B8%9F%E0%B9%84%E0%B8%A3%E0%B9%89%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%A1%E0%B8%97%E0%B8%B2%E0%B8%99-e1792092107841.png",
+    "videoUrl": "https://weplayhls.xyz/embed/gi1_uvpDI-0MQ",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Infinite Mana The Peerless Rank F (2026) แรงก์เอฟไร้เทียมทาน ในบริบทของซีรีส์อย่าง Infinite Mana in the Apocalypse",
+    "rating": 6.7,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "6.7⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/420csZu8A_8",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/gi1_uvpDI-0MQ"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102838",
+    "postId": "102838",
+    "originalUrl": "https://24-hdx.net/infinite-mana-the-peerless-rank-f-2026/"
+  },
+  {
+    "titleTh": "Werewolf Fantasy (2026) หมาป่าน้อย พลิกชะตาฝูง",
+    "titleEn": "Werewolf Fantasy (2026) หมาป่าน้อย พลิกชะตาฝูง",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Werewolf-Fantasy-2026-%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%9B%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2-%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B8%81%E0%B8%8A%E0%B8%B0%E0%B8%95%E0%B8%B2%E0%B8%9D%E0%B8%B9%E0%B8%87-e1792092066698.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Werewolf-Fantasy-2026-%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%9B%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2-%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B8%81%E0%B8%8A%E0%B8%B0%E0%B8%95%E0%B8%B2%E0%B8%9D%E0%B8%B9%E0%B8%87-e1792092066698.png",
+    "videoUrl": "https://weplayhls.xyz/embed/V8rR_Sa-Yi5Rz",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Werewolf Fantasy (2026) หมาป่าน้อย พลิกชะตาฝูง มนุษย์หมาป่า (ภาพยนตร์): เรื่องราวเกิดขึ้นในบริเตนยุคกลางปี ​​1305",
+    "rating": 7.1,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "7.1⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/3j_F09Ml4SI",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/V8rR_Sa-Yi5Rz"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102837",
+    "postId": "102837",
+    "originalUrl": "https://24-hdx.net/werewolf-fantasy-2026/"
+  },
+  {
+    "titleTh": "Get Out of My Bugatti (2026) รถหรูเป็นเหตุ สังเกตได้",
+    "titleEn": "Get Out of My Bugatti (2026) รถหรูเป็นเหตุ สังเกตได้",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Get-Out-of-My-Bugatti-2026-%E0%B8%A3%E0%B8%96%E0%B8%AB%E0%B8%A3%E0%B8%B9%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8-%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%81%E0%B8%95%E0%B9%84%E0%B8%94%E0%B9%89-e1792092035963.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Get-Out-of-My-Bugatti-2026-%E0%B8%A3%E0%B8%96%E0%B8%AB%E0%B8%A3%E0%B8%B9%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8-%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%81%E0%B8%95%E0%B9%84%E0%B8%94%E0%B9%89-e1792092035963.png",
+    "videoUrl": "https://weplayhls.xyz/embed/RCn_mQCoQg-6I",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Get Out of My Bugatti (2026) รถหรูเป็นเหตุ สังเกตได้ เรื่องราวเริ่มต้น: ไรอัน คาร์เตอร์ มหาเศรษฐีผู้ก่อตั้งบริษัท",
+    "rating": 6.8,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "6.8⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/tFTyhIJUHpA",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/RCn_mQCoQg-6I"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102836",
+    "postId": "102836",
+    "originalUrl": "https://24-hdx.net/get-out-of-my-bugatti-2026/"
+  },
+  {
+    "titleTh": "ปาโศก Unang pasok (2026)",
+    "titleEn": "ปาโศก Unang pasok (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%9B%E0%B8%B2%E0%B9%82%E0%B8%A8%E0%B8%81-Unang-pasok-2026-e1792001696120.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%9B%E0%B8%B2%E0%B9%82%E0%B8%A8%E0%B8%81-Unang-pasok-2026-e1792001696120.png",
+    "videoUrl": "https://weplayhls.xyz/embed/jofM-EC_AaVDh",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ ปาโศก Unang pasok คิม ยาชิ และ มายูมิ เดอ เวรา สร้างเคมีที่เข้ากันอย่างลงตัวบนหน้าจอ พร้อมเผยประสบการณ์เปิดตัวสุดเร่าร้อนจากภาพยนตร์ VMX",
+    "rating": 4.0,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "4.0⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/SE4EXZ8Ljro",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/jofM-EC_AaVDh"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102835",
+    "postId": "102835",
+    "originalUrl": "https://24-hdx.net/unang-pasok-2026/"
+  },
+  {
+    "titleTh": "แบลค บ็อกซ์ Black Box (2026)",
+    "titleEn": "แบลค บ็อกซ์ Black Box (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B9%81%E0%B8%9A%E0%B8%A5%E0%B8%84-%E0%B8%9A%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B8%8B%E0%B9%8C-Black-Box-2026-e1791920924512.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B9%81%E0%B8%9A%E0%B8%A5%E0%B8%84-%E0%B8%9A%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B8%8B%E0%B9%8C-Black-Box-2026-e1791920924512.png",
+    "videoUrl": "https://weplayhls.xyz/embed/wi-IU_YVdQuUw",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ แบลค บ็อกซ์ Black Box เที่ยวบิน Vero Airlines หมายเลข 298 จากนิวออร์ลีนส์ไปยังซีแอตเติล กลายเป็นจุดศูนย์กลางของปริศนาเหนือธรรมชาติสุดสะพรึงกลัว",
+    "rating": 5.0,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "5.0⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/y-nf8hUFd98",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/wi-IU_YVdQuUw"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102522",
+    "postId": "102522",
+    "originalUrl": "https://24-hdx.net/black-box-2026/"
+  },
+  {
+    "titleTh": "ภัยคุกคามจากภายนอก The Outer Threat (2026)",
+    "titleEn": "ภัยคุกคามจากภายนอก The Outer Threat (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B8%84%E0%B8%B8%E0%B8%81%E0%B8%84%E0%B8%B2%E0%B8%A1%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%A0%E0%B8%B2%E0%B8%A2%E0%B8%99%E0%B8%AD%E0%B8%81-The-Outer-Threat-2026-e1791920897326.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B8%84%E0%B8%B8%E0%B8%81%E0%B8%84%E0%B8%B2%E0%B8%A1%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%A0%E0%B8%B2%E0%B8%A2%E0%B8%99%E0%B8%AD%E0%B8%81-The-Outer-Threat-2026-e1791920897326.png",
+    "videoUrl": "https://weplayhls.xyz/embed/h-C_LjykdD3ao",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ ภัยคุกคามจากภายนอก The Outer Threat การค้นพบสิ่งมีชีวิตต่างดาวของนักฟิสิกส์ดาราศาสตร์ทำให้เขาและครอบครัวต้องหนีออกจากบ้าน",
+    "rating": 4.3,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "4.3⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/ky6RqC2LBac",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/h-C_LjykdD3ao"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102523",
+    "postId": "102523",
+    "originalUrl": "https://24-hdx.net/the-outer-threat/"
+  },
+  {
+    "titleTh": "Nothing to Lose เมื่อไม่มีอะไรจะเสีย (2026)",
+    "titleEn": "Nothing to Lose เมื่อไม่มีอะไรจะเสีย (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Nothing-to-Lose-%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%A1%E0%B8%B5%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3%E0%B8%88%E0%B8%B0%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2-2026-e1791920267101.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Nothing-to-Lose-%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%A1%E0%B8%B5%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3%E0%B8%88%E0%B8%B0%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2-2026-e1791920267101.png",
+    "videoUrl": "https://weplayhls.xyz/embed/XL_KuFVCG-2Yo",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Nothing to Lose เมื่อไม่มีอะไรจะเสีย จาดา คุณแม่ผู้ทุ่มเท",
+    "rating": 5.8,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "5.8⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/-ST6xtcXq7s",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/XL_KuFVCG-2Yo"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102554",
+    "postId": "102554",
+    "originalUrl": "https://24-hdx.net/nothing-to-lose/"
+  },
+  {
+    "titleTh": "Desire ปรารถนาต้องห้าม (2026)",
+    "titleEn": "Desire ปรารถนาต้องห้าม (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Desire-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%A3%E0%B8%96%E0%B8%99%E0%B8%B2%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2%E0%B8%A1-2026-e1791919387373.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Desire-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%A3%E0%B8%96%E0%B8%99%E0%B8%B2%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2%E0%B8%A1-2026-e1791919387373.png",
+    "videoUrl": "https://weplayhls.xyz/embed/z-hgsMPP_9RNp",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Desire ปรารถนาต้องห้าม หญิงที่แต่งงานแล้วตกหลุมรักโค้ชว่ายน้ำของลูกสาวและมีความสัมพันธ์ชู้สาว แต่ลูกสาวก็เริ่มรู้สึกชอบเขาเช่นกัน",
+    "rating": 4.2,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "4.2⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/GTV1Cs7zvLQ",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/z-hgsMPP_9RNp"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102555",
+    "postId": "102555",
+    "originalUrl": "https://24-hdx.net/desire-2026/"
+  },
+  {
+    "titleTh": "Other Mommy (2026) แม่…หลอน",
+    "titleEn": "Other Mommy (2026) แม่…หลอน",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Other-Mommy-2026-%E0%B9%81%E0%B8%A1%E0%B9%88%E2%80%A6%E0%B8%AB%E0%B8%A5%E0%B8%AD%E0%B8%99-e1791837029642.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Other-Mommy-2026-%E0%B9%81%E0%B8%A1%E0%B9%88%E2%80%A6%E0%B8%AB%E0%B8%A5%E0%B8%AD%E0%B8%99-e1791837029642.png",
+    "videoUrl": "https://weplayhls.xyz/embed/pSH_Ne6G-oh83",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Other Mommy (2026) แม่…หลอน เบล่า เด็กหญิงวัย 8 ขวบที่อาศัยอยู่ในบ้านที่มีปัญหาครอบครัว ต้องเผชิญหน้ากับสิ่งชั่วร้ายที่โผล่ออกมาจากตู้เสื้อผ้าของเธอ",
+    "rating": 6.0,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "6.0⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/idwbe85NSb8",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/pSH_Ne6G-oh83"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102705",
+    "postId": "102705",
+    "originalUrl": "https://24-hdx.net/other-mommy-2026/"
+  },
+  {
+    "titleTh": "ฮาโลส นี่ มิลากรอส Haplos ni Milagros (2026)",
+    "titleEn": "ฮาโลส นี่ มิลากรอส Haplos ni Milagros (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%AE%E0%B8%B2%E0%B9%82%E0%B8%A5%E0%B8%AA-%E0%B8%99%E0%B8%B5%E0%B9%88-%E0%B8%A1%E0%B8%B4%E0%B8%A5%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%AA-Haplos-ni-Milagros-2026-e1791837092947.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%AE%E0%B8%B2%E0%B9%82%E0%B8%A5%E0%B8%AA-%E0%B8%99%E0%B8%B5%E0%B9%88-%E0%B8%A1%E0%B8%B4%E0%B8%A5%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%AA-Haplos-ni-Milagros-2026-e1791837092947.png",
+    "videoUrl": "https://weplayhls.xyz/embed/A4hg-Q2ol6_vc",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ ฮาโลส นี่ มิลากรอส Haplos ni Milagros มิลาโกรสเป็นหญิงสาวสวยผู้มีพลังในการรักษาโรค เธอใช้มืออันทรงพลังของเธอรักษาอาการผิดปกติทางเพศของเออร์วิน",
+    "rating": 5.0,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "5.0⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/D2jVxojePbc",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/A4hg-Q2ol6_vc"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102527",
+    "postId": "102527",
+    "originalUrl": "https://24-hdx.net/haplos-ni-milagros-2026/"
+  },
+  {
+    "titleTh": "ชวาด เฮาส์ Savage House (2026)",
+    "titleEn": "ชวาด เฮาส์ Savage House (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%8A%E0%B8%A7%E0%B8%B2%E0%B8%94-%E0%B9%80%E0%B8%AE%E0%B8%B2%E0%B8%AA%E0%B9%8C-Savage-House-2026-e1791837148192.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%8A%E0%B8%A7%E0%B8%B2%E0%B8%94-%E0%B9%80%E0%B8%AE%E0%B8%B2%E0%B8%AA%E0%B9%8C-Savage-House-2026-e1791837148192.png",
+    "videoUrl": "https://weplayhls.xyz/embed/lS_Oojwtb4-4J",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ ชวาด เฮาส์ Savage House เรื่องราวเกิดขึ้นในอังกฤษศตวรรษที่ 18 ท่ามกลางการระบาดของโรคฝีดาษและการก่อกบฏของจาโคไบต์",
+    "rating": 6.0,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "6.0⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/dB9HuMcaEGM",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/lS_Oojwtb4-4J"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102528",
+    "postId": "102528",
+    "originalUrl": "https://24-hdx.net/savage-house-2026/"
+  },
+  {
+    "titleTh": "สิ่งนี้ สิ่งนี้ และทุกสิ่งทุกอย่างที่อยู่ระหว่างนั้น This, That and Everything in Between (2026)",
+    "titleEn": "สิ่งนี้ สิ่งนี้ และทุกสิ่งทุกอย่างที่อยู่ระหว่างนั้น This, That and Everything in Between (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89-%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%97%E0%B8%B8%E0%B8%81%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%81%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B1%E0%B9%89%E0%B8%99-This-That-and-Everything-in-Between-e1791837243175.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89-%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%97%E0%B8%B8%E0%B8%81%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%81%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B1%E0%B9%89%E0%B8%99-This-That-and-Everything-in-Between-e1791837243175.png",
+    "videoUrl": "https://weplayhls.xyz/embed/jul8VXM_6-54T",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ สิ่งนี้ สิ่งนี้ และทุกสิ่งทุกอย่างที่อยู่ระหว่างนั้น This, That and Everything in Between (2026)",
+    "rating": 5.4,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "5.4⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/ueGNj0fC8rU",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/jul8VXM_6-54T"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102519",
+    "postId": "102519",
+    "originalUrl": "https://24-hdx.net/this-that-and-everything-in-between-2026/"
+  },
+  {
+    "titleTh": "ผู้หลบหนีตัวจิ๋ว Tiny Fugitives (2026)",
+    "titleEn": "ผู้หลบหนีตัวจิ๋ว Tiny Fugitives (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AB%E0%B8%A5%E0%B8%9A%E0%B8%AB%E0%B8%99%E0%B8%B5%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%88%E0%B8%B4%E0%B9%8B%E0%B8%A7-Tiny-Fugitives-2026-e1792967798442.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AB%E0%B8%A5%E0%B8%9A%E0%B8%AB%E0%B8%99%E0%B8%B5%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%88%E0%B8%B4%E0%B9%8B%E0%B8%A7-Tiny-Fugitives-2026-e1792967798442.png",
+    "videoUrl": "https://weplayhls.xyz/embed/B_MMQTyp-ILwg",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ ผู้หลบหนีตัวจิ๋ว Tiny Fugitives กลุ่มเด็กอายุสิบสองขวบสุดบ้าบิ่นออกเดินทางไปเข้าค่ายพักแรมเพื่อใช้ชีวิตที่เหลืออยู่ พวกเขาจะต้องเอาชนะบ็อบ",
+    "rating": 5.4,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "5.4⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/QICrtSs26c0",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/B_MMQTyp-ILwg"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-103323",
+    "postId": "103323",
+    "originalUrl": "https://24-hdx.net/tiny-fugitives-2026/"
+  },
+  {
     "titleTh": "Therapy Done Right (2026) นักบำบัดนอกตำรา",
     "titleEn": "Therapy Done Right (2026) นักบำบัดนอกตำรา",
     "year": 2026,
@@ -1817,39 +2524,6 @@ window.movies = [
     "id": "24hdx-103117",
     "postId": "103117",
     "originalUrl": "https://24-hdx.net/the-silent-shock-2026/"
-  },
-  {
-    "titleTh": "เดอะ เวท The Weight (2026)",
-    "titleEn": "เดอะ เวท The Weight (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B9%80%E0%B8%A7%E0%B8%97-The-Weight-2026-e1792595613493.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B9%80%E0%B8%A7%E0%B8%97-The-Weight-2026-e1792595613493.png",
-    "videoUrl": "https://weplayhls.xyz/embed/yhoT1-9i2_qTX",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ เดอะ เวท The Weight",
-    "rating": 6.9,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "6.9⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/7YpuMymmiJ8",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/yhoT1-9i2_qTX"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-103115",
-    "postId": "103115",
-    "originalUrl": "https://24-hdx.net/the-weight-2026/"
   },
   {
     "titleTh": "Love of Your Life (2026) ให้หัวใจได้รักอีกครั้ง",
@@ -2051,72 +2725,6 @@ window.movies = [
     "originalUrl": "https://24-hdx.net/the-storm-2026/"
   },
   {
-    "titleTh": "Norm The Tale of Norm MacDonald (2026) นอร์ม เรื่องเล่าของนอร์ม แม็คโดนัลด์",
-    "titleEn": "Norm The Tale of Norm MacDonald (2026) นอร์ม เรื่องเล่าของนอร์ม แม็คโดนัลด์",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Norm-The-Tale-of-Norm-MacDonald-2026-%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1-%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1-%E0%B9%81%E0%B8%A1%E0%B9%87%E0%B8%84%E0%B9%82%E0%B8%94%E0%B8%99%E0%B8%B1%E0%B8%A5%E0%B8%94%E0%B9%8C-e1792512652124.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Norm-The-Tale-of-Norm-MacDonald-2026-%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1-%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1-%E0%B9%81%E0%B8%A1%E0%B9%87%E0%B8%84%E0%B9%82%E0%B8%94%E0%B8%99%E0%B8%B1%E0%B8%A5%E0%B8%94%E0%B9%8C-e1792512652124.png",
-    "videoUrl": "https://weplayhls.xyz/embed/mV3_vvG0n-Ixj",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Norm The Tale of Norm MacDonald (2026) นอร์ม เรื่องเล่าของนอร์ม แม็คโดนัลด์ สารคดีของ Judd Apatow เกี่ยวกับ Norm Macdonald ใช้ฟุตเทจจากคลังภาพ",
-    "rating": 8.0,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "8.0⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/dIBNCBAzBos",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/mV3_vvG0n-Ixj"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-103042",
-    "postId": "103042",
-    "originalUrl": "https://24-hdx.net/norm-the-tale-of-norm-macdonald-2026/"
-  },
-  {
-    "titleTh": "ดัท ดอท Dutdot (2026)",
-    "titleEn": "ดัท ดอท Dutdot (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%94%E0%B8%B1%E0%B8%97-%E0%B8%94%E0%B8%AD%E0%B8%97-Dutdot-2026-e1792512617308.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%94%E0%B8%B1%E0%B8%97-%E0%B8%94%E0%B8%AD%E0%B8%97-Dutdot-2026-e1792512617308.png",
-    "videoUrl": "https://weplayhls.xyz/embed/6y-CygJ1_3dtX",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Dutdot รักแรกพบและความหลงใหล: เธอตกหลุมรักช่างสักของเธออย่างรวดเร็ว นำพาเธอไปสู่การเดินทางอันน่าตื่นเต้นของความรักครั้งแรก ความใกล้ชิด",
-    "rating": 4.0,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "4.0⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/v6feiF3iEZA",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/6y-CygJ1_3dtX"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-103043",
-    "postId": "103043",
-    "originalUrl": "https://24-hdx.net/dutdot-2026/"
-  },
-  {
     "titleTh": "Digger (2026) ดิกเกอร์",
     "titleEn": "Digger (2026) ดิกเกอร์",
     "year": 2026,
@@ -2284,39 +2892,6 @@ window.movies = [
     "originalUrl": "https://24-hdx.net/the-boss-who-lost-his-shield-2026/"
   },
   {
-    "titleTh": "I Am the Hidden Boss (2026) นักสู้กู้สังเวียน",
-    "titleEn": "I Am the Hidden Boss (2026) นักสู้กู้สังเวียน",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/I-Am-the-Hidden-Boss-2026-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%81%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%99-e1792418738755.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/I-Am-the-Hidden-Boss-2026-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%81%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%99-e1792418738755.png",
-    "videoUrl": "https://weplayhls.xyz/embed/B-B84sC_cUT7i",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ I Am the Hidden Boss (2026) นักสู้กู้สังเวียน การเปิดเผยและการแก้แค้น: เพ็กกี้ปล่อยให้ตัวร้ายเผยความโหดร้ายและความเย่อหยิ่งของตนเองออกมาอย่างเงียบๆ",
-    "rating": 7.2,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "7.2⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/OtGOXyqh4L4",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/B-B84sC_cUT7i"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102971",
-    "postId": "102971",
-    "originalUrl": "https://24-hdx.net/i-am-the-hidden-boss-2026/"
-  },
-  {
     "titleTh": "street fighter 2026 สตรีทไฟท์เตอร์",
     "titleEn": "street fighter 2026 สตรีทไฟท์เตอร์",
     "year": 2026,
@@ -2382,72 +2957,6 @@ window.movies = [
     "id": "24hdx-102973",
     "postId": "102973",
     "originalUrl": "https://24-hdx.net/madam-commander-the-captain-surrenders-2026/"
-  },
-  {
-    "titleTh": "Our Linked Senses (2026) สัมผัสเชื่อมสองเรา",
-    "titleEn": "Our Linked Senses (2026) สัมผัสเชื่อมสองเรา",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Our-Linked-Senses-2026-%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9C%E0%B8%B1%E0%B8%AA%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A1%E0%B8%AA%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B2-e1792418812219.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Our-Linked-Senses-2026-%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9C%E0%B8%B1%E0%B8%AA%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A1%E0%B8%AA%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B2-e1792418812219.png",
-    "videoUrl": "https://weplayhls.xyz/embed/jOmUlZ_P-JUyi",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Our Linked Senses (2026) สัมผัสเชื่อมสองเรา จาก Focus Features และ Working Title สู่ภาพยนตร์ที่น่าหลงใหลซึ่งดัดแปลงมาจากนวนิยายเรื่อง Sense and",
-    "rating": 7.1,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "7.1⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/e3VCRfsbjDM",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/jOmUlZ_P-JUyi"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102975",
-    "postId": "102975",
-    "originalUrl": "https://24-hdx.net/our-linked-senses-2026/"
-  },
-  {
-    "titleTh": "The Zero Talent Nanny Raised Beast Kings (2026) สู้สุดใจเพื่ออสูรน้อยทั้งห้า",
-    "titleEn": "The Zero Talent Nanny Raised Beast Kings (2026) สู้สุดใจเพื่ออสูรน้อยทั้งห้า",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/The-Zero-Talent-Nanny-Raised-Beast-Kings-2026-%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B9%83%E0%B8%88%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%AD%E0%B8%AA%E0%B8%B9%E0%B8%A3%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2%E0%B8%97%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2-e1792170831863.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/The-Zero-Talent-Nanny-Raised-Beast-Kings-2026-%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B9%83%E0%B8%88%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%AD%E0%B8%AA%E0%B8%B9%E0%B8%A3%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2%E0%B8%97%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2-e1792170831863.png",
-    "videoUrl": "https://weplayhls.xyz/embed/D-g_aT3NhIF7n",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ The Zero Talent Nanny Raised Beast Kings สู้สุดใจเพื่ออสูรน้อยทั้งห้า เรื่องย่อ: เรื่องราวติดตามชีวิตของมีอา ฮาร์เปอร์",
-    "rating": 7.5,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "7.5⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/dNw0owVJOcI",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/D-g_aT3NhIF7n"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102925",
-    "postId": "102925",
-    "originalUrl": "https://24-hdx.net/the-zero-talent-nanny-raised-beast-kings/"
   },
   {
     "titleTh": "The Charming Beast Tamer (2026) นักฝึกอสูรเสน่ห์ล้น",
@@ -2516,86 +3025,6 @@ window.movies = [
     "originalUrl": "https://24-hdx.net/buddy-2026/"
   },
   {
-    "titleTh": "Khlung (2026) คลึง ( )",
-    "titleEn": "Khlung (2026) คลึง ตอนที่ 1-8 (เต็มเรื่อง)",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-107718.jpg",
-    "backdrop": "images/clean_posters/wow-107718.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/1d531eb762dee09ce7afd8f29b787c28",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ไทย Khlung (2026) คลึง นางเอกหญิงสาวที่พยายามใช้ชีวิตต่อหลังสูญเสียครอบครัวต้องกลับมาเผชิญหน้ากับตงหยางชายผู้เชื่อมโยงกับเหตุการณ์ใน",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ละครไทย",
-      "ละครไทย ย้อนหลัง",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 8 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/1d531eb762dee09ce7afd8f29b787c28",
-      "2": "https://getplay-cdn.com/embed/b428d6f61bcf78075d6fca14731536ac",
-      "3": "https://getplay-cdn.com/embed/7fc8eb73ea2ec1e5eb52e889a9a3d225",
-      "4": "https://getplay-cdn.com/embed/8afa5b015e911bbc50e557b02a0a8221",
-      "5": "https://getplay-cdn.com/embed/783da2aef0303687ac66a0934810d17b",
-      "6": "https://getplay-cdn.com/embed/d45732288b9e1f0d62c21d2feb697d7b",
-      "7": "https://getplay-cdn.com/embed/cb451a1cdbda0944f006e087ea82d69f",
-      "8": "https://getplay-cdn.com/embed/9eccbe4288281fce9fc5dd0f81acbc85"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-107718",
-    "postId": "107718",
-    "originalUrl": "https://wow-drama.com/khlung-2026/"
-  },
-  {
-    "titleTh": "Onslaught แม่คลั่ง ล้างหน่วยนรก (2026)",
-    "titleEn": "Onslaught แม่คลั่ง ล้างหน่วยนรก (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Onslaught-%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%87-%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%99%E0%B8%A3%E0%B8%81-2026-e1792091985902.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Onslaught-%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%87-%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%99%E0%B8%A3%E0%B8%81-2026-e1792091985902.png",
-    "videoUrl": "https://weplayhls.xyz/embed/Zi-8kTnX8J_h3",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Onslaught แม่คลั่ง ล้างหน่วยนรก เมื่อหน่วยทหารสุดยอดที่ได้รับการดัดแปลงพันธุกรรมหลุดออกมาอาละวาดในทะเลทราย",
-    "rating": 5.4,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "5.4⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/L24CYVpQ-LI",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/Zi-8kTnX8J_h3"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102871",
-    "postId": "102871",
-    "originalUrl": "https://24-hdx.net/onslaught-2026/"
-  },
-  {
     "titleTh": "แฟนสาวเฮนไทของฉัน My Hentai Girlfriend (2026)",
     "titleEn": "แฟนสาวเฮนไทของฉัน My Hentai Girlfriend (2026)",
     "year": 2026,
@@ -2629,138 +3058,6 @@ window.movies = [
     "originalUrl": "https://24-hdx.net/my-hentai-girlfriend-2026/"
   },
   {
-    "titleTh": "Renegade Immortal Slaying the Blood Progenitor (2026) ฝืนลิขิตฟ้าข้าขอเป็นเซียน เดอะมูฟวี่ ศึกสังหารเซียน",
-    "titleEn": "Renegade Immortal Slaying the Blood Progenitor (2026) ฝืนลิขิตฟ้าข้าขอเป็นเซียน เดอะมูฟวี่ ศึกสังหารเซียน",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Renegade-Immortal-Slaying-the-Blood-Progenitor-2026-%E0%B8%9D%E0%B8%B7%E0%B8%99%E0%B8%A5%E0%B8%B4%E0%B8%82%E0%B8%B4%E0%B8%95%E0%B8%9F%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%99-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88-%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%99-e1792092140212.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Renegade-Immortal-Slaying-the-Blood-Progenitor-2026-%E0%B8%9D%E0%B8%B7%E0%B8%99%E0%B8%A5%E0%B8%B4%E0%B8%82%E0%B8%B4%E0%B8%95%E0%B8%9F%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%99-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88-%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%99-e1792092140212.png",
-    "videoUrl": "https://weplayhls.xyz/embed/FXqs-4jy_xO8F",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Renegade Immortal Slaying the Blood Progenitor (2026) ฝืนลิขิตฟ้าข้าขอเป็นเซียน เดอะมูฟวี่ ศึกสังหารเซียน ความขัดแย้ง: หวังหลิน ตัวเอกของเรื่อง",
-    "rating": 7.2,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "7.2⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/HM2gbOnFNfw",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/FXqs-4jy_xO8F"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102839",
-    "postId": "102839",
-    "originalUrl": "https://24-hdx.net/renegade-immortal-slaying-the-blood-progenitor-2026/"
-  },
-  {
-    "titleTh": "Infinite Mana The Peerless Rank F (2026) แรงก์เอฟไร้เทียมทาน",
-    "titleEn": "Infinite Mana The Peerless Rank F (2026) แรงก์เอฟไร้เทียมทาน",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Infinite-Mana-The-Peerless-Rank-F-2026-%E0%B9%81%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B9%8C%E0%B9%80%E0%B8%AD%E0%B8%9F%E0%B9%84%E0%B8%A3%E0%B9%89%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%A1%E0%B8%97%E0%B8%B2%E0%B8%99-e1792092107841.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Infinite-Mana-The-Peerless-Rank-F-2026-%E0%B9%81%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B9%8C%E0%B9%80%E0%B8%AD%E0%B8%9F%E0%B9%84%E0%B8%A3%E0%B9%89%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%A1%E0%B8%97%E0%B8%B2%E0%B8%99-e1792092107841.png",
-    "videoUrl": "https://weplayhls.xyz/embed/gi1_uvpDI-0MQ",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Infinite Mana The Peerless Rank F (2026) แรงก์เอฟไร้เทียมทาน ในบริบทของซีรีส์อย่าง Infinite Mana in the Apocalypse",
-    "rating": 6.7,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "6.7⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/420csZu8A_8",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/gi1_uvpDI-0MQ"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102838",
-    "postId": "102838",
-    "originalUrl": "https://24-hdx.net/infinite-mana-the-peerless-rank-f-2026/"
-  },
-  {
-    "titleTh": "Werewolf Fantasy (2026) หมาป่าน้อย พลิกชะตาฝูง",
-    "titleEn": "Werewolf Fantasy (2026) หมาป่าน้อย พลิกชะตาฝูง",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Werewolf-Fantasy-2026-%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%9B%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2-%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B8%81%E0%B8%8A%E0%B8%B0%E0%B8%95%E0%B8%B2%E0%B8%9D%E0%B8%B9%E0%B8%87-e1792092066698.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Werewolf-Fantasy-2026-%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%9B%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2-%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B8%81%E0%B8%8A%E0%B8%B0%E0%B8%95%E0%B8%B2%E0%B8%9D%E0%B8%B9%E0%B8%87-e1792092066698.png",
-    "videoUrl": "https://weplayhls.xyz/embed/V8rR_Sa-Yi5Rz",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Werewolf Fantasy (2026) หมาป่าน้อย พลิกชะตาฝูง มนุษย์หมาป่า (ภาพยนตร์): เรื่องราวเกิดขึ้นในบริเตนยุคกลางปี ​​1305",
-    "rating": 7.1,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "7.1⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/3j_F09Ml4SI",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/V8rR_Sa-Yi5Rz"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102837",
-    "postId": "102837",
-    "originalUrl": "https://24-hdx.net/werewolf-fantasy-2026/"
-  },
-  {
-    "titleTh": "Get Out of My Bugatti (2026) รถหรูเป็นเหตุ สังเกตได้",
-    "titleEn": "Get Out of My Bugatti (2026) รถหรูเป็นเหตุ สังเกตได้",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Get-Out-of-My-Bugatti-2026-%E0%B8%A3%E0%B8%96%E0%B8%AB%E0%B8%A3%E0%B8%B9%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8-%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%81%E0%B8%95%E0%B9%84%E0%B8%94%E0%B9%89-e1792092035963.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Get-Out-of-My-Bugatti-2026-%E0%B8%A3%E0%B8%96%E0%B8%AB%E0%B8%A3%E0%B8%B9%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8-%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%81%E0%B8%95%E0%B9%84%E0%B8%94%E0%B9%89-e1792092035963.png",
-    "videoUrl": "https://weplayhls.xyz/embed/RCn_mQCoQg-6I",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Get Out of My Bugatti (2026) รถหรูเป็นเหตุ สังเกตได้ เรื่องราวเริ่มต้น: ไรอัน คาร์เตอร์ มหาเศรษฐีผู้ก่อตั้งบริษัท",
-    "rating": 6.8,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "6.8⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/tFTyhIJUHpA",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/RCn_mQCoQg-6I"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102836",
-    "postId": "102836",
-    "originalUrl": "https://24-hdx.net/get-out-of-my-bugatti-2026/"
-  },
-  {
     "titleTh": "Doing Life (2026) ชั่วชีวิต",
     "titleEn": "Doing Life (2026) ชั่วชีวิต",
     "year": 2026,
@@ -2792,39 +3089,6 @@ window.movies = [
     "id": "24hdx-102833",
     "postId": "102833",
     "originalUrl": "https://24-hdx.net/doing-life-2026/"
-  },
-  {
-    "titleTh": "ปาโศก Unang pasok (2026)",
-    "titleEn": "ปาโศก Unang pasok (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%9B%E0%B8%B2%E0%B9%82%E0%B8%A8%E0%B8%81-Unang-pasok-2026-e1792001696120.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%9B%E0%B8%B2%E0%B9%82%E0%B8%A8%E0%B8%81-Unang-pasok-2026-e1792001696120.png",
-    "videoUrl": "https://weplayhls.xyz/embed/jofM-EC_AaVDh",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ ปาโศก Unang pasok คิม ยาชิ และ มายูมิ เดอ เวรา สร้างเคมีที่เข้ากันอย่างลงตัวบนหน้าจอ พร้อมเผยประสบการณ์เปิดตัวสุดเร่าร้อนจากภาพยนตร์ VMX",
-    "rating": 4.0,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "4.0⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/SE4EXZ8Ljro",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/jofM-EC_AaVDh"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102835",
-    "postId": "102835",
-    "originalUrl": "https://24-hdx.net/unang-pasok-2026/"
   },
   {
     "titleTh": "เดอะ อิน คัมเมอร์ The Incomer (2026)",
@@ -2893,72 +3157,6 @@ window.movies = [
     "originalUrl": "https://24-hdx.net/maa-inti-bangaram-2026/"
   },
   {
-    "titleTh": "แบลค บ็อกซ์ Black Box (2026)",
-    "titleEn": "แบลค บ็อกซ์ Black Box (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B9%81%E0%B8%9A%E0%B8%A5%E0%B8%84-%E0%B8%9A%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B8%8B%E0%B9%8C-Black-Box-2026-e1791920924512.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B9%81%E0%B8%9A%E0%B8%A5%E0%B8%84-%E0%B8%9A%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B8%8B%E0%B9%8C-Black-Box-2026-e1791920924512.png",
-    "videoUrl": "https://weplayhls.xyz/embed/wi-IU_YVdQuUw",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ แบลค บ็อกซ์ Black Box เที่ยวบิน Vero Airlines หมายเลข 298 จากนิวออร์ลีนส์ไปยังซีแอตเติล กลายเป็นจุดศูนย์กลางของปริศนาเหนือธรรมชาติสุดสะพรึงกลัว",
-    "rating": 5.0,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "5.0⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/y-nf8hUFd98",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/wi-IU_YVdQuUw"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102522",
-    "postId": "102522",
-    "originalUrl": "https://24-hdx.net/black-box-2026/"
-  },
-  {
-    "titleTh": "ภัยคุกคามจากภายนอก The Outer Threat (2026)",
-    "titleEn": "ภัยคุกคามจากภายนอก The Outer Threat (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B8%84%E0%B8%B8%E0%B8%81%E0%B8%84%E0%B8%B2%E0%B8%A1%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%A0%E0%B8%B2%E0%B8%A2%E0%B8%99%E0%B8%AD%E0%B8%81-The-Outer-Threat-2026-e1791920897326.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B8%84%E0%B8%B8%E0%B8%81%E0%B8%84%E0%B8%B2%E0%B8%A1%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%A0%E0%B8%B2%E0%B8%A2%E0%B8%99%E0%B8%AD%E0%B8%81-The-Outer-Threat-2026-e1791920897326.png",
-    "videoUrl": "https://weplayhls.xyz/embed/h-C_LjykdD3ao",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ ภัยคุกคามจากภายนอก The Outer Threat การค้นพบสิ่งมีชีวิตต่างดาวของนักฟิสิกส์ดาราศาสตร์ทำให้เขาและครอบครัวต้องหนีออกจากบ้าน",
-    "rating": 4.3,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "4.3⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/ky6RqC2LBac",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/h-C_LjykdD3ao"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102523",
-    "postId": "102523",
-    "originalUrl": "https://24-hdx.net/the-outer-threat/"
-  },
-  {
     "titleTh": "My Best Friend, His Girlfriend and Me เพื่อนรัก แฟนเพื่อน และตัวผม (2026)",
     "titleEn": "My Best Friend, His Girlfriend and Me เพื่อนรัก แฟนเพื่อน และตัวผม (2026)",
     "year": 2026,
@@ -3025,72 +3223,6 @@ window.movies = [
     "originalUrl": "https://24-hdx.net/mystery-arena/"
   },
   {
-    "titleTh": "Nothing to Lose เมื่อไม่มีอะไรจะเสีย (2026)",
-    "titleEn": "Nothing to Lose เมื่อไม่มีอะไรจะเสีย (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Nothing-to-Lose-%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%A1%E0%B8%B5%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3%E0%B8%88%E0%B8%B0%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2-2026-e1791920267101.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Nothing-to-Lose-%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%A1%E0%B8%B5%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3%E0%B8%88%E0%B8%B0%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2-2026-e1791920267101.png",
-    "videoUrl": "https://weplayhls.xyz/embed/XL_KuFVCG-2Yo",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Nothing to Lose เมื่อไม่มีอะไรจะเสีย จาดา คุณแม่ผู้ทุ่มเท",
-    "rating": 5.8,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "5.8⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/-ST6xtcXq7s",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/XL_KuFVCG-2Yo"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102554",
-    "postId": "102554",
-    "originalUrl": "https://24-hdx.net/nothing-to-lose/"
-  },
-  {
-    "titleTh": "Desire ปรารถนาต้องห้าม (2026)",
-    "titleEn": "Desire ปรารถนาต้องห้าม (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Desire-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%A3%E0%B8%96%E0%B8%99%E0%B8%B2%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2%E0%B8%A1-2026-e1791919387373.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Desire-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%A3%E0%B8%96%E0%B8%99%E0%B8%B2%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2%E0%B8%A1-2026-e1791919387373.png",
-    "videoUrl": "https://weplayhls.xyz/embed/z-hgsMPP_9RNp",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Desire ปรารถนาต้องห้าม หญิงที่แต่งงานแล้วตกหลุมรักโค้ชว่ายน้ำของลูกสาวและมีความสัมพันธ์ชู้สาว แต่ลูกสาวก็เริ่มรู้สึกชอบเขาเช่นกัน",
-    "rating": 4.2,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "4.2⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/GTV1Cs7zvLQ",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/z-hgsMPP_9RNp"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102555",
-    "postId": "102555",
-    "originalUrl": "https://24-hdx.net/desire-2026/"
-  },
-  {
     "titleTh": "อ้าง Siping (2026)",
     "titleEn": "อ้าง Siping (2026)",
     "year": 2026,
@@ -3122,138 +3254,6 @@ window.movies = [
     "id": "24hdx-102556",
     "postId": "102556",
     "originalUrl": "https://24-hdx.net/siping-2026/"
-  },
-  {
-    "titleTh": "Other Mommy (2026) แม่…หลอน",
-    "titleEn": "Other Mommy (2026) แม่…หลอน",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Other-Mommy-2026-%E0%B9%81%E0%B8%A1%E0%B9%88%E2%80%A6%E0%B8%AB%E0%B8%A5%E0%B8%AD%E0%B8%99-e1791837029642.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Other-Mommy-2026-%E0%B9%81%E0%B8%A1%E0%B9%88%E2%80%A6%E0%B8%AB%E0%B8%A5%E0%B8%AD%E0%B8%99-e1791837029642.png",
-    "videoUrl": "https://weplayhls.xyz/embed/pSH_Ne6G-oh83",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Other Mommy (2026) แม่…หลอน เบล่า เด็กหญิงวัย 8 ขวบที่อาศัยอยู่ในบ้านที่มีปัญหาครอบครัว ต้องเผชิญหน้ากับสิ่งชั่วร้ายที่โผล่ออกมาจากตู้เสื้อผ้าของเธอ",
-    "rating": 6.0,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "6.0⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/idwbe85NSb8",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/pSH_Ne6G-oh83"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102705",
-    "postId": "102705",
-    "originalUrl": "https://24-hdx.net/other-mommy-2026/"
-  },
-  {
-    "titleTh": "ฮาโลส นี่ มิลากรอส Haplos ni Milagros (2026)",
-    "titleEn": "ฮาโลส นี่ มิลากรอส Haplos ni Milagros (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%AE%E0%B8%B2%E0%B9%82%E0%B8%A5%E0%B8%AA-%E0%B8%99%E0%B8%B5%E0%B9%88-%E0%B8%A1%E0%B8%B4%E0%B8%A5%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%AA-Haplos-ni-Milagros-2026-e1791837092947.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%AE%E0%B8%B2%E0%B9%82%E0%B8%A5%E0%B8%AA-%E0%B8%99%E0%B8%B5%E0%B9%88-%E0%B8%A1%E0%B8%B4%E0%B8%A5%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%AA-Haplos-ni-Milagros-2026-e1791837092947.png",
-    "videoUrl": "https://weplayhls.xyz/embed/A4hg-Q2ol6_vc",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ ฮาโลส นี่ มิลากรอส Haplos ni Milagros มิลาโกรสเป็นหญิงสาวสวยผู้มีพลังในการรักษาโรค เธอใช้มืออันทรงพลังของเธอรักษาอาการผิดปกติทางเพศของเออร์วิน",
-    "rating": 5.0,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "5.0⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/D2jVxojePbc",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/A4hg-Q2ol6_vc"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102527",
-    "postId": "102527",
-    "originalUrl": "https://24-hdx.net/haplos-ni-milagros-2026/"
-  },
-  {
-    "titleTh": "ชวาด เฮาส์ Savage House (2026)",
-    "titleEn": "ชวาด เฮาส์ Savage House (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%8A%E0%B8%A7%E0%B8%B2%E0%B8%94-%E0%B9%80%E0%B8%AE%E0%B8%B2%E0%B8%AA%E0%B9%8C-Savage-House-2026-e1791837148192.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%8A%E0%B8%A7%E0%B8%B2%E0%B8%94-%E0%B9%80%E0%B8%AE%E0%B8%B2%E0%B8%AA%E0%B9%8C-Savage-House-2026-e1791837148192.png",
-    "videoUrl": "https://weplayhls.xyz/embed/lS_Oojwtb4-4J",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ ชวาด เฮาส์ Savage House เรื่องราวเกิดขึ้นในอังกฤษศตวรรษที่ 18 ท่ามกลางการระบาดของโรคฝีดาษและการก่อกบฏของจาโคไบต์",
-    "rating": 6.0,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "6.0⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/dB9HuMcaEGM",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/lS_Oojwtb4-4J"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102528",
-    "postId": "102528",
-    "originalUrl": "https://24-hdx.net/savage-house-2026/"
-  },
-  {
-    "titleTh": "สิ่งนี้ สิ่งนี้ และทุกสิ่งทุกอย่างที่อยู่ระหว่างนั้น This, That and Everything in Between (2026)",
-    "titleEn": "สิ่งนี้ สิ่งนี้ และทุกสิ่งทุกอย่างที่อยู่ระหว่างนั้น This, That and Everything in Between (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89-%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%97%E0%B8%B8%E0%B8%81%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%81%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B1%E0%B9%89%E0%B8%99-This-That-and-Everything-in-Between-e1791837243175.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89-%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%97%E0%B8%B8%E0%B8%81%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%81%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B1%E0%B9%89%E0%B8%99-This-That-and-Everything-in-Between-e1791837243175.png",
-    "videoUrl": "https://weplayhls.xyz/embed/jul8VXM_6-54T",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ สิ่งนี้ สิ่งนี้ และทุกสิ่งทุกอย่างที่อยู่ระหว่างนั้น This, That and Everything in Between (2026)",
-    "rating": 5.4,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "5.4⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/ueGNj0fC8rU",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/jul8VXM_6-54T"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102519",
-    "postId": "102519",
-    "originalUrl": "https://24-hdx.net/this-that-and-everything-in-between-2026/"
   },
   {
     "titleTh": "Aku Sebelum Aku ฉันก่อนเป็นฉัน (2026)",
