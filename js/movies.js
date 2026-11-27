@@ -690,7 +690,7 @@ window.movies = [
       "ละครไทย ย้อนหลัง",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 5 ตอนจบ",
+    "duration": "ซีรีส์ 6 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -699,14 +699,16 @@ window.movies = [
       "ตอนที่ 2",
       "ตอนที่ 3",
       "ตอนที่ 4",
-      "ตอนที่ 5"
+      "ตอนที่ 5",
+      "ตอนที่ 6"
     ],
     "episodeUrls": {
       "1": "https://getplay-cdn.com/embed/9d1c37ffda3e911cb17738fdfd606e5f",
       "2": "https://getplay-cdn.com/embed/14af26373ef376d9964a8295cf726926",
       "3": "https://getplay-cdn.com/embed/02fd7111ceaf96618152af0d00f44df1",
       "4": "https://getplay-cdn.com/embed/6d7eb59b3174d3d1caa88ef54fe5cd4d",
-      "5": "https://getplay-cdn.com/embed/9c7f12e87359cfa1b9928d69a0ddbb7c"
+      "5": "https://getplay-cdn.com/embed/9c7f12e87359cfa1b9928d69a0ddbb7c",
+      "6": "https://getplay-cdn.com/embed/1fd1eb5e5983e128df520613241e017a"
     },
     "languages": [
       "Thai (พากย์ไทย)"
@@ -1343,6 +1345,39 @@ window.movies = [
     "originalUrl": "https://24-hdx.net/gajab-raat-2026/"
   },
   {
+    "titleTh": "ผู้หลบหนีตัวจิ๋ว Tiny Fugitives (2026)",
+    "titleEn": "ผู้หลบหนีตัวจิ๋ว Tiny Fugitives (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AB%E0%B8%A5%E0%B8%9A%E0%B8%AB%E0%B8%99%E0%B8%B5%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%88%E0%B8%B4%E0%B9%8B%E0%B8%A7-Tiny-Fugitives-2026-e1792967798442.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AB%E0%B8%A5%E0%B8%9A%E0%B8%AB%E0%B8%99%E0%B8%B5%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%88%E0%B8%B4%E0%B9%8B%E0%B8%A7-Tiny-Fugitives-2026-e1792967798442.png",
+    "videoUrl": "https://weplayhls.xyz/embed/B_MMQTyp-ILwg",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ ผู้หลบหนีตัวจิ๋ว Tiny Fugitives กลุ่มเด็กอายุสิบสองขวบสุดบ้าบิ่นออกเดินทางไปเข้าค่ายพักแรมเพื่อใช้ชีวิตที่เหลืออยู่ พวกเขาจะต้องเอาชนะบ็อบ",
+    "rating": 5.4,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "5.4⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/QICrtSs26c0",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/B_MMQTyp-ILwg"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-103323",
+    "postId": "103323",
+    "originalUrl": "https://24-hdx.net/tiny-fugitives-2026/"
+  },
+  {
     "titleTh": "ไฟล์พลังจิต The Psychic Files (2026)",
     "titleEn": "ไฟล์พลังจิต The Psychic Files (2026)",
     "year": 2026,
@@ -1687,746 +1722,6 @@ window.movies = [
     "originalUrl": "https://24-hdx.net/time-traveling-stylist-2026/"
   },
   {
-    "titleTh": "เดอะ เวท The Weight (2026)",
-    "titleEn": "เดอะ เวท The Weight (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B9%80%E0%B8%A7%E0%B8%97-The-Weight-2026-e1792595613493.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B9%80%E0%B8%A7%E0%B8%97-The-Weight-2026-e1792595613493.png",
-    "videoUrl": "https://weplayhls.xyz/embed/yhoT1-9i2_qTX",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ เดอะ เวท The Weight",
-    "rating": 6.9,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "6.9⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/7YpuMymmiJ8",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/yhoT1-9i2_qTX"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-103115",
-    "postId": "103115",
-    "originalUrl": "https://24-hdx.net/the-weight-2026/"
-  },
-  {
-    "titleTh": "Norm The Tale of Norm MacDonald (2026) นอร์ม เรื่องเล่าของนอร์ม แม็คโดนัลด์",
-    "titleEn": "Norm The Tale of Norm MacDonald (2026) นอร์ม เรื่องเล่าของนอร์ม แม็คโดนัลด์",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Norm-The-Tale-of-Norm-MacDonald-2026-%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1-%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1-%E0%B9%81%E0%B8%A1%E0%B9%87%E0%B8%84%E0%B9%82%E0%B8%94%E0%B8%99%E0%B8%B1%E0%B8%A5%E0%B8%94%E0%B9%8C-e1792512652124.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Norm-The-Tale-of-Norm-MacDonald-2026-%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1-%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1-%E0%B9%81%E0%B8%A1%E0%B9%87%E0%B8%84%E0%B9%82%E0%B8%94%E0%B8%99%E0%B8%B1%E0%B8%A5%E0%B8%94%E0%B9%8C-e1792512652124.png",
-    "videoUrl": "https://weplayhls.xyz/embed/mV3_vvG0n-Ixj",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Norm The Tale of Norm MacDonald (2026) นอร์ม เรื่องเล่าของนอร์ม แม็คโดนัลด์ สารคดีของ Judd Apatow เกี่ยวกับ Norm Macdonald ใช้ฟุตเทจจากคลังภาพ",
-    "rating": 8.0,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "8.0⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/dIBNCBAzBos",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/mV3_vvG0n-Ixj"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-103042",
-    "postId": "103042",
-    "originalUrl": "https://24-hdx.net/norm-the-tale-of-norm-macdonald-2026/"
-  },
-  {
-    "titleTh": "ดัท ดอท Dutdot (2026)",
-    "titleEn": "ดัท ดอท Dutdot (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%94%E0%B8%B1%E0%B8%97-%E0%B8%94%E0%B8%AD%E0%B8%97-Dutdot-2026-e1792512617308.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%94%E0%B8%B1%E0%B8%97-%E0%B8%94%E0%B8%AD%E0%B8%97-Dutdot-2026-e1792512617308.png",
-    "videoUrl": "https://weplayhls.xyz/embed/6y-CygJ1_3dtX",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Dutdot รักแรกพบและความหลงใหล: เธอตกหลุมรักช่างสักของเธออย่างรวดเร็ว นำพาเธอไปสู่การเดินทางอันน่าตื่นเต้นของความรักครั้งแรก ความใกล้ชิด",
-    "rating": 4.0,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "4.0⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/v6feiF3iEZA",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/6y-CygJ1_3dtX"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-103043",
-    "postId": "103043",
-    "originalUrl": "https://24-hdx.net/dutdot-2026/"
-  },
-  {
-    "titleTh": "I Am the Hidden Boss (2026) นักสู้กู้สังเวียน",
-    "titleEn": "I Am the Hidden Boss (2026) นักสู้กู้สังเวียน",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/I-Am-the-Hidden-Boss-2026-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%81%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%99-e1792418738755.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/I-Am-the-Hidden-Boss-2026-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%81%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%99-e1792418738755.png",
-    "videoUrl": "https://weplayhls.xyz/embed/B-B84sC_cUT7i",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ I Am the Hidden Boss (2026) นักสู้กู้สังเวียน การเปิดเผยและการแก้แค้น: เพ็กกี้ปล่อยให้ตัวร้ายเผยความโหดร้ายและความเย่อหยิ่งของตนเองออกมาอย่างเงียบๆ",
-    "rating": 7.2,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "7.2⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/OtGOXyqh4L4",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/B-B84sC_cUT7i"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102971",
-    "postId": "102971",
-    "originalUrl": "https://24-hdx.net/i-am-the-hidden-boss-2026/"
-  },
-  {
-    "titleTh": "Our Linked Senses (2026) สัมผัสเชื่อมสองเรา",
-    "titleEn": "Our Linked Senses (2026) สัมผัสเชื่อมสองเรา",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Our-Linked-Senses-2026-%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9C%E0%B8%B1%E0%B8%AA%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A1%E0%B8%AA%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B2-e1792418812219.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Our-Linked-Senses-2026-%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9C%E0%B8%B1%E0%B8%AA%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A1%E0%B8%AA%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B2-e1792418812219.png",
-    "videoUrl": "https://weplayhls.xyz/embed/jOmUlZ_P-JUyi",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Our Linked Senses (2026) สัมผัสเชื่อมสองเรา จาก Focus Features และ Working Title สู่ภาพยนตร์ที่น่าหลงใหลซึ่งดัดแปลงมาจากนวนิยายเรื่อง Sense and",
-    "rating": 7.1,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "7.1⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/e3VCRfsbjDM",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/jOmUlZ_P-JUyi"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102975",
-    "postId": "102975",
-    "originalUrl": "https://24-hdx.net/our-linked-senses-2026/"
-  },
-  {
-    "titleTh": "The Zero Talent Nanny Raised Beast Kings (2026) สู้สุดใจเพื่ออสูรน้อยทั้งห้า",
-    "titleEn": "The Zero Talent Nanny Raised Beast Kings (2026) สู้สุดใจเพื่ออสูรน้อยทั้งห้า",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/The-Zero-Talent-Nanny-Raised-Beast-Kings-2026-%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B9%83%E0%B8%88%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%AD%E0%B8%AA%E0%B8%B9%E0%B8%A3%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2%E0%B8%97%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2-e1792170831863.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/The-Zero-Talent-Nanny-Raised-Beast-Kings-2026-%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B9%83%E0%B8%88%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%AD%E0%B8%AA%E0%B8%B9%E0%B8%A3%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2%E0%B8%97%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2-e1792170831863.png",
-    "videoUrl": "https://weplayhls.xyz/embed/D-g_aT3NhIF7n",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ The Zero Talent Nanny Raised Beast Kings สู้สุดใจเพื่ออสูรน้อยทั้งห้า เรื่องย่อ: เรื่องราวติดตามชีวิตของมีอา ฮาร์เปอร์",
-    "rating": 7.5,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "7.5⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/dNw0owVJOcI",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/D-g_aT3NhIF7n"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102925",
-    "postId": "102925",
-    "originalUrl": "https://24-hdx.net/the-zero-talent-nanny-raised-beast-kings/"
-  },
-  {
-    "titleTh": "Khlung (2026) คลึง ( )",
-    "titleEn": "Khlung (2026) คลึง ตอนที่ 1-8 (เต็มเรื่อง)",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-107718.jpg",
-    "backdrop": "images/clean_posters/wow-107718.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/1d531eb762dee09ce7afd8f29b787c28",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ไทย Khlung (2026) คลึง นางเอกหญิงสาวที่พยายามใช้ชีวิตต่อหลังสูญเสียครอบครัวต้องกลับมาเผชิญหน้ากับตงหยางชายผู้เชื่อมโยงกับเหตุการณ์ใน",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ละครไทย",
-      "ละครไทย ย้อนหลัง",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 8 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/1d531eb762dee09ce7afd8f29b787c28",
-      "2": "https://getplay-cdn.com/embed/b428d6f61bcf78075d6fca14731536ac",
-      "3": "https://getplay-cdn.com/embed/7fc8eb73ea2ec1e5eb52e889a9a3d225",
-      "4": "https://getplay-cdn.com/embed/8afa5b015e911bbc50e557b02a0a8221",
-      "5": "https://getplay-cdn.com/embed/783da2aef0303687ac66a0934810d17b",
-      "6": "https://getplay-cdn.com/embed/d45732288b9e1f0d62c21d2feb697d7b",
-      "7": "https://getplay-cdn.com/embed/cb451a1cdbda0944f006e087ea82d69f",
-      "8": "https://getplay-cdn.com/embed/9eccbe4288281fce9fc5dd0f81acbc85"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-107718",
-    "postId": "107718",
-    "originalUrl": "https://wow-drama.com/khlung-2026/"
-  },
-  {
-    "titleTh": "Onslaught แม่คลั่ง ล้างหน่วยนรก (2026)",
-    "titleEn": "Onslaught แม่คลั่ง ล้างหน่วยนรก (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Onslaught-%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%87-%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%99%E0%B8%A3%E0%B8%81-2026-e1792091985902.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Onslaught-%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%87-%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%99%E0%B8%A3%E0%B8%81-2026-e1792091985902.png",
-    "videoUrl": "https://weplayhls.xyz/embed/Zi-8kTnX8J_h3",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Onslaught แม่คลั่ง ล้างหน่วยนรก เมื่อหน่วยทหารสุดยอดที่ได้รับการดัดแปลงพันธุกรรมหลุดออกมาอาละวาดในทะเลทราย",
-    "rating": 5.4,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "5.4⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/L24CYVpQ-LI",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/Zi-8kTnX8J_h3"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102871",
-    "postId": "102871",
-    "originalUrl": "https://24-hdx.net/onslaught-2026/"
-  },
-  {
-    "titleTh": "Renegade Immortal Slaying the Blood Progenitor (2026) ฝืนลิขิตฟ้าข้าขอเป็นเซียน เดอะมูฟวี่ ศึกสังหารเซียน",
-    "titleEn": "Renegade Immortal Slaying the Blood Progenitor (2026) ฝืนลิขิตฟ้าข้าขอเป็นเซียน เดอะมูฟวี่ ศึกสังหารเซียน",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Renegade-Immortal-Slaying-the-Blood-Progenitor-2026-%E0%B8%9D%E0%B8%B7%E0%B8%99%E0%B8%A5%E0%B8%B4%E0%B8%82%E0%B8%B4%E0%B8%95%E0%B8%9F%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%99-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88-%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%99-e1792092140212.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Renegade-Immortal-Slaying-the-Blood-Progenitor-2026-%E0%B8%9D%E0%B8%B7%E0%B8%99%E0%B8%A5%E0%B8%B4%E0%B8%82%E0%B8%B4%E0%B8%95%E0%B8%9F%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%99-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88-%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%99-e1792092140212.png",
-    "videoUrl": "https://weplayhls.xyz/embed/FXqs-4jy_xO8F",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Renegade Immortal Slaying the Blood Progenitor (2026) ฝืนลิขิตฟ้าข้าขอเป็นเซียน เดอะมูฟวี่ ศึกสังหารเซียน ความขัดแย้ง: หวังหลิน ตัวเอกของเรื่อง",
-    "rating": 7.2,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "7.2⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/HM2gbOnFNfw",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/FXqs-4jy_xO8F"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102839",
-    "postId": "102839",
-    "originalUrl": "https://24-hdx.net/renegade-immortal-slaying-the-blood-progenitor-2026/"
-  },
-  {
-    "titleTh": "Infinite Mana The Peerless Rank F (2026) แรงก์เอฟไร้เทียมทาน",
-    "titleEn": "Infinite Mana The Peerless Rank F (2026) แรงก์เอฟไร้เทียมทาน",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Infinite-Mana-The-Peerless-Rank-F-2026-%E0%B9%81%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B9%8C%E0%B9%80%E0%B8%AD%E0%B8%9F%E0%B9%84%E0%B8%A3%E0%B9%89%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%A1%E0%B8%97%E0%B8%B2%E0%B8%99-e1792092107841.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Infinite-Mana-The-Peerless-Rank-F-2026-%E0%B9%81%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B9%8C%E0%B9%80%E0%B8%AD%E0%B8%9F%E0%B9%84%E0%B8%A3%E0%B9%89%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%A1%E0%B8%97%E0%B8%B2%E0%B8%99-e1792092107841.png",
-    "videoUrl": "https://weplayhls.xyz/embed/gi1_uvpDI-0MQ",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Infinite Mana The Peerless Rank F (2026) แรงก์เอฟไร้เทียมทาน ในบริบทของซีรีส์อย่าง Infinite Mana in the Apocalypse",
-    "rating": 6.7,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "6.7⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/420csZu8A_8",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/gi1_uvpDI-0MQ"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102838",
-    "postId": "102838",
-    "originalUrl": "https://24-hdx.net/infinite-mana-the-peerless-rank-f-2026/"
-  },
-  {
-    "titleTh": "Werewolf Fantasy (2026) หมาป่าน้อย พลิกชะตาฝูง",
-    "titleEn": "Werewolf Fantasy (2026) หมาป่าน้อย พลิกชะตาฝูง",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Werewolf-Fantasy-2026-%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%9B%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2-%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B8%81%E0%B8%8A%E0%B8%B0%E0%B8%95%E0%B8%B2%E0%B8%9D%E0%B8%B9%E0%B8%87-e1792092066698.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Werewolf-Fantasy-2026-%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%9B%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2-%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B8%81%E0%B8%8A%E0%B8%B0%E0%B8%95%E0%B8%B2%E0%B8%9D%E0%B8%B9%E0%B8%87-e1792092066698.png",
-    "videoUrl": "https://weplayhls.xyz/embed/V8rR_Sa-Yi5Rz",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Werewolf Fantasy (2026) หมาป่าน้อย พลิกชะตาฝูง มนุษย์หมาป่า (ภาพยนตร์): เรื่องราวเกิดขึ้นในบริเตนยุคกลางปี ​​1305",
-    "rating": 7.1,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "7.1⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/3j_F09Ml4SI",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/V8rR_Sa-Yi5Rz"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102837",
-    "postId": "102837",
-    "originalUrl": "https://24-hdx.net/werewolf-fantasy-2026/"
-  },
-  {
-    "titleTh": "Get Out of My Bugatti (2026) รถหรูเป็นเหตุ สังเกตได้",
-    "titleEn": "Get Out of My Bugatti (2026) รถหรูเป็นเหตุ สังเกตได้",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Get-Out-of-My-Bugatti-2026-%E0%B8%A3%E0%B8%96%E0%B8%AB%E0%B8%A3%E0%B8%B9%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8-%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%81%E0%B8%95%E0%B9%84%E0%B8%94%E0%B9%89-e1792092035963.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Get-Out-of-My-Bugatti-2026-%E0%B8%A3%E0%B8%96%E0%B8%AB%E0%B8%A3%E0%B8%B9%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8-%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%81%E0%B8%95%E0%B9%84%E0%B8%94%E0%B9%89-e1792092035963.png",
-    "videoUrl": "https://weplayhls.xyz/embed/RCn_mQCoQg-6I",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Get Out of My Bugatti (2026) รถหรูเป็นเหตุ สังเกตได้ เรื่องราวเริ่มต้น: ไรอัน คาร์เตอร์ มหาเศรษฐีผู้ก่อตั้งบริษัท",
-    "rating": 6.8,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "6.8⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/tFTyhIJUHpA",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/RCn_mQCoQg-6I"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102836",
-    "postId": "102836",
-    "originalUrl": "https://24-hdx.net/get-out-of-my-bugatti-2026/"
-  },
-  {
-    "titleTh": "ปาโศก Unang pasok (2026)",
-    "titleEn": "ปาโศก Unang pasok (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%9B%E0%B8%B2%E0%B9%82%E0%B8%A8%E0%B8%81-Unang-pasok-2026-e1792001696120.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%9B%E0%B8%B2%E0%B9%82%E0%B8%A8%E0%B8%81-Unang-pasok-2026-e1792001696120.png",
-    "videoUrl": "https://weplayhls.xyz/embed/jofM-EC_AaVDh",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ ปาโศก Unang pasok คิม ยาชิ และ มายูมิ เดอ เวรา สร้างเคมีที่เข้ากันอย่างลงตัวบนหน้าจอ พร้อมเผยประสบการณ์เปิดตัวสุดเร่าร้อนจากภาพยนตร์ VMX",
-    "rating": 4.0,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "4.0⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/SE4EXZ8Ljro",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/jofM-EC_AaVDh"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102835",
-    "postId": "102835",
-    "originalUrl": "https://24-hdx.net/unang-pasok-2026/"
-  },
-  {
-    "titleTh": "แบลค บ็อกซ์ Black Box (2026)",
-    "titleEn": "แบลค บ็อกซ์ Black Box (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B9%81%E0%B8%9A%E0%B8%A5%E0%B8%84-%E0%B8%9A%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B8%8B%E0%B9%8C-Black-Box-2026-e1791920924512.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B9%81%E0%B8%9A%E0%B8%A5%E0%B8%84-%E0%B8%9A%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B8%8B%E0%B9%8C-Black-Box-2026-e1791920924512.png",
-    "videoUrl": "https://weplayhls.xyz/embed/wi-IU_YVdQuUw",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ แบลค บ็อกซ์ Black Box เที่ยวบิน Vero Airlines หมายเลข 298 จากนิวออร์ลีนส์ไปยังซีแอตเติล กลายเป็นจุดศูนย์กลางของปริศนาเหนือธรรมชาติสุดสะพรึงกลัว",
-    "rating": 5.0,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "5.0⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/y-nf8hUFd98",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/wi-IU_YVdQuUw"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102522",
-    "postId": "102522",
-    "originalUrl": "https://24-hdx.net/black-box-2026/"
-  },
-  {
-    "titleTh": "ภัยคุกคามจากภายนอก The Outer Threat (2026)",
-    "titleEn": "ภัยคุกคามจากภายนอก The Outer Threat (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B8%84%E0%B8%B8%E0%B8%81%E0%B8%84%E0%B8%B2%E0%B8%A1%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%A0%E0%B8%B2%E0%B8%A2%E0%B8%99%E0%B8%AD%E0%B8%81-The-Outer-Threat-2026-e1791920897326.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B8%84%E0%B8%B8%E0%B8%81%E0%B8%84%E0%B8%B2%E0%B8%A1%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%A0%E0%B8%B2%E0%B8%A2%E0%B8%99%E0%B8%AD%E0%B8%81-The-Outer-Threat-2026-e1791920897326.png",
-    "videoUrl": "https://weplayhls.xyz/embed/h-C_LjykdD3ao",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ ภัยคุกคามจากภายนอก The Outer Threat การค้นพบสิ่งมีชีวิตต่างดาวของนักฟิสิกส์ดาราศาสตร์ทำให้เขาและครอบครัวต้องหนีออกจากบ้าน",
-    "rating": 4.3,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "4.3⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/ky6RqC2LBac",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/h-C_LjykdD3ao"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102523",
-    "postId": "102523",
-    "originalUrl": "https://24-hdx.net/the-outer-threat/"
-  },
-  {
-    "titleTh": "Nothing to Lose เมื่อไม่มีอะไรจะเสีย (2026)",
-    "titleEn": "Nothing to Lose เมื่อไม่มีอะไรจะเสีย (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Nothing-to-Lose-%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%A1%E0%B8%B5%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3%E0%B8%88%E0%B8%B0%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2-2026-e1791920267101.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Nothing-to-Lose-%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%A1%E0%B8%B5%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3%E0%B8%88%E0%B8%B0%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2-2026-e1791920267101.png",
-    "videoUrl": "https://weplayhls.xyz/embed/XL_KuFVCG-2Yo",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Nothing to Lose เมื่อไม่มีอะไรจะเสีย จาดา คุณแม่ผู้ทุ่มเท",
-    "rating": 5.8,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "5.8⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/-ST6xtcXq7s",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/XL_KuFVCG-2Yo"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102554",
-    "postId": "102554",
-    "originalUrl": "https://24-hdx.net/nothing-to-lose/"
-  },
-  {
-    "titleTh": "Desire ปรารถนาต้องห้าม (2026)",
-    "titleEn": "Desire ปรารถนาต้องห้าม (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Desire-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%A3%E0%B8%96%E0%B8%99%E0%B8%B2%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2%E0%B8%A1-2026-e1791919387373.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Desire-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%A3%E0%B8%96%E0%B8%99%E0%B8%B2%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2%E0%B8%A1-2026-e1791919387373.png",
-    "videoUrl": "https://weplayhls.xyz/embed/z-hgsMPP_9RNp",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Desire ปรารถนาต้องห้าม หญิงที่แต่งงานแล้วตกหลุมรักโค้ชว่ายน้ำของลูกสาวและมีความสัมพันธ์ชู้สาว แต่ลูกสาวก็เริ่มรู้สึกชอบเขาเช่นกัน",
-    "rating": 4.2,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "4.2⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/GTV1Cs7zvLQ",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/z-hgsMPP_9RNp"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102555",
-    "postId": "102555",
-    "originalUrl": "https://24-hdx.net/desire-2026/"
-  },
-  {
-    "titleTh": "Other Mommy (2026) แม่…หลอน",
-    "titleEn": "Other Mommy (2026) แม่…หลอน",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Other-Mommy-2026-%E0%B9%81%E0%B8%A1%E0%B9%88%E2%80%A6%E0%B8%AB%E0%B8%A5%E0%B8%AD%E0%B8%99-e1791837029642.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Other-Mommy-2026-%E0%B9%81%E0%B8%A1%E0%B9%88%E2%80%A6%E0%B8%AB%E0%B8%A5%E0%B8%AD%E0%B8%99-e1791837029642.png",
-    "videoUrl": "https://weplayhls.xyz/embed/pSH_Ne6G-oh83",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ Other Mommy (2026) แม่…หลอน เบล่า เด็กหญิงวัย 8 ขวบที่อาศัยอยู่ในบ้านที่มีปัญหาครอบครัว ต้องเผชิญหน้ากับสิ่งชั่วร้ายที่โผล่ออกมาจากตู้เสื้อผ้าของเธอ",
-    "rating": 6.0,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "6.0⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/idwbe85NSb8",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/pSH_Ne6G-oh83"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102705",
-    "postId": "102705",
-    "originalUrl": "https://24-hdx.net/other-mommy-2026/"
-  },
-  {
-    "titleTh": "ฮาโลส นี่ มิลากรอส Haplos ni Milagros (2026)",
-    "titleEn": "ฮาโลส นี่ มิลากรอส Haplos ni Milagros (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%AE%E0%B8%B2%E0%B9%82%E0%B8%A5%E0%B8%AA-%E0%B8%99%E0%B8%B5%E0%B9%88-%E0%B8%A1%E0%B8%B4%E0%B8%A5%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%AA-Haplos-ni-Milagros-2026-e1791837092947.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%AE%E0%B8%B2%E0%B9%82%E0%B8%A5%E0%B8%AA-%E0%B8%99%E0%B8%B5%E0%B9%88-%E0%B8%A1%E0%B8%B4%E0%B8%A5%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%AA-Haplos-ni-Milagros-2026-e1791837092947.png",
-    "videoUrl": "https://weplayhls.xyz/embed/A4hg-Q2ol6_vc",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ ฮาโลส นี่ มิลากรอส Haplos ni Milagros มิลาโกรสเป็นหญิงสาวสวยผู้มีพลังในการรักษาโรค เธอใช้มืออันทรงพลังของเธอรักษาอาการผิดปกติทางเพศของเออร์วิน",
-    "rating": 5.0,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "5.0⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/D2jVxojePbc",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/A4hg-Q2ol6_vc"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102527",
-    "postId": "102527",
-    "originalUrl": "https://24-hdx.net/haplos-ni-milagros-2026/"
-  },
-  {
-    "titleTh": "ชวาด เฮาส์ Savage House (2026)",
-    "titleEn": "ชวาด เฮาส์ Savage House (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%8A%E0%B8%A7%E0%B8%B2%E0%B8%94-%E0%B9%80%E0%B8%AE%E0%B8%B2%E0%B8%AA%E0%B9%8C-Savage-House-2026-e1791837148192.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%8A%E0%B8%A7%E0%B8%B2%E0%B8%94-%E0%B9%80%E0%B8%AE%E0%B8%B2%E0%B8%AA%E0%B9%8C-Savage-House-2026-e1791837148192.png",
-    "videoUrl": "https://weplayhls.xyz/embed/lS_Oojwtb4-4J",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ ชวาด เฮาส์ Savage House เรื่องราวเกิดขึ้นในอังกฤษศตวรรษที่ 18 ท่ามกลางการระบาดของโรคฝีดาษและการก่อกบฏของจาโคไบต์",
-    "rating": 6.0,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "6.0⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/dB9HuMcaEGM",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/lS_Oojwtb4-4J"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102528",
-    "postId": "102528",
-    "originalUrl": "https://24-hdx.net/savage-house-2026/"
-  },
-  {
-    "titleTh": "สิ่งนี้ สิ่งนี้ และทุกสิ่งทุกอย่างที่อยู่ระหว่างนั้น This, That and Everything in Between (2026)",
-    "titleEn": "สิ่งนี้ สิ่งนี้ และทุกสิ่งทุกอย่างที่อยู่ระหว่างนั้น This, That and Everything in Between (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89-%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%97%E0%B8%B8%E0%B8%81%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%81%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B1%E0%B9%89%E0%B8%99-This-That-and-Everything-in-Between-e1791837243175.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89-%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%97%E0%B8%B8%E0%B8%81%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%81%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B1%E0%B9%89%E0%B8%99-This-That-and-Everything-in-Between-e1791837243175.png",
-    "videoUrl": "https://weplayhls.xyz/embed/jul8VXM_6-54T",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ สิ่งนี้ สิ่งนี้ และทุกสิ่งทุกอย่างที่อยู่ระหว่างนั้น This, That and Everything in Between (2026)",
-    "rating": 5.4,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "5.4⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/ueGNj0fC8rU",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/jul8VXM_6-54T"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-102519",
-    "postId": "102519",
-    "originalUrl": "https://24-hdx.net/this-that-and-everything-in-between-2026/"
-  },
-  {
-    "titleTh": "ผู้หลบหนีตัวจิ๋ว Tiny Fugitives (2026)",
-    "titleEn": "ผู้หลบหนีตัวจิ๋ว Tiny Fugitives (2026)",
-    "year": 2026,
-    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AB%E0%B8%A5%E0%B8%9A%E0%B8%AB%E0%B8%99%E0%B8%B5%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%88%E0%B8%B4%E0%B9%8B%E0%B8%A7-Tiny-Fugitives-2026-e1792967798442.png",
-    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AB%E0%B8%A5%E0%B8%9A%E0%B8%AB%E0%B8%99%E0%B8%B5%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%88%E0%B8%B4%E0%B9%8B%E0%B8%A7-Tiny-Fugitives-2026-e1792967798442.png",
-    "videoUrl": "https://weplayhls.xyz/embed/B_MMQTyp-ILwg",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ ผู้หลบหนีตัวจิ๋ว Tiny Fugitives กลุ่มเด็กอายุสิบสองขวบสุดบ้าบิ่นออกเดินทางไปเข้าค่ายพักแรมเพื่อใช้ชีวิตที่เหลืออยู่ พวกเขาจะต้องเอาชนะบ็อบ",
-    "rating": 5.4,
-    "genres": [
-      "24HDX",
-      "พากย์ไทย",
-      "5.4⭐",
-      "หนังปี 2026"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/QICrtSs26c0",
-    "cast": [],
-    "source": "24HDX",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://weplayhls.xyz/embed/B_MMQTyp-ILwg"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdx-103323",
-    "postId": "103323",
-    "originalUrl": "https://24-hdx.net/tiny-fugitives-2026/"
-  },
-  {
     "titleTh": "Therapy Done Right (2026) นักบำบัดนอกตำรา",
     "titleEn": "Therapy Done Right (2026) นักบำบัดนอกตำรา",
     "year": 2026,
@@ -2524,6 +1819,39 @@ window.movies = [
     "id": "24hdx-103117",
     "postId": "103117",
     "originalUrl": "https://24-hdx.net/the-silent-shock-2026/"
+  },
+  {
+    "titleTh": "เดอะ เวท The Weight (2026)",
+    "titleEn": "เดอะ เวท The Weight (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B9%80%E0%B8%A7%E0%B8%97-The-Weight-2026-e1792595613493.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B9%80%E0%B8%A7%E0%B8%97-The-Weight-2026-e1792595613493.png",
+    "videoUrl": "https://weplayhls.xyz/embed/yhoT1-9i2_qTX",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ เดอะ เวท The Weight",
+    "rating": 6.9,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "6.9⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/7YpuMymmiJ8",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/yhoT1-9i2_qTX"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-103115",
+    "postId": "103115",
+    "originalUrl": "https://24-hdx.net/the-weight-2026/"
   },
   {
     "titleTh": "Love of Your Life (2026) ให้หัวใจได้รักอีกครั้ง",
@@ -2725,6 +2053,72 @@ window.movies = [
     "originalUrl": "https://24-hdx.net/the-storm-2026/"
   },
   {
+    "titleTh": "Norm The Tale of Norm MacDonald (2026) นอร์ม เรื่องเล่าของนอร์ม แม็คโดนัลด์",
+    "titleEn": "Norm The Tale of Norm MacDonald (2026) นอร์ม เรื่องเล่าของนอร์ม แม็คโดนัลด์",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Norm-The-Tale-of-Norm-MacDonald-2026-%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1-%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1-%E0%B9%81%E0%B8%A1%E0%B9%87%E0%B8%84%E0%B9%82%E0%B8%94%E0%B8%99%E0%B8%B1%E0%B8%A5%E0%B8%94%E0%B9%8C-e1792512652124.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Norm-The-Tale-of-Norm-MacDonald-2026-%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1-%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1-%E0%B9%81%E0%B8%A1%E0%B9%87%E0%B8%84%E0%B9%82%E0%B8%94%E0%B8%99%E0%B8%B1%E0%B8%A5%E0%B8%94%E0%B9%8C-e1792512652124.png",
+    "videoUrl": "https://weplayhls.xyz/embed/mV3_vvG0n-Ixj",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Norm The Tale of Norm MacDonald (2026) นอร์ม เรื่องเล่าของนอร์ม แม็คโดนัลด์ สารคดีของ Judd Apatow เกี่ยวกับ Norm Macdonald ใช้ฟุตเทจจากคลังภาพ",
+    "rating": 8.0,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "8.0⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/dIBNCBAzBos",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/mV3_vvG0n-Ixj"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-103042",
+    "postId": "103042",
+    "originalUrl": "https://24-hdx.net/norm-the-tale-of-norm-macdonald-2026/"
+  },
+  {
+    "titleTh": "ดัท ดอท Dutdot (2026)",
+    "titleEn": "ดัท ดอท Dutdot (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%94%E0%B8%B1%E0%B8%97-%E0%B8%94%E0%B8%AD%E0%B8%97-Dutdot-2026-e1792512617308.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%94%E0%B8%B1%E0%B8%97-%E0%B8%94%E0%B8%AD%E0%B8%97-Dutdot-2026-e1792512617308.png",
+    "videoUrl": "https://weplayhls.xyz/embed/6y-CygJ1_3dtX",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Dutdot รักแรกพบและความหลงใหล: เธอตกหลุมรักช่างสักของเธออย่างรวดเร็ว นำพาเธอไปสู่การเดินทางอันน่าตื่นเต้นของความรักครั้งแรก ความใกล้ชิด",
+    "rating": 4.0,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "4.0⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/v6feiF3iEZA",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/6y-CygJ1_3dtX"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-103043",
+    "postId": "103043",
+    "originalUrl": "https://24-hdx.net/dutdot-2026/"
+  },
+  {
     "titleTh": "Digger (2026) ดิกเกอร์",
     "titleEn": "Digger (2026) ดิกเกอร์",
     "year": 2026,
@@ -2892,6 +2286,39 @@ window.movies = [
     "originalUrl": "https://24-hdx.net/the-boss-who-lost-his-shield-2026/"
   },
   {
+    "titleTh": "I Am the Hidden Boss (2026) นักสู้กู้สังเวียน",
+    "titleEn": "I Am the Hidden Boss (2026) นักสู้กู้สังเวียน",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/I-Am-the-Hidden-Boss-2026-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%81%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%99-e1792418738755.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/I-Am-the-Hidden-Boss-2026-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%81%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%99-e1792418738755.png",
+    "videoUrl": "https://weplayhls.xyz/embed/B-B84sC_cUT7i",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ I Am the Hidden Boss (2026) นักสู้กู้สังเวียน การเปิดเผยและการแก้แค้น: เพ็กกี้ปล่อยให้ตัวร้ายเผยความโหดร้ายและความเย่อหยิ่งของตนเองออกมาอย่างเงียบๆ",
+    "rating": 7.2,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "7.2⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/OtGOXyqh4L4",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/B-B84sC_cUT7i"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102971",
+    "postId": "102971",
+    "originalUrl": "https://24-hdx.net/i-am-the-hidden-boss-2026/"
+  },
+  {
     "titleTh": "street fighter 2026 สตรีทไฟท์เตอร์",
     "titleEn": "street fighter 2026 สตรีทไฟท์เตอร์",
     "year": 2026,
@@ -2957,6 +2384,72 @@ window.movies = [
     "id": "24hdx-102973",
     "postId": "102973",
     "originalUrl": "https://24-hdx.net/madam-commander-the-captain-surrenders-2026/"
+  },
+  {
+    "titleTh": "Our Linked Senses (2026) สัมผัสเชื่อมสองเรา",
+    "titleEn": "Our Linked Senses (2026) สัมผัสเชื่อมสองเรา",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Our-Linked-Senses-2026-%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9C%E0%B8%B1%E0%B8%AA%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A1%E0%B8%AA%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B2-e1792418812219.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Our-Linked-Senses-2026-%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9C%E0%B8%B1%E0%B8%AA%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A1%E0%B8%AA%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B2-e1792418812219.png",
+    "videoUrl": "https://weplayhls.xyz/embed/jOmUlZ_P-JUyi",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Our Linked Senses (2026) สัมผัสเชื่อมสองเรา จาก Focus Features และ Working Title สู่ภาพยนตร์ที่น่าหลงใหลซึ่งดัดแปลงมาจากนวนิยายเรื่อง Sense and",
+    "rating": 7.1,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "7.1⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/e3VCRfsbjDM",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/jOmUlZ_P-JUyi"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102975",
+    "postId": "102975",
+    "originalUrl": "https://24-hdx.net/our-linked-senses-2026/"
+  },
+  {
+    "titleTh": "The Zero Talent Nanny Raised Beast Kings (2026) สู้สุดใจเพื่ออสูรน้อยทั้งห้า",
+    "titleEn": "The Zero Talent Nanny Raised Beast Kings (2026) สู้สุดใจเพื่ออสูรน้อยทั้งห้า",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/The-Zero-Talent-Nanny-Raised-Beast-Kings-2026-%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B9%83%E0%B8%88%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%AD%E0%B8%AA%E0%B8%B9%E0%B8%A3%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2%E0%B8%97%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2-e1792170831863.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/The-Zero-Talent-Nanny-Raised-Beast-Kings-2026-%E0%B8%AA%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B9%83%E0%B8%88%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%AD%E0%B8%AA%E0%B8%B9%E0%B8%A3%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2%E0%B8%97%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2-e1792170831863.png",
+    "videoUrl": "https://weplayhls.xyz/embed/D-g_aT3NhIF7n",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ The Zero Talent Nanny Raised Beast Kings สู้สุดใจเพื่ออสูรน้อยทั้งห้า เรื่องย่อ: เรื่องราวติดตามชีวิตของมีอา ฮาร์เปอร์",
+    "rating": 7.5,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "7.5⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/dNw0owVJOcI",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/D-g_aT3NhIF7n"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102925",
+    "postId": "102925",
+    "originalUrl": "https://24-hdx.net/the-zero-talent-nanny-raised-beast-kings/"
   },
   {
     "titleTh": "The Charming Beast Tamer (2026) นักฝึกอสูรเสน่ห์ล้น",
@@ -3025,6 +2518,86 @@ window.movies = [
     "originalUrl": "https://24-hdx.net/buddy-2026/"
   },
   {
+    "titleTh": "Khlung (2026) คลึง ( )",
+    "titleEn": "Khlung (2026) คลึง ตอนที่ 1-8 (เต็มเรื่อง)",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-107718.jpg",
+    "backdrop": "images/clean_posters/wow-107718.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/1d531eb762dee09ce7afd8f29b787c28",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ไทย Khlung (2026) คลึง นางเอกหญิงสาวที่พยายามใช้ชีวิตต่อหลังสูญเสียครอบครัวต้องกลับมาเผชิญหน้ากับตงหยางชายผู้เชื่อมโยงกับเหตุการณ์ใน",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ละครไทย",
+      "ละครไทย ย้อนหลัง",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 8 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/1d531eb762dee09ce7afd8f29b787c28",
+      "2": "https://getplay-cdn.com/embed/b428d6f61bcf78075d6fca14731536ac",
+      "3": "https://getplay-cdn.com/embed/7fc8eb73ea2ec1e5eb52e889a9a3d225",
+      "4": "https://getplay-cdn.com/embed/8afa5b015e911bbc50e557b02a0a8221",
+      "5": "https://getplay-cdn.com/embed/783da2aef0303687ac66a0934810d17b",
+      "6": "https://getplay-cdn.com/embed/d45732288b9e1f0d62c21d2feb697d7b",
+      "7": "https://getplay-cdn.com/embed/cb451a1cdbda0944f006e087ea82d69f",
+      "8": "https://getplay-cdn.com/embed/9eccbe4288281fce9fc5dd0f81acbc85"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-107718",
+    "postId": "107718",
+    "originalUrl": "https://wow-drama.com/khlung-2026/"
+  },
+  {
+    "titleTh": "Onslaught แม่คลั่ง ล้างหน่วยนรก (2026)",
+    "titleEn": "Onslaught แม่คลั่ง ล้างหน่วยนรก (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Onslaught-%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%87-%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%99%E0%B8%A3%E0%B8%81-2026-e1792091985902.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Onslaught-%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%87-%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%99%E0%B8%A3%E0%B8%81-2026-e1792091985902.png",
+    "videoUrl": "https://weplayhls.xyz/embed/Zi-8kTnX8J_h3",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Onslaught แม่คลั่ง ล้างหน่วยนรก เมื่อหน่วยทหารสุดยอดที่ได้รับการดัดแปลงพันธุกรรมหลุดออกมาอาละวาดในทะเลทราย",
+    "rating": 5.4,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "5.4⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/L24CYVpQ-LI",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/Zi-8kTnX8J_h3"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102871",
+    "postId": "102871",
+    "originalUrl": "https://24-hdx.net/onslaught-2026/"
+  },
+  {
     "titleTh": "แฟนสาวเฮนไทของฉัน My Hentai Girlfriend (2026)",
     "titleEn": "แฟนสาวเฮนไทของฉัน My Hentai Girlfriend (2026)",
     "year": 2026,
@@ -3058,6 +2631,138 @@ window.movies = [
     "originalUrl": "https://24-hdx.net/my-hentai-girlfriend-2026/"
   },
   {
+    "titleTh": "Renegade Immortal Slaying the Blood Progenitor (2026) ฝืนลิขิตฟ้าข้าขอเป็นเซียน เดอะมูฟวี่ ศึกสังหารเซียน",
+    "titleEn": "Renegade Immortal Slaying the Blood Progenitor (2026) ฝืนลิขิตฟ้าข้าขอเป็นเซียน เดอะมูฟวี่ ศึกสังหารเซียน",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Renegade-Immortal-Slaying-the-Blood-Progenitor-2026-%E0%B8%9D%E0%B8%B7%E0%B8%99%E0%B8%A5%E0%B8%B4%E0%B8%82%E0%B8%B4%E0%B8%95%E0%B8%9F%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%99-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88-%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%99-e1792092140212.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Renegade-Immortal-Slaying-the-Blood-Progenitor-2026-%E0%B8%9D%E0%B8%B7%E0%B8%99%E0%B8%A5%E0%B8%B4%E0%B8%82%E0%B8%B4%E0%B8%95%E0%B8%9F%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%99-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88-%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%99-e1792092140212.png",
+    "videoUrl": "https://weplayhls.xyz/embed/FXqs-4jy_xO8F",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Renegade Immortal Slaying the Blood Progenitor (2026) ฝืนลิขิตฟ้าข้าขอเป็นเซียน เดอะมูฟวี่ ศึกสังหารเซียน ความขัดแย้ง: หวังหลิน ตัวเอกของเรื่อง",
+    "rating": 7.2,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "7.2⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/HM2gbOnFNfw",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/FXqs-4jy_xO8F"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102839",
+    "postId": "102839",
+    "originalUrl": "https://24-hdx.net/renegade-immortal-slaying-the-blood-progenitor-2026/"
+  },
+  {
+    "titleTh": "Infinite Mana The Peerless Rank F (2026) แรงก์เอฟไร้เทียมทาน",
+    "titleEn": "Infinite Mana The Peerless Rank F (2026) แรงก์เอฟไร้เทียมทาน",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Infinite-Mana-The-Peerless-Rank-F-2026-%E0%B9%81%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B9%8C%E0%B9%80%E0%B8%AD%E0%B8%9F%E0%B9%84%E0%B8%A3%E0%B9%89%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%A1%E0%B8%97%E0%B8%B2%E0%B8%99-e1792092107841.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Infinite-Mana-The-Peerless-Rank-F-2026-%E0%B9%81%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B9%8C%E0%B9%80%E0%B8%AD%E0%B8%9F%E0%B9%84%E0%B8%A3%E0%B9%89%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%A1%E0%B8%97%E0%B8%B2%E0%B8%99-e1792092107841.png",
+    "videoUrl": "https://weplayhls.xyz/embed/gi1_uvpDI-0MQ",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Infinite Mana The Peerless Rank F (2026) แรงก์เอฟไร้เทียมทาน ในบริบทของซีรีส์อย่าง Infinite Mana in the Apocalypse",
+    "rating": 6.7,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "6.7⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/420csZu8A_8",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/gi1_uvpDI-0MQ"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102838",
+    "postId": "102838",
+    "originalUrl": "https://24-hdx.net/infinite-mana-the-peerless-rank-f-2026/"
+  },
+  {
+    "titleTh": "Werewolf Fantasy (2026) หมาป่าน้อย พลิกชะตาฝูง",
+    "titleEn": "Werewolf Fantasy (2026) หมาป่าน้อย พลิกชะตาฝูง",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Werewolf-Fantasy-2026-%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%9B%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2-%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B8%81%E0%B8%8A%E0%B8%B0%E0%B8%95%E0%B8%B2%E0%B8%9D%E0%B8%B9%E0%B8%87-e1792092066698.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Werewolf-Fantasy-2026-%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%9B%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2-%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B8%81%E0%B8%8A%E0%B8%B0%E0%B8%95%E0%B8%B2%E0%B8%9D%E0%B8%B9%E0%B8%87-e1792092066698.png",
+    "videoUrl": "https://weplayhls.xyz/embed/V8rR_Sa-Yi5Rz",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Werewolf Fantasy (2026) หมาป่าน้อย พลิกชะตาฝูง มนุษย์หมาป่า (ภาพยนตร์): เรื่องราวเกิดขึ้นในบริเตนยุคกลางปี ​​1305",
+    "rating": 7.1,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "7.1⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/3j_F09Ml4SI",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/V8rR_Sa-Yi5Rz"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102837",
+    "postId": "102837",
+    "originalUrl": "https://24-hdx.net/werewolf-fantasy-2026/"
+  },
+  {
+    "titleTh": "Get Out of My Bugatti (2026) รถหรูเป็นเหตุ สังเกตได้",
+    "titleEn": "Get Out of My Bugatti (2026) รถหรูเป็นเหตุ สังเกตได้",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Get-Out-of-My-Bugatti-2026-%E0%B8%A3%E0%B8%96%E0%B8%AB%E0%B8%A3%E0%B8%B9%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8-%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%81%E0%B8%95%E0%B9%84%E0%B8%94%E0%B9%89-e1792092035963.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Get-Out-of-My-Bugatti-2026-%E0%B8%A3%E0%B8%96%E0%B8%AB%E0%B8%A3%E0%B8%B9%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8-%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%81%E0%B8%95%E0%B9%84%E0%B8%94%E0%B9%89-e1792092035963.png",
+    "videoUrl": "https://weplayhls.xyz/embed/RCn_mQCoQg-6I",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Get Out of My Bugatti (2026) รถหรูเป็นเหตุ สังเกตได้ เรื่องราวเริ่มต้น: ไรอัน คาร์เตอร์ มหาเศรษฐีผู้ก่อตั้งบริษัท",
+    "rating": 6.8,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "6.8⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/tFTyhIJUHpA",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/RCn_mQCoQg-6I"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102836",
+    "postId": "102836",
+    "originalUrl": "https://24-hdx.net/get-out-of-my-bugatti-2026/"
+  },
+  {
     "titleTh": "Doing Life (2026) ชั่วชีวิต",
     "titleEn": "Doing Life (2026) ชั่วชีวิต",
     "year": 2026,
@@ -3089,6 +2794,39 @@ window.movies = [
     "id": "24hdx-102833",
     "postId": "102833",
     "originalUrl": "https://24-hdx.net/doing-life-2026/"
+  },
+  {
+    "titleTh": "ปาโศก Unang pasok (2026)",
+    "titleEn": "ปาโศก Unang pasok (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%9B%E0%B8%B2%E0%B9%82%E0%B8%A8%E0%B8%81-Unang-pasok-2026-e1792001696120.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%9B%E0%B8%B2%E0%B9%82%E0%B8%A8%E0%B8%81-Unang-pasok-2026-e1792001696120.png",
+    "videoUrl": "https://weplayhls.xyz/embed/jofM-EC_AaVDh",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ ปาโศก Unang pasok คิม ยาชิ และ มายูมิ เดอ เวรา สร้างเคมีที่เข้ากันอย่างลงตัวบนหน้าจอ พร้อมเผยประสบการณ์เปิดตัวสุดเร่าร้อนจากภาพยนตร์ VMX",
+    "rating": 4.0,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "4.0⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/SE4EXZ8Ljro",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/jofM-EC_AaVDh"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102835",
+    "postId": "102835",
+    "originalUrl": "https://24-hdx.net/unang-pasok-2026/"
   },
   {
     "titleTh": "เดอะ อิน คัมเมอร์ The Incomer (2026)",
@@ -3157,6 +2895,72 @@ window.movies = [
     "originalUrl": "https://24-hdx.net/maa-inti-bangaram-2026/"
   },
   {
+    "titleTh": "แบลค บ็อกซ์ Black Box (2026)",
+    "titleEn": "แบลค บ็อกซ์ Black Box (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B9%81%E0%B8%9A%E0%B8%A5%E0%B8%84-%E0%B8%9A%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B8%8B%E0%B9%8C-Black-Box-2026-e1791920924512.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B9%81%E0%B8%9A%E0%B8%A5%E0%B8%84-%E0%B8%9A%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B8%8B%E0%B9%8C-Black-Box-2026-e1791920924512.png",
+    "videoUrl": "https://weplayhls.xyz/embed/wi-IU_YVdQuUw",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ แบลค บ็อกซ์ Black Box เที่ยวบิน Vero Airlines หมายเลข 298 จากนิวออร์ลีนส์ไปยังซีแอตเติล กลายเป็นจุดศูนย์กลางของปริศนาเหนือธรรมชาติสุดสะพรึงกลัว",
+    "rating": 5.0,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "5.0⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/y-nf8hUFd98",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/wi-IU_YVdQuUw"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102522",
+    "postId": "102522",
+    "originalUrl": "https://24-hdx.net/black-box-2026/"
+  },
+  {
+    "titleTh": "ภัยคุกคามจากภายนอก The Outer Threat (2026)",
+    "titleEn": "ภัยคุกคามจากภายนอก The Outer Threat (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B8%84%E0%B8%B8%E0%B8%81%E0%B8%84%E0%B8%B2%E0%B8%A1%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%A0%E0%B8%B2%E0%B8%A2%E0%B8%99%E0%B8%AD%E0%B8%81-The-Outer-Threat-2026-e1791920897326.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B8%84%E0%B8%B8%E0%B8%81%E0%B8%84%E0%B8%B2%E0%B8%A1%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%A0%E0%B8%B2%E0%B8%A2%E0%B8%99%E0%B8%AD%E0%B8%81-The-Outer-Threat-2026-e1791920897326.png",
+    "videoUrl": "https://weplayhls.xyz/embed/h-C_LjykdD3ao",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ ภัยคุกคามจากภายนอก The Outer Threat การค้นพบสิ่งมีชีวิตต่างดาวของนักฟิสิกส์ดาราศาสตร์ทำให้เขาและครอบครัวต้องหนีออกจากบ้าน",
+    "rating": 4.3,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "4.3⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/ky6RqC2LBac",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/h-C_LjykdD3ao"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102523",
+    "postId": "102523",
+    "originalUrl": "https://24-hdx.net/the-outer-threat/"
+  },
+  {
     "titleTh": "My Best Friend, His Girlfriend and Me เพื่อนรัก แฟนเพื่อน และตัวผม (2026)",
     "titleEn": "My Best Friend, His Girlfriend and Me เพื่อนรัก แฟนเพื่อน และตัวผม (2026)",
     "year": 2026,
@@ -3223,6 +3027,72 @@ window.movies = [
     "originalUrl": "https://24-hdx.net/mystery-arena/"
   },
   {
+    "titleTh": "Nothing to Lose เมื่อไม่มีอะไรจะเสีย (2026)",
+    "titleEn": "Nothing to Lose เมื่อไม่มีอะไรจะเสีย (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Nothing-to-Lose-%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%A1%E0%B8%B5%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3%E0%B8%88%E0%B8%B0%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2-2026-e1791920267101.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Nothing-to-Lose-%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%A1%E0%B8%B5%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3%E0%B8%88%E0%B8%B0%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2-2026-e1791920267101.png",
+    "videoUrl": "https://weplayhls.xyz/embed/XL_KuFVCG-2Yo",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Nothing to Lose เมื่อไม่มีอะไรจะเสีย จาดา คุณแม่ผู้ทุ่มเท",
+    "rating": 5.8,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "5.8⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/-ST6xtcXq7s",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/XL_KuFVCG-2Yo"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102554",
+    "postId": "102554",
+    "originalUrl": "https://24-hdx.net/nothing-to-lose/"
+  },
+  {
+    "titleTh": "Desire ปรารถนาต้องห้าม (2026)",
+    "titleEn": "Desire ปรารถนาต้องห้าม (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Desire-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%A3%E0%B8%96%E0%B8%99%E0%B8%B2%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2%E0%B8%A1-2026-e1791919387373.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Desire-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%A3%E0%B8%96%E0%B8%99%E0%B8%B2%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2%E0%B8%A1-2026-e1791919387373.png",
+    "videoUrl": "https://weplayhls.xyz/embed/z-hgsMPP_9RNp",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Desire ปรารถนาต้องห้าม หญิงที่แต่งงานแล้วตกหลุมรักโค้ชว่ายน้ำของลูกสาวและมีความสัมพันธ์ชู้สาว แต่ลูกสาวก็เริ่มรู้สึกชอบเขาเช่นกัน",
+    "rating": 4.2,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "4.2⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/GTV1Cs7zvLQ",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/z-hgsMPP_9RNp"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102555",
+    "postId": "102555",
+    "originalUrl": "https://24-hdx.net/desire-2026/"
+  },
+  {
     "titleTh": "อ้าง Siping (2026)",
     "titleEn": "อ้าง Siping (2026)",
     "year": 2026,
@@ -3254,6 +3124,138 @@ window.movies = [
     "id": "24hdx-102556",
     "postId": "102556",
     "originalUrl": "https://24-hdx.net/siping-2026/"
+  },
+  {
+    "titleTh": "Other Mommy (2026) แม่…หลอน",
+    "titleEn": "Other Mommy (2026) แม่…หลอน",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/Other-Mommy-2026-%E0%B9%81%E0%B8%A1%E0%B9%88%E2%80%A6%E0%B8%AB%E0%B8%A5%E0%B8%AD%E0%B8%99-e1791837029642.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/Other-Mommy-2026-%E0%B9%81%E0%B8%A1%E0%B9%88%E2%80%A6%E0%B8%AB%E0%B8%A5%E0%B8%AD%E0%B8%99-e1791837029642.png",
+    "videoUrl": "https://weplayhls.xyz/embed/pSH_Ne6G-oh83",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ Other Mommy (2026) แม่…หลอน เบล่า เด็กหญิงวัย 8 ขวบที่อาศัยอยู่ในบ้านที่มีปัญหาครอบครัว ต้องเผชิญหน้ากับสิ่งชั่วร้ายที่โผล่ออกมาจากตู้เสื้อผ้าของเธอ",
+    "rating": 6.0,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "6.0⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/idwbe85NSb8",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/pSH_Ne6G-oh83"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102705",
+    "postId": "102705",
+    "originalUrl": "https://24-hdx.net/other-mommy-2026/"
+  },
+  {
+    "titleTh": "ฮาโลส นี่ มิลากรอส Haplos ni Milagros (2026)",
+    "titleEn": "ฮาโลส นี่ มิลากรอส Haplos ni Milagros (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%AE%E0%B8%B2%E0%B9%82%E0%B8%A5%E0%B8%AA-%E0%B8%99%E0%B8%B5%E0%B9%88-%E0%B8%A1%E0%B8%B4%E0%B8%A5%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%AA-Haplos-ni-Milagros-2026-e1791837092947.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%AE%E0%B8%B2%E0%B9%82%E0%B8%A5%E0%B8%AA-%E0%B8%99%E0%B8%B5%E0%B9%88-%E0%B8%A1%E0%B8%B4%E0%B8%A5%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%AA-Haplos-ni-Milagros-2026-e1791837092947.png",
+    "videoUrl": "https://weplayhls.xyz/embed/A4hg-Q2ol6_vc",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ ฮาโลส นี่ มิลากรอส Haplos ni Milagros มิลาโกรสเป็นหญิงสาวสวยผู้มีพลังในการรักษาโรค เธอใช้มืออันทรงพลังของเธอรักษาอาการผิดปกติทางเพศของเออร์วิน",
+    "rating": 5.0,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "5.0⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/D2jVxojePbc",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/A4hg-Q2ol6_vc"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102527",
+    "postId": "102527",
+    "originalUrl": "https://24-hdx.net/haplos-ni-milagros-2026/"
+  },
+  {
+    "titleTh": "ชวาด เฮาส์ Savage House (2026)",
+    "titleEn": "ชวาด เฮาส์ Savage House (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%8A%E0%B8%A7%E0%B8%B2%E0%B8%94-%E0%B9%80%E0%B8%AE%E0%B8%B2%E0%B8%AA%E0%B9%8C-Savage-House-2026-e1791837148192.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%8A%E0%B8%A7%E0%B8%B2%E0%B8%94-%E0%B9%80%E0%B8%AE%E0%B8%B2%E0%B8%AA%E0%B9%8C-Savage-House-2026-e1791837148192.png",
+    "videoUrl": "https://weplayhls.xyz/embed/lS_Oojwtb4-4J",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ ชวาด เฮาส์ Savage House เรื่องราวเกิดขึ้นในอังกฤษศตวรรษที่ 18 ท่ามกลางการระบาดของโรคฝีดาษและการก่อกบฏของจาโคไบต์",
+    "rating": 6.0,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "6.0⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/dB9HuMcaEGM",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/lS_Oojwtb4-4J"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102528",
+    "postId": "102528",
+    "originalUrl": "https://24-hdx.net/savage-house-2026/"
+  },
+  {
+    "titleTh": "สิ่งนี้ สิ่งนี้ และทุกสิ่งทุกอย่างที่อยู่ระหว่างนั้น This, That and Everything in Between (2026)",
+    "titleEn": "สิ่งนี้ สิ่งนี้ และทุกสิ่งทุกอย่างที่อยู่ระหว่างนั้น This, That and Everything in Between (2026)",
+    "year": 2026,
+    "poster": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89-%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%97%E0%B8%B8%E0%B8%81%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%81%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B1%E0%B9%89%E0%B8%99-This-That-and-Everything-in-Between-e1791837243175.png",
+    "backdrop": "https://24-hdx.net/wp-content/uploads/2026/10/%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89-%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%97%E0%B8%B8%E0%B8%81%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%81%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B1%E0%B9%89%E0%B8%99-This-That-and-Everything-in-Between-e1791837243175.png",
+    "videoUrl": "https://weplayhls.xyz/embed/jul8VXM_6-54T",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ สิ่งนี้ สิ่งนี้ และทุกสิ่งทุกอย่างที่อยู่ระหว่างนั้น This, That and Everything in Between (2026)",
+    "rating": 5.4,
+    "genres": [
+      "24HDX",
+      "พากย์ไทย",
+      "5.4⭐",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/ueGNj0fC8rU",
+    "cast": [],
+    "source": "24HDX",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://weplayhls.xyz/embed/jul8VXM_6-54T"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-102519",
+    "postId": "102519",
+    "originalUrl": "https://24-hdx.net/this-that-and-everything-in-between-2026/"
   },
   {
     "titleTh": "Aku Sebelum Aku ฉันก่อนเป็นฉัน (2026)",
@@ -3355,74 +3357,19 @@ window.movies = [
     "originalUrl": "https://24-hdx.net/ghost-board-2026/"
   },
   {
-    "titleTh": "Her Willing Subject สยบรักใต้ชายกระโปรง (2026)",
-    "titleEn": "Her Willing Subject สยบรักใต้ชายกระโปรง (2026)",
+    "titleTh": "One Last Order (2026) ออร์เดอร์สุดท้ายก่อนอำลา",
+    "titleEn": "One Last Order (2026) ออร์เดอร์สุดท้ายก่อนอำลา",
     "year": 2026,
-    "poster": "images/clean_posters/wow-112790.jpg",
-    "backdrop": "images/clean_posters/wow-112790.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/e94f2a39e66a22f336b92a101dd6bcea",
+    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/One-Last-Order-2026.webp",
+    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/One-Last-Order-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/eQM7d-hQq_g8h",
     "sourceType": "embed",
-    "description": "ซีรี่ส์ Her Willing Subject สยบรักใต้ชายกระโปรงพากย์ไทยนางเอกและพระเอกไม่สามารถอยู่ร่วมกันได้จนกระทั่งเกิดเหตุการณ์ไม่คาดฝันขึ้น",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ซีรีส์จีน",
-      "ซีรีส์จีน พากย์ไทย",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 12 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9",
-      "ตอนที่ 10",
-      "ตอนที่ 11",
-      "ตอนที่ 12"
-    ],
-    "episodeUrls": {
-      "1": "https://torbo007.com/embed/8662dd566da6473daaf682f85741eb2d",
-      "2": "https://torbo007.com/embed/c91c8a3270919088a2bac30d402f1e33",
-      "3": "https://torbo007.com/embed/3ec219b5ca45130d3eb9caeb0b4c2d2f",
-      "4": "https://torbo007.com/embed/f6988fa1bd994be499d5a6c977d8a296",
-      "5": "https://torbo007.com/embed/16bbcbeeca6dd3c2c6988bc65da823b4",
-      "6": "https://torbo007.com/embed/863ec0abdcdb3f388771baa2e7237074",
-      "7": "https://torbo007.com/embed/8595f0d067d9472f6e5f993c3ea86bd0",
-      "8": "https://torbo007.com/embed/3489c87ffad8eac88a1ae2f5ffdc19fb",
-      "9": "https://torbo007.com/embed/fe6e7a3af649719980a90379603c6329",
-      "10": "https://torbo007.com/embed/37f136fcf3fb2073e446036f8c59be8b",
-      "11": "https://torbo007.com/embed/bc526dbfef8dbb0ad9e7095d4729b8c7",
-      "12": "https://torbo007.com/embed/e9d903af8a06c0c2624a0529885607fb"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-112790",
-    "postId": "112790",
-    "originalUrl": "https://wow-drama.com/her-willing-subject-2026/"
-  },
-  {
-    "titleTh": "Guarding Stars (2026) ภารกิจรัก พิทักษ์ซุปตาร์",
-    "titleEn": "Guarding Stars (2026) ภารกิจรัก พิทักษ์ซุปตาร์",
-    "year": 2026,
-    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/Guarding-Stars-2026.webp",
-    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/Guarding-Stars-2026.webp",
-    "videoUrl": "https://player77hdfree.xyz/embed/mu_jh4O7-KcAD",
-    "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ เรื่อง Guarding Stars (2026) ภารกิจรัก พิทักษ์ซุปตาร์ ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
-    "rating": 6.3,
+    "description": "ดูหนังออนไลน์ เรื่อง One Last Order (2026) ออร์เดอร์สุดท้ายก่อนอำลา ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.4,
     "genres": [
       "24HD.TODAY",
       "พากย์ไทย",
-      "6.3⭐"
+      "7.4⭐"
     ],
     "duration": "ภาพยนตร์",
     "trailerUrl": "",
@@ -3432,60 +3379,111 @@ window.movies = [
       "เต็มเรื่อง"
     ],
     "episodeUrls": {
-      "1": "https://player77hdfree.xyz/embed/mu_jh4O7-KcAD"
+      "1": "https://player77hdfree.xyz/embed/eQM7d-hQq_g8h"
     },
     "languages": [
       "Thai (พากย์ไทย)"
     ],
-    "id": "24hdtoday-137301",
-    "postId": "137301",
-    "originalUrl": "https://www.24hd.today/guarding-stars-2026"
+    "id": "24hdtoday-137764",
+    "postId": "137764",
+    "originalUrl": "https://www.24hd.today/one-last-order-2026"
   },
   {
-    "titleTh": "Dead Job งานสนุก จะตาย (2026)",
-    "titleEn": "Dead-End Job งานสนุก จะตาย (2026) พากย์ไทย EP.1-8",
+    "titleTh": "The Mosquito Bowl (2026) เกมเดิมพันชีวิต",
+    "titleEn": "The Mosquito Bowl (2026) เกมเดิมพันชีวิต",
     "year": 2026,
-    "poster": "images/clean_posters/gs-134824.jpg",
-    "backdrop": "images/clean_posters/gs-134824.jpg",
-    "videoUrl": "https://torbo007.com/embed/800d941c479fdaf9113b7cbf25b8adf3",
+    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/The-Mosquito-Bowl-2026.webp",
+    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/The-Mosquito-Bowl-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/S_jrt-hdaN43h",
     "sourceType": "embed",
-    "description": "เรื่องย่อ-งานสนุก จะตาย\r\n เรื่องราวของ บยอนฮยอกจุน ชายหนุ่มที่กำลังเผชิญกับปัญหาหนี้สินอย่างหนัก จนแทบมองไม่เห็นหนทางที่จะหลุดพ้นจากความทุกข์ยาก กระทั่งวันหนึ่งเขาได้พบกับประกาศรับสมัครงานจากสำนักงานจัดหางานลึกลับที่ชื่อว่า Spider Staffing Agency ซึ่งเสนอค่าตอบแทนสูงถึง 50 เท่าของค่าแรงขั้นต่ำต่อชั่วโมง ข้อเสนอนี้ทำให้เขาตัดสินใจก้าวเข้าสู่โลกของการทำงานที่ไม่เหมือนใคร โดยหารู้ไม่ว่ารายได้ก้อนโตที่รออยู่ต้องแลกมาด้วยความเสี่ยงถึงชีวิต เมื่อเริ่มงาน ฮยอกจุนกลับต้องเผชิญกับเหตุการณ์เหนือธรรมชาติสุดสยองในสถานที่ทำงานที่ดูเหมือนธรรมดา ไม่ว่าจะเป็นกะกลางคืนในร้านสะดวกซื้อที่กลายเป็นสนามเอาชีวิตรอด หรือภารกิจอื่น ๆ ที่เต็มไปด้วยสิ่งลี้ลับและความน่าสะพรึงกลัว ยิ่งเขาพยายามหาเงินมากเท่าไร ก็ยิ่งต้องเข้าไปพัวพันกับอันตรายมากขึ้นเท่านั้น ขณะเดียวกัน ยอนจู เจ้าหน้าที่สืบสวนคดีอุบัติเหตุจากการทำงาน ก็เริ่มขุดคุ้ยความผิดปกติที่เกิดขึ้นภายในสำนักงานจัดหางานแห่งนี้ ส่วน จียุน น้องสาวของฮยอกจุน แม้จะเป็นคนที่เชื่อว่าความยากจนน่ากลัวกว่าผี แต่เมื่อเห็นพี่ชายมีพฤติกรรมเปลี่ยนไป เธอจึงเริ่มสงสัยและพยายามค้นหาความจริงเช่นกัน\r\n",
-    "rating": 8.8,
+    "description": "ดูหนังออนไลน์ เรื่อง The Mosquito Bowl (2026) เกมเดิมพันชีวิต ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 6.6,
     "genres": [
-      "ดูซีรี่ย์พากย์ไทย",
-      "ซีรีส์แนะนำใหม่ 2026",
-      "พากย์ไทย"
+      "24HD.TODAY",
+      "พากย์ไทย",
+      "6.6⭐"
     ],
-    "duration": "ซีรีส์ 8 ตอนจบ",
+    "duration": "ภาพยนตร์",
     "trailerUrl": "",
     "cast": [],
-    "source": "GOSERIES4K",
+    "source": "24HD.TODAY",
     "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8"
+      "เต็มเรื่อง"
     ],
     "episodeUrls": {
-      "1": "https://torbo007.com/embed/800d941c479fdaf9113b7cbf25b8adf3",
-      "2": "https://torbo007.com/embed/be4c79af86ffa8cd9c424d4990433c3d",
-      "3": "https://torbo007.com/embed/3a9f74f01e8b7fc5cdf86026a495a31c",
-      "4": "https://torbo007.com/embed/836cec93de1f37a6bc0e10c7d12abb0f",
-      "5": "https://torbo007.com/embed/6640822cd6a3392600952b32eb98d1d2",
-      "6": "https://torbo007.com/embed/49491507dc0fe7f94efb4cd587a7125a",
-      "7": "https://torbo007.com/embed/eac58649d7ae329f2347bb2292032bde",
-      "8": "https://torbo007.com/embed/949ef6b72b0f87d8ffeab93b1491b4d7"
+      "1": "https://player77hdfree.xyz/embed/S_jrt-hdaN43h"
     },
     "languages": [
       "Thai (พากย์ไทย)"
     ],
-    "id": "gs-134824",
-    "postId": "134824",
-    "originalUrl": "https://goseries4k.com/dead-end-job/"
+    "id": "24hdtoday-137771",
+    "postId": "137771",
+    "originalUrl": "https://www.24hd.today/the-mosquito-bowl-2026"
+  },
+  {
+    "titleTh": "Rob Lowe The Outsider (2026) ร็อบ โลว์ คนนอก",
+    "titleEn": "Rob Lowe The Outsider (2026) ร็อบ โลว์ คนนอก",
+    "year": 2026,
+    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/Rob-Lowe-The-Outsider-2026.webp",
+    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/Rob-Lowe-The-Outsider-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/E_ypq91cA-hBI",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Rob Lowe The Outsider (2026) ร็อบ โลว์ คนนอก ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.1,
+    "genres": [
+      "24HD.TODAY",
+      "พากย์ไทย",
+      "7.1⭐"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.TODAY",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/E_ypq91cA-hBI"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdtoday-137772",
+    "postId": "137772",
+    "originalUrl": "https://www.24hd.today/rob-lowe-the-outsider-2026"
+  },
+  {
+    "titleTh": "The Trials Of Karen Read (2026) การพิจารณาคดีแคเรน รีด",
+    "titleEn": "The Trials Of Karen Read (2026) การพิจารณาคดีแคเรน รีด EP.1-3",
+    "year": 2026,
+    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/The-Trials-of-Karen-Read-2026.webp",
+    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/The-Trials-of-Karen-Read-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/M-mQ_X6eMdSh3",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง The Trials of Karen Read (2026) การพิจารณาคดีแคเรน รีด EP.1-3 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 6.2,
+    "genres": [
+      "24HD.TODAY",
+      "พากย์ไทย",
+      "6.2⭐",
+      "ดูซีรี่ย์พากย์ไทย"
+    ],
+    "duration": "ซีรีส์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.TODAY",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/M-mQ_X6eMdSh3"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdtoday-137758",
+    "postId": "137758",
+    "originalUrl": "https://www.24hd.today/the-trials-of-karen-read-2026"
   },
   {
     "titleTh": "Haunted Universities 4 (2026) เทอม 4",
@@ -3515,675 +3513,6 @@ window.movies = [
     "id": "24hdx-40152",
     "postId": "40152",
     "originalUrl": "https://www.24-hda.com/haunted-universities-4/"
-  },
-  {
-    "titleTh": "Midnight Sun (2006) 24 ชม. ขอรักเธอทุกวัน",
-    "titleEn": "Midnight Sun (2006) 24 ชม. ขอรักเธอทุกวัน",
-    "year": 2006,
-    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/Midnight-Sun-2006.webp",
-    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/Midnight-Sun-2006.webp",
-    "videoUrl": "https://player77hdfree.xyz/embed/J_hy7dvy-p7i1",
-    "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ เรื่อง Midnight Sun (2006) 24 ชม. ขอรักเธอทุกวัน ปีที่ฉาย 2006 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
-    "rating": 7.1,
-    "genres": [
-      "24HD.TODAY",
-      "พากย์ไทย",
-      "7.1⭐"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "24HD.TODAY",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://player77hdfree.xyz/embed/J_hy7dvy-p7i1"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdtoday-137294",
-    "postId": "137294",
-    "originalUrl": "https://www.24hd.today/midnight-sun-2006"
-  },
-  {
-    "titleTh": "My Secret Boyfriends (2026) แฟนลับครับผม",
-    "titleEn": "My Secret Boyfriends (2026) แฟนลับครับผม",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-112068.jpg",
-    "backdrop": "images/clean_posters/wow-112068.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/cb1e2ed97489203768453b4abea28adf",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ไทย My Secret Boyfriends (2026) แฟนลับครับผม แดนเจอความวุ่นวายเป็นอย่างมากหลังจากที่เขานั้นต้องมามายุ่งเกี่ยวกับผู้ชายสามคนที่ชอบตน",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ละครไทย",
-      "ละครไทย ย้อนหลัง",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 2 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/cb1e2ed97489203768453b4abea28adf",
-      "2": "https://getplay-cdn.com/embed/6843cdbaad04e6049c1e18952139c7dc"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-112068",
-    "postId": "112068",
-    "originalUrl": "https://wow-drama.com/my-secret-boyfriends-2026/"
-  },
-  {
-    "titleTh": "Love Me to Hurt Me (2026) รัก = ร้าย",
-    "titleEn": "Love Me to Hurt Me (2026) รัก = ร้าย ตอนที่ 1-8",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-111713.jpg",
-    "backdrop": "images/clean_posters/wow-111713.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/f315129b814a94461af86c8b470e9b1c",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ไทย Love Me to Hurt Me (2026) รัก = ร้าย นางเอกในตอนนี้นั้นได้มีโอกาสกลับมาเจอรักเก่าอีกครั้งจึงพยามที่จะแก้แค้นเขาให้ได้ต้องติดตาม",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ละครไทย",
-      "ละครไทย ย้อนหลัง",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 3 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/f315129b814a94461af86c8b470e9b1c",
-      "2": "https://getplay-cdn.com/embed/4a08309222852513d9286b383fcbcfc0",
-      "3": "https://getplay-cdn.com/embed/f9aaaca5c8165c50117b000a0b6551cd"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-111713",
-    "postId": "111713",
-    "originalUrl": "https://wow-drama.com/love-me-to-hurt-me-2026/"
-  },
-  {
-    "titleTh": "Teach Me Touch Me (2026) สัมผัสกันต์ธีร์",
-    "titleEn": "Teach Me Touch Me (2026) สัมผัสกันต์ธีร์ EP.1-10",
-    "year": 2026,
-    "poster": "https://www.24hd.today/wp-content/uploads/2026/10/Teach-Me-Touch-Me-2026.webp",
-    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/10/Teach-Me-Touch-Me-2026.webp",
-    "videoUrl": "https://player77hdfree.xyz/embed/eopdw_SgB-WfI",
-    "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ เรื่อง Teach Me Touch Me (2026) สัมผัสกันต์ธีร์ EP.1-10 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
-    "rating": 6.9,
-    "genres": [
-      "24HD.TODAY",
-      "พากย์ไทย",
-      "6.9⭐",
-      "ดูซีรี่ย์พากย์ไทย"
-    ],
-    "duration": "ซีรีส์",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "24HD.TODAY",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://player77hdfree.xyz/embed/eopdw_SgB-WfI"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdtoday-135726",
-    "postId": "135726",
-    "originalUrl": "https://www.24hd.today/teach-me-touch-me-2026"
-  },
-  {
-    "titleTh": "MobLand ม็อบแลนด์ (2026)",
-    "titleEn": "MobLand ม็อบแลนด์ (2026)",
-    "year": 2026,
-    "poster": "images/clean_posters/mobland____________2026.jpg",
-    "backdrop": "images/clean_posters/mobland____________2026.jpg",
-    "videoUrl": "https://torbo007.com/embed/bced97b63f9f325611752b80e88e8acb",
-    "sourceType": "embed",
-    "description": "ดูซีรีส์ MobLand ม็อบแลนด์ (2026) อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
-    "rating": 8.9,
-    "genres": [
-      "ซีรีส์",
-      "ดราม่า",
-      "พากย์ไทย"
-    ],
-    "duration": "ซีรีส์ 10 ตอนจบ",
-    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    "cast": [
-      "นักแสดงนำคุณภาพ"
-    ],
-    "source": "GOSERIES4K",
-    "sourcePageUrl": "https://goseries4k.com/mobland/",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9",
-      "ตอนที่ 10"
-    ],
-    "episodeUrls": {
-      "1": "https://torbo007.com/embed/bced97b63f9f325611752b80e88e8acb",
-      "2": "https://torbo007.com/embed/3b1440d6a5e8640ac80b1ec080af934b",
-      "3": "https://torbo007.com/embed/e5b4f97fcd901606db7cb0b24a10cf22",
-      "4": "https://torbo007.com/embed/ef1fe87082a7f66f154867dc79e885aa",
-      "5": "https://torbo007.com/embed/e0a63001defd3ff552972a4beb1cbe5b",
-      "6": "https://torbo007.com/embed/9454265ef1d87f4e520d0f56948039c2",
-      "7": "https://torbo007.com/embed/798541b4c0f08c1f5d02d04bc359b7dd",
-      "8": "https://torbo007.com/embed/c6342beba40369f5f2e443a948a2b741",
-      "9": "https://torbo007.com/embed/0aa603029cdef115844f69d765c6e48b",
-      "10": "https://torbo007.com/embed/4ae8f653c083bd53d456c2bf3cbe472a"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "g4-548"
-  },
-  {
-    "titleTh": "Snoopy Presents 12 Days Of Snoopy (2026)",
-    "titleEn": "Snoopy Presents 12 Days Of Snoopy (2026)",
-    "year": 2026,
-    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/Snoopy-Presents-12-Days-of-Snoopy-2026.webp",
-    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/Snoopy-Presents-12-Days-of-Snoopy-2026.webp",
-    "videoUrl": "https://player77hdfree.xyz/embed/eO9_sLjnZE-Vr",
-    "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ เรื่อง Snoopy Presents 12 Days of Snoopy (2026) ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
-    "rating": 7.6,
-    "genres": [
-      "24HD.TODAY",
-      "พากย์ไทย",
-      "7.6⭐"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "24HD.TODAY",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://player77hdfree.xyz/embed/eO9_sLjnZE-Vr"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdtoday-137163",
-    "postId": "137163",
-    "originalUrl": "https://www.24hd.today/snoopy-presents-12-days-of-snoopy-2026/"
-  },
-  {
-    "titleTh": "Blossom in Darkness (2026) บุปผาในห้วงฝัน",
-    "titleEn": "Blossom in Darkness (2026) บุปผาในห้วงฝัน",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-112461.jpg",
-    "backdrop": "images/clean_posters/wow-112461.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/9b925c7f2cb59f156eed86d142b71d7a",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ Blossom in Darkness (2026) บุปผาในห้วงฝัน พระเอกในตอนนี้นั้นถูกผู้คนเข้าใจผิดว่าเป็นจอมมารที่ชั่วร้ายและถูกปิดผนึกเอาไว้ต้องติดตาม",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ซีรีส์จีน",
-      "ซีรีส์จีน พากย์ไทย",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 18 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9",
-      "ตอนที่ 10",
-      "ตอนที่ 11",
-      "ตอนที่ 12",
-      "ตอนที่ 13",
-      "ตอนที่ 14",
-      "ตอนที่ 15",
-      "ตอนที่ 16",
-      "ตอนที่ 17",
-      "ตอนที่ 18"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/9b925c7f2cb59f156eed86d142b71d7a",
-      "2": "https://getplay-cdn.com/embed/8eb7fb4057f30189602850db3318f097",
-      "3": "https://getplay-cdn.com/embed/8d78246b4c5ce5c71c023a1f82bbb432",
-      "4": "https://getplay-cdn.com/embed/87331c711381865a500706a2c7d7a9a7",
-      "5": "https://getplay-cdn.com/embed/69a839053cc07d9842048e58170b34b4",
-      "6": "https://getplay-cdn.com/embed/ed880e016b40eed2b5b7f1cfb2d08c6c",
-      "7": "https://getplay-cdn.com/embed/f65d89d5a19b4ce592d50c5ce05343bd",
-      "8": "https://getplay-cdn.com/embed/162ef2da616ceeb76c1b2d5fe51276c4",
-      "9": "https://getplay-cdn.com/embed/30951578bb6128ffa29c4c209ef48849",
-      "10": "https://getplay-cdn.com/embed/53f82427e0c76e83bbd257dc0a9959a3",
-      "11": "https://getplay-cdn.com/embed/0336347771fbb5c60f6b96b1330f5952",
-      "12": "https://getplay-cdn.com/embed/01e292240580f503c297e071d2acbba0",
-      "13": "https://getplay-cdn.com/embed/c80e249939e7dac2f2c80607429092b6",
-      "14": "https://getplay-cdn.com/embed/f7cfa67bf3cdeb8036d24c7f0013e1d4",
-      "15": "https://getplay-cdn.com/embed/c96957643b0e5cf8f28d5d9c3d80c6f4",
-      "16": "https://getplay-cdn.com/embed/841dfde28005d616f2007dd0af5c9860",
-      "17": "https://getplay-cdn.com/embed/a4ff5d6b37ea0039f6ec924cf9cc94a7",
-      "18": "https://getplay-cdn.com/embed/d07993f6c5998f819a5448405f048346"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-112461",
-    "postId": "112461",
-    "originalUrl": "https://wow-drama.com/blossom-in-darkness-2026/"
-  },
-  {
-    "titleTh": "Never Surrender (2026) สู้ไม่ถอย",
-    "titleEn": "Never Surrender (2026) สู้ไม่ถอย",
-    "year": 2026,
-    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/Never-Surrender-2026.webp",
-    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/Never-Surrender-2026.webp",
-    "videoUrl": "https://player77hdfree.xyz/embed/zSd4z5V-0k_HE",
-    "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ เรื่อง Never Surrender (2026) สู้ไม่ถอย ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
-    "rating": 6.1,
-    "genres": [
-      "24HD.TODAY",
-      "พากย์ไทย",
-      "6.1⭐"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "24HD.TODAY",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://player77hdfree.xyz/embed/zSd4z5V-0k_HE"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdtoday-137064",
-    "postId": "137064",
-    "originalUrl": "https://www.24hd.today/never-surrender-2026"
-  },
-  {
-    "titleTh": "Recipe for Love (2026) สูตรรัก...สั่งใจให้รัก",
-    "titleEn": "Recipe for Love (2026) สูตรรัก...สั่งใจให้รัก",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-112088.jpg",
-    "backdrop": "images/clean_posters/wow-112088.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/ecfc486b7c8d91d29e72444fe5a593fd",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ Recipe for Love (2026) สูตรรัก...สั่งใจให้รัก นางเอกเกิดความลำบากลำบากใจมากๆหลังจากที่แม่ตัวเองพยายามที่จะให้เธอนั้นเป็นแพทย์ให้ได้",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ซีรีส์เกาหลี",
-      "ซีรีส์เกาหลี พากย์ไทย",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 50 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9",
-      "ตอนที่ 10",
-      "ตอนที่ 11",
-      "ตอนที่ 12",
-      "ตอนที่ 13",
-      "ตอนที่ 14",
-      "ตอนที่ 15",
-      "ตอนที่ 16",
-      "ตอนที่ 17",
-      "ตอนที่ 18",
-      "ตอนที่ 19",
-      "ตอนที่ 20",
-      "ตอนที่ 21",
-      "ตอนที่ 22",
-      "ตอนที่ 23",
-      "ตอนที่ 24",
-      "ตอนที่ 25",
-      "ตอนที่ 26",
-      "ตอนที่ 27",
-      "ตอนที่ 28",
-      "ตอนที่ 29",
-      "ตอนที่ 30",
-      "ตอนที่ 31",
-      "ตอนที่ 32",
-      "ตอนที่ 33",
-      "ตอนที่ 34",
-      "ตอนที่ 35",
-      "ตอนที่ 36",
-      "ตอนที่ 37",
-      "ตอนที่ 38",
-      "ตอนที่ 39",
-      "ตอนที่ 40",
-      "ตอนที่ 41",
-      "ตอนที่ 42",
-      "ตอนที่ 43",
-      "ตอนที่ 44",
-      "ตอนที่ 45",
-      "ตอนที่ 46",
-      "ตอนที่ 47",
-      "ตอนที่ 48",
-      "ตอนที่ 49",
-      "ตอนที่ 50"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/ecfc486b7c8d91d29e72444fe5a593fd",
-      "2": "https://getplay-cdn.com/embed/94fb039ee55476701656661d69906009",
-      "3": "https://getplay-cdn.com/embed/1ff681c38c35830b937c0e86b73863e5",
-      "4": "https://getplay-cdn.com/embed/9d27dd00e7d696e06287eea5e25e2d80",
-      "5": "https://getplay-cdn.com/embed/e4e4890ba3ef1b92e46a587d4a514b13",
-      "6": "https://getplay-cdn.com/embed/e73687b63350696c56dda940f5a73d77",
-      "7": "https://getplay-cdn.com/embed/e1fe20e6c81b0645408b55ee65a21a6d",
-      "8": "https://getplay-cdn.com/embed/a60da4df243921f0812f728d7caeae16",
-      "9": "https://getplay-cdn.com/embed/e2c7ca5090a81bc12b663c79c67a83c2",
-      "10": "https://getplay-cdn.com/embed/a4b6f2043213948b1a213b9e5095184f",
-      "11": "https://getplay-cdn.com/embed/69142784bc32b4512aeef84bc20cb15c",
-      "12": "https://getplay-cdn.com/embed/bb859fca7e76615be5689b8d792b2a78",
-      "13": "https://getplay-cdn.com/embed/846aeab3b52b0106da766303486a2e5f",
-      "14": "https://getplay-cdn.com/embed/c84b7f032506b88478389e9bea41cc5f",
-      "15": "https://getplay-cdn.com/embed/1a8ea6a51d102961f661748b7e6860b6",
-      "16": "https://getplay-cdn.com/embed/7fe6de37d565e2836704ccf27632d3bf",
-      "17": "https://getplay-cdn.com/embed/7c1301001237dd397555223adedb0317",
-      "18": "https://getplay-cdn.com/embed/b84b9302df7c65d860e6582548f64402",
-      "19": "https://getplay-cdn.com/embed/2877b883d4de04d6adc34c1c5d66a0ce",
-      "20": "https://getplay-cdn.com/embed/c879a271ef62c5f5b8f06025a654e4f4",
-      "21": "https://getplay-cdn.com/embed/547470f26e76f1ad06d5902345e3a4c1",
-      "22": "https://getplay-cdn.com/embed/f4e42b1de1dafeb7b825ce8f3edbdfd8",
-      "23": "https://getplay-cdn.com/embed/66cda6ce409901321de03c5e35054c41",
-      "24": "https://getplay-cdn.com/embed/648d99b0c40857f70115564d7eb08a69",
-      "25": "https://getplay-cdn.com/embed/661ec9782d833da0191eb475fb3ab7b5",
-      "26": "https://getplay-cdn.com/embed/48ea8ceb6583ebbd33a5d6a1f7b1543c",
-      "27": "https://getplay-cdn.com/embed/2d5f54ad474311531e40c4d5f247a0ad",
-      "28": "https://getplay-cdn.com/embed/cb3adfa1eeabf41fa13d05d3896d30e1",
-      "29": "https://getplay-cdn.com/embed/e836853098c9c5a5a03aa9ab89e70ef9",
-      "30": "https://getplay-cdn.com/embed/5840eb92909fa52f0a822da4afaec272",
-      "31": "https://getplay-cdn.com/embed/044f2f07c70baa1d5d1d1f89bb37dc38",
-      "32": "https://getplay-cdn.com/embed/2893f78f18bb7baf51e4637c6096f486",
-      "33": "https://getplay-cdn.com/embed/4a3a4947b512e9cbaa93cb5da2c44abb",
-      "34": "https://getplay-cdn.com/embed/17d74ea4b2fb5686bc9ebdf97e954c6f",
-      "35": "https://getplay-cdn.com/embed/fc71b302284e9d1eb4863c92ef84a8ce",
-      "36": "https://getplay-cdn.com/embed/4ea3594ba8558fa86d52a5b00639440b",
-      "37": "https://getplay-cdn.com/embed/3a0c934d84ef6136ef320be646e323c9",
-      "38": "https://getplay-cdn.com/embed/eebdd7649215c8510cf41b6cf15c4c9b",
-      "39": "https://getplay-cdn.com/embed/44858ac784ec1c3f72fc1101efe532ae",
-      "40": "https://getplay-cdn.com/embed/01931edb7c4c404c21443e4e56590b4e",
-      "41": "https://getplay-cdn.com/embed/53d8692b576bcdea7c0c2383c13ba08e",
-      "42": "https://getplay-cdn.com/embed/77f118342b2d0eb92f155efeece808df",
-      "43": "https://getplay-cdn.com/embed/b379eca819eb7f94679cc9ca31d79ba9",
-      "44": "https://getplay-cdn.com/embed/9b7cdb014d85cdd261f5879482f16935",
-      "45": "https://getplay-cdn.com/embed/a5506d98b90eddf269caf80b8e291222",
-      "46": "https://getplay-cdn.com/embed/390dcc80378eabe1bb66d3c896c4b87e",
-      "47": "https://getplay-cdn.com/embed/fbb960b112e57d8dfab58654010bf5fb",
-      "48": "https://getplay-cdn.com/embed/47562de44045a265e916d542ca25229a",
-      "49": "https://getplay-cdn.com/embed/f660017255aab87526f0c5aebc75b0ff",
-      "50": "https://getplay-cdn.com/embed/550eca04ca4ec41d45cb6e5ec3655408"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-112088",
-    "postId": "112088",
-    "originalUrl": "https://wow-drama.com/recipe-for-love-2026/"
-  },
-  {
-    "titleTh": "Tigers Sniff the Rose (2026) พยัคฆ์หลงกลิ่นบุปผา จบ",
-    "titleEn": "Tigers Sniff the Rose (2026) พยัคฆ์หลงกลิ่นบุปผา จบ",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-110135.jpg",
-    "backdrop": "images/clean_posters/wow-110135.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/5a53912efe2ce00179e10a65a1be204f",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์จีน Tigers Sniff the Rose (2026) พยัคฆ์หลงกลิ่นบุปผา นางเอกในตอนนี้นั้นกำลังใช้พระเอกเป็นหมากในเกมของตัวเองด้วยเหตุผลบางอย่าง",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ซีรีส์จีน",
-      "ซีรีส์จีน พากย์ไทย",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 33 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9",
-      "ตอนที่ 10",
-      "ตอนที่ 11",
-      "ตอนที่ 12",
-      "ตอนที่ 13",
-      "ตอนที่ 14",
-      "ตอนที่ 15",
-      "ตอนที่ 16",
-      "ตอนที่ 17",
-      "ตอนที่ 18",
-      "ตอนที่ 19",
-      "ตอนที่ 20",
-      "ตอนที่ 21",
-      "ตอนที่ 22",
-      "ตอนที่ 23",
-      "ตอนที่ 24",
-      "ตอนที่ 25",
-      "ตอนที่ 26",
-      "ตอนที่ 27",
-      "ตอนที่ 28",
-      "ตอนที่ 29",
-      "ตอนที่ 30",
-      "ตอนที่ 31",
-      "ตอนที่ 32",
-      "ตอนที่ 33"
-    ],
-    "episodeUrls": {
-      "1": "https://torbo007.com/embed/15ea91428f20e7dc36a853a2e9053aa3",
-      "2": "https://torbo007.com/embed/8f2f138d8a2ecfc4d62b72c0aeb8b1b2",
-      "3": "https://torbo007.com/embed/3da3b10c7c1c74798934191016409520",
-      "4": "https://torbo007.com/embed/796ecad1c5df8cd21bab1bc77e4d7b38",
-      "5": "https://torbo007.com/embed/68ee90ba6127bef77c2857aeaee1f048",
-      "6": "https://torbo007.com/embed/3fbe714b2ec4f81c8a151fcd7d4f9ab1",
-      "7": "https://torbo007.com/embed/82d9479dd3c14f322e364c938bf793ea",
-      "8": "https://torbo007.com/embed/f30459e3f4b8554250f61817e4692753",
-      "9": "https://torbo007.com/embed/c1dcbec466b6e91f12bc0e3a756902df",
-      "10": "https://torbo007.com/embed/5c736507117e733033d1dbc99b51dcfe",
-      "11": "https://torbo007.com/embed/b6aedb6cd715a2fcb3ecc29ca71b41fd",
-      "12": "https://torbo007.com/embed/529927a66086dba222e2e0b88e55cad4",
-      "13": "https://torbo007.com/embed/a1474b57e32cc68e945e8d6d52df779e",
-      "14": "https://torbo007.com/embed/9ad37b5e8f2ccfd4d7a2e5d9bcce7a46",
-      "15": "https://torbo007.com/embed/574fdf94fcccd4b84c6d234f39594df0",
-      "16": "https://torbo007.com/embed/51fccdd2ade27b135c6ccad03a8e6116",
-      "17": "https://torbo007.com/embed/0b963c925ea6748c4e0f425a6fe561eb",
-      "18": "https://torbo007.com/embed/20d1c39723d6a3af66637fe604a03933",
-      "19": "https://torbo007.com/embed/d614a7f736880c2157c37c749c7a7f5f",
-      "20": "https://torbo007.com/embed/b2955e98e1dc0ac1c6eae7891fe50e4a",
-      "21": "https://torbo007.com/embed/53d99b0c124c4ead9c2482206efa6843",
-      "22": "https://torbo007.com/embed/54d19a78c599cecb97076778a5ad499f",
-      "23": "https://torbo007.com/embed/c6b6af063ff8c56e352e9bfe7067da6c",
-      "24": "https://torbo007.com/embed/36728de67df174855c221957edcdf65a",
-      "25": "https://torbo007.com/embed/c8136f8689ffc6dc6a57ba8560904b93",
-      "26": "https://torbo007.com/embed/a97ea15dde9d371fb606c799fd91ae18",
-      "27": "https://torbo007.com/embed/60b658badf601530147e64a9aa035bff",
-      "28": "https://torbo007.com/embed/847308867a04d87cbf2e3cd0fdaa97a4",
-      "29": "https://torbo007.com/embed/1cb1b8891f6bc05ce72588cb4bf4cf9a",
-      "30": "https://torbo007.com/embed/de89f6852f8af7e1f8379479ac3c70e0",
-      "31": "https://torbo007.com/embed/25b000678d35ddc48c1a2426b81107c6",
-      "32": "https://torbo007.com/embed/9659c1047ab7e710f455f13b229cfd12",
-      "33": "https://torbo007.com/embed/eed1da86e3350baef627fd7292b20327"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-110135",
-    "postId": "110135",
-    "originalUrl": "https://wow-drama.com/tigers-sniff-the-rose-2026/"
-  },
-  {
-    "titleTh": "Small Town Remedy (2026) วอร์ดรักฮีลใจ",
-    "titleEn": "Small Town Remedy (2026) วอร์ดรักฮีลใจ",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-110008.jpg",
-    "backdrop": "images/clean_posters/wow-110008.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/7eaf76cc86d4dd1c11d0aec98a10a27d",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ Small Town Remedy (2026) วอร์ดรักฮีลใจ พระเอกในตอนนี้นั้นตัดสินใจที่จะกลับมาที่บ้านของตัวเองเพื่อทำงานต่อในท้องถิ่นต้องติดตาม",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ซีรีส์จีน",
-      "ซีรีส์จีน พากย์ไทย",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 29 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9",
-      "ตอนที่ 10",
-      "ตอนที่ 11",
-      "ตอนที่ 12",
-      "ตอนที่ 13",
-      "ตอนที่ 14",
-      "ตอนที่ 15",
-      "ตอนที่ 16",
-      "ตอนที่ 17",
-      "ตอนที่ 18",
-      "ตอนที่ 19",
-      "ตอนที่ 20",
-      "ตอนที่ 21",
-      "ตอนที่ 22",
-      "ตอนที่ 23",
-      "ตอนที่ 24",
-      "ตอนที่ 25",
-      "ตอนที่ 26",
-      "ตอนที่ 27",
-      "ตอนที่ 28",
-      "ตอนที่ 29"
-    ],
-    "episodeUrls": {
-      "1": "https://torbo007.com/embed/3cff907572e4bab58c0ef604cfc5d453",
-      "2": "https://torbo007.com/embed/e42889459d24470dea636d99b2a21cf9",
-      "3": "https://torbo007.com/embed/fc5da3ea36732156c33f1dbd1d8ba1d5",
-      "4": "https://torbo007.com/embed/bb06d7e11a8043327066a952de89c87f",
-      "5": "https://torbo007.com/embed/6241ca67fe7befa3676fdbd210759f7f",
-      "6": "https://torbo007.com/embed/9fc96e6a8d7476e6264e33ab4641f6e5",
-      "7": "https://torbo007.com/embed/8cd4cc62027d9ce694ea00a226cb2bd2",
-      "8": "https://torbo007.com/embed/e19682bc9df69fc9c1ec5010f27d44d6",
-      "9": "https://torbo007.com/embed/36d5cfc73e069e36c1fd56c065e1203f",
-      "10": "https://torbo007.com/embed/98e3d40088b592eed8cc1e4ff87db491",
-      "11": "https://torbo007.com/embed/629b78c7332a31af381bd53e02f72a0c",
-      "12": "https://torbo007.com/embed/336d06f6ba3232429144b5a18b698064",
-      "13": "https://torbo007.com/embed/0ab2813a99d499a35b78d1ec1dfccc7b",
-      "14": "https://torbo007.com/embed/7f98f0cd18391bade8666332b96565b5",
-      "15": "https://torbo007.com/embed/b1e679adb9b1899d1451a5e10c313ad1",
-      "16": "https://torbo007.com/embed/ae710cdce0a8d19203de2a56d54d7ebd",
-      "17": "https://torbo007.com/embed/6fb7237619cc239cb0e072eef9111482",
-      "18": "https://torbo007.com/embed/130c3082078be8265e5548a98a41562e",
-      "19": "https://torbo007.com/embed/9a0c7a44b0a4d50a22a89cdd37086d05",
-      "20": "https://torbo007.com/embed/8ed44b25b27ea1471d90142b40dd6460",
-      "21": "https://torbo007.com/embed/08030aa07544d12c641019884459c5b9",
-      "22": "https://torbo007.com/embed/7766ab14b57d94a0fc3d5a7c9c64ea64",
-      "23": "https://torbo007.com/embed/075235eaa958dd6b837d1c1aa5bae6ea",
-      "24": "https://torbo007.com/embed/8aba804fac7b5f0efbc00e4bb40bc8f4",
-      "25": "https://torbo007.com/embed/13f0b6eec2178c2e549355569ba9dad6",
-      "26": "https://torbo007.com/embed/74ed0cddfed1ceaf843a69a3d3562b18",
-      "27": "https://torbo007.com/embed/04659fd49ce0d8646de952c065f41462",
-      "28": "https://torbo007.com/embed/203c5d7b54badac804309e9463d78d6c",
-      "29": "https://torbo007.com/embed/8ee4e806ac76ec38d3fb363bcc53c1b8"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-110008",
-    "postId": "110008",
-    "originalUrl": "https://wow-drama.com/small-town-remedy-2026/"
-  },
-  {
-    "titleTh": "Fool In Love (2026) คนโง่รักเข(ล)า",
-    "titleEn": "Fool In Love (2026) คนโง่รักเข(ล)า EP.1-20",
-    "year": 2026,
-    "poster": "https://www.24hd.today/wp-content/uploads/2026/10/Fool-in-Love-2026.webp",
-    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/10/Fool-in-Love-2026.webp",
-    "videoUrl": "https://player77hdfree.xyz/embed/UfQ-c68E_Qqbb",
-    "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ เรื่อง Fool in Love (2026) คนโง่รักเข(ล)า EP.1-20 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
-    "rating": 8.6,
-    "genres": [
-      "24HD.TODAY",
-      "พากย์ไทย",
-      "8.6⭐",
-      "ดูซีรี่ย์พากย์ไทย"
-    ],
-    "duration": "ซีรีส์",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "24HD.TODAY",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://player77hdfree.xyz/embed/UfQ-c68E_Qqbb"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdtoday-135261",
-    "postId": "135261",
-    "originalUrl": "https://www.24hd.today/fool-in-love-2026"
   },
   {
     "titleTh": "Tell The World I Love You (2022) บอกโลกให้รู้ว่า กูรักมึง",
@@ -4750,19 +4079,52 @@ window.movies = [
     ]
   },
   {
-    "titleTh": "Ai Long Nhai The Endless Love (2023) อัยย์หลงไน๋",
-    "titleEn": "Ai Long Nhai The Endless Love (2023) อัยย์หลงไน๋",
-    "year": 2023,
-    "poster": "https://www.24hd.today/wp-content/uploads/2025/12/Ai-Long-Nhai-The-Endless-Love-2023.webp",
-    "backdrop": "https://www.24hd.today/wp-content/uploads/2025/12/Ai-Long-Nhai-The-Endless-Love-2023.webp",
-    "videoUrl": "https://player77hdfree.xyz/embed/LnTG6_kRv-faE",
+    "titleTh": "Steps (2026) พี่น้องรองเท้าแก้ว",
+    "titleEn": "Steps (2026) พี่น้องรองเท้าแก้ว",
+    "year": 2026,
+    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/Steps-2026.webp",
+    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/Steps-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/I90-dBi_9IaTs",
     "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ เรื่อง Ai Long Nhai The Endless Love (2023) อัยย์หลงไน๋ ปีที่ฉาย 2023 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
-    "rating": 7.6,
+    "description": "ดูหนังออนไลน์ เรื่อง Steps (2026) พี่น้องรองเท้าแก้ว ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 6.8,
     "genres": [
       "24HD.TODAY",
       "พากย์ไทย",
-      "7.6⭐"
+      "6.8⭐",
+      "ดูซีรี่ย์พากย์ไทย"
+    ],
+    "duration": "ซีรีส์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.TODAY",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/I90-dBi_9IaTs"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdtoday-137457",
+    "postId": "137457",
+    "originalUrl": "https://www.24hd.today/steps-2026"
+  },
+  {
+    "titleTh": "Guarding Stars (2026) ภารกิจรัก พิทักษ์ซุปตาร์",
+    "titleEn": "Guarding Stars (2026) ภารกิจรัก พิทักษ์ซุปตาร์",
+    "year": 2026,
+    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/Guarding-Stars-2026.webp",
+    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/Guarding-Stars-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/mu_jh4O7-KcAD",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Guarding Stars (2026) ภารกิจรัก พิทักษ์ซุปตาร์ ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 6.3,
+    "genres": [
+      "24HD.TODAY",
+      "พากย์ไทย",
+      "6.3⭐"
     ],
     "duration": "ภาพยนตร์",
     "trailerUrl": "",
@@ -4772,14 +4134,46 @@ window.movies = [
       "เต็มเรื่อง"
     ],
     "episodeUrls": {
-      "1": "https://player77hdfree.xyz/embed/LnTG6_kRv-faE"
+      "1": "https://player77hdfree.xyz/embed/mu_jh4O7-KcAD"
     },
     "languages": [
       "Thai (พากย์ไทย)"
     ],
-    "id": "24hdtoday-121405",
-    "postId": "121405",
-    "originalUrl": "https://www.24hd.today/ai-long-nhai-the-endless-love-2023/"
+    "id": "24hdtoday-137301",
+    "postId": "137301",
+    "originalUrl": "https://www.24hd.today/guarding-stars-2026"
+  },
+  {
+    "titleTh": "Never Surrender (2026) สู้ไม่ถอย",
+    "titleEn": "Never Surrender (2026) สู้ไม่ถอย",
+    "year": 2026,
+    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/Never-Surrender-2026.webp",
+    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/Never-Surrender-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/zSd4z5V-0k_HE",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Never Surrender (2026) สู้ไม่ถอย ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 6.1,
+    "genres": [
+      "24HD.TODAY",
+      "พากย์ไทย",
+      "6.1⭐"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.TODAY",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/zSd4z5V-0k_HE"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdtoday-137064",
+    "postId": "137064",
+    "originalUrl": "https://www.24hd.today/never-surrender-2026"
   },
   {
     "titleTh": "The Gospel Of Christmas (2026) ศรัทธาแห่งคริสต์มาส",
@@ -5167,69 +4561,36 @@ window.movies = [
     "originalUrl": "https://www.24-hda.com/unabomber/"
   },
   {
-    "titleTh": "อินเดีย Best of the Best (2026) ที่สุดของที่สุด",
-    "titleEn": "อินเดีย Best of the Best (2026) ที่สุดของที่สุด พากย์ไทย",
-    "year": 2026,
-    "poster": "https://myserieshd.com/wp-content/uploads/2026/10/%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AA%E0%B8%B8%E0%B8%94-11.webp",
-    "backdrop": "https://myserieshd.com/wp-content/uploads/2026/10/%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AA%E0%B8%B8%E0%B8%94-11.webp",
-    "videoUrl": "https://ok-hd.com/play/f83849cc88fcf028370a37cb5d801518",
+    "titleTh": "Der Tiger (2025) รถถังเจ้าพยัคฆ์",
+    "titleEn": "Der Tiger (2025) รถถังเจ้าพยัคฆ์",
+    "year": 2025,
+    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/Der-Tiger-2025.webp",
+    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/Der-Tiger-2025.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/CY-wU25U2_9m8",
     "sourceType": "embed",
-    "description": "ดูหนังอินเดีย Best of the Best (2026) ที่สุดของที่สุด พากย์ไทย สองสาวก้าวสู่ชีวิตมหาวิทยาลัยที่ UCLA และเข้าร่วมทีมเต้นบอลลีวูดฟิวชัน ก่อนต้องฝ่าฟันทั้งการซ้อมหนัก ความขัดแย้ง และการแข่งขันระดับประเทศ...",
-    "rating": 8.8,
+    "description": "ดูหนังออนไลน์ เรื่อง Der Tiger (2025) รถถังเจ้าพยัคฆ์ ปีที่ฉาย 2025 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 6.5,
     "genres": [
-      "ดูซีรี่ย์พากย์ไทย",
-      "ซีรีส์ใหม่ 2026",
+      "24HD.TODAY",
       "พากย์ไทย",
-      "ซีรีส์จีน",
-      "ซีรีส์จีน พากย์ไทย"
-    ],
-    "duration": "ภาพยนตร์เต็มเรื่อง",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "MYSERIESHD",
-    "episodes": [
-      "ตอนที่ 1"
-    ],
-    "episodeUrls": {
-      "1": "https://ok-hd.com/play/f83849cc88fcf028370a37cb5d801518"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "mshd-19283",
-    "postId": "19283",
-    "originalUrl": "https://myserieshd.com/best-of-the-best-2026/"
-  },
-  {
-    "titleTh": "Call My Agent The Movie (2026) เรียกผู้จัดการมาสิ เดอะ มูฟวี่",
-    "titleEn": "ฟรี Call My Agent The Movie (2026) เรียกผู้จัดการมาสิ เดอะ มูฟวี่",
-    "year": 2026,
-    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Call-My-Agent-The-Movie-2026-%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%81%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A1%E0%B8%B2%E0%B8%AA%E0%B8%B4-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88-187x269.png",
-    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Call-My-Agent-The-Movie-2026-%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%81%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A1%E0%B8%B2%E0%B8%AA%E0%B8%B4-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88-187x269.png",
-    "videoUrl": "https://main.24playerhd.com/index_th.php?id=3f2fab099618cf665c48cbcd&typew=W",
-    "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ ฟรี Call My Agent The Movie (2026) เรียกผู้จัดการมาสิ เดอะ มูฟวี่ (2026) พากย์ไทย เต็มเรื่อง HD",
-    "rating": 6.4,
-    "genres": [
-      "พากย์ไทย",
-      "หนังปี 2026"
+      "6.5⭐"
     ],
     "duration": "ภาพยนตร์",
-    "trailerUrl": "https://www.youtube.com/embed/01PX2jZNW5A",
+    "trailerUrl": "",
     "cast": [],
-    "source": "24HD",
+    "source": "24HD.TODAY",
     "episodes": [
       "เต็มเรื่อง"
     ],
     "episodeUrls": {
-      "1": "https://main.24playerhd.com/index_th.php?id=3f2fab099618cf665c48cbcd&typew=W"
+      "1": "https://player77hdfree.xyz/embed/CY-wU25U2_9m8"
     },
     "languages": [
       "Thai (พากย์ไทย)"
     ],
-    "id": "24hdx-40621",
-    "postId": "40621",
-    "originalUrl": "https://www.24-hda.com/call-my-agent-the-movie/"
+    "id": "24hdtoday-137628",
+    "postId": "137628",
+    "originalUrl": "https://www.24hd.today/der-tiger-2025"
   },
   {
     "titleTh": "Once (2007) หัวใจร้องว่ารักเธอ",
@@ -5264,6 +4625,38 @@ window.movies = [
     "originalUrl": "https://www.24hd.today/once-2007"
   },
   {
+    "titleTh": "Midnight Sun (2006) 24 ชม. ขอรักเธอทุกวัน",
+    "titleEn": "Midnight Sun (2006) 24 ชม. ขอรักเธอทุกวัน",
+    "year": 2006,
+    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/Midnight-Sun-2006.webp",
+    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/Midnight-Sun-2006.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/J_hy7dvy-p7i1",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Midnight Sun (2006) 24 ชม. ขอรักเธอทุกวัน ปีที่ฉาย 2006 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.1,
+    "genres": [
+      "24HD.TODAY",
+      "พากย์ไทย",
+      "7.1⭐"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.TODAY",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/J_hy7dvy-p7i1"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdtoday-137294",
+    "postId": "137294",
+    "originalUrl": "https://www.24hd.today/midnight-sun-2006"
+  },
+  {
     "titleTh": "Ultraman SAGA (2012) อุลตร้าแมนซาก้า",
     "titleEn": "Ultraman SAGA (2012) อุลตร้าแมนซาก้า",
     "year": 2012,
@@ -5296,22 +4689,22 @@ window.movies = [
     "originalUrl": "https://www.24hd.today/ultraman-saga-2012"
   },
   {
-    "titleTh": "Final Table (2026) สงครามนักปรุง",
-    "titleEn": "Final Table (2026) สงครามนักปรุงพากย์ไทย",
+    "titleTh": "My Loong (2026) คำสาปรักมังกร",
+    "titleEn": "My Loong (2026) คำสาปรักมังกร",
     "year": 2026,
-    "poster": "images/clean_posters/wow-110258.jpg",
-    "backdrop": "images/clean_posters/wow-110258.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/c021c4e45cbe21eebf7daf6021a4a100",
+    "poster": "images/clean_posters/wow-110062.jpg",
+    "backdrop": "images/clean_posters/wow-110062.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/41d897ba7b16aca242552577c58b1264",
     "sourceType": "embed",
-    "description": "ซีรี่ส์ Final Table สงครามนักปรุงพากย์ไทยพระเอกในตอนนี้นั้นกลับมาที่เกาหลีเพื่อเข้าร่วมการแข่งขันทำอาหารและกอบกู้ชื่อเสียงของร้าน",
+    "description": "ซีรี่ส์จีน My Loong (2026) คำสาปรักมังกร ชะตาชีวิตของนางเอกเปลี่ยนไปหลังถูกส่งไปสังเวยที่หุบเหวมังกรและบังเอิญปลดผนึกพระเอกเจ้ามังกร",
     "rating": 8.7,
     "genres": [
       "พากย์ไทย",
-      "ซีรีส์เกาหลี",
-      "ซีรีส์เกาหลี พากย์ไทย",
+      "ซีรีส์จีน",
+      "ซีรีส์จีน พากย์ไทย",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 10 ตอนจบ",
+    "duration": "ซีรีส์ 21 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -5325,82 +4718,66 @@ window.movies = [
       "ตอนที่ 7",
       "ตอนที่ 8",
       "ตอนที่ 9",
-      "ตอนที่ 10"
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16",
+      "ตอนที่ 17",
+      "ตอนที่ 18",
+      "ตอนที่ 19",
+      "ตอนที่ 20",
+      "ตอนที่ 21"
     ],
     "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/c021c4e45cbe21eebf7daf6021a4a100",
-      "2": "https://getplay-cdn.com/embed/cae43cf32c22373b8b096a725c6eb4e3",
-      "3": "https://getplay-cdn.com/embed/2bf4feb9ed46690f53cd499fa2a5bb3f",
-      "4": "https://getplay-cdn.com/embed/d5a1d8b8d80c2982bbfeefa15fa3361e",
-      "5": "https://getplay-cdn.com/embed/da5b5842d30f98aea9e826bd62edf5db",
-      "6": "https://getplay-cdn.com/embed/bce444b90b9fe34f98d9acf7336f87f4",
-      "7": "https://getplay-cdn.com/embed/8b8b780c1ca30fb4db7ffeb6bf64f68d",
-      "8": "https://getplay-cdn.com/embed/2ea1dd5a4d0983526c44e2fc3993d1b6",
-      "9": "https://getplay-cdn.com/embed/a24c8ca1500ee6381e61416ccb0fb508",
-      "10": "https://getplay-cdn.com/embed/94e07ed70726e4ce3f21564d6e975c23"
+      "1": "https://torbo007.com/embed/8b6d5e88921a5937569e7361e3e81c0e",
+      "2": "https://torbo007.com/embed/ee3b4ff24b6a0bcda1b28d436138b6fe",
+      "3": "https://torbo007.com/embed/3769edb154b817c962b4db36476ba29f",
+      "4": "https://torbo007.com/embed/7dc2e37cd0e6cd8093c3d2732027ec09",
+      "5": "https://torbo007.com/embed/4930162c470f9a5694998f14bb0c928e",
+      "6": "https://torbo007.com/embed/e42e669d645273543c519d50d6f778af",
+      "7": "https://torbo007.com/embed/9fc52f1c2e5ae6d1a6a6ecb9ae375469",
+      "8": "https://torbo007.com/embed/7c74c29f00acaa169eda62d622ea69aa",
+      "9": "https://torbo007.com/embed/7db0cf3302a82e693c93b68f0b705e05",
+      "10": "https://torbo007.com/embed/c40d6b3afc49e6ac589d41f753856ff7",
+      "11": "https://torbo007.com/embed/5c34f12cafcaf61af623b17e137dcc18",
+      "12": "https://torbo007.com/embed/63d0192bb331e817713f7404eadefa41",
+      "13": "https://torbo007.com/embed/5396e5de4aadaececaf3e4b87c9bc59c",
+      "14": "https://torbo007.com/embed/c270d45a8e9cff3b2266c74557dc4ebf",
+      "15": "https://torbo007.com/embed/149fb66234bc0db5181250415ca4bfd8",
+      "16": "https://torbo007.com/embed/a53f2ded9d066ccc9ab27bd4da754e2d",
+      "17": "https://torbo007.com/embed/18aeea0beeda79ea16eceacb43104d17",
+      "18": "https://torbo007.com/embed/5fdab6c4c91f2091cbfe3d1139c87ac0",
+      "19": "https://torbo007.com/embed/0d949fa753aba46996512902687a5b79",
+      "20": "https://torbo007.com/embed/3bbbb9f2b47294ba203fa96cd59f5be5",
+      "21": "https://torbo007.com/embed/935ae103dba0bae654db17c81c78d90b"
     },
     "languages": [
       "Thai (พากย์ไทย)"
     ],
-    "id": "wow-110258",
-    "postId": "110258",
-    "originalUrl": "https://wow-drama.com/final-table-2026/"
+    "id": "wow-110062",
+    "postId": "110062",
+    "originalUrl": "https://wow-drama.com/my-loong-2026/"
   },
   {
-    "titleTh": "คมดาบพลิกแผ่นดิน Sword & Silence (2026)",
-    "titleEn": "คมดาบพลิกแผ่นดิน Sword & Silence (2026)",
+    "titleTh": "Blossom in Darkness (2026) บุปผาในห้วงฝัน",
+    "titleEn": "Blossom in Darkness (2026) บุปผาในห้วงฝัน",
     "year": 2026,
-    "poster": "images/clean_posters/gs-135552.jpg",
-    "backdrop": "images/clean_posters/gs-135552.jpg",
-    "videoUrl": "https://torbo007.com/embed/af7c2d4bba6cf16ea63d63ac623edac0",
+    "poster": "images/clean_posters/wow-112461.jpg",
+    "backdrop": "images/clean_posters/wow-112461.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/9b925c7f2cb59f156eed86d142b71d7a",
     "sourceType": "embed",
-    "description": "เรื่องย่อ-Sword & Silence\r\n เมื่อเรื่องราวจากประวัติศาตรืที่เกิดขึ้นในช่วงปลายศตวรรษ์ช่วยที่ 7 อันวุ่นวาย ที่พร้อมเล่าถึงการสร้างสงครามอันดุเดือดของอาณาจักรโกกูรยอ/ชิลลา/แพ็กเจ และราชวงศ์ถัง ที่พร้อมปะทะกันในทุกช่วงเวลาเพียงเพราะความขัดแย้งมาจาก คิม บ็อบมิน เจ้าชายผู้แสนเย้นชาแต่กลับมีนิสัยมองการไกลที่แตกแยกจากผู้อื่น เมื่ออำนาจจากกำมือ คิมชุนชู กษัตริย์องค์ที่ 29 แห่งชิลลา ผู้ที่กำลังเตฺบดตมาจากท่ามกลางเรื่องราวการสร้างสงครามการเมืองจากบิดา และการเรียนรู้ทั้งด้านการเมืองและกองทหารของบิดาผู้เป็นแม่ทัพ คิมยูชิน เพื่อก้าวขึ้นแท่นแห่งการเป็นกษัตริย์องค์คนใหม่องค์ที่ 30 แห่งชิลลา ซึ่งต่างเป็นสานสัมพันธ์จากอาณาจักรธุระกิจแห่งนี้ สุดเรื่องราวและจุดจบบทสุดท้ายแล้วซีรี่ย์เรื่องนี้จะจบลงอย่างไรเราไปรับชมกันต่อได้ที่ดูซีรี่ย์ออนไลน์G4 พร้อมเสิร์ฟความสุกให้แฟนๆได้รับชมกันแล้วในวันที่ 14 พฤศจิกายน 2026 นี้ Ka>>\r\n",
-    "rating": 8.8,
-    "genres": [
-      "ดูซีรี่ย์พากย์ไทย",
-      "ซีรีส์แนะนำใหม่ 2026",
-      "พากย์ไทย"
-    ],
-    "duration": "ซีรีส์ 4 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "GOSERIES4K",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4"
-    ],
-    "episodeUrls": {
-      "1": "https://torbo007.com/embed/af7c2d4bba6cf16ea63d63ac623edac0",
-      "2": "https://torbo007.com/embed/e896bca7d047e13c060d1af465867434",
-      "3": "https://torbo007.com/embed/1a9dde23e399609cd21d92bd39792329",
-      "4": "https://torbo007.com/embed/6f24063b7b7dcc9ac17e9ac273d0faf3"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "gs-135552",
-    "postId": "135552",
-    "originalUrl": "https://goseries4k.com/sword-silence/"
-  },
-  {
-    "titleTh": "Oh! My Guard นี่ฉันอยากมีบอดี้การ์ดหรือนี่",
-    "titleEn": "Oh! My Guard นี่ฉันอยากมีบอดี้การ์ดหรือนี่",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-110251.jpg",
-    "backdrop": "images/clean_posters/wow-110251.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/232a57920de6c50936d40944cf8e29f5",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ Oh! My Guard นี่ฉันอยากมีบอดี้การ์ดหรือนี่ นางเอกเข้าไปอยู่ในนิยายเรื่องโปรดของตัวเองและพยายามที่จะปกป้องพระเอกจากปัญหาต่างๆ",
+    "description": "ซีรี่ส์ Blossom in Darkness (2026) บุปผาในห้วงฝัน พระเอกในตอนนี้นั้นถูกผู้คนเข้าใจผิดว่าเป็นจอมมารที่ชั่วร้ายและถูกปิดผนึกเอาไว้ต้องติดตาม",
     "rating": 8.7,
     "genres": [
       "พากย์ไทย",
-      "ซีรีส์เกาหลี",
-      "ซีรีส์เกาหลี พากย์ไทย",
+      "ซีรีส์จีน",
+      "ซีรีส์จีน พากย์ไทย",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 4 ตอนจบ",
+    "duration": "ซีรีส์ 22 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -5408,20 +4785,331 @@ window.movies = [
       "ตอนที่ 1",
       "ตอนที่ 2",
       "ตอนที่ 3",
-      "ตอนที่ 4"
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16",
+      "ตอนที่ 17",
+      "ตอนที่ 18",
+      "ตอนที่ 19",
+      "ตอนที่ 20",
+      "ตอนที่ 21",
+      "ตอนที่ 22"
     ],
     "episodeUrls": {
-      "1": "https://torbo007.com/embed/cae430cce39b69d96e7b8a962c59907c",
-      "2": "https://torbo007.com/embed/9724b729f7a9a4ee55850c4fedb66e64",
-      "3": "https://torbo007.com/embed/4af9b2fbff3241de02f36d2186ffb861",
-      "4": "https://torbo007.com/embed/c26aab8a15b5a4ced6770d80e0cc2316"
+      "1": "https://getplay-cdn.com/embed/9b925c7f2cb59f156eed86d142b71d7a",
+      "2": "https://getplay-cdn.com/embed/8eb7fb4057f30189602850db3318f097",
+      "3": "https://getplay-cdn.com/embed/8d78246b4c5ce5c71c023a1f82bbb432",
+      "4": "https://getplay-cdn.com/embed/87331c711381865a500706a2c7d7a9a7",
+      "5": "https://getplay-cdn.com/embed/69a839053cc07d9842048e58170b34b4",
+      "6": "https://getplay-cdn.com/embed/ed880e016b40eed2b5b7f1cfb2d08c6c",
+      "7": "https://getplay-cdn.com/embed/f65d89d5a19b4ce592d50c5ce05343bd",
+      "8": "https://getplay-cdn.com/embed/162ef2da616ceeb76c1b2d5fe51276c4",
+      "9": "https://getplay-cdn.com/embed/30951578bb6128ffa29c4c209ef48849",
+      "10": "https://getplay-cdn.com/embed/53f82427e0c76e83bbd257dc0a9959a3",
+      "11": "https://getplay-cdn.com/embed/0336347771fbb5c60f6b96b1330f5952",
+      "12": "https://getplay-cdn.com/embed/01e292240580f503c297e071d2acbba0",
+      "13": "https://getplay-cdn.com/embed/c80e249939e7dac2f2c80607429092b6",
+      "14": "https://getplay-cdn.com/embed/f7cfa67bf3cdeb8036d24c7f0013e1d4",
+      "15": "https://getplay-cdn.com/embed/c96957643b0e5cf8f28d5d9c3d80c6f4",
+      "16": "https://getplay-cdn.com/embed/841dfde28005d616f2007dd0af5c9860",
+      "17": "https://getplay-cdn.com/embed/a4ff5d6b37ea0039f6ec924cf9cc94a7",
+      "18": "https://getplay-cdn.com/embed/d07993f6c5998f819a5448405f048346",
+      "19": "https://getplay-cdn.com/embed/c9f14e3531f68955af2c72c4491ce324",
+      "20": "https://getplay-cdn.com/embed/d49339a86ca545ced6eda7cb056162fe",
+      "21": "https://getplay-cdn.com/media/files/9b4df2aed060",
+      "22": "https://getplay-cdn.com/embed/1924fb95e6685cbfc369ce2751af31f2"
     },
     "languages": [
       "Thai (พากย์ไทย)"
     ],
-    "id": "wow-110251",
-    "postId": "110251",
-    "originalUrl": "https://wow-drama.com/oh-my-guard-2026/"
+    "id": "wow-112461",
+    "postId": "112461",
+    "originalUrl": "https://wow-drama.com/blossom-in-darkness-2026/"
+  },
+  {
+    "titleTh": "Her Willing Subject สยบรักใต้ชายกระโปรง (2026)",
+    "titleEn": "Her Willing Subject สยบรักใต้ชายกระโปรง (2026)",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-112790.jpg",
+    "backdrop": "images/clean_posters/wow-112790.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/e94f2a39e66a22f336b92a101dd6bcea",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ Her Willing Subject สยบรักใต้ชายกระโปรงพากย์ไทยนางเอกและพระเอกไม่สามารถอยู่ร่วมกันได้จนกระทั่งเกิดเหตุการณ์ไม่คาดฝันขึ้น",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ซีรีส์จีน",
+      "ซีรีส์จีน พากย์ไทย",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 20 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16",
+      "ตอนที่ 17",
+      "ตอนที่ 18",
+      "ตอนที่ 19",
+      "ตอนที่ 20"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/e94f2a39e66a22f336b92a101dd6bcea",
+      "2": "https://getplay-cdn.com/embed/d51fae8f36bcddb7a8147e365a1ea3f8",
+      "3": "https://getplay-cdn.com/embed/9071086657ce2f78207bfb0c906802d5",
+      "4": "https://getplay-cdn.com/embed/8311c0fbcec1c49a807429854e1e5aa4",
+      "5": "https://getplay-cdn.com/embed/700d014c0f5a322128f3bb5e49d8b4ff",
+      "6": "https://getplay-cdn.com/embed/ce6572a85624541b15ca57fc63e266be",
+      "7": "https://getplay-cdn.com/embed/6fe2ee2365f8ad67a4880fe04f550bc0",
+      "8": "https://getplay-cdn.com/embed/b1dc68663ebeefe5666e04d9ea68711f",
+      "9": "https://getplay-cdn.com/embed/14dcb950829b3990a7159308edc983ed",
+      "10": "https://getplay-cdn.com/embed/920c537200bfe63d86a0688094904596",
+      "11": "https://getplay-cdn.com/embed/f52e590eabf815ec70f099747695b55a",
+      "12": "https://getplay-cdn.com/embed/691664e963d21c853ad02137451e4f48",
+      "13": "https://getplay-cdn.com/embed/7a46bacedf99a5baebedbcea93870d2b",
+      "14": "https://getplay-cdn.com/embed/8bb4a326d31fe6651caaee59bd674c8b",
+      "15": "https://getplay-cdn.com/embed/3a7aa0dc7fd5cd13fd55526d0721579c",
+      "16": "https://getplay-cdn.com/embed/b713a868b7cee20055f604feac5e6521",
+      "17": "https://getplay-cdn.com/embed/014f9a0178c838669552b8ffa51cc42e",
+      "18": "https://getplay-cdn.com/embed/84b2175cfae8041a9345a18796cd14b9",
+      "19": "https://getplay-cdn.com/embed/286899b3e178c1ccf5fabea0092f762c",
+      "20": "https://getplay-cdn.com/embed/55bd8e5a4486b91f178d7e0cf16b03e8"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-112790",
+    "postId": "112790",
+    "originalUrl": "https://wow-drama.com/her-willing-subject-2026/"
+  },
+  {
+    "titleTh": "Kidnap Game (2026) เกมลักพาตัว",
+    "titleEn": "Kidnap Game (2026) เกมลักพาตัว",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-108505.jpg",
+    "backdrop": "images/clean_posters/wow-108505.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/51b25d9c90f74092144e386acf7be5eb",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ญี่ปุ่น Kidnap Game (2026) เกมลักพาตัว คน 7 คนจาก 7 เมืองทั่วเอเชียต้องตกเป็นผู้เล่นในเกมลักพาตัวที่ไม่มีใครรู้จุดประสงค์พวกเขา",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ซีรีส์ญี่ปุ่น",
+      "ซีรีส์ญี่ปุ่น พากย์ไทย",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 8 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/51b25d9c90f74092144e386acf7be5eb",
+      "2": "https://getplay-cdn.com/embed/d05c0ba73fc19a89e5c6c2b2e03cb546",
+      "3": "https://getplay-cdn.com/embed/183861cbd8818b95733430211a13add2",
+      "4": "https://getplay-cdn.com/embed/5d9b9e62e6d508e88aff3a1ee03229b6",
+      "5": "https://getplay-cdn.com/embed/7ee58e8dbe2981b70e65a51aae7e1ca5",
+      "6": "https://getplay-cdn.com/embed/a2711ce002649741c4657d9b1750dfb7",
+      "7": "https://getplay-cdn.com/embed/015b662d5ae8efdc674d81357be1384e",
+      "8": "https://getplay-cdn.com/embed/9c5c99e3d04ef46cd422ea470615a803"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-108505",
+    "postId": "108505",
+    "originalUrl": "https://wow-drama.com/kidnap-game-2026/"
+  },
+  {
+    "titleTh": "Tigers Sniff the Rose (2026) พยัคฆ์หลงกลิ่นบุปผา จบ",
+    "titleEn": "Tigers Sniff the Rose (2026) พยัคฆ์หลงกลิ่นบุปผา จบ",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-110135.jpg",
+    "backdrop": "images/clean_posters/wow-110135.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/5a53912efe2ce00179e10a65a1be204f",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์จีน Tigers Sniff the Rose (2026) พยัคฆ์หลงกลิ่นบุปผา นางเอกในตอนนี้นั้นกำลังใช้พระเอกเป็นหมากในเกมของตัวเองด้วยเหตุผลบางอย่าง",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ซีรีส์จีน",
+      "ซีรีส์จีน พากย์ไทย",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 40 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16",
+      "ตอนที่ 17",
+      "ตอนที่ 18",
+      "ตอนที่ 19",
+      "ตอนที่ 20",
+      "ตอนที่ 21",
+      "ตอนที่ 22",
+      "ตอนที่ 23",
+      "ตอนที่ 24",
+      "ตอนที่ 25",
+      "ตอนที่ 26",
+      "ตอนที่ 27",
+      "ตอนที่ 28",
+      "ตอนที่ 29",
+      "ตอนที่ 30",
+      "ตอนที่ 31",
+      "ตอนที่ 32",
+      "ตอนที่ 33",
+      "ตอนที่ 34",
+      "ตอนที่ 35",
+      "ตอนที่ 36",
+      "ตอนที่ 37",
+      "ตอนที่ 38",
+      "ตอนที่ 39",
+      "ตอนที่ 40"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/15ea91428f20e7dc36a853a2e9053aa3",
+      "2": "https://torbo007.com/embed/8f2f138d8a2ecfc4d62b72c0aeb8b1b2",
+      "3": "https://torbo007.com/embed/3da3b10c7c1c74798934191016409520",
+      "4": "https://torbo007.com/embed/796ecad1c5df8cd21bab1bc77e4d7b38",
+      "5": "https://torbo007.com/embed/68ee90ba6127bef77c2857aeaee1f048",
+      "6": "https://torbo007.com/embed/3fbe714b2ec4f81c8a151fcd7d4f9ab1",
+      "7": "https://torbo007.com/embed/82d9479dd3c14f322e364c938bf793ea",
+      "8": "https://torbo007.com/embed/f30459e3f4b8554250f61817e4692753",
+      "9": "https://torbo007.com/embed/c1dcbec466b6e91f12bc0e3a756902df",
+      "10": "https://torbo007.com/embed/5c736507117e733033d1dbc99b51dcfe",
+      "11": "https://torbo007.com/embed/b6aedb6cd715a2fcb3ecc29ca71b41fd",
+      "12": "https://torbo007.com/embed/529927a66086dba222e2e0b88e55cad4",
+      "13": "https://torbo007.com/embed/a1474b57e32cc68e945e8d6d52df779e",
+      "14": "https://torbo007.com/embed/9ad37b5e8f2ccfd4d7a2e5d9bcce7a46",
+      "15": "https://torbo007.com/embed/574fdf94fcccd4b84c6d234f39594df0",
+      "16": "https://torbo007.com/embed/51fccdd2ade27b135c6ccad03a8e6116",
+      "17": "https://torbo007.com/embed/0b963c925ea6748c4e0f425a6fe561eb",
+      "18": "https://torbo007.com/embed/20d1c39723d6a3af66637fe604a03933",
+      "19": "https://torbo007.com/embed/d614a7f736880c2157c37c749c7a7f5f",
+      "20": "https://torbo007.com/embed/b2955e98e1dc0ac1c6eae7891fe50e4a",
+      "21": "https://torbo007.com/embed/53d99b0c124c4ead9c2482206efa6843",
+      "22": "https://torbo007.com/embed/54d19a78c599cecb97076778a5ad499f",
+      "23": "https://torbo007.com/embed/c6b6af063ff8c56e352e9bfe7067da6c",
+      "24": "https://torbo007.com/embed/36728de67df174855c221957edcdf65a",
+      "25": "https://torbo007.com/embed/c8136f8689ffc6dc6a57ba8560904b93",
+      "26": "https://torbo007.com/embed/a97ea15dde9d371fb606c799fd91ae18",
+      "27": "https://torbo007.com/embed/60b658badf601530147e64a9aa035bff",
+      "28": "https://torbo007.com/embed/847308867a04d87cbf2e3cd0fdaa97a4",
+      "29": "https://torbo007.com/embed/1cb1b8891f6bc05ce72588cb4bf4cf9a",
+      "30": "https://torbo007.com/embed/de89f6852f8af7e1f8379479ac3c70e0",
+      "31": "https://torbo007.com/embed/25b000678d35ddc48c1a2426b81107c6",
+      "32": "https://torbo007.com/embed/9659c1047ab7e710f455f13b229cfd12",
+      "33": "https://torbo007.com/embed/97b583043311ca7acaf5b9fa54a692de",
+      "34": "https://torbo007.com/embed/45acc3c1de1ef444aca05cbac20c6966",
+      "35": "https://torbo007.com/embed/8ec881808be7a795197ce2bc63935966",
+      "36": "https://torbo007.com/embed/e31caff4556a26c1dd2d9efb86e70cdd",
+      "37": "https://torbo007.com/embed/11ed85e17380527984246a1b5fd08873",
+      "38": "https://torbo007.com/embed/1a2a11c2460a67eec60473b81941863c",
+      "39": "https://torbo007.com/embed/704afca77ac03bf1386db0e9a6e86fb9",
+      "40": "https://torbo007.com/embed/2e5893566252ec9b580fb7f7bd4b76a4"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-110135",
+    "postId": "110135",
+    "originalUrl": "https://wow-drama.com/tigers-sniff-the-rose-2026/"
+  },
+  {
+    "titleTh": "Merry Berry Love (2026)",
+    "titleEn": "Merry Berry Love (2026)พากย์ไทยEP.1-10",
+    "year": 2026,
+    "poster": "images/clean_posters/gs-133399.jpg",
+    "backdrop": "images/clean_posters/gs-133399.jpg",
+    "videoUrl": "https://torbo007.com/embed/8d5002ae882a379006e8082423be9277",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ- Merry Berry Love เมื่อชีวิตที่เคยรุ่งโรจน์ต้องพังทลายลงในชั่วข้ามคืน อี ยูบิน นักออกแบบพื้นที่ชาวเกาหลีใต้ผู้ประสบความสำเร็จ จึงตัดสินใจเดินทางมายังเกาะเล็ก ๆ อันเงียบสงบในประเทศญี่ปุ่น เพื่อเริ่มต้นชีวิตใหม่อีกครั้ง ที่นั่นเขาได้พบกับ ชิราฮามะ คาริน หญิงสาวชาวสวนผู้มุ่งมั่นทุ่มเทให้กับการปลูกสตรอว์เบอร์รี แม้ต้องเผชิญกับโรคลึกลับที่คอยบั่นทอนร่างกายของเธอ แต่แล้วเมื่อทั้งสองได้มาพบกันอีกครั้ง ต่างได้เติบโตมาจากวัฒนธรรมกลับเริ่มต้นมาด้วยความเข้าใจผิด จนนำไปสู่เรื่องราวความวุ่นวาย ที่ค่อยๆเปลี่ยนเป็นความสัมพันธ์ของทั้งคู่ จากคนแปลกหน้าที่เจอหน้ากับทีไรต้องมีเรื่องทุกครั้ง ทุกอย่างจึงเริ่มกลายเป็นคนที่เริ่มเข้ามาเติมเต็มความรู้สึกของกันและในท่ามกลางบรรยากาศอันแสนงดงาม พร้อมการปลูกไร่สตรอว์เบอร์รีที่เต็มไปด้วยความหวัง แต่ในขณะเดียวกันนั้น ปาร์ค คูนัม ชายหนุ่มที่เดินทางเข้ามาอยู่ในเกาะแห่งนี้ ต่างได้ตัดสินใจเข้ามาปักหลักอยู่ต่อพร้อมตกหลุมรัก มิซึโนะ มาริ สามผู้รักในการอ่านไพ่ทาโรต์ที่สามารถ เข้ามาทำนายเรื่องราวความรักแก่ผู้อื่นได้ แต่กลับไม่สามารถคาดเดาเส้นทางชีวิตของจนเองได้อย่างเช่นเดี่ยวกัน แต่สุดท้ายแล้วชีวิตของคนทั้งสองจะลงเองกันอย่างไปเราไปรับชมกันต่อได้ที่ ดูซีรี่ย์G4",
+    "rating": 8.8,
+    "genres": [
+      "ดูซีรี่ย์พากย์ไทย",
+      "ซีรีส์แนะนำใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 8 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "GOSERIES4K",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/8837bb6ead41eab1173aa817057f189a",
+      "2": "https://torbo007.com/embed/d5b3ef7bdec36faaf5cb4bda3db22bb7",
+      "3": "https://torbo007.com/embed/6673ee9ddcc467527c30fc8cd9b1cbe3",
+      "4": "https://torbo007.com/embed/eb3a3bc07c3cbfb97f4286e88c115c56",
+      "5": "https://torbo007.com/embed/5b752d735d49b79eff1096f705266033",
+      "6": "https://torbo007.com/embed/f2238ab3a14f286678311cb49ff737b7",
+      "7": "https://torbo007.com/embed/6fa6678e05b3c071405a2ba07380e185",
+      "8": "https://torbo007.com/embed/d8842a6ce7c0bcff4932ae89755e6652"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "gs-133399",
+    "postId": "133399",
+    "originalUrl": "https://goseries4k.com/merry-berry-love/"
   },
   {
     "titleTh": "The Vanishing Beauty (2026) เมื่อชีวิตไม่เหมือนฝัน",
@@ -5511,92 +5199,19 @@ window.movies = [
     "originalUrl": "https://wow-drama.com/the-vanishing-beauty-2026/"
   },
   {
-    "titleTh": "My Loong (2026) คำสาปรักมังกร",
-    "titleEn": "My Loong (2026) คำสาปรักมังกร",
+    "titleTh": "Love in Disguise (2026) รักต้องสงสัย",
+    "titleEn": "Love in Disguise (2026) รักต้องสงสัย",
     "year": 2026,
-    "poster": "images/clean_posters/wow-110062.jpg",
-    "backdrop": "images/clean_posters/wow-110062.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/41d897ba7b16aca242552577c58b1264",
+    "poster": "images/clean_posters/wow-109915.jpg",
+    "backdrop": "images/clean_posters/wow-109915.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/39be734ff8584a5ba00bcf81bde06b4f",
     "sourceType": "embed",
-    "description": "ซีรี่ส์จีน My Loong (2026) คำสาปรักมังกร ชะตาชีวิตของนางเอกเปลี่ยนไปหลังถูกส่งไปสังเวยที่หุบเหวมังกรและบังเอิญปลดผนึกพระเอกเจ้ามังกร",
+    "description": "ซีรี่ส์ Love in Disguise รักต้องสงสัยพากย์ไทยนางเอกตอนนี้ได้สอบสวนเกี่ยวกับคดีการตายของเลขาพระเอกโดยมีพระเอกเป็นผู้ต้องสงสัย",
     "rating": 8.7,
     "genres": [
       "พากย์ไทย",
-      "ซีรีส์จีน",
-      "ซีรีส์จีน พากย์ไทย",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 21 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9",
-      "ตอนที่ 10",
-      "ตอนที่ 11",
-      "ตอนที่ 12",
-      "ตอนที่ 13",
-      "ตอนที่ 14",
-      "ตอนที่ 15",
-      "ตอนที่ 16",
-      "ตอนที่ 17",
-      "ตอนที่ 18",
-      "ตอนที่ 19",
-      "ตอนที่ 20",
-      "ตอนที่ 21"
-    ],
-    "episodeUrls": {
-      "1": "https://torbo007.com/embed/8b6d5e88921a5937569e7361e3e81c0e",
-      "2": "https://torbo007.com/embed/ee3b4ff24b6a0bcda1b28d436138b6fe",
-      "3": "https://torbo007.com/embed/3769edb154b817c962b4db36476ba29f",
-      "4": "https://torbo007.com/embed/7dc2e37cd0e6cd8093c3d2732027ec09",
-      "5": "https://torbo007.com/embed/4930162c470f9a5694998f14bb0c928e",
-      "6": "https://torbo007.com/embed/e42e669d645273543c519d50d6f778af",
-      "7": "https://torbo007.com/embed/9fc52f1c2e5ae6d1a6a6ecb9ae375469",
-      "8": "https://torbo007.com/embed/7c74c29f00acaa169eda62d622ea69aa",
-      "9": "https://torbo007.com/embed/7db0cf3302a82e693c93b68f0b705e05",
-      "10": "https://torbo007.com/embed/c40d6b3afc49e6ac589d41f753856ff7",
-      "11": "https://torbo007.com/embed/5c34f12cafcaf61af623b17e137dcc18",
-      "12": "https://torbo007.com/embed/63d0192bb331e817713f7404eadefa41",
-      "13": "https://torbo007.com/embed/5396e5de4aadaececaf3e4b87c9bc59c",
-      "14": "https://torbo007.com/embed/c270d45a8e9cff3b2266c74557dc4ebf",
-      "15": "https://torbo007.com/embed/149fb66234bc0db5181250415ca4bfd8",
-      "16": "https://torbo007.com/embed/a53f2ded9d066ccc9ab27bd4da754e2d",
-      "17": "https://torbo007.com/embed/18aeea0beeda79ea16eceacb43104d17",
-      "18": "https://torbo007.com/embed/5fdab6c4c91f2091cbfe3d1139c87ac0",
-      "19": "https://torbo007.com/embed/0d949fa753aba46996512902687a5b79",
-      "20": "https://torbo007.com/embed/3bbbb9f2b47294ba203fa96cd59f5be5",
-      "21": "https://torbo007.com/embed/935ae103dba0bae654db17c81c78d90b"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-110062",
-    "postId": "110062",
-    "originalUrl": "https://wow-drama.com/my-loong-2026/"
-  },
-  {
-    "titleTh": "You Are My Fateful Love เธอคือรักแท้ที่รอคอย",
-    "titleEn": "You Are My Fateful Love เธอคือรักแท้ที่รอคอย",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-93507.jpg",
-    "backdrop": "images/clean_posters/wow-93507.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/12ffd0e53009fa20ae4c108196f43f35",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ You Are My Fateful Love เธอคือรักแท้ที่รอคอย พระเอกตอนนี้ได้เข้ามาในชีวิตของนางเอกช่วงเวลาที่นางเอกนั้นเจอกับความลำบากพอดี",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ซีรีส์จีน",
-      "ซีรีส์จีน พากย์ไทย",
+      "ซีรีส์เกาหลี",
+      "ซีรีส์เกาหลี พากย์ไทย",
       "ซีรีส์ใหม่ 2026"
     ],
     "duration": "ซีรีส์ 12 ตอนจบ",
@@ -5618,197 +5233,6 @@ window.movies = [
       "ตอนที่ 12"
     ],
     "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/12ffd0e53009fa20ae4c108196f43f35",
-      "2": "https://getplay-cdn.com/embed/75a2ccc0494322acf192e58e7409fa35",
-      "3": "https://getplay-cdn.com/embed/25a423a61849cdc6c861901bb9a5c4b8",
-      "4": "https://getplay-cdn.com/embed/a3a49848400c4622aaaafb506068cd4d",
-      "5": "https://getplay-cdn.com/embed/5615ee1212b1ae6c95c32c03e368f580",
-      "6": "https://getplay-cdn.com/embed/bd8d0bff70f20ea0e066e49222cfc368",
-      "7": "https://getplay-cdn.com/embed/96ad383bc71a4de8a4cdfd8c7f863427",
-      "8": "https://getplay-cdn.com/embed/36da8cc6bb90ee09c96f5b593713a5f2",
-      "9": "https://getplay-cdn.com/embed/3c6c28890452844dc908c5a665276aa9",
-      "10": "https://getplay-cdn.com/embed/c8bed17c321510c23574e2aa1aa47f72",
-      "11": "https://getplay-cdn.com/embed/38081567eec1c232c305a859d2661663",
-      "12": "https://getplay-cdn.com/embed/e0e838ba687dea591afc4d32d4ea8c89"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-93507",
-    "postId": "93507",
-    "originalUrl": "https://wow-drama.com/you-are-my-fateful-love-2026/"
-  },
-  {
-    "titleTh": "The Perfect Lie (2026) รักซ่อนลวง",
-    "titleEn": "The Perfect Lie (2026) รักซ่อนลวงพากย์ไทย",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-110770.jpg",
-    "backdrop": "images/clean_posters/wow-110770.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/82799988f1be213ff49da2e0a86dcd49",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ The Perfect Lie รักซ่อนลวงพากย์ไทยพระเอกตอนนี้ระแวงนางเอกไม่เหมือนแรกเจอเพราะว่าทั้งคู่นั้นดันมีความทรงจำที่ไม่เหมือนกัน",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ซีรีส์เกาหลี",
-      "ซีรีส์เกาหลี พากย์ไทย",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 8 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/82799988f1be213ff49da2e0a86dcd49",
-      "2": "https://getplay-cdn.com/embed/a23235a4149abb941d63ba0e3b156cca",
-      "3": "https://getplay-cdn.com/embed/dd09c50792a4515503f3634e8fa11ed9",
-      "4": "https://getplay-cdn.com/embed/194cf6c40db9fa44c575fa0905e6eaa8",
-      "5": "https://getplay-cdn.com/embed/ff907bc35c46f11cd814b719fc198d0b",
-      "6": "https://getplay-cdn.com/embed/43f5652657472185c5f3706107edba2e",
-      "7": "https://getplay-cdn.com/embed/33f28e0d263c6db055e2eb45201b804b",
-      "8": "https://getplay-cdn.com/embed/49d2c148ec7f242a2f582724c5a8ee80"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-110770",
-    "postId": "110770",
-    "originalUrl": "https://wow-drama.com/the-perfect-lie-2026/"
-  },
-  {
-    "titleTh": "The Blue Road (2026) ถนนสายสีน้ำเงิน",
-    "titleEn": "The Blue Road (2026) ถนนสายสีน้ำเงิน",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-112901.jpg",
-    "backdrop": "images/clean_posters/wow-112901.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/0d4dad65b51ae0ea13c0216fc4aca35b",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ The Blue Road ถนนสายสีน้ำเงินพากย์ไทยพระเอกต้องรีบดำเนินการเร่งด่วนในการสืบสวนเกี่ยวกับเหตุการณ์ฆาตกรรมที่ได้เกิดขึ้น",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ซีรีส์เกาหลี",
-      "ซีรีส์เกาหลี พากย์ไทย",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 8 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/0d4dad65b51ae0ea13c0216fc4aca35b",
-      "2": "https://getplay-cdn.com/embed/2ceab78354cead21df52a751f10d5bb1",
-      "3": "https://getplay-cdn.com/embed/61598aa6184c683900340bf64369d3db",
-      "4": "https://getplay-cdn.com/embed/76fa8be9acf751c5f71908a066b4346a",
-      "5": "https://getplay-cdn.com/embed/c49aaf01a3720a3fed54b5297772fe1c",
-      "6": "https://getplay-cdn.com/embed/a740d3b6e0d2bc2d94d606db45e72153",
-      "7": "https://getplay-cdn.com/embed/49cdd36f5d5b8467667724495d977169",
-      "8": "https://getplay-cdn.com/embed/bfeefae3914c2d1084dd2049faea44f7"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-112901",
-    "postId": "112901",
-    "originalUrl": "https://wow-drama.com/the-blue-road-2026/"
-  },
-  {
-    "titleTh": "Merry Berry Love (2026)",
-    "titleEn": "Merry Berry Love (2026)พากย์ไทยEP.1-10",
-    "year": 2026,
-    "poster": "images/clean_posters/gs-133399.jpg",
-    "backdrop": "images/clean_posters/gs-133399.jpg",
-    "videoUrl": "https://torbo007.com/embed/8d5002ae882a379006e8082423be9277",
-    "sourceType": "embed",
-    "description": "เรื่องย่อ- Merry Berry Love เมื่อชีวิตที่เคยรุ่งโรจน์ต้องพังทลายลงในชั่วข้ามคืน อี ยูบิน นักออกแบบพื้นที่ชาวเกาหลีใต้ผู้ประสบความสำเร็จ จึงตัดสินใจเดินทางมายังเกาะเล็ก ๆ อันเงียบสงบในประเทศญี่ปุ่น เพื่อเริ่มต้นชีวิตใหม่อีกครั้ง ที่นั่นเขาได้พบกับ ชิราฮามะ คาริน หญิงสาวชาวสวนผู้มุ่งมั่นทุ่มเทให้กับการปลูกสตรอว์เบอร์รี แม้ต้องเผชิญกับโรคลึกลับที่คอยบั่นทอนร่างกายของเธอ แต่แล้วเมื่อทั้งสองได้มาพบกันอีกครั้ง ต่างได้เติบโตมาจากวัฒนธรรมกลับเริ่มต้นมาด้วยความเข้าใจผิด จนนำไปสู่เรื่องราวความวุ่นวาย ที่ค่อยๆเปลี่ยนเป็นความสัมพันธ์ของทั้งคู่ จากคนแปลกหน้าที่เจอหน้ากับทีไรต้องมีเรื่องทุกครั้ง ทุกอย่างจึงเริ่มกลายเป็นคนที่เริ่มเข้ามาเติมเต็มความรู้สึกของกันและในท่ามกลางบรรยากาศอันแสนงดงาม พร้อมการปลูกไร่สตรอว์เบอร์รีที่เต็มไปด้วยความหวัง แต่ในขณะเดียวกันนั้น ปาร์ค คูนัม ชายหนุ่มที่เดินทางเข้ามาอยู่ในเกาะแห่งนี้ ต่างได้ตัดสินใจเข้ามาปักหลักอยู่ต่อพร้อมตกหลุมรัก มิซึโนะ มาริ สามผู้รักในการอ่านไพ่ทาโรต์ที่สามารถ เข้ามาทำนายเรื่องราวความรักแก่ผู้อื่นได้ แต่กลับไม่สามารถคาดเดาเส้นทางชีวิตของจนเองได้อย่างเช่นเดี่ยวกัน แต่สุดท้ายแล้วชีวิตของคนทั้งสองจะลงเองกันอย่างไปเราไปรับชมกันต่อได้ที่ ดูซีรี่ย์G4",
-    "rating": 8.8,
-    "genres": [
-      "ดูซีรี่ย์พากย์ไทย",
-      "ซีรีส์แนะนำใหม่ 2026",
-      "พากย์ไทย"
-    ],
-    "duration": "ซีรีส์ 7 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "GOSERIES4K",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7"
-    ],
-    "episodeUrls": {
-      "1": "https://torbo007.com/embed/8837bb6ead41eab1173aa817057f189a",
-      "2": "https://torbo007.com/embed/d5b3ef7bdec36faaf5cb4bda3db22bb7",
-      "3": "https://torbo007.com/embed/6673ee9ddcc467527c30fc8cd9b1cbe3",
-      "4": "https://torbo007.com/embed/eb3a3bc07c3cbfb97f4286e88c115c56",
-      "5": "https://torbo007.com/embed/5b752d735d49b79eff1096f705266033",
-      "6": "https://torbo007.com/embed/f2238ab3a14f286678311cb49ff737b7",
-      "7": "https://torbo007.com/embed/6fa6678e05b3c071405a2ba07380e185"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "gs-133399",
-    "postId": "133399",
-    "originalUrl": "https://goseries4k.com/merry-berry-love/"
-  },
-  {
-    "titleTh": "Love in Disguise (2026) รักต้องสงสัย",
-    "titleEn": "Love in Disguise (2026) รักต้องสงสัย",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-109915.jpg",
-    "backdrop": "images/clean_posters/wow-109915.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/39be734ff8584a5ba00bcf81bde06b4f",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ Love in Disguise รักต้องสงสัยพากย์ไทยนางเอกตอนนี้ได้สอบสวนเกี่ยวกับคดีการตายของเลขาพระเอกโดยมีพระเอกเป็นผู้ต้องสงสัย",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ซีรีส์เกาหลี",
-      "ซีรีส์เกาหลี พากย์ไทย",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 10 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9",
-      "ตอนที่ 10"
-    ],
-    "episodeUrls": {
       "1": "https://getplay-cdn.com/embed/39be734ff8584a5ba00bcf81bde06b4f",
       "2": "https://getplay-cdn.com/embed/a884035e90d4ef57992efb12abbe83c5",
       "3": "https://getplay-cdn.com/embed/0999978df655be9a50c2f34ab89d05ef",
@@ -5818,7 +5242,9 @@ window.movies = [
       "7": "https://getplay-cdn.com/embed/435d49800d17545c80069adbbaaba284",
       "8": "https://getplay-cdn.com/embed/0fc99a48ef5ea95608c23b51c27207cd",
       "9": "https://getplay-cdn.com/embed/9658c93a7e29d132ac835c4b3290d68f",
-      "10": "https://getplay-cdn.com/embed/0afe9b6f76ef9c131caf4415bc7fe06a"
+      "10": "https://getplay-cdn.com/embed/0afe9b6f76ef9c131caf4415bc7fe06a",
+      "11": "https://getplay-cdn.com/embed/d3c690a0930793cf2b2b49f3292804a4",
+      "12": "https://getplay-cdn.com/embed/45c5161d2b78a5016f718320c0b89e92"
     },
     "languages": [
       "Thai (พากย์ไทย)"
@@ -5828,22 +5254,22 @@ window.movies = [
     "originalUrl": "https://wow-drama.com/love-in-disguise-2026/"
   },
   {
-    "titleTh": "Kidnap Game (2026) เกมลักพาตัว",
-    "titleEn": "Kidnap Game (2026) เกมลักพาตัว",
+    "titleTh": "Oh! My Guard นี่ฉันอยากมีบอดี้การ์ดหรือนี่",
+    "titleEn": "Oh! My Guard นี่ฉันอยากมีบอดี้การ์ดหรือนี่",
     "year": 2026,
-    "poster": "images/clean_posters/wow-108505.jpg",
-    "backdrop": "images/clean_posters/wow-108505.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/51b25d9c90f74092144e386acf7be5eb",
+    "poster": "images/clean_posters/wow-110251.jpg",
+    "backdrop": "images/clean_posters/wow-110251.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/232a57920de6c50936d40944cf8e29f5",
     "sourceType": "embed",
-    "description": "ซีรี่ส์ญี่ปุ่น Kidnap Game (2026) เกมลักพาตัว คน 7 คนจาก 7 เมืองทั่วเอเชียต้องตกเป็นผู้เล่นในเกมลักพาตัวที่ไม่มีใครรู้จุดประสงค์พวกเขา",
+    "description": "ซีรี่ส์ Oh! My Guard นี่ฉันอยากมีบอดี้การ์ดหรือนี่ นางเอกเข้าไปอยู่ในนิยายเรื่องโปรดของตัวเองและพยายามที่จะปกป้องพระเอกจากปัญหาต่างๆ",
     "rating": 8.7,
     "genres": [
       "พากย์ไทย",
-      "ซีรีส์ญี่ปุ่น",
-      "ซีรีส์ญี่ปุ่น พากย์ไทย",
+      "ซีรีส์เกาหลี",
+      "ซีรีส์เกาหลี พากย์ไทย",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 8 ตอนจบ",
+    "duration": "ซีรีส์ 4 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -5851,107 +5277,20 @@ window.movies = [
       "ตอนที่ 1",
       "ตอนที่ 2",
       "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8"
+      "ตอนที่ 4"
     ],
     "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/51b25d9c90f74092144e386acf7be5eb",
-      "2": "https://getplay-cdn.com/embed/d05c0ba73fc19a89e5c6c2b2e03cb546",
-      "3": "https://getplay-cdn.com/embed/183861cbd8818b95733430211a13add2",
-      "4": "https://getplay-cdn.com/embed/5d9b9e62e6d508e88aff3a1ee03229b6",
-      "5": "https://getplay-cdn.com/embed/7ee58e8dbe2981b70e65a51aae7e1ca5",
-      "6": "https://getplay-cdn.com/embed/a2711ce002649741c4657d9b1750dfb7",
-      "7": "https://getplay-cdn.com/embed/015b662d5ae8efdc674d81357be1384e",
-      "8": "https://getplay-cdn.com/embed/9c5c99e3d04ef46cd422ea470615a803"
+      "1": "https://getplay-cdn.com/embed/232a57920de6c50936d40944cf8e29f5",
+      "2": "https://getplay-cdn.com/embed/a38301ea84bfc37d2a433fb49c9895db",
+      "3": "https://getplay-cdn.com/embed/4903beb5ab4ce2bd5f9798ac2d2c28f8",
+      "4": "https://getplay-cdn.com/embed/122798c2c3fa708290631395af076269"
     },
     "languages": [
       "Thai (พากย์ไทย)"
     ],
-    "id": "wow-108505",
-    "postId": "108505",
-    "originalUrl": "https://wow-drama.com/kidnap-game-2026/"
-  },
-  {
-    "titleTh": "Sunshine through the Rain แดดใสในวันฝนพรำ",
-    "titleEn": "Sunshine through the Rain แดดใสในวันฝนพรำ",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-111587.jpg",
-    "backdrop": "images/clean_posters/wow-111587.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/ee3703e04630f90412ae82b2cfa128c0",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์จีน Sunshine through the Rain แดดใสในวันฝนพรำ พระเอกในตอนนี้นั้นกลับมาเรียนอีกครั้งหลังจากที่สุขภาพดีขึ้นและมาเป็นคู่แข่งกับนางเอก",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ซีรีส์จีน",
-      "ซีรีส์จีน พากย์ไทย",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 24 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9",
-      "ตอนที่ 10",
-      "ตอนที่ 11",
-      "ตอนที่ 12",
-      "ตอนที่ 13",
-      "ตอนที่ 14",
-      "ตอนที่ 15",
-      "ตอนที่ 16",
-      "ตอนที่ 17",
-      "ตอนที่ 18",
-      "ตอนที่ 19",
-      "ตอนที่ 20",
-      "ตอนที่ 21",
-      "ตอนที่ 22",
-      "ตอนที่ 23",
-      "ตอนที่ 24"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/ee3703e04630f90412ae82b2cfa128c0",
-      "2": "https://getplay-cdn.com/embed/c88dbd1719f3c5f12a8703b28df7566a",
-      "3": "https://getplay-cdn.com/embed/0597673c3f5124f76a2e9b72e8dcb43d",
-      "4": "https://getplay-cdn.com/embed/4db450cfec171af7c530a70810c6f24c",
-      "5": "https://getplay-cdn.com/embed/b08bbf081048c9f8424f935879ad655f",
-      "6": "https://getplay-cdn.com/embed/127fc7ce6e81c04a84bb497bb99b1443",
-      "7": "https://getplay-cdn.com/embed/e20d5c8989fea7ed88898d1627c26c6e",
-      "8": "https://getplay-cdn.com/embed/15c9727aa77c26f1df60f5992b81eeed",
-      "9": "https://getplay-cdn.com/embed/20eb0c629f7a1702d19e2abf8eed416a",
-      "10": "https://getplay-cdn.com/embed/ad5ecbcc346010f9face534fbca14719",
-      "11": "https://getplay-cdn.com/embed/d142c932cb15a1f03ba330d8f54e7b6e",
-      "12": "https://getplay-cdn.com/embed/6a22f083db3a5da748f7d265d20c65c2",
-      "13": "https://getplay-cdn.com/embed/650071ff5a0cac9fa7869c8ef884d573",
-      "14": "https://getplay-cdn.com/embed/86bdb674719b3b5a7c6cbdf32b29bc22",
-      "15": "https://getplay-cdn.com/embed/40bbfacffadd956035f699f7d3d3a7df",
-      "16": "https://getplay-cdn.com/embed/ccb612e4eab99714daf9f55a8429b272",
-      "17": "https://getplay-cdn.com/embed/d7ef6cf70c8c1cb94a5d59eea9380bf7",
-      "18": "https://getplay-cdn.com/embed/3c111f26f9277ad758f017d8770f3237",
-      "19": "https://getplay-cdn.com/embed/571ff1186b43479fb3c58bc73488f0b1",
-      "20": "https://getplay-cdn.com/embed/4705f5a1e1603454d86aac9b10a2681c",
-      "21": "https://getplay-cdn.com/embed/d4585b369a68b79bdb2f07bbfd652cb4",
-      "22": "https://getplay-cdn.com/embed/b687201cf972e283aa0a331ddbe1eabe",
-      "23": "https://getplay-cdn.com/embed/9cf87a08b9d8422c23ceadc540f781b5",
-      "24": "https://getplay-cdn.com/embed/64786e1d03db1b91868b7a9d4b7d57d6"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-111587",
-    "postId": "111587",
-    "originalUrl": "https://wow-drama.com/sunshine-through-the-rain-2026/"
+    "id": "wow-110251",
+    "postId": "110251",
+    "originalUrl": "https://wow-drama.com/oh-my-guard-2026/"
   },
   {
     "titleTh": "Too Young To Love ชายกระโปรงในวันวาน",
@@ -6064,7 +5403,7 @@ window.movies = [
       "ซีรีส์ญี่ปุ่น พากย์ไทย",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 5 ตอนจบ",
+    "duration": "ซีรีส์ 6 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -6073,14 +5412,16 @@ window.movies = [
       "ตอนที่ 2",
       "ตอนที่ 3",
       "ตอนที่ 4",
-      "ตอนที่ 5"
+      "ตอนที่ 5",
+      "ตอนที่ 6"
     ],
     "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/b44c87d5357c3ee781ebad8b485d936e",
-      "2": "https://getplay-cdn.com/embed/7ca76c5d8eed789e2728531f0713ca91",
-      "3": "https://getplay-cdn.com/embed/a8ddd408649d3d3c9feea990ccff8cdb",
-      "4": "https://getplay-cdn.com/embed/ca621823a5a8a838664b6cad2dcdf6f0",
-      "5": "https://getplay-cdn.com/embed/11cde954cafb7385645012291f6e4cee"
+      "1": "https://torbo007.com/embed/dfba20fd430f6fb33a3b3a84d610eae3",
+      "2": "https://torbo007.com/embed/f668597ff8a976bc9071aa3529e1d0e3",
+      "3": "https://torbo007.com/embed/09e2fbc0ae28be0806409782b460d671",
+      "4": "https://torbo007.com/embed/319642131ef8811a4157f8d3861f98c7",
+      "5": "https://torbo007.com/embed/d5f4a6886c1f0cca552da2304bbe636d",
+      "6": "https://torbo007.com/embed/f6e4d3855a6f2fb170d1647cd8151f5b"
     },
     "languages": [
       "Thai (พากย์ไทย)"
@@ -6088,6 +5429,408 @@ window.movies = [
     "id": "wow-110522",
     "postId": "110522",
     "originalUrl": "https://wow-drama.com/extraordinary-attorney-minami-2026/"
+  },
+  {
+    "titleTh": "Percy Jackson and the Olympians 3 (2026)",
+    "titleEn": "Percy Jackson and the Olympians 3 (2026) พากย์ไทย EP.1-8",
+    "year": 2026,
+    "poster": "images/clean_posters/gs-136011.jpg",
+    "backdrop": "images/clean_posters/gs-136011.jpg",
+    "videoUrl": "https://torbo007.com/embed/7eebf32361bfa53b0208bac9154e736f",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ-Percy Jackson and the Olympians 3\r\n เรื่องราวและการเริ่มต้นของสองพี่น้องมนุษย์กึ่งเทพของ เพอร์ซีย์ แอนนาเบ็ธ และ ธาเลีย ที่กำลังเดินทางไปโรงเรียนประจำเวสต์โอเวอร์เพื่อการปรับตัวรับกับ เบียงกา และเพื่อนสนิทอย่างนิโค ดิ แองเจโล สองพี่น้องสายเดือดใหม่ที่ถูกค้นพบ ทว่าเมื่อการลักพาตัว แอนนาเบ็ธ กับระหว่าการต่อสู้กับอสูรร้ายจนทำให้ทุกคนต่างเสียสละพุ่งเข้าขวาง จนทำให้ทุกคนตกหน้าผไปพร้อมกับตัวร้ายทั้งหมด จนทำให้เธอหายตัวไปอย่างปริศนา จนทำให้เรื่องราวและจุดจบของซีรี่ย์เรื่องนี้จะจบลงอย่างไรเราไปรับชมกันต่อได้ที่ ดูซีรี่ย์G4 สามารถรับชมพร้อมกันได้บนช่องทาง 23 พฤศจิกายน 2026 เพียยง 8 ตอนเท่านั้น พร้อมพากย์ไทยให้แฟนๆได้รับชมกันแล้วพร้อมยังได้นักแสดงนำเรื่องอย่าง วอล์กเกอร์ สโคเบลล์, ลีอาห์ ซาวา เจฟฟรีส์, อาเรียน ซิมฮาดรี, ชาร์ลี บุชเนลล์, ทามารา สมาร์ท, ลีวาย คริสโซพูลอส พร้อมนักแสดงคนอื่นๆอีกมากมาย ที่ได้เข้ามาร่างรับบทบาทความสนุกให้กับซีรี่ย์เรื่องนี้แล้ว>>  \r\n",
+    "rating": 8.8,
+    "genres": [
+      "ดูซีรี่ย์พากย์ไทย",
+      "ซีรีส์แนะนำใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 2 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "GOSERIES4K",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/7eebf32361bfa53b0208bac9154e736f",
+      "2": "https://torbo007.com/embed/be3b68e280a76529fb62c35dd069abec"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "gs-136011",
+    "postId": "136011",
+    "originalUrl": "https://goseries4k.com/percy-jackson-and-the-olympians-3/"
+  },
+  {
+    "titleTh": "Final Table (2026) สงครามนักปรุง",
+    "titleEn": "Final Table (2026) สงครามนักปรุงพากย์ไทย",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-110258.jpg",
+    "backdrop": "images/clean_posters/wow-110258.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/c021c4e45cbe21eebf7daf6021a4a100",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ Final Table สงครามนักปรุงพากย์ไทยพระเอกในตอนนี้นั้นกลับมาที่เกาหลีเพื่อเข้าร่วมการแข่งขันทำอาหารและกอบกู้ชื่อเสียงของร้าน",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ซีรีส์เกาหลี",
+      "ซีรีส์เกาหลี พากย์ไทย",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 10 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/c021c4e45cbe21eebf7daf6021a4a100",
+      "2": "https://getplay-cdn.com/embed/cae43cf32c22373b8b096a725c6eb4e3",
+      "3": "https://getplay-cdn.com/embed/2bf4feb9ed46690f53cd499fa2a5bb3f",
+      "4": "https://getplay-cdn.com/embed/d5a1d8b8d80c2982bbfeefa15fa3361e",
+      "5": "https://getplay-cdn.com/embed/da5b5842d30f98aea9e826bd62edf5db",
+      "6": "https://getplay-cdn.com/embed/bce444b90b9fe34f98d9acf7336f87f4",
+      "7": "https://getplay-cdn.com/embed/8b8b780c1ca30fb4db7ffeb6bf64f68d",
+      "8": "https://getplay-cdn.com/embed/2ea1dd5a4d0983526c44e2fc3993d1b6",
+      "9": "https://getplay-cdn.com/embed/a24c8ca1500ee6381e61416ccb0fb508",
+      "10": "https://getplay-cdn.com/embed/94e07ed70726e4ce3f21564d6e975c23"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-110258",
+    "postId": "110258",
+    "originalUrl": "https://wow-drama.com/final-table-2026/"
+  },
+  {
+    "titleTh": "คมดาบพลิกแผ่นดิน Sword & Silence (2026)",
+    "titleEn": "คมดาบพลิกแผ่นดิน Sword & Silence (2026)",
+    "year": 2026,
+    "poster": "images/clean_posters/gs-135552.jpg",
+    "backdrop": "images/clean_posters/gs-135552.jpg",
+    "videoUrl": "https://torbo007.com/embed/af7c2d4bba6cf16ea63d63ac623edac0",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ-Sword & Silence\r\n เมื่อเรื่องราวจากประวัติศาตรืที่เกิดขึ้นในช่วงปลายศตวรรษ์ช่วยที่ 7 อันวุ่นวาย ที่พร้อมเล่าถึงการสร้างสงครามอันดุเดือดของอาณาจักรโกกูรยอ/ชิลลา/แพ็กเจ และราชวงศ์ถัง ที่พร้อมปะทะกันในทุกช่วงเวลาเพียงเพราะความขัดแย้งมาจาก คิม บ็อบมิน เจ้าชายผู้แสนเย้นชาแต่กลับมีนิสัยมองการไกลที่แตกแยกจากผู้อื่น เมื่ออำนาจจากกำมือ คิมชุนชู กษัตริย์องค์ที่ 29 แห่งชิลลา ผู้ที่กำลังเตฺบดตมาจากท่ามกลางเรื่องราวการสร้างสงครามการเมืองจากบิดา และการเรียนรู้ทั้งด้านการเมืองและกองทหารของบิดาผู้เป็นแม่ทัพ คิมยูชิน เพื่อก้าวขึ้นแท่นแห่งการเป็นกษัตริย์องค์คนใหม่องค์ที่ 30 แห่งชิลลา ซึ่งต่างเป็นสานสัมพันธ์จากอาณาจักรธุระกิจแห่งนี้ สุดเรื่องราวและจุดจบบทสุดท้ายแล้วซีรี่ย์เรื่องนี้จะจบลงอย่างไรเราไปรับชมกันต่อได้ที่ดูซีรี่ย์ออนไลน์G4 พร้อมเสิร์ฟความสุกให้แฟนๆได้รับชมกันแล้วในวันที่ 14 พฤศจิกายน 2026 นี้ Ka>>\r\n",
+    "rating": 8.8,
+    "genres": [
+      "ดูซีรี่ย์พากย์ไทย",
+      "ซีรีส์แนะนำใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 4 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "GOSERIES4K",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/af7c2d4bba6cf16ea63d63ac623edac0",
+      "2": "https://torbo007.com/embed/e896bca7d047e13c060d1af465867434",
+      "3": "https://torbo007.com/embed/1a9dde23e399609cd21d92bd39792329",
+      "4": "https://torbo007.com/embed/6f24063b7b7dcc9ac17e9ac273d0faf3"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "gs-135552",
+    "postId": "135552",
+    "originalUrl": "https://goseries4k.com/sword-silence/"
+  },
+  {
+    "titleTh": "You Are My Fateful Love เธอคือรักแท้ที่รอคอย",
+    "titleEn": "You Are My Fateful Love เธอคือรักแท้ที่รอคอย",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-93507.jpg",
+    "backdrop": "images/clean_posters/wow-93507.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/12ffd0e53009fa20ae4c108196f43f35",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ You Are My Fateful Love เธอคือรักแท้ที่รอคอย พระเอกตอนนี้ได้เข้ามาในชีวิตของนางเอกช่วงเวลาที่นางเอกนั้นเจอกับความลำบากพอดี",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ซีรีส์จีน",
+      "ซีรีส์จีน พากย์ไทย",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 12 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/12ffd0e53009fa20ae4c108196f43f35",
+      "2": "https://getplay-cdn.com/embed/75a2ccc0494322acf192e58e7409fa35",
+      "3": "https://getplay-cdn.com/embed/25a423a61849cdc6c861901bb9a5c4b8",
+      "4": "https://getplay-cdn.com/embed/a3a49848400c4622aaaafb506068cd4d",
+      "5": "https://getplay-cdn.com/embed/5615ee1212b1ae6c95c32c03e368f580",
+      "6": "https://getplay-cdn.com/embed/bd8d0bff70f20ea0e066e49222cfc368",
+      "7": "https://getplay-cdn.com/embed/96ad383bc71a4de8a4cdfd8c7f863427",
+      "8": "https://getplay-cdn.com/embed/36da8cc6bb90ee09c96f5b593713a5f2",
+      "9": "https://getplay-cdn.com/embed/3c6c28890452844dc908c5a665276aa9",
+      "10": "https://getplay-cdn.com/embed/c8bed17c321510c23574e2aa1aa47f72",
+      "11": "https://getplay-cdn.com/embed/38081567eec1c232c305a859d2661663",
+      "12": "https://getplay-cdn.com/embed/e0e838ba687dea591afc4d32d4ea8c89"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-93507",
+    "postId": "93507",
+    "originalUrl": "https://wow-drama.com/you-are-my-fateful-love-2026/"
+  },
+  {
+    "titleTh": "The Perfect Lie (2026) รักซ่อนลวง",
+    "titleEn": "The Perfect Lie (2026) รักซ่อนลวงพากย์ไทย",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-110770.jpg",
+    "backdrop": "images/clean_posters/wow-110770.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/82799988f1be213ff49da2e0a86dcd49",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ The Perfect Lie รักซ่อนลวงพากย์ไทยพระเอกตอนนี้ระแวงนางเอกไม่เหมือนแรกเจอเพราะว่าทั้งคู่นั้นดันมีความทรงจำที่ไม่เหมือนกัน",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ซีรีส์เกาหลี",
+      "ซีรีส์เกาหลี พากย์ไทย",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 8 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/82799988f1be213ff49da2e0a86dcd49",
+      "2": "https://getplay-cdn.com/embed/a23235a4149abb941d63ba0e3b156cca",
+      "3": "https://getplay-cdn.com/embed/dd09c50792a4515503f3634e8fa11ed9",
+      "4": "https://getplay-cdn.com/embed/194cf6c40db9fa44c575fa0905e6eaa8",
+      "5": "https://getplay-cdn.com/embed/ff907bc35c46f11cd814b719fc198d0b",
+      "6": "https://getplay-cdn.com/embed/43f5652657472185c5f3706107edba2e",
+      "7": "https://getplay-cdn.com/embed/33f28e0d263c6db055e2eb45201b804b",
+      "8": "https://getplay-cdn.com/embed/49d2c148ec7f242a2f582724c5a8ee80"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-110770",
+    "postId": "110770",
+    "originalUrl": "https://wow-drama.com/the-perfect-lie-2026/"
+  },
+  {
+    "titleTh": "MobLand ม็อบแลนด์ (2026)",
+    "titleEn": "MobLand ม็อบแลนด์ (2026)",
+    "year": 2026,
+    "poster": "images/clean_posters/mobland____________2026.jpg",
+    "backdrop": "images/clean_posters/mobland____________2026.jpg",
+    "videoUrl": "https://torbo007.com/embed/bced97b63f9f325611752b80e88e8acb",
+    "sourceType": "embed",
+    "description": "ดูซีรีส์ MobLand ม็อบแลนด์ (2026) อัปเดตใหม่ล่าสุด พากย์ไทยคมชัดระดับ Full HD",
+    "rating": 8.9,
+    "genres": [
+      "ซีรีส์",
+      "ดราม่า",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 10 ตอนจบ",
+    "trailerUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "cast": [
+      "นักแสดงนำคุณภาพ"
+    ],
+    "source": "GOSERIES4K",
+    "sourcePageUrl": "https://goseries4k.com/mobland/",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/bced97b63f9f325611752b80e88e8acb",
+      "2": "https://torbo007.com/embed/3b1440d6a5e8640ac80b1ec080af934b",
+      "3": "https://torbo007.com/embed/e5b4f97fcd901606db7cb0b24a10cf22",
+      "4": "https://torbo007.com/embed/ef1fe87082a7f66f154867dc79e885aa",
+      "5": "https://torbo007.com/embed/e0a63001defd3ff552972a4beb1cbe5b",
+      "6": "https://torbo007.com/embed/9454265ef1d87f4e520d0f56948039c2",
+      "7": "https://torbo007.com/embed/798541b4c0f08c1f5d02d04bc359b7dd",
+      "8": "https://torbo007.com/embed/c6342beba40369f5f2e443a948a2b741",
+      "9": "https://torbo007.com/embed/0aa603029cdef115844f69d765c6e48b",
+      "10": "https://torbo007.com/embed/4ae8f653c083bd53d456c2bf3cbe472a"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "g4-548"
+  },
+  {
+    "titleTh": "The Blue Road (2026) ถนนสายสีน้ำเงิน",
+    "titleEn": "The Blue Road (2026) ถนนสายสีน้ำเงิน",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-112901.jpg",
+    "backdrop": "images/clean_posters/wow-112901.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/0d4dad65b51ae0ea13c0216fc4aca35b",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ The Blue Road ถนนสายสีน้ำเงินพากย์ไทยพระเอกต้องรีบดำเนินการเร่งด่วนในการสืบสวนเกี่ยวกับเหตุการณ์ฆาตกรรมที่ได้เกิดขึ้น",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ซีรีส์เกาหลี",
+      "ซีรีส์เกาหลี พากย์ไทย",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 8 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/0d4dad65b51ae0ea13c0216fc4aca35b",
+      "2": "https://getplay-cdn.com/embed/2ceab78354cead21df52a751f10d5bb1",
+      "3": "https://getplay-cdn.com/embed/61598aa6184c683900340bf64369d3db",
+      "4": "https://getplay-cdn.com/embed/76fa8be9acf751c5f71908a066b4346a",
+      "5": "https://getplay-cdn.com/embed/c49aaf01a3720a3fed54b5297772fe1c",
+      "6": "https://getplay-cdn.com/embed/a740d3b6e0d2bc2d94d606db45e72153",
+      "7": "https://getplay-cdn.com/embed/49cdd36f5d5b8467667724495d977169",
+      "8": "https://getplay-cdn.com/embed/bfeefae3914c2d1084dd2049faea44f7"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-112901",
+    "postId": "112901",
+    "originalUrl": "https://wow-drama.com/the-blue-road-2026/"
+  },
+  {
+    "titleTh": "Sunshine through the Rain แดดใสในวันฝนพรำ",
+    "titleEn": "Sunshine through the Rain แดดใสในวันฝนพรำ",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-111587.jpg",
+    "backdrop": "images/clean_posters/wow-111587.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/ee3703e04630f90412ae82b2cfa128c0",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์จีน Sunshine through the Rain แดดใสในวันฝนพรำ พระเอกในตอนนี้นั้นกลับมาเรียนอีกครั้งหลังจากที่สุขภาพดีขึ้นและมาเป็นคู่แข่งกับนางเอก",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ซีรีส์จีน",
+      "ซีรีส์จีน พากย์ไทย",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 24 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16",
+      "ตอนที่ 17",
+      "ตอนที่ 18",
+      "ตอนที่ 19",
+      "ตอนที่ 20",
+      "ตอนที่ 21",
+      "ตอนที่ 22",
+      "ตอนที่ 23",
+      "ตอนที่ 24"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/ee3703e04630f90412ae82b2cfa128c0",
+      "2": "https://getplay-cdn.com/embed/c88dbd1719f3c5f12a8703b28df7566a",
+      "3": "https://getplay-cdn.com/embed/0597673c3f5124f76a2e9b72e8dcb43d",
+      "4": "https://getplay-cdn.com/embed/4db450cfec171af7c530a70810c6f24c",
+      "5": "https://getplay-cdn.com/embed/b08bbf081048c9f8424f935879ad655f",
+      "6": "https://getplay-cdn.com/embed/127fc7ce6e81c04a84bb497bb99b1443",
+      "7": "https://getplay-cdn.com/embed/e20d5c8989fea7ed88898d1627c26c6e",
+      "8": "https://getplay-cdn.com/embed/15c9727aa77c26f1df60f5992b81eeed",
+      "9": "https://getplay-cdn.com/embed/20eb0c629f7a1702d19e2abf8eed416a",
+      "10": "https://getplay-cdn.com/embed/ad5ecbcc346010f9face534fbca14719",
+      "11": "https://getplay-cdn.com/embed/d142c932cb15a1f03ba330d8f54e7b6e",
+      "12": "https://getplay-cdn.com/embed/6a22f083db3a5da748f7d265d20c65c2",
+      "13": "https://getplay-cdn.com/embed/650071ff5a0cac9fa7869c8ef884d573",
+      "14": "https://getplay-cdn.com/embed/86bdb674719b3b5a7c6cbdf32b29bc22",
+      "15": "https://getplay-cdn.com/embed/40bbfacffadd956035f699f7d3d3a7df",
+      "16": "https://getplay-cdn.com/embed/ccb612e4eab99714daf9f55a8429b272",
+      "17": "https://getplay-cdn.com/embed/d7ef6cf70c8c1cb94a5d59eea9380bf7",
+      "18": "https://getplay-cdn.com/embed/3c111f26f9277ad758f017d8770f3237",
+      "19": "https://getplay-cdn.com/embed/571ff1186b43479fb3c58bc73488f0b1",
+      "20": "https://getplay-cdn.com/embed/4705f5a1e1603454d86aac9b10a2681c",
+      "21": "https://getplay-cdn.com/embed/d4585b369a68b79bdb2f07bbfd652cb4",
+      "22": "https://getplay-cdn.com/embed/b687201cf972e283aa0a331ddbe1eabe",
+      "23": "https://getplay-cdn.com/embed/9cf87a08b9d8422c23ceadc540f781b5",
+      "24": "https://getplay-cdn.com/embed/64786e1d03db1b91868b7a9d4b7d57d6"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-111587",
+    "postId": "111587",
+    "originalUrl": "https://wow-drama.com/sunshine-through-the-rain-2026/"
   },
   {
     "titleTh": "Murder in Galicia ฆาตกรรมในกาลิเซีย (2026)",
@@ -6488,6 +6231,85 @@ window.movies = [
     "originalUrl": "https://wow-drama.com/against-the-current-2026/"
   },
   {
+    "titleTh": "OK Let’s Get Divorced (2026) โอเคเราหย่ากันเถอะ",
+    "titleEn": "OK Let’s Get Divorced (2026) โอเคเราหย่ากันเถอะ",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-104047.jpg",
+    "backdrop": "images/clean_posters/wow-104047.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/7fce7bebdbaf5444c766f77733b87c45",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ OK Let’s Get Divorced (2026) โอเคเราหย่ากันเถอะ พระเอกในตอนนี้นั้นพยายามที่จะทำอะไรบางอย่างเพื่อชีวิตคู่ตัวเองต้องติดตามชม",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ซีรีส์เกาหลี",
+      "ซีรีส์เกาหลี พากย์ไทย",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 24 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16",
+      "ตอนที่ 17",
+      "ตอนที่ 18",
+      "ตอนที่ 19",
+      "ตอนที่ 20",
+      "ตอนที่ 21",
+      "ตอนที่ 22",
+      "ตอนที่ 23",
+      "ตอนที่ 24"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/7fce7bebdbaf5444c766f77733b87c45",
+      "2": "https://getplay-cdn.com/embed/f6585952017bb757c3d53f27dff11cbe",
+      "3": "https://getplay-cdn.com/embed/8970bbd6cdf82928309214cbc51239bd",
+      "4": "https://getplay-cdn.com/embed/5c02a55ef0b503c979bb7a6982d42206",
+      "5": "https://getplay-cdn.com/embed/1542f0000fc2f9c873c82b5213f6ed43",
+      "6": "https://getplay-cdn.com/embed/6b1add8c92c2c9fc735906b418c8fd3b",
+      "7": "https://getplay-cdn.com/embed/ac4ee40ef286815edfca355f1133bc16",
+      "8": "https://getplay-cdn.com/embed/aae3a0c991e1feea858d5e1ac2569e3a",
+      "9": "https://getplay-cdn.com/embed/3af7d4c54938096631e1f973d4e677c2",
+      "10": "https://getplay-cdn.com/embed/1b94f7baa24b452b83e07a3190203259",
+      "11": "https://getplay-cdn.com/embed/3acd1bdba3ac533b1779cd73a26299fa",
+      "12": "https://getplay-cdn.com/embed/21a764345f0d4b34f1d04f92849aad21",
+      "13": "https://getplay-cdn.com/embed/84415fc06510c3dcc310ac12a0826cd7",
+      "14": "https://getplay-cdn.com/embed/7bc39463fa8637154f66688f4b3f1d92",
+      "15": "https://getplay-cdn.com/embed/fbf047ef3c2f7b0c21e4d68f7d569164",
+      "16": "https://getplay-cdn.com/embed/8604629f38bf9b83cf09caf25f31a7cf",
+      "17": "https://getplay-cdn.com/embed/978c51dd0156acecf744905beac743f0",
+      "18": "https://getplay-cdn.com/embed/4b33f21bcc8601cd29a3e708ec39e31e",
+      "19": "https://getplay-cdn.com/embed/a19f730ac4935d007851f9aad0cc8112",
+      "20": "https://getplay-cdn.com/embed/fc47bb4e22e78ec81eb54af4ebc302f8",
+      "21": "https://getplay-cdn.com/embed/00e852762bb1e78a6ea6a7109eb5688e",
+      "22": "https://getplay-cdn.com/embed/38dfa5beb8a277124188b9c735613302",
+      "23": "https://getplay-cdn.com/embed/ff4b78ba41496796871d3c4527bc306b",
+      "24": "https://getplay-cdn.com/embed/1165945fbd1728b81e97d64f0b56463f"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-104047",
+    "postId": "104047",
+    "originalUrl": "https://wow-drama.com/ok-lets-get-divorced-2026/"
+  },
+  {
     "titleTh": "Make Me Tingle (2026) เสียวนัก เดี๋ยวรักเข้าให้",
     "titleEn": "Make Me Tingle (2026) เสียวนัก เดี๋ยวรักเข้าให้",
     "year": 2026,
@@ -6670,6 +6492,68 @@ window.movies = [
     "id": "wow-106274",
     "postId": "106274",
     "originalUrl": "https://wow-drama.com/a-love-other-than-yours-2026/"
+  },
+  {
+    "titleTh": "Hidden Marriage อุบายร้ายพ่ายรัก (2023)",
+    "titleEn": "Hidden Marriage อุบายร้ายพ่ายรัก (2023) พากย์ไทย EP1-16 (จบ)",
+    "year": 2026,
+    "poster": "images/clean_posters/gs-88408.jpg",
+    "backdrop": "images/clean_posters/gs-88408.jpg",
+    "videoUrl": "https://torbo007.com/embed/cc1af904993128c34c016774e972d3cb",
+    "sourceType": "embed",
+    "description": "บอกเล่าเกี่ยวกับความรักและความแค้นของหญิงสาวธรรมดาอย่าง “หนิงซี” (จ้าวเจียหมิ่น)หลังจากที่ชีวิตของเธอต้องประสบกับความเลวร้ายเพราะถูกลอบวางยาในค่ำคืนหนึ่งและเมื่อตื่นมาก็พบว่าตัวเองนอนอยู่บนเตียงกับผู้ชายที่ไม่รู้จักเพราะคิดว่าเป็นคนรักของตัวเองหลังจากควาามเจ็บปวดอย่างสาหัวเธอหนีไปเยียวยาจิตใจที่ต่างประเทศกระทั่ง 5 ปีต่อมา “หนิงซี” กลับมาอีกครั้งโชคชะตาดลบันดาลให้เธอบังเอิญได้พบกับ “ลู่ซิงเถียว” (จ้าวอี้ชิน) นักลงทุนหนุ่มมาดนิ่งพ่อหม้ายลูกติดที่เพอร์เฟ็กต์และดูอบอุ่นจากการช่วยชีวิตเด็กน้อยหน้าตาน่ารักซึ่งเป็นลูกชายของเขาเอาไว้ เขาจึงตอบแทนเธอด้วยการมอบโอกาสให้เธอได้ทำความฝันนั่นคือการเป็นนักแสดงซึ่งถือว่าเขาคือคนที่ปูทางชีวิตครั้งใหม่ให้กับเธออีกครั้งหลังจากที่เขาได้รับรู้ถึงอดีตที่ผิดพลาดอันแสนเจ็บปวดใจของ “หนิงซี” ทั้งสองตัดสินใจหาเบาะแสคนที่ทำร้ายเธอเมื่อครั้งอดีตก่อนจะพบว่าเบื้องหลังทั้งหมดคือฝีมือของน้องสาววต่างแม่กับอดีตคนรักที่ร่วมมือกันทรยศหักหลัง ท่ามกลางการแก้แค้นความสัมพันธ์ระหว่างทั้งคู่ได้เริ่มต้นสู่ความรักอันแสนเร้าร้อนด้วยเช่นกัน",
+    "rating": 8.8,
+    "genres": [
+      "ดูซีรี่ย์พากย์ไทย",
+      "ซีรีส์แนะนำใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 16 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "GOSERIES4K",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/cc1af904993128c34c016774e972d3cb",
+      "2": "https://torbo007.com/embed/91804f47ee0c4058c85e62f55c4b064f",
+      "3": "https://torbo007.com/embed/3ee4bb925da08ae3a1948ee71bcec4e2",
+      "4": "https://torbo007.com/embed/85c3621ea5a628130ff324a8c1ea72d2",
+      "5": "https://torbo007.com/embed/fd1635827fb93a91b9561ec4414de0f7",
+      "6": "https://torbo007.com/embed/3610cb858c40e3221e2bf7daafbeb310",
+      "7": "https://torbo007.com/embed/2e5216ec59d37c109eb1e46e649f6760",
+      "8": "https://torbo007.com/embed/9738cdff17838921d66cba0e7a78ee4d",
+      "9": "https://torbo007.com/embed/ac246803a1688cb354dc131bff287fc3",
+      "10": "https://torbo007.com/embed/b004176f5dc0b2dff27854448304d4b5",
+      "11": "https://torbo007.com/embed/f1c47ce7fe4572f9f178858762ada7cb",
+      "12": "https://torbo007.com/embed/aeab61160a7832be16cd7dada3e97d8a",
+      "13": "https://torbo007.com/embed/e240e366588f4943f260241226e77608",
+      "14": "https://torbo007.com/embed/bea4635aab5725f8d0f7f07db78f7e2d",
+      "15": "https://torbo007.com/embed/239be75da9a2a8647e55b7331cb800b9",
+      "16": "https://torbo007.com/embed/d47a9942dc3a096028f7ead3f4bd67e9"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "gs-88408",
+    "postId": "88408",
+    "originalUrl": "https://goseries4k.com/hidden-marriage/"
   },
   {
     "titleTh": "Lost Track of Time ลืมเลือนเวลา (2022)",
@@ -9020,6 +8904,106 @@ window.movies = [
     "originalUrl": "https://goseries4k.com/because-of-you-2020-%e0%b9%80%e0%b8%9e%e0%b8%a3%e0%b8%b2%e0%b8%b0%e0%b9%80%e0%b8%98%e0%b8%ad%e0%b8%84%e0%b8%b7%e0%b8%ad%e0%b8%a3%e0%b8%b1%e0%b8%81/"
   },
   {
+    "titleTh": "เธอคือเพลงรักฤดูหนาว (2024) Love Song in Winter",
+    "titleEn": "จีน เธอคือเพลงรักฤดูหนาว (2024) Love Song in Winter พากย์ไทย EP.1-36 (END)",
+    "year": 2026,
+    "poster": "images/clean_posters/gs-93319.jpg",
+    "backdrop": "images/clean_posters/gs-93319.jpg",
+    "videoUrl": "https://torbo007.com/embed/2739472fa4566f5ffe51374c103fd027",
+    "sourceType": "embed",
+    "description": "สำหรับซีรี่ย์โรแมนติก สืบสวนสอบสวน  ลึกลับ ดราม่าชีวิต “เธอคือเพลงรักฤดูหนาว” (Love Song in Winter) บอกเล่าเรื่องราวที่เกิดขึ้นกับ “ลู่เหยียน” (แสดงนำโดย ซุนเชียน) เธอเป็นหมอวิสัญญีในโรงพยาบาลชื่อดังแห่งหนึ่งและบ่อยครั้งที่ “ลู่เหยียน” มองเห็นและสื่อสารกับวิญญาณคนตายได้ กระทั่งวันช่วงที่เธอเข้าทำงานในตอนกลางคืนเธอได้บังเอิญพบกับวิญญาณของ “เติ้งม่าน” (แสดงนำโดย เหอหงซาน) เพื่อนร่วมวิทยาลัยที่เสียชีวิตไปนานแล้วตั้งแต่วันนั้นเป็นต้นมา เรื่องแปลกๆ ก็เกิดขึ้นรอบตัวของเธออย่างต่อเนื่อง ขณะเดียวกันเธอก็ได้กลับมาพบกกับอดีตคนรักสมัยเรียนมหาลัยที่เลิกรากันไปเมื่อหลายปีก่อนอย่าง “เจียงเฉิงอี้” (นำแสดงโดย หวงจิ่งอวี๋) โดยไม่คาคดิดซึ่งตอนนี้เขากลายเป็นตำรวจนักสืบที่กำลังติดตามคดีฆาตรกรรมต่อเนื่อง ด้วยอาชีพที่เกี่ยวข้องกันให้พวกเขาต้องมาไขคดีลึกลับนี้ร่วมกัน ก่อนที่ความจริงของการพัวพันและความลับที่ซ่อนเอาไว้เมื่อ 8 ปีจะค่อยปรากฏออกมาเรื่อยๆ ท่ามกลางการคลี่คลายคดีมากมายความสัมพันธ์ของพวกเขาก็ก่อตัวขึ้นเช่นกัน สุดท้ายความรักจะหวนคืนและไขข้อผิดพลาดได้หรือไม่อย่างไรไปดูกัน \r\n",
+    "rating": 8.8,
+    "genres": [
+      "ดูซีรี่ย์พากย์ไทย",
+      "ซีรีส์แนะนำใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 35 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "GOSERIES4K",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16",
+      "ตอนที่ 17",
+      "ตอนที่ 18",
+      "ตอนที่ 19",
+      "ตอนที่ 20",
+      "ตอนที่ 21",
+      "ตอนที่ 22",
+      "ตอนที่ 23",
+      "ตอนที่ 24",
+      "ตอนที่ 25",
+      "ตอนที่ 26",
+      "ตอนที่ 27",
+      "ตอนที่ 28",
+      "ตอนที่ 29",
+      "ตอนที่ 30",
+      "ตอนที่ 31",
+      "ตอนที่ 32",
+      "ตอนที่ 33",
+      "ตอนที่ 34",
+      "ตอนที่ 35"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/2739472fa4566f5ffe51374c103fd027",
+      "2": "https://torbo007.com/embed/5369ba8aa00f92330d0c603e03571be2",
+      "3": "https://torbo007.com/embed/1c1f2d7ded085c879c3598c46eada6bf",
+      "4": "https://torbo007.com/embed/b2e64ea840501a365b6889a88efa5cc4",
+      "5": "https://torbo007.com/embed/7132e6444935ce26f0b766a0480a4dfc",
+      "6": "https://torbo007.com/embed/2a8708483fadbb6fb728f86116769328",
+      "7": "https://torbo007.com/embed/22362efe3557a90fd04c783683529903",
+      "8": "https://torbo007.com/embed/982cec1f45ce33e8ed3ebfa5351b9dc7",
+      "9": "https://torbo007.com/embed/c197f662a7e558324cafac666a222353",
+      "10": "https://torbo007.com/embed/e6eb8a5f58f7a1e9d3d036d5d47c560d",
+      "11": "https://torbo007.com/embed/5cf3a7b2180cbcd39082c17e5840f3ce",
+      "12": "https://torbo007.com/embed/ce745f8b337eca43751d968688ac9846",
+      "13": "https://torbo007.com/embed/0361d9028381d5d9cc4c756e5e1417c0",
+      "14": "https://torbo007.com/embed/ab3917c12b8872c6f5238453506fedf9",
+      "15": "https://torbo007.com/embed/652895015ba46c13c6a820e88be737c3",
+      "16": "https://torbo007.com/embed/3f4b86eef8ac789299930d695f0bd189",
+      "17": "https://torbo007.com/embed/948ee7ecf02ebe80f1ba8f7d93c16aff",
+      "18": "https://torbo007.com/embed/a9a119137b1286a11dbbd4e003a3c8de",
+      "19": "https://torbo007.com/embed/8a312a1f8bc1815eb13c3d122a3275a1",
+      "20": "https://torbo007.com/embed/1e564eb750f45df2180164adb43c98a9",
+      "21": "https://torbo007.com/embed/13ce68e3742d2a56d5d933a2285daa8f",
+      "22": "https://torbo007.com/embed/8dfe2e1144c4ab32226bd9cf8fbd185f",
+      "23": "https://torbo007.com/embed/fc497c86d2612f837300d32a5991ad32",
+      "24": "https://torbo007.com/embed/99e9291c17b61ef68a3a3d0d5f779665",
+      "25": "https://torbo007.com/embed/14b49cb85662b2a9394d4a1d40beff16",
+      "26": "https://torbo007.com/embed/dfcd9ef560ab190f3f2731e2c2e90dc5",
+      "27": "https://torbo007.com/embed/a29024810fc67448fc70a7199b0420ad",
+      "28": "https://torbo007.com/embed/e6a4adcc2c73178349e18b010a78c5bf",
+      "29": "https://torbo007.com/embed/620994518041d73cd26d3efbbe5253d1",
+      "30": "https://torbo007.com/embed/81a0fbde0ffaf4878b1be78d543c5509",
+      "31": "https://torbo007.com/embed/763b68e2241122def29e506eb0753719",
+      "32": "https://torbo007.com/embed/3c2d09b2457f4d09b91043ff0c5795ef",
+      "33": "https://torbo007.com/embed/5f1564244fe8235d7c7d1b016df0a6b6",
+      "34": "https://torbo007.com/embed/6fa325905badf2898c90707b914dad38",
+      "35": "https://torbo007.com/embed/9437fa1be8f08d5399caf7d758a41703"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "gs-93319",
+    "postId": "93319",
+    "originalUrl": "https://goseries4k.com/love-song-in-winter/"
+  },
+  {
     "titleTh": "Back From the Brink (2023) ล่าหัวใจมังกร",
     "titleEn": "Back From the Brink (2023) ล่าหัวใจมังกร พากย์ไทย ตอนที่ 1-40",
     "year": 2026,
@@ -9130,6 +9114,211 @@ window.movies = [
     "originalUrl": "https://goseries4k.com/back-from-the-brink-2023-%e0%b8%a5%e0%b9%88%e0%b8%b2%e0%b8%ab%e0%b8%b1%e0%b8%a7%e0%b9%83%e0%b8%88%e0%b8%a1%e0%b8%b1%e0%b8%87%e0%b8%81%e0%b8%a3-2/"
   },
   {
+    "titleTh": "Lighter & Princess (2022) จุดไฟให้ฉันอบอุ่นเธอ",
+    "titleEn": "Lighter & Princess (2022) จุดไฟให้ฉันอบอุ่นเธอ พากย์ไทย ตอนที่1-36 (จบ)",
+    "year": 2026,
+    "poster": "images/clean_posters/gs-54996.jpg",
+    "backdrop": "images/clean_posters/gs-54996.jpg",
+    "videoUrl": "https://torbo007.com/embed/d23b8019744b87bf8d20b7c489fc8717",
+    "sourceType": "embed",
+    "description": "ซีรี่ย์จีน เรื่อง Lighter & Princess (2022) จุดไฟให้ฉันอบอุ่นเธอ Zhu Yun ถูกเรียกว่า “เด็กเลว” ในไม่ช้า ขณะที่เธอเริ่มชีวิตในวิทยาลัย การบุกรุกของ Li Wei ทำให้โลกกลับด้าน เขาได้รับการยกย่องจาก Zhu Yun ว่าเป็นลูกชายที่ร่ำรวย โง่เขลา และไร้ความสามารถ แต่ตัวตนที่แท้จริงของเขาคือนักเรียนรับเข้าเรียนพิเศษที่ได้รับการยอมรับจากโรงเรียน และเป็นอัจฉริยะด้านการเขียนโปรแกรมที่หายาก หลังจากการเผชิญหน้ากันหลายครั้ง ทั้งสองมีความซาบซึ้งซึ่งกันและกัน",
+    "rating": 8.8,
+    "genres": [
+      "ดูซีรี่ย์พากย์ไทย",
+      "ซีรีส์แนะนำใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 36 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "GOSERIES4K",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16",
+      "ตอนที่ 17",
+      "ตอนที่ 18",
+      "ตอนที่ 19",
+      "ตอนที่ 20",
+      "ตอนที่ 21",
+      "ตอนที่ 22",
+      "ตอนที่ 23",
+      "ตอนที่ 24",
+      "ตอนที่ 25",
+      "ตอนที่ 26",
+      "ตอนที่ 27",
+      "ตอนที่ 28",
+      "ตอนที่ 29",
+      "ตอนที่ 30",
+      "ตอนที่ 31",
+      "ตอนที่ 32",
+      "ตอนที่ 33",
+      "ตอนที่ 34",
+      "ตอนที่ 35",
+      "ตอนที่ 36"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/d23b8019744b87bf8d20b7c489fc8717",
+      "2": "https://torbo007.com/embed/abba06ab65d044a8f3310f88ef507efb",
+      "3": "https://torbo007.com/embed/7b25b1b66b88b855e55885064ef37dba",
+      "4": "https://torbo007.com/embed/f8763b5927fb0b5fcfe67d659596471f",
+      "5": "https://torbo007.com/embed/0efc85a40dce78aaddf27248cfac0c69",
+      "6": "https://torbo007.com/embed/c0fdac82270b22c287fd895684b68cc6",
+      "7": "https://torbo007.com/embed/94b3554ca897c5af96a4243410f11146",
+      "8": "https://torbo007.com/embed/107dcc01b26124d65e7a66e873498cd5",
+      "9": "https://torbo007.com/embed/b02033a17d45847c874df161956a656f",
+      "10": "https://torbo007.com/embed/2e9f331df3a1e93e0c61a8e7e80cb206",
+      "11": "https://torbo007.com/embed/14e1380f4acc2cb3e5e69d086a05df69",
+      "12": "https://torbo007.com/embed/2e1c4971b5a660e870c2e880d7af62e4",
+      "13": "https://torbo007.com/embed/b4765a71722471ae3c503cb8e3523a10",
+      "14": "https://torbo007.com/embed/3dd857acaa94380b8ee6983791325272",
+      "15": "https://torbo007.com/embed/a1572f1166cb3e37b2e2d55169543a60",
+      "16": "https://torbo007.com/embed/711a4719ba158c970876d12592ef54c1",
+      "17": "https://torbo007.com/embed/d28a67f5a07369e41b92495f018ceb34",
+      "18": "https://torbo007.com/embed/a3c0d533224ac088e8f4503a3c8b161e",
+      "19": "https://torbo007.com/embed/11a467ec3ffd4428af708684b5fb3f83",
+      "20": "https://torbo007.com/embed/e1f58b152bfadabedf9d4c32ba35f31e",
+      "21": "https://torbo007.com/embed/8ae9e40b280e49ad88f36506ef9f3dd0",
+      "22": "https://torbo007.com/embed/252c6ce5719938083470e57d8af2af31",
+      "23": "https://torbo007.com/embed/491ec43960d8dfd24d281eeb356be118",
+      "24": "https://torbo007.com/embed/ca7caf80c1e1564da7cd38b54db9aa63",
+      "25": "https://torbo007.com/embed/d9033fd3309e56369d2bd2088d71a5d8",
+      "26": "https://torbo007.com/embed/9e60f81d8cecf4dd7f2f45a0724dd2b6",
+      "27": "https://torbo007.com/embed/74f750f59b30ea3fc710cdf8c777cc2f",
+      "28": "https://torbo007.com/embed/ffa21876f1735feadb108f795c8d192e",
+      "29": "https://torbo007.com/embed/4bbc16f2455668dac3092aee5a613205",
+      "30": "https://torbo007.com/embed/4d614db171c196c230fd5ac8c370da00",
+      "31": "https://torbo007.com/embed/78609270bdcfba712b28c64268e1149b",
+      "32": "https://torbo007.com/embed/406c065dd89939a49ec43fafcf912be4",
+      "33": "https://torbo007.com/embed/8f085cfdc3f8e5e4b8e0075c778c5002",
+      "34": "https://torbo007.com/embed/681997d8e34824e99ff71125176d5cce",
+      "35": "https://torbo007.com/embed/1070fa087910113a0124392fa7122460",
+      "36": "https://torbo007.com/embed/9263dbed6f5abff2f1e39fe3f3ef5c38"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "gs-54996",
+    "postId": "54996",
+    "originalUrl": "https://goseries4k.com/lighter-princess-2022-%e0%b8%88%e0%b8%b8%e0%b8%94%e0%b9%84%e0%b8%9f%e0%b9%83%e0%b8%ab%e0%b9%89%e0%b8%89%e0%b8%b1%e0%b8%99%e0%b8%ad%e0%b8%9a%e0%b8%ad%e0%b8%b8%e0%b9%88%e0%b8%99%e0%b9%80%e0%b8%98-2/"
+  },
+  {
+    "titleTh": "Blossoms of Power (2026) บุหงาซ่อนคม",
+    "titleEn": "Blossoms of Power (2026) บุหงาซ่อนคม พากย์ไทย",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-102283.jpg",
+    "backdrop": "images/clean_posters/wow-102283.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/2cd8eabd0ee6ad98e31c748015bb3d58",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ Blossoms of Power (2026) บุหงาซ่อนคม พากย์ไทย นางเอกได้มาอยู่ในร่างของหญิงสาวที่มีอำนาจทำให้เธอต้องการเปลี่ยนตัวเองเพื่อรักษาผู้อื่น",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ซีรีส์จีน",
+      "ซีรีส์จีน พากย์ไทย",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 36 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16",
+      "ตอนที่ 17",
+      "ตอนที่ 18",
+      "ตอนที่ 19",
+      "ตอนที่ 20",
+      "ตอนที่ 21",
+      "ตอนที่ 22",
+      "ตอนที่ 23",
+      "ตอนที่ 24",
+      "ตอนที่ 25",
+      "ตอนที่ 26",
+      "ตอนที่ 27",
+      "ตอนที่ 28",
+      "ตอนที่ 29",
+      "ตอนที่ 30",
+      "ตอนที่ 31",
+      "ตอนที่ 32",
+      "ตอนที่ 33",
+      "ตอนที่ 34",
+      "ตอนที่ 35",
+      "ตอนที่ 36"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/2cd8eabd0ee6ad98e31c748015bb3d58",
+      "2": "https://getplay-cdn.com/embed/69c50ec4c0c1936b9bd225d78bc29fd1",
+      "3": "https://getplay-cdn.com/embed/337c775baacd4e7bb8691c1e3fe34405",
+      "4": "https://getplay-cdn.com/embed/2ae87fca7b3a1b646a35846a0e167a82",
+      "5": "https://getplay-cdn.com/embed/3325954766f520387924dce587d6a19c",
+      "6": "https://getplay-cdn.com/embed/5a436c6a6f17b3ef56236a19e4255fa1",
+      "7": "https://getplay-cdn.com/embed/c4d29120f85da3f5a2d18677dace0c19",
+      "8": "https://getplay-cdn.com/embed/f6a80ac2a4241668486d9fbce7084b62",
+      "9": "https://getplay-cdn.com/embed/5e6f044bae3a2a49d5a4ab83eb2c9bbe",
+      "10": "https://getplay-cdn.com/embed/caf4a878d0f37547d6d388a9feb7de9c",
+      "11": "https://getplay-cdn.com/embed/c4c54eed2d5b3562b7b659428fea2e8d",
+      "12": "https://getplay-cdn.com/embed/ff54a928de3150ba924a4b7109f8fd2b",
+      "13": "https://getplay-cdn.com/embed/5a7525fc2a341b55aad9e9e6153ff633",
+      "14": "https://getplay-cdn.com/embed/45a531cdc77ffc465a56aac27b863b2a",
+      "15": "https://getplay-cdn.com/embed/7e2226c562142bb0bfcad5f8453e0b96",
+      "16": "https://getplay-cdn.com/embed/c789c15b974316edba3889d6b399859b",
+      "17": "https://getplay-cdn.com/embed/59b9e4bc2d5346e98e0b6125bd4e7143",
+      "18": "https://getplay-cdn.com/embed/8556325fece185f681004609e04f81df",
+      "19": "https://getplay-cdn.com/embed/6969c4767931b7dc87a02f41ad83a377",
+      "20": "https://getplay-cdn.com/embed/a6149cbb37c4d7325a7efefd3e99ec5f",
+      "21": "https://getplay-cdn.com/embed/9607c15e011fd3e23c931a270674f1af",
+      "22": "https://getplay-cdn.com/embed/0ae96f330b9b1c1f8332040d6f0306e5",
+      "23": "https://getplay-cdn.com/embed/6699e9fce566fdb93f6ee15e2ad33233",
+      "24": "https://getplay-cdn.com/embed/5db9dbdd6d185bc205453d65193f7481",
+      "25": "https://getplay-cdn.com/embed/afc8d08f6b0a00139c75d76d808ca3ef",
+      "26": "https://getplay-cdn.com/embed/54615e3b6d00e8626c4984a7b22c533e",
+      "27": "https://getplay-cdn.com/embed/c1ab43fca7b41c9283118fba2d120693",
+      "28": "https://getplay-cdn.com/embed/ce644836706516cdf1432e425e469f02",
+      "29": "https://getplay-cdn.com/embed/d9f3aad4ac42b6a8fddbe70054572d73",
+      "30": "https://getplay-cdn.com/embed/34edf8c7a04f527a9984fe58ef524ad2",
+      "31": "https://getplay-cdn.com/embed/6c8222ee8be42988c261512103845198",
+      "32": "https://getplay-cdn.com/embed/058f67420795f645e51651593aa840ac",
+      "33": "https://getplay-cdn.com/embed/7b3bc118b1fa814a10153ef1c1a712b9",
+      "34": "https://getplay-cdn.com/embed/c0377581c86af8026b5681163c69c570",
+      "35": "https://getplay-cdn.com/embed/aff7219e946fa3f5dd97b2e658ea5b3f",
+      "36": "https://getplay-cdn.com/embed/aa43ff276b09e9467c08c5982c3e8123"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-102283",
+    "postId": "102283",
+    "originalUrl": "https://wow-drama.com/blossoms-of-power-%e0%b8%9e%e0%b8%b2%e0%b8%81%e0%b8%a2%e0%b9%8c%e0%b9%84%e0%b8%97%e0%b8%a2/"
+  },
+  {
     "titleTh": "Zhan Zhao Adventures (2026) จั่นเจาตะลุยยุทธภพ",
     "titleEn": "Zhan Zhao Adventures (2026) จั่นเจาตะลุยยุทธภพ",
     "year": 2026,
@@ -9233,6 +9422,99 @@ window.movies = [
     "id": "wow-101908",
     "postId": "101908",
     "originalUrl": "https://wow-drama.com/zhan-zhao-adventures-%e0%b8%9e%e0%b8%b2%e0%b8%81%e0%b8%a2%e0%b9%8c%e0%b9%84%e0%b8%97%e0%b8%a2/"
+  },
+  {
+    "titleTh": "Mystic Nine (2026) เก้าสกุล ( )",
+    "titleEn": "Mystic Nine (2026) เก้าสกุล พากย์ไทย (เต็มเรื่อง)",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-102005.jpg",
+    "backdrop": "images/clean_posters/wow-102005.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/48088b49414ca334278bc38dfd55ed8f",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์จีน Mystic Nine (2026) เก้าสกุล พากย์ไทย พระเอกในตอนนี้นั้นสูญเสียสมาชิกของกลุ่มจากเหตุการณ์ที่ไม่คาดฝันทำให้เขาตามหาอย่างบ้าคลั่ง",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ซีรีส์จีน",
+      "ซีรีส์จีน พากย์ไทย",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 31 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16",
+      "ตอนที่ 17",
+      "ตอนที่ 18",
+      "ตอนที่ 19",
+      "ตอนที่ 20",
+      "ตอนที่ 21",
+      "ตอนที่ 22",
+      "ตอนที่ 23",
+      "ตอนที่ 24",
+      "ตอนที่ 25",
+      "ตอนที่ 26",
+      "ตอนที่ 27",
+      "ตอนที่ 28",
+      "ตอนที่ 29",
+      "ตอนที่ 30",
+      "ตอนที่ 31"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/48088b49414ca334278bc38dfd55ed8f",
+      "2": "https://getplay-cdn.com/embed/f7ca6b0cb3d8aa2dadf1d49968211901",
+      "3": "https://getplay-cdn.com/embed/873134bd2b2caff45726fcf7a24e54fb",
+      "4": "https://getplay-cdn.com/embed/8e44737ec069d7a37d5932b23531f6a5",
+      "5": "https://getplay-cdn.com/embed/e9e11a58d0a17e277974fdc47cd8ec9e",
+      "6": "https://getplay-cdn.com/embed/1e0a17771d7028c2577a776767f13f5d",
+      "7": "https://getplay-cdn.com/embed/b687f2292953a66561e13bbedc9daefa",
+      "8": "https://getplay-cdn.com/embed/cd3fbf9f16c6a499b4d255e638c3fd59",
+      "9": "https://getplay-cdn.com/embed/cd3fbf9f16c6a499b4d255e638c3fd59",
+      "10": "https://getplay-cdn.com/embed/fafad70f85f95949abd85c6f46be7057",
+      "11": "https://getplay-cdn.com/embed/e2c6e2c5efe741f2aa776a1deb32ce57",
+      "12": "https://getplay-cdn.com/embed/6782de2ea8c14ab3cee0750e6658d1df",
+      "13": "https://getplay-cdn.com/embed/dff9af6c15ffd7d0af7a72a2de685821",
+      "14": "https://getplay-cdn.com/embed/d7f997564c89d457b36d256c150c455b",
+      "15": "https://getplay-cdn.com/embed/ef98e692a6621e52e231ba455ba7c76a",
+      "16": "https://getplay-cdn.com/embed/4553a471399b864d6461a703ac9153c5",
+      "17": "https://getplay-cdn.com/embed/c723c20c7dfa5f98ce7ea64858aec214",
+      "18": "https://getplay-cdn.com/embed/50187dd25b132d49b0d8a1dcb596aa6e",
+      "19": "https://getplay-cdn.com/embed/3588a00273d3f8b3454df4a478f6238a",
+      "20": "https://getplay-cdn.com/embed/c36e436d2bc44a911585afa3f8fe4d05",
+      "21": "https://getplay-cdn.com/embed/62546ef7791a7c4a9a832eb9f84b3322",
+      "22": "https://getplay-cdn.com/embed/af2cba23ed572e8958dfa0c1d96afc39",
+      "23": "https://getplay-cdn.com/embed/71b78382b01e08c58c1de18b02e7d171",
+      "24": "https://getplay-cdn.com/embed/925aeee7dbd4328e1308f9a0a76463a0",
+      "25": "https://getplay-cdn.com/embed/eb623f86ffbbc2e13075098eeb2fe50e",
+      "26": "https://getplay-cdn.com/embed/becf1409dad7c9c6796e20dc26afa8e7",
+      "27": "https://getplay-cdn.com/embed/9d36f63beeb1a76e5f03830742bf757b",
+      "28": "https://getplay-cdn.com/embed/69cbf8fcb01a5f8e83e394bca257783b",
+      "29": "https://getplay-cdn.com/embed/f9a1e1506923949149d5f790e36991df",
+      "30": "https://getplay-cdn.com/embed/645c2e0add1b55f3af296d72a002e700",
+      "31": "https://getplay-cdn.com/embed/a4c3ad2f3f55be80ec8e7bb53235d6b9"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-102005",
+    "postId": "102005",
+    "originalUrl": "https://wow-drama.com/mystic-nine-%e0%b8%9e%e0%b8%b2%e0%b8%81%e0%b8%a2%e0%b9%8c%e0%b9%84%e0%b8%97%e0%b8%a2/"
   },
   {
     "titleTh": "Blooms for Her (2026) วสันต์รักผลิบาน",
@@ -9364,6 +9646,52 @@ window.movies = [
     "id": "gs-131024",
     "postId": "131024",
     "originalUrl": "https://goseries4k.com/the-legend-of-heroes-part-2/"
+  },
+  {
+    "titleTh": "มังกรหยก ภาคมารบูรพาและพิษประจิม Duel on Mount Hua (2025)",
+    "titleEn": "มังกรหยก ภาคมารบูรพาและพิษประจิม Duel on Mount Hua (2025) พากย์ไทย EP.1-8",
+    "year": 2026,
+    "poster": "images/clean_posters/gs-131037.jpg",
+    "backdrop": "images/clean_posters/gs-131037.jpg",
+    "videoUrl": "https://torbo007.com/embed/a66601cb7181429e205fb961652fd5c0",
+    "sourceType": "embed",
+    "description": "เตรียมตัวเตรียมให้พร้อม ที่จะมาพบกับซีรี่ย์เรื่องใหม่ที่ไดรับความนิยมกันเป็นอย่างมาก เพราะเป็นเป็นอีกหนึ่งเรื่องแยกจากมังกรหยก โอวหยางเฟิงได้เข้าร่วมงานแต่งของพี่ชาย ก่อนจะจากเมืองออกมาใช้ชีวิตท่ามกลางทะเลทรายอันร้อนระอุ เพื่อเอาชีวิตรอด เขาเปิดร้านน้ำชาเล็ก ๆ ที่เริ่มมีชื่อเสียงในหมู่นักเดินทาง ทุกปีเขาจะได้พบกับหวงเย่าซือ เพื่อนสหายผู้เป็นพ่อค้าสุราที่นำสุรามาให้เป็นประจำ ทั้งสองต่างไว้เนื้อเชื่อใจกัน และร่วมกันปลูกต้นดอกท้อกลางทะเลทรายอันแห้งแล้ง แต่เมื่อวันหนึ่งหวงเย่าซือกลับจำเขาไม่ได้ ความทรงจำและมิตรภาพเก่าก็เริ่มเลือนหาย สถานที่แห่งนั้นจึงได้ถูกขนานนามว่า “เกาะรักแดนดอกท้อ” แห่งทะเลทราย.\r\n",
+    "rating": 8.8,
+    "genres": [
+      "ดูซีรี่ย์พากย์ไทย",
+      "ซีรีส์แนะนำใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 8 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "GOSERIES4K",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/a66601cb7181429e205fb961652fd5c0",
+      "2": "https://torbo007.com/embed/ee5a2cf15fa82f406da112264c1c403c",
+      "3": "https://torbo007.com/embed/72c7632f53efbefe754ecb631ba50885",
+      "4": "https://torbo007.com/embed/0053a23dd225779ede81a99a9404a252",
+      "5": "https://torbo007.com/embed/89f0a9ed90bf6be938640c894073f4cf",
+      "6": "https://torbo007.com/embed/180c5c2b8f40fdc3ffe0da7de057a5c3",
+      "7": "https://torbo007.com/embed/e9ab56d2a859d51388369ac2143c2952",
+      "8": "https://torbo007.com/embed/acbc0e04594f7aec2107434cb0dc74a4"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "gs-131037",
+    "postId": "131037",
+    "originalUrl": "https://goseries4k.com/duel-on-mount-hua/"
   },
   {
     "titleTh": "Poisoned Love (2020) ลืมฝันร้าย ด้วยใจแห่งรัก",
@@ -10579,21 +10907,21 @@ window.movies = [
     "originalUrl": "https://myserieshd.com/follow-my-dear-general-2026/"
   },
   {
-    "titleTh": "The Bionic Life (2023) ไขคดีปริศนามนุษย์ไบโอนิค",
-    "titleEn": "The Bionic Life (2023) ไขคดีปริศนามนุษย์ไบโอนิค พากย์ไทย ตอนที่1-12 (จบ)",
+    "titleTh": "Miraculous Brothers (2023) พี่น้องปาฏิหาริย์",
+    "titleEn": "Miraculous Brothers (2023) พี่น้องปาฏิหาริย์ พากย์ไทย ตอนที่1-16 (จบ)",
     "year": 2026,
-    "poster": "images/clean_posters/gs-71855.jpg",
-    "backdrop": "images/clean_posters/gs-71855.jpg",
-    "videoUrl": "https://torbo007.com/embed/c32bfa62fe540f5ac6aa3e40a38f9b89",
+    "poster": "images/clean_posters/gs-72389.jpg",
+    "backdrop": "images/clean_posters/gs-72389.jpg",
+    "videoUrl": "https://torbo007.com/embed/43251bf239de915474752572a24db171",
     "sourceType": "embed",
-    "description": "ดูซีรี่ย์จีน เรื่อง The Bionic Life (2023) ไขคดีปริศนามนุษย์ไบโอนิค ประเภท สืบสวน ดราม่า แฟนตาซี โลกอนาคต เล่าเรื่องราวของโลกอนาคตที่เกิดขึ้นปี 2035 มีการพัฒนาอย่างรวดเร็วของมนุษย์ไบโอนิคทำให้เกิดปัญหาได้ก่อให้เกิดความกังวลต่อของสาธารณชน เมืองซีหนานก่อตั้งศูนย์วิจัยหมิงโหมวเพื่อค้นหาและระบุตัวตนมนุษย์ไบโอนิค เฉิงนั่ว ชายหนุ่มผู้สุขุมเยือกเย็นผู้ทำงานในหน่วยงานแห่งนี้ได้ร่วมมือกับนักจิตวิทยาสาว อันชิว ทำงานด้วยกันหลังเผชิญหน้ากับความเป็นความตาย ทั้งสองจึงร่วมมือกันเพื่อไขปริศนาของสิ่งมีชีวิตทั้งหมด โลกมนุษย์ไบโอนิค ชะตากรรมของมนุษย์และมนุษย์ไบโอนิค",
+    "description": "ดูซีรี่ย์ออนไลน์ เรื่อง Miraculous Brothers (2023) พี่น้องปาฏิหาริย์ พากย์ไทย ซีรีส์แนวลึกลับเกี่ยวกับมิตรภาพอันอบอุ่นและตีแผ่ความเป็นมนุษย์ผ่านเรื่องราวของ ดงจู ชายหนุ่มที่กระหายอยากเป็นนักเขียนขายดีแต่มีหนี้สินเต็มไปหมด เมื่อวันหนึ่งได้พบ คังซาน หนุ่มน้อยความจำเสื่อมแต่มีพลังพิเศษในการอ่านใจคนได้ ชีวิตทั้งคู่ต่างได้เรียนรู้ครั้งใหม่และครั้่งใหญ่อีกครั้งไปด้วยกัน",
     "rating": 8.8,
     "genres": [
       "ดูซีรี่ย์พากย์ไทย",
       "ซีรีส์แนะนำใหม่ 2026",
       "พากย์ไทย"
     ],
-    "duration": "ซีรีส์ 12 ตอนจบ",
+    "duration": "ซีรีส์ 16 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "GOSERIES4K",
@@ -10609,28 +10937,82 @@ window.movies = [
       "ตอนที่ 9",
       "ตอนที่ 10",
       "ตอนที่ 11",
-      "ตอนที่ 12"
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16"
     ],
     "episodeUrls": {
-      "1": "https://torbo007.com/embed/c32bfa62fe540f5ac6aa3e40a38f9b89",
-      "2": "https://torbo007.com/embed/2c5d4b139d2a5ed599d2efc7c63db497",
-      "3": "https://torbo007.com/embed/be920b0f55f9048588fc02eee8366873",
-      "4": "https://torbo007.com/embed/ac8284090a33f72c1774c73558c36150",
-      "5": "https://torbo007.com/embed/3f236f92227e76d109c95288f559fdf9",
-      "6": "https://torbo007.com/embed/d10b0c1bb2ed3e0c044f616b1cfaff04",
-      "7": "https://torbo007.com/embed/bccd7d1d8e303b37356817484b89a66b",
-      "8": "https://torbo007.com/embed/1eb7b01c4a9075f4fa7d23ae73e5e710",
-      "9": "https://torbo007.com/embed/a6f18ffe57aeff710d01ff14b945705f",
-      "10": "https://torbo007.com/embed/8b27eb5dc039fca5ea914c747a8b5936",
-      "11": "https://torbo007.com/embed/79c8cceb955d1613108b3bd988ef4bd7",
-      "12": "https://torbo007.com/embed/83fab0018e175c33896aa507684f9d38"
+      "1": "https://torbo007.com/embed/43251bf239de915474752572a24db171",
+      "2": "https://torbo007.com/embed/76f6898a242cdb49ddebd72061460f2c",
+      "3": "https://torbo007.com/embed/6e97059bdeede33d6049c6afe8337fc6",
+      "4": "https://torbo007.com/embed/da7a55851bf222b02b3f6d3179869b25",
+      "5": "https://torbo007.com/embed/ee761b2f18c885dafeed0dad6083a5ef",
+      "6": "https://torbo007.com/embed/02f11a565f86edfcc597aedfba7d2f6f",
+      "7": "https://torbo007.com/embed/003dc56908f529012ce86e8f2a3ca561",
+      "8": "https://torbo007.com/embed/35980f5fd6a2f2bf7152933ef7c5be41",
+      "9": "https://torbo007.com/embed/660722eaca999f6ae03e9300188f46ee",
+      "10": "https://torbo007.com/embed/0fa596fb8af33a5f75cfa4b31c4202e5",
+      "11": "https://torbo007.com/embed/f65daa57c1468cf8054453476436b2fe",
+      "12": "https://torbo007.com/embed/11dc0c26d136256816fb582750e13308",
+      "13": "https://torbo007.com/embed/9cde6e47629ef22b37329766613bd5a5",
+      "14": "https://torbo007.com/embed/2aea01d785396e10ad81b44857f7c927",
+      "15": "https://torbo007.com/embed/8d6a0b541c2258b0b9416bb38eca979f",
+      "16": "https://torbo007.com/embed/7dd987b4e53b10bfb918dfc5221d1a5c"
     },
     "languages": [
       "Thai (พากย์ไทย)"
     ],
-    "id": "gs-71855",
-    "postId": "71855",
-    "originalUrl": "https://goseries4k.com/the-bionic-life-2023-%e0%b9%84%e0%b8%82%e0%b8%84%e0%b8%94%e0%b8%b5%e0%b8%9b%e0%b8%a3%e0%b8%b4%e0%b8%a8%e0%b8%99%e0%b8%b2%e0%b8%a1%e0%b8%99%e0%b8%b8%e0%b8%a9%e0%b8%a2%e0%b9%8c%e0%b9%84%e0%b8%9a-2/"
+    "id": "gs-72389",
+    "postId": "72389",
+    "originalUrl": "https://goseries4k.com/miraculous-brothers-2023-%e0%b8%9e%e0%b8%b5%e0%b9%88%e0%b8%99%e0%b9%89%e0%b8%ad%e0%b8%87%e0%b8%9b%e0%b8%b2%e0%b8%8f%e0%b8%b4%e0%b8%ab%e0%b8%b2%e0%b8%a3%e0%b8%b4%e0%b8%a2%e0%b9%8c-%e0%b8%9e%e0%b8%b2/"
+  },
+  {
+    "titleTh": "Dead Job งานสนุก จะตาย (2026)",
+    "titleEn": "Dead-End Job งานสนุก จะตาย (2026) พากย์ไทย EP.1-8",
+    "year": 2026,
+    "poster": "images/clean_posters/gs-134824.jpg",
+    "backdrop": "images/clean_posters/gs-134824.jpg",
+    "videoUrl": "https://torbo007.com/embed/800d941c479fdaf9113b7cbf25b8adf3",
+    "sourceType": "embed",
+    "description": "เรื่องย่อ-งานสนุก จะตาย\r\n เรื่องราวของ บยอนฮยอกจุน ชายหนุ่มที่กำลังเผชิญกับปัญหาหนี้สินอย่างหนัก จนแทบมองไม่เห็นหนทางที่จะหลุดพ้นจากความทุกข์ยาก กระทั่งวันหนึ่งเขาได้พบกับประกาศรับสมัครงานจากสำนักงานจัดหางานลึกลับที่ชื่อว่า Spider Staffing Agency ซึ่งเสนอค่าตอบแทนสูงถึง 50 เท่าของค่าแรงขั้นต่ำต่อชั่วโมง ข้อเสนอนี้ทำให้เขาตัดสินใจก้าวเข้าสู่โลกของการทำงานที่ไม่เหมือนใคร โดยหารู้ไม่ว่ารายได้ก้อนโตที่รออยู่ต้องแลกมาด้วยความเสี่ยงถึงชีวิต เมื่อเริ่มงาน ฮยอกจุนกลับต้องเผชิญกับเหตุการณ์เหนือธรรมชาติสุดสยองในสถานที่ทำงานที่ดูเหมือนธรรมดา ไม่ว่าจะเป็นกะกลางคืนในร้านสะดวกซื้อที่กลายเป็นสนามเอาชีวิตรอด หรือภารกิจอื่น ๆ ที่เต็มไปด้วยสิ่งลี้ลับและความน่าสะพรึงกลัว ยิ่งเขาพยายามหาเงินมากเท่าไร ก็ยิ่งต้องเข้าไปพัวพันกับอันตรายมากขึ้นเท่านั้น ขณะเดียวกัน ยอนจู เจ้าหน้าที่สืบสวนคดีอุบัติเหตุจากการทำงาน ก็เริ่มขุดคุ้ยความผิดปกติที่เกิดขึ้นภายในสำนักงานจัดหางานแห่งนี้ ส่วน จียุน น้องสาวของฮยอกจุน แม้จะเป็นคนที่เชื่อว่าความยากจนน่ากลัวกว่าผี แต่เมื่อเห็นพี่ชายมีพฤติกรรมเปลี่ยนไป เธอจึงเริ่มสงสัยและพยายามค้นหาความจริงเช่นกัน\r\n",
+    "rating": 8.8,
+    "genres": [
+      "ดูซีรี่ย์พากย์ไทย",
+      "ซีรีส์แนะนำใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 8 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "GOSERIES4K",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/800d941c479fdaf9113b7cbf25b8adf3",
+      "2": "https://torbo007.com/embed/be4c79af86ffa8cd9c424d4990433c3d",
+      "3": "https://torbo007.com/embed/3a9f74f01e8b7fc5cdf86026a495a31c",
+      "4": "https://torbo007.com/embed/836cec93de1f37a6bc0e10c7d12abb0f",
+      "5": "https://torbo007.com/embed/6640822cd6a3392600952b32eb98d1d2",
+      "6": "https://torbo007.com/embed/49491507dc0fe7f94efb4cd587a7125a",
+      "7": "https://torbo007.com/embed/eac58649d7ae329f2347bb2292032bde",
+      "8": "https://torbo007.com/embed/949ef6b72b0f87d8ffeab93b1491b4d7"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "gs-134824",
+    "postId": "134824",
+    "originalUrl": "https://goseries4k.com/dead-end-job/"
   },
   {
     "titleTh": "Take Charge of My Heart (2026) ชาร์จรัก สปาร์กเลิฟ",
@@ -13033,6 +13415,533 @@ window.movies = [
     "originalUrl": "https://goseries4k.com/the-haunted-palace/"
   },
   {
+    "titleTh": "Motherland (2026) เก็บแผ่นดิน ( )",
+    "titleEn": "Motherland (2026) เก็บแผ่นดิน EP.1-24 (เต็มเรื่อง)",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-110692.jpg",
+    "backdrop": "images/clean_posters/wow-110692.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/ca64539b8fe48abadf2e10262aef9db7",
+    "sourceType": "embed",
+    "description": "ละครไทย Motherland (2026) เก็บแผ่นดิน พระเอกในตอนนี้นั้นสูญเสียคนที่ตัวเองรักไปถึงสองคนทำให้เขานั้นปิดใจและเสียใจเป็นอย่างมากต้องติดตามชม",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ละครไทย",
+      "ละครไทย ย้อนหลัง",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 11 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/ca64539b8fe48abadf2e10262aef9db7",
+      "2": "https://getplay-cdn.com/embed/28103df831855d2a00b1f087509eb330",
+      "3": "https://getplay-cdn.com/embed/9f9ab13e459e0e72e2a885a81c403a45",
+      "4": "https://getplay-cdn.com/embed/e88c50d24610c0821c5825e2f01756c4",
+      "5": "https://getplay-cdn.com/embed/be2f13e5943c37715325886e111ba119",
+      "6": "https://getplay-cdn.com/embed/3ca08e1d918c1dc8b7b5310523518777",
+      "7": "https://getplay-cdn.com/embed/afcfb980b6348a2d0cd9fd111ddab2f3",
+      "8": "https://getplay-cdn.com/embed/3ae642d7255f07c1f85fb165dac83901",
+      "9": "https://getplay-cdn.com/embed/8c4b679bfc5c8366762bb884f72fe20d",
+      "10": "https://getplay-cdn.com/embed/bcb3a83c7d21d9013d39f779e096573e",
+      "11": "https://getplay-cdn.com/embed/8be7bbbca8e77138dbb396a9909e4b28"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-110692",
+    "postId": "110692",
+    "originalUrl": "https://wow-drama.com/motherland-2026/"
+  },
+  {
+    "titleTh": "The Chemistry (2026) จ๊าบเจน",
+    "titleEn": "The Chemistry (2026) จ๊าบเจน",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-110708.jpg",
+    "backdrop": "images/clean_posters/wow-110708.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/e1685f43b5634a046347676bbd477088",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ไทย The Chemistry (2026) จ๊าบเจน พระเอกตกหลุมรักนางเอกตั้งแต่เราเห็นด้วยความที่มีนิสัยที่แตกต่างกันแต่ก็ดันเจอเรื่องเข้าต้องติดตามชม",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ละครไทย",
+      "ละครไทย ย้อนหลัง",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 5 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/e1685f43b5634a046347676bbd477088",
+      "2": "https://getplay-cdn.com/embed/1df1dd4ca82594a4fe9aaa46451eaa7e",
+      "3": "https://getplay-cdn.com/embed/759cbc46bf0dc425bfc661364f86115e",
+      "4": "https://getplay-cdn.com/embed/9eaf94cd2a65c04470497dfd84c907cc",
+      "5": "https://getplay-cdn.com/embed/b20016461d6d428a022395d478dd8ec8"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-110708",
+    "postId": "110708",
+    "originalUrl": "https://wow-drama.com/the-chemistry-2026/"
+  },
+  {
+    "titleTh": "Scarlet Heart Ullavee (2026) ปาฏิหาริย์ข้ามกาลเวลา",
+    "titleEn": "Scarlet Heart Ullavee (2026) ปาฏิหาริย์ข้ามกาลเวลา",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-111150.jpg",
+    "backdrop": "images/clean_posters/wow-111150.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/1d69ec3d5d06d5c0c2ac96d457b95301",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ Scarlet Heart Ullavee ปาฏิหาริย์ข้ามกาลเวลา นางเอกในตอนนี้นั้นพยายามที่จะเอาตัวรอดจากเมืองแห่งนี้ไปให้ได้แม้ว่าจะเป็นเรื่องที่ยากก็ตาม",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ละครไทย",
+      "ละครไทย ย้อนหลัง",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 8 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/1d69ec3d5d06d5c0c2ac96d457b95301",
+      "2": "https://getplay-cdn.com/embed/5731f221891b5784559433788122b9d8",
+      "3": "https://getplay-cdn.com/embed/89bfe705f5d5500f94f9250195b5c257",
+      "4": "https://getplay-cdn.com/embed/2f514c8393f2fe814badfba86b3cd97d",
+      "5": "https://getplay-cdn.com/embed/36bb33513111449619bedaf323c2dfbf",
+      "6": "https://getplay-cdn.com/embed/20521c9d533e0f011908271fff6abc2e",
+      "7": "https://getplay-cdn.com/embed/85716a2026f05b084eea0e5ec4c51dfa",
+      "8": "https://getplay-cdn.com/embed/24762ccdb360048ae9f3f42e4a01c9d2"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-111150",
+    "postId": "111150",
+    "originalUrl": "https://wow-drama.com/scarlet-heart-ullavee-2026/"
+  },
+  {
+    "titleTh": "Love on Hire (2026) รับจ้างเลิกรัก",
+    "titleEn": "Love on Hire (2026) รับจ้างเลิกรัก",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-110225.jpg",
+    "backdrop": "images/clean_posters/wow-110225.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/635b3e839e15b3cbb0f82ca8bacc82cd",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ไทย Love on Hire (2026) รับจ้างเลิกรัก นางเอกในตอนนี้นั้นพยายามอย่างมากในการจับตาดูผู้หญิงคนหนึ่งที่พังงานแต่งของตัวเองต้องติดตามชม",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ละครไทย",
+      "ละครไทย ย้อนหลัง",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 7 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/635b3e839e15b3cbb0f82ca8bacc82cd",
+      "2": "https://getplay-cdn.com/embed/f60e55b09f8e7b3991dac6692576ad92",
+      "3": "https://getplay-cdn.com/embed/98b80fdd31c924d7cef4d38a1a812d4e",
+      "4": "https://getplay-cdn.com/embed/459922d48a4f52239bf09239a22e98a4",
+      "5": "https://getplay-cdn.com/embed/58c0e4bb3965582a4b1a905ed06684e5",
+      "6": "https://getplay-cdn.com/embed/7988633e7aa1b1930d42718f1fa8d476",
+      "7": "https://getplay-cdn.com/embed/5c61b0c994086729d43e9034a3a8d2f6"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-110225",
+    "postId": "110225",
+    "originalUrl": "https://wow-drama.com/love-on-hire-2026/"
+  },
+  {
+    "titleTh": "Fool in Love (2026) คนโง่รักเข(ล)า (Uncut) จบ",
+    "titleEn": "Fool in Love (2026) คนโง่รักเข(ล)า (Uncut) ตอนที่ 1-20 จบ",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-108726.jpg",
+    "backdrop": "images/clean_posters/wow-108726.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/f703234890f7c58249957eb0fc520bae",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ไทย Fool in Love (2026) คนโง่รักเข(ล)า พระเอกในตอนนี้นั้นเข้าหานายเอกด้วยความไม่จริงใจเมื่อความลับถูกเปิดเผยจะทำอย่างไรต้องติดตามชม",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ละครไทย",
+      "ละครไทย ย้อนหลัง",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 15 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/f703234890f7c58249957eb0fc520bae",
+      "2": "https://getplay-cdn.com/embed/7e542eac0e8854b75b9e0d21416c892d",
+      "3": "https://getplay-cdn.com/embed/72e69a75ac9d28cce5811f4d2a67a17c",
+      "4": "https://getplay-cdn.com/embed/8773528ac22dfd39f04ba4f9beaed198",
+      "5": "https://getplay-cdn.com/embed/14f74c53088a39bdb1e8431eb945cf97",
+      "6": "https://getplay-cdn.com/embed/ef038d7616e60873d7ecac64680e6bba",
+      "7": "https://getplay-cdn.com/embed/08ff517c5cfe8e116327f49ac6fafff2",
+      "8": "https://getplay-cdn.com/embed/0ca8f2739907ed2e077a6d9fa5a2ed9c",
+      "9": "https://getplay-cdn.com/embed/f8fa9972883cacae13b2d34ecef3a405",
+      "10": "https://getplay-cdn.com/embed/3b7a39d6b31c54e244626a5b5b60110d",
+      "11": "https://getplay-cdn.com/embed/f4a0506e18b2a4e8403e920cdea5f505",
+      "12": "https://getplay-cdn.com/embed/99d0be46509b5cda1e7c0ff63222acee",
+      "13": "https://getplay-cdn.com/embed/c1d918f63f5990822994233e7deaf705",
+      "14": "https://getplay-cdn.com/embed/d9914aefb6d630457db70bf74bc2a3a2",
+      "15": "https://getplay-cdn.com/embed/d291e49649510af5dae657b668d65598"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-108726",
+    "postId": "108726",
+    "originalUrl": "https://wow-drama.com/fool-in-love-2026/"
+  },
+  {
+    "titleTh": "Built in Love (2026) ก่อร่างสร้างเลิฟ",
+    "titleEn": "Built in Love (2026) ก่อร่างสร้างเลิฟ ตอนที่ 1-10",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-110219.jpg",
+    "backdrop": "images/clean_posters/wow-110219.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/69bb385393caf736f9c8607f99d08d46",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ Built in Love ก่อร่างสร้างเลิฟ เมื่อหญิงสาวที่ไม่ถูกชะตากันต้องมาทำงานร่วมกันพวกเขาจะเจอกับอุปสรรคอย่างไรในการ ทำโปรเจกต์ร่วมกัน",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ละครไทย",
+      "ละครไทย ย้อนหลัง",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 6 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/69bb385393caf736f9c8607f99d08d46",
+      "2": "https://getplay-cdn.com/embed/68d57e5696667141a695321886829149",
+      "3": "https://getplay-cdn.com/embed/0a0130404b8070be13d737767dcad6af",
+      "4": "https://getplay-cdn.com/embed/52bcb0caab5b7cc9c471b6f07410bf73",
+      "5": "https://getplay-cdn.com/embed/9ab3ba0867a9d02aca32a21ad6331664",
+      "6": "https://getplay-cdn.com/embed/079a3f0144bfc4808f9e724bf52fb090"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-110219",
+    "postId": "110219",
+    "originalUrl": "https://wow-drama.com/built-in-love-2026/"
+  },
+  {
+    "titleTh": "My Secret Boyfriends (2026) แฟนลับครับผม",
+    "titleEn": "My Secret Boyfriends (2026) แฟนลับครับผม",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-112068.jpg",
+    "backdrop": "images/clean_posters/wow-112068.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/cb1e2ed97489203768453b4abea28adf",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ไทย My Secret Boyfriends (2026) แฟนลับครับผม แดนเจอความวุ่นวายเป็นอย่างมากหลังจากที่เขานั้นต้องมามายุ่งเกี่ยวกับผู้ชายสามคนที่ชอบตน",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ละครไทย",
+      "ละครไทย ย้อนหลัง",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 3 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/cb1e2ed97489203768453b4abea28adf",
+      "2": "https://getplay-cdn.com/embed/6843cdbaad04e6049c1e18952139c7dc",
+      "3": "https://getplay-cdn.com/embed/3dbf8ec2836c8a03914d4312d8e20a13"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-112068",
+    "postId": "112068",
+    "originalUrl": "https://wow-drama.com/my-secret-boyfriends-2026/"
+  },
+  {
+    "titleTh": "Gunshot (2026) ผมหลงรักฆาตกร",
+    "titleEn": "Gunshot (2026) ผมหลงรักฆาตกร",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-113283.jpg",
+    "backdrop": "images/clean_posters/wow-113283.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/fdba24384f2079db0dfe63ad9f6a70e2",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ไทย Gunshot (2026) ผมหลงรักฆาตกร พระเอกตำรวจหนุ่มที่ต้องเข้ามาเกี่ยวข้องนายเอกผู้มีเบื้องหลังบางอย่างที่ไม่อาจเปิดเผยได้ความใกล้ชิด",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ละครไทย",
+      "ละครไทย ย้อนหลัง",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/fdba24384f2079db0dfe63ad9f6a70e2"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-113283",
+    "postId": "113283",
+    "originalUrl": "https://wow-drama.com/gunshot-2026/"
+  },
+  {
+    "titleTh": "The Soulmate Rings (2026) แหวนรักข้ามเวลา",
+    "titleEn": "The Soulmate Rings (2026) แหวนรักข้ามเวลา",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-108709.jpg",
+    "backdrop": "images/clean_posters/wow-108709.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/0345e8b76e251fbdae68a4f01922cba4",
+    "sourceType": "embed",
+    "description": "ละครไทย The Soulmate Rings (2026) แหวนรักข้ามเวลา พระเอกในตอนนี้นั้นได้ยันเวลากลับไปในช่วงสมัยสงครามโลกครั้งที่สองเช่นเดียวกันกับนางเอก",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ละครไทย",
+      "ละครไทย ย้อนหลัง",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 16 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/0345e8b76e251fbdae68a4f01922cba4",
+      "2": "https://getplay-cdn.com/embed/70a11dd1428becf4fc62e2f989287500",
+      "3": "https://getplay-cdn.com/embed/a85db4746ff880db718715531c9a4304",
+      "4": "https://getplay-cdn.com/embed/e83a9acd92b622c528735bb78c577de0",
+      "5": "https://getplay-cdn.com/embed/800368d7b4b745440ebd0ea52f681b6d",
+      "6": "https://getplay-cdn.com/embed/57e65131b6e38abcf1a771f72b7dfc04",
+      "7": "https://getplay-cdn.com/embed/8ceaa45e75c899a3dcfd5493581ae990",
+      "8": "https://getplay-cdn.com/embed/7196bb82807f15e8c0eec0c22089a3c7",
+      "9": "https://getplay-cdn.com/embed/c90b2adf0c1d24629d295554798f7a8b",
+      "10": "https://getplay-cdn.com/embed/cac8c64c15341580eea65f4f46d5fbb6",
+      "11": "https://getplay-cdn.com/embed/c372c315604a1497295ff57a3272f35a",
+      "12": "https://getplay-cdn.com/embed/3843eba262d6afb703ee591985033edb",
+      "13": "https://getplay-cdn.com/embed/bdaf70ac727503e6f3dfc7768c1a5add",
+      "14": "https://getplay-cdn.com/embed/8d1345ac8fb1289a1bdbebfa2eaaffa4",
+      "15": "https://getplay-cdn.com/embed/00ebf40309b8602c4708ca55914dbdd9",
+      "16": "https://getplay-cdn.com/embed/e30e214022bd0d705e49b1a2b652fff3"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-108709",
+    "postId": "108709",
+    "originalUrl": "https://wow-drama.com/the-soulmate-rings-2026/"
+  },
+  {
+    "titleTh": "ตะวันลวง Beneath the Lies (2026)",
+    "titleEn": "- ตะวันลวง Beneath the Lies (2026) EP.1-16",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-108704.jpg",
+    "backdrop": "images/clean_posters/wow-108704.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/ea259a2a043316a4be437fbb11fbed23",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ไทย ตะวันลวง Beneath the Lies (2026) นางเอกเข้ามาในสองพี่น้องนั้นทุกอย่างเริ่มเปลี่ยนแปลงไปจากเดิมที่เคยเป็นจะเป็นอย่างไรต้องติดตามชม",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ละครไทย",
+      "ละครไทย ย้อนหลัง",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 15 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/ea259a2a043316a4be437fbb11fbed23",
+      "2": "https://getplay-cdn.com/embed/92613e619521531e56916d35de422bfa",
+      "3": "https://getplay-cdn.com/embed/1b68c81b233dae30574d39f5f4149cfa",
+      "4": "https://getplay-cdn.com/embed/73fc424e20b61ab1ed3196c70bd0b194",
+      "5": "https://getplay-cdn.com/embed/6e06343f54cd8e45a044586b2a6efb42",
+      "6": "https://getplay-cdn.com/embed/160288295cb3f5f4aac0e46d7f0124df",
+      "7": "https://getplay-cdn.com/embed/d0b1e28ff79005c050605756c80141ce",
+      "8": "https://getplay-cdn.com/embed/358e594452d56d37b18253df39ce12be",
+      "9": "https://getplay-cdn.com/embed/03eedf3b9e16c5a2a338e423461134a8",
+      "10": "https://getplay-cdn.com/embed/eb066d2e713674e2b8f10dbff4483638",
+      "11": "https://getplay-cdn.com/embed/31fa645e38ebb6c0deb85a368d731d60",
+      "12": "https://getplay-cdn.com/embed/382fd507627ddb2cdcb057db52c6a45e",
+      "13": "https://getplay-cdn.com/embed/f0de4d8011f2820a9130a55a2a690988",
+      "14": "https://getplay-cdn.com/embed/5206b390fd13e8009fdf19ad4a737482",
+      "15": "https://getplay-cdn.com/embed/a0acdf1df572b3338786f786d70d9b94"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-108704",
+    "postId": "108704",
+    "originalUrl": "https://wow-drama.com/beneath-the-lies-2026/"
+  },
+  {
+    "titleTh": "My Chef in Crime (2026) เหตุเกิดที่คุณเชฟ",
+    "titleEn": "My Chef in Crime (2026) เหตุเกิดที่คุณเชฟ",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-111749.jpg",
+    "backdrop": "images/clean_posters/wow-111749.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/a45fca2e48ed11722dbe2f2f367caf61",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์My Chef in Crime (2026) เหตุเกิดที่คุณเชฟ นางเอกในตอนนี้นั้นได้เข้ามาช่วยเหลือเพื่อนตัวเองที่กำลังโดนกล่าวหาว่าเป็นฆาตกรในคดีฆาตกรรม",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ละครไทย",
+      "ละครไทย ย้อนหลัง",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 6 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/a45fca2e48ed11722dbe2f2f367caf61",
+      "2": "https://getplay-cdn.com/embed/4507b8be207c1726c06af6505c9b6b1d",
+      "3": "https://getplay-cdn.com/embed/6cb3b5e4528af157cdfd7b1c16414047",
+      "4": "https://getplay-cdn.com/embed/322c1ab3bab62facf39493b2ad429737",
+      "5": "https://getplay-cdn.com/embed/03783eb12130ce838ae612a8aff8e281",
+      "6": "https://getplay-cdn.com/embed/7cc4d2e327f16af0c2a62b22ff8148ec"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-111749",
+    "postId": "111749",
+    "originalUrl": "https://wow-drama.com/my-chef-in-crime-2026/"
+  },
+  {
     "titleTh": "Good Boy Series (2026) จิรภัทรจะเป็นเด็กดี",
     "titleEn": "Good Boy Series (2026) จิรภัทรจะเป็นเด็กดี",
     "year": 2026,
@@ -13093,7 +14002,7 @@ window.movies = [
       "ละครไทย ย้อนหลัง",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 14 ตอนจบ",
+    "duration": "ซีรีส์ 15 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -13111,7 +14020,8 @@ window.movies = [
       "ตอนที่ 11",
       "ตอนที่ 12",
       "ตอนที่ 13",
-      "ตอนที่ 14"
+      "ตอนที่ 14",
+      "ตอนที่ 15"
     ],
     "episodeUrls": {
       "1": "https://getplay-cdn.com/embed/f6ea4a0929f0e77acd3303009c7a0217",
@@ -13127,7 +14037,8 @@ window.movies = [
       "11": "https://getplay-cdn.com/embed/e5fb6fad1a19adeb5f5f1f915848b18d",
       "12": "https://getplay-cdn.com/embed/16fe0bb14e8f96442c7b7a0cde97e651",
       "13": "https://getplay-cdn.com/embed/a99fc21853cad50153edc9eee3a38af5",
-      "14": "https://getplay-cdn.com/embed/94da9ea80713d4c9323069590edef889"
+      "14": "https://getplay-cdn.com/embed/94da9ea80713d4c9323069590edef889",
+      "15": "https://getplay-cdn.com/embed/9cba4a7987b8b47dc22e088b394b09d9"
     },
     "languages": [
       "Thai (พากย์ไทย)"
@@ -13135,63 +14046,6 @@ window.movies = [
     "id": "wow-109047",
     "postId": "109047",
     "originalUrl": "https://wow-drama.com/lovex3-2026/"
-  },
-  {
-    "titleTh": "Fool in Love (2026) คนโง่รักเข(ล)า (Uncut) จบ",
-    "titleEn": "Fool in Love (2026) คนโง่รักเข(ล)า (Uncut) ตอนที่ 1-20 จบ",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-108726.jpg",
-    "backdrop": "images/clean_posters/wow-108726.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/f703234890f7c58249957eb0fc520bae",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ไทย Fool in Love (2026) คนโง่รักเข(ล)า พระเอกในตอนนี้นั้นเข้าหานายเอกด้วยความไม่จริงใจเมื่อความลับถูกเปิดเผยจะทำอย่างไรต้องติดตามชม",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ละครไทย",
-      "ละครไทย ย้อนหลัง",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 13 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9",
-      "ตอนที่ 10",
-      "ตอนที่ 11",
-      "ตอนที่ 12",
-      "ตอนที่ 13"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/f703234890f7c58249957eb0fc520bae",
-      "2": "https://getplay-cdn.com/embed/7e542eac0e8854b75b9e0d21416c892d",
-      "3": "https://getplay-cdn.com/embed/72e69a75ac9d28cce5811f4d2a67a17c",
-      "4": "https://getplay-cdn.com/embed/8773528ac22dfd39f04ba4f9beaed198",
-      "5": "https://getplay-cdn.com/embed/14f74c53088a39bdb1e8431eb945cf97",
-      "6": "https://getplay-cdn.com/embed/ef038d7616e60873d7ecac64680e6bba",
-      "7": "https://getplay-cdn.com/embed/08ff517c5cfe8e116327f49ac6fafff2",
-      "8": "https://getplay-cdn.com/embed/0ca8f2739907ed2e077a6d9fa5a2ed9c",
-      "9": "https://getplay-cdn.com/embed/f8fa9972883cacae13b2d34ecef3a405",
-      "10": "https://getplay-cdn.com/embed/3b7a39d6b31c54e244626a5b5b60110d",
-      "11": "https://getplay-cdn.com/embed/f4a0506e18b2a4e8403e920cdea5f505",
-      "12": "https://getplay-cdn.com/embed/99d0be46509b5cda1e7c0ff63222acee",
-      "14": "https://getplay-cdn.com/embed/d9914aefb6d630457db70bf74bc2a3a2"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-108726",
-    "postId": "108726",
-    "originalUrl": "https://wow-drama.com/fool-in-love-2026/"
   },
   {
     "titleTh": "Third Person (2026) ถ้อยรัก คำลวง",
@@ -13209,7 +14063,7 @@ window.movies = [
       "ละครไทย ย้อนหลัง",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 9 ตอนจบ",
+    "duration": "ซีรีส์ 10 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -13222,7 +14076,8 @@ window.movies = [
       "ตอนที่ 6",
       "ตอนที่ 7",
       "ตอนที่ 8",
-      "ตอนที่ 9"
+      "ตอนที่ 9",
+      "ตอนที่ 10"
     ],
     "episodeUrls": {
       "1": "https://getplay-cdn.com/embed/ae8f02d3657b37fe9797189c21a7f137",
@@ -13230,6 +14085,7 @@ window.movies = [
       "3": "https://getplay-cdn.com/embed/2724a08b0dca8cb9db6afcf40a999bb1",
       "4": "https://getplay-cdn.com/embed/d77fd06b0ee03fbaf314c1af8518d570",
       "5": "https://getplay-cdn.com/embed/b584cafda8ec2864272ed042b887a2f5",
+      "6": "https://getplay-cdn.com/embed/526e5031db8551d5f595afd30d019c3c",
       "7": "https://getplay-cdn.com/embed/17a7f07f6cccc900fc0a14d8fdf3f413",
       "8": "https://getplay-cdn.com/embed/0ce2e76a8b574fb0b63620bae57141e3",
       "9": "https://getplay-cdn.com/embed/3c8898bddfcad70ba5d023e4f1959f14",
@@ -13385,7 +14241,7 @@ window.movies = [
       "ละครไทย ย้อนหลัง",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 9 ตอนจบ",
+    "duration": "ซีรีส์ 10 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -13398,7 +14254,8 @@ window.movies = [
       "ตอนที่ 6",
       "ตอนที่ 7",
       "ตอนที่ 8",
-      "ตอนที่ 9"
+      "ตอนที่ 9",
+      "ตอนที่ 10"
     ],
     "episodeUrls": {
       "1": "https://getplay-cdn.com/embed/6a7b9500679f86789d0dea3176393e2f",
@@ -13409,7 +14266,8 @@ window.movies = [
       "6": "https://getplay-cdn.com/embed/d45b77844ae22643c273a573e8235b54",
       "7": "https://getplay-cdn.com/embed/abf77cfc3a3cb971370cf3914bb999ac",
       "8": "https://getplay-cdn.com/embed/ee75fa9397d1529e282723fdb190dc3d",
-      "9": "https://getplay-cdn.com/embed/fc06bfad3b5f509a1fdc27503234e312"
+      "9": "https://getplay-cdn.com/embed/fc06bfad3b5f509a1fdc27503234e312",
+      "10": "https://getplay-cdn.com/embed/ee450f96c20d989620cfd58fa5db130e"
     },
     "languages": [
       "Thai (พากย์ไทย)"
@@ -13471,7 +14329,7 @@ window.movies = [
       "ละครไทย ย้อนหลัง",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 9 ตอนจบ",
+    "duration": "ซีรีส์ 10 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -13484,7 +14342,8 @@ window.movies = [
       "ตอนที่ 6",
       "ตอนที่ 7",
       "ตอนที่ 8",
-      "ตอนที่ 9"
+      "ตอนที่ 9",
+      "ตอนที่ 10"
     ],
     "episodeUrls": {
       "1": "https://getplay-cdn.com/embed/47aeac59bc217f953038431a16ec84f0",
@@ -13495,7 +14354,8 @@ window.movies = [
       "6": "https://getplay-cdn.com/embed/56a7fabd5257c0b0f7101036a0f48374",
       "7": "https://getplay-cdn.com/embed/8919b282bbd003d09cd75dfdacd8bf55",
       "8": "https://getplay-cdn.com/embed/92e6af663069b89c31a76ca3aefb8f10",
-      "9": "https://getplay-cdn.com/embed/88265d110b97cad20b0d23d0b7dcefec"
+      "9": "https://getplay-cdn.com/embed/88265d110b97cad20b0d23d0b7dcefec",
+      "10": "https://getplay-cdn.com/embed/f59ed5b61d094d82efb171448fe64b66"
     },
     "languages": [
       "Thai (พากย์ไทย)"
@@ -13542,6 +14402,43 @@ window.movies = [
     "id": "wow-111623",
     "postId": "111623",
     "originalUrl": "https://wow-drama.com/lovers-gangsters-2026/"
+  },
+  {
+    "titleTh": "Love Me to Hurt Me (2026) รัก = ร้าย",
+    "titleEn": "Love Me to Hurt Me (2026) รัก = ร้าย ตอนที่ 1-8",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-111713.jpg",
+    "backdrop": "images/clean_posters/wow-111713.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/f315129b814a94461af86c8b470e9b1c",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ไทย Love Me to Hurt Me (2026) รัก = ร้าย นางเอกในตอนนี้นั้นได้มีโอกาสกลับมาเจอรักเก่าอีกครั้งจึงพยามที่จะแก้แค้นเขาให้ได้ต้องติดตาม",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ละครไทย",
+      "ละครไทย ย้อนหลัง",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 3 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/f315129b814a94461af86c8b470e9b1c",
+      "2": "https://getplay-cdn.com/embed/4a08309222852513d9286b383fcbcfc0",
+      "3": "https://getplay-cdn.com/embed/f9aaaca5c8165c50117b000a0b6551cd"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-111713",
+    "postId": "111713",
+    "originalUrl": "https://wow-drama.com/love-me-to-hurt-me-2026/"
   },
   {
     "titleTh": "เลิฟรัก ฮักข้าวซอย Love @ Fifty First Bite (2026)",
@@ -13614,378 +14511,6 @@ window.movies = [
     "id": "wow-111835",
     "postId": "111835",
     "originalUrl": "https://wow-drama.com/the-outlaws-hidden-legends-2026/"
-  },
-  {
-    "titleTh": "Love on Hire (2026) รับจ้างเลิกรัก",
-    "titleEn": "Love on Hire (2026) รับจ้างเลิกรัก",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-110225.jpg",
-    "backdrop": "images/clean_posters/wow-110225.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/635b3e839e15b3cbb0f82ca8bacc82cd",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ไทย Love on Hire (2026) รับจ้างเลิกรัก นางเอกในตอนนี้นั้นพยายามอย่างมากในการจับตาดูผู้หญิงคนหนึ่งที่พังงานแต่งของตัวเองต้องติดตามชม",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ละครไทย",
-      "ละครไทย ย้อนหลัง",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 6 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/635b3e839e15b3cbb0f82ca8bacc82cd",
-      "2": "https://getplay-cdn.com/embed/f60e55b09f8e7b3991dac6692576ad92",
-      "3": "https://getplay-cdn.com/embed/98b80fdd31c924d7cef4d38a1a812d4e",
-      "4": "https://getplay-cdn.com/embed/459922d48a4f52239bf09239a22e98a4",
-      "5": "https://getplay-cdn.com/embed/58c0e4bb3965582a4b1a905ed06684e5",
-      "6": "https://getplay-cdn.com/embed/7988633e7aa1b1930d42718f1fa8d476"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-110225",
-    "postId": "110225",
-    "originalUrl": "https://wow-drama.com/love-on-hire-2026/"
-  },
-  {
-    "titleTh": "Motherland (2026) เก็บแผ่นดิน ( )",
-    "titleEn": "Motherland (2026) เก็บแผ่นดิน EP.1-24 (เต็มเรื่อง)",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-110692.jpg",
-    "backdrop": "images/clean_posters/wow-110692.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/ca64539b8fe48abadf2e10262aef9db7",
-    "sourceType": "embed",
-    "description": "ละครไทย Motherland (2026) เก็บแผ่นดิน พระเอกในตอนนี้นั้นสูญเสียคนที่ตัวเองรักไปถึงสองคนทำให้เขานั้นปิดใจและเสียใจเป็นอย่างมากต้องติดตามชม",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ละครไทย",
-      "ละครไทย ย้อนหลัง",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 9 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/ca64539b8fe48abadf2e10262aef9db7",
-      "2": "https://getplay-cdn.com/embed/28103df831855d2a00b1f087509eb330",
-      "3": "https://getplay-cdn.com/embed/9f9ab13e459e0e72e2a885a81c403a45",
-      "4": "https://getplay-cdn.com/embed/e88c50d24610c0821c5825e2f01756c4",
-      "5": "https://getplay-cdn.com/embed/be2f13e5943c37715325886e111ba119",
-      "6": "https://getplay-cdn.com/embed/3ca08e1d918c1dc8b7b5310523518777",
-      "7": "https://getplay-cdn.com/embed/afcfb980b6348a2d0cd9fd111ddab2f3",
-      "8": "https://getplay-cdn.com/embed/3ae642d7255f07c1f85fb165dac83901",
-      "9": "https://getplay-cdn.com/embed/8c4b679bfc5c8366762bb884f72fe20d"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-110692",
-    "postId": "110692",
-    "originalUrl": "https://wow-drama.com/motherland-2026/"
-  },
-  {
-    "titleTh": "The Chemistry (2026) จ๊าบเจน",
-    "titleEn": "The Chemistry (2026) จ๊าบเจน",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-110708.jpg",
-    "backdrop": "images/clean_posters/wow-110708.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/e1685f43b5634a046347676bbd477088",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ไทย The Chemistry (2026) จ๊าบเจน พระเอกตกหลุมรักนางเอกตั้งแต่เราเห็นด้วยความที่มีนิสัยที่แตกต่างกันแต่ก็ดันเจอเรื่องเข้าต้องติดตามชม",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ละครไทย",
-      "ละครไทย ย้อนหลัง",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 4 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/e1685f43b5634a046347676bbd477088",
-      "2": "https://getplay-cdn.com/embed/1df1dd4ca82594a4fe9aaa46451eaa7e",
-      "3": "https://getplay-cdn.com/embed/759cbc46bf0dc425bfc661364f86115e",
-      "4": "https://getplay-cdn.com/embed/9eaf94cd2a65c04470497dfd84c907cc"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-110708",
-    "postId": "110708",
-    "originalUrl": "https://wow-drama.com/the-chemistry-2026/"
-  },
-  {
-    "titleTh": "Scarlet Heart Ullavee (2026) ปาฏิหาริย์ข้ามกาลเวลา",
-    "titleEn": "Scarlet Heart Ullavee (2026) ปาฏิหาริย์ข้ามกาลเวลา",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-111150.jpg",
-    "backdrop": "images/clean_posters/wow-111150.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/1d69ec3d5d06d5c0c2ac96d457b95301",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ Scarlet Heart Ullavee ปาฏิหาริย์ข้ามกาลเวลา นางเอกในตอนนี้นั้นพยายามที่จะเอาตัวรอดจากเมืองแห่งนี้ไปให้ได้แม้ว่าจะเป็นเรื่องที่ยากก็ตาม",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ละครไทย",
-      "ละครไทย ย้อนหลัง",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 6 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/1d69ec3d5d06d5c0c2ac96d457b95301",
-      "2": "https://getplay-cdn.com/embed/5731f221891b5784559433788122b9d8",
-      "3": "https://getplay-cdn.com/embed/89bfe705f5d5500f94f9250195b5c257",
-      "4": "https://getplay-cdn.com/embed/2f514c8393f2fe814badfba86b3cd97d",
-      "5": "https://getplay-cdn.com/embed/36bb33513111449619bedaf323c2dfbf",
-      "6": "https://getplay-cdn.com/embed/20521c9d533e0f011908271fff6abc2e"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-111150",
-    "postId": "111150",
-    "originalUrl": "https://wow-drama.com/scarlet-heart-ullavee-2026/"
-  },
-  {
-    "titleTh": "My Chef in Crime (2026) เหตุเกิดที่คุณเชฟ",
-    "titleEn": "My Chef in Crime (2026) เหตุเกิดที่คุณเชฟ",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-111749.jpg",
-    "backdrop": "images/clean_posters/wow-111749.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/a45fca2e48ed11722dbe2f2f367caf61",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์My Chef in Crime (2026) เหตุเกิดที่คุณเชฟ นางเอกในตอนนี้นั้นได้เข้ามาช่วยเหลือเพื่อนตัวเองที่กำลังโดนกล่าวหาว่าเป็นฆาตกรในคดีฆาตกรรม",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ละครไทย",
-      "ละครไทย ย้อนหลัง",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 5 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/a45fca2e48ed11722dbe2f2f367caf61",
-      "2": "https://getplay-cdn.com/embed/4507b8be207c1726c06af6505c9b6b1d",
-      "3": "https://getplay-cdn.com/embed/6cb3b5e4528af157cdfd7b1c16414047",
-      "4": "https://getplay-cdn.com/embed/322c1ab3bab62facf39493b2ad429737",
-      "5": "https://getplay-cdn.com/embed/03783eb12130ce838ae612a8aff8e281"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-111749",
-    "postId": "111749",
-    "originalUrl": "https://wow-drama.com/my-chef-in-crime-2026/"
-  },
-  {
-    "titleTh": "Built in Love (2026) ก่อร่างสร้างเลิฟ",
-    "titleEn": "Built in Love (2026) ก่อร่างสร้างเลิฟ ตอนที่ 1-10",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-110219.jpg",
-    "backdrop": "images/clean_posters/wow-110219.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/69bb385393caf736f9c8607f99d08d46",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ Built in Love ก่อร่างสร้างเลิฟ เมื่อหญิงสาวที่ไม่ถูกชะตากันต้องมาทำงานร่วมกันพวกเขาจะเจอกับอุปสรรคอย่างไรในการ ทำโปรเจกต์ร่วมกัน",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ละครไทย",
-      "ละครไทย ย้อนหลัง",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 5 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/69bb385393caf736f9c8607f99d08d46",
-      "2": "https://getplay-cdn.com/embed/68d57e5696667141a695321886829149",
-      "3": "https://getplay-cdn.com/embed/0a0130404b8070be13d737767dcad6af",
-      "4": "https://getplay-cdn.com/embed/52bcb0caab5b7cc9c471b6f07410bf73",
-      "5": "https://getplay-cdn.com/embed/9ab3ba0867a9d02aca32a21ad6331664"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-110219",
-    "postId": "110219",
-    "originalUrl": "https://wow-drama.com/built-in-love-2026/"
-  },
-  {
-    "titleTh": "ตะวันลวง Beneath the Lies (2026)",
-    "titleEn": "- ตะวันลวง Beneath the Lies (2026) EP.1-16",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-108704.jpg",
-    "backdrop": "images/clean_posters/wow-108704.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/ea259a2a043316a4be437fbb11fbed23",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ไทย ตะวันลวง Beneath the Lies (2026) นางเอกเข้ามาในสองพี่น้องนั้นทุกอย่างเริ่มเปลี่ยนแปลงไปจากเดิมที่เคยเป็นจะเป็นอย่างไรต้องติดตามชม",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ละครไทย",
-      "ละครไทย ย้อนหลัง",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 13 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9",
-      "ตอนที่ 10",
-      "ตอนที่ 11",
-      "ตอนที่ 12",
-      "ตอนที่ 13"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/ea259a2a043316a4be437fbb11fbed23",
-      "2": "https://getplay-cdn.com/embed/92613e619521531e56916d35de422bfa",
-      "3": "https://getplay-cdn.com/embed/1b68c81b233dae30574d39f5f4149cfa",
-      "4": "https://getplay-cdn.com/embed/73fc424e20b61ab1ed3196c70bd0b194",
-      "5": "https://getplay-cdn.com/embed/6e06343f54cd8e45a044586b2a6efb42",
-      "6": "https://getplay-cdn.com/embed/160288295cb3f5f4aac0e46d7f0124df",
-      "7": "https://getplay-cdn.com/embed/d0b1e28ff79005c050605756c80141ce",
-      "8": "https://getplay-cdn.com/embed/358e594452d56d37b18253df39ce12be",
-      "9": "https://getplay-cdn.com/embed/03eedf3b9e16c5a2a338e423461134a8",
-      "10": "https://getplay-cdn.com/embed/eb066d2e713674e2b8f10dbff4483638",
-      "11": "https://getplay-cdn.com/embed/31fa645e38ebb6c0deb85a368d731d60",
-      "12": "https://getplay-cdn.com/embed/382fd507627ddb2cdcb057db52c6a45e",
-      "13": "https://getplay-cdn.com/embed/f0de4d8011f2820a9130a55a2a690988"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-108704",
-    "postId": "108704",
-    "originalUrl": "https://wow-drama.com/beneath-the-lies-2026/"
-  },
-  {
-    "titleTh": "The Soulmate Rings (2026) แหวนรักข้ามเวลา",
-    "titleEn": "The Soulmate Rings (2026) แหวนรักข้ามเวลา",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-108709.jpg",
-    "backdrop": "images/clean_posters/wow-108709.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/0345e8b76e251fbdae68a4f01922cba4",
-    "sourceType": "embed",
-    "description": "ละครไทย The Soulmate Rings (2026) แหวนรักข้ามเวลา พระเอกในตอนนี้นั้นได้ยันเวลากลับไปในช่วงสมัยสงครามโลกครั้งที่สองเช่นเดียวกันกับนางเอก",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ละครไทย",
-      "ละครไทย ย้อนหลัง",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 14 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9",
-      "ตอนที่ 10",
-      "ตอนที่ 11",
-      "ตอนที่ 12",
-      "ตอนที่ 13",
-      "ตอนที่ 14"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/0345e8b76e251fbdae68a4f01922cba4",
-      "2": "https://getplay-cdn.com/embed/70a11dd1428becf4fc62e2f989287500",
-      "3": "https://getplay-cdn.com/embed/a85db4746ff880db718715531c9a4304",
-      "4": "https://getplay-cdn.com/embed/e83a9acd92b622c528735bb78c577de0",
-      "5": "https://getplay-cdn.com/embed/800368d7b4b745440ebd0ea52f681b6d",
-      "6": "https://getplay-cdn.com/embed/57e65131b6e38abcf1a771f72b7dfc04",
-      "7": "https://getplay-cdn.com/embed/8ceaa45e75c899a3dcfd5493581ae990",
-      "8": "https://getplay-cdn.com/embed/7196bb82807f15e8c0eec0c22089a3c7",
-      "9": "https://getplay-cdn.com/embed/c90b2adf0c1d24629d295554798f7a8b",
-      "10": "https://getplay-cdn.com/embed/cac8c64c15341580eea65f4f46d5fbb6",
-      "11": "https://getplay-cdn.com/embed/c372c315604a1497295ff57a3272f35a",
-      "12": "https://getplay-cdn.com/embed/3843eba262d6afb703ee591985033edb",
-      "13": "https://getplay-cdn.com/embed/bdaf70ac727503e6f3dfc7768c1a5add",
-      "14": "https://getplay-cdn.com/embed/8d1345ac8fb1289a1bdbebfa2eaaffa4"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-108709",
-    "postId": "108709",
-    "originalUrl": "https://wow-drama.com/the-soulmate-rings-2026/"
   },
   {
     "titleTh": "สำรับฆาตกร Murder in The Kitchen (2026)",
@@ -14288,22 +14813,22 @@ window.movies = [
     "originalUrl": "https://wow-drama.com/the-legacy-2026/"
   },
   {
-    "titleTh": "มเหสีน้อย Oops! I'm the Concubine (2026)",
-    "titleEn": "มเหสีน้อย - Oops! I'm the Concubine (2026)",
+    "titleTh": "River of No Return (2026) สองนครสิบห้าวัน",
+    "titleEn": "River of No Return (2026) สองนครสิบห้าวัน",
     "year": 2026,
-    "poster": "images/clean_posters/wow-111721.jpg",
-    "backdrop": "images/clean_posters/wow-111721.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/f5cc77f2a02e732a8cfaec7b997dd29b",
+    "poster": "images/clean_posters/wow-112875.jpg",
+    "backdrop": "images/clean_posters/wow-112875.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/84894ee2f8ab882cd76bbde1d75f2c1f",
     "sourceType": "embed",
-    "description": "ซีรี่ส์ไทย มเหสีน้อย Oops! I&#039;m the Concubine (2026) นางเอกในตอนนี้นั้นตัดสินใจที่จะเข้าวังหลวงเพื่อคัดเลือกเป็นมเหสีแต่ก็ดันผิดแผนต้องติดตาม",
+    "description": "ซีรี่ส์จีน River of No Return (2026) สองนครสิบห้าวันพากย์ไทยพระเอกในตอนนี้นั้นกำลังเดินทางเพื่อไปยังเมืองหลวงเพราะได้ทราบข่าวร้าย",
     "rating": 8.7,
     "genres": [
       "พากย์ไทย",
-      "ละครไทย",
-      "ละครไทย ย้อนหลัง",
+      "ซีรีส์จีน",
+      "ซีรีส์จีน พากย์ไทย",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 13 ตอนจบ",
+    "duration": "ซีรีส์ 14 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -14320,39 +14845,41 @@ window.movies = [
       "ตอนที่ 10",
       "ตอนที่ 11",
       "ตอนที่ 12",
-      "ตอนที่ 13"
+      "ตอนที่ 13",
+      "ตอนที่ 14"
     ],
     "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/f5cc77f2a02e732a8cfaec7b997dd29b",
-      "2": "https://getplay-cdn.com/embed/8bf9c34c23f258a83f8317a770204479",
-      "3": "https://getplay-cdn.com/embed/d619e42f71d7da7188991015726a130b",
-      "4": "https://getplay-cdn.com/embed/d30e690542d6ba4309f1b3a2faf08458",
-      "5": "https://getplay-cdn.com/embed/49775710573fa2de589a77cffa6ea45a",
-      "6": "https://getplay-cdn.com/embed/eeb23c6256f692af6dbf953ad27ba61a",
-      "7": "https://getplay-cdn.com/embed/007d1451aba98ee8b180c32152ae0741",
-      "8": "https://getplay-cdn.com/embed/69fc412d36d1d2f71b3423204d7d4d83",
-      "9": "https://getplay-cdn.com/embed/ae91fae61dd412ca747a82da1ba75b96",
-      "10": "https://getplay-cdn.com/embed/bbbc4d2cce8eee3a729f426cf6bc6560",
-      "11": "https://getplay-cdn.com/embed/b4fc53e0fc44719923ffb441d64b72c6",
-      "12": "https://getplay-cdn.com/embed/ea3d2884199c23c4510727d1efaae40b",
-      "13": "https://getplay-cdn.com/embed/9f0210e8817a36080582368c63c3ea65"
+      "1": "https://getplay-cdn.com/embed/84894ee2f8ab882cd76bbde1d75f2c1f",
+      "2": "https://getplay-cdn.com/embed/2f99aff7813e62cb149c494cfdb3d434",
+      "3": "https://getplay-cdn.com/embed/3ba46405ec146169f4ddde541c57d138",
+      "4": "https://getplay-cdn.com/embed/8a063e8bd3f62a27b282f031e1d2411a",
+      "5": "https://getplay-cdn.com/embed/dfe4ac3c56da868937aec8380f2af837",
+      "6": "https://getplay-cdn.com/embed/2717ac29f25a044680edac65e88f7d10",
+      "7": "https://getplay-cdn.com/embed/e84e4ecc422b3cb1dfc208068a56363a",
+      "8": "https://getplay-cdn.com/embed/194deef49f28c87663d3eafda78fbe95",
+      "9": "https://getplay-cdn.com/embed/a4d3ee825915b411afb45a7acbb7615e",
+      "10": "https://getplay-cdn.com/embed/4f474113ca7a12cf913b53a7fb8ea7a7",
+      "11": "https://getplay-cdn.com/embed/a9d50be10a0d274e9fca597787c4e396",
+      "12": "https://getplay-cdn.com/embed/ed7fadc5c9e509336696afc5dbe29880",
+      "13": "https://getplay-cdn.com/embed/17aaf561434b38f9329f60d81d045da2",
+      "14": "https://getplay-cdn.com/embed/30533118625d94e2ea54b6fd5bf8bf51"
     },
     "languages": [
       "Thai (พากย์ไทย)"
     ],
-    "id": "wow-111721",
-    "postId": "111721",
-    "originalUrl": "https://wow-drama.com/oops-im-the-concubine-2026/"
+    "id": "wow-112875",
+    "postId": "112875",
+    "originalUrl": "https://wow-drama.com/river-of-no-return-2026/"
   },
   {
-    "titleTh": "River of No Return (2026) สองนครสิบห้าวัน",
-    "titleEn": "River of No Return (2026) สองนครสิบห้าวัน",
+    "titleTh": "Vow of Autumn ฝากรักปลายฤดูใบไม้ร่วง",
+    "titleEn": "Vow of Autumn ฝากรักปลายฤดูใบไม้ร่วง",
     "year": 2026,
-    "poster": "images/clean_posters/wow-112875.jpg",
-    "backdrop": "images/clean_posters/wow-112875.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/84894ee2f8ab882cd76bbde1d75f2c1f",
+    "poster": "images/clean_posters/wow-112245.jpg",
+    "backdrop": "images/clean_posters/wow-112245.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/702218cfd5e4bf176b62e6d1c78d2da0",
     "sourceType": "embed",
-    "description": "ซีรี่ส์จีน River of No Return (2026) สองนครสิบห้าวันพากย์ไทยพระเอกในตอนนี้นั้นกำลังเดินทางเพื่อไปยังเมืองหลวงเพราะได้ทราบข่าวร้าย",
+    "description": "ซีรี่ส์ Vow of Autumn ฝากรักปลายฤดูใบไม้ร่วง นางเอกตัดสินใจที่จะเปิดใจอีกครั้งหลังได้มีโอกาสมารู้จักกับพระเอกในฐานะน้องชายเพื่อนสนิท",
     "rating": 8.7,
     "genres": [
       "พากย์ไทย",
@@ -14360,7 +14887,44 @@ window.movies = [
       "ซีรีส์จีน พากย์ไทย",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 6 ตอนจบ",
+    "duration": "ซีรีส์ 3 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/702218cfd5e4bf176b62e6d1c78d2da0",
+      "2": "https://getplay-cdn.com/embed/a5cff880fc38dac87eb4a72ebd0ecacc",
+      "3": "https://getplay-cdn.com/embed/d7e719f29b807772e8562f296ee1e116"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-112245",
+    "postId": "112245",
+    "originalUrl": "https://wow-drama.com/vow-of-autumn-2026/"
+  },
+  {
+    "titleTh": "Small Town Remedy (2026) วอร์ดรักฮีลใจ",
+    "titleEn": "Small Town Remedy (2026) วอร์ดรักฮีลใจ",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-110008.jpg",
+    "backdrop": "images/clean_posters/wow-110008.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/7eaf76cc86d4dd1c11d0aec98a10a27d",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ Small Town Remedy (2026) วอร์ดรักฮีลใจ พระเอกในตอนนี้นั้นตัดสินใจที่จะกลับมาที่บ้านของตัวเองเพื่อทำงานต่อในท้องถิ่นต้องติดตาม",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ซีรีส์จีน",
+      "ซีรีส์จีน พากย์ไทย",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 29 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -14370,22 +14934,68 @@ window.movies = [
       "ตอนที่ 3",
       "ตอนที่ 4",
       "ตอนที่ 5",
-      "ตอนที่ 6"
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13",
+      "ตอนที่ 14",
+      "ตอนที่ 15",
+      "ตอนที่ 16",
+      "ตอนที่ 17",
+      "ตอนที่ 18",
+      "ตอนที่ 19",
+      "ตอนที่ 20",
+      "ตอนที่ 21",
+      "ตอนที่ 22",
+      "ตอนที่ 23",
+      "ตอนที่ 24",
+      "ตอนที่ 25",
+      "ตอนที่ 26",
+      "ตอนที่ 27",
+      "ตอนที่ 28",
+      "ตอนที่ 29"
     ],
     "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/84894ee2f8ab882cd76bbde1d75f2c1f",
-      "2": "https://getplay-cdn.com/embed/2f99aff7813e62cb149c494cfdb3d434",
-      "3": "https://getplay-cdn.com/embed/3ba46405ec146169f4ddde541c57d138",
-      "4": "https://getplay-cdn.com/embed/8a063e8bd3f62a27b282f031e1d2411a",
-      "5": "https://getplay-cdn.com/embed/dfe4ac3c56da868937aec8380f2af837",
-      "6": "https://getplay-cdn.com/embed/2717ac29f25a044680edac65e88f7d10"
+      "1": "https://torbo007.com/embed/3cff907572e4bab58c0ef604cfc5d453",
+      "2": "https://torbo007.com/embed/e42889459d24470dea636d99b2a21cf9",
+      "3": "https://torbo007.com/embed/fc5da3ea36732156c33f1dbd1d8ba1d5",
+      "4": "https://torbo007.com/embed/bb06d7e11a8043327066a952de89c87f",
+      "5": "https://torbo007.com/embed/6241ca67fe7befa3676fdbd210759f7f",
+      "6": "https://torbo007.com/embed/9fc96e6a8d7476e6264e33ab4641f6e5",
+      "7": "https://torbo007.com/embed/8cd4cc62027d9ce694ea00a226cb2bd2",
+      "8": "https://torbo007.com/embed/e19682bc9df69fc9c1ec5010f27d44d6",
+      "9": "https://torbo007.com/embed/36d5cfc73e069e36c1fd56c065e1203f",
+      "10": "https://torbo007.com/embed/98e3d40088b592eed8cc1e4ff87db491",
+      "11": "https://torbo007.com/embed/629b78c7332a31af381bd53e02f72a0c",
+      "12": "https://torbo007.com/embed/336d06f6ba3232429144b5a18b698064",
+      "13": "https://torbo007.com/embed/0ab2813a99d499a35b78d1ec1dfccc7b",
+      "14": "https://torbo007.com/embed/7f98f0cd18391bade8666332b96565b5",
+      "15": "https://torbo007.com/embed/b1e679adb9b1899d1451a5e10c313ad1",
+      "16": "https://torbo007.com/embed/ae710cdce0a8d19203de2a56d54d7ebd",
+      "17": "https://torbo007.com/embed/6fb7237619cc239cb0e072eef9111482",
+      "18": "https://torbo007.com/embed/130c3082078be8265e5548a98a41562e",
+      "19": "https://torbo007.com/embed/9a0c7a44b0a4d50a22a89cdd37086d05",
+      "20": "https://torbo007.com/embed/8ed44b25b27ea1471d90142b40dd6460",
+      "21": "https://torbo007.com/embed/08030aa07544d12c641019884459c5b9",
+      "22": "https://torbo007.com/embed/7766ab14b57d94a0fc3d5a7c9c64ea64",
+      "23": "https://torbo007.com/embed/075235eaa958dd6b837d1c1aa5bae6ea",
+      "24": "https://torbo007.com/embed/8aba804fac7b5f0efbc00e4bb40bc8f4",
+      "25": "https://torbo007.com/embed/13f0b6eec2178c2e549355569ba9dad6",
+      "26": "https://torbo007.com/embed/74ed0cddfed1ceaf843a69a3d3562b18",
+      "27": "https://torbo007.com/embed/04659fd49ce0d8646de952c065f41462",
+      "28": "https://torbo007.com/embed/203c5d7b54badac804309e9463d78d6c",
+      "29": "https://torbo007.com/embed/8ee4e806ac76ec38d3fb363bcc53c1b8"
     },
     "languages": [
       "Thai (พากย์ไทย)"
     ],
-    "id": "wow-112875",
-    "postId": "112875",
-    "originalUrl": "https://wow-drama.com/river-of-no-return-2026/"
+    "id": "wow-110008",
+    "postId": "110008",
+    "originalUrl": "https://wow-drama.com/small-town-remedy-2026/"
   },
   {
     "titleTh": "When I Meet the Moon เอื้อมรักคว้าจันทร์",
@@ -15318,6 +15928,41 @@ window.movies = [
     "originalUrl": "https://wow-drama.com/life-after-life-2024/"
   },
   {
+    "titleTh": "Nine to Six (2026) เมื่อหัวใจเริ่มทำงาน",
+    "titleEn": "Nine to Six (2026) เมื่อหัวใจเริ่มทำงาน",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-113322.jpg",
+    "backdrop": "images/clean_posters/wow-113322.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/deb905b68b3a97d55a7f546df06ed6df",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ Nine to Six (2026) เมื่อหัวใจเริ่มทำงานพากย์ไทยนางเอกเธอเป็นผู้จัดการฝ่ายกฎหมายสาวที่ให้ความสำคัญกับงานเป็นสิ่งแรกและไม่",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ซีรีส์เกาหลี",
+      "ซีรีส์เกาหลี พากย์ไทย",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 2 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/deb905b68b3a97d55a7f546df06ed6df",
+      "2": "https://getplay-cdn.com/embed/300f7e896c0fe1810945847b1a93dca1"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-113322",
+    "postId": "113322",
+    "originalUrl": "https://wow-drama.com/nine-to-six-2026/"
+  },
+  {
     "titleTh": "การแต่งงานครั้งใหม่ของจักรพรรดินี (2026)",
     "titleEn": "การแต่งงานครั้งใหม่ของจักรพรรดินี (2026)",
     "year": 2026,
@@ -15333,7 +15978,7 @@ window.movies = [
       "ซีรีส์เกาหลี พากย์ไทย",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 16 ตอนจบ",
+    "duration": "ซีรีส์ 20 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -15353,7 +15998,11 @@ window.movies = [
       "ตอนที่ 13",
       "ตอนที่ 14",
       "ตอนที่ 15",
-      "ตอนที่ 16"
+      "ตอนที่ 16",
+      "ตอนที่ 17",
+      "ตอนที่ 18",
+      "ตอนที่ 19",
+      "ตอนที่ 20"
     ],
     "episodeUrls": {
       "1": "https://getplay-cdn.com/embed/8c1704756f0fe267e26eadedf8573972",
@@ -15364,14 +16013,18 @@ window.movies = [
       "6": "https://getplay-cdn.com/embed/a4baccd90fa476e09fc7631c263a4c23",
       "7": "https://getplay-cdn.com/embed/bc99b90abc60256ce9aebb2f8cefd3fa",
       "8": "https://getplay-cdn.com/embed/f830a2854989b4f70b46550577fe9762",
-      "9": "https://getplay-cdn.com/embed/c5b7a59f68d52cf73a5f304e41699b01",
-      "10": "https://getplay-cdn.com/embed/975660f3125b54479654ebab2c37f8b8",
-      "11": "https://getplay-cdn.com/embed/09f8b8c0ddca4a186500a581f41a6da7",
-      "12": "https://getplay-cdn.com/embed/61945555884dba9e222d4e392087a7be",
-      "13": "https://getplay-cdn.com/embed/f3342b078818daefa76433a9ffdb197f",
-      "14": "https://getplay-cdn.com/embed/9155bfeec02c82056c15d25e2b9eba1e",
-      "15": "https://getplay-cdn.com/embed/d0321c6fd914d947ef8109a97508f9ff",
-      "16": "https://getplay-cdn.com/embed/2faef8ac26a54f49b30337b0c333518a"
+      "9": "https://getplay-cdn.com/embed/fcb339dd8fafd308b7d330d3a806a74d",
+      "10": "https://getplay-cdn.com/embed/751ac1695a2d747dc10ebe8852c8a29e",
+      "11": "https://getplay-cdn.com/embed/c5b7a59f68d52cf73a5f304e41699b01",
+      "12": "https://getplay-cdn.com/embed/975660f3125b54479654ebab2c37f8b8",
+      "13": "https://getplay-cdn.com/embed/09f8b8c0ddca4a186500a581f41a6da7",
+      "14": "https://getplay-cdn.com/embed/61945555884dba9e222d4e392087a7be",
+      "15": "https://getplay-cdn.com/embed/f3342b078818daefa76433a9ffdb197f",
+      "16": "https://getplay-cdn.com/embed/9155bfeec02c82056c15d25e2b9eba1e",
+      "17": "https://getplay-cdn.com/embed/d0321c6fd914d947ef8109a97508f9ff",
+      "18": "https://getplay-cdn.com/embed/2faef8ac26a54f49b30337b0c333518a",
+      "19": "https://getplay-cdn.com/embed/906507abfd647cee9322f1f6cec9ba43",
+      "20": "https://getplay-cdn.com/embed/ac71ade2c3880922f60f0289597718e5"
     },
     "languages": [
       "Thai (พากย์ไทย)"
@@ -15381,14 +16034,14 @@ window.movies = [
     "originalUrl": "https://wow-drama.com/the-remarried-empress-2026/"
   },
   {
-    "titleTh": "OK Let’s Get Divorced (2026) โอเคเราหย่ากันเถอะ",
-    "titleEn": "OK Let’s Get Divorced (2026) โอเคเราหย่ากันเถอะ",
+    "titleTh": "Recipe for Love (2026) สูตรรัก...สั่งใจให้รัก",
+    "titleEn": "Recipe for Love (2026) สูตรรัก...สั่งใจให้รัก",
     "year": 2026,
-    "poster": "images/clean_posters/wow-104047.jpg",
-    "backdrop": "images/clean_posters/wow-104047.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/7fce7bebdbaf5444c766f77733b87c45",
+    "poster": "images/clean_posters/wow-112088.jpg",
+    "backdrop": "images/clean_posters/wow-112088.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/ecfc486b7c8d91d29e72444fe5a593fd",
     "sourceType": "embed",
-    "description": "ซีรี่ส์ OK Let’s Get Divorced (2026) โอเคเราหย่ากันเถอะ พระเอกในตอนนี้นั้นพยายามที่จะทำอะไรบางอย่างเพื่อชีวิตคู่ตัวเองต้องติดตามชม",
+    "description": "ซีรี่ส์ Recipe for Love (2026) สูตรรัก...สั่งใจให้รัก นางเอกเกิดความลำบากลำบากใจมากๆหลังจากที่แม่ตัวเองพยายามที่จะให้เธอนั้นเป็นแพทย์ให้ได้",
     "rating": 8.7,
     "genres": [
       "พากย์ไทย",
@@ -15396,7 +16049,7 @@ window.movies = [
       "ซีรีส์เกาหลี พากย์ไทย",
       "ซีรีส์ใหม่ 2026"
     ],
-    "duration": "ซีรีส์ 24 ตอนจบ",
+    "duration": "ซีรีส์ 50 ตอนจบ",
     "trailerUrl": "",
     "cast": [],
     "source": "WOW-DRAMA",
@@ -15424,40 +16077,92 @@ window.movies = [
       "ตอนที่ 21",
       "ตอนที่ 22",
       "ตอนที่ 23",
-      "ตอนที่ 24"
+      "ตอนที่ 24",
+      "ตอนที่ 25",
+      "ตอนที่ 26",
+      "ตอนที่ 27",
+      "ตอนที่ 28",
+      "ตอนที่ 29",
+      "ตอนที่ 30",
+      "ตอนที่ 31",
+      "ตอนที่ 32",
+      "ตอนที่ 33",
+      "ตอนที่ 34",
+      "ตอนที่ 35",
+      "ตอนที่ 36",
+      "ตอนที่ 37",
+      "ตอนที่ 38",
+      "ตอนที่ 39",
+      "ตอนที่ 40",
+      "ตอนที่ 41",
+      "ตอนที่ 42",
+      "ตอนที่ 43",
+      "ตอนที่ 44",
+      "ตอนที่ 45",
+      "ตอนที่ 46",
+      "ตอนที่ 47",
+      "ตอนที่ 48",
+      "ตอนที่ 49",
+      "ตอนที่ 50"
     ],
     "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/7fce7bebdbaf5444c766f77733b87c45",
-      "2": "https://getplay-cdn.com/embed/f6585952017bb757c3d53f27dff11cbe",
-      "3": "https://getplay-cdn.com/embed/8970bbd6cdf82928309214cbc51239bd",
-      "4": "https://getplay-cdn.com/embed/5c02a55ef0b503c979bb7a6982d42206",
-      "5": "https://getplay-cdn.com/embed/1542f0000fc2f9c873c82b5213f6ed43",
-      "6": "https://getplay-cdn.com/embed/6b1add8c92c2c9fc735906b418c8fd3b",
-      "7": "https://getplay-cdn.com/embed/ac4ee40ef286815edfca355f1133bc16",
-      "8": "https://getplay-cdn.com/embed/aae3a0c991e1feea858d5e1ac2569e3a",
-      "9": "https://getplay-cdn.com/embed/3af7d4c54938096631e1f973d4e677c2",
-      "10": "https://getplay-cdn.com/embed/1b94f7baa24b452b83e07a3190203259",
-      "11": "https://getplay-cdn.com/embed/3acd1bdba3ac533b1779cd73a26299fa",
-      "12": "https://getplay-cdn.com/embed/21a764345f0d4b34f1d04f92849aad21",
-      "13": "https://getplay-cdn.com/embed/84415fc06510c3dcc310ac12a0826cd7",
-      "14": "https://getplay-cdn.com/embed/7bc39463fa8637154f66688f4b3f1d92",
-      "15": "https://getplay-cdn.com/embed/fbf047ef3c2f7b0c21e4d68f7d569164",
-      "16": "https://getplay-cdn.com/embed/8604629f38bf9b83cf09caf25f31a7cf",
-      "17": "https://getplay-cdn.com/embed/978c51dd0156acecf744905beac743f0",
-      "18": "https://getplay-cdn.com/embed/4b33f21bcc8601cd29a3e708ec39e31e",
-      "19": "https://getplay-cdn.com/embed/a19f730ac4935d007851f9aad0cc8112",
-      "20": "https://getplay-cdn.com/embed/fc47bb4e22e78ec81eb54af4ebc302f8",
-      "21": "https://getplay-cdn.com/embed/00e852762bb1e78a6ea6a7109eb5688e",
-      "22": "https://getplay-cdn.com/embed/38dfa5beb8a277124188b9c735613302",
-      "23": "https://getplay-cdn.com/embed/ff4b78ba41496796871d3c4527bc306b",
-      "24": "https://getplay-cdn.com/embed/1165945fbd1728b81e97d64f0b56463f"
+      "1": "https://getplay-cdn.com/embed/ecfc486b7c8d91d29e72444fe5a593fd",
+      "2": "https://getplay-cdn.com/embed/94fb039ee55476701656661d69906009",
+      "3": "https://getplay-cdn.com/embed/1ff681c38c35830b937c0e86b73863e5",
+      "4": "https://getplay-cdn.com/embed/9d27dd00e7d696e06287eea5e25e2d80",
+      "5": "https://getplay-cdn.com/embed/e4e4890ba3ef1b92e46a587d4a514b13",
+      "6": "https://getplay-cdn.com/embed/e73687b63350696c56dda940f5a73d77",
+      "7": "https://getplay-cdn.com/embed/e1fe20e6c81b0645408b55ee65a21a6d",
+      "8": "https://getplay-cdn.com/embed/a60da4df243921f0812f728d7caeae16",
+      "9": "https://getplay-cdn.com/embed/e2c7ca5090a81bc12b663c79c67a83c2",
+      "10": "https://getplay-cdn.com/embed/a4b6f2043213948b1a213b9e5095184f",
+      "11": "https://getplay-cdn.com/embed/69142784bc32b4512aeef84bc20cb15c",
+      "12": "https://getplay-cdn.com/embed/bb859fca7e76615be5689b8d792b2a78",
+      "13": "https://getplay-cdn.com/embed/846aeab3b52b0106da766303486a2e5f",
+      "14": "https://getplay-cdn.com/embed/c84b7f032506b88478389e9bea41cc5f",
+      "15": "https://getplay-cdn.com/embed/1a8ea6a51d102961f661748b7e6860b6",
+      "16": "https://getplay-cdn.com/embed/7fe6de37d565e2836704ccf27632d3bf",
+      "17": "https://getplay-cdn.com/embed/7c1301001237dd397555223adedb0317",
+      "18": "https://getplay-cdn.com/embed/b84b9302df7c65d860e6582548f64402",
+      "19": "https://getplay-cdn.com/embed/2877b883d4de04d6adc34c1c5d66a0ce",
+      "20": "https://getplay-cdn.com/embed/c879a271ef62c5f5b8f06025a654e4f4",
+      "21": "https://getplay-cdn.com/embed/547470f26e76f1ad06d5902345e3a4c1",
+      "22": "https://getplay-cdn.com/embed/f4e42b1de1dafeb7b825ce8f3edbdfd8",
+      "23": "https://getplay-cdn.com/embed/66cda6ce409901321de03c5e35054c41",
+      "24": "https://getplay-cdn.com/embed/648d99b0c40857f70115564d7eb08a69",
+      "25": "https://getplay-cdn.com/embed/661ec9782d833da0191eb475fb3ab7b5",
+      "26": "https://getplay-cdn.com/embed/48ea8ceb6583ebbd33a5d6a1f7b1543c",
+      "27": "https://getplay-cdn.com/embed/2d5f54ad474311531e40c4d5f247a0ad",
+      "28": "https://getplay-cdn.com/embed/cb3adfa1eeabf41fa13d05d3896d30e1",
+      "29": "https://getplay-cdn.com/embed/e836853098c9c5a5a03aa9ab89e70ef9",
+      "30": "https://getplay-cdn.com/embed/5840eb92909fa52f0a822da4afaec272",
+      "31": "https://getplay-cdn.com/embed/044f2f07c70baa1d5d1d1f89bb37dc38",
+      "32": "https://getplay-cdn.com/embed/2893f78f18bb7baf51e4637c6096f486",
+      "33": "https://getplay-cdn.com/embed/4a3a4947b512e9cbaa93cb5da2c44abb",
+      "34": "https://getplay-cdn.com/embed/17d74ea4b2fb5686bc9ebdf97e954c6f",
+      "35": "https://getplay-cdn.com/embed/fc71b302284e9d1eb4863c92ef84a8ce",
+      "36": "https://getplay-cdn.com/embed/4ea3594ba8558fa86d52a5b00639440b",
+      "37": "https://getplay-cdn.com/embed/3a0c934d84ef6136ef320be646e323c9",
+      "38": "https://getplay-cdn.com/embed/eebdd7649215c8510cf41b6cf15c4c9b",
+      "39": "https://getplay-cdn.com/embed/44858ac784ec1c3f72fc1101efe532ae",
+      "40": "https://getplay-cdn.com/embed/01931edb7c4c404c21443e4e56590b4e",
+      "41": "https://getplay-cdn.com/embed/53d8692b576bcdea7c0c2383c13ba08e",
+      "42": "https://getplay-cdn.com/embed/77f118342b2d0eb92f155efeece808df",
+      "43": "https://getplay-cdn.com/embed/b379eca819eb7f94679cc9ca31d79ba9",
+      "44": "https://getplay-cdn.com/embed/9b7cdb014d85cdd261f5879482f16935",
+      "45": "https://getplay-cdn.com/embed/a5506d98b90eddf269caf80b8e291222",
+      "46": "https://getplay-cdn.com/embed/390dcc80378eabe1bb66d3c896c4b87e",
+      "47": "https://getplay-cdn.com/embed/fbb960b112e57d8dfab58654010bf5fb",
+      "48": "https://getplay-cdn.com/embed/47562de44045a265e916d542ca25229a",
+      "49": "https://getplay-cdn.com/embed/f660017255aab87526f0c5aebc75b0ff",
+      "50": "https://getplay-cdn.com/embed/550eca04ca4ec41d45cb6e5ec3655408"
     },
     "languages": [
       "Thai (พากย์ไทย)"
     ],
-    "id": "wow-104047",
-    "postId": "104047",
-    "originalUrl": "https://wow-drama.com/ok-lets-get-divorced-2026/"
+    "id": "wow-112088",
+    "postId": "112088",
+    "originalUrl": "https://wow-drama.com/recipe-for-love-2026/"
   },
   {
     "titleTh": "Going to You at a Speed of 493 km หวดเต็มสปีด",
@@ -17552,678 +18257,6 @@ window.movies = [
     "originalUrl": "https://wow-drama.com/girl-xx-%e0%b8%9e%e0%b8%b2%e0%b8%81%e0%b8%a2%e0%b9%8c%e0%b9%84%e0%b8%97%e0%b8%a2/"
   },
   {
-    "titleTh": "The Body (2026) ลูกรักพระเจ้า",
-    "titleEn": "The Body (2026) ลูกรักพระเจ้า EP.1-8",
-    "year": 2026,
-    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/The-Body-2026.webp",
-    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/The-Body-2026.webp",
-    "videoUrl": "https://player77hdfree.xyz/embed/JLdjD6C_S-pvq",
-    "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ เรื่อง The Body (2026) ลูกรักพระเจ้า EP.1-8 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
-    "rating": 6.7,
-    "genres": [
-      "24HD.TODAY",
-      "พากย์ไทย",
-      "6.7⭐",
-      "ดูซีรี่ย์พากย์ไทย"
-    ],
-    "duration": "ซีรีส์",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "24HD.TODAY",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://player77hdfree.xyz/embed/JLdjD6C_S-pvq"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdtoday-136899",
-    "postId": "136899",
-    "originalUrl": "https://www.24hd.today/the-body-2026"
-  },
-  {
-    "titleTh": "ChiaroScuro (2026) มิติลวงใต้แสงเงา",
-    "titleEn": "ChiaroScuro (2026) มิติลวงใต้แสงเงา EP.1-8",
-    "year": 2026,
-    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/ChiaroScuro-2026.webp",
-    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/ChiaroScuro-2026.webp",
-    "videoUrl": "https://player77hdfree.xyz/embed/LIhPcg-F_CLK7",
-    "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ เรื่อง ChiaroScuro (2026) มิติลวงใต้แสงเงา EP.1-8 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
-    "rating": 6.3,
-    "genres": [
-      "24HD.TODAY",
-      "พากย์ไทย",
-      "6.3⭐",
-      "ดูซีรี่ย์พากย์ไทย"
-    ],
-    "duration": "ซีรีส์",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "24HD.TODAY",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://player77hdfree.xyz/embed/LIhPcg-F_CLK7"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdtoday-136901",
-    "postId": "136901",
-    "originalUrl": "https://www.24hd.today/chiaroscuro-2026"
-  },
-  {
-    "titleTh": "The Lord Of The Rings The Rings Of Power Season3 (2026) เดอะลอร์ดออฟเดอะริงส์ แหวนแห่งอำนาจ ซีซั่น 3",
-    "titleEn": "The Lord Of The Rings The Rings Of Power Season3 (2026) เดอะลอร์ดออฟเดอะริงส์ แหวนแห่งอำนาจ ซีซั่น 3 EP.1-8",
-    "year": 2026,
-    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/The-Lord-of-the-Rings-The-Rings-of-Power-Season3-2026.webp",
-    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/The-Lord-of-the-Rings-The-Rings-of-Power-Season3-2026.webp",
-    "videoUrl": "https://player77hdfree.xyz/embed/jq-f_E3hQyxYn",
-    "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ เรื่อง The Lord of the Rings The Rings of Power Season3 (2026) เดอะลอร์ดออฟเดอะริงส์ แหวนแห่งอำนาจ ซีซั่น 3 EP.1-8 ปีที่ฉาย 2026 ดูหนังล่าสุด",
-    "rating": 7.7,
-    "genres": [
-      "24HD.TODAY",
-      "พากย์ไทย",
-      "7.7⭐",
-      "ดูซีรี่ย์พากย์ไทย"
-    ],
-    "duration": "ซีรีส์",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "24HD.TODAY",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://player77hdfree.xyz/embed/jq-f_E3hQyxYn"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdtoday-136902",
-    "postId": "136902",
-    "originalUrl": "https://www.24hd.today/the-lord-of-the-rings-the-rings-of-power-season3-2026"
-  },
-  {
-    "titleTh": "IT Welcome To Derry A Story Of Derry (2026) เรื่องราวของเดอร์รี่",
-    "titleEn": "IT Welcome To Derry A Story Of Derry (2026) เรื่องราวของเดอร์รี่",
-    "year": 2026,
-    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/IT-Welcome-to-Derry-A-Story-of-Derry-2026.webp",
-    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/IT-Welcome-to-Derry-A-Story-of-Derry-2026.webp",
-    "videoUrl": "https://player77hdfree.xyz/embed/4AKlW6-C2_EKO",
-    "sourceType": "embed",
-    "description": "ดูหนังออนไลน์ เรื่อง IT Welcome to Derry A Story of Derry (2026) เรื่องราวของเดอร์รี่ ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
-    "rating": 6.9,
-    "genres": [
-      "24HD.TODAY",
-      "พากย์ไทย",
-      "6.9⭐"
-    ],
-    "duration": "ภาพยนตร์",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "24HD.TODAY",
-    "episodes": [
-      "เต็มเรื่อง"
-    ],
-    "episodeUrls": {
-      "1": "https://player77hdfree.xyz/embed/4AKlW6-C2_EKO"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "24hdtoday-136286",
-    "postId": "136286",
-    "originalUrl": "https://www.24hd.today/it-welcome-to-derry-a-story-of-derry-2026"
-  },
-  {
-    "titleTh": "เธอคือเพลงรักฤดูหนาว (2024) Love Song in Winter",
-    "titleEn": "จีน เธอคือเพลงรักฤดูหนาว (2024) Love Song in Winter พากย์ไทย EP.1-36 (END)",
-    "year": 2026,
-    "poster": "images/clean_posters/gs-93319.jpg",
-    "backdrop": "images/clean_posters/gs-93319.jpg",
-    "videoUrl": "https://torbo007.com/embed/2739472fa4566f5ffe51374c103fd027",
-    "sourceType": "embed",
-    "description": "สำหรับซีรี่ย์โรแมนติก สืบสวนสอบสวน  ลึกลับ ดราม่าชีวิต “เธอคือเพลงรักฤดูหนาว” (Love Song in Winter) บอกเล่าเรื่องราวที่เกิดขึ้นกับ “ลู่เหยียน” (แสดงนำโดย ซุนเชียน) เธอเป็นหมอวิสัญญีในโรงพยาบาลชื่อดังแห่งหนึ่งและบ่อยครั้งที่ “ลู่เหยียน” มองเห็นและสื่อสารกับวิญญาณคนตายได้ กระทั่งวันช่วงที่เธอเข้าทำงานในตอนกลางคืนเธอได้บังเอิญพบกับวิญญาณของ “เติ้งม่าน” (แสดงนำโดย เหอหงซาน) เพื่อนร่วมวิทยาลัยที่เสียชีวิตไปนานแล้วตั้งแต่วันนั้นเป็นต้นมา เรื่องแปลกๆ ก็เกิดขึ้นรอบตัวของเธออย่างต่อเนื่อง ขณะเดียวกันเธอก็ได้กลับมาพบกกับอดีตคนรักสมัยเรียนมหาลัยที่เลิกรากันไปเมื่อหลายปีก่อนอย่าง “เจียงเฉิงอี้” (นำแสดงโดย หวงจิ่งอวี๋) โดยไม่คาคดิดซึ่งตอนนี้เขากลายเป็นตำรวจนักสืบที่กำลังติดตามคดีฆาตรกรรมต่อเนื่อง ด้วยอาชีพที่เกี่ยวข้องกันให้พวกเขาต้องมาไขคดีลึกลับนี้ร่วมกัน ก่อนที่ความจริงของการพัวพันและความลับที่ซ่อนเอาไว้เมื่อ 8 ปีจะค่อยปรากฏออกมาเรื่อยๆ ท่ามกลางการคลี่คลายคดีมากมายความสัมพันธ์ของพวกเขาก็ก่อตัวขึ้นเช่นกัน สุดท้ายความรักจะหวนคืนและไขข้อผิดพลาดได้หรือไม่อย่างไรไปดูกัน \r\n",
-    "rating": 8.8,
-    "genres": [
-      "ดูซีรี่ย์พากย์ไทย",
-      "ซีรีส์แนะนำใหม่ 2026",
-      "พากย์ไทย"
-    ],
-    "duration": "ซีรีส์ 35 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "GOSERIES4K",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9",
-      "ตอนที่ 10",
-      "ตอนที่ 11",
-      "ตอนที่ 12",
-      "ตอนที่ 13",
-      "ตอนที่ 14",
-      "ตอนที่ 15",
-      "ตอนที่ 16",
-      "ตอนที่ 17",
-      "ตอนที่ 18",
-      "ตอนที่ 19",
-      "ตอนที่ 20",
-      "ตอนที่ 21",
-      "ตอนที่ 22",
-      "ตอนที่ 23",
-      "ตอนที่ 24",
-      "ตอนที่ 25",
-      "ตอนที่ 26",
-      "ตอนที่ 27",
-      "ตอนที่ 28",
-      "ตอนที่ 29",
-      "ตอนที่ 30",
-      "ตอนที่ 31",
-      "ตอนที่ 32",
-      "ตอนที่ 33",
-      "ตอนที่ 34",
-      "ตอนที่ 35"
-    ],
-    "episodeUrls": {
-      "1": "https://torbo007.com/embed/2739472fa4566f5ffe51374c103fd027",
-      "2": "https://torbo007.com/embed/5369ba8aa00f92330d0c603e03571be2",
-      "3": "https://torbo007.com/embed/1c1f2d7ded085c879c3598c46eada6bf",
-      "4": "https://torbo007.com/embed/b2e64ea840501a365b6889a88efa5cc4",
-      "5": "https://torbo007.com/embed/7132e6444935ce26f0b766a0480a4dfc",
-      "6": "https://torbo007.com/embed/2a8708483fadbb6fb728f86116769328",
-      "7": "https://torbo007.com/embed/22362efe3557a90fd04c783683529903",
-      "8": "https://torbo007.com/embed/982cec1f45ce33e8ed3ebfa5351b9dc7",
-      "9": "https://torbo007.com/embed/c197f662a7e558324cafac666a222353",
-      "10": "https://torbo007.com/embed/e6eb8a5f58f7a1e9d3d036d5d47c560d",
-      "11": "https://torbo007.com/embed/5cf3a7b2180cbcd39082c17e5840f3ce",
-      "12": "https://torbo007.com/embed/ce745f8b337eca43751d968688ac9846",
-      "13": "https://torbo007.com/embed/0361d9028381d5d9cc4c756e5e1417c0",
-      "14": "https://torbo007.com/embed/ab3917c12b8872c6f5238453506fedf9",
-      "15": "https://torbo007.com/embed/652895015ba46c13c6a820e88be737c3",
-      "16": "https://torbo007.com/embed/3f4b86eef8ac789299930d695f0bd189",
-      "17": "https://torbo007.com/embed/948ee7ecf02ebe80f1ba8f7d93c16aff",
-      "18": "https://torbo007.com/embed/a9a119137b1286a11dbbd4e003a3c8de",
-      "19": "https://torbo007.com/embed/8a312a1f8bc1815eb13c3d122a3275a1",
-      "20": "https://torbo007.com/embed/1e564eb750f45df2180164adb43c98a9",
-      "21": "https://torbo007.com/embed/13ce68e3742d2a56d5d933a2285daa8f",
-      "22": "https://torbo007.com/embed/8dfe2e1144c4ab32226bd9cf8fbd185f",
-      "23": "https://torbo007.com/embed/fc497c86d2612f837300d32a5991ad32",
-      "24": "https://torbo007.com/embed/99e9291c17b61ef68a3a3d0d5f779665",
-      "25": "https://torbo007.com/embed/14b49cb85662b2a9394d4a1d40beff16",
-      "26": "https://torbo007.com/embed/dfcd9ef560ab190f3f2731e2c2e90dc5",
-      "27": "https://torbo007.com/embed/a29024810fc67448fc70a7199b0420ad",
-      "28": "https://torbo007.com/embed/e6a4adcc2c73178349e18b010a78c5bf",
-      "29": "https://torbo007.com/embed/620994518041d73cd26d3efbbe5253d1",
-      "30": "https://torbo007.com/embed/81a0fbde0ffaf4878b1be78d543c5509",
-      "31": "https://torbo007.com/embed/763b68e2241122def29e506eb0753719",
-      "32": "https://torbo007.com/embed/3c2d09b2457f4d09b91043ff0c5795ef",
-      "33": "https://torbo007.com/embed/5f1564244fe8235d7c7d1b016df0a6b6",
-      "34": "https://torbo007.com/embed/6fa325905badf2898c90707b914dad38",
-      "35": "https://torbo007.com/embed/9437fa1be8f08d5399caf7d758a41703"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "gs-93319",
-    "postId": "93319",
-    "originalUrl": "https://goseries4k.com/love-song-in-winter/"
-  },
-  {
-    "titleTh": "Lighter & Princess (2022) จุดไฟให้ฉันอบอุ่นเธอ",
-    "titleEn": "Lighter & Princess (2022) จุดไฟให้ฉันอบอุ่นเธอ พากย์ไทย ตอนที่1-36 (จบ)",
-    "year": 2026,
-    "poster": "images/clean_posters/gs-54996.jpg",
-    "backdrop": "images/clean_posters/gs-54996.jpg",
-    "videoUrl": "https://torbo007.com/embed/d23b8019744b87bf8d20b7c489fc8717",
-    "sourceType": "embed",
-    "description": "ซีรี่ย์จีน เรื่อง Lighter & Princess (2022) จุดไฟให้ฉันอบอุ่นเธอ Zhu Yun ถูกเรียกว่า “เด็กเลว” ในไม่ช้า ขณะที่เธอเริ่มชีวิตในวิทยาลัย การบุกรุกของ Li Wei ทำให้โลกกลับด้าน เขาได้รับการยกย่องจาก Zhu Yun ว่าเป็นลูกชายที่ร่ำรวย โง่เขลา และไร้ความสามารถ แต่ตัวตนที่แท้จริงของเขาคือนักเรียนรับเข้าเรียนพิเศษที่ได้รับการยอมรับจากโรงเรียน และเป็นอัจฉริยะด้านการเขียนโปรแกรมที่หายาก หลังจากการเผชิญหน้ากันหลายครั้ง ทั้งสองมีความซาบซึ้งซึ่งกันและกัน",
-    "rating": 8.8,
-    "genres": [
-      "ดูซีรี่ย์พากย์ไทย",
-      "ซีรีส์แนะนำใหม่ 2026",
-      "พากย์ไทย"
-    ],
-    "duration": "ซีรีส์ 36 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "GOSERIES4K",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9",
-      "ตอนที่ 10",
-      "ตอนที่ 11",
-      "ตอนที่ 12",
-      "ตอนที่ 13",
-      "ตอนที่ 14",
-      "ตอนที่ 15",
-      "ตอนที่ 16",
-      "ตอนที่ 17",
-      "ตอนที่ 18",
-      "ตอนที่ 19",
-      "ตอนที่ 20",
-      "ตอนที่ 21",
-      "ตอนที่ 22",
-      "ตอนที่ 23",
-      "ตอนที่ 24",
-      "ตอนที่ 25",
-      "ตอนที่ 26",
-      "ตอนที่ 27",
-      "ตอนที่ 28",
-      "ตอนที่ 29",
-      "ตอนที่ 30",
-      "ตอนที่ 31",
-      "ตอนที่ 32",
-      "ตอนที่ 33",
-      "ตอนที่ 34",
-      "ตอนที่ 35",
-      "ตอนที่ 36"
-    ],
-    "episodeUrls": {
-      "1": "https://torbo007.com/embed/d23b8019744b87bf8d20b7c489fc8717",
-      "2": "https://torbo007.com/embed/abba06ab65d044a8f3310f88ef507efb",
-      "3": "https://torbo007.com/embed/7b25b1b66b88b855e55885064ef37dba",
-      "4": "https://torbo007.com/embed/f8763b5927fb0b5fcfe67d659596471f",
-      "5": "https://torbo007.com/embed/0efc85a40dce78aaddf27248cfac0c69",
-      "6": "https://torbo007.com/embed/c0fdac82270b22c287fd895684b68cc6",
-      "7": "https://torbo007.com/embed/94b3554ca897c5af96a4243410f11146",
-      "8": "https://torbo007.com/embed/107dcc01b26124d65e7a66e873498cd5",
-      "9": "https://torbo007.com/embed/b02033a17d45847c874df161956a656f",
-      "10": "https://torbo007.com/embed/2e9f331df3a1e93e0c61a8e7e80cb206",
-      "11": "https://torbo007.com/embed/14e1380f4acc2cb3e5e69d086a05df69",
-      "12": "https://torbo007.com/embed/2e1c4971b5a660e870c2e880d7af62e4",
-      "13": "https://torbo007.com/embed/b4765a71722471ae3c503cb8e3523a10",
-      "14": "https://torbo007.com/embed/3dd857acaa94380b8ee6983791325272",
-      "15": "https://torbo007.com/embed/a1572f1166cb3e37b2e2d55169543a60",
-      "16": "https://torbo007.com/embed/711a4719ba158c970876d12592ef54c1",
-      "17": "https://torbo007.com/embed/d28a67f5a07369e41b92495f018ceb34",
-      "18": "https://torbo007.com/embed/a3c0d533224ac088e8f4503a3c8b161e",
-      "19": "https://torbo007.com/embed/11a467ec3ffd4428af708684b5fb3f83",
-      "20": "https://torbo007.com/embed/e1f58b152bfadabedf9d4c32ba35f31e",
-      "21": "https://torbo007.com/embed/8ae9e40b280e49ad88f36506ef9f3dd0",
-      "22": "https://torbo007.com/embed/252c6ce5719938083470e57d8af2af31",
-      "23": "https://torbo007.com/embed/491ec43960d8dfd24d281eeb356be118",
-      "24": "https://torbo007.com/embed/ca7caf80c1e1564da7cd38b54db9aa63",
-      "25": "https://torbo007.com/embed/d9033fd3309e56369d2bd2088d71a5d8",
-      "26": "https://torbo007.com/embed/9e60f81d8cecf4dd7f2f45a0724dd2b6",
-      "27": "https://torbo007.com/embed/74f750f59b30ea3fc710cdf8c777cc2f",
-      "28": "https://torbo007.com/embed/ffa21876f1735feadb108f795c8d192e",
-      "29": "https://torbo007.com/embed/4bbc16f2455668dac3092aee5a613205",
-      "30": "https://torbo007.com/embed/4d614db171c196c230fd5ac8c370da00",
-      "31": "https://torbo007.com/embed/78609270bdcfba712b28c64268e1149b",
-      "32": "https://torbo007.com/embed/406c065dd89939a49ec43fafcf912be4",
-      "33": "https://torbo007.com/embed/8f085cfdc3f8e5e4b8e0075c778c5002",
-      "34": "https://torbo007.com/embed/681997d8e34824e99ff71125176d5cce",
-      "35": "https://torbo007.com/embed/1070fa087910113a0124392fa7122460",
-      "36": "https://torbo007.com/embed/9263dbed6f5abff2f1e39fe3f3ef5c38"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "gs-54996",
-    "postId": "54996",
-    "originalUrl": "https://goseries4k.com/lighter-princess-2022-%e0%b8%88%e0%b8%b8%e0%b8%94%e0%b9%84%e0%b8%9f%e0%b9%83%e0%b8%ab%e0%b9%89%e0%b8%89%e0%b8%b1%e0%b8%99%e0%b8%ad%e0%b8%9a%e0%b8%ad%e0%b8%b8%e0%b9%88%e0%b8%99%e0%b9%80%e0%b8%98-2/"
-  },
-  {
-    "titleTh": "Blossoms of Power (2026) บุหงาซ่อนคม",
-    "titleEn": "Blossoms of Power (2026) บุหงาซ่อนคม พากย์ไทย",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-102283.jpg",
-    "backdrop": "images/clean_posters/wow-102283.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/2cd8eabd0ee6ad98e31c748015bb3d58",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ Blossoms of Power (2026) บุหงาซ่อนคม พากย์ไทย นางเอกได้มาอยู่ในร่างของหญิงสาวที่มีอำนาจทำให้เธอต้องการเปลี่ยนตัวเองเพื่อรักษาผู้อื่น",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ซีรีส์จีน",
-      "ซีรีส์จีน พากย์ไทย",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 36 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9",
-      "ตอนที่ 10",
-      "ตอนที่ 11",
-      "ตอนที่ 12",
-      "ตอนที่ 13",
-      "ตอนที่ 14",
-      "ตอนที่ 15",
-      "ตอนที่ 16",
-      "ตอนที่ 17",
-      "ตอนที่ 18",
-      "ตอนที่ 19",
-      "ตอนที่ 20",
-      "ตอนที่ 21",
-      "ตอนที่ 22",
-      "ตอนที่ 23",
-      "ตอนที่ 24",
-      "ตอนที่ 25",
-      "ตอนที่ 26",
-      "ตอนที่ 27",
-      "ตอนที่ 28",
-      "ตอนที่ 29",
-      "ตอนที่ 30",
-      "ตอนที่ 31",
-      "ตอนที่ 32",
-      "ตอนที่ 33",
-      "ตอนที่ 34",
-      "ตอนที่ 35",
-      "ตอนที่ 36"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/2cd8eabd0ee6ad98e31c748015bb3d58",
-      "2": "https://getplay-cdn.com/embed/69c50ec4c0c1936b9bd225d78bc29fd1",
-      "3": "https://getplay-cdn.com/embed/337c775baacd4e7bb8691c1e3fe34405",
-      "4": "https://getplay-cdn.com/embed/2ae87fca7b3a1b646a35846a0e167a82",
-      "5": "https://getplay-cdn.com/embed/3325954766f520387924dce587d6a19c",
-      "6": "https://getplay-cdn.com/embed/5a436c6a6f17b3ef56236a19e4255fa1",
-      "7": "https://getplay-cdn.com/embed/c4d29120f85da3f5a2d18677dace0c19",
-      "8": "https://getplay-cdn.com/embed/f6a80ac2a4241668486d9fbce7084b62",
-      "9": "https://getplay-cdn.com/embed/5e6f044bae3a2a49d5a4ab83eb2c9bbe",
-      "10": "https://getplay-cdn.com/embed/caf4a878d0f37547d6d388a9feb7de9c",
-      "11": "https://getplay-cdn.com/embed/c4c54eed2d5b3562b7b659428fea2e8d",
-      "12": "https://getplay-cdn.com/embed/ff54a928de3150ba924a4b7109f8fd2b",
-      "13": "https://getplay-cdn.com/embed/5a7525fc2a341b55aad9e9e6153ff633",
-      "14": "https://getplay-cdn.com/embed/45a531cdc77ffc465a56aac27b863b2a",
-      "15": "https://getplay-cdn.com/embed/7e2226c562142bb0bfcad5f8453e0b96",
-      "16": "https://getplay-cdn.com/embed/c789c15b974316edba3889d6b399859b",
-      "17": "https://getplay-cdn.com/embed/59b9e4bc2d5346e98e0b6125bd4e7143",
-      "18": "https://getplay-cdn.com/embed/8556325fece185f681004609e04f81df",
-      "19": "https://getplay-cdn.com/embed/6969c4767931b7dc87a02f41ad83a377",
-      "20": "https://getplay-cdn.com/embed/a6149cbb37c4d7325a7efefd3e99ec5f",
-      "21": "https://getplay-cdn.com/embed/9607c15e011fd3e23c931a270674f1af",
-      "22": "https://getplay-cdn.com/embed/0ae96f330b9b1c1f8332040d6f0306e5",
-      "23": "https://getplay-cdn.com/embed/6699e9fce566fdb93f6ee15e2ad33233",
-      "24": "https://getplay-cdn.com/embed/5db9dbdd6d185bc205453d65193f7481",
-      "25": "https://getplay-cdn.com/embed/afc8d08f6b0a00139c75d76d808ca3ef",
-      "26": "https://getplay-cdn.com/embed/54615e3b6d00e8626c4984a7b22c533e",
-      "27": "https://getplay-cdn.com/embed/c1ab43fca7b41c9283118fba2d120693",
-      "28": "https://getplay-cdn.com/embed/ce644836706516cdf1432e425e469f02",
-      "29": "https://getplay-cdn.com/embed/d9f3aad4ac42b6a8fddbe70054572d73",
-      "30": "https://getplay-cdn.com/embed/34edf8c7a04f527a9984fe58ef524ad2",
-      "31": "https://getplay-cdn.com/embed/6c8222ee8be42988c261512103845198",
-      "32": "https://getplay-cdn.com/embed/058f67420795f645e51651593aa840ac",
-      "33": "https://getplay-cdn.com/embed/7b3bc118b1fa814a10153ef1c1a712b9",
-      "34": "https://getplay-cdn.com/embed/c0377581c86af8026b5681163c69c570",
-      "35": "https://getplay-cdn.com/embed/aff7219e946fa3f5dd97b2e658ea5b3f",
-      "36": "https://getplay-cdn.com/embed/aa43ff276b09e9467c08c5982c3e8123"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-102283",
-    "postId": "102283",
-    "originalUrl": "https://wow-drama.com/blossoms-of-power-%e0%b8%9e%e0%b8%b2%e0%b8%81%e0%b8%a2%e0%b9%8c%e0%b9%84%e0%b8%97%e0%b8%a2/"
-  },
-  {
-    "titleTh": "Mystic Nine (2026) เก้าสกุล ( )",
-    "titleEn": "Mystic Nine (2026) เก้าสกุล พากย์ไทย (เต็มเรื่อง)",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-102005.jpg",
-    "backdrop": "images/clean_posters/wow-102005.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/48088b49414ca334278bc38dfd55ed8f",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์จีน Mystic Nine (2026) เก้าสกุล พากย์ไทย พระเอกในตอนนี้นั้นสูญเสียสมาชิกของกลุ่มจากเหตุการณ์ที่ไม่คาดฝันทำให้เขาตามหาอย่างบ้าคลั่ง",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ซีรีส์จีน",
-      "ซีรีส์จีน พากย์ไทย",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 31 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9",
-      "ตอนที่ 10",
-      "ตอนที่ 11",
-      "ตอนที่ 12",
-      "ตอนที่ 13",
-      "ตอนที่ 14",
-      "ตอนที่ 15",
-      "ตอนที่ 16",
-      "ตอนที่ 17",
-      "ตอนที่ 18",
-      "ตอนที่ 19",
-      "ตอนที่ 20",
-      "ตอนที่ 21",
-      "ตอนที่ 22",
-      "ตอนที่ 23",
-      "ตอนที่ 24",
-      "ตอนที่ 25",
-      "ตอนที่ 26",
-      "ตอนที่ 27",
-      "ตอนที่ 28",
-      "ตอนที่ 29",
-      "ตอนที่ 30",
-      "ตอนที่ 31"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/48088b49414ca334278bc38dfd55ed8f",
-      "2": "https://getplay-cdn.com/embed/f7ca6b0cb3d8aa2dadf1d49968211901",
-      "3": "https://getplay-cdn.com/embed/873134bd2b2caff45726fcf7a24e54fb",
-      "4": "https://getplay-cdn.com/embed/8e44737ec069d7a37d5932b23531f6a5",
-      "5": "https://getplay-cdn.com/embed/e9e11a58d0a17e277974fdc47cd8ec9e",
-      "6": "https://getplay-cdn.com/embed/1e0a17771d7028c2577a776767f13f5d",
-      "7": "https://getplay-cdn.com/embed/b687f2292953a66561e13bbedc9daefa",
-      "8": "https://getplay-cdn.com/embed/cd3fbf9f16c6a499b4d255e638c3fd59",
-      "9": "https://getplay-cdn.com/embed/cd3fbf9f16c6a499b4d255e638c3fd59",
-      "10": "https://getplay-cdn.com/embed/fafad70f85f95949abd85c6f46be7057",
-      "11": "https://getplay-cdn.com/embed/e2c6e2c5efe741f2aa776a1deb32ce57",
-      "12": "https://getplay-cdn.com/embed/6782de2ea8c14ab3cee0750e6658d1df",
-      "13": "https://getplay-cdn.com/embed/dff9af6c15ffd7d0af7a72a2de685821",
-      "14": "https://getplay-cdn.com/embed/d7f997564c89d457b36d256c150c455b",
-      "15": "https://getplay-cdn.com/embed/ef98e692a6621e52e231ba455ba7c76a",
-      "16": "https://getplay-cdn.com/embed/4553a471399b864d6461a703ac9153c5",
-      "17": "https://getplay-cdn.com/embed/c723c20c7dfa5f98ce7ea64858aec214",
-      "18": "https://getplay-cdn.com/embed/50187dd25b132d49b0d8a1dcb596aa6e",
-      "19": "https://getplay-cdn.com/embed/3588a00273d3f8b3454df4a478f6238a",
-      "20": "https://getplay-cdn.com/embed/c36e436d2bc44a911585afa3f8fe4d05",
-      "21": "https://getplay-cdn.com/embed/62546ef7791a7c4a9a832eb9f84b3322",
-      "22": "https://getplay-cdn.com/embed/af2cba23ed572e8958dfa0c1d96afc39",
-      "23": "https://getplay-cdn.com/embed/71b78382b01e08c58c1de18b02e7d171",
-      "24": "https://getplay-cdn.com/embed/925aeee7dbd4328e1308f9a0a76463a0",
-      "25": "https://getplay-cdn.com/embed/eb623f86ffbbc2e13075098eeb2fe50e",
-      "26": "https://getplay-cdn.com/embed/becf1409dad7c9c6796e20dc26afa8e7",
-      "27": "https://getplay-cdn.com/embed/9d36f63beeb1a76e5f03830742bf757b",
-      "28": "https://getplay-cdn.com/embed/69cbf8fcb01a5f8e83e394bca257783b",
-      "29": "https://getplay-cdn.com/embed/f9a1e1506923949149d5f790e36991df",
-      "30": "https://getplay-cdn.com/embed/645c2e0add1b55f3af296d72a002e700",
-      "31": "https://getplay-cdn.com/embed/a4c3ad2f3f55be80ec8e7bb53235d6b9"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-102005",
-    "postId": "102005",
-    "originalUrl": "https://wow-drama.com/mystic-nine-%e0%b8%9e%e0%b8%b2%e0%b8%81%e0%b8%a2%e0%b9%8c%e0%b9%84%e0%b8%97%e0%b8%a2/"
-  },
-  {
-    "titleTh": "มังกรหยก ภาคมารบูรพาและพิษประจิม Duel on Mount Hua (2025)",
-    "titleEn": "มังกรหยก ภาคมารบูรพาและพิษประจิม Duel on Mount Hua (2025) พากย์ไทย EP.1-8",
-    "year": 2026,
-    "poster": "images/clean_posters/gs-131037.jpg",
-    "backdrop": "images/clean_posters/gs-131037.jpg",
-    "videoUrl": "https://torbo007.com/embed/a66601cb7181429e205fb961652fd5c0",
-    "sourceType": "embed",
-    "description": "เตรียมตัวเตรียมให้พร้อม ที่จะมาพบกับซีรี่ย์เรื่องใหม่ที่ไดรับความนิยมกันเป็นอย่างมาก เพราะเป็นเป็นอีกหนึ่งเรื่องแยกจากมังกรหยก โอวหยางเฟิงได้เข้าร่วมงานแต่งของพี่ชาย ก่อนจะจากเมืองออกมาใช้ชีวิตท่ามกลางทะเลทรายอันร้อนระอุ เพื่อเอาชีวิตรอด เขาเปิดร้านน้ำชาเล็ก ๆ ที่เริ่มมีชื่อเสียงในหมู่นักเดินทาง ทุกปีเขาจะได้พบกับหวงเย่าซือ เพื่อนสหายผู้เป็นพ่อค้าสุราที่นำสุรามาให้เป็นประจำ ทั้งสองต่างไว้เนื้อเชื่อใจกัน และร่วมกันปลูกต้นดอกท้อกลางทะเลทรายอันแห้งแล้ง แต่เมื่อวันหนึ่งหวงเย่าซือกลับจำเขาไม่ได้ ความทรงจำและมิตรภาพเก่าก็เริ่มเลือนหาย สถานที่แห่งนั้นจึงได้ถูกขนานนามว่า “เกาะรักแดนดอกท้อ” แห่งทะเลทราย.\r\n",
-    "rating": 8.8,
-    "genres": [
-      "ดูซีรี่ย์พากย์ไทย",
-      "ซีรีส์แนะนำใหม่ 2026",
-      "พากย์ไทย"
-    ],
-    "duration": "ซีรีส์ 8 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "GOSERIES4K",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8"
-    ],
-    "episodeUrls": {
-      "1": "https://torbo007.com/embed/a66601cb7181429e205fb961652fd5c0",
-      "2": "https://torbo007.com/embed/ee5a2cf15fa82f406da112264c1c403c",
-      "3": "https://torbo007.com/embed/72c7632f53efbefe754ecb631ba50885",
-      "4": "https://torbo007.com/embed/0053a23dd225779ede81a99a9404a252",
-      "5": "https://torbo007.com/embed/89f0a9ed90bf6be938640c894073f4cf",
-      "6": "https://torbo007.com/embed/180c5c2b8f40fdc3ffe0da7de057a5c3",
-      "7": "https://torbo007.com/embed/e9ab56d2a859d51388369ac2143c2952",
-      "8": "https://torbo007.com/embed/acbc0e04594f7aec2107434cb0dc74a4"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "gs-131037",
-    "postId": "131037",
-    "originalUrl": "https://goseries4k.com/duel-on-mount-hua/"
-  },
-  {
-    "titleTh": "Narco Saints (2022) นักบุญนาร์โค",
-    "titleEn": "Narco-Saints (2022) นักบุญนาร์โค พากย์ไทย ตอนที่01-06 (จบ)",
-    "year": 2026,
-    "poster": "images/clean_posters/gs-50593.jpg",
-    "backdrop": "images/clean_posters/gs-50593.jpg",
-    "videoUrl": "https://torbo007.com/embed/4dec9a0a608a492e92c665aaf1dd43bb",
-    "sourceType": "embed",
-    "description": "ดูซีรี่ย์เาหลี เรื่อง Narco-Saints (2022) นักบุญนาร์โค นักธุรกิจพลเรือนที่ไม่มีทางเลือกนอกจากต้องร่วมมือกับหน่วยปฏิบัติการลับของหน่วยข่าวกรองแห่งชาติเพื่อจับกุมเจ้าพ่อยาเสพติดชาวเกาหลีที่เข้าควบคุมซูรินาเมในอเมริกาใต้\r\n\r\n",
-    "rating": 8.8,
-    "genres": [
-      "ดูซีรี่ย์พากย์ไทย",
-      "ซีรีส์แนะนำใหม่ 2026",
-      "พากย์ไทย"
-    ],
-    "duration": "ซีรีส์ 6 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "GOSERIES4K",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6"
-    ],
-    "episodeUrls": {
-      "1": "https://torbo007.com/embed/4dec9a0a608a492e92c665aaf1dd43bb",
-      "2": "https://torbo007.com/embed/9e292130ba5769d15f54fd16cb302755",
-      "3": "https://torbo007.com/embed/855c68963e059e20b4c493325fd2b843",
-      "4": "https://torbo007.com/embed/233c30b7ada6c0ab1a6d66750f4038e3",
-      "5": "https://torbo007.com/embed/b9eaeb6cecde62ba85722b570f1605d8",
-      "6": "https://torbo007.com/embed/89f6e887cbd40ff953847ab18e42be0b"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "gs-50593",
-    "postId": "50593",
-    "originalUrl": "https://goseries4k.com/narco-saints-2022-%e0%b8%99%e0%b8%b1%e0%b8%81%e0%b8%9a%e0%b8%b8%e0%b8%8d%e0%b8%99%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b9%82%e0%b8%84/"
-  },
-  {
-    "titleTh": "Make It Right (2026) รักออกเดิน",
-    "titleEn": "Make It Right (2026) รักออกเดิน",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-101859.jpg",
-    "backdrop": "images/clean_posters/wow-101859.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/11d0bb60159b3e112ffce0494a2ec616",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ไทย Make It Right (2026) รักออกเดิน พระเอกในตอนนี้นั้นพยายามอย่างมากในการเข้าหาเพื่อนผู้ชายคนหนึ่งที่น่าจะเปลี่ยนแปลงตัวเขาได้",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ละครไทย",
-      "ละครไทย ย้อนหลัง",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 12 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9",
-      "ตอนที่ 10",
-      "ตอนที่ 11",
-      "ตอนที่ 12"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/11d0bb60159b3e112ffce0494a2ec616",
-      "2": "https://getplay-cdn.com/embed/66cd8d55c63b61cde3b0388b46f0cf64",
-      "3": "https://getplay-cdn.com/embed/6dd507f3a1a99666513cc5ce0928c7b5",
-      "4": "https://getplay-cdn.com/embed/fc63584420056fc9e77519afe6ecf297",
-      "5": "https://getplay-cdn.com/embed/9580c06ad5f4168cb5bb7ba20caf46e3",
-      "6": "https://getplay-cdn.com/embed/05e6ba7be239eaba9d672e431de98743",
-      "7": "https://getplay-cdn.com/embed/ae8a3f9ec3d1e6b451b7e3616e44361f",
-      "8": "https://getplay-cdn.com/embed/75a190b8021f1122ed7ea67c98135fba",
-      "9": "https://getplay-cdn.com/embed/85ebb5cc69598d16dcc3ac3937fa3d04",
-      "10": "https://getplay-cdn.com/embed/d311ad7fc15349e89e15e8c11c9a0d62",
-      "11": "https://getplay-cdn.com/embed/38bb262aae001b1cb0362b0d447cda86",
-      "12": "https://getplay-cdn.com/embed/88414641b267e0aa320e9fd02a44108d"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-101859",
-    "postId": "101859",
-    "originalUrl": "https://wow-drama.com/make-it-right-%e0%b8%9e%e0%b8%b2%e0%b8%81%e0%b8%a2%e0%b9%8c%e0%b9%84%e0%b8%97%e0%b8%a2/"
-  },
-  {
     "titleTh": "Spring Over Phoenix Pond หงส์คืนบัลลังก์แค้น",
     "titleEn": "Spring Over Phoenix Pond หงส์คืนบัลลังก์แค้น",
     "year": 2026,
@@ -18394,59 +18427,6 @@ window.movies = [
     "originalUrl": "https://wow-drama.com/reborn-rookie-%e0%b8%9e%e0%b8%b2%e0%b8%81%e0%b8%a2%e0%b9%8c%e0%b9%84%e0%b8%97%e0%b8%a2/"
   },
   {
-    "titleTh": "Octo Mind Investigator Akari Shinno S2",
-    "titleEn": "Octo: Mind Investigator Akari Shinno S2 พากย์ไทย",
-    "year": 2026,
-    "poster": "images/clean_posters/wow-57367.jpg",
-    "backdrop": "images/clean_posters/wow-57367.jpg",
-    "videoUrl": "https://getplay-cdn.com/embed/f1325dfc0060ca72f70fa0a6f42c954e",
-    "sourceType": "embed",
-    "description": "ซีรี่ส์ Octo: Mind Investigator Akari Shinno S2 ยอดนักสืบอารมณ์8สี ปี2 พากย์ไทย นางเอกเป็นคนที่มีความสามารถในการสัมผัสสิ่งที่ผู้อื่นนั้นไม่",
-    "rating": 8.7,
-    "genres": [
-      "พากย์ไทย",
-      "ซีรีส์ญี่ปุ่น",
-      "ซีรีส์ญี่ปุ่น พากย์ไทย",
-      "ซีรีส์ใหม่ 2026"
-    ],
-    "duration": "ซีรีส์ 11 ตอนจบ",
-    "trailerUrl": "",
-    "cast": [],
-    "source": "WOW-DRAMA",
-    "episodes": [
-      "ตอนที่ 1",
-      "ตอนที่ 2",
-      "ตอนที่ 3",
-      "ตอนที่ 4",
-      "ตอนที่ 5",
-      "ตอนที่ 6",
-      "ตอนที่ 7",
-      "ตอนที่ 8",
-      "ตอนที่ 9",
-      "ตอนที่ 10",
-      "ตอนที่ 11"
-    ],
-    "episodeUrls": {
-      "1": "https://getplay-cdn.com/embed/f1325dfc0060ca72f70fa0a6f42c954e",
-      "2": "https://getplay-cdn.com/embed/c64e8f374129bddda54d6c61018383fe",
-      "3": "https://getplay-cdn.com/embed/75394e86a6d35b22841e7c501deab11a",
-      "4": "https://getplay-cdn.com/embed/ce4df4d84546c038982045411c2efcb1",
-      "5": "https://getplay-cdn.com/embed/3eac83acc83430cf9c887ad22b2ffd6e",
-      "6": "https://getplay-cdn.com/embed/626d5488e46a7a06a30e2acf813af1bc",
-      "7": "https://getplay-cdn.com/embed/7c8ecfb98e565173eb245b3fb615f3e3",
-      "8": "https://getplay-cdn.com/embed/04b993998ad609a92752622a30d73254",
-      "9": "https://getplay-cdn.com/embed/cb2223fa050f85b2619aa8ef38db9bbe",
-      "10": "https://getplay-cdn.com/embed/278901f37378635f588dd94ed2ee20f4",
-      "11": "https://getplay-cdn.com/embed/21ead1177587598c55bc06321175b9d0"
-    },
-    "languages": [
-      "Thai (พากย์ไทย)"
-    ],
-    "id": "wow-57367",
-    "postId": "57367",
-    "originalUrl": "https://wow-drama.com/octo-mind-investigator-akari-shinno-s2-%e0%b8%9e%e0%b8%b2%e0%b8%81%e0%b8%a2%e0%b9%8c%e0%b9%84%e0%b8%97%e0%b8%a2/"
-  },
-  {
     "titleTh": "No Tail to Tell (2026) เรื่องของจิ้งจอกสาวไร้หาง",
     "titleEn": "No Tail to Tell (2026) เรื่องของจิ้งจอกสาวไร้หาง",
     "year": 2026,
@@ -18602,6 +18582,593 @@ window.movies = [
     "id": "wow-98013",
     "postId": "98013",
     "originalUrl": "https://wow-drama.com/always-meet-again-%e0%b8%9e%e0%b8%b2%e0%b8%81%e0%b8%a2%e0%b9%8c%e0%b9%84%e0%b8%97%e0%b8%a2/"
+  },
+  {
+    "titleTh": "Teach Me Touch Me (2026) สัมผัสกันต์ธีร์",
+    "titleEn": "Teach Me Touch Me (2026) สัมผัสกันต์ธีร์ EP.1-10",
+    "year": 2026,
+    "poster": "https://www.24hd.today/wp-content/uploads/2026/10/Teach-Me-Touch-Me-2026.webp",
+    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/10/Teach-Me-Touch-Me-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/eopdw_SgB-WfI",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Teach Me Touch Me (2026) สัมผัสกันต์ธีร์ EP.1-10 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 6.9,
+    "genres": [
+      "24HD.TODAY",
+      "พากย์ไทย",
+      "6.9⭐",
+      "ดูซีรี่ย์พากย์ไทย"
+    ],
+    "duration": "ซีรีส์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.TODAY",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/eopdw_SgB-WfI"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdtoday-135726",
+    "postId": "135726",
+    "originalUrl": "https://www.24hd.today/teach-me-touch-me-2026"
+  },
+  {
+    "titleTh": "Snoopy Presents 12 Days Of Snoopy (2026)",
+    "titleEn": "Snoopy Presents 12 Days Of Snoopy (2026)",
+    "year": 2026,
+    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/Snoopy-Presents-12-Days-of-Snoopy-2026.webp",
+    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/Snoopy-Presents-12-Days-of-Snoopy-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/eO9_sLjnZE-Vr",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Snoopy Presents 12 Days of Snoopy (2026) ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.6,
+    "genres": [
+      "24HD.TODAY",
+      "พากย์ไทย",
+      "7.6⭐"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.TODAY",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/eO9_sLjnZE-Vr"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdtoday-137163",
+    "postId": "137163",
+    "originalUrl": "https://www.24hd.today/snoopy-presents-12-days-of-snoopy-2026/"
+  },
+  {
+    "titleTh": "Fool In Love (2026) คนโง่รักเข(ล)า",
+    "titleEn": "Fool In Love (2026) คนโง่รักเข(ล)า EP.1-20",
+    "year": 2026,
+    "poster": "https://www.24hd.today/wp-content/uploads/2026/10/Fool-in-Love-2026.webp",
+    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/10/Fool-in-Love-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/UfQ-c68E_Qqbb",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Fool in Love (2026) คนโง่รักเข(ล)า EP.1-20 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 8.6,
+    "genres": [
+      "24HD.TODAY",
+      "พากย์ไทย",
+      "8.6⭐",
+      "ดูซีรี่ย์พากย์ไทย"
+    ],
+    "duration": "ซีรีส์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.TODAY",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/UfQ-c68E_Qqbb"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdtoday-135261",
+    "postId": "135261",
+    "originalUrl": "https://www.24hd.today/fool-in-love-2026"
+  },
+  {
+    "titleTh": "Ai Long Nhai The Endless Love (2023) อัยย์หลงไน๋",
+    "titleEn": "Ai Long Nhai The Endless Love (2023) อัยย์หลงไน๋",
+    "year": 2023,
+    "poster": "https://www.24hd.today/wp-content/uploads/2025/12/Ai-Long-Nhai-The-Endless-Love-2023.webp",
+    "backdrop": "https://www.24hd.today/wp-content/uploads/2025/12/Ai-Long-Nhai-The-Endless-Love-2023.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/LnTG6_kRv-faE",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง Ai Long Nhai The Endless Love (2023) อัยย์หลงไน๋ ปีที่ฉาย 2023 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 7.6,
+    "genres": [
+      "24HD.TODAY",
+      "พากย์ไทย",
+      "7.6⭐"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.TODAY",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/LnTG6_kRv-faE"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdtoday-121405",
+    "postId": "121405",
+    "originalUrl": "https://www.24hd.today/ai-long-nhai-the-endless-love-2023/"
+  },
+  {
+    "titleTh": "อินเดีย Best of the Best (2026) ที่สุดของที่สุด",
+    "titleEn": "อินเดีย Best of the Best (2026) ที่สุดของที่สุด พากย์ไทย",
+    "year": 2026,
+    "poster": "https://myserieshd.com/wp-content/uploads/2026/10/%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AA%E0%B8%B8%E0%B8%94-11.webp",
+    "backdrop": "https://myserieshd.com/wp-content/uploads/2026/10/%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AA%E0%B8%B8%E0%B8%94-11.webp",
+    "videoUrl": "https://ok-hd.com/play/f83849cc88fcf028370a37cb5d801518",
+    "sourceType": "embed",
+    "description": "ดูหนังอินเดีย Best of the Best (2026) ที่สุดของที่สุด พากย์ไทย สองสาวก้าวสู่ชีวิตมหาวิทยาลัยที่ UCLA และเข้าร่วมทีมเต้นบอลลีวูดฟิวชัน ก่อนต้องฝ่าฟันทั้งการซ้อมหนัก ความขัดแย้ง และการแข่งขันระดับประเทศ...",
+    "rating": 8.8,
+    "genres": [
+      "ดูซีรี่ย์พากย์ไทย",
+      "ซีรีส์ใหม่ 2026",
+      "พากย์ไทย",
+      "ซีรีส์จีน",
+      "ซีรีส์จีน พากย์ไทย"
+    ],
+    "duration": "ภาพยนตร์เต็มเรื่อง",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "MYSERIESHD",
+    "episodes": [
+      "ตอนที่ 1"
+    ],
+    "episodeUrls": {
+      "1": "https://ok-hd.com/play/f83849cc88fcf028370a37cb5d801518"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "mshd-19283",
+    "postId": "19283",
+    "originalUrl": "https://myserieshd.com/best-of-the-best-2026/"
+  },
+  {
+    "titleTh": "Call My Agent The Movie (2026) เรียกผู้จัดการมาสิ เดอะ มูฟวี่",
+    "titleEn": "ฟรี Call My Agent The Movie (2026) เรียกผู้จัดการมาสิ เดอะ มูฟวี่",
+    "year": 2026,
+    "poster": "https://www.24-hda.com/wp-content/uploads/2026/09/Call-My-Agent-The-Movie-2026-%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%81%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A1%E0%B8%B2%E0%B8%AA%E0%B8%B4-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88-187x269.png",
+    "backdrop": "https://www.24-hda.com/wp-content/uploads/2026/09/Call-My-Agent-The-Movie-2026-%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%81%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A1%E0%B8%B2%E0%B8%AA%E0%B8%B4-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%A1%E0%B8%B9%E0%B8%9F%E0%B8%A7%E0%B8%B5%E0%B9%88-187x269.png",
+    "videoUrl": "https://main.24playerhd.com/index_th.php?id=3f2fab099618cf665c48cbcd&typew=W",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ ฟรี Call My Agent The Movie (2026) เรียกผู้จัดการมาสิ เดอะ มูฟวี่ (2026) พากย์ไทย เต็มเรื่อง HD",
+    "rating": 6.4,
+    "genres": [
+      "พากย์ไทย",
+      "หนังปี 2026"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "https://www.youtube.com/embed/01PX2jZNW5A",
+    "cast": [],
+    "source": "24HD",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://main.24playerhd.com/index_th.php?id=3f2fab099618cf665c48cbcd&typew=W"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdx-40621",
+    "postId": "40621",
+    "originalUrl": "https://www.24-hda.com/call-my-agent-the-movie/"
+  },
+  {
+    "titleTh": "The Bionic Life (2023) ไขคดีปริศนามนุษย์ไบโอนิค",
+    "titleEn": "The Bionic Life (2023) ไขคดีปริศนามนุษย์ไบโอนิค พากย์ไทย ตอนที่1-12 (จบ)",
+    "year": 2026,
+    "poster": "images/clean_posters/gs-71855.jpg",
+    "backdrop": "images/clean_posters/gs-71855.jpg",
+    "videoUrl": "https://torbo007.com/embed/c32bfa62fe540f5ac6aa3e40a38f9b89",
+    "sourceType": "embed",
+    "description": "ดูซีรี่ย์จีน เรื่อง The Bionic Life (2023) ไขคดีปริศนามนุษย์ไบโอนิค ประเภท สืบสวน ดราม่า แฟนตาซี โลกอนาคต เล่าเรื่องราวของโลกอนาคตที่เกิดขึ้นปี 2035 มีการพัฒนาอย่างรวดเร็วของมนุษย์ไบโอนิคทำให้เกิดปัญหาได้ก่อให้เกิดความกังวลต่อของสาธารณชน เมืองซีหนานก่อตั้งศูนย์วิจัยหมิงโหมวเพื่อค้นหาและระบุตัวตนมนุษย์ไบโอนิค เฉิงนั่ว ชายหนุ่มผู้สุขุมเยือกเย็นผู้ทำงานในหน่วยงานแห่งนี้ได้ร่วมมือกับนักจิตวิทยาสาว อันชิว ทำงานด้วยกันหลังเผชิญหน้ากับความเป็นความตาย ทั้งสองจึงร่วมมือกันเพื่อไขปริศนาของสิ่งมีชีวิตทั้งหมด โลกมนุษย์ไบโอนิค ชะตากรรมของมนุษย์และมนุษย์ไบโอนิค",
+    "rating": 8.8,
+    "genres": [
+      "ดูซีรี่ย์พากย์ไทย",
+      "ซีรีส์แนะนำใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 12 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "GOSERIES4K",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/c32bfa62fe540f5ac6aa3e40a38f9b89",
+      "2": "https://torbo007.com/embed/2c5d4b139d2a5ed599d2efc7c63db497",
+      "3": "https://torbo007.com/embed/be920b0f55f9048588fc02eee8366873",
+      "4": "https://torbo007.com/embed/ac8284090a33f72c1774c73558c36150",
+      "5": "https://torbo007.com/embed/3f236f92227e76d109c95288f559fdf9",
+      "6": "https://torbo007.com/embed/d10b0c1bb2ed3e0c044f616b1cfaff04",
+      "7": "https://torbo007.com/embed/bccd7d1d8e303b37356817484b89a66b",
+      "8": "https://torbo007.com/embed/1eb7b01c4a9075f4fa7d23ae73e5e710",
+      "9": "https://torbo007.com/embed/a6f18ffe57aeff710d01ff14b945705f",
+      "10": "https://torbo007.com/embed/8b27eb5dc039fca5ea914c747a8b5936",
+      "11": "https://torbo007.com/embed/79c8cceb955d1613108b3bd988ef4bd7",
+      "12": "https://torbo007.com/embed/83fab0018e175c33896aa507684f9d38"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "gs-71855",
+    "postId": "71855",
+    "originalUrl": "https://goseries4k.com/the-bionic-life-2023-%e0%b9%84%e0%b8%82%e0%b8%84%e0%b8%94%e0%b8%b5%e0%b8%9b%e0%b8%a3%e0%b8%b4%e0%b8%a8%e0%b8%99%e0%b8%b2%e0%b8%a1%e0%b8%99%e0%b8%b8%e0%b8%a9%e0%b8%a2%e0%b9%8c%e0%b9%84%e0%b8%9a-2/"
+  },
+  {
+    "titleTh": "มเหสีน้อย Oops! I'm the Concubine (2026)",
+    "titleEn": "มเหสีน้อย - Oops! I'm the Concubine (2026)",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-111721.jpg",
+    "backdrop": "images/clean_posters/wow-111721.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/f5cc77f2a02e732a8cfaec7b997dd29b",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ไทย มเหสีน้อย Oops! I&#039;m the Concubine (2026) นางเอกในตอนนี้นั้นตัดสินใจที่จะเข้าวังหลวงเพื่อคัดเลือกเป็นมเหสีแต่ก็ดันผิดแผนต้องติดตาม",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ละครไทย",
+      "ละครไทย ย้อนหลัง",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 13 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12",
+      "ตอนที่ 13"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/f5cc77f2a02e732a8cfaec7b997dd29b",
+      "2": "https://getplay-cdn.com/embed/8bf9c34c23f258a83f8317a770204479",
+      "3": "https://getplay-cdn.com/embed/d619e42f71d7da7188991015726a130b",
+      "4": "https://getplay-cdn.com/embed/d30e690542d6ba4309f1b3a2faf08458",
+      "5": "https://getplay-cdn.com/embed/49775710573fa2de589a77cffa6ea45a",
+      "6": "https://getplay-cdn.com/embed/eeb23c6256f692af6dbf953ad27ba61a",
+      "7": "https://getplay-cdn.com/embed/007d1451aba98ee8b180c32152ae0741",
+      "8": "https://getplay-cdn.com/embed/69fc412d36d1d2f71b3423204d7d4d83",
+      "9": "https://getplay-cdn.com/embed/ae91fae61dd412ca747a82da1ba75b96",
+      "10": "https://getplay-cdn.com/embed/bbbc4d2cce8eee3a729f426cf6bc6560",
+      "11": "https://getplay-cdn.com/embed/b4fc53e0fc44719923ffb441d64b72c6",
+      "12": "https://getplay-cdn.com/embed/ea3d2884199c23c4510727d1efaae40b",
+      "13": "https://getplay-cdn.com/embed/9f0210e8817a36080582368c63c3ea65"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-111721",
+    "postId": "111721",
+    "originalUrl": "https://wow-drama.com/oops-im-the-concubine-2026/"
+  },
+  {
+    "titleTh": "The Body (2026) ลูกรักพระเจ้า",
+    "titleEn": "The Body (2026) ลูกรักพระเจ้า EP.1-8",
+    "year": 2026,
+    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/The-Body-2026.webp",
+    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/The-Body-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/JLdjD6C_S-pvq",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง The Body (2026) ลูกรักพระเจ้า EP.1-8 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 6.7,
+    "genres": [
+      "24HD.TODAY",
+      "พากย์ไทย",
+      "6.7⭐",
+      "ดูซีรี่ย์พากย์ไทย"
+    ],
+    "duration": "ซีรีส์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.TODAY",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/JLdjD6C_S-pvq"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdtoday-136899",
+    "postId": "136899",
+    "originalUrl": "https://www.24hd.today/the-body-2026"
+  },
+  {
+    "titleTh": "ChiaroScuro (2026) มิติลวงใต้แสงเงา",
+    "titleEn": "ChiaroScuro (2026) มิติลวงใต้แสงเงา EP.1-8",
+    "year": 2026,
+    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/ChiaroScuro-2026.webp",
+    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/ChiaroScuro-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/LIhPcg-F_CLK7",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง ChiaroScuro (2026) มิติลวงใต้แสงเงา EP.1-8 ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 6.3,
+    "genres": [
+      "24HD.TODAY",
+      "พากย์ไทย",
+      "6.3⭐",
+      "ดูซีรี่ย์พากย์ไทย"
+    ],
+    "duration": "ซีรีส์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.TODAY",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/LIhPcg-F_CLK7"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdtoday-136901",
+    "postId": "136901",
+    "originalUrl": "https://www.24hd.today/chiaroscuro-2026"
+  },
+  {
+    "titleTh": "The Lord Of The Rings The Rings Of Power Season3 (2026) เดอะลอร์ดออฟเดอะริงส์ แหวนแห่งอำนาจ ซีซั่น 3",
+    "titleEn": "The Lord Of The Rings The Rings Of Power Season3 (2026) เดอะลอร์ดออฟเดอะริงส์ แหวนแห่งอำนาจ ซีซั่น 3 EP.1-8",
+    "year": 2026,
+    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/The-Lord-of-the-Rings-The-Rings-of-Power-Season3-2026.webp",
+    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/The-Lord-of-the-Rings-The-Rings-of-Power-Season3-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/jq-f_E3hQyxYn",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง The Lord of the Rings The Rings of Power Season3 (2026) เดอะลอร์ดออฟเดอะริงส์ แหวนแห่งอำนาจ ซีซั่น 3 EP.1-8 ปีที่ฉาย 2026 ดูหนังล่าสุด",
+    "rating": 7.7,
+    "genres": [
+      "24HD.TODAY",
+      "พากย์ไทย",
+      "7.7⭐",
+      "ดูซีรี่ย์พากย์ไทย"
+    ],
+    "duration": "ซีรีส์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.TODAY",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/jq-f_E3hQyxYn"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdtoday-136902",
+    "postId": "136902",
+    "originalUrl": "https://www.24hd.today/the-lord-of-the-rings-the-rings-of-power-season3-2026"
+  },
+  {
+    "titleTh": "IT Welcome To Derry A Story Of Derry (2026) เรื่องราวของเดอร์รี่",
+    "titleEn": "IT Welcome To Derry A Story Of Derry (2026) เรื่องราวของเดอร์รี่",
+    "year": 2026,
+    "poster": "https://www.24hd.today/wp-content/uploads/2026/11/IT-Welcome-to-Derry-A-Story-of-Derry-2026.webp",
+    "backdrop": "https://www.24hd.today/wp-content/uploads/2026/11/IT-Welcome-to-Derry-A-Story-of-Derry-2026.webp",
+    "videoUrl": "https://player77hdfree.xyz/embed/4AKlW6-C2_EKO",
+    "sourceType": "embed",
+    "description": "ดูหนังออนไลน์ เรื่อง IT Welcome to Derry A Story of Derry (2026) เรื่องราวของเดอร์รี่ ปีที่ฉาย 2026 ดูหนังล่าสุด หนัง24HD หนังพากย์ไทยดูฟรี",
+    "rating": 6.9,
+    "genres": [
+      "24HD.TODAY",
+      "พากย์ไทย",
+      "6.9⭐"
+    ],
+    "duration": "ภาพยนตร์",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "24HD.TODAY",
+    "episodes": [
+      "เต็มเรื่อง"
+    ],
+    "episodeUrls": {
+      "1": "https://player77hdfree.xyz/embed/4AKlW6-C2_EKO"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "24hdtoday-136286",
+    "postId": "136286",
+    "originalUrl": "https://www.24hd.today/it-welcome-to-derry-a-story-of-derry-2026"
+  },
+  {
+    "titleTh": "Narco Saints (2022) นักบุญนาร์โค",
+    "titleEn": "Narco-Saints (2022) นักบุญนาร์โค พากย์ไทย ตอนที่01-06 (จบ)",
+    "year": 2026,
+    "poster": "images/clean_posters/gs-50593.jpg",
+    "backdrop": "images/clean_posters/gs-50593.jpg",
+    "videoUrl": "https://torbo007.com/embed/4dec9a0a608a492e92c665aaf1dd43bb",
+    "sourceType": "embed",
+    "description": "ดูซีรี่ย์เาหลี เรื่อง Narco-Saints (2022) นักบุญนาร์โค นักธุรกิจพลเรือนที่ไม่มีทางเลือกนอกจากต้องร่วมมือกับหน่วยปฏิบัติการลับของหน่วยข่าวกรองแห่งชาติเพื่อจับกุมเจ้าพ่อยาเสพติดชาวเกาหลีที่เข้าควบคุมซูรินาเมในอเมริกาใต้\r\n\r\n",
+    "rating": 8.8,
+    "genres": [
+      "ดูซีรี่ย์พากย์ไทย",
+      "ซีรีส์แนะนำใหม่ 2026",
+      "พากย์ไทย"
+    ],
+    "duration": "ซีรีส์ 6 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "GOSERIES4K",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6"
+    ],
+    "episodeUrls": {
+      "1": "https://torbo007.com/embed/4dec9a0a608a492e92c665aaf1dd43bb",
+      "2": "https://torbo007.com/embed/9e292130ba5769d15f54fd16cb302755",
+      "3": "https://torbo007.com/embed/855c68963e059e20b4c493325fd2b843",
+      "4": "https://torbo007.com/embed/233c30b7ada6c0ab1a6d66750f4038e3",
+      "5": "https://torbo007.com/embed/b9eaeb6cecde62ba85722b570f1605d8",
+      "6": "https://torbo007.com/embed/89f6e887cbd40ff953847ab18e42be0b"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "gs-50593",
+    "postId": "50593",
+    "originalUrl": "https://goseries4k.com/narco-saints-2022-%e0%b8%99%e0%b8%b1%e0%b8%81%e0%b8%9a%e0%b8%b8%e0%b8%8d%e0%b8%99%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b9%82%e0%b8%84/"
+  },
+  {
+    "titleTh": "Make It Right (2026) รักออกเดิน",
+    "titleEn": "Make It Right (2026) รักออกเดิน",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-101859.jpg",
+    "backdrop": "images/clean_posters/wow-101859.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/11d0bb60159b3e112ffce0494a2ec616",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ไทย Make It Right (2026) รักออกเดิน พระเอกในตอนนี้นั้นพยายามอย่างมากในการเข้าหาเพื่อนผู้ชายคนหนึ่งที่น่าจะเปลี่ยนแปลงตัวเขาได้",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ละครไทย",
+      "ละครไทย ย้อนหลัง",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 12 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11",
+      "ตอนที่ 12"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/11d0bb60159b3e112ffce0494a2ec616",
+      "2": "https://getplay-cdn.com/embed/66cd8d55c63b61cde3b0388b46f0cf64",
+      "3": "https://getplay-cdn.com/embed/6dd507f3a1a99666513cc5ce0928c7b5",
+      "4": "https://getplay-cdn.com/embed/fc63584420056fc9e77519afe6ecf297",
+      "5": "https://getplay-cdn.com/embed/9580c06ad5f4168cb5bb7ba20caf46e3",
+      "6": "https://getplay-cdn.com/embed/05e6ba7be239eaba9d672e431de98743",
+      "7": "https://getplay-cdn.com/embed/ae8a3f9ec3d1e6b451b7e3616e44361f",
+      "8": "https://getplay-cdn.com/embed/75a190b8021f1122ed7ea67c98135fba",
+      "9": "https://getplay-cdn.com/embed/85ebb5cc69598d16dcc3ac3937fa3d04",
+      "10": "https://getplay-cdn.com/embed/d311ad7fc15349e89e15e8c11c9a0d62",
+      "11": "https://getplay-cdn.com/embed/38bb262aae001b1cb0362b0d447cda86",
+      "12": "https://getplay-cdn.com/embed/88414641b267e0aa320e9fd02a44108d"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-101859",
+    "postId": "101859",
+    "originalUrl": "https://wow-drama.com/make-it-right-%e0%b8%9e%e0%b8%b2%e0%b8%81%e0%b8%a2%e0%b9%8c%e0%b9%84%e0%b8%97%e0%b8%a2/"
+  },
+  {
+    "titleTh": "Octo Mind Investigator Akari Shinno S2",
+    "titleEn": "Octo: Mind Investigator Akari Shinno S2 พากย์ไทย",
+    "year": 2026,
+    "poster": "images/clean_posters/wow-57367.jpg",
+    "backdrop": "images/clean_posters/wow-57367.jpg",
+    "videoUrl": "https://getplay-cdn.com/embed/f1325dfc0060ca72f70fa0a6f42c954e",
+    "sourceType": "embed",
+    "description": "ซีรี่ส์ Octo: Mind Investigator Akari Shinno S2 ยอดนักสืบอารมณ์8สี ปี2 พากย์ไทย นางเอกเป็นคนที่มีความสามารถในการสัมผัสสิ่งที่ผู้อื่นนั้นไม่",
+    "rating": 8.7,
+    "genres": [
+      "พากย์ไทย",
+      "ซีรีส์ญี่ปุ่น",
+      "ซีรีส์ญี่ปุ่น พากย์ไทย",
+      "ซีรีส์ใหม่ 2026"
+    ],
+    "duration": "ซีรีส์ 11 ตอนจบ",
+    "trailerUrl": "",
+    "cast": [],
+    "source": "WOW-DRAMA",
+    "episodes": [
+      "ตอนที่ 1",
+      "ตอนที่ 2",
+      "ตอนที่ 3",
+      "ตอนที่ 4",
+      "ตอนที่ 5",
+      "ตอนที่ 6",
+      "ตอนที่ 7",
+      "ตอนที่ 8",
+      "ตอนที่ 9",
+      "ตอนที่ 10",
+      "ตอนที่ 11"
+    ],
+    "episodeUrls": {
+      "1": "https://getplay-cdn.com/embed/f1325dfc0060ca72f70fa0a6f42c954e",
+      "2": "https://getplay-cdn.com/embed/c64e8f374129bddda54d6c61018383fe",
+      "3": "https://getplay-cdn.com/embed/75394e86a6d35b22841e7c501deab11a",
+      "4": "https://getplay-cdn.com/embed/ce4df4d84546c038982045411c2efcb1",
+      "5": "https://getplay-cdn.com/embed/3eac83acc83430cf9c887ad22b2ffd6e",
+      "6": "https://getplay-cdn.com/embed/626d5488e46a7a06a30e2acf813af1bc",
+      "7": "https://getplay-cdn.com/embed/7c8ecfb98e565173eb245b3fb615f3e3",
+      "8": "https://getplay-cdn.com/embed/04b993998ad609a92752622a30d73254",
+      "9": "https://getplay-cdn.com/embed/cb2223fa050f85b2619aa8ef38db9bbe",
+      "10": "https://getplay-cdn.com/embed/278901f37378635f588dd94ed2ee20f4",
+      "11": "https://getplay-cdn.com/embed/21ead1177587598c55bc06321175b9d0"
+    },
+    "languages": [
+      "Thai (พากย์ไทย)"
+    ],
+    "id": "wow-57367",
+    "postId": "57367",
+    "originalUrl": "https://wow-drama.com/octo-mind-investigator-akari-shinno-s2-%e0%b8%9e%e0%b8%b2%e0%b8%81%e0%b8%a2%e0%b9%8c%e0%b9%84%e0%b8%97%e0%b8%a2/"
   },
   {
     "titleTh": "Reverse (2026) จิตไม่ลืมแค้น",
